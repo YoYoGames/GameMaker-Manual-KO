@@ -6,58 +6,20 @@
   <title>gpu_set_texrepeat</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function gpu_set_texrepeat" />
-  <meta name="rh-index-keywords" content="gpu_set_texrepeat, gpu_set_tex_repeat" />
-  <meta name="search-keywords" content="gpu_set_texrepeat, gpu_set_tex_repeat" />
+  <meta name="topic-comment" content="함수 gpu_set_texrepeat에 대한 참조" />
+  <meta name="rh-index-keywords" content="gpu_set_texrepeat,GPU_set_tex_repeat" />
+  <meta name="search-keywords" content="gpu_set_texrepeat,GPU_set_tex_repeat" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texrepeat</h1>
-  <p>This function can be used to indicate to <span data-keyref="GameMaker Name">GameMaker</span> whether textures should repeat (<span class="inline">true</span>) or not (<span class="inline">false</span>) when used for models and primitives. Normally texture widths and heights lie in the range 0 - 1, but if you specify a value larger than 1 by default the rest is not drawn (the entire texture will be drawn with an &quot;empty&quot; section corresponding to the percentage over 1 that is used. So a value of 2 for a texture width or height would draw the texture in half the space and leave the other half empty). However, by using this function to set repeat to true the texture is repeated automatically over all models and primitives. The likely use case for these functions is for repeating a texture in 3D but in order for it to work and not pull images from the rest of the texture page, the sprite used will need to be marked as being on a &quot;Separate Texture Page&quot; in the Sprite Editor.</p>
-  <p class="note"><b>NOTE</b>: Sprites and backgrounds are always drawn without repeating, so once you draw a sprite or background this value is reset to <span class="inline">false</span>. This default behaviour will not affect texture stage settings (ie: calling the function will, but the internal setting to false will not).</p>
-  <p class="note"><b>NOTE</b>: This setting will over-ride any texture stage repeats set for shaders when using the function <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_set_texrepeat(enable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if gpu_get_texrepeat()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_texrepeat</h1><p> 이 기능은 텍스처가 반복되어야 하는지 여부를 <span data-keyref="GameMaker Name">GameMaker</span> 에 나타내는 데 사용할 수 있습니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ) 모델 및 프리미티브에 사용되는 경우. 일반적으로 텍스처 너비와 높이는 0 - 1 범위에 있지만 기본적으로 1보다 큰 값을 지정하면 나머지는 그려지지 않습니다(전체 텍스처는 1보다 큰 백분율에 해당하는 &quot;빈&quot; 섹션으로 그려집니다. 따라서 텍스처 너비 또는 높이에 대한 값 2는 공간의 절반에 텍스처를 그리고 나머지 절반은 비워 둡니다. 그러나 이 함수를 사용하여 repeat를 true로 설정하면 텍스처가 모든 모델과 기본 요소에 대해 자동으로 반복됩니다. 이러한 기능의 가능한 사용 사례는 3D에서 텍스처를 반복하는 것이지만 이것이 작동하고 텍스처 페이지의 나머지 부분에서 이미지를 가져오지 않도록 하려면 사용된 스프라이트를 &quot;분리 텍스처 페이지&quot;에 있는 것으로 표시해야 합니다. 스프라이트 편집기에서</p><p class="note"> <b>참고</b>: 스프라이트와 배경은 항상 반복되지 않고 그려지므로 스프라이트나 배경을 그리면 이 값이 다음으로 재설정됩니다. <span class="inline">false</span>. 이 기본 동작은 텍스처 단계 설정에 영향을 미치지 않습니다(예: 함수 호출은 영향을 미치지만 내부 설정을 false로 호출하면 영향을 미치지 않음).</p><p class="note"> <b>참고</b>: 이 설정은 기능을 사용할 때 셰이더에 대해 설정된 모든 텍스처 단계 반복을 무시합니다.<a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_texrepeat(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if gpu_get_texrepeat()<br />
     {<br />
         gpu_set_texrepeat(false);<br />
     }<br />
     else<br />
     {<br />
         gpu_set_texrepeat(true);<br />
-    }</p>
-  <p>The above code checks to see if texture repeating is on or off and switches it accordingly.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_texrepeat_ext.htm">gpu_set_texrepeat_ext</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 텍스처 반복이 켜져 있는지 꺼져 있는지 확인하고 그에 따라 전환합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GPU_Control.htm">GPU 제어</a></div><div style="float:right"> 다음: <a href="gpu_set_texrepeat_ext.htm"><span class="notranslate">gpu_set_texrepeat_ext</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texrepeat

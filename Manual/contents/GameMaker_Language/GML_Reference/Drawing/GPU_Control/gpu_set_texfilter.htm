@@ -6,58 +6,20 @@
   <title>gpu_set_texfilter</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function gpu_set_texfilter" />
-  <meta name="rh-index-keywords" content="gpu_set_texfilter, gpu_set_tex_filter" />
-  <meta name="search-keywords" content="gpu_set_texfilter, gpu_set_tex_filter" />
+  <meta name="topic-comment" content="함수 gpu_set_texfilter에 대한 참조" />
+  <meta name="rh-index-keywords" content="gpu_set_texfilter,GPU_set_tex_filter" />
+  <meta name="search-keywords" content="gpu_set_texfilter,GPU_set_tex_filter" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texfilter</h1>
-  <p>This function can be used to set the texture filtering (linear interpolation) of all images drawn on the game screen. When this is enabled (<span class="inline">true</span>) all textures will be smoothed when drawn (this includes sprites as they too are considered textures), meaning that when scaled or moved if there is not a 1:1 pixel ratio then there will be a &quot;smudging&quot; across various pixels which may make images appear blurry depending on the art style used. If this is disabled (<span class="inline">false</span>) then images will be drawn based on the nearest pixel when scaled or moving which may lead to &quot;blocky&quot; images. The default value is <span class="inline">false</span>, and this can also be changed in the <b>Global Game Options</b> for individual target platforms.</p>
-  <p class="note"><b>NOTE</b>:This setting will override any texture stage interpolation set for shaders using the function <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
-  <p class="note"><b>NOTE</b>: On the HTML5 target, this function will only work with WebGL enabled.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_set_texfilter(enable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if gpu_get_texfilter()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_texfilter</h1><p> 이 기능을 사용하여 게임 화면에 그려진 모든 이미지의 텍스처 필터링(선형 보간)을 설정할 수 있습니다. 이것이 활성화되면(<span class="inline">true</span> ) 모든 텍스처는 그릴 때 부드럽게 처리됩니다(여기에는 스프라이트도 텍스처로 간주되므로 스프라이트가 포함됨). 즉, 픽셀 비율이 1:1이 아닌 경우 크기를 조정하거나 이동할 때 다양한 픽셀에 &quot;얼룩&quot;이 생길 수 있습니다. 사용된 아트 스타일에 따라 이미지가 흐릿하게 나타납니다. 비활성화된 경우(<span class="inline">false</span> ) 그런 다음 크기가 조정되거나 이동할 때 가장 가까운 픽셀을 기반으로 이미지가 그려지므로 &quot;뭉쳐진&quot; 이미지가 나타날 수 있습니다. 기본값은 <span class="inline">false</span>, 이는 개별 대상 플랫폼에 대한 <b>글로벌 게임 옵션</b> 에서도 변경할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 설정은 기능을 사용하는 셰이더에 대해 설정된 모든 텍스처 단계 보간을 무시합니다.<a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p><p class="note"> <b>참고</b>: HTML5 대상에서 이 기능은 WebGL이 활성화된 상태에서만 작동합니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_texfilter(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if gpu_get_texfilter()<br />
     {<br />
         gpu_set_texfilter(false);<br />
     }<br />
     else<br />
     {<br />
         gpu_set_texfilter(true);<br />
-    }</p>
-  <p>The above code checks to see if texture filtering is on or off and switches it accordingly.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_texfilter_ext.htm">gpu_set_texfilter_ext</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 텍스처 필터링이 켜져 있는지 꺼져 있는지 확인하고 그에 따라 전환합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GPU_Control.htm">GPU 제어</a></div><div style="float:right"> 다음: <a href="gpu_set_texfilter_ext.htm"><span class="notranslate">gpu_set_texfilter_ext</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texfilter

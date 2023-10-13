@@ -3,51 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Animated Tiles</title>
+  <title>애니메이션 타일</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing how the tile set editor animated tiles works" />
-  <meta name="rh-index-keywords" content="Tile Sets - Animated Tiles" />
-  <meta name="search-keywords" content="animated tiles,tile animation" />
+  <meta name="topic-comment" content="타일 세트 편집기 애니메이션 타일의 작동 방식을 자세히 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="타일 세트 - 애니메이션 타일" />
+  <meta name="search-keywords" content="애니메이션 타일,타일 애니메이션" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Animated Tiles</h1>
-  <p>Tiles are generally considered to be static cells within the game room, however with <span data-keyref="GameMaker Name">GameMaker</span> it is possible to animate them, just as you would a sprite. Why not just use sprites, you ask? Well, sprites have a certain processing overhead due
-    to them being associated with a bounding box and the way in which they are rendered, but tiles have a much lower processing overhead and so are faster to render. This does come at a price however, in that with tile set animations you are limited to
-    creating animations that must be a power of two in length - ie: of 2, 4, 8, 16, etc... frames - and they must obviously be created within the tile grid, <em>and </em>they must all animate at the same speed (on a per-tile set basis). However, even
-    with these limitations, animated tiles are a powerful feature that can be used to add life and colour to otherwise static environments and backgrounds.</p>
-  <p>To create a tile animation you must first have a tile set that has the required tiles all within the one sprite image (but not as sprite frames, so a single large sprite frame with all the animation images within it), and then in the <a href="../Tile_Sets.htm">Tile Set Editor</a>    you click on the <strong>Tile Animation</strong> button to bring up the Animation Editor:</p>
-  <p><img alt="Tile Animation Window" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Animations.png" />The example image above is a single image with all animation frames contained within it, but it should be noted that the image could
-    also contain other non-animation tiles too, since you can use a single massive tile set and then &quot;cherry pick&quot; the parts of it that you want to create the animation from. For example, you could have a large landscape tile set with trees,
-    earth and water, and within the tile set have multiple tiles to be animated to make the water ripple.</p>
-  <p>To create a tile animation you first have to add an animation to the animation library by clicking the <strong>Add Animation </strong>button <img alt="Add Animation Icon" class="icon" src="../../assets/Images/Icons/Icon_AddArgument.png" />, which will
-    add an empty animation strip to the library and request that you select a number of frames to be used:</p>
-  <p><img alt="Add Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AnimationAdd.png" />You will then be presented with a view of each empty animation frame, with the initial frame highlighted for you:</p>
-  <p><img alt="An Empty Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_EmptyAnim.png" />If you then go back to the tile set image on the left of the editor you can click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
-      width="21" /> on any tile to add it into the animation and the frame will advance to the next one. Clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on successive tiles will fill up the
-    animation, which you can then preview by clicking on the &quot;play&quot; button beside the frames:</p>
-  <p><img alt="Add Animation Frames" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AddFrames.gif" />Once you have done that your animation will become part of the animation library and when you enter the <a href="../Rooms.htm">Room Editor</a>    you can select it and place it within the room. Note that if you select any of the tiles from an animation to place in a room, that tile will animate from the selected tile onwards, so you can &quot;desynchronise&quot; an animation by placing separate
-    frames within the room and they will all animate. The only caveat to this is that the animation speed will always be the same, since it is defined for the whole tile set and not individual animations within the library.</p>
-  <p>A few things to note about tiles that are being used in animations:</p>
-  <ul class="colour">
-    <li>If the tile has its own animation specified (so there is an animation where it is set as the first tile) then it will use that animation.</li>
-    <li>If the tile doesn&#39;t have its own animation but is used in only one other animation, then it will use that animation starting at the first position that tile is present in the animation.</li>
-    <li>If the tile doesn&#39;t have its own animation and is used in multiple other animations, then it will not animate at all. You will need to explicitly specify an animation with it as the first tile.</li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="Auto_Tiles.htm">Auto Tiles</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 애니메이션 타일</h1><p> 타일은 일반적으로 게임룸 내에서 정적 셀로 간주되지만 <span data-keyref="GameMaker Name">GameMaker</span> 를 사용하면 스프라이트처럼 타일을 애니메이션으로 만들 수 있습니다. 왜 스프라이트를 사용하지 않습니까? 음, 스프라이트는 경계 상자 및 렌더링 방식과 연결되어 있기 때문에 특정 처리 오버헤드가 있지만 타일은 처리 오버헤드가 훨씬 낮으므로 렌더링이 더 빠릅니다. 그러나 타일 세트 애니메이션을 사용하면 길이가 2의 거듭제곱이어야 하는 애니메이션 생성으로 제한된다는 점에서 대가가 따릅니다. 즉, 2, 4, 8, 16 등... 프레임의 경우 분명히 타일 그리드 내에서 생성 <em>되며</em> 모두 동일한 속도로(타일 세트별로) 애니메이션되어야 합니다. 그러나 이러한 제한에도 불구하고 애니메이션 타일은 정적인 환경과 배경에 생명력과 색상을 추가하는 데 사용할 수 있는 강력한 기능입니다.</p><p> 타일 애니메이션을 생성하려면 먼저 하나의 스프라이트 이미지 내에 필요한 타일이 모두 포함된 <a href="../Tile_Sets.htm">타일</a> 세트가 있어야 합니다. <strong>타일 애니메이션</strong> 버튼을 클릭하여 애니메이션 편집기를 불러오는 <a href="../Tile_Sets.htm">Set Editor</a>:</p><p><img alt="Tile Animation Window" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Animations.png" /> 위의 예시 이미지는 모든 애니메이션 프레임이 포함된 단일 이미지이지만 단일 대규모 타일 세트를 사용한 다음 &quot;체리 픽&quot;할 수 있으므로 이미지에 다른 비애니메이션 타일도 포함될 수 있다는 점에 유의해야 합니다. 애니메이션을 만들고자 하는 부분. 예를 들어, 나무, 흙, 물이 있는 큰 풍경 타일 세트가 있고 타일 세트 내에서 물이 파문을 일으키도록 애니메이션할 여러 타일이 있을 수 있습니다.</p><p> 타일 애니메이션을 만들려면 먼저 애니메이션 <strong>추가</strong> 버튼을 클릭하여 애니메이션 라이브러리에 애니메이션을 추가해야 합니다.<img alt="Add Animation Icon" class="icon" src="../../assets/Images/Icons/Icon_AddArgument.png" />, 라이브러리에 빈 애니메이션 스트립을 추가하고 사용할 프레임 수를 선택하도록 요청합니다.</p><p><img alt="Add Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AnimationAdd.png" /> 그러면 초기 프레임이 강조 표시된 각 빈 애니메이션 프레임의 보기가 표시됩니다.</p><p><img alt="An Empty Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_EmptyAnim.png" /> 그런 다음 편집기 왼쪽의 타일 세트 이미지로 돌아가면<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
+      width="21" /> 아무 타일에서나 애니메이션에 추가하면 프레임이 다음 타일로 넘어갑니다. 클릭<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> 연속 타일에서 애니메이션이 채워지고 프레임 옆에 있는 &quot;재생&quot; 버튼을 클릭하여 미리 볼 수 있습니다.</p><p><img alt="Add Animation Frames" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AddFrames.gif" /> 작업을 마치면 애니메이션이 애니메이션 라이브러리의 일부가 되고 <a href="../Rooms.htm">룸 편집기</a> 에 들어갈 때 선택하여 룸 안에 배치할 수 있습니다. 애니메이션에서 방에 배치할 타일을 선택하면 해당 타일이 선택한 타일부터 애니메이션되므로 방 안에 별도의 프레임을 배치하여 애니메이션을 &quot;비동기화&quot;할 수 있으며 모두 애니메이션됩니다. 이에 대한 유일한 주의 사항은 애니메이션 속도가 라이브러리 내의 개별 애니메이션이 아니라 전체 타일 세트에 대해 정의되기 때문에 항상 동일하다는 것입니다.</p><p> 애니메이션에 사용되는 타일에 대해 주의할 몇 가지 사항:</p><ul class="colour"><li> 타일에 지정된 자체 애니메이션이 있는 경우(따라서 첫 번째 타일로 설정된 애니메이션이 있는 경우) 해당 애니메이션을 사용합니다.</li><li> 타일에 자체 애니메이션이 없지만 다른 하나의 애니메이션에서만 사용되는 경우 타일이 애니메이션에 있는 첫 번째 위치에서 시작하여 해당 애니메이션을 사용합니다.</li><li> 타일에 자체 애니메이션이 없고 여러 다른 애니메이션에서 사용되는 경우 전혀 애니메이션되지 않습니다. 첫 번째 타일로 애니메이션을 명시적으로 지정해야 합니다. </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="../Tile_Sets.htm">타일 세트</a></div><div style="float:right"> 다음: <a href="Auto_Tiles.htm">자동 타일</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Animated Tiles

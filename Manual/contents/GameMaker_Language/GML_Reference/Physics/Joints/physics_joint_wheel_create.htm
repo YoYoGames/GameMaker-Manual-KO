@@ -6,97 +6,14 @@
   <title>physics_joint_wheel_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_joint_wheel_create" />
+  <meta name="topic-comment" content="physical_joint_wheel_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_joint_wheel_create" />
   <meta name="search-keywords" content="physics_joint_wheel_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_wheel_create</h1>
-  <p>A wheel joint simply combines a piston and a revolute joint, like a wheel mounted on the shock absorber of a car. You specify the anchor point for the joint well as the two physics enabled instances to joint, and the first instance will act as the &quot;body&quot; for the joint, while the second will be the &quot;wheel&quot;, and be permitted to move freely around the joint axis. You can also set an axis vector, which is the imaginary line along which the joint will act as a &quot;spring&quot; permitting the wheel to bounce up and down along it as it encounters obstacles (much like the piston joint). The following image illustrates this:</p>
-  <p><img alt="Wheel joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/wheel_joint_image.png" />If you choose to enable a motor, then the second instance will rotate around the anchor position, and you can set the maximum motor torque used to achieve the desired motor speed (N/m) as well as the speed at which the motor should turn. Since the wheel joint also has an axis along which it may move, you can set the oscillation frequency (in Hz) as well as the damping ratio for the joint - you may need to play with these values to fine tune them and it is recommended that you start off with smaller values and increment them until you get the effect that you desire.</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>anchor_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>anchor_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>axis_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x component of the wheel axis vector</td>
-      </tr>
-      <tr>
-        <td>axis_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y component of the wheel axis vector</td>
-      </tr>
-      <tr>
-        <td>enableMotor</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the motor should be active (true) or not (false)</td>
-      </tr>
-      <tr>
-        <td>max_motor_torque</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</td>
-      </tr>
-      <tr>
-        <td>motor_speed</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the speed at which the motor should rotate</td>
-      </tr>
-      <tr>
-        <td>freq_hz</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the oscillation frequency for the joint, in hertz</td>
-      </tr>
-      <tr>
-        <td>damping_ratio</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This damping ratio for the joint</td>
-      </tr>
-      <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Constant_Colour">Colour</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var mainFixture = physics_fixture_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_wheel_create</h1><p> 휠 조인트는 단순히 자동차의 완충기에 장착된 휠과 같이 피스톤과 회전 조인트를 결합한 것입니다. 관절에 대한 앵커 포인트와 두 개의 물리적 활성화 인스턴스가 연결되도록 지정하면 첫 번째 인스턴스는 관절의 &quot;본체&quot; 역할을 하고 두 번째 인스턴스는 &quot;휠&quot;이 되어 자유롭게 움직일 수 있습니다. 관절 축. 또한 축 벡터를 설정할 수 있습니다. 이 가상선을 따라 조인트가 &quot;스프링&quot;으로 작용하여 휠이 장애물(피스톤 조인트와 유사)을 만날 때 휠을 따라 위아래로 바운스되도록 허용합니다. 다음 이미지는 이를 보여줍니다.</p><p><img alt="Wheel joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/wheel_joint_image.png" /> 모터를 활성화하도록 선택하면 두 번째 인스턴스가 앵커 위치를 중심으로 회전하고 원하는 모터 속도(N/m)와 모터가 회전해야 하는 속도를 달성하는 데 사용되는 최대 모터 토크를 설정할 수 있습니다.. 휠 조인트에는 움직일 수 있는 축이 있기 때문에 조인트에 대한 진동 주파수(Hz)와 감쇠 비율을 설정할 수 있습니다. 이 값을 사용하여 미세 조정해야 할 수 있으며 권장됩니다. 더 작은 값으로 시작하여 원하는 효과를 얻을 때까지 값을 늘립니다.</p><p> 모든 관절과 마찬가지로 &quot;col&quot; 값을 다음으로 설정하면 <span class="inline">true</span> 두 인스턴스는 서로 상호 작용하고 충돌할 수 있지만 충돌 이벤트가 있는 경우 <i>에만</i> 가능합니다. <span class="inline">false</span>, 그들은 무슨 일이 있어도 충돌하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The first instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">inst2</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The second instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">anchor_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x coordinate where the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">anchor_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y coordinate where the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">axis_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x component of the wheel axis vector</span></td></tr><tr><td> <span class="notranslate">axis_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y component of the wheel axis vector</span></td></tr><tr><td> <span class="notranslate">enableMotor</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the motor should be active (true) or not (false)</span></td></tr><tr><td> <span class="notranslate">max_motor_torque</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</span></td></tr><tr><td> <span class="notranslate">motor_speed</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">This is the speed at which the motor should rotate</span></td></tr><tr><td> <span class="notranslate">freq_hz</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">This is the oscillation frequency for the joint, in hertz</span></td></tr><tr><td> <span class="notranslate">damping_ratio</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">This damping ratio for the joint</span></td></tr><tr><td> <span class="notranslate">col</span></td><td> <span data-keyref="Type_Constant_Colour">색깔</span></td><td> <span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p><p></p><h4> 예시:</h4><p class="code">var mainFixture = physics_fixture_create();<br />
     physics_fixture_set_box_shape(mainFixture, 128, 32);<br />
     var wheelFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(wheelFixture, 32);<br />
@@ -105,19 +22,7 @@
     physics_fixture_bind(wheelFixture, o_id);<br />
     physics_joint_wheel_create(id, o_id, o_id.x, o_id.y, 0, 1, true, 10, 1, 15, 6, false);<br />
     physics_fixture_delete(mainFixture);<br />
-    physics_fixture_delete(wheelFixture);</p>
-  <p>The above code creates and defines two new fixtures. These are then bound to the calling instance and a new instance that is created before having a wheel joint applied to connect them, after which the fixtures are deleted from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_weld_create.htm">physics_joint_weld_create</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    physics_fixture_delete(wheelFixture);</p><p> 위의 코드는 두 개의 새로운 조명기를 만들고 정의합니다. 그런 다음 이들은 호출 인스턴스와 연결하기 위해 휠 조인트를 적용하기 전에 생성된 새 인스턴스에 바인딩되며, 그 후에 조명기는 메모리에서 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_weld_create.htm"><span class="notranslate">physics_joint_weld_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_wheel_create

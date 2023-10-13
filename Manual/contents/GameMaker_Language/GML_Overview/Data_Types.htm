@@ -3,194 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Data Types</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>데이터 유형</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining Data Types" />
-  <meta name="rh-index-keywords" content="Data Types" />
-  <meta name="search-keywords" content="Data Types" />
+  <meta name="topic-comment" content="페이지 개요 데이터 유형" />
+  <meta name="rh-index-keywords" content="데이터 유형" />
+  <meta name="search-keywords" content="데이터 유형" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Data Types</span></h1>
-  <p>In previous section we covered <a href="Variables_And_Variable_Scope.htm">variables and their scoping rules</a> but little has been said about the different <b>data types</b> that a variable can store. Therefore this section explains the different types and what they can be used for.</p>
-  <p>Before continuing, let&#39;s just briefly explain what we mean by &quot;data types&quot;. When you create a variable it can be used to hold information, and when you call a function, it can also stored returned information. However this information can come in various &quot;flavours&quot; - for example, it can be a <em>real number</em> or it can be a <em>string</em>. These different types of values being used are called <b>data types</b> and when using the GameMaker Language they can be any of the following:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Real Numbers</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Real numbers are any value that is not a string, nor any of the other possible data types. So, 124, 45639.566546456, 0, -45.5 etc... are all examples of real numbers. All real numbers are stored as 64-bit double-precision floating point values (or integer values), and the compiler will optimise where possible (for example, 0.0 will be optimised to the integer value of 0).</p>
-    <p class="dropspot">When dealing with any value that is not an integer, you may experience slight rounding errors due to the nature of floating point maths. For more information on this and other number related functions, please see: <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a>.</p>
-    <p class="note"><span class="note">NOTE</span> On the <b>HTML5</b> target, all real numbers are doubles.</p>
-    <p class="dropspot">Note that while created variables in <span data-keyref="GameMaker Name">GameMaker</span> are all stored as double-precision floating point numbers or integers, you can still use other formats when dealing with extensions. These can be passed into <span data-keyref="GameMaker Name">GameMaker</span> from an extension and then checked using the appropriate <span class="inline">is_*()</span> function, a list of which can be found <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here</a>.</p>
-    <p class="dropspot"> </p>
-    <p> </p>
-  </div>
-  <p id="p"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Boolean</a></p>
-  <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">A boolean is simply a value that can either be <span class="inline">true</span> or <span class="inline">false</span>. Note that currently <span data-keyref="GameMaker Name">GameMaker</span> will interpret a real number equal to or below 0.5 as a <span class="inline">false</span> value, and any real number greater than 0.5 as being <span class="inline">true</span>. This does <i>not</i> mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the <b>constants</b> <span class="inline">true</span> and <span class="inline">false</span> which should always be used in your code to prevent any issues should real boolean data types be added in a future update.</p>
-    <p class="dropspot">You can convert any real number into an implicitly boolean value using the following function:</p>
-    <ul class="dropspotlist">
-      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm">bool</a></li>
-    </ul>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Strings</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><label for="one">A string is simply any text that has been placed in quotation marks &quot;...&quot;. You can perform certain operations on strings, like add two strings together to create a longer string (concatenation) and you can also change the string properties and even extract real numbers from it. For more information on strings and the string functions see: <a href="../GML_Reference/Strings/Strings.htm">GML Reference - Strings</a>.</label></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Arrays</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><label for="three">An array is a special data type that can be used to hold multiple values. You assign the array to a variable, and then &quot;fill in&quot; different indices of the array with values. This array can then be passed through to scripts and functions on a pass-by-reference basis, however should you modify the passed array, it will then become a copy of the original array and so will need to be returned back to the original variable for the array to be updated. For more information on arrays, please see: <a href="Arrays.htm">GML Overview - Arrays</a>.</label></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Structs</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><label for="eleven">A struct (sometimes called a &quot;lightweight object&quot;) is a raw data structure that acts as a container for variables of all data types. You assign a struct to a variable and in the struct you can then define further variables and these can then be read from or written to as required. For more detailed information on structs, please see the section <a href="Structs.htm">GML Overview - Structs</a>.</label></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Method Variables</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><label for="twelve">A method variable is a variable that has been assigned a function and it can be used exactly the same as you would use a GML runtime function. For more detailed information, please see the section <a href="Method_Variables.htm">Method Variables</a>.</label></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">int64</a></p>
-  <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">An &quot;int64&quot; is a 64-bit integer that can be created using <span class="inline"><a href="../GML_Reference/Variable_Functions/int64.htm">int64()</a></span> (by passing in a non-64-bit real number) or when reading a <span class="inline">buffer_u64</span> value from a <a href="../GML_Reference/Buffers/buffer_read.htm">buffer</a>.</p>
-    <p class="dropspot">This can be used in places where a 64-bit integer is strictly required, or when you want to work with <a href="../../Additional_Information/Bitwise_Operators.htm">bit-shifting</a> and need those 64 bit positions.</p>
-    <p class="dropspot">Any bitwise operations, even when run on non-64-bit values, will always return a 64-bit integer back.</p>
-    <p class="dropspot">Divisions on int64 values will also return integers (e.g.: <span class="inline2">int64(5) / int64(2) = 2</span>).</p>
-    <p class="dropspot">References for data structures and assets (such as objects, sprites, etc.) are stored as int64s, where the first 32 bits contain information about the type of resource, and the next 32 bits contain the ID for the resource. See the next section &quot;ref&quot; for more info.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Handles</a></p>
-  <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot">A handle contains a reference to one of the following types of resources:</p>
-    <ul class="colour">
-      <li class="dropspot">Data Structures</li>
-      <li class="dropspot">Assets, such as Objects, Sprites, Rooms, etc.</li>
-      <li class="dropspot">Object Instances</li>
-      <li class="dropspot">Particle Systems</li>
-      <li class="dropspot">A reference created with <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Variable_Functions/ref_create.htm">ref_create</a></span></li>
-    </ul>
-    <p class="dropspot">You get a handle when you create a new resource (with a <span class="inline2">_create()</span> function) or reference an existing resource in your code (like referencing an object, getting an instance through a function, etc.).</p>
-    <p class="dropspot">A handle is a 64-bit integer, where the first 32 bits contain information about the type of resource, and the next 32 bits contain the index number of the resource.</p>
-    <p class="dropspot">The type information in a handle is used to make sure that you pass the correct type of resource into a function (e.g. making sure you pass a DS list into <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Lists/ds_list_add.htm">ds_list_add</a></span> instead of a DS map, grid or something else).</p>
-    <p class="dropspot">If you convert a handle to a string or print it as an output, you will see a string in the format <span class="inline2">&quot;ref &lt;type&gt; &lt;id&gt;&quot;</span>, e.g. <span class="inline2">&quot;ref ds_list 1&quot;</span>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Hexadecimal Literals</a></p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> will accept <b>hexadecimal literals</b> as legitimate values. Hexadecimal values are especially common when working with colours, but can be used anywhere a positive integer value is required. Hexadecimal values can be formatted in the following two ways, where <span class="inline"><em>abcd</em></span> would be the actual hex value:</p>
-    <p class="code"><span style="background-color: transparent;"><strong>$</strong><em>abcd</em></span><br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 데이터 유형</h1><p> 이전 섹션에서 <a href="Variables_And_Variable_Scope.htm">변수와 해당 범위 지정 규칙</a> 을 다루었지만 변수가 저장할 수 있는 다양한 <b>데이터 유형</b> 에 대해서는 거의 언급되지 않았습니다. 따라서 이 섹션에서는 다양한 유형과 용도에 대해 설명합니다.</p><p> 계속하기 전에 &quot;데이터 유형&quot;이 의미하는 바를 간단히 설명하겠습니다. 변수를 생성할 때 정보를 보관하는 데 사용할 수 있고, 함수를 호출할 때 반환된 정보도 저장할 수 있습니다. 그러나 이 정보는 다양한 &quot;맛&quot;으로 나타날 수 있습니다. 예를 들어 <em>실수</em> 또는 <em>문자열</em> 이 될 수 있습니다. 사용되는 이러한 다양한 유형의 값을 <b>데이터 유형</b> 이라고 하며 GameMaker 언어를 사용할 때 다음 중 하나가 될 수 있습니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">실수</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> 실수는 문자열이나 다른 가능한 데이터 유형이 아닌 모든 값입니다. 따라서 124, 45639.566546456, 0, -45.5 등은 모두 실수의 예입니다. 모든 실수는 64비트 배정밀도 부동 소수점 값(또는 정수 값)으로 저장되며 컴파일러는 가능한 경우 최적화합니다(예: 0.0은 정수 값 0으로 최적화됨).</p><p class="dropspot"> 정수가 아닌 값을 처리할 때 부동 소수점 수학의 특성으로 인해 약간의 반올림 오류가 발생할 수 있습니다. 이 함수 및 기타 숫자 관련 함수에 대한 자세한 내용은 <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML 참조 - 숫자 함수</a> 를 참조하세요.</p><p class="note"> <span class="note">참고</span> <b>HTML5</b> 대상에서 모든 실수는 double입니다.</p><p class="dropspot"> <span data-keyref="GameMaker Name">GameMaker</span> 에서 생성된 변수는 모두 배정밀도 부동 소수점 숫자 또는 정수로 저장되지만 확장자를 처리할 때 다른 형식을 사용할 수 있습니다. 확장 프로그램에서 <span data-keyref="GameMaker Name">GameMaker</span> 로 전달한 다음 적절한 도구를 사용하여 확인할 수 있습니다.<span class="inline">is_*()</span> 함수 목록은 <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">여기</a> 에서 찾을 수 있습니다.</p><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">부울</a></p><div class="droptext" data-targetname="drop-down6"><p class="dropspot"> 부울은 단순히 다음 중 하나일 수 있는 값입니다.<span class="inline">true</span> 또는<span class="inline">false</span>. 현재 <span data-keyref="GameMaker Name">GameMaker</span> 는 0.5 이하의 실수를<span class="inline">false</span> 값, 0.5보다 큰 임의의 실수<span class="inline">true</span>. 그러나 이것이 <b>상수</b> 와 함께 제공되므로 참과 거짓에 대해 1과 0(또는 다른 실수)을 확인해야 한다는 의미는 <i>아닙니다</i>.<span class="inline">true</span> 그리고<span class="inline">false</span> 향후 업데이트에서 실제 부울 데이터 유형이 추가되는 경우 문제를 방지하기 위해 항상 코드에서 사용해야 합니다.</p><p class="dropspot"> 다음 함수를 사용하여 임의의 실수를 암시적 부울 값으로 변환할 수 있습니다.</p><ul class="dropspotlist"><li class="dropspot"> <a href="../GML_Reference/Variable_Functions/bool.htm"><span class="notranslate">bool</span></a></li></ul><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">문자열</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> <label for="one">문자열은 따옴표 &quot;...&quot;로 묶인 모든 텍스트입니다. 두 개의 문자열을 함께 추가하여 더 긴 문자열(연결)을 생성하는 것과 같은 문자열에 대해 특정 작업을 수행할 수 있으며 문자열 속성을 변경하고 그로부터 실수를 추출할 수도 있습니다. 문자열 및 문자열 함수에 대한 자세한 내용은 <a href="../GML_Reference/Strings/Strings.htm">GML 참조 - 문자열</a> 을 참조하십시오.</label></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">배열</a></p><div class="droptext" data-targetname="drop-down2"><p class="dropspot"> <label for="three">배열은 여러 값을 보유하는 데 사용할 수 있는 특수 데이터 유형입니다. 배열을 변수에 할당한 다음 배열의 다른 인덱스를 값으로 &quot;채웁니다&quot;. 이 배열은 참조별로 스크립트와 함수에 전달할 수 있지만 전달된 배열을 수정하면 원래 배열의 복사본이 되므로 원래 변수로 다시 반환해야 합니다. 어레이가 업데이트되도록 합니다. 배열에 대한 자세한 내용은 <a href="Arrays.htm">GML 개요 - 배열</a> 을 참조하십시오.</label></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">구조체</a></p><div class="droptext" data-targetname="drop-down3"><p class="dropspot"> <label for="eleven">구조체(&quot;경량 개체&quot;라고도 함)는 모든 데이터 유형의 변수에 대한 컨테이너 역할을 하는 원시 데이터 구조입니다. 구조체를 변수에 할당하고 구조체에서 추가 변수를 정의할 수 있으며 필요에 따라 이러한 변수를 읽거나 쓸 수 있습니다. 구조체에 대한 자세한 내용은 <a href="Structs.htm">GML 개요 - 구조체</a> 섹션을 참조하세요.</label></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">메소드 변수</a></p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"> <label for="twelve">메소드 변수는 함수가 할당된 변수이며 GML 런타임 함수를 사용하는 것과 정확히 동일하게 사용할 수 있습니다. 자세한 정보는 <a href="Method_Variables.htm">메소드 변수</a> 섹션을 참조하십시오.</label></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">int64</a></p><div class="droptext" data-targetname="drop-down13"><p class="dropspot"> &quot;int64&quot;는 다음을 사용하여 생성할 수 있는 64비트 정수입니다. <span class="inline"><a href="../GML_Reference/Variable_Functions/int64.htm">int64()</a></span> (64비트가 아닌 실수를 전달하여) 또는 읽을 때 <span class="inline">buffer_u64</span> <a href="../GML_Reference/Buffers/buffer_read.htm">버퍼</a> 의 값.</p><p class="dropspot"> 이것은 64비트 정수가 엄격하게 필요한 곳이나 <a href="../../Additional_Information/Bitwise_Operators.htm">비트 시프팅</a> 으로 작업하고 64비트 위치가 필요한 경우에 사용할 수 있습니다.</p><p class="dropspot"> 64비트가 아닌 값에서 실행되는 경우에도 모든 비트 연산은 항상 64비트 정수를 반환합니다.</p><p class="dropspot"> int64 값에 대한 나눗셈도 정수를 반환합니다(예: <span class="inline"><em>abcd</em>>int64(5) / int64(2) = 2</span> ).</p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">16진수 값</a></p><div class="droptext" data-targetname="drop-down5"><p class="dropspot"> <span data-keyref="GameMaker Name">GameMaker</span> 는 <b>16진수 리터럴</b> 을 합법적인 값으로 허용합니다. 16진수 값은 색상으로 작업할 때 특히 일반적이지만 양의 정수 값이 필요한 모든 곳에서 사용할 수 있습니다. 16진수 값은 다음 두 가지 방법으로 형식을 지정할 수 있습니다.<span class="inline">buffer_get_address()</span> 실제 16진수 값:</p><p class="code"><span style="background-color: transparent;"><strong>$</strong><em>abcd</em></span><br />
       <strong>0x</strong><em>abcd</em>
-    </p>
-    <p class="dropspot">For example, the following decimal values can be expressed as hexadecimal as shown:</p>
-    <p class="code"><strong>11406</strong> -&gt; $2c8e, 0x2c8e<br />
+    </p><p class="dropspot"> 예를 들어 다음 10진수 값은 다음과 같이 16진수로 표현할 수 있습니다.</p><p class="code"><strong>11406</strong> -&gt; $2c8e, 0x2c8e<br />
       <strong>16777215</strong> -&gt; $ffffff, 0xffffff
-    </p>
-    <hr />
-    <p class="dropspot">A hexadecimal value can also begin with a hash/pound symbol (<span class="inline2">#</span>), however when written this way, its value will not equal a similar hex value written using a previously shown format (<span class="inline2">$</span> or <span class="inline2">0x</span>). This is due to the way colours are interpreted in GML, which required the format for hash/pound hex values to be changed so that CSS colours could be written in an <span class="inline2">#RRGGBB</span> format. For more information, read <a data-xref="{text}" href="../GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm#h"> </a>.</p>
-    <p class="dropspot">For example, the following two are not equal:</p>
-    <p class="code">$2c8edd <strong>!=</strong> #2c8edd</p>
-    <p class="dropspot">For them to refer to the same decimal value, you would have to swap the first two and last two characters:</p>
-    <p class="code">$<strong>2c</strong>8edd <strong>=</strong><strong>=</strong> #dd8e<strong>2c</strong></p>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Binary Literals</a></p>
-  <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">You can write binary literals with the <span class="inline2">0b</span> prefix:</p>
-    <p class="code">var _six = 0b0010 | 0b0100; // produces 0b0110, or 6</p>
-    <p class="dropspot">The above code shows two binary values, <span class="inline2">0010</span> and <span class="inline2">0100</span>, being used in a <a href="../../Additional_Information/Bitwise_Operators.htm">bitwise &quot;OR&quot; operation</a>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Pointer</a></p>
-  <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">A pointer is a data type that &quot;points&quot; to a memory location. You cannot do operations on a pointer and it is used only for some very specific functions, like getting a texture or buffer address from memory for another function. For examples of functions that return a pointer you can see <a href="../GML_Reference/Buffers/buffer_get_address.htm"><span class="inline">buffer_get_address()</span></a> or <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><span class="inline">sprite_get_texture()</span></a>.</p>
-    <p class="dropspot">There is also a function to check if a value is a pointer (see &quot;<b>Checking Data Types</b>&quot;, below) and a function to convert a value into a pointer:</p>
-    <ul class="dropspotlist">
-      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/ptr.htm" style="background-color: transparent;">ptr</a></li>
-    </ul>
-    <p class="dropspot">You may also use (and get returned) the following built in constants when using pointers:</p>
-    <table class=" cke_show_border">
-      <tbody>
-        <tr>
-          <th>Constant</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><span class="inline">pointer_null</span></td>
-          <td>This constant indicates that the pointer is not pointing to anything meaningful (the same as <span class="inline">NULL</span> in C++ or <span class="inline">null</span> in C#). This value is <a class="glossterm" data-glossterm="falsy" href="#">falsy</a>.</td>
-        </tr>
-        <tr>
-          <td><span class="inline">pointer_invalid</span></td>
-          <td>This constant simply means that the value is not a valid pointer</td>
-        </tr>
-      </tbody>
-    </table>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Enum</a></p>
-  <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">An enum is an &quot;enumerator&quot;, and it essentially permits you to create your own limited data type with a list of constant values. Enums are explained in depth on the page for <a href="Variables/Constants.htm">Constants</a>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Undefined</a></p>
-  <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><label for="seven">An undefined value (also known as a &quot;null&quot; value) is one where an expression doesn&#39;t have a correct value, although it is syntactically correct, and so must return <i>something</i>. For example, say you have a <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> and use the function <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><span class="inline">ds_map_find_value()</span></a>. Now, what happens when the map does not have the value being looked for? Well, since the function is correctly formatted, and the issue is that the no such value exists, then it would return the constant <span class="inline">undefined</span>, and you can check for this constant as you would check for <span class="inline">true</span> or any other value.</label></p>
-    <p class="code"><label for="seven">var _value = ds_map_find_value(my_map, &quot;key&quot;);<br />
-        <br />
-        if (<a href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a>(value)) {<br />
-            show_debug_message(&quot;The key does not exist!&quot;);<br />
-        }</label></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">NaN</a></p>
-  <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><label for="nine"><span class="inline">NaN</span> stands for &quot;not a number&quot;, and is a constant that can be returned when the compiler cannot evaluate the results of an operation as a number. For example, 0/0 cannot be defined as a real number, and is therefore represented by <span class="inline">NaN</span>, or the square root of a negative number - which is considered an &quot;imaginary&quot; number - cannot be represented as a real number, and so is represented by <span class="inline">NaN</span>.</label></p>
-    <p class="dropspot">Note that since <span class="inline">NaN</span> is not a number, it cannot be compared to itself, so comparisons such as <span class="inline">NaN == NaN</span> will return <span class="inline">false</span>. Same goes for an array comparison such as this:</p>
-    <p class="code">show_debug_message(array_equals([NaN], [NaN]));<br />
+    </p><hr /><p class="dropspot"> 16진수 값은 해시/파운드 기호( <span class="inline">sprite_get_texture()>#</span> )로 시작할 수도 있지만 이 방법으로 작성할 경우 해당 값은 이전에 표시된 형식( <span class="inline">pointer_null>$</span> 또는 <span class="inline">NULL>0x</span> )을 사용하여 작성된 유사한 16진수 값과 같지 않습니다. 이는 CSS 색상을 <span class="inline">null>#RRGGBB</span> 형식으로 작성할 수 있도록 해시/파운드 16진수 값 형식을 변경해야 하는 GML에서 색상이 해석되는 방식 때문입니다. 자세한 내용은 <a data-xref="{text}" href="../GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm#h">16진수 색상</a> 을 참조하십시오.</p><p class="dropspot"> 예를 들어 다음 두 가지는 같지 않습니다.</p><p class="code">$2c8edd <strong>!=</strong> #2c8edd</p><p class="dropspot"> 동일한 십진수 값을 참조하려면 처음 두 문자와 마지막 두 문자를 바꿔야 합니다.</p><p class="code">$<strong>2c</strong>8edd <strong>=</strong><strong>=</strong> #dd8e<strong>2c</strong></p><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">바늘</a></p><div class="droptext" data-targetname="drop-down7"><p class="dropspot"> 포인터는 메모리 위치를 &quot;가리키는&quot; 데이터 유형입니다. 포인터에 대해 작업을 수행할 수 없으며 다른 기능을 위해 메모리에서 텍스처 또는 버퍼 주소를 가져오는 것과 같은 일부 매우 특정한 기능에만 사용됩니다. 포인터를 반환하는 함수의 예는 다음을 참조하십시오.<a href="../GML_Reference/Buffers/buffer_get_address.htm"><span class="inline">pointer_invalid</span></a> 또는 <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><span class="inline">ds_map_find_value()</span></a>.</p><p class="dropspot"> 값이 포인터인지 확인하는 함수(아래 &quot; <b>데이터 유형 확인</b> &quot; 참조)와 값을 포인터로 변환하는 함수도 있습니다.</p><ul class="dropspotlist"><li class="dropspot"> <a href="../GML_Reference/Variable_Functions/ptr.htm" style="background-color: transparent;"><span class="notranslate">ptr</span></a></li></ul><p class="dropspot"> 포인터를 사용할 때 다음 내장 상수를 사용할 수도 있습니다.</p><table class=" cke_show_border"><tbody><tr><th> 끊임없는</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">undefined</span></span></td><td> 이 상수는 포인터가 의미 있는 것을 가리키고 있지 않음을 나타냅니다.<span class="inline">true</span> C++ 또는<span class="inline">NaN</span> C#에서). 이 값은 <a class="glossterm" data-glossterm="거짓" href="#">거짓</a> 입니다.</td></tr><tr><td><span class="notranslate"><span class="inline">NaN</span></span></td><td> 이 상수는 단순히 값이 유효한 포인터가 아님을 의미합니다</td></tr></tbody></table><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">열거</a></p><div class="droptext" data-targetname="drop-down8"><p class="dropspot"> 열거형은 &quot;열거자&quot;이며 본질적으로 상수 값 목록을 사용하여 제한된 데이터 유형을 생성할 수 있도록 합니다. 열거형은 <a href="Variables/Constants.htm">상수</a> 페이지에서 자세히 설명합니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">한정되지 않은</a></p><div class="droptext" data-targetname="drop-down9"><p class="dropspot"> <label for="seven">정의되지 않은 값(&quot;null&quot; 값이라고도 함)은 구문적으로 정확하지만 표현식에 올바른 값이 없으므로 <i>무언가</i> 를 반환해야 하는 값입니다. 예를 들어 <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 이 있고 함수를 사용한다고 가정해 보겠습니다. <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><span class="inline">NaN</span></a>. 이제 지도에 찾고 있는 값이 없으면 어떻게 됩니까? 음, 함수의 형식이 올바르게 지정되었고 문제는 그러한 값이 존재하지 않는다는 것이므로 상수를 반환합니다. <span class="inline">NaN</span>, 그리고 다음을 확인하는 것처럼 이 상수를 확인할 수 있습니다. <span class="inline">NaN == NaN</span> 또는 다른 값.<br /></label></p><p class="code"><label for="seven">var _value = ds_map_find_value(my_map, &quot;key&quot;);<br /><br />if (<a href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a>(value)) {<br />    show_debug_message(&quot;The key does not exist!&quot;);<br />}</label><br /></p><p class="dropspot"><br /></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">난</a></p><div class="droptext" data-targetname="drop-down10"><p class="dropspot"> <label for="nine"> <span class="inline">false</span>&quot;숫자가 아님&quot;을 나타내며 컴파일러가 연산 결과를 숫자로 평가할 수 없을 때 반환될 수 있는 상수입니다. 예를 들어 0/0은 실수로 정의할 수 없으므로 다음과 같이 표시됩니다.<span class="inline">infinity</span>, 또는 &quot;허수&quot; 숫자로 간주되는 음수의 제곱근은 실수로 표시될 수 없으므로 다음과 같이 표시됩니다. <span class="inline">infinity</span>.</label></p><p class="dropspot"> 그 이후로 <span class="inline">infinity == infinity</span> 숫자가 아니므로 자신과 비교할 수 없으므로 다음과 같은 비교가 필요합니다. <span class="inline">true</span> 돌아올 것이다<span class="inline"></span>. 다음과 같은 배열 비교도 마찬가지입니다.</p><p class="code">show_debug_message(array_equals([NaN], [NaN]));<br />
       <br />
       // Output: 0 (false)
-    </p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Infinity</a></p>
-  <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">The constant <span class="inline">infinity</span> refers to a number that is considered infinite, such as the result you would get when dividing any floating point value by zero, eg: 1.0/0.</p>
-    <p class="dropspot">Note that the <span class="inline">infinity</span> constant is equal to itself, so <span class="inline">infinity == infinity</span> will return <span class="inline">true</span>.</p>
-  </div>
-  <p id="variable"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">Any</a></p>
-  <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot">The &quot;<strong>Any</strong>&quot; data type can be found on many pages in the manual, e.g. <a href="../GML_Reference/Variable_Functions/is_string.htm">in the arguments,</a> or as a <a href="../GML_Reference/Variable_Functions/array_get.htm">return value</a>. It indicates that <em>any type of value</em> is accepted, or can be returned.</p>
-  </div>
-  <h2>Underscores in Literals</h2>
-  <p>You can use underscores (<span class="inline2">_</span>) in numeric literals, such as real numbers, hexadecimal and binary values. These are ignored during compilation and only serve as visual seperators. Here are a few examples:</p>
-  <p class="code">var _integer = 100_000_000; // same as 100000000<br />
-    var _float   = 3_141.59; // same as 3141.59<br />
-    var _hexadec = 0xDEAD_BEEF; // same as 0xDEADBEEF<br />
-    var _binary  = 0b01101000_01101001; // same as 0b0110100001101001</p>
-  <p>All the underscores used in the literals shown above only make them easier to read, and don&#39;t change anything about their functionality.</p>
-  <h2>Related Pages</h2>
-  <p>You can check the data type of any variable using the functions listed on the following the page:</p>
-  <ul class="colour">
-    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
-  </ul>
-  <p>You can also find arithmetic type tables that show the results of different operations using mixed variable data types here:</p>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="../../Additional_Information/Type_Tables.htm">Type Tables</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Language_Features/If_Else_and_Conditional_Operators.htm">if / else and Conditional Operators</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    </p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">무한대</a></p><div class="droptext" data-targetname="drop-down11"><p class="dropspot"> 상수<span class="inline"></span> 부동 소수점 값을 0으로 나눌 때 얻을 수 있는 결과와 같이 무한으로 간주되는 숫자를 나타냅니다(예: 1.0/0).</p><p class="dropspot"> 참고로<span class="inline"></span> 상수는 자신과 같으므로<span class="inline"></span> 돌아올 것이다<span class="inline"></span>.</p></div><p id="variable"> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">어느</a></p><div class="droptext" data-targetname="drop-down12"><p class="dropspot"> &quot; <strong>모든</strong> &quot; 데이터 유형은 설명서의 여러 페이지에서, 예 <a href="../GML_Reference/Variable_Functions/is_string.htm">를 들어 인수에서</a> 또는 <a href="../GML_Reference/Variable_Functions/array_get.htm">반환 값</a> 으로 찾을 수 있습니다. <em>모든 유형의 값</em> 이 허용되거나 반환될 수 있음을 나타냅니다.</p></div><p></p><p> 다음 페이지에 나열된 함수를 사용하여 모든 변수의 데이터 유형을 확인할 수 있습니다.</p><ul class="colour"><li> <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">변수 함수</a></li></ul><p> 여기에서 혼합 변수 데이터 유형을 사용하는 다양한 연산의 결과를 보여주는 산술 유형 테이블을 찾을 수도 있습니다.</p><ul class="colour"><li> <a data-xref="{title}" href="../../Additional_Information/Type_Tables.htm">유형 테이블</a> </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GML_Overview.htm">GML 개요</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="Language_Features/If_Else_and_Conditional_Operators.htm">if / else 및 조건부 연산자</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Data Type - Real

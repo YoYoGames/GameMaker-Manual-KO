@@ -3,54 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Asynchronous Functions</title>
+  <title>비동기 함수</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for all the different Asynchronous Functions" />
+  <meta name="topic-comment" content="모든 다른 비동기 함수에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Asynchronous Functions,Async Functions" />
+  <meta name="search-keywords" content="비동기 함수,비동기 함수" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Asynchronous Functions</h1>
-  <p>In the context of <span data-keyref="GameMaker Name">GameMaker</span>, an asynchronous function is one that sends out to a web server, or asks for user input, or even streams data, while letting <span data-keyref="GameMaker Name">GameMaker</span> continue to run without blocking the game being run. When the information <a class="glossterm" data-glossterm="callback" href="#">callback</a> is received a special <b>Async Event</b> is fired which, in turn, allows any instance with an Async Event assigned to it to execute further functions (although this does not have to be the case). So, basically, it&#39;s a way to communicate with some external resource (server, user or device) without the game or project stopping while waiting for a reply.</p>
-  <p>Why is this important? Well, since it allows <span data-keyref="GameMaker Name">GameMaker</span> to continue functioning while sending or receiving data, and this means that you can do many things all without blocking the game loop like:</p>
-  <ul class="colour">
-    <li>stream data from the device into your game without the player waiting for things to load</li>
-    <li>have callback events to do things only when the correct information is received</li>
-    <li>communicate and interchange data with a web server</li>
-  </ul>
-  <p>This makes everything function in a much more fluid and unobtrusive way. It should be noted that the Async Events will be triggered for <em>all </em>instances that have them, so you can use an async function in one instance, and have the Asynchronous Event that deals with the reply in another one, or even various other ones. You can go here for more information on how the Asynchronous event works - <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>.</p>
-  <p>The different type of asynchronous functions are listed in the sections below:</p>
-  <ul class="colour">
-    <li><a name="async_http"></a><a href="HTTP/HTTP.htm"><label for="one">HTTP</label></a></li>
-    <li><a href="Dialog/Dialog.htm"><label for="two">Dialog</label></a></li>
-    <li><a href="Cloud_Saving/Cloud_Saving.htm"><label for="three">Cloud Saving</label></a></li>
-    <li><a href="Push_Notifications/Push_Notifications.htm"><label for="four">Push Notifications</label></a></li>
-    <li><a href="Facebook/Facebook.htm"><label for="five">Facebook</label></a></li>
-  </ul>
-  <p> </p>
-  <p>There are also a number of <a href="../Buffers/Buffers.htm">Buffer</a> functions that can be used for loading and saving buffers in an asynchronous manner, which are required when working on the different consoles that <span data-keyref="GameMaker Name">GameMaker</span> supports, although they can also be used on the other target platforms:</p>
-  <ul class="colour">
-    <li><a href="../Buffers/buffer_save_async.htm">buffer_save_async</a></li>
-    <li><a href="../Buffers/buffer_load_async.htm">buffer_load_async</a></li>
-    <li><a href="../Buffers/buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
-    <li><a href="../Buffers/buffer_async_group_option.htm">buffer_async_group_option</a></li>
-    <li><a href="../Buffers/buffer_async_group_end.htm">buffer_async_group_end</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Networking/Networking.htm">Networking</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 비동기 함수</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 컨텍스트에서 비동기 기능은 웹 서버로 전송하거나 사용자 입력을 요청하거나 데이터를 스트리밍하는 동시에 <span data-keyref="GameMaker Name">GameMaker</span> 가 게임 실행을 차단하지 않고 계속 실행되도록 하는 기능입니다. 정보 <a class="glossterm" data-glossterm="콜백" href="#">콜백</a> 이 수신되면 특별한 <b>비동기 이벤트</b> 가 발생하여 비동기 이벤트가 할당된 모든 인스턴스가 추가 기능을 실행할 수 있도록 합니다(반드시 그럴 필요는 없음). 따라서 기본적으로 응답을 기다리면서 게임이나 프로젝트를 중단하지 않고 외부 리소스(서버, 사용자 또는 장치)와 통신하는 방식입니다.</p><p> 이것이 왜 중요한가? 글쎄요, <span data-keyref="GameMaker Name">GameMaker</span> 가 데이터를 보내거나 받는 동안 계속 작동할 수 있기 때문에 다음과 같은 게임 루프를 차단하지 않고도 많은 일을 할 수 있습니다.</p><ul class="colour"><li> 플레이어가 로드될 때까지 기다리지 않고 장치에서 게임으로 데이터 스트리밍</li><li> 올바른 정보가 수신될 때만 작업을 수행하는 콜백 이벤트가 있습니다.</li><li> 웹 서버와 통신 및 데이터 교환</li></ul><p> 이것은 모든 것이 훨씬 더 유동적이고 눈에 거슬리지 않는 방식으로 작동하도록 합니다. 비동기 이벤트는 이벤트가 있는 <em>모든</em> 인스턴스에 대해 트리거되므로 한 인스턴스에서 비동기 함수를 사용할 수 있고 다른 인스턴스 또는 다양한 다른 인스턴스에서 응답을 처리하는 비동기 이벤트를 가질 수 있습니다. 비동기 이벤트 작동 방식에 대한 자세한 내용은 여기를 참조하세요. <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">비동기 이벤트</a>.</p><p> 다양한 유형의 비동기 함수가 아래 섹션에 나열되어 있습니다.</p><ul class="colour"><li><a name="async_http"></a> <a href="HTTP/HTTP.htm"><label for="one">HTTP</label></a></li><li> <a href="Dialog/Dialog.htm"><label for="two">대화</label></a></li><li> <a href="Cloud_Saving/Cloud_Saving.htm"><label for="three">클라우드 세이빙</label></a></li><li> <a href="Push_Notifications/Push_Notifications.htm"><label for="four">푸시 알림</label></a></li><li> <a href="Facebook/Facebook.htm"><label for="five">페이스북</label></a></li></ul><p></p><p> 다른 대상 플랫폼에서도 사용할 수 있지만 <span data-keyref="GameMaker Name">GameMaker</span> 가 지원하는 다른 콘솔에서 작업할 때 필요한 비동기 방식으로 버퍼를 로드하고 저장하는 데 사용할 수 있는 여러 <a href="../Buffers/Buffers.htm">버퍼</a> 함수가 있습니다.</p><ul class="colour"><li> <a href="../Buffers/buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li><li> <a href="../Buffers/buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li><li> <a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li><li> <a href="../Buffers/buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li><li> <a href="../Buffers/buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li> </ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../GML_Reference.htm">GML 참조</a></div><div style="float:right"> 다음: <a href="../Networking/Networking.htm">네트워킹</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Reference

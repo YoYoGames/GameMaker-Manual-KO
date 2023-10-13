@@ -3,56 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Gesture Input</title>
+  <title>제스처 입력</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for Gesture Input" />
+  <meta name="topic-comment" content="제스처 입력에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Gesture Input,gestures,drag,swipe,zoom,rotate" />
+  <meta name="search-keywords" content="제스처 입력,몸짓,견인,강타,줌,회전" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Gesture Input</h1>
-  <p>The <a href="../Device_Input/Device_Input.htm">Device Input</a> functions are all fine and well for dealing with simple on-screen touches or getting device orientation, but sometimes you&#39;ll want your projects to detect more complex things, like being able to drag or &quot;flick&quot; an instance across a room. These things <i>can</i> be done with the Device functions, but to make things easier <span data-keyref="GameMaker Name">GameMaker</span> has a complete range of <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">Gesture Events</a> to detect double taps, dragging, flicks, pinches and rotations, at both an instance and a global level, as well as return information about the event. The functions listed here are all designed to give you greater control over how and when these events will be triggered.</p>
-  <p class="note"><span class="important">IMPORTANT</span> These functions will not work on the HTML5 target platform. They will not give an error if used, but instead will simply be ignored.</p>
-  <p>The following different gesture function are available:</p>
-  <ul class="colour">
-    <li><a href="gesture_get_drag_time.htm">gesture_get_drag_time</a></li>
-    <li><a href="gesture_get_drag_distance.htm">gesture_get_drag_distance</a></li>
-    <li><a href="gesture_get_flick_speed.htm">gesture_get_flick_speed</a></li>
-    <li><a href="gesture_get_double_tap_time.htm">gesture_get_double_tap_time</a></li>
-    <li><a href="gesture_get_double_tap_distance.htm">gesture_get_double_tap_distance</a></li>
-    <li><a href="gesture_get_tap_count.htm">gesture_get_tap_count</a></li>
-    <li><a href="gesture_get_pinch_distance.htm">gesture_get_pinch_distance</a></li>
-    <li><a href="gesture_get_pinch_angle_towards.htm">gesture_get_pinch_angle_towards</a></li>
-    <li><a href="gesture_get_pinch_angle_away.htm">gesture_get_pinch_angle_away</a></li>
-    <li><a href="gesture_get_rotate_time.htm">gesture_get_rotate_time</a></li>
-    <li><a href="gesture_get_rotate_angle.htm">gesture_get_rotate_angle</a></li>
-    <li><a href="gesture_drag_time.htm">gesture_drag_time</a></li>
-    <li><a href="gesture_drag_distance.htm">gesture_drag_distance</a></li>
-    <li><a href="gesture_flick_speed.htm">gesture_flick_speed</a></li>
-    <li><a href="gesture_double_tap_time.htm">gesture_double_tap_time</a></li>
-    <li><a href="gesture_double_tap_distance.htm">gesture_double_tap_distance</a></li>
-    <li><a href="gesture_tap_count.htm">gesture_tap_count</a></li>
-    <li><a href="gesture_pinch_distance.htm">gesture_pinch_distance</a></li>
-    <li><a href="gesture_pinch_angle_towards.htm">gesture_pinch_angle_towards</a></li>
-    <li><a href="gesture_pinch_angle_away.htm">gesture_pinch_angle_away</a></li>
-    <li><a href="gesture_rotate_time.htm">gesture_rotate_time</a></li>
-    <li><a href="gesture_rotate_angle.htm">gesture_rotate_angle</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../GamePad_Input/Gamepad_Input.htm">Gamepad Input</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 제스처 입력</h1><p> <a href="../Device_Input/Device_Input.htm">장치 입력</a> 기능은 모두 훌륭하고 간단한 화면 터치를 처리하거나 장치 방향을 가져오는 데 적합하지만 때로는 프로젝트가 방을 가로질러 인스턴스를 드래그하거나 &quot;튕기기&quot;할 수 있는 것과 같이 더 복잡한 것을 감지하기를 원할 것입니다.. 이러한 작업은 장치 기능으로 수행 <i>할 수</i> 있지만 더 쉽게 만들기 위해 <span data-keyref="GameMaker Name">GameMaker</span> 에는 인스턴스 및 글로벌 수준에서 두 번 탭, 드래그, 플릭, 핀치 및 회전을 감지하고 정보를 반환하는 완전한 범위의 <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">제스처 이벤트</a> 가 있습니다. 이벤트에 대해. 여기에 나열된 기능은 모두 이러한 이벤트가 트리거되는 방법과 시기를 더 잘 제어할 수 있도록 설계되었습니다.</p><p class="note"> <span class="important">중요</span> 이러한 기능은 HTML5 대상 플랫폼에서 작동하지 않습니다. 사용하면 오류가 발생하지 않지만 대신 단순히 무시됩니다.</p><p> 다음과 같은 다른 제스처 기능을 사용할 수 있습니다.</p><ul class="colour"><li> <a href="gesture_get_drag_time.htm"><span class="notranslate">gesture_get_drag_time</span></a></li><li> <a href="gesture_get_drag_distance.htm"><span class="notranslate">gesture_get_drag_distance</span></a></li><li> <a href="gesture_get_flick_speed.htm"><span class="notranslate">gesture_get_flick_speed</span></a></li><li> <a href="gesture_get_double_tap_time.htm"><span class="notranslate">gesture_get_double_tap_time</span></a></li><li> <a href="gesture_get_double_tap_distance.htm"><span class="notranslate">gesture_get_double_tap_distance</span></a></li><li> <a href="gesture_get_tap_count.htm"><span class="notranslate">gesture_get_tap_count</span></a></li><li> <a href="gesture_get_pinch_distance.htm"><span class="notranslate">gesture_get_pinch_distance</span></a></li><li> <a href="gesture_get_pinch_angle_towards.htm"><span class="notranslate">gesture_get_pinch_angle_towards</span></a></li><li> <a href="gesture_get_pinch_angle_away.htm"><span class="notranslate">gesture_get_pinch_angle_away</span></a></li><li> <a href="gesture_get_rotate_time.htm"><span class="notranslate">gesture_get_rotate_time</span></a></li><li> <a href="gesture_get_rotate_angle.htm"><span class="notranslate">gesture_get_rotate_angle</span></a></li><li> <a href="gesture_drag_time.htm"><span class="notranslate">gesture_drag_time</span></a></li><li> <a href="gesture_drag_distance.htm"><span class="notranslate">gesture_drag_distance</span></a></li><li> <a href="gesture_flick_speed.htm"><span class="notranslate">gesture_flick_speed</span></a></li><li> <a href="gesture_double_tap_time.htm"><span class="notranslate">gesture_double_tap_time</span></a></li><li> <a href="gesture_double_tap_distance.htm"><span class="notranslate">gesture_double_tap_distance</span></a></li><li> <a href="gesture_tap_count.htm"><span class="notranslate">gesture_tap_count</span></a></li><li> <a href="gesture_pinch_distance.htm"><span class="notranslate">gesture_pinch_distance</span></a></li><li> <a href="gesture_pinch_angle_towards.htm"><span class="notranslate">gesture_pinch_angle_towards</span></a></li><li> <a href="gesture_pinch_angle_away.htm"><span class="notranslate">gesture_pinch_angle_away</span></a></li><li> <a href="gesture_rotate_time.htm"><span class="notranslate">gesture_rotate_time</span></a></li><li> <a href="gesture_rotate_angle.htm"><span class="notranslate">gesture_rotate_angle</span></a></li> </ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Game_Input.htm">게임 입력</a></div><div style="float:right"> 다음: <a href="../GamePad_Input/Gamepad_Input.htm">게임패드 입력</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gesture Input Functions

@@ -6,56 +6,13 @@
   <title>path_set_precision</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_set_precision" />
+  <meta name="topic-comment" content="path_set_precision 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_set_precision" />
   <meta name="search-keywords" content="path_set_precision" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_set_precision</h1>
-  <p>With this function you can change the &quot;smoothness&quot; of a path. This value must be between 1 and 8, with a low value creating straighter edges with sharper curves between points, while a higher value will round the points and make the path a lot more &quot;curvy&quot;. Note that this function will have no visible effect if the path has not been set to smooth in the path editor or using the function <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>This function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p>
-  <h4>Syntax:</h4>
-  <p class="code">path_set_precision(index, prec);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to change.</td>
-      </tr>
-      <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The precision of the path. Must be an integer between 1 and 8.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">path_set_precision(pth_Patrol, 2);</p>
-  <p>This will set the precision of the given path to 2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_shift.htm">path_shift</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_set_precision</h1><p> 이 기능을 사용하여 경로의 &quot;부드러움&quot;을 변경할 수 있습니다. 이 값은 1에서 8 사이여야 하며, 값이 낮을수록 모서리가 더 똑바르고 점 사이에 더 날카로운 곡선이 생성되고 값이 높을수록 점을 둥글게 만들고 경로를 훨씬 더 &quot;곡선&quot;하게 만듭니다. 경로 편집기에서 경로가 매끄럽게 설정되지 않았거나 함수를 사용하여 이 기능은 가시적인 효과가 없습니다.<a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>이 함수는 실제 경로 자산을 변경</strong> 하므로 함수가 사용되는 순간부터 게임이 끝날 때까지 게임의 모든 인스턴스에서 경로가 사용되는 방식에 영구적으로 영향을 미칩니다. 이것이 필요한 것이 아닌 경우 다음과 같은 기능을 사용해야 합니다. <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p><h4> 통사론:</h4><p class="code">path_set_precision(index, prec);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to change.</span></td></tr><tr><td> <span class="notranslate">prec</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The precision of the path. Must be an integer between 1 and 8.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">path_set_precision(pth_Patrol, 2);</p><p> 그러면 주어진 경로의 정밀도가 2로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_shift.htm"><span class="notranslate">path_shift</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_set_precision

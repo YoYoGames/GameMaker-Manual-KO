@@ -6,115 +6,20 @@
   <title>os_get_language</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for os_get_language" />
+  <meta name="topic-comment" content="os_get_language에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="os_get_language" />
   <meta name="search-keywords" content="os_get_language" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_get_language</h1>
-  <p>This function returns a string with the two letter Language Code for the OS that is running the game, as set by the <a href="http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a> standard. If the information is not available, it will hold simply an empty string &quot;&quot;, or &quot;en&quot; for &quot;English&quot; language. Note that some languages also have a relevant Regional Code too, so to distinguish between different regions of the same country use the function <a href="os_get_region.htm"><span class="inline">os_get_region()</span></a>.</p>
-  <p>The following table shows example of some of the main two letter language codes as defined by ISO 639:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Language</th>
-        <th>Code</th>
-      </tr>
-      <tr>
-        <td>Arabic</td>
-        <td>ar</td>
-      </tr>
-      <tr>
-        <td>Chinese</td>
-        <td>zh</td>
-      </tr>
-      <tr>
-        <td>Danish</td>
-        <td>da</td>
-      </tr>
-      <tr>
-        <td>English</td>
-        <td>en</td>
-      </tr>
-      <tr>
-        <td>French</td>
-        <td>fr</td>
-      </tr>
-      <tr>
-        <td>German</td>
-        <td>de</td>
-      </tr>
-      <tr>
-        <td>Greek</td>
-        <td>el</td>
-      </tr>
-      <tr>
-        <td>Italian</td>
-        <td>it</td>
-      </tr>
-      <tr>
-        <td>Japanese</td>
-        <td>ja</td>
-      </tr>
-      <tr>
-        <td>Norwegian</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>Polish</td>
-        <td>pl</td>
-      </tr>
-      <tr>
-        <td>Portuguese</td>
-        <td>pt</td>
-      </tr>
-      <tr>
-        <td>Russian</td>
-        <td>ru</td>
-      </tr>
-      <tr>
-        <td>Spanish</td>
-        <td>es</td>
-      </tr>
-      <tr>
-        <td>Swedish</td>
-        <td>sv</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <p class="note"><b>NOTE</b>: This is not the location country code that is returned, but the language code of the OS.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">os_get_language()</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">switch (os_get_language())<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_get_language</h1><p> 이 함수는 <a href="http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a> 표준에서 설정한 대로 게임을 실행하는 OS에 대한 두 글자 언어 코드가 포함된 문자열을 반환합니다. 정보를 사용할 수 없는 경우 단순히 빈 문자열 &quot;&quot; 또는 &quot;영어&quot; 언어의 경우 &quot;en&quot;을 보유합니다. 일부 언어에는 관련 지역 코드도 있으므로 동일한 국가의 다른 지역을 구별하려면 이 기능을 사용하십시오.<a href="os_get_region.htm"><span class="inline">os_get_region()</span></a>.</p><p> 다음 표는 ISO 639에서 정의한 주요 두 글자 언어 코드의 예를 보여줍니다.</p><table><tbody><tr><th> 언어</th><th> 암호</th></tr><tr><td> 아라비아 말</td><td> 아르</td></tr><tr><td> 중국인</td><td> zh</td></tr><tr><td> 덴마크 말</td><td> 다</td></tr><tr><td> 영어</td><td> ko</td></tr><tr><td> 프랑스 국민</td><td> 정말로</td></tr><tr><td> 독일 사람</td><td> 드</td></tr><tr><td> 그리스 어</td><td> 엘자</td></tr><tr><td> 이탈리아 사람</td><td> 그것</td></tr><tr><td> 일본어</td><td> 자</td></tr><tr><td> 노르웨이 인</td><td> 아니요</td></tr><tr><td> 광택</td><td> 제발</td></tr><tr><td> 포르투갈 인</td><td> 태평양 표준시</td></tr><tr><td> 러시아인</td><td> 루</td></tr><tr><td> 스페인의</td><td> 에스</td></tr><tr><td> 스웨덴어</td><td> SV</td></tr></tbody></table><p></p><p class="note"> <b>참고</b>: 이것은 반환되는 위치 국가 코드가 아니라 OS의 언어 코드입니다.</p><p></p><h4> 통사론:</h4><p class="code">os_get_language()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_get_language())<br />
     {<br />
         case &quot;es&quot;: ini_open(&quot;spanish.ini&quot;); break;<br />
         case &quot;fr&quot;: ini_open(&quot;french.ini&quot;); break;<br />
         case &quot;it&quot;: ini_open(&quot;italian.ini&quot;); break;<br />
         default: ini_open(&quot;english.ini&quot;); break;<br />
-    }</p>
-  <p>The above code checks the OS language and opens a different <span class="inline">*.ini</span> file depending on the returned value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_get_region.htm">os_get_region</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 OS 언어를 확인하고 다른 <span class="inline">*.ini</span> 반환된 값에 따라 파일. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="OS_And_Compiler.htm">OS와 컴파일러</a></div><div style="float:right"> 다음: <a href="os_get_region.htm"><span class="notranslate">os_get_region</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_language

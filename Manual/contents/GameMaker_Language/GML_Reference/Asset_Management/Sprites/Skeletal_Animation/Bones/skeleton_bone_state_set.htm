@@ -6,64 +6,13 @@
   <title>skeleton_bone_state_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function skeleton_bone_state_set" />
+  <meta name="topic-comment" content="skeleton_bone_state_set 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="skeleton_bone_state_set" />
   <meta name="search-keywords" content="skeleton_bone_state_set" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_bone_state_set</h1>
-  <p>Your skeletal animation is made up of a number of &quot;bones&quot;, which you will have defined and given names to in your animation program, and this function can be used to set certain data for the named bone at any time. Note that this data will set the <b>current</b> pose for the skeleton, depending on the animation set used, and the function requires a previously created <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a>, which should have the following keys and their required values:<b></b></p>
-  <ul class="colour">
-    <li><b>&quot;x&quot;:</b> The local x position of the bone relative to the parent bone.<br />
-      <b></b>
-    </li>
-    <li><b>&quot;y&quot;:</b> The local y position of the bone relative to the parent bone.<br />
-      <b></b>
-    </li>
-    <li><b>&quot;angle&quot;:</b> The local rotation of the bone relative to the parent bone.<br />
-      <b></b>
-    </li>
-    <li><b>&quot;xscale&quot;:</b> The local horizontal scale of the bone.<br />
-      <b></b>
-    </li>
-    <li><b>&quot;yscale&quot;:</b> The local vertical scale of the bone.<br />
-      <b></b>
-    </li>
-    <li><b>&quot;parent&quot;:</b> The name (a string) of the parent bone.</li>
-  </ul>
-  <p>This function is provided so that you can &quot;intercept&quot; animation data and modify it before it is drawn on the screen, and as such you would want to use it in the <a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Animation Update</a> event, since this event is triggered just before the Draw Events.</p>
-  <p>Note that you can use the same map you filled out using the <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_state_get()</span></a> function, even though it contains the additional &quot;World&quot; keys and values. Since these refer to <i>read-only</i> values, setting them with this function will have no affect.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">skeleton_bone_state_set(bone, map);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>bone</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name (as a string) of the bone.</td>
-      </tr>
-      <tr>
-        <td>map</td>
-        <td><span data-keyref="Type_ID_DS_Map">DS Map ID</span></td>
-        <td>The (previously created) DS map that stores the bone data.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var map = ds_map_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_bone_state_set</h1><p> 뼈대 애니메이션은 애니메이션 프로그램에서 정의하고 이름을 지정한 여러 &quot;뼈&quot;로 구성되며 이 기능을 사용하여 언제든지 명명된 뼈에 대한 특정 데이터를 설정할 수 있습니다. 이 데이터는 사용된 애니메이션 세트에 따라 스켈레톤의 <b>현재</b> 포즈를 설정하며 이 기능에는 다음 키와 필수 값이 있어야 하는 이전에 생성된 <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 이 필요합니다.<b></b></p><ul class="colour"><li> <b>&quot;x&quot;:</b> 상위 뼈대를 기준으로 한 뼈대의 로컬 x 위치입니다.<br /><b></b></li><li> <b>&quot;y&quot;:</b> 상위 뼈대를 기준으로 한 뼈대의 로컬 y 위치입니다.<br /><b></b></li><li> <b>&quot;각도&quot;:</b> 상위 뼈에 대한 뼈의 로컬 회전입니다.<br /><b></b></li><li> <b>&quot;xscale&quot;:</b> 뼈의 로컬 수평 스케일입니다.<br /><b></b></li><li> <b>&quot;yscale&quot;:</b> 뼈의 로컬 수직 스케일입니다.<br /><b></b></li><li> <b>&quot;parent&quot;:</b> 부모 뼈의 이름(문자열)입니다.</li></ul><p> 이 기능은 애니메이션 데이터가 화면에 그려지기 전에 &quot;가로채기&quot;하고 수정할 수 있도록 제공되며, 따라서 이 이벤트는 그리기 직전에 트리거되기 때문에 <a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">기타 - 애니메이션 업데이트</a> 이벤트에서 사용하고 싶을 것입니다. 이벤트.</p><p> 다음을 사용하여 작성한 동일한 지도를 사용할 수 있습니다.<a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_state_get()</span></a> 추가 &quot;세계&quot; 키와 값이 포함되어 있더라도 기능. 이는 <i>읽기 전용</i> 값을 참조하므로 이 기능으로 설정해도 영향이 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_bone_state_set(bone, map);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">bone</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name (as a string) of the bone.</span></td></tr><tr><td> <span class="notranslate">map</span></td><td> <span data-keyref="Type_ID_DS_Map">DS 맵 ID</span></td><td> <span class="notranslate">The (previously created) DS map that stores the bone data.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var map = ds_map_create();<br />
     skeleton_bone_state_get(&quot;head&quot;, map);<br />
     var xx = ds_map_find_value(map, &quot;worldX&quot;);<br />
     var yy = ds_map_find_value(map, &quot;worldY&quot;);<br />
@@ -72,19 +21,7 @@
     var angle = -radtodeg(arctan2(deltay, deltax));<br />
     ds_map_replace(map, &quot;angle&quot;, angle);<br />
     skeleton_bone_state_set(&quot;head&quot;, map);<br />
-    ds_map_destroy(map);</p>
-  <p>The above code creates a DS map and then populates it with the data from the bone named &quot;head&quot;. It then extracts the world position for the bone, and uses that data to set the &quot;angle&quot; of the bone to track the mouse position in the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Bones.htm">Bones</a></div>
-        <div style="float:right">Next: <a href="skeleton_bone_list.htm">skeleton_bone_list</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    ds_map_destroy(map);</p><p> 위의 코드는 DS 맵을 만든 다음 &quot;head&quot;라는 뼈대의 데이터로 채웁니다. 그런 다음 뼈의 세계 위치를 추출하고 해당 데이터를 사용하여 뼈의 &quot;각도&quot;를 설정하여 게임에서 마우스 위치를 추적합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Bones.htm">뼈</a></div><div style="float:right"> 다음: <a href="skeleton_bone_list.htm"><span class="notranslate">skeleton_bone_list</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_bone_state_set

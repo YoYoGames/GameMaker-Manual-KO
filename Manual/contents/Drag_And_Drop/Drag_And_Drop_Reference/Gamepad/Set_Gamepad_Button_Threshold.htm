@@ -3,56 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Gamepad Button Threshold</title>
+  <title>게임패드 버튼 임계값 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Gamepad Button Threshold action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Gamepad Button Threshold" />
-  <meta name="search-keywords" content="Set Gamepad Button Threshold" />
+  <meta name="topic-comment" content="게임패드 버튼 임계값 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 게임패드 버튼 임계값 설정" />
+  <meta name="search-keywords" content="게임패드 버튼 임계값 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Gamepad Button Threshold Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Button_Threshold.png" /> Set Gamepad Button Threshold</h1>
-  <p>This action can be used to set the &quot;threshold&quot; of the gamepad analogue buttons. You specify the gamepad index to set, and then set a value from 0 to 1 and if the analogue button input amount is lower than the given value, the gamepad button
-    is considered to be at 0. Note that this is a <em>global </em>setting that will affect <i>all</i> analogue buttons connected gamepad. This value will be used in all <a href="If_Gamepad_Button_Down.htm">down</a>, <a href="If_Gamepad_Button_Pressed.htm">pressed</a>    and <a href="If_Gamepad_Button_Released.htm">released</a> checks for the given gamepad, but will be <em>ignored</em> by the action <a href="Get_Gamepad_Trigger.htm">Get Gamepad Trigger</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Gamepad Button Threshold Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/a_GamePad_Set_Button_Threshold.png" /></p>
-  <p> </p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Gamepad</td>
-        <td>The gamepad index.</td>
-      </tr>
-      <tr>
-        <td>Deadzone</td>
-        <td>The threshold value (0 - 1)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Gamepad Button Threshold Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/e_GamePad_Set_Button_Threshold.png" /><br/> The above action block code sets the button threshold for all
-    gamepad indices to 0.2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Actions.htm">Gamepad Actions</a></div>
-        <div style="float:right">Next: <a href="If_Gamepad_Button_Pressed.htm">If Gamepad Button Pressed</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Gamepad Button Threshold Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Button_Threshold.png" /> 게임패드 버튼 임계값 설정</h1><p> 이 작업은 게임패드 아날로그 버튼의 &quot;임계값&quot;을 설정하는 데 사용할 수 있습니다. 설정할 게임패드 인덱스를 지정한 다음 0~1 사이의 값을 설정하고 아날로그 버튼 <em>입력량</em> 이 주어진 값보다 작으면 게임패드 버튼은 0으로 간주됩니다. 게임패드에 연결된 <i>모든</i> 아날로그 버튼에 영향을 줍니다. 이 값은 주어진 게임패드에 대한 모든 <a href="If_Gamepad_Button_Down.htm">down</a>, <a href="If_Gamepad_Button_Pressed.htm">눌림</a> 및 <a href="If_Gamepad_Button_Released.htm">해제</a> 검사에 사용되지만 <a href="Get_Gamepad_Trigger.htm">Get Gamepad Trigger</a> 작업에서는 <em>무시</em> 됩니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Set Gamepad Button Threshold Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/a_GamePad_Set_Button_Threshold.png" /></p><p></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Gamepad</span></td><td> 게임패드 인덱스.</td></tr><tr><td> <span class="notranslate">Deadzone</span></td><td> 임계값(0 - 1)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Set Gamepad Button Threshold Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/e_GamePad_Set_Button_Threshold.png" /><br/> 위의 작업 블록 코드는 모든 게임패드 인덱스에 대한 버튼 임계값을 0.2로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Actions.htm">게임패드 작업</a></div><div style="float:right"> 다음: <a href="If_Gamepad_Button_Pressed.htm">게임패드 버튼을 누른 경우</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Gamepad Button Threshold

@@ -6,57 +6,13 @@
   <title>part_system_automatic_draw</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for part_system_automatic_draw" />
+  <meta name="topic-comment" content="part_system_automatic_draw에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="part_system_automatic_draw" />
   <meta name="search-keywords" content="part_system_automatic_draw" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_automatic_draw</h1>
-  <p>This function can be used to switch off the drawing of a particle system so that any updates done to the system (automatic or otherwise) will not be seen. This is a purely visual option and when set to <span class="inline">false</span> you will not be able to see the particles as they are not drawn, but they still exists and are changing position, colour etc... as they would normally. When automatic drawing is off, you can <i>explicitly</i> order <span data-keyref="GameMaker Name">GameMaker</span> to draw the current state of the particle system using the function <a href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>, and if you set this function to <span class="inline">true</span> again you can switch automatic drawing back on.</p>
-  <p>One thing to note is that if you are using the simple effects created by the functions <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> or <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> then you can use the values of 0 (for below effects) or 1 (for above effects) as the particle system index and so toggle the automatic draw for these too (this will also work to toggle drawing for the GML Visual particle effects).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">part_system_automatic_draw(ind, automatic);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_ID_PartSys">Particle System ID</span></td>
-        <td>The index of the particle system to change.</td>
-      </tr>
-      <tr>
-        <td>automatic</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether automatic drawing is on (true) or not (false).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">part_system_automatic_draw(global.Sname, false);</p>
-  <p>The above code switches off automatic drawing for the particle system indexed in the global variable &quot;Sname&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Systems.htm">Particle Systems</a></div>
-        <div style="float:right">Next: <a href="part_system_update.htm">part_system_update</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_automatic_draw</h1><p> 이 기능은 시스템에 대한 업데이트(자동 또는 기타)가 표시되지 않도록 파티클 시스템의 도면을 끄는 데 사용할 수 있습니다. 이것은 순전히 시각적인 옵션이며 <span class="inline">false</span> 그려지지 않았기 때문에 입자를 볼 수는 없지만 여전히 존재하고 위치, 색상 등을 변경하고 있습니다. 평소처럼. 자동 그리기가 꺼져 있을 때 이 기능을 사용하여 파티클 시스템의 현재 상태를 그리도록 <span data-keyref="GameMaker Name">GameMaker</span> 에 <i>명시적으로</i> 명령할 수 있습니다.<a href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>, 그리고 이 기능을 다음으로 설정하면 <span class="inline">true</span> 다시 자동 그리기를 다시 켤 수 있습니다.</p><p> 한 가지 주의할 점은 함수로 생성된 간단한 효과를 사용하는 경우<a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> 또는<a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> 그런 다음 0(아래 효과의 경우) 또는 1(위 효과의 경우) 값을 입자 시스템 인덱스로 사용할 수 있으므로 이들에 대한 자동 그리기도 토글할 수 있습니다(이는 GML Visual 입자 효과에 대한 그리기를 토글하는 데에도 작동합니다).</p><p></p><h4> 통사론:</h4><p class="code">part_system_automatic_draw(ind, automatic);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to change.</span></td></tr><tr><td> <span class="notranslate">automatic</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether automatic drawing is on (true) or not (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">part_system_automatic_draw(global.Sname, false);</p><p> 위의 코드는 전역 변수 &quot;Sname&quot;에 인덱싱된 입자 시스템에 대한 자동 그리기를 끕니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Systems.htm">파티클 시스템</a></div><div style="float:right"> 다음: <a href="part_system_update.htm"><span class="notranslate">part_system_update</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_draw

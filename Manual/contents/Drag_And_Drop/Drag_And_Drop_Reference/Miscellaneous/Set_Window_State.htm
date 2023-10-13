@@ -3,58 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Window State</title>
+  <title>창 상태 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Window State action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Window State" />
-  <meta name="search-keywords" content="Set Window State" />
+  <meta name="topic-comment" content="창 상태 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 창 상태 설정" />
+  <meta name="search-keywords" content="창 상태 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Window State Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/i_Misc_Set_Window_State.png" /> Set Window State</h1>
-  <p>With this action you can set the state of the game window to either fullscreen or windowed. There are three options here:</p>
-  <ul class="colour">
-    <li><b>Toggle</b> - When this option is selected, each time you call the action it will toggle the window between fullscreen and windowed states</li>
-    <li><b>Fullscreen</b> - This will make the window go fullscreen from a windowed state</li>
-    <li><b>Windowed</b> - This will make the window return to a windowed state if in fullscreen</li>
-  </ul>
-  <p>Note that how the game looks while in a fullscreen state will depend on the <a href="../../../Settings/Game_Options/Windows.htm">Game Options - Graphics</a> settings for you target platforms, since if the game does not have some mechanism for adjusting
-    to different aspect ratios and resolutions you can get stretching (if the game option is set to <b>Full Scale</b>), or you can get black bars added (if the game option is set to <b>Keep Aspect Ratio</b>). In general if you have nothing in place to
-    deal with different resolutions, you should be using <b>Keep Aspect Ratio</b> for the target platforms you want to compile to.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Window State Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/a_Misc_Set_Window_State.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>State</td>
-        <td>The window state to set (see above for options)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Window State Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/e_Misc_Set_Window_State.png" />The above action block code will toggle the window state between fullscreen and windowed
-    every time the F4 key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Miscellaneous_Actions.htm">Miscellaneous Actions</a></div>
-        <div style="float:right">Next: <a href="Show_Debug_Message.htm">Show Debug Message</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Window State Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/i_Misc_Set_Window_State.png" /> 창 상태 설정</h1><p> 이 작업으로 게임 창의 상태를 전체 화면 또는 창으로 설정할 수 있습니다. 여기에는 세 가지 옵션이 있습니다.</p><ul class="colour"><li> <b>토글</b> - 이 옵션을 선택하면 액션을 호출할 때마다 전체 화면과 창 상태 사이에서 창을 토글합니다.</li><li> <b>전체 화면</b> - 창 상태에서 창을 전체 화면으로 만듭니다.</li><li> <b>창</b> - 전체 화면인 경우 창을 창 상태로 되돌립니다.</li></ul><p> 전체 화면 상태에서 게임이 어떻게 보이는지는 <a href="../../../Settings/Game_Options/Windows.htm">게임 옵션 - 대상 플랫폼에 대한 그래픽</a> 설정에 따라 달라집니다. 게임에 다른 종횡비와 해상도를 조정하는 메커니즘이 없는 경우 늘어나게 될 수 있기 때문입니다(게임의 경우 옵션이 <b>전체 크기</b> 로 설정되어 있거나 검은색 막대를 추가할 수 있습니다(게임 옵션이 <b>가로 세로 비율 유지</b> 로 설정된 경우). 일반적으로 다른 해상도를 처리할 장소가 없다면 컴파일하려는 대상 플랫폼에 대해 <b>Keep Aspect Ratio</b> 를 사용해야 합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Set Window State Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/a_Misc_Set_Window_State.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">State</span></td><td> 설정할 창 상태(옵션은 위 참조)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Set Window State Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Miscellaneous/e_Misc_Set_Window_State.png" /> 위의 작업 블록 코드는 F4 키를 누를 때마다 창 상태를 전체 화면과 창으로 전환합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Miscellaneous_Actions.htm">기타 작업</a></div><div style="float:right"> 다음: <a href="Show_Debug_Message.htm">디버그 메시지 표시</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Window State

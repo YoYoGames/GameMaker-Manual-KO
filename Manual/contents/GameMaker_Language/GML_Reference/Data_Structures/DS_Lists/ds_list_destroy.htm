@@ -6,55 +6,18 @@
   <title>ds_list_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for ds_list_destroy" />
+  <meta name="topic-comment" content="ds_list_destroy에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="ds_list_destroy" />
   <meta name="search-keywords" content="ds_list_destroy" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_destroy</h1>
-  <p>This function will remove the given list data-structure from memory, freeing up the resources it was using and removing all values that it contained. This function should always be used when you are finished using the ds_list to prevent memory leaks that can slow down and crash your game. Note that destroying a list will de-reference any data structures stored in it giving a memory leak, so you would need to go through the list and destroy all data structure items manually before destroying it to prevent this. The only time this is not required is when you have flagged any items in the list as another <a href="DS_Lists.htm">DS list</a> or as a <a href="../DS_Maps/DS_Maps.htm">DS map</a>, in which case these items will be destroyed and their memory cleaned up automatically as well.</p>
-  <p class="note"><b>IMPORTANT!</b> When you create a data structure, the index value to identify it is an integer value starting at 0. This means that data structures of different types can have the <b>same</b> index value, so if in doubt you should be using the <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> function before accessing them. Also note that indices are re-used, so a destroyed data structure index value may be used by a newly created one afterwards so we recommend always setting the variable that held the DS index to -1 after destroying.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">ds_list_destroy(id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>id</td><td><span data-keyref="Type_ID_DS_List"></span></td>
-        <td>The id of the data structure to remove.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (lives == 0)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_list_destroy</h1><p> 이 함수는 메모리에서 주어진 목록 데이터 구조를 제거하여 사용하던 리소스를 해제하고 포함된 모든 값을 제거합니다. 이 함수는 ds_list 사용을 마치면 항상 사용하여 게임 속도를 늦추고 충돌을 일으킬 수 있는 메모리 누수를 방지해야 합니다. 목록을 파괴하면 목록에 저장된 모든 데이터 구조가 역참조되어 메모리 누수가 발생하므로 이를 방지하려면 목록을 파괴하기 전에 수동으로 목록을 살펴보고 모든 데이터 구조 항목을 파괴해야 합니다. 이것이 필요하지 않은 유일한 경우는 목록의 항목에 다른 <a href="DS_Lists.htm">DS 목록</a> 또는 <a href="../DS_Maps/DS_Maps.htm">DS 맵</a> 으로 플래그를 지정했을 때입니다. 이 경우 이러한 항목이 삭제되고 해당 메모리도 자동으로 정리됩니다.</p><p class="note"> <b>중요한!</b> 데이터 구조를 생성할 때 식별하는 인덱스 값은 0부터 시작하는 정수 값입니다. 이는 다른 유형의 데이터 구조가 <b>동일한</b> 인덱스 값을 가질 수 있음을 의미하므로 의심스러운 경우 다음을 사용해야 합니다.<span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> 액세스하기 전에 기능. 또한 인덱스는 재사용되므로 파괴된 데이터 구조 인덱스 값은 나중에 새로 생성된 값에서 사용될 수 있으므로 파괴 후 DS 인덱스를 보유하는 변수를 항상 -1로 설정하는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_list_destroy(id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td><td> <span class="notranslate">The id of the data structure to remove.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (lives == 0)<br />
     {<br />
         ds_list_destroy(AI_list);<br />
         AI_list = -1;<br />
         room_goto(rm_Menu);<br />
-    }</p>
-  <p>The above code will check the value of the built in global variable &quot;lives&quot; and if it is 0, it destroys the DS list indexed in the variable &quot;AI_list&quot; and then changes rooms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="DS_Lists.htm">DS Lists</a></div>
-        <div style="float:right">Next: <a href="ds_list_clear.htm">ds_list_clear</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 내장 전역 변수 &quot;lives&quot;의 값을 확인하고 0이면 변수 &quot;AI_list&quot;에 색인된 DS 목록을 파괴한 다음 방을 변경합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="DS_Lists.htm">DS 목록</a></div><div style="float:right"> 다음: <a href="ds_list_clear.htm"><span class="notranslate">ds_list_clear</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_destroy

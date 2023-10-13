@@ -6,125 +6,13 @@
   <title>vertex_format_add_custom</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for vertex_format_add_custom" />
+  <meta name="topic-comment" content="vertex_format_add_custom에 대한 참조" />
   <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
   <meta name="search-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_format_add_custom</h1>
-  <p>This function permits you to use a custom data type for specific vertex format attributes as part of the new vertex format being created. The available values to use are defined by the data type constant that you choose, listed below:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_float1</span></td>
-        <td>A single floating point value</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_float2</span></td>
-        <td>Two floating point values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_float3</span></td>
-        <td>Three floating point values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_float4</span></td>
-        <td>Four floating point values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_colour</span></td>
-        <td>Four component values (r, g, b, a)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_type_ubyte4</span></td>
-        <td>Four component unsigned byte values (from 0 to 255)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p><br />
-    The use that these constants will be put too also needs to be defined so that the values can be &quot;bound&quot; properly within the shader being created. This is necessary due to the fact that DX and OpenGL have different requirements so if you don&#39;t bind them properly, they won&#39;t come through right in the shader. The available usage constants that you can choose are listed below and those you use will depend on the specifics of the shader being created:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_position</span></td>
-        <td>position values (x, y, z)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_colour</span></td>
-        <td>colour values (r, g, b, a)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_normal</span></td>
-        <td>vertex normal values (nx, ny, nz)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_textcoord</span></td>
-        <td>UV coordinates (u, v)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_blendweight</span></td>
-        <td>the blendweight of the input matrix (for skeletal animation, for example)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_blendindices</span></td>
-        <td>the indices of the matrices to use (for skeletal animation, for example)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_depth</span></td>
-        <td>vertex depth buffer value</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_tangent</span></td>
-        <td>tangent values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_binormal</span></td>
-        <td>binormal values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_fog</span></td>
-        <td>fog values</td>
-      </tr>
-      <tr>
-        <td><span class="inline">vertex_usage_sample</span></td>
-        <td>sampler index</td>
-      </tr>
-    </tbody>
-  </table>
-  <p><br />
-    There are some important things to note when using custom formats like these:</p>
-  <ul class="colour">
-    <li>The <span class="inline">vertex_format_add_custom()</span> function only supports <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> and <span class="inline">vertex_usage_textcoord</span> when using GLSL shaders. These will map to the shader attributes <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> respectively (anything that is not one of these three attributes - eg: texture coordinates - can be mapped to any attribute you define).</li>
-    <li>In general you should use <span class="inline">vertex_usage_textcoord</span> for all extra parameters where possible, as types like <span class="inline">vertex_usage_blendweight</span> and <span class="inline">vertex_usage_tangent</span> are close to deprecated in most shader languages, and probably won&#39;t convert properly. Instead use <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> or <span class="inline">vec4</span> types <span class="inline">vertex_usage_textcoord</span> and everything should work fine.</li>
-    <li>GLSL ES does <i>not</i> support integer attributes, so passing in <span class="inline">ivec4</span>&#39;s does not work (this type is usually used when passing in <span class="inline">vertex_usage_blendindices</span>). What you need to do is pass in texture coordinates and then in the shader, convert them to <span class="inline">ivec4</span> like this:</li>
-  </ul>
-  <p> </p>
-  <p class="code">attribute vec3 in_Position;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_format_add_custom</h1><p> 이 기능을 사용하면 생성되는 새 꼭짓점 형식의 일부로 특정 꼭짓점 형식 속성에 대한 사용자 정의 데이터 유형을 사용할 수 있습니다. 사용할 수 있는 값은 선택한 데이터 유형 상수에 의해 정의되며 아래에 나열됩니다.</p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 데이터 유형 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_float1</span></span></td><td> 단일 부동 소수점 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_float2</span></span></td><td> 두 개의 부동 소수점 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_float3</span></span></td><td> 세 가지 부동 소수점 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_float4</span></span></td><td> 4개의 부동 소수점 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_colour</span></span></td><td> 4개의 구성 요소 값(r, g, b, a)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_type_ubyte4</span></span></td><td> 4개의 구성 요소 부호 없는 바이트 값(0에서 255까지)</td></tr></tbody></table><p><br /> 값이 생성되는 셰이더 내에서 적절하게 &quot;바인딩&quot;될 수 있도록 이러한 상수를 사용할 용도도 정의해야 합니다. 이것은 DX와 OpenGL이 서로 다른 요구 사항을 가지고 있기 때문에 필요하므로 올바르게 바인딩하지 않으면 셰이더에서 바로 전달되지 않습니다. 선택할 수 있는 사용 가능한 사용 상수는 아래에 나열되어 있으며 사용하는 상수는 생성되는 셰이더의 특성에 따라 다릅니다.</p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 사용 유형 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_position</span></span></td><td> 위치 값(x, y, z)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_colour</span></span></td><td> 색상 값(r, g, b, a)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_normal</span></span></td><td> 정점 법선 값(nx, ny, nz)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_textcoord</span></span></td><td> UV 좌표(u, v)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_blendweight</span></span></td><td> 입력 행렬의 블렌드웨이트(예: 스켈레탈 애니메이션의 경우)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_blendindices</span></span></td><td> 사용할 행렬의 인덱스(예: 골격 애니메이션의 경우)</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_depth</span></span></td><td> 정점 깊이 버퍼 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_tangent</span></span></td><td> 접선 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_binormal</span></span></td><td> 양법 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_fog</span></span></td><td> 안개 값</td></tr><tr><td><span class="notranslate"><span class="inline">vertex_usage_sample</span></span></td><td> 샘플러 인덱스</td></tr></tbody></table><p><br /> 다음과 같은 사용자 지정 형식을 사용할 때 주의해야 할 몇 가지 중요한 사항이 있습니다.</p><ul class="colour"><li> 그만큼 <span class="inline">vertex_format_add_custom()</span> 기능만 지원 <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> 그리고 <span class="inline">vertex_usage_textcoord</span> GLSL 셰이더를 사용할 때. 이것은 셰이더 속성에 매핑됩니다. <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> 각각 (이 세 가지 속성 중 하나가 아닌 모든 것 - 예: 텍스처 좌표 - 정의한 속성에 매핑할 수 있음).</li><li> 일반적으로 다음을 사용해야 합니다. <span class="inline">vertex_usage_textcoord</span> 가능한 모든 추가 매개변수에 대해 다음과 같은 유형으로 <span class="inline">vertex_usage_blendweight</span> 그리고 <span class="inline">vertex_usage_tangent</span> 대부분의 셰이더 언어에서 더 이상 사용되지 않으며 아마도 제대로 변환되지 않을 것입니다. 대신 사용 <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> 또는 <span class="inline">vec4</span> 유형 <span class="inline">vertex_usage_textcoord</span> 모든 것이 잘 작동해야 합니다.</li><li> GLSL ES는 정수 속성을 지원하지 <i>않으므로</i> <span class="inline">ivec4</span> 의 작동하지 않습니다(이 유형은 일반적으로 전달할 때 사용됩니다. <span class="inline">vertex_usage_blendindices</span> ). 해야 할 일은 텍스처 좌표를 전달한 다음 셰이더에서 다음으로 변환하는 것입니다. <span class="inline">ivec4</span> 이와 같이:</li></ul><p></p><p class="code">attribute vec3 in_Position;<br />
     attribute vec4 in_BlendIndices;<br />
     attribute vec4 in_BlendWeights;<br />
     <br />
@@ -138,54 +26,10 @@
          ivec4 t = ivec4(in_BlendIndices);<br />
          v_mat = gm_Matrices[ t.x ];<br />
     }
-  </p>
-  <ul class="colour">
-    <li>Blend weights are usually stored in an array and then accessed using blend indices, but you can see here that instead of defining <span class="inline">in_BlendIndices</span> as an <span class="inline">ivec4</span> attribute, it&#39;s a <span class="inline">vec4</span>, then cast to an <span class="inline">ivec4</span> in the code. This is then used to index the array created using the <span class="inline">gm_Matrix</span> (you can only access an array using an <span class="inline">INT</span> value - not a float).</li>
-    <br />
-    <li> </li>
-  </ul>
-  <h4>Syntax:</h4>
-  <p class="code">vertex_format_add_custom(type, usage);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></td>
-        <td>The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</td>
-      </tr>
-      <tr>
-        <td>usage</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></td>
-        <td>The use that the data will get(see the <b><i>usage constants</i></b> listed above).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">vertex_format_begin();<br />
-    vertex_format_add_texcoord();<br />
+  </p><ul class="colour"><li> 블렌드 가중치는 일반적으로 배열에 저장되고 블렌드 인덱스를 사용하여 액세스되지만 여기에서 정의하는 대신 <span class="inline">in_BlendIndices</span> 로 <span class="inline">ivec4</span> 속성, 그것은 <span class="inline">vec4</span>, 다음으로 캐스트 <span class="inline">ivec4</span> 코드에서. 이것은 다음을 사용하여 생성된 배열을 인덱싱하는 데 사용됩니다. <span class="inline">gm_Matrix</span> (당신은 오직 다음을 사용하여 배열에 접근할 수 있습니다. <span class="inline">INT</span> 값 - 부동 소수점이 아님).</li><br /></ul><h4> 통사론:</h4><p class="code">vertex_format_add_custom(type, usage);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">type</span></td><td> <span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 데이터 유형 상수</a></span></td><td> <span class="notranslate">The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</span></td></tr><tr><td> <span class="notranslate">usage</span></td><td> <span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 사용 유형 상수</a></span></td><td> <span class="notranslate">The use that the data will get(see the <b><i>usage constants</i></b> listed above).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p><p></p><h4> 예시:</h4><p class="code">vertex_format_begin();<br />
+    vertex_format_add_textcoord();<br />
     vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br />
-    my_format = vertex_format_end();</p>
-  <p>The above code will create a new vertex format with just texture and 3 custom floating point values for position. It is then stores the format id in the variable &quot;my_format&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_format_end.htm">vertex_format_end</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    my_format = vertex_format_end();</p><p> 위의 코드는 텍스처와 위치에 대한 3개의 사용자 정의 부동 소수점 값으로 새로운 정점 형식을 만듭니다. 그런 다음 &quot;my_format&quot; 변수에 형식 ID를 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Primitives_And_Vertex_Formats.htm">기본체 및 정점 형식</a></div><div style="float:right"> 다음: <a href="vertex_format_end.htm"><span class="notranslate">vertex_format_end</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom

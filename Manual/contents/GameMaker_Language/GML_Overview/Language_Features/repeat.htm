@@ -6,38 +6,26 @@
   <title>repeat</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the repeat function" />
+  <meta name="topic-comment" content="반복 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="repeat" />
-  <meta name="search-keywords" content="if,else,then,?,ternary,conditional" />
+  <meta name="search-keywords" content="if,else,then,?,세 개 한 벌,가정 어구" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>repeat</h1>
-  <p>The GameMaker Language has a number of ways that you can perform <i>loops</i>, ie: have a statement or statements iterate over itself a certain number of times. The simplest of these is the <span class="inline">repeat</span> statement, which has the form:</p>
-  <p class="code">repeat (&lt;expression&gt;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>repeat</h1><p> GameMaker Language에는 <i>루프</i> 를 수행할 수 있는 여러 가지 방법이 있습니다. 즉, 명령문을 특정 횟수만큼 반복합니다. 그 중 가장 간단한 것은 <span class="inline">repeat</span> 다음과 같은 형식의 명령문</p><p class="code">repeat (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
-    }</p>
-  <p>With <span class="inline">repeat</span> the given <a class="glossterm" data-glossterm="statement" href="#">statement</a> is repeated the number of times indicated by the rounded value of the <a class="glossterm" data-glossterm="expression" href="#">expression</a>. For example, the following creates five balls at random positions:</p>
-  <p class="code">repeat (5)<br />
+    }</p><p> 와 함께 <span class="inline">repeat</span> 주어진 <a class="glossterm" data-glossterm="성명" href="#">문</a> 이 <a class="glossterm" data-glossterm="표현" href="#">표현식</a> 의 반올림된 값으로 표시된 횟수만큼 반복됩니다. 예를 들어, 다음은 임의의 위치에 5개의 공을 생성합니다.</p><p class="code">repeat (5)<br />
     {<br />
         instance_create_layer(random(400), random(400), &quot;Instances&quot;, obj_ball);<br />
-    }</p>
-  <p>This can be very useful to avoid typing out the same code multiple times, or for using arrays, or for counting through a number of operations etc... You are not limited to using a single statement either, and can repeat multiple statements by enclosing them within curly brackets <span class="inline">{}</span>. For example:</p>
-  <p class="code">var _x = 32;<br />
+    }</p><p> 이것은 동일한 코드를 여러 번 입력하는 것을 피하거나 배열을 사용하거나 여러 연산을 통해 계산하는 데 매우 유용할 수 있습니다. 단일 명령문을 사용하는 데 국한되지 않고 다음을 포함하여 여러 명령문을 반복할 수 있습니다. 중괄호 안에 <span class="inline">{}</span>. 예를 들어:</p><p class="code">var _x = 32;<br />
     repeat (global.p_lives)<br />
     {<br />
         draw_sprite(spr_heart, 0, _x, 32);<br />
         _x += sprite_get_width(spr_heart);<br />
-    }</p>
-  <p>The above example repeats the statements in the curly brackets for however many <a class="glossterm" data-glossterm="iteration" href="#">iteration</a><span class="glossextra">s</span> the &quot;lives&quot; global variable has, and each iteration draws the heart sprite at the <span class="inline">_x</span> position, then moves the position along a bit based on the heart sprite width.</p>
-  <p><strong>When should you use a <span class="inline">repeat</span> loop?</strong> Anytime that you want to repeat over one or more statements a fixed number of times without any specific need to maintain a count of the iterations.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a <font face="Lucida Console"><span style="font-size: 16px;"><b>repeat</b></span></font> loop too. Using <span class="inline">break</span> will immediately exit the loop and move on to any code that is in the event or function after the loop should have finished, eg:</p>
-  <p class="code">var i = 0;<br />
+    }</p><p> 위 <span class="glossextra">의</span> 예제는 &quot;lives&quot; 전역 변수가 얼마나 많은 <a class="glossterm" data-glossterm="반복" href="#">반복</a> 에 대해 중괄호 안에 있는 명령문을 반복하고 각 반복은 다음 위치에 하트 스프라이트를 그립니다. <span class="inline">_x</span> 위치를 선택한 다음 하트 스프라이트 너비를 기준으로 비트를 따라 위치를 이동합니다.</p><p> <strong>언제 사용해야합니까 <span class="inline">repeat</span> 고리?</strong> 반복 횟수를 특별히 유지할 필요 없이 고정된 횟수만큼 하나 이상의 명령문을 반복하려는 경우.</p><p> 특별한 기능을 사용할 수 있다는 점은 주목할 가치가 있습니다. <span class="inline"><a href="break.htm">break</a></span> 그리고 <span class="inline"><a href="continue.htm">continue</a></span> <font face="Lucida Console"><span style="font-size: 16px;"><b>반복</b></span></font> 루프 내의 명령문도 마찬가지입니다. 사용 <span class="inline">break</span> 루프를 즉시 종료하고 루프가 완료된 후 이벤트 또는 함수에 있는 코드로 이동합니다. 예:</p><p class="code">var i = 0;<br />
     var temp = 0;<br />
     repeat (10)<br />
     {<br />
@@ -50,10 +38,7 @@
         {<br />
             i += 1;<br />
         }<br />
-    }</p>
-  <p>The above code loops through 10 <a href="../Arrays.htm">array</a> values and adds them to a local variable. If the total of the local variable is greater than the given value for <span class="inline">max_total</span>, then the loop is terminated using break, otherwise the loop will continue. </p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">repeat</span> loop would be:</p>
-  <p class="code">repeat(10)<br />
+    }</p><p> 위의 코드는 10개의 <a href="../Arrays.htm">배열</a> 값을 반복하여 지역 변수에 추가합니다. 지역변수의 합이 주어진 값보다 큰 경우 <span class="inline">max_total</span>, 루프는 break를 사용하여 종료되고, 그렇지 않으면 루프가 계속됩니다.</p><p> 사용 예 <span class="inline">continue</span> 안에 <span class="inline">repeat</span> 루프는 다음과 같습니다.</p><p class="code">repeat(10)<br />
     {   <br />
         var _x = random(room_width);<br />
         var _y = random(room_height);<br />
@@ -62,20 +47,7 @@
             continue;<br />
         }<br />
         instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br />
-    }</p>
-  <p>This code will repeat 10 times, generating a random room position then checking if an instance of the object <span class="inline">obj_Enemy</span> exists at that position. If it does, the current loop iteration is terminated using <span class="inline">continue</span> and a new iteration is started, and if it doesn&#39;t then an instance of the object <span class="inline">obj_Enemy</span> is created at the random position.</p>
-  <p>For more examples of loop functions please see the sections on <a href="while.htm"><span class="inline">while</span></a>, <a href="do___until.htm"><span class="inline">do... until</span></a>, and <a href="for.htm"><span class="inline">for</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="while.htm">while</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 이 코드는 10번 반복되어 임의의 방 위치를 생성한 다음 개체의 인스턴스가 <span class="inline">obj_Enemy</span> 그 위치에 존재합니다. 그렇다면 현재 루프 반복은 다음을 사용하여 종료됩니다. <span class="inline">continue</span> 새 반복이 시작되고 시작되지 않으면 개체의 인스턴스 <span class="inline">obj_Enemy</span> 임의의 위치에 생성됩니다.</p><p> 루프 기능의 더 많은 예는 섹션을 참조하십시오.<a href="while.htm"><span class="inline">while</span></a>,<a href="do___until.htm"><span class="inline">do... until</span></a>, 그리고<a href="for.htm"><span class="inline">for</span></a>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Language_Features.htm">언어 기능</a></div><div style="float:right"> 다음: <a href="while.htm"><span class="notranslate">while</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 repeat

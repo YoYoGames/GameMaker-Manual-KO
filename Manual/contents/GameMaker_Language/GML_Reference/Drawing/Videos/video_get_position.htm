@@ -7,26 +7,15 @@
   <title>video_get_position</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for video_get_position" />
+  <meta name="topic-comment" content="video_get_position에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="video_get_position" />
-  <meta name="search-keywords" content="video_get_position, video position, video progress" />
+  <meta name="search-keywords" content="video_get_position,비디오 위치,비디오 진행" />
   <meta name="condition-tags" content="" />
 </head>
-<body>
-  <h1>video_get_position</h1>
-  <p>This function returns the current position of the loaded video, in milliseconds. This indicates how much the video has played, out of its whole <a href="video_get_duration.htm">duration</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">video_get_position();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (keyboard_check_pressed(vk_right))<br />
+<body><h1>video_get_position</h1><p> 이 함수는 로드된 비디오의 현재 위치를 밀리초 단위로 반환합니다. 전체 재생 <a href="video_get_duration.htm">시간</a> 중 동영상이 재생된 시간을 나타냅니다.</p><p></p><h4> 통사론:</h4><p class="code">video_get_position();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p><p></p><h4> 예시:</h4><p class="code">if (keyboard_check_pressed(vk_right))<br />
     {<br />
         var _video_position = video_get_position();<br />
         _video_position += 2000;<br />
@@ -40,19 +29,7 @@
             video_close();<br />
         }<br />
     }
-  </p>
-  <p>The above code moves the playing video 2 seconds ahead, when the right arrow key is pressed, and the new position is smaller than the video&#39;s duration. However if it&#39;s not within the duration, the video is closed.</p>
-  <p>In this example, <span class="inline">video_get_position()</span> is used to return the position of the video that is playing.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Videos</a></div>
-        <div>Next: <a data-xref="{text}" href="video_get_status.htm#h">video_get_status</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 오른쪽 화살표 키를 눌렀을 때 재생 중인 동영상을 2초 앞으로 이동하고 새 위치가 동영상의 재생 시간보다 작습니다. 단, 해당 시간이 아닐 경우 영상이 종료됩니다.</p><p> 이 예에서, <span class="inline">video_get_position()</span> 재생 중인 비디오의 위치를 반환하는 데 사용됩니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Videos.htm">동영상</a></div><div> 다음: <a data-xref="{text}" href="video_get_status.htm#h">video_get_status</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 video_get_position

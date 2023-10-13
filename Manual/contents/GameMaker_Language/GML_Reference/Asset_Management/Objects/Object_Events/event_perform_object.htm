@@ -6,63 +6,13 @@
   <title>event_perform_object</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function event_perform_object" />
+  <meta name="topic-comment" content="event_perform_object 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="event_perform_object" />
   <meta name="search-keywords" content="event_perform_object" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>event_perform_object</h1>
-  <p>This functions works the same as <a href="event_perform.htm"><span class="inline">event_perform()</span></a> except that this time you can specify events from another object. There are many options here which allow complete simulation of all possible events, but note that this literally just performs all the code in the event and the game will not modify anything to make it trigger itself manually, for example if you choose to perform a keyboard press event, the event will be triggered but the relevant key will not be recognised as having been pressed. Or if you perform an alarm event, the alarm counter will not be set to -1 but rather continue to count down. You can find a complete list of the available constants this function requires from the page for the function <a href="event_perform.htm"><span class="inline">event_perform()</span></a>.</p>
-  <p class="note"><span class="note">NOTE</span> Actions in the event called with this function are applied to the <b>current instance</b>, and not to instances of the given object.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">event_perform_object(obj, type, numb);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object that should have its event triggered.</td>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Event_Type"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Type Constant</a></span></td>
-        <td>The type of event to perform.</td>
-      </tr>
-      <tr>
-        <td>numb</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_Constant_Event_Number"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Number Constant</a></span></td>
-        <td>The specific event, if one is necessary (otherwise, just use 0).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">event_perform_object(obj_Player, ev_keypress, ord(&quot;W&quot;));</p>
-  <p>This would perform the event associated with Keyboard Check Pressed &gt; W key from the object &quot;obj_Player&quot; in the current instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
-        <div style="float:right">Next: <a href="event_user.htm">event_user</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>event_perform_object</h1><p> 이 기능은 다음과 동일하게 작동합니다.<a href="event_perform.htm"><span class="inline">event_perform()</span></a> 단, 이번에는 다른 개체의 이벤트를 지정할 수 있습니다. 여기에는 가능한 모든 이벤트의 완전한 시뮬레이션을 허용하는 많은 옵션이 있지만, 이것은 문자 그대로 이벤트의 모든 코드를 수행하고 게임은 예를 들어 키보드 수행을 선택하는 경우와 같이 수동으로 트리거되도록 아무것도 수정하지 않습니다. press 이벤트가 발생하면 이벤트가 발생하지만 해당 키가 눌린 것으로 인식되지 않습니다. 또는 알람 이벤트를 수행하면 알람 카운터가 -1로 설정되지 않고 계속 카운트다운됩니다. 이 함수에 필요한 사용 가능한 상수의 전체 목록은 함수 페이지에서 찾을 수 있습니다.<a href="event_perform.htm"><span class="inline">event_perform()</span></a>.</p><p class="note"> <span class="note">참고</span> 이 함수로 호출된 이벤트의 작업은 주어진 객체의 인스턴스가 아니라 <b>현재 인스턴스</b> 에 적용됩니다.</p><p></p><h4> 통사론:</h4><p class="code">event_perform_object(obj, type, numb);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The object that should have its event triggered.</span></td></tr><tr><td> <span class="notranslate">type</span></td><td> <span data-keyref="Type_Constant_Event_Type">이벤트 유형 상수</span></td><td> <span class="notranslate">The type of event to perform.</span></td></tr><tr><td> <span class="notranslate">numb</span></td><td> <span data-keyref="Type_Real">실수</span> 또는 <span data-keyref="Type_Constant_Event_Number">사건 수 상수</span></td><td> <span class="notranslate">The specific event, if one is necessary (otherwise, just use 0).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">event_perform_object(obj_Player, ev_keypress, ord(&quot;W&quot;));</p><p> 이것은 현재 인스턴스의 &quot;obj_Player&quot; 개체에서 Keyboard Check Pressed &gt; W 키와 관련된 이벤트를 수행합니다. </p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Generating_Object_Events.htm">객체 이벤트 생성하기</a></div><div style="float:right"> 다음: <a href="event_user.htm"><span class="notranslate">event_user</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 event_perform_object

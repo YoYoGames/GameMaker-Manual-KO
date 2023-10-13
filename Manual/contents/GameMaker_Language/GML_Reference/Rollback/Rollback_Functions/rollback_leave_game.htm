@@ -7,47 +7,18 @@
   <title>rollback_leave_game</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for rollback_leave_game" />
+  <meta name="topic-comment" content="rollback_leave_game에 대한 참조 페이지" />
   <meta name="condition-tags" content="Export:Beta" />
   <meta name="rh-index-keywords" content="rollback_leave_game" />
   <meta name="search-keywords" content="rollback_leave_game" />
 </head>
-<body>
-  <h1>rollback_leave_game</h1>
-  <p>This function leaves the current multiplayer session, allowing the player to join or create a new game again.</p>
-  <p>When the host of a room leaves, ownership of that room is transferred to another player, so the game can continue. The game only ends when all the players have left.</p>
-  <h3>Avoiding Errors</h3>
-  <p>After the player leaves a multiplayer session, GameMaker continues to execute all game code, however it returns to the &quot;pre-start&quot; state where you cannot create or modify managed instances.</p>
-  <p>This means you need to manually destroy your player instances on leaving a game, and pause any other game logic using <a data-xref="{title}" href="../Rollback_Variables/rollback_game_running.htm">rollback_game_running</a> in a condition, to avoid errors.</p>
-  <p>See: <a data-xref="{text}" href="../Rollback_Constraints.htm#h1">State Before Rollback Start</a></p>
-  <h3>Triggered Event</h3>
-  <p>When a player leaves a game that you are present in, the <strong>Rollback Event</strong> event is triggered. See <a data-xref="{title}" href="../Rollback_Events.htm">Rollback Events</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">rollback_leave_game();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (keyboard_check_pressed(vk_escape))<br />
+<body><h1>rollback_leave_game</h1><p> 이 기능은 현재 멀티플레이어 세션을 떠나 플레이어가 새로운 게임에 다시 참여하거나 생성할 수 있도록 합니다.</p><p> 방의 호스트가 나가면 해당 방의 소유권이 다른 플레이어에게 이전되어 게임을 계속할 수 있습니다. 모든 플레이어가 떠나야 게임이 종료됩니다.</p><h3> 에러 피하기</h3><p> 플레이어가 멀티플레이어 세션을 떠난 후 GameMaker는 모든 게임 코드를 계속 실행하지만 관리되는 인스턴스를 생성하거나 수정할 수 없는 &quot;사전 시작&quot; 상태로 돌아갑니다.</p><p> 즉, 오류를 방지하려면 게임을 종료할 때 플레이어 인스턴스를 수동으로 파괴하고 조건에서 <a data-xref="{title}" href="../Rollback_Variables/rollback_game_running.htm">rollback_game_running</a> 을 사용하여 다른 게임 로직을 일시 중지해야 합니다.</p><p> 참조: <a data-xref="{text}" href="../Rollback_Constraints.htm#h1">롤백 시작 전 상태</a></p><h3> 트리거된 이벤트</h3><p> 플레이어가 현재 있는 게임에서 <strong>나가면 롤백 이벤트</strong> 이벤트가 트리거됩니다. 자세한 내용은 <a data-xref="{title}" href="../Rollback_Events.htm">롤백 이벤트</a> 를 참조하십시오.</p><p></p><h4> 통사론:</h4><p class="code">rollback_leave_game();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (keyboard_check_pressed(vk_escape))<br />
     {<br />
         rollback_leave_game();<br />
-    }</p>
-  <p>The code above makes the player leave the game when the Escape key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_define_input.htm">rollback_define_input</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 Escape 키를 눌렀을 때 플레이어가 게임을 종료하도록 합니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Functions.htm">롤백 기능</a></div><div> 다음: <a data-xref="{title}" href="rollback_define_input.htm">rollback_define_input</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_leave_game

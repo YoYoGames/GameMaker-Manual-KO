@@ -6,54 +6,16 @@
   <title>instance_activate_object</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function instance_activate_object" />
+  <meta name="topic-comment" content="instance_activate_object 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="instance_activate_object" />
   <meta name="search-keywords" content="instance_activate_object" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_activate_object</h1>
-  <p>With this function you can activate a single instance or all instances of a specific object from all those that have been deactivated previously. Note that if you have deactivated an instance or object that has been flagged as <b>Persistent</b>, then
-    you will need to reactivate it again with this function before changing room, otherwise it will <i>not</i> be carried over and will be discarded instead. Note too that activation is not instantaneous, and an instance that has been activated in this
-    way will not be considered to be active until the end of the event in which the function was called.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">instance_activate_object(obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The object or instance to activate (the keyword <b>all</b> can also be used).</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">instance_activate_all();<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/> instance_deactivate_region(_vx
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_activate_object</h1><p> 이 기능을 사용하면 이전에 비활성화된 모든 개체에서 특정 개체의 단일 인스턴스 또는 모든 인스턴스를 활성화할 수 있습니다. <b>Persistent</b> 플래그가 지정된 인스턴스 또는 개체를 비활성화한 경우 방을 변경하기 전에 이 기능을 사용하여 다시 활성화해야 합니다. 그렇지 않으면 이월 <i>되지</i> 않고 대신 폐기됩니다. 활성화는 즉각적이지 않으며 이러한 방식으로 활성화된 인스턴스는 함수가 호출된 이벤트가 끝날 때까지 활성화된 것으로 간주되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">instance_activate_object(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The object or instance to activate (the keyword <b>all</b> can also be used).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">instance_activate_all();<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/> instance_deactivate_region(_vx
     - 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br/> instance_activate_object(obj_Lights);
-  </p>
-  <p>The above code activates all instances within the room and then deactivates those that are outside of the limits of the current camera view, except for the object &quot;obj_Lights&quot; which are re-activated again at the end.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
-        <div style="float:right">Next: <a href="instance_activate_region.htm">instance_activate_region</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 방 내의 모든 인스턴스를 활성화한 다음 마지막에 다시 활성화되는 &quot;obj_Lights&quot; 개체를 제외하고 현재 카메라 보기의 한계를 벗어난 인스턴스를 비활성화합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Deactivating_Instances.htm">인스턴스 비활성화</a></div><div style="float:right"> 다음: <a href="instance_activate_region.htm"><span class="notranslate">instance_activate_region</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 instance_activate_object

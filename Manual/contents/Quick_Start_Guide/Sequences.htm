@@ -3,41 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Sequences</title>
+  <title>시퀀스</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Overview of Sequences in games." />
-  <meta name="rh-index-keywords" content="Quick Start - Sequences" />
-  <meta name="search-keywords" content="sequences,dope sheet,track panel,tracks,parameters" />
+  <meta name="topic-comment" content="게임의 시퀀스 개요." />
+  <meta name="rh-index-keywords" content="빠른 시작 - 시퀀스" />
+  <meta name="search-keywords" content="시퀀스,마약 시트,트랙 패널,tracks,매개변수" />
   <meta name="robots" content="NOODP" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Sequences</h1>
-  <p>The final asset we&#39;ll discuss in this guide before moving on to discuss how it all comes together in the <strong>Room Editor</strong>, is the <strong>Sequences</strong> asset. A sequence is essentially a collection of other assets that are collected in one place and then animated together. The final animation (sequence) can then be added to rooms in your game much like instances.</p>
-  <p>Sequences are created through the <a href="../The_Asset_Editors/Sequences.htm"><strong>Sequence Editor</strong></a> which is opened whenever you create a new sequence asset in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>:</p>
-  <p><img alt="The Sequences Editor" class="center" src="../assets/Images/QS_Guide/QS_Sequences_Editor.png" />To create a basic sequence you add either a sound, a sprite or an instance into the sequence <em>canvas</em> and then position it to where you want it to be at the start of the sequence. This creates an <strong><a class="glossterm" data-glossterm="Asset Track" href="#">Asset Track</a></strong> in the <a class="glossterm" data-glossterm="Track Panel" href="#">Track Panel</a> <em></em> and also adds <strong></strong>a <strong><a class="glossterm" data-glossterm="keyframe" href="#">keyframe</a></strong> into the <a class="glossterm" data-glossterm="Dope Sheet" href="#">Dope Sheet</a> to show the duration that the asset will be visible for.</p>
-  <p>Time for the sequence is in frames (which is the same as steps for instances, ie: one frame is the same as one game step), and you can see what will happen at any given frame by moving the sequence <strong><a class="glossterm" data-glossterm="playhead" href="#">playhead</a></strong> in the dope sheet. The playhead position is also used for adding in <strong>keyframes </strong>which are the frames where you want some state to change to begin or end. Parameter keys are stored on <strong><a class="glossterm" data-glossterm="parameter tracks" href="#">parameter tracks</a></strong> for the given asset.</p>
-  <p>So, you would position the asset and set its scale and colour and other properties at frame 0 of the sequence. You would then record the parameter keys for the asset and move the playhead to the frame where you want to set the next asset state (position, colour, etc....). On this frame you would again change the different parameters and record keys for them, then repeat this process as required for the length of the sequence. When you press play on the sequence, the asset will be animated, with the sequence <a class="glossterm" data-glossterm="linear interpolation" href="#">interpolating</a> between the different parameter states, giving an end result something like this: </p>
-  <p><img alt="Sequence Example Image" class="center" src="../assets/Images/QS_Guide/QS_Sequence_Example.gif" />We won&#39;t go into more details about how sequences work here, but suffice to say that they are an incredibly powerful tool for doing anything from cut-scenes, to menus, to character states and much more.</p>
-  <p>The page linked below gives you all the details on how to use sequences in your games:</p>
-  <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sequences.htm">The Sequences Editor</a></li>
-  </ul>
-  <p>Now we can move on to talk about the  <strong>Room Editor</strong>, which is where all these parts of your game come together...</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Rooms.htm">Rooms</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 시퀀스</h1><p> 이 가이드에서 논의할 마지막 자산은 모든 것이 <strong>Room Editor</strong> 에서 함께 제공되는 방식에 대해 논의하기 전에 <strong>Sequences</strong> 자산입니다. 시퀀스는 본질적으로 한 곳에서 수집된 다음 함께 애니메이션되는 다른 자산의 모음입니다. 그런 다음 최종 애니메이션(시퀀스)을 인스턴스처럼 게임의 방에 추가할 수 있습니다.</p><p> 시퀀스는 <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 새 시퀀스 자산을 생성할 때마다 열리는 <a href="../The_Asset_Editors/Sequences.htm"><strong>시퀀스 편집기</strong></a> 를 통해 생성됩니다.</p><p><img alt="The Sequences Editor" class="center" src="../assets/Images/QS_Guide/QS_Sequences_Editor.png" /> 기본 시퀀스를 생성하려면 사운드, 스프라이트 또는 인스턴스를 시퀀스 <em>캔버스</em> 에 추가한 다음 시퀀스 시작 시 원하는 위치에 배치합니다. 그러면 <a class="glossterm" data-glossterm="트랙 패널" href="#">트랙 패널</a> 에 <strong><a class="glossterm" data-glossterm="Asset Track" href="#">자산 트랙</a></strong> 이 생성됩니다.<em></em> 또한 추가<strong></strong> 자산이 표시될 지속 시간을 표시하기 위해 <a class="glossterm" data-glossterm="도프 시트" href="#">도프 시트</a> 에 <strong><a class="glossterm" data-glossterm="키프레임" href="#">키프레임</a></strong> 을 추가합니다.</p><p> 시퀀스 시간은 프레임 단위이며(예: 한 프레임은 한 게임 단계와 동일함) 도프 시트에서 시퀀스 <strong><a class="glossterm" data-glossterm="플레이헤드" href="#">재생 헤드</a></strong> 를 이동하여 주어진 프레임에서 어떤 일이 일어날지 알 수 있습니다.. 재생 헤드 위치는 일부 상태를 시작 또는 끝으로 변경하려는 프레임인 <strong>키프레임</strong> 을 추가하는 데에도 사용됩니다. 매개변수 키는 지정된 자산의 <strong><a class="glossterm" data-glossterm="매개변수 트랙" href="#">매개변수 트랙</a></strong> 에 저장됩니다.</p><p> 따라서 자산의 위치를 지정하고 시퀀스의 프레임 0에서 크기, 색상 및 기타 속성을 설정합니다. 그런 다음 자산에 대한 매개변수 키를 기록하고 다음 자산 상태(위치, 색상 등...)를 설정하려는 프레임으로 재생 헤드를 이동합니다. 이 프레임에서 다른 매개변수를 다시 변경하고 이에 대한 키를 기록한 다음 시퀀스의 길이에 대해 필요에 따라 이 프로세스를 반복합니다. 시퀀스에서 재생을 누르면 자산이 애니메이션되고 시퀀스가 서로 다른 매개변수 상태 사이를 <a class="glossterm" data-glossterm="선형 보간" href="#">보간</a> 하여 다음과 같은 최종 결과를 제공합니다.</p><p><img alt="Sequence Example Image" class="center" src="../assets/Images/QS_Guide/QS_Sequence_Example.gif" /> 여기서 시퀀스가 어떻게 작동하는지 자세히 설명하지는 않겠지만, 컷씬에서 메뉴, 캐릭터 상태 등에 이르기까지 모든 작업을 수행할 수 있는 믿을 수 없을 정도로 강력한 도구라는 것만으로 충분합니다.</p><p> 아래 링크된 페이지는 게임에서 시퀀스를 사용하는 방법에 대한 모든 세부 정보를 제공합니다.</p><ul class="colour"><li> <a href="../The_Asset_Editors/Sequences.htm">시퀀스 편집기</a></li></ul><p> 이제 게임의 이러한 모든 부분이 함께 모이는 <strong>Room Editor</strong> 에 대해 이야기할 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Content.htm">인덱스</a></div><div style="float:right"> 다음: <a href="Rooms.htm">객실</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Quick Start: Sequences

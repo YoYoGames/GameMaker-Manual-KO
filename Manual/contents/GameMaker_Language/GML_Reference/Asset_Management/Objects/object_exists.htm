@@ -6,38 +6,14 @@
   <title>object_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function object_exists" />
+  <meta name="topic-comment" content="object_exists 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="object_exists" />
   <meta name="search-keywords" content="object_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_exists</h1>
-  <p>This function returns whether the specified value is an object asset (<span class="inline">true</span>) or not (<span class="inline">false</span>). Note that this checks to see if an object is present in the Asset Browser, and not actually in the game room. For that you should use the function <a href="../Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">object_exists(obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var object_id = buffer_read(net_buffer, buffer_u16);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_exists</h1><p> 이 함수는 지정된 값이 객체 자산인지 여부를 반환합니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). 이것은 개체가 실제로 게임룸이 아니라 자산 브라우저에 있는지 확인합니다. 그것을 위해 당신은 기능을 사용해야합니다<a href="../Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">object_exists(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">var object_id = buffer_read(net_buffer, buffer_u16);<br />
     var pos_x = buffer_read(net_buffer, buffer_u16);<br />
     var pos_y = buffer_read(net_buffer, buffer_u16);<br />
     <br />
@@ -45,19 +21,7 @@
     {<br />
         instance_create_layer(pos_x, pos_y, &quot;Instances&quot;, object_id);<br />
     }
-  </p>
-  <p>The above code reads data from a buffer that was received via networking. Since it contains an object ID (used for spawning instances), we first need to ensure that the value is not invalid and that the object actually exists. For that we call <span class="inline">object_exists()</span> in a condition, and if that is true, we create an instance of that object at the received position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_name.htm">object_get_name</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 네트워킹을 통해 받은 버퍼에서 데이터를 읽습니다. 여기에는 개체 ID(인스턴스를 생성하는 데 사용됨)가 포함되어 있으므로 먼저 값이 유효하지 않고 개체가 실제로 존재하는지 확인해야 합니다. 그것을 위해 우리는 부른다 <span class="inline">object_exists()</span> 조건에서, 그리고 그것이 사실이라면, 우리는 수신된 위치에 그 객체의 인스턴스를 생성합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Objects.htm">개체</a></div><div style="float:right"> 다음: <a href="object_get_name.htm"><span class="notranslate">object_get_name</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_exists

@@ -6,46 +6,21 @@
   <title>device_is_keypad_open</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for device_is_keypad_open" />
+  <meta name="topic-comment" content="device_is_keypad_open에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="device_is_keypad_open" />
   <meta name="search-keywords" content="device_is_keypad_open" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>device_is_keypad_open</h1>
-  <p>This does a check of the device for a keypad and if one is available it returns <span class="inline">true</span> otherwise it returns <span class="inline">false</span>. Please note that this function is mainly for use with Android devices</p>
-  <p>For those users with a <i>Sony Xperia Play</i>, there is a set button/key map setup within <span data-keyref="GameMaker Name">GameMaker</span>, so you can use the <a href="../Keyboard_Input/Keyboard_Input.htm">keyboard constants</a> <b>vk_up</b>, <b>vk_down</b>, <b>vk_left</b>, <b>vk_right</b> for the joypad keys and <i>Triangle</i> is <span class="inline">ord(&quot;T&quot;)</span>, <i>Square</i> is <span class="inline">ord(&quot;S&quot;)</span>, <i>Circle</i> is <b>vk_alt</b> + <b>vk_backspace</b> while the <i>back</i> button is simply <span class="inline">vk_backspace</span>, <i>Cross</i> is <b>vk_space</b>, <i>Select</i> is <b>vk_return</b> and <i>Start</i> is <b>vk_rshift</b>, the <i>L Trigger</i> is <span class="inline">ord(&quot;L&quot;)</span> and <i>R Trigger</i> is <span class="inline">ord(&quot;R&quot;)</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">device_is_keypad_open</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if device_is_keypad_open()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_is_keypad_open</h1><p> 이것은 키패드에 대한 장치를 확인하고 사용 가능한 경우 반환합니다. <span class="inline">true</span> 그렇지 않으면 반환 <span class="inline">false</span>. 이 기능은 주로 Android 기기에서 사용하기 위한 것입니다.</p><p> <i>Sony Xperia Play</i> 를 사용하는 사용자의 경우 <span data-keyref="GameMaker Name">GameMaker</span> 내에 버튼/키 맵 설정이 있으므로 <a href="../Keyboard_Input/Keyboard_Input.htm">키보드 상수</a> <b>vk_up</b>, <b>vk_down</b>, <b>vk_left</b>, <b>vk_right</b> 를 조이패드 키에 사용할 수 있으며 <i>삼각형</i> 은 다음과 같습니다. <span class="inline">ord(&quot;T&quot;)</span>, <i>스퀘어</i> 는 <span class="inline">ord(&quot;S&quot;)</span>, <i>원</i> 은 <b>vk_alt</b> + <b>vk_backspace</b> 이고 <i>뒤로</i> 버튼은 단순히 <span class="inline">vk_backspace</span>, <i>Cross</i> 는 <b>vk_space</b>, <i>Select</i> 는 <b>vk_return</b>, <i>Start</i> 는 <b>vk_rshift</b>, <i>L Trigger</i> 는 <span class="inline">ord(&quot;L&quot;)</span> 그리고 <i>R 트리거</i> 는 <span class="inline">ord(&quot;R&quot;)</span>.</p><p></p><h4> 통사론:</h4><p class="code">device_is_keypad_open</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if device_is_keypad_open()<br />
     {<br />
          global.Setting = 2;<br />
     }<br />
     else<br />
     {<br />
          global.Setting = 1;<br />
-    }</p>
-  <p>The above code checks for a keypad then changes a global variable depending on the returned value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Device_Input.htm">Device Input</a></div>
-        <div style="float:right">Next: <a href="device_get_tilt_x.htm">device_get_tilt_x</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 키패드를 확인한 다음 반환된 값에 따라 전역 변수를 변경합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Device_Input.htm">장치 입력</a></div><div style="float:right"> 다음: <a href="device_get_tilt_x.htm"><span class="notranslate">device_get_tilt_x</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 device_is_keypad_open

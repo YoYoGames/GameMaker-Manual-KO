@@ -1,89 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Animation Curve Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing how the animation curve editor works" />
-  <meta name="rh-index-keywords" content="Animation Curve Editor" />
-  <meta name="search-keywords" content="Aniimation Curves,Anim Curves,Curves" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>애니메이션 곡선</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="애니메이션 곡선 편집기 작동 방식을 자세히 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="애니메이션 곡선 편집기"/>
+  <meta name="search-keywords" content="애니메이션 곡선,애님 커브,곡선"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Animation Curve Editor</span></h1>
-  <p><img alt="The Animation Curve Editor" class="center" height="576" src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png" width="1302" />An animation curve is an asset that contains one or more curves that represent how a value changes over time, and can use <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a>, <a class="glossterm" data-glossterm="smooth interpolation" href="#">smooth interpolation</a> or <a class="glossterm" data-glossterm="bezier interpolation" href="#">bezier interpolation</a> to go between different points in the curve. The values you set on the vertical axis can be between any two values (between -1 and 1 by default) and the duration along the horizontal axis is <em>always </em>normalised from 0 to 1, making it easy to target different time ranges using multipliers in your game code or stretch them to fit a track in the <a href="Sequence_Properties/Using_Animation_Curves.htm">Sequences Editor</a>.</p>
-  <p>Animation curves are comprised of &quot;channels&quot; and each channel can have its own curve settings, which permits you to - for example - describe a spatial position with two channels for the x/y location, or a colour gradient with 4 channels to represent a colour format. Animation curve assets can be used when working with Sequences and can also be accessed using code, making them a powerful tool when creating your games.</p>
-  <p>When you first create an animation curve asset the editor window will open and present you with the following sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Name</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give your animation curve a unique name (<span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>). This name is what will be used to refer to the curve and all its channels
-      when accessing it through code or in a sequence.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Curve Library</a></p>
-  <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The <img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button opens the <strong><span data-keyref="Animation_Curve_Presets_Library">Animation Curve Library</span></strong> window,
-      which allows you to change the Curve Type of the Animation Curve, and apply a preset to the selected channel.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" />See the section on <a href="Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Animation Curve Library</a> for information
-      on Curve Types and Presets. Note that opening the window through the <img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button will have the <strong>&quot;Overwrite&quot;</strong> Apply Mode selected by default.</p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Channel List</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The channel list is where you can add and name the different channels that will comprise your animation curve asset. By default when you first create an animation curve, a channel will have been added for you and you can add further channels by clicking
-      on the <img class="icon" src="../assets/Images/Icons/Animation_Curves_New_Channel.png" /> button to the left of the curve name. Each channel must have a unique name (using <span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>),
-      and you can also set the colour for the channel by double clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the colour swatch to the left, which will open the colour picker to let you choose a new colour.
-      To rename the channel, you can do a slow double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and rename, and you can also use the right mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> to open a menu where you can choose to rename, change the colour or delete the channel.</p>
-    <p class="dropspot">Channels can be expanded by clicking on the arrow beside the name to show each of the points on the channel curve, and these points can be edited manually by clicking the current value and typing in the new value.</p>
-    <p class="dropspot"><img alt="Expanded Channel List" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_ExpandList.png" />You can toggle the channel visibility by clicking on the &quot;eye&quot; icon <img alt="Eye Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleVisibility.png" />, or delete the channel by clicking the &quot;bin&quot; icon <img alt="Delete Channel Icon" class="icon" src="../assets/Images/Icons/Icon_DeleteChannel.png" />.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Channel Range</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The Channel Range button is used for setting the visual vertical range for the Channel Editor. By default this will be set from -1 to 1, but clicking this button will open the following window:</p>
-    <p class="dropspot"><img alt="Animation Curve Editor Channel Range" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" />Changing these values will change the way the data is represented in the Channel Editor section, permitting you
-      to have higher/lower values along the channel curve than just -1 to 1. Note that this is purely visual and does not clamp the values for the channel.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Channel Editor</a></p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The Channel Editor shows a visual representation of the different channels used in the animation curve. By default, all channels will be shown here, but you can only edit the channel currently selected from the Channel List, which will be highlighted
-      in the editor. You can change the position of any of the points along the channel curve by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on them and dragging them around within the editor, but note that the
-      first and last point can only be changed along the vertical axis and their horizontal value will always be 0 and 1 respectively.</p>
-    <p class="dropspot">You can add points directly to the channel curve by moving the mouse close to the main channel line and then clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> when the cursor changes to the &quot;<strong>Add Point</strong>&quot;
-      tool, and you can then edit these points by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and dragging or by changing their values in the expanded channel options in the Channel List:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor.gif" />You can edit multiple points at once by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging within the editor to select all the points you want to edit or by using <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to add points to the selection individually. Releasing the mouse button and then clicking again on any of the points in the selection
-      and dragging will move them all together:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Moving.gif" />You can <img class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> right-click anywhere in the Channel Editor to open the <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a> window (only when the selected Curve Type is <strong>Bezier</strong>). Applying a preset in this way will affect the whole channel. To modify only a part of the channel, you can <img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on an individual line to apply a preset to it, or select multiple lines by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging, then <img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on the selection to apply a preset to the selected lines.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Presets.gif" />Note that opening the <strong>Animation Curve Library</strong> window through the Channel Editor will have the <strong>&quot;Between&quot;</strong> Apply Mode selected by default.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Zoom Controls</a></p>
-  <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The zoom controls permit you to expand <img alt="Zoom Out Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomOut.png" /> or contract <img alt="Zoom In Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24" /> the
-      vertical scale of the channel curves in the Channel Editor. You can also click the &quot;Center Fit&quot; button <img alt="Center Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CenterFit.png" /> to have the Channel Editor view adjust it&#39;s
-      scale to fit all the points on the channel curve within the editor, centered around the mid range of the values:</p>
-    <p class="dropspot"><img alt="Using the Zoom controls" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Zoom.gif" /></p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p>For information on the different <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a> functions that can be used along with animation curves, please see the following section of the manual:</p>
-  <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">Animation Curve Functions</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 애니메이션 곡선 편집기</h1><p><img alt="The Animation Curve Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png"/> 애니메이션 곡선은 시간이 지남에 따라 값이 어떻게 변하는지를 나타내는 하나 이상의 곡선을 포함하는 자산이며 <a class="glossterm" data-glossterm="선형 보간" href="#">선형 보간</a>, <a class="glossterm" data-glossterm="부드러운 보간" href="#">부드러운 보간</a> 또는 <a class="glossterm" data-glossterm="베지어 보간" href="#">베지어 보간</a> 을 사용하여 곡선의 다른 점 사이를 이동할 수 있습니다. 세로 축에 설정한 값은 두 값(기본적으로 -1과 1 사이) 사이일 수 있으며 가로 축의 지속 시간은 <em>항상</em> 0에서 1로 정규화되므로 게임 코드를 추가하거나 <a href="Sequence_Properties/Using_Animation_Curves.htm">시퀀스 편집기</a> 의 트랙에 맞게 확장합니다.</p><p> 애니메이션 곡선은 &quot;채널&quot;로 구성되며 각 채널은 고유한 곡선 설정을 가질 수 있습니다. 이를 통해 예를 들어 x/y 위치에 대해 2개의 채널이 있는 공간 위치를 설명하거나 색상 형식. 애니메이션 곡선 자산은 시퀀스 작업 시 사용할 수 있으며 코드를 사용하여 액세스할 수도 있으므로 게임을 만들 때 강력한 도구가 됩니다.</p><p> 애니메이션 곡선 자산을 처음 생성하면 편집기 창이 열리고 다음 섹션이 표시됩니다.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">곡선 이름</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> 여기에서 애니메이션 곡선에 고유한 이름을 지정할 수 있습니다( <span data-keyref="Asset name restriction">영숫자 문자 및 &quot;_&quot; 밑줄 기호만 해당</span> ). 이 이름은 코드를 통해 또는 시퀀스로 액세스할 때 곡선과 모든 채널을 참조하는 데 사용됩니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">곡선 라이브러리</a></p><div class="droptext" data-targetname="drop-down7"><p class="dropspot"> 그만큼<img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13"/> 버튼을 누르면 애니메이션 곡선의 곡선 유형을 변경하고 선택한 채널에 사전 설정을 적용할 수 있는 <strong><span data-keyref="Animation_Curve_Presets_Library">애니메이션 곡선 라이브러리</span></strong> 창이 열립니다.</p><p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png"/> 곡선 유형 및 사전 설정에 대한 정보는 <a href="Animation_Curve_Properties/Animation_Curve_Library.htm" title="애니메이션 곡선 라이브러리">애니메이션 곡선 라이브러리</a> 섹션을 참조하십시오. 참고로 창을 열면<img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13"/> 버튼을 누르면 기본적으로 <strong>&quot;덮어쓰기&quot;</strong> 적용 모드가 선택됩니다.</p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">채널 목록</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> 채널 목록은 애니메이션 곡선 자산을 구성할 다양한 채널을 추가하고 이름을 지정할 수 있는 곳입니다. 기본적으로 애니메이션 곡선을 처음 만들 때 채널이 추가되며 클릭하여 더 많은 채널을 추가할 수 있습니다.<img class="icon" src="../assets/Images/Icons/Animation_Curves_New_Channel.png"/> 곡선 이름 왼쪽에 있는 버튼. 각 채널에는 고유한 이름이 있어야 하며( <span data-keyref="Asset name restriction">영숫자와 &quot;_&quot; 밑줄 기호만 사용</span> ) 채널을 두 번 클릭하여 색상을 설정할 수도 있습니다.<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 새 색상을 선택할 수 있는 색상 선택기가 열릴 것입니다. 채널 이름을 바꾸려면 느린 두 번 클릭을 수행할 수 있습니다.<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 이름을 바꾸고 마우스 오른쪽 버튼을 사용할 수도 있습니다.<img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> 채널 이름 변경, 색상 변경 또는 삭제를 선택할 수 있는 메뉴를 엽니다.</p><p class="dropspot"> 채널은 이름 옆에 있는 화살표를 클릭하여 채널 곡선의 각 점을 표시하여 확장할 수 있으며 이러한 점은 현재 값을 클릭하고 새 값을 입력하여 수동으로 편집할 수 있습니다.</p><p class="dropspot"><img alt="Expanded Channel List" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_ExpandList.png"/> &quot;눈&quot; 아이콘을 클릭하여 채널 가시성을 전환할 수 있습니다.<img alt="Eye Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleVisibility.png"/>, 또는 &quot;bin&quot; 아이콘을 클릭하여 채널을 삭제하십시오.<img alt="Delete Channel Icon" class="icon" src="../assets/Images/Icons/Icon_DeleteChannel.png"/>.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">채널 범위</a></p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"> 채널 범위 버튼은 채널 편집기의 시각적 수직 범위를 설정하는 데 사용됩니다. 기본적으로 이것은 -1에서 1로 설정되지만 이 버튼을 클릭하면 다음 창이 열립니다:</p><p class="dropspot"><img alt="Animation Curve Editor Channel Range" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png"/> 이 값을 변경하면 채널 편집기 섹션에 데이터가 표시되는 방식이 변경되어 채널 곡선을 따라 -1에서 1보다 더 높거나 낮은 값을 가질 수 있습니다. 이것은 순전히 시각적이며 값을 고정하지 않습니다. 채널.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">채널 편집기</a></p><div class="droptext" data-targetname="drop-down5"><p class="dropspot"> 채널 편집기는 애니메이션 곡선에 사용된 다양한 채널의 시각적 표현을 보여줍니다. 기본적으로 모든 채널이 여기에 표시되지만 편집기에서 강조 표시될 채널 목록에서 현재 선택된 채널만 편집할 수 있습니다. 다음을 클릭하여 채널 곡선을 따라 점의 위치를 변경할 수 있습니다.<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 편집기 내에서 드래그하지만 첫 번째 점과 마지막 점은 세로 축을 따라 변경할 수만 있고 가로 값은 항상 각각 0과 1입니다.</p><p class="dropspot"> 마우스를 메인 채널 라인에 가깝게 이동한 다음 클릭하여 채널 곡선에 직접 포인트를 추가할 수 있습니다<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 커서가 &quot; <strong>포인트 추가</strong> &quot; 도구로 바뀌면 클릭하여 이 포인트를 편집할 수 있습니다.<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 드래그하거나 채널 목록의 확장된 채널 옵션에서 값을 변경하여:</p><p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor.gif"/> 클릭하면 여러 포인트를 한 번에 편집할 수 있습니다.<img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> 편집기 내에서 드래그하여 편집하려는 모든 점을 선택하거나 다음을 사용하여<img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> /<img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> +<img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> 선택 항목에 개별적으로 점을 추가합니다. 마우스 버튼에서 손을 뗀 다음 선택 영역의 임의의 점을 다시 클릭하고 드래그하면 모두 함께 이동합니다.</p><p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Moving.gif"/> 당신은 할 수 있습니다<img class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> 채널 편집기의 아무 곳이나 마우스 오른쪽 버튼으로 클릭하여 <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">애니메이션 곡선 라이브러리</a> 창을 엽니다(선택한 곡선 유형이 <strong>베지어인</strong> 경우에만). 이러한 방식으로 사전 설정을 적용하면 전체 채널에 영향을 줍니다. 채널의 일부만 수정하려면 다음을 수행할 수 있습니다.<img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> 개별 라인을 마우스 오른쪽 버튼으로 클릭하여 사전 설정을 적용하거나<img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> 드래그한 다음<img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> 선택 항목을 마우스 오른쪽 버튼으로 클릭하여 선택한 라인에 사전 설정을 적용합니다.</p><p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Presets.gif"/> 채널 편집기를 통해 <strong>애니메이션 곡선 라이브러리</strong> 창을 열면 기본적으로 <strong>&quot;사이&quot;</strong> 적용 모드가 선택됩니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">줌 컨트롤</a></p><div class="droptext" data-targetname="drop-down6"><p class="dropspot"> 확대/축소 컨트롤을 사용하여 확장할 수 있습니다.<img alt="Zoom Out Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomOut.png"/> 또는 계약<img alt="Zoom In Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24"/> 채널 편집기에서 채널 곡선의 수직 스케일입니다. &quot;중앙 맞춤&quot; 버튼을 클릭할 수도 있습니다.<img alt="Center Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CenterFit.png"/> 채널 편집기 보기가 값의 중간 범위를 중심으로 편집기 내 채널 곡선의 모든 점에 맞게 크기를 조정하도록 하려면:</p><p class="dropspot"><img alt="Using the Zoom controls" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Zoom.gif"/></p><p class="dropspot"></p></div><p></p><p> 애니메이션 곡선과 함께 사용할 수 있는 다양한 <a class="glossterm" data-glossterm="실행 시간" href="#">런타임</a> 기능에 대한 정보는 매뉴얼의 다음 섹션을 참조하십시오.</p><ul class="colour"><li> <a href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">애니메이션 곡선 기능</a> </li></ul><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div><div style="float:right"> 다음: <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">애니메이션 곡선 라이브러리</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Animation Curve Editor
@@ -92,5 +20,5 @@ Animation Curves
   <!-- TAGS
 animation_curve_editor
 -->
-</body>
-</html>
+
+</body></html>

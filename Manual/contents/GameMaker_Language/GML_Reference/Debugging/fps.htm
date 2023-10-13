@@ -6,41 +6,16 @@
   <title>fps</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for fps" />
+  <meta name="topic-comment" content="fps에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="fps" />
   <meta name="search-keywords" content="fps" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fps</h1>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> there are two main ways that can be used to tell the speed at which your game runs. The <a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (as specified in the Game Options) and the <span class="inline">fps</span> (frames per second). These values are often confused, but basically one is the number of game steps that <span data-keyref="GameMaker Name">GameMaker</span> is supposed to be completing in a second, while the other (the fps) is the number of CPU steps that <span data-keyref="GameMaker Name">GameMaker</span> is actually completing in a second <i>up to a maximum value of the room speed itself</i>. To get the true fps, ie. the actual number of cpu steps per game step, use the <a href="fps_real.htm"><span class="inline">fps_real</span></a> variable.</p>
-  <p>This <b>read-only</b> variable returns the current fps as an integer value. Please note that the function will only update once every step of your game and so may appear to &quot;jump&quot; from one value to another, but this is quite normal.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">fps</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if debug_mode<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>fps</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 에는 게임 실행 속도를 알려주는 데 사용할 수 있는 두 가지 주요 방법이 있습니다. 그만큼<a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (게임 옵션에 지정된 대로) 및 <span class="inline">fps</span> (초당 프레임). 이러한 값은 종종 혼동되지만 기본적으로 하나는 <span data-keyref="GameMaker Name">GameMaker</span> 가 1초에 완료해야 하는 게임 단계 수이고 다른 하나(fps)는 <span data-keyref="GameMaker Name">GameMaker</span> 가 <i>최대</i> 1초에 실제로 완료하는 CPU 단계 수입니다. <i>룸 속도 자체의 최대값</i>. 진정한 fps를 얻으려면, 즉. 게임 단계당 실제 CPU 단계 수<a href="fps_real.htm"><span class="inline">fps_real</span></a> 변하기 쉬운.</p><p> 이 <b>읽기 전용</b> 변수는 현재 fps를 정수 값으로 반환합니다. 이 기능은 게임의 모든 단계에서 한 번만 업데이트되므로 한 값에서 다른 값으로 &quot;점프&quot;하는 것처럼 보일 수 있지만 이는 매우 정상적인 현상입니다.</p><p></p><h4> 통사론:</h4><p class="code">fps</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if debug_mode<br />
     {<br />
         draw_text(32, 32, &quot;FPS = &quot; + string(fps));<br />
-    }</p>
-  <p>The above code will check to see if the game is in debug mode and if it is it will display the current fps on the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="fps_real.htm">fps_real</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 게임이 디버그 모드인지 확인하고 디버그 모드인 경우 화면에 현재 fps를 표시합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Debugging.htm">디버깅</a></div><div style="float:right"> 다음: <a href="fps_real.htm"><span class="notranslate">fps_real</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fps

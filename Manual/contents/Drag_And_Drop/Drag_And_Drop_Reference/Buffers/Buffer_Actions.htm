@@ -3,103 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Buffer Actions</title>
+  <title>버퍼 작업</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section detailing all the Buffer actions" />
-  <meta name="rh-index-keywords" content="GML Visual Overview - Buffer Actions Library" />
-  <meta name="search-keywords" content="Buffer Actions" />
+  <meta name="topic-comment" content="모든 버퍼 작업을 자세히 설명하는 섹션" />
+  <meta name="rh-index-keywords" content="GML 시각적 개요 - 버퍼 작업 라이브러리" />
+  <meta name="search-keywords" content="버퍼 작업" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Buffers Action Library</h1>
-  <p><img alt="Buffers Action Library" class="center" height="149" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/Lib_Buffers.png" width="241" /></p>
-  <p>A <b>buffer</b> is a region of physical memory used to temporarily hold data while it is being moved from one place to another or manipulated in some way, for example you can use a buffer to hold game state data. <span data-keyref="GameMaker Name">GameMaker</span> has a number of specific actions related to creating, modifying and loading/saving buffers, but before using them please note the following points:</p>
-  <ul class="colour">
-    <li>When a buffer is created, it is automatically cleared and filled to 0.</li>
-    <li>The &quot;size&quot; argument of the buffer functions always refers to the size <i>in bytes</i> of the buffer.</li>
-    <li>GML Visual buffers are always <i>1 byte aligned</i>. The &quot;alignment&quot; refers to how data is stored within a buffer and is used when using the <a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">GML buffer Functions</a>, but for <span data-keyref="GML_Visual">GML Visual</span>, it&#39;s not relevant.</li>
-    <li>Data in buffers is read and written in a <i>sequential</i> manner (ie: you call the <a href="Write_Buffer.htm">Write Buffer</a> action three times, then it will write the first data, move forward, right the second data, move forward and then write the last data), with something called the &quot;seek&quot; value to tell you where in the buffer the next read/write will take place.</li>
-    <li>All data is written to the buffer and returned from the buffer as a <b>string</b> so if you have stored any real numbers you will have to use one of the <a href="../Data_Types/Data_Type_Actions.htm">Data Type Actions</a> to convert it from the string to the value.</li>
-  </ul>
-  <p>The memory used for creating buffers is system memory so even when the game doesn&#39;t have focus, any data stored in a buffer should be safe, however if the app is closed or re-started then it will be lost. It is also worth noting that buffers can also be saved as files then loaded back into the game using the <a href="../Files/File_Actions.htm">file actions</a>.</p>
-  <p>The following page explains in more detail how buffers work within the context of <span data-keyref="GameMaker Name">GameMaker</span> and contain a couple of GML code examples:</p>
-  <ul class="colour">
-    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Using Buffers</a></li>
-  </ul>
-  <p>The <b>Buffer</b> library has the following actions:</p>
-  <p> </p>
-  <table class="dnd" style="text-align: left;margin-left:">
-    <tbody>
-      <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Create_Buffer.htm">Create Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Copy_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Copy_Buffer.htm">Copy Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Delete_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Delete_Buffer.htm">Delete Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Read_Buffer.htm">Read Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Write Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Write_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Write_Buffer.htm">Write Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Seek Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Seek_Buffer.htm">Seek Buffer</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Size.png" /></td>
-        <td class="dnd" style=""><a href="Get_Buffer_Size.htm">Get Buffer Size</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Position.png" /></td>
-        <td class="dnd" style=""><a href="Get_Buffer_Position.htm">Get Buffer Position</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Buffer Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_Buffer_Exists.png" /></td>
-        <td class="dnd" style=""><a href="If_Buffer_Exists.htm">If Buffer Exists</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="If_End_Of_Buffer.htm">If End Of Buffer</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a href="../Files/File_Actions.htm">File Actions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 버퍼 작업 라이브러리</h1><p><img alt="Buffers Action Library" class="center" height="149" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/Lib_Buffers.png" width="241" /></p><p> <b>버퍼</b> 는 데이터가 한 장소에서 다른 장소로 이동되거나 어떤 식으로든 조작되는 동안 일시적으로 데이터를 보유하는 데 사용되는 물리적 메모리 영역입니다. 예를 들어 버퍼를 사용하여 게임 상태 데이터를 보유할 수 있습니다. <span data-keyref="GameMaker Name">GameMaker</span> 에는 버퍼 생성, 수정 및 로드/저장과 관련된 여러 가지 특정 작업이 있지만 사용하기 전에 다음 사항에 유의하십시오.</p><ul class="colour"><li> 버퍼가 생성되면 자동으로 지워지고 0으로 채워집니다.</li><li> 버퍼 함수의 &quot;크기&quot; 인수는 항상 버퍼의 크기 <i>(바이트</i> )를 나타냅니다.</li><li> GML Visual 버퍼는 항상 <i>1바이트로 정렬</i> 됩니다. &quot;정렬&quot;은 데이터가 버퍼 내에 저장되는 방식을 말하며 <a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">GML 버퍼 Functions</a> 를 사용할 때 사용되지만 <span data-keyref="GML_Visual">GML Visual</span> 의 경우 관련이 없습니다.</li><li> 버퍼의 데이터는 <i>순차적</i> 방식으로 읽고 씁니다(예: <a href="Write_Buffer.htm">쓰기 버퍼</a> 작업을 세 번 호출한 다음 첫 번째 데이터를 쓰고 앞으로 이동하고 두 번째 데이터를 오른쪽으로 이동하고 앞으로 이동한 다음 마지막 데이터를 씁니다). 버퍼에서 다음 읽기/쓰기가 수행될 위치를 알려주는 &quot;탐색&quot; 값이라는 것이 있습니다.</li><li> 모든 데이터는 버퍼에 기록되고 버퍼에서 <b>문자열</b> 로 반환되므로 실수를 저장한 경우 <a href="../Data_Types/Data_Type_Actions.htm">데이터 유형 작업</a> 중 하나를 사용하여 문자열에서 값으로 변환해야 합니다.</li></ul><p> 버퍼 생성에 사용되는 메모리는 시스템 메모리이므로 게임에 포커스가 없어도 버퍼에 저장된 모든 데이터는 안전해야 하지만 앱을 닫거나 다시 시작하면 손실됩니다. 버퍼를 파일로 저장한 다음 <a href="../Files/File_Actions.htm">파일 작업</a> 을 사용하여 게임에 다시 로드할 수도 있다는 점도 주목할 가치가 있습니다.</p><p> 다음 페이지에서는 <span data-keyref="GameMaker Name">GameMaker</span> 컨텍스트 내에서 버퍼가 어떻게 작동하는지 자세히 설명하고 몇 가지 GML 코드 예제를 포함합니다.</p><ul class="colour"><li> <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">버퍼 사용</a></li></ul><p> <b>버퍼</b> 라이브러리에는 다음과 같은 작업이 있습니다.</p><p></p><table class="dnd" style="text-align: left;margin-left:"><tbody><tr style="height: 1px;"><td class="icons" style="margin-left: 16px;"><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /></td><td class="dnd" style=""> <a href="Create_Buffer.htm">버퍼 생성</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Copy_Buffer.png" /></td><td class="dnd" style=""><a href="Copy_Buffer.htm">버퍼 복사</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Delete_Buffer.png" /></td><td class="dnd" style=""><a href="Delete_Buffer.htm">버퍼 삭제</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png" /></td><td class="dnd" style=""><a href="Read_Buffer.htm">버퍼 읽기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Write Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Write_Buffer.png" /></td><td class="dnd" style=""><a href="Write_Buffer.htm">쓰기 버퍼</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Seek Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" /></td><td class="dnd" style=""><a href="Seek_Buffer.htm">버퍼 찾기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Size.png" /></td><td class="dnd" style=""><a href="Get_Buffer_Size.htm">버퍼 크기 가져오기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Position.png" /></td><td class="dnd" style=""><a href="Get_Buffer_Position.htm">버퍼 위치 가져오기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="If Buffer Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_Buffer_Exists.png" /></td><td class="dnd" style=""><a href="If_Buffer_Exists.htm">버퍼가 있는 경우</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /></td><td class="dnd" style=""><a href="If_End_Of_Buffer.htm">버퍼의 끝인 경우</a> </td></tr></tbody></table><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../DnD_Reference.htm">인덱스</a></div><div style="float:right"> 다음: <a href="../Files/File_Actions.htm">파일 작업</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Buffer Actions

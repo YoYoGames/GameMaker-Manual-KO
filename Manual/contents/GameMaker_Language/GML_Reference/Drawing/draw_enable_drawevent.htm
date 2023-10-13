@@ -6,38 +6,13 @@
   <title>draw_enable_drawevent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function draw_enable_drawevent" />
+  <meta name="topic-comment" content="draw_enable_drawevent 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="draw_enable_drawevent" />
   <meta name="search-keywords" content="draw_enable_drawevent" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_enable_drawevent</h1>
-  <p>With this function you can choose to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) the draw event for <b>all instances in the game</b>, thus giving you control over how and when things are drawn, which is useful if you wish to implement a &quot;frame skip&quot; technique. Note that this doesn&#39;t just prevent instances drawing to the screen, it suppresses the draw event completely meaning that care should be taken since any game logic that is present in that event will not be run either.</p>
-  <p>One important thing to understand about this function is that if you call it right at the start of the game, before the initial frame is rendered (i.e.: the Create Event of the first object in the first room of the game), then the game window <b>will not be rendered</b>. This could be useful for multiplayer projects that require a dedicated server which doesn&#39;t need to render anything, however keep in mind that this does <strong>not</strong> make it headless as GameMaker does not support that -- so you will not be able to run it on a server that does not have a graphical interface.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">draw_enable_drawevent(enable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>Enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Set to <span class="inline">true</span> or <span class="inline">false</span>.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">frame_skip ++;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_enable_drawevent</h1><p> 이 기능을 사용하여 활성화하도록 선택할 수 있습니다(<span class="inline">true</span> ) 또는 비활성화(<span class="inline">false</span> ) <b>게임의 모든 인스턴스에</b> 대한 그리기 이벤트, 따라서 항목을 그리는 방법과 시기를 제어할 수 있으므로 &quot;프레임 건너뛰기&quot; 기술을 구현하려는 경우에 유용합니다. 이것은 인스턴스가 화면에 그리는 것을 방지할 뿐만 아니라 그리기 이벤트를 완전히 억제하므로 해당 이벤트에 있는 게임 논리도 실행되지 않으므로 주의해야 합니다.</p><p> 이 함수에 대해 이해해야 할 한 가지 중요한 점은 게임이 시작될 때 바로 호출하면 초기 프레임이 렌더링되기 전에(즉: 게임의 첫 번째 방에 있는 첫 번째 개체의 이벤트 만들기) 게임이 창이 <b>렌더링되지 않습니다</b>. 이것은 아무 것도 렌더링할 필요가 없는 전용 서버가 필요한 멀티플레이어 프로젝트에 유용할 수 있지만 GameMaker가 이를 지원하지 <strong>않기</strong> 때문에 헤드리스가 되지는 않습니다. 따라서 실행할 수 없습니다. 그래픽 인터페이스가 없는 서버.</p><p></p><h4> 통사론:</h4><p class="code">draw_enable_drawevent(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">Enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Set to <span class="inline">true</span> or <span class="inline">false</span>.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">frame_skip ++;<br />
     if (frame_skip mod 5) == 0<br />
     {<br />
         draw_enable_drawevent(true);<br />
@@ -45,19 +20,7 @@
     else<br />
     {<br />
         draw_enable_drawevent(false);<br />
-    }</p>
-  <p>The above code checks a variable and if it returns <span class="inline">true</span>, it enables the draw event, otherwise the draw event is disabled.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="draw_flush.htm">draw_flush</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 변수를 확인하고 반환하는 경우 <span class="inline">true</span>, 그리기 이벤트를 활성화하고, 그렇지 않으면 그리기 이벤트를 비활성화합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Drawing.htm">그리기</a></div><div style="float:right"> 다음: <a href="draw_flush.htm"><span class="notranslate">draw_flush</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_enable_drawevent

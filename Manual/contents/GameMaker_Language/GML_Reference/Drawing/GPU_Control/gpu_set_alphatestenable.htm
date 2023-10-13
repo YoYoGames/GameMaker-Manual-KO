@@ -6,55 +6,17 @@
   <title>gpu_set_alphatestenable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function gpu_set_alphatestenable" />
+  <meta name="topic-comment" content="함수 gpu_set_alphatestenable에 대한 참조" />
   <meta name="rh-index-keywords" content="gpu_set_alphatestenable" />
   <meta name="search-keywords" content="gpu_set_alphatestenable" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_alphatestenable</h1>
-  <p>This function will enable or disable alpha testing for your game (by default this is disabled). By switching alpha testing on you can then use the companion function <a href="gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> to set the &quot;cut-off&quot; value at which all alpha values will be set to 0. The image below shows the difference that can be seen when alpha testing is switched on or off:</p>
-  <p><img alt="Alpha test example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/alpha_test_on_off.png" /></p>
-  <p class="note"><b>NOTE</b>: This function may negatively affect performance on iOS and Android devices.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_set_alphatestenable(enable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable alpha testing (<span class="inline">true</span> / <span class="inline">false</span>)</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if !gpu_get_alphatestenable()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_alphatestenable</h1><p> 이 기능은 게임에 대한 알파 테스트를 활성화 또는 비활성화합니다(기본적으로 비활성화되어 있음). 알파 테스트를 켜면 컴패니언 기능을 사용할 수 있습니다.<a href="gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> 모든 알파 값이 0으로 설정되는 &quot;컷오프&quot; 값을 설정합니다. 아래 이미지는 알파 테스트를 켜거나 끌 때 볼 수 있는 차이를 보여줍니다.</p><p><img alt="Alpha test example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/alpha_test_on_off.png" /></p><p class="note"> <b>참고</b>: 이 기능은 iOS 및 Android 장치의 성능에 부정적인 영향을 미칠 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_alphatestenable(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable alpha testing (<span class="inline">true</span> / <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if !gpu_get_alphatestenable()<br />
     {<br />
         gpu_set_alphatestenable(true);<br />
         gpu_set_alphatestref(128);<br />
-    }</p>
-  <p>The above code will check to see if alpha testing is enabled and if not it will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_alphatestref.htm">gpu_set_alphatestref</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 알파 테스트가 활성화되어 있는지 확인하고 그렇지 않은 경우 알파 테스트를 켜고 테스트 임계값을 128로 설정합니다(알파가 0.5보다 큰 픽셀만 그려짐). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GPU_Control.htm">GPU 제어</a></div><div style="float:right"> 다음: <a href="gpu_set_alphatestref.htm"><span class="notranslate">gpu_set_alphatestref</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_alphatestenable

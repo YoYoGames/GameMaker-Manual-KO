@@ -6,54 +6,16 @@
   <title>sequence_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining function sequence_destroy" />
+  <meta name="topic-comment" content="페이지 개요 기능 sequence_destroy" />
   <meta name="rh-index-keywords" content="sequence_destroy" />
   <meta name="search-keywords" content="sequence_destroy" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sequence_destroy</h1>
-  <p>With this function you can destroy a sequence object that has been created dynamically. You supply either the sequence object struct (as returned by the function <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a>) or the sequence ID (as returned by the function <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a> or from the sequence instance struct property <span class="inline">sequence</span>). This function should be used whenever a dynamically created sequence is no longer required to free up the memory associated with it.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">sequence_destroy(sequence_struct_or_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>sequence_struct_or_id</td>
-        <td><span data-keyref="Type_Asset_Sequence">Sequence Asset</span> or <span data-keyref="Type_Struct_Sequence_Object">Sequence Object Struct</span></td>
-        <td>The sequence object struct or ID to destroy</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if sequence_exists(my_seq)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sequence_destroy</h1><p> 이 기능을 사용하면 동적으로 생성된 시퀀스 개체를 삭제할 수 있습니다. 시퀀스 객체 구조체(함수에서 반환된 대로)를 제공합니다.<a href="sequence_create.htm"><span class="inline">sequence_create()</span></a> ) 또는 시퀀스 ID(함수에서 반환된<a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a> 또는 시퀀스 인스턴스 구조체 속성에서 <span class="inline">sequence</span> ). 이 함수는 동적으로 생성된 시퀀스와 연결된 메모리를 해제하는 데 더 이상 필요하지 않을 때마다 사용해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">sequence_destroy(sequence_struct_or_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_struct_or_id</span></td><td> <span data-keyref="Type_Asset_Sequence">시퀀스 자산</span> 또는 <span data-keyref="Type_Struct_Sequence_Object">시퀀스 개체 구조체</span></td><td> <span class="notranslate">The sequence object struct or ID to destroy</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if sequence_exists(my_seq)<br />
     {<br />
         sequence_destroy(my_seq);<br />
-    }</p>
-  <p>The above code checks to see if the given sequence object exists and if it does it is destroyed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_get.htm">sequence_get</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 주어진 시퀀스 객체가 존재하는지, 존재한다면 소멸되는지 확인합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequences.htm">시퀀스</a></div><div style="float:right"> 다음: <a href="sequence_get.htm"><span class="notranslate">sequence_get</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_destroy

@@ -6,18 +6,13 @@
   <title>switch</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the switch function" />
+  <meta name="topic-comment" content="스위치 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="switch,case" />
   <meta name="search-keywords" content="switch,default" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>switch</h1>
-  <p>In a number of situations you want to let your instances perform different actions depending on a particular value. You can do this using a number of consecutive <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> statements, but when the possible choices gets above two or three it is usually easier to use the <span class="inline">switch</span> statement.</p>
-  <p>A <span class="inline">switch</span> statement has the following syntax:</p>
-  <p class="code">switch (&lt;expression&gt;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>switch</h1><p> 여러 상황에서 인스턴스가 특정 값에 따라 다른 작업을 수행하도록 하려고 합니다. 연속된 숫자를 사용하여 이 작업을 수행할 수 있습니다.<a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> 그러나 가능한 선택이 두 개 또는 세 개 이상일 때 일반적으로 사용하기가 더 쉽습니다. <span class="inline">switch</span> 성명.</p><p> ㅏ <span class="inline">switch</span> 문에는 다음과 같은 구문이 있습니다.</p><p class="code">switch (&lt;expression&gt;)<br />
     {<br />
         case &lt;constant1&gt;:<br />
             &lt;code&gt;<br />
@@ -32,17 +27,7 @@
         default:<br />
             &lt;code&gt;;<br />
     }
-  </p>
-  <p>This works as follows:</p>
-  <ul class="colour">
-    <li>First the <a class="glossterm" data-glossterm="expression" href="#">expression</a> is executed.</li>
-    <li>Next, its result is compared with the different constants after each of the <span class="inline">case</span> <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>. When we say &quot;constant&quot; what we mean is that the value in the case cannot be a variable expression and must be a fixed value of any <a href="../Data_Types.htm">data type</a>, like <span class="inline2">&quot;fight&quot;</span> or <span class="inline2">3</span> or the keyword <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
-    <li>The execution begins from the first <span class="inline">case</span> statement with the matching value, <i>until a <a href="break.htm">break</a> statement is encountered</i>.</li>
-    <li>If no <span class="inline">case</span> statement has the matching value, then the <span class="inline">default</span> statement will be executed. It is not required to have a <span class="inline">default</span> statement, and if none is supplied then no action will be taken when there are no matching cases. The <span class="inline">default</span> statement can be placed anywhere in a switch block, however it&#39;s traditionally placed at the bottom, after all the cases.</li>
-  </ul>
-  <p class="note"><span class="note">NOTE</span> The switch statement will continue to execute code within a <span class="inline">case</span>, until a <span class="inline">break</span> is encountered. If you do not use <span class="inline">break</span>s at the end of your cases, it will cause the switch to &quot;leak&quot; to the next <span class="inline">case</span>, and even to a <span class="inline">default</span> section, if there are no <span class="inline">break</span>s in the way. This can cause unintended behaviour as the execution of one <span class="inline">case</span> can result in multiple <span class="inline">case</span>s being executed, so ensure to use <span class="inline">break</span> where appropriate.</p>
-  <p>A simple example of using a switch statement would be something like this:</p>
-  <p class="code">switch (player_lives)<br />
+  </p><p> 이것은 다음과 같이 작동합니다.</p><ul class="colour"><li> 먼저 <a class="glossterm" data-glossterm="표현" href="#">표현식</a> 이 실행됩니다.</li><li> 다음으로, 그 결과는 각각의 후 다른 상수와 비교됩니다. <span class="inline">case</span> <a class="glossterm" data-glossterm="성명" href="#">진술</a> <span class="glossextra">s</span>. &quot;상수&quot;라고 말할 때 의미하는 바는 케이스의 값이 변수 표현식이 될 수 없으며 <span class="inline"><a href="../Instance_Keywords.htm">noone</a>>&quot;fight&quot;</span> 또는 <span class="inline">case>3</span> 또는 키워드와 같은 모든 <a href="../Data_Types.htm">데이터 유형</a> 의 고정 값이어야 한다는 것입니다. <span class="inline">case> <span class="inline">default</span></span>.</li><li> 실행은 첫 번째부터 시작됩니다. <span class="inline">default</span> <i><a href="break.htm"><span class="notranslate">break</span></a> 문을 만날 때까지</i> 일치하는 값을 가진 문.</li><li> 아니오라면 <span class="inline">default</span> 문에 일치하는 값이 있으면 <span class="inline">case</span> 문이 실행됩니다. 반드시 있어야 하는 것은 아닙니다 <span class="inline">break</span> 문이며 아무 것도 제공되지 않으면 일치하는 케이스가 없을 때 아무 조치도 취하지 않습니다. 그만큼 <span class="inline">break</span> 문은 switch 블록의 아무 곳에나 배치할 수 있지만 일반적으로 모든 경우가 끝나면 맨 아래에 배치됩니다.</li></ul><p class="note"> <span class="note">참고</span> switch 문은 다음 내에서 계속 코드를 실행합니다. <span class="inline">case</span>, 까지 <span class="inline">default</span> 가 발생합니다. 사용하지 않는 경우 <span class="inline">break</span> s 케이스가 끝나면 스위치가 다음 항목으로 &quot;누출&quot;됩니다. <span class="inline">case</span>, 그리고 심지어 <span class="inline">case</span> 섹션이 없는 경우 <span class="inline">break</span> 도중에. 이것은 하나의 실행으로 의도하지 않은 동작을 일으킬 수 있습니다 <span class="inline">case</span> 여러 결과를 초래할 수 있습니다<span class="inline">break</span> 실행 중이므로 다음을 사용하십시오. <span class="inline">case</span> 적절한 경우.</p><p> switch 문을 사용하는 간단한 예는 다음과 같습니다.</p><p class="code">switch (player_lives)<br />
     {<br />
         case 3:<br />
             draw_sprite(20, 20, spr_face_healthy);<br />
@@ -60,9 +45,7 @@
             draw_sprite(20, 20, spr_face_fainted);<br />
         break;<br />
     }
-  </p>
-  <p>Note that multiple <span class="inline">case</span> statements can be used to execute the same statement, as the <span class="inline">break</span> is not always required for each and every <span class="inline">case</span>. If there is no <span class="inline">break</span> statement for a particular <span class="inline">case</span>, the execution simply continues with the code for the next case, e.g.:</p>
-  <p class="code">switch (keyboard_key)<br />
+  </p><p> 여러 <span class="inline">break</span> 명령문을 사용하여 동일한 명령문을 실행할 수 있습니다. <span class="inline">case</span> 항상 모든 사람에게 필요한 것은 아닙니다. <span class="inline">switch</span>. 없는 경우 <span class="inline">case</span> 특정에 대한 진술<span class="inline">switch</span>, 실행은 단순히 다음 경우에 대한 코드로 계속됩니다. 예:</p><p class="code">switch (keyboard_key)<br />
     {<br />
         case vk_left:<br />
         case ord(&quot;A&quot;):<br />
@@ -84,20 +67,7 @@
             y += 4;<br />
         break;<br />
     }
-  </p>
-  <p>The above code uses <span class="inline">switch</span> to check for a keyboard event and then compares that to each <span class="inline">case</span> listed. If it meets any of the required values then the corresponding code is executed. Note how the <span class="inline">switch</span> can check multiple <span class="inline">cases</span> and execute code until the next <span class="inline">break</span>, to permit various keys to be used to get the same result.</p>
-  <p>Each <span class="inline">case</span> can have its own code, so you can set up a sort of &quot;inheritance&quot; system where a case executes its own code and then the code for the next case as well.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="break.htm">break</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 <span class="inline">cases</span> 키보드 이벤트를 확인한 다음 각 이벤트와 비교합니다.<span class="inline">break</span> 나열. 필요한 값 중 하나라도 충족하면 해당 코드가 실행됩니다. 방법을 참고하십시오 <span class="inline">case</span> 여러 개를 확인할 수 있습니다<span class="inline"></span> 다음 코드까지 실행<span class="inline"></span>, 동일한 결과를 얻기 위해 다양한 키를 사용할 수 있습니다.</p><p> 각<span class="inline"></span> 자체 코드를 가질 수 있으므로 케이스가 자체 코드를 실행한 다음 다음 케이스에 대한 코드도 실행하는 일종의 &quot;상속&quot; 시스템을 설정할 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Language_Features.htm">언어 기능</a></div><div style="float:right"> 다음: <a href="break.htm"><span class="notranslate">break</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 switch

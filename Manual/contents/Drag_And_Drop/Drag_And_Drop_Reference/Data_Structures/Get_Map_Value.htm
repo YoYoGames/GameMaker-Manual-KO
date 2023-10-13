@@ -3,58 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Map Value</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>지도 값 가져오기</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Get Map Value action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Get Map Value" />
-  <meta name="search-keywords" content="Get Map Value" />
+  <meta name="topic-comment" content="지도 값 가져오기 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 지도 값 가져오기" />
+  <meta name="search-keywords" content="지도 값 가져오기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Map Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Map_Value.png" /> Get Map Value</h1>
-  <p>With this action you can retrieve the value associated with a given key in a map data structure. You supply the variable that holds the map index (as returned by the action <a href="Create_Map.htm">Create Map</a>) and then give a &quot;key&quot; (which is the identifier within the map for a value), and also supply a target variable to hold the returned value (which can be flagged as a temporary local variable).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> If you give a key that does not exist in the map then the action will return <span class="inline">undefined</span>. You can check for this this using the <a href="../Common/If_Undefined.htm">If Undefined</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Map Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Map_Value.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Map</td>
-        <td>The index (stored in a variable) of the map to get the value from</td>
-      </tr>
-      <tr>
-        <td>Key</td>
-        <td>The key to get (real or string)</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned map value</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Map Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Get_Map_Value.png" />The above action block code checks for a collision at the instance position and if one is found then a map is looked up to get a value from the key &quot;damage&quot;, and this value is then used to change the calling instance variable &quot;hp&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Remove_Map_Entry.htm">Remove Map Entry</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Map Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Map_Value.png" /> 지도 값 가져오기</h1><p> 이 작업을 통해 맵 데이터 구조에서 지정된 키와 연결된 값을 검색할 수 있습니다. 맵 인덱스를 보유하는 변수( <a href="Create_Map.htm">Create Map</a> 에서 반환됨)를 제공한 다음 &quot;key&quot;(값에 대한 맵 내 식별자)를 제공하고 반환된 값( 임시 지역 변수로 표시될 수 있음).</p><p class="note"> <b>참고</b>: 지도에 없는 키를 지정하면 작업이 반환됩니다. <span class="inline">undefined</span>. <a href="../Common/If_Undefined.htm">정의되지 않은 경우</a> 작업을 사용하여 이를 확인할 수 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Get Map Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Map_Value.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Map</span></td><td> 값을 가져올 맵의 인덱스(변수에 저장됨)</td></tr><tr><td> <span class="notranslate">Key</span></td><td> 가져올 키(실제 또는 문자열)</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 맵 값을 담을 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Get Map Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Get_Map_Value.png" /> 위의 작업 블록 코드는 인스턴스 위치에서 충돌을 확인하고 충돌이 발견되면 &quot;손상&quot; 키에서 값을 얻기 위해 맵을 조회한 다음 이 값을 사용하여 호출하는 인스턴스 변수 &quot;hp&quot;를 변경합니다.. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Structure_Actions.htm">데이터 구조 작업</a></div><div style="float:right"> 다음: <a href="Remove_Map_Entry.htm">지도 항목 제거</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Map Value

@@ -6,38 +6,14 @@
   <title>gamepad_get_description</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gamepad_get_description" />
+  <meta name="topic-comment" content="gamepad_get_description에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_get_description" />
   <meta name="search-keywords" content="gamepad_get_description" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_get_description</h1>
-  <p>This function will return a string with the description of the given gamepad, for example, a PS3 controller may return a string similar to &quot;PLAYSTATION(R)3 Controller&quot;, or an XBox360 controller could return &quot;Xbox 360 Controller (XInput STANDARD GAMEPAD)&quot;. This string is hardware dependant and the returned value will depend on the gamepad plugged into the device &quot;slot&quot; that is being checked.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gamepad_get_description(device);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad &quot;slot&quot; to get the name of.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var gp_num = gamepad_get_device_count();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_get_description</h1><p> 이 함수는 주어진 게임패드에 대한 설명이 포함된 문자열을 반환합니다. 예를 들어 PS3 컨트롤러는 &quot;PLAYSTATION(R)3 Controller&quot;와 유사한 문자열을 반환하거나 XBox360 컨트롤러는 &quot;Xbox 360 Controller(XInput STANDARD GAMEPAD)&quot;를 반환할 수 있습니다. &quot;. 이 문자열은 하드웨어에 따라 다르며 반환된 값은 확인 중인 장치 &quot;슬롯&quot;에 연결된 게임패드에 따라 달라집니다.</p><p></p><h4> 통사론:</h4><p class="code">gamepad_get_description(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Which gamepad &quot;slot&quot; to get the name of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">var gp_num = gamepad_get_device_count();<br />
     for (var i = 0; i &lt; gp_num; i++;)<br />
     {<br />
         if gamepad_is_connected(i)<br />
@@ -48,19 +24,7 @@
         {<br />
             draw_text(32, 32 + (i * 32), &quot;No Gamepad Connected&quot;);<br />
         }<br />
-    }</p>
-  <p>The above code will loop through all the gamepad slots to check for connected devices and then draw some text to the screen based on whether a gamepad is connected to the slot or not.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_get_button_threshold.htm"> gamepad_get_button_threshold </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 모든 게임패드 슬롯을 반복하여 연결된 장치를 확인한 다음 게임패드가 슬롯에 연결되어 있는지 여부에 따라 화면에 일부 텍스트를 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Input.htm">게임패드 입력</a></div><div style="float:right"> 다음: <a href="gamepad_get_button_threshold.htm">gamepad_get_button_threshold</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_description

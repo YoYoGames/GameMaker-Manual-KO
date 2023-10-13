@@ -3,104 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2022" />
-  <title>Compiler Batch Files / Scripts</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>컴파일러 배치 파일/스크립트</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <meta name="template" content="../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page explaining the batch files that can be used with the compiler" />
-  <meta name="rh-index-keywords" content="Compiler Batch Files Scripts" />
-  <meta name="search-keywords" content="compiler, batch, files, shell, scripts, asset compiler, run, build" />
+  <meta name="topic-comment" content="컴파일러에서 사용할 수 있는 배치 파일을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="컴파일러 배치 파일 스크립트" />
+  <meta name="search-keywords" content="컴파일러,일괄,파일,껍데기,스크립트,자산 컴파일러,운영,짓다" />
 </head>
-<body>
-  <h1>Compiler Batch Files / Scripts</h1>
-  <p>The <span data-keyref="GameMaker Name">GameMaker</span> compiler allows you to place Batch files (Windows) or Shell scripts (on macOS and Linux) in your project directory, and in the directory for each extension in your project.</p>
-  <h2>Placement</h2>
-  <p>A script file may be placed at the root of your project directory, alongside the project&#39;s <span class="inline2">.yyp</span> file.</p>
-  <p>A script file may also be placed in the directory of an extension, which may look like this: <span class="inline2">&lt;project_directory&gt;/extensions/&lt;extension_folder&gt;/</span>.</p>
-  <p>The extension versions of a script file will be executed first, and its root version will be executed last. The order in which extensions are executed can&#39;t be controlled, so an extension developer must ensure that one extension&#39;s scripts don&#39;t rely on another extension&#39;s scripts.</p>
-  <h2>Execution</h2>
-  <p>Script files with specific names, placed in any of the directories described above, are executed at various points during the compilation process:</p>
-  <table border="1" cellpadding="1" cellspacing="1">
-    <colgroup>
-      <col style="width:33.33%" />
-      <col style="width:33.33%" />
-      <col style="width:33.33%" />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Windows Batch File Name</th>
-        <th>macOS/Linux Shell Script Name</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><strong>pre_run_step.bat</strong></td>
-        <td><strong>pre_run_step.sh</strong></td>
-        <td>This is executed before the game deployment is about to start</td>
-      </tr>
-      <tr>
-        <td><strong>post_run_step.bat</strong></td>
-        <td><strong>post_run_step.sh</strong></td>
-        <td>This is executed when the game is prepared and ready to run; after the script&#39;s execution the game is started</td>
-      </tr>
-      <tr>
-        <td><strong>pre_build_step.bat</strong></td>
-        <td><strong>pre_build_step.sh</strong></td>
-        <td>This is executed before the asset compiler is started for building the game</td>
-      </tr>
-      <tr>
-        <td><strong>post_build_step.bat</strong></td>
-        <td><strong>post_build_step.sh</strong></td>
-        <td>This is executed after the asset compiler has been started for building the game</td>
-      </tr>
-      <tr>
-        <td><strong>pre_package_step.bat</strong></td>
-        <td><strong>pre_package_step.sh</strong></td>
-        <td>This is executed before the final packaging step, which is when all files are ready but the final ZIP file or store package is about to be created</td>
-      </tr>
-      <tr>
-        <td><strong>post_package_step.bat</strong></td>
-        <td><strong>post_package_step.sh</strong></td>
-        <td>This is executed after the final packaging step has completed and the final ZIP file or store package has been prepared</td>
-      </tr>
-      <tr>
-        <td><strong>post_textures.bat</strong></td>
-        <td><strong>post_textures.sh</strong></td>
-        <td>This is executed after the textures for your game have been generated. You can use this step to optimise your game textures manually.<br />
-          <br />
-          This script receives an environment variable called <span class="inline2">TexturesDir</span>, which stores the path to the generated textures.
-        </td>
-      </tr>
-      <tr>
-        <td><strong>remote_build_step.bat</strong></td>
-        <td><strong>remote_build_step.sh</strong></td>
-        <td>This is executed on the remote machine, when you are on a Windows machine and compiling remotely for macOS/iOS/tvOS or Ubuntu.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>These script files are supported when building on all target platforms.</p>
-  <h2>Extension Version and Options Environment Variables</h2>
-  <p>You can retrieve the extension version and any of the extension options in the Batch files/Shell scripts: </p>
-  <ul class="colour">
-    <li>Extension option: <span class="inline2">YYEXTOPT_&lt;ExtensionName&gt;_&lt;OptionName&gt;</span></li>
-    <li>Version number: <span class="inline2">GMEXT_&lt;ExtensionName&gt;_version</span></li>
-  </ul>
-  <p>Replace <span class="inline2">&lt;ExtensionName&gt;</span> here with the name of the extension you&#39;re using.</p>
-  <h2>Disabling Scripts for an Extension</h2>
-  <p>If you use multiple extensions that run scripts, for example, Steamworks and GDK, then you&#39;ll want to disable Steamworks when exporting to GDK, and vice-versa.</p>
-  <p>For that, see: <a data-xref="{title}" href="../../The_Asset_Editors/Extension_Creation/Disabling_Extensions.htm">How to Disable Extensions?</a></p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Runner_Details.htm">Runner &amp; Compiler</a></div>
-        <div>Next: <a data-xref="{title}" href="../Command_Line_Parameters.htm">Command Line Parameters</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><h1>컴파일러 배치 파일/스크립트</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 컴파일러를 사용하면 배치 파일(Windows) 또는 Shell 스크립트(macOS 및 Linux의 경우)를 프로젝트 디렉토리와 프로젝트의 각 확장에 대한 디렉토리에 배치할 수 있습니다.</p><h2> 놓기</h2><p> 스크립트 파일은 프로젝트의 <span class="inline2">.yyp</span> 파일과 함께 프로젝트 디렉토리의 루트에 위치할 수 있습니다.</p><p> 스크립트 파일은 <span class="inline2">&lt;project_directory&gt;/extensions/&lt;extension_folder&gt;/</span> 와 같은 확장의 디렉토리에 위치할 수도 있습니다.</p><p> 스크립트 파일의 확장 버전이 먼저 실행되고 루트 버전이 마지막에 실행됩니다. 확장이 실행되는 순서는 제어할 수 없으므로 확장 개발자는 한 확장의 스크립트가 다른 확장의 스크립트에 의존하지 않는지 확인해야 합니다.</p><h2> 실행</h2><p> 위에 설명된 디렉토리에 있는 특정 이름의 스크립트 파일은 컴파일 프로세스 중 다양한 지점에서 실행됩니다. </p><table border="1" cellpadding="1" cellspacing="1"><colgroup><col style="width:33.33%" /><col style="width:33.33%" /><col style="width:33.33%" /></colgroup><tbody><tr><th> Windows 배치 파일 이름</th><th> macOS/Linux 셸 스크립트 이름</th><th> 설명</th></tr><tr><td> <strong>pre_run_step.bat</strong></td><td> <strong>pre_run_step.sh</strong></td><td> 게임 배포가 시작되기 전에 실행됩니다.</td></tr><tr><td> <strong>post_run_step.bat</strong></td><td> <strong>post_run_step.sh</strong></td><td> 게임이 준비되고 실행할 준비가 되면 실행됩니다. 스크립트 실행 후 게임이 시작됩니다.</td></tr><tr><td> <strong>pre_build_step.bat</strong></td><td> <strong>pre_build_step.sh</strong></td><td> 게임 빌드를 위해 자산 컴파일러가 시작되기 전에 실행됩니다.</td></tr><tr><td> <strong>post_build_step.bat</strong></td><td> <strong>post_build_step.sh</strong></td><td> 게임 빌드를 위해 자산 컴파일러가 시작된 후에 실행됩니다.</td></tr><tr><td> <strong>pre_package_step.bat</strong></td><td> <strong>pre_package_step.sh</strong></td><td> 이것은 모든 파일이 준비되었지만 최종 ZIP 파일 또는 저장소 패키지가 생성되려는 최종 패키징 단계 전에 실행됩니다.</td></tr><tr><td> <strong>post_package_step.bat</strong></td><td> <strong>post_package_step.sh</strong></td><td> 최종 패키징 단계가 완료되고 최종 ZIP 파일 또는 스토어 패키지가 준비된 후 실행됩니다.</td></tr><tr><td> <strong>post_textures.bat</strong></td><td> <strong>post_textures.sh</strong></td><td> 이것은 게임의 텍스처가 생성된 후에 실행됩니다. 이 단계를 사용하여 게임 텍스처를 수동으로 최적화할 수 있습니다.<br /><br /> 이 스크립트는 생성된 텍스처의 경로를 저장하는 <span class="inline2">TexturesDir</span> 이라는 환경 변수를 받습니다.</td></tr></tbody></table><p> 이러한 스크립트 파일은 모든 대상 플랫폼에서 빌드할 때 지원됩니다.</p><h2> 확장에 대한 스크립트 비활성화</h2><p> 예를 들어 Steamworks 및 GDK와 같이 스크립트를 실행하는 여러 확장을 사용하는 경우 GDK로 내보낼 때 Steamworks를 비활성화하고 그 반대의 경우도 마찬가지입니다.</p><p> 이에 대해서는 <a data-xref="{title}" href="../../The_Asset_Editors/Extension_Creation/Disabling_Extensions.htm">확장 기능을 비활성화하는 방법을</a> 참조하십시오.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Runner_Details.htm">러너 및 컴파일러</a></div><div> 다음: <a data-xref="{title}" href="../Command_Line_Parameters.htm">명령줄 매개변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
 </body>
 </html>

@@ -3,54 +3,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Open Ini File</title>
+  <title>이니 파일 열기</title>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Open Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Open Ini File"/>
-  <meta name="search-keywords" content="Open Ini File"/>
+  <meta name="topic-comment" content="Ini 파일 열기 작업을 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - Ini 파일 열기"/>
+  <meta name="search-keywords" content="이니 파일 열기"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/> Open Ini File</h1>
-  <p>With this action you can open an Ini file for reading and/or writing. If the Ini file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but <i>only</i> if you write data to it. If you have only read information from
-    the Ini file, then the default values for the read function will be returned, but the Ini file will not actually be created.</p>
-  <p>Please note that you can only have <i>one Ini file open at any one time</i> and remember to use <a href="Close_Ini_File.htm">Close Ini File</a> once you&#39;re finished reading/writing from the Ini file as the information is not actually stored to disk
-    until then (it is stored in memory until the file is closed).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Open Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Open_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Filename</td>
-        <td>The name - as a string and with the <span class="inline">.ini</span> extension - of the file to open</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Open Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Open_Ini_File.png"/>The above action block code will open an ini file for use, then get the value associated with
-    the &quot;name&quot; key under the &quot;player&quot; header. If the name returned matches the default name value (ie: the file, section or key does <i>not</i> exist) then the file has a global variable written to it before being closed (and writing
-    the new data to disk).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Close_Ini_File.htm">Close Ini File</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/> 이니 파일 열기</h1><p> 이 작업으로 읽기 및/또는 쓰기를 위해 Ini 파일을 열 수 있습니다. 확인 중인 위치에 Ini 파일이 없는 경우 <span data-keyref="GameMaker Name">GameMaker</span> 는 파일을 생성할 수 있지만 데이터를 쓰는 경우 <i>에만</i> 가능합니다. Ini 파일에서 읽기 정보만 있는 경우 읽기 기능의 기본값이 반환되지만 Ini 파일은 실제로 생성되지 않습니다.</p><p> 한 번에 <i>하나의 Ini 파일만 열</i> 수 있으며 Ini 파일에서 읽기/쓰기를 마치면 <a href="Close_Ini_File.htm">Ini 파일 닫기</a> 를 사용하는 것을 기억하십시오. 정보는 그때까지 실제로 디스크에 저장되지 않기 때문입니다. 파일이 닫힐 때까지 메모리).</p><p></p><h4> 동작 구문:</h4><p><img alt="Open Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Open_Ini_File.png"/></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Filename</span></td><td> 이름 - 문자열 및 <span class="inline">.ini</span> 확장자 - 열려는 파일의</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Open Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Open_Ini_File.png"/> 위의 작업 블록 코드는 사용할 ini 파일을 연 다음 &quot;플레이어&quot; 헤더 아래에 있는 &quot;이름&quot; 키와 관련된 값을 가져옵니다. 반환된 이름이 기본 이름 값과 일치하면(즉, 파일, 섹션 또는 키가 존재하지 <i>않는</i> 경우) 파일을 닫기 전에(그리고 새 데이터를 디스크에 쓰기) 전역 변수가 기록됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Actions.htm">파일 작업</a></div><div style="float:right"> 다음: <a href="Close_Ini_File.htm">Ini 파일 닫기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Open Ini File

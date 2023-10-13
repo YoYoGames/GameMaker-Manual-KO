@@ -6,57 +6,14 @@
   <title>path_assign</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_assign" />
+  <meta name="topic-comment" content="path_assign 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_assign" />
   <meta name="search-keywords" content="path_assign" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_assign</h1>
-  <p>With this function you can copy the path data from one path to another. The path being copied <i>to</i> will be cleared first (should it have any path points) and be <strong>completely overwritten</strong> by the path being
-    copied from. Neither path is deleted in the process and the result is two paths, with two different indexes, but the exact same form and points. In general you would want to use this function on a path created using <span class="inline"><a href="path_add.htm">path_add()</a></span>,
-    since if you use it on a path asset, <strong>it will permanently affect the path for all instances in the game</strong> from the moment the function is used until the end of the game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_assign(index, path);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to be overwritten.</td>
-     </tr>
-      <tr>
-        <td>path</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path that will overwrite &#39;index&#39;.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">mypath = path_add();<br/> path_assign(mypath, choose(path_1, path_2, path_3));</p>
-  <p>The above code will create a new, empty path indexed in the variable &quot;mypath&quot; and then copy over the path data from one of the three available path resources.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_delete.htm">path_delete</a></div>
-        
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_assign</h1><p> 이 기능을 사용하면 한 경로에서 다른 경로로 경로 데이터를 복사할 수 있습니다. 복사 <i>대상</i> 경로가 먼저 지워지고(경로 점이 있어야 함) 복사 대상 경로가 <strong>완전히 덮어씁니다</strong>. 두 경로 모두 프로세스에서 삭제되지 않으며 결과는 두 개의 다른 색인을 포함하는 두 개의 경로이지만 형태와 점은 완전히 동일합니다. 일반적으로 다음을 사용하여 만든 경로에서 이 기능을 사용하고 싶을 것입니다. <span class="inline"><a href="path_add.htm">path_add()</a></span>, 경로 자산에서 사용하면 함수가 사용되는 순간부터 게임이 끝날 때까지 <strong>게임의 모든 인스턴스에 대한 경로에 영구적으로 영향을 미치기 때문입니다</strong>.</p><p></p><h4> 통사론:</h4><p class="code">path_assign(index, path);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to be overwritten.</span></td></tr><tr><td> <span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path that will overwrite &#39;index&#39;.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">mypath = path_add();<br/> path_assign(mypath, choose(path_1, path_2, path_3));</p><p> 위의 코드는 &quot;mypath&quot; 변수에 인덱싱된 새 빈 경로를 만든 다음 사용 가능한 세 가지 경로 리소스 중 하나에서 경로 데이터를 복사합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_delete.htm"><span class="notranslate">path_delete</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 path_assign

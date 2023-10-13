@@ -6,53 +6,16 @@
   <title>path_clear_points</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_clear_points" />
+  <meta name="topic-comment" content="path_clear_points 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_clear_points" />
   <meta name="search-keywords" content="path_clear_points" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_clear_points</h1>
-  <p>With this function you can remove all point definitions from a path, effectively making an &quot;empty&quot; path. This <i>does not</i> delete the path, for that you should use <a href="path_delete.htm"><span class="inline">path_delete()</span></a>, however it should be noted that <strong>this function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_clear_points(index);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to clear.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if path_get_number(mypath) &gt; 0<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_clear_points</h1><p> 이 기능을 사용하면 경로에서 모든 점 정의를 제거하여 &quot;빈&quot; 경로를 효과적으로 만들 수 있습니다. 이것은 당신이 사용해야하는 경로를 삭제 <i>하지 않습니다</i><a href="path_delete.htm"><span class="inline">path_delete()</span></a>, 그러나 <strong>이 함수는 실제 경로 자산을 변경</strong> 하므로 함수가 사용되는 순간부터 게임이 끝날 때까지 게임의 모든 인스턴스에서 경로가 사용되는 방식에 영구적으로 영향을 미친다는 점에 유의해야 합니다. 이것이 필요한 것이 아닌 경우 다음과 같은 기능을 사용해야 합니다. <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p></p><h4> 통사론:</h4><p class="code">path_clear_points(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to clear.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if path_get_number(mypath) &gt; 0<br />
     {<br />
         path_clear_points(mypath);<br />
-    }</p>
-  <p>The above code checks to see if there are any points on the path indexed in the variable &quot;mypath&quot; and if there are, it clears the path.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_append.htm">path_append</a></div>
-        
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;mypath&quot; 변수에 색인된 경로에 점이 있는지 확인하고 있으면 경로를 지웁니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_append.htm"><span class="notranslate">path_append</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 path_clear_points

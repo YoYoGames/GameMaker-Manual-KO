@@ -6,93 +6,25 @@
   <title>xboxlive_achievement_load_leaderboard</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module">
+  <script src="../../../../assets/scripts/main_script.js">
+    //<![CDATA[
+    <
+    meta name = "rh-authors"
+    content = "Mark Alexander" / >
+      <
+      meta name = "topic-comment"
+    content = "Reference page for achievement_load_leaderboard" / >
+      <
+      meta name = "rh-index-keywords"
+    content = "achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" / >
+      <
+      meta name = "search-keywords"
+    content = "achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" / >
+    //]]>
   </script>
-    <meta name = "rh-authors" content = "Mark Alexander" />
-      <meta name = "topic-comment" content = "Reference page for achievement_load_leaderboard" />
-      <meta name = "rh-index-keywords" content = "achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" />
-      <meta name = "search-keywords" content = "achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" />
-  <meta name="topic-comment" content="Page outlining the function xboxlive_achievement_load_leaderboard." />
+  <meta name="topic-comment" content="xboxlive_achievement_load_leaderboard 기능을 설명하는 페이지입니다." />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_achievement_load_leaderboard</h1>
-  <p>This function will send a request to the server for information on the given leaderboard. The leaderboard must have been created previously on the developer dashboard for your game and the ID given is that which you must supply as the first argument of the function. It will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map populated with the relevant key/value pairs. The <i>id</i> key of this <span class="inline">DS Map</span> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <span class="inline">xboxlive_achievement_leaderboard_info</span> as well as a number of other key/value pairs for each player. The exact contents of the map are shown below:</p>
-  <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - For this function it should be <span class="inline">xboxlive_achievement_leaderboard_info</span></li>
-    <li>&quot;<b>leaderboardid</b>&quot; - The unique ID for the leaderboard as defined on the provider dashboard.</li>
-    <li>&quot;<b>numentries</b>&quot; - The number of entries in the leaderboard that you have received.</li>
-    <li>&quot;<b>PlayerN</b>&quot; - The name of the player, where &quot;N&quot; is an integer value corresponding to their position within the leaderboard entries list.</li>
-    <li>&quot;<b>PlayeridN</b>&quot; - The unique user id of the player, &quot;N&quot;.</li>
-    <li>&quot;<b>RankN</b>&quot; - The rank of the player &quot;N&quot; within the leaderboard.</li>
-    <li>&quot;<b>ScoreN</b>&quot; - The score of the player &quot;N&quot;.</li>
-  </ul>
-  <p>You can specify the exact portion of the leaderboard to show by giving a minimum and maximum index value, as well as request that the results be filtered to retrieve only those scores by your friends or those posted by all players using the following filter <b>constants</b>:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Achievement_Filter"><a href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Stats_And_Leaderboards/xboxlive_achievement_load_leaderboard.htm" target="_blank">Xbox Live Achievement Filter Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">xboxlive_achievement_filter_friends_only </span></td>
-        <td>Get only the scores of the players friends.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">xboxlive_achievement_filter_all_players </span></td>
-        <td>Get all scores for all players.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code">xboxlive_achievement_load_leaderboard(ident, minindex, maxindex, filter)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>ident</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The unique ID of the leaderboard as shown on the developer dashboard.</td>
-      </tr>
-      <tr>
-        <td>minindex</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The starting index value to get the leaderboard data from.</td>
-      </tr>
-      <tr>
-        <td>maxindex</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The maximum index value to get the leaderboard data from.</td>
-      </tr>
-      <tr>
-        <td>filter</td>
-        <td><span data-keyref="Type_Constant_Achievement_Filter"><a href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Stats_And_Leaderboards/xboxlive_achievement_load_leaderboard.htm" target="_blank">Xbox Live Achievement Filter Constant</a></span></td>
-        <td>Whether to filter the results to those that are on your friends list or to all players (see the <b>Description</b> above)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following code would probably be called after the player has logged into their game account to get a list of all friends leaderboard positions for the game:</p>
-  <p class="code">xboxlive_achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, xboxlive_achievement_filter_friends_only);</p>
-  <p>This will send off a request for the information on the given leaderboard and generate an asynchronous callback with the special <span class="inline">async_load</span> DS map containing the following data:</p>
-  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> xboxlive_achievement_load_leaderboard</h1><p> 이 함수는 주어진 리더보드에 대한 정보에 대한 요청을 서버에 보냅니다. 리더보드는 게임의 개발자 대시보드에서 이전에 생성되어야 하며 주어진 ID는 함수의 첫 번째 인수로 제공해야 하는 ID입니다. 다음을 포함하는 콜백 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> 를 트리거합니다. <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> 관련 키/값 쌍으로 채워진 맵. 이것의 <i>아이디</i> 키는 <span class="inline">DS Map</span> 올바른 콜백을 식별하는 데 사용되며(주어진 비동기 이벤트에 대해 둘 이상의 트리거 함수가 있을 수 있음) <b>상수</b> 와 쌍을 이룹니다. <span class="inline">xboxlive_achievement_leaderboard_info</span> 뿐만 아니라 각 플레이어에 대한 기타 여러 키/값 쌍입니다. 지도의 정확한 내용은 다음과 같습니다.</p><ul class="colour"><li> &quot; <b>id</b> &quot; - 이 함수의 경우 다음과 같아야 합니다. <span class="inline">xboxlive_achievement_leaderboard_info</span></li><li> &quot; <b>Leaderboardid</b> &quot; - 공급자 대시보드에 정의된 리더보드의 고유 ID입니다.</li><li> &quot; <b>numentries</b> &quot; - 받은 리더보드의 항목 수입니다.</li><li> &quot; <b>PlayerN</b> &quot; - 플레이어의 이름입니다. 여기서 &quot;N&quot;은 리더보드 항목 목록 내 위치에 해당하는 정수 값입니다.</li><li> &quot; <b>PlayeridN</b> &quot; - 플레이어의 고유 사용자 ID &quot;N&quot;.</li><li> &quot; <b>RankN</b> &quot; - 리더보드 내 플레이어 &quot;N&quot;의 순위입니다.</li><li> &quot; <b>ScoreN</b> &quot; - 플레이어 &quot;N&quot;의 점수입니다.</li></ul><p> 최소 및 최대 인덱스 값을 제공하여 표시할 리더보드의 정확한 부분을 지정할 수 있을 뿐만 아니라 다음 필터 <b>상수</b> 를 사용하여 친구 또는 모든 플레이어가 게시한 점수만 검색하도록 결과를 필터링하도록 요청할 수 있습니다.</p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_Achievement_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Xbox Live 업적 필터 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">xboxlive_achievement_filter_friends_only </span></span></td><td> 플레이어 친구의 점수만 가져옵니다.</td></tr><tr><td><span class="notranslate"><span class="inline">xboxlive_achievement_filter_all_players </span></span></td><td> 모든 플레이어의 모든 점수를 가져옵니다.</td></tr></tbody></table><p></p><p></p><h4> <b>통사론:</b></h4><p class="code">xboxlive_achievement_load_leaderboard(ident, minindex, maxindex, filter)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ident</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">끈</a></span></td><td> <span class="notranslate">The unique ID of the leaderboard as shown on the developer dashboard.</span></td></tr><tr><td> <span class="notranslate">minindex</span></td><td> <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">진짜</a></span></td><td> <span class="notranslate">The starting index value to get the leaderboard data from.</span></td></tr><tr><td> <span class="notranslate">maxindex</span></td><td> <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">진짜</a></span></td><td> <span class="notranslate">The maximum index value to get the leaderboard data from.</span></td></tr><tr><td> <span class="notranslate">filter</span></td><td> <span data-keyref="Type_Constant_Achievement_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Xbox Live 업적 필터 상수</a></span></td><td> <span class="notranslate">Whether to filter the results to those that are on your friends list or to all players (see the <b>Description</b> above)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p><p></p><h4> 확장된 예:</h4><p> 다음 코드는 플레이어가 게임 계정에 로그인하여 게임의 모든 친구 순위표 위치 목록을 가져온 후에 호출될 것입니다.</p><p class="code">xboxlive_achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, xboxlive_achievement_filter_friends_only);</p><p> 이것은 주어진 리더보드에 대한 정보에 대한 요청을 보내고 특별한 <span class="inline">async_load</span> 다음 데이터를 포함하는 DS 맵:</p><p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if ident == xboxlive_achievement_leaderboard_info<br />
     {<br />
         var lbid = ds_map_find_value(async_load,&quot;leaderboardid&quot;);<br />
@@ -107,19 +39,7 @@
                 global.playerscore[i] = ds_map_find_value(async_load, &quot;Score&quot; + string(i));<br />
             }<br />
         }<br />
-    }</p>
-  <p>The above code checks the returned <span class="inline">DS Map</span> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then checks to make sure that the leaderboard being sent matches the original function call before looping through the map and storing all the different values in a number of arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="xboxlive_achievements_set_progress.htm">xboxlive_achievements_set_progress</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 반환된 내용을 확인합니다. <span class="inline">DS Map</span> <b>Social Asynchronous Event</b> 에서 해당 &quot;id&quot;가 확인 중인 상수와 일치하면 지도를 반복하고 여러 배열에 다른 모든 값을 저장하기 전에 전송되는 리더보드가 원래 함수 호출과 일치하는지 확인합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">통계 및 순위표</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="xboxlive_achievements_set_progress.htm">xboxlive_achievements_set_progress</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 achievement_load_leaderboard

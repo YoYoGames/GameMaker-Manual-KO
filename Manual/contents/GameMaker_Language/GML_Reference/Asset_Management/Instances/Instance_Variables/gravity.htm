@@ -6,44 +6,20 @@
   <title>gravity</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the variable gravity" />
+  <meta name="topic-comment" content="가변 중력을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="gravity" />
   <meta name="search-keywords" content="gravity" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gravity</h1>
-  <p><span class="inline">gravity</span> is one of the &quot;built in&quot; variables all instances have and, when set, will apply a constant force in the <a href="gravity_direction.htm"><span class="inline">gravity_direction</span></a> of the instance, influencing both the instance <span class="inline"><a href="speed.htm">speed</a> </span>and <span class="inline"><a href="direction.htm">direction</a></span>. Note that gravity is a cumulative force and will accelerate the object if you choose not to cap the final speed, and it&#39;s usual that you&#39;d set this variable to small decimal values like 0.01. If you set the <span class="inline">gravity</span> to 0, then no gravity will be applied to the instance (this is the default value).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gravity;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if !place_meeting(x, y + 1, obj_Ground)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gravity</h1><p><span class="inline">gravity</span> 모든 인스턴스가 가지고 있는 &quot;내장된&quot; 변수 중 하나이며, 설정되면 일정한 힘을 적용합니다.<a href="gravity_direction.htm"><span class="inline">gravity_direction</span></a> 두 인스턴스 모두에 영향을 미치는 인스턴스의 <span class="inline"><a href="speed.htm">speed</a> </span> 그리고 <span class="inline"><a href="direction.htm">direction</a></span>. 중력은 누적된 힘이며 최종 속도를 제한하지 않기로 선택하면 물체를 가속할 것이며 일반적으로 이 변수를 0.01과 같은 작은 소수 값으로 설정합니다. 설정하면 <span class="inline">gravity</span> 0으로 설정하면 인스턴스에 중력이 적용되지 않습니다(기본값).</p><p></p><h4> 통사론:</h4><p class="code">gravity;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if !place_meeting(x, y + 1, obj_Ground)<br />
     {<br />
         gravity = 0.01;<br />
     }<br />
     else<br />
     {<br />
         gravity = 0;<br />
-    }</p>
-  <p>The above code will only apply gravity if the instance does not find any instances of &quot;obj_Ground&quot; beneath it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="gravity_direction.htm">gravity_direction</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 인스턴스가 그 아래에 &quot;obj_Ground&quot;의 인스턴스를 찾지 못하는 경우에만 중력을 적용합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Variables.htm">인스턴스 변수</a></div><div style="float:right"> 다음: <a href="gravity_direction.htm"><span class="notranslate">gravity_direction</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gravity

@@ -6,43 +6,19 @@
   <title>event_inherited</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function event_inherited" />
+  <meta name="topic-comment" content="event_inherited 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="event_inherited" />
   <meta name="search-keywords" content="event_inherited" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>event_inherited</h1>
-  <p>This function will call the current event of the parent object of the instance. Normally, when an instance has a parent object, it automatically inherits all the same events as the parent, but if (for example) your parent object has a create event and you add one to your child object, all instances of the child object will run the new create event that you have added and <i>not</i> that which is in the parent object. Should you need to use both the parent object event and the child object event of the same type, you should use this function as it will run the parent object event before continuing with the rest of the code or actions that the child event contains.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">event_inherited();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">event_inherited();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>event_inherited</h1><p> 이 함수는 인스턴스의 부모 개체의 현재 이벤트를 호출합니다. 일반적으로 인스턴스에 상위 개체가 있으면 상위 개체와 동일한 이벤트를 모두 자동으로 상속하지만, 예를 들어 상위 개체에 create 이벤트가 있고 하나를 하위 개체에 추가하면 하위 개체의 모든 인스턴스가 상위 개체에 있는 것이 <i>아니라</i> 추가한 새 만들기 이벤트를 실행합니다. 동일한 유형의 상위 개체 이벤트와 하위 개체 이벤트를 모두 사용해야 하는 경우 하위 이벤트에 포함된 나머지 코드 또는 작업을 계속하기 전에 상위 개체 이벤트를 실행하므로 이 함수를 사용해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">event_inherited();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">event_inherited();<br />
     switch (sprite_index)<br />
     {<br />
         case spr_Enemy_1: dmg += 2; break;<br />
         case spr_Enemy_4: dmg -= 1; break;<br />
         case spr_Enemy_10: dmg +=10; break;<br />
-    }</p>
-  <p>The above code calls the inherited parent event (in which we initialise the variable &quot;<span class="inline">dmg</span>&quot;) and then goes on to modify the &quot;<span class="inline">dmg</span>&quot; variable. If there is no parent specified for the instance running this code, we would get an &quot;unknown variable&quot; error as <span class="inline">dmg</span> has not been defined.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
-        <div style="float:right">Next: <a href="event_perform.htm">event_perform</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 상속된 부모 이벤트를 호출합니다(여기서 변수 &quot;<span class="inline">dmg</span> &quot;) 그런 다음 &quot;를 수정합니다.<span class="inline">dmg</span> &quot; 변수입니다. 이 코드를 실행하는 인스턴스에 대해 지정된 부모가 없으면 다음과 같이 &quot;알 수 없는 변수&quot; 오류가 발생합니다. <span class="inline">dmg</span> 정의되지 않았습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Generating_Object_Events.htm">객체 이벤트 생성하기</a></div><div style="float:right"> 다음: <a href="event_perform.htm"><span class="notranslate">event_perform</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 event_inherited

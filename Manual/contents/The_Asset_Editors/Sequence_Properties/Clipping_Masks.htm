@@ -3,38 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Clipping Masks</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>클리핑 마스크</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing how to use clipping masks in the track editor" />
-  <meta name="rh-index-keywords" content="Sequences - Clipping Masks" />
-  <meta name="search-keywords" content="masks,clip masks,clipping,clipping masks" />
+  <meta name="topic-comment" content="트랙 편집기에서 클리핑 마스크를 사용하는 방법을 자세히 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="시퀀스 - 클리핑 마스크" />
+  <meta name="search-keywords" content="마스크,클립 마스크,깎는,클리핑 마스크" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Clipping Masks</h1>
-  <p>As mentioned in the <a href="The_Track_Panel.htm">Track Panel</a> page, there is an action to create what is called a <strong>clipping mask group </strong>in the track editor. This is accessed by clicking on the <img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png" /> button at the bottom of the Track Panel:</p>
-  <p><img alt="Clip Mask Button in the Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Panel_ClipMask_Button.png" />Clicking this will create a clipping mask group that is comprised of two sub-sets of assets that can be used as either the <strong>subject </strong>or the <strong>mask </strong>of the group. Basically the subject is the asset that is going to be masked, and the mask is the asset that is going to do the masking:</p>
-  <p><img alt="Basic Clipping Mask" class="center" src="../../assets/Images/Asset_Editors/Track_Clipping_Mask.png" />The idea behind using a clipping mask is that you add a subject sprite, and then a mask sprite, and the mask sprite will &quot;hide&quot; (mask) the subject. You can then use the mask sprite animation, or move or scale the mask sprite to change the visibility of the subject (or parts of the subject). Each group (mask and subject) can contain multiple assets, and each of the assets can have multiple parameter tracks.</p>
-  <p>To add a subject and mask, simply drag the sprite, object, sequence or particle system from the Asset Browser over the folder that you want to add it to:</p>
-  <p><img alt="Add A Clipping Mask" src="../../assets/Images/Asset_Editors/Track_Add_Clipping_Mask.gif" /></p>
-  <p>The mask sprite <em>alpha </em>will be used to &quot;hide&quot; whatever subject is underneath it, where a value of 100% alpha (opaque) will mask completely and a value of 0% alpha (transparent) will show it. For example, we have this sprite for masking:</p>
-  <p><img alt="Clipping Mask Example Sprite" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Sprite.png" />We can then apply this as a clipping mask to icons to create a &quot;cooldown&quot; effect, like this:</p>
-  <p><img alt="Animated Clipping Mask Example" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Example.gif" />In the above example &quot;<span class="inline">Sprite_2</span>&quot; is simply a static sprite asset that is the base icon, and then over that we&#39;ve created a clipping mask group with a greyscale version of the sprite, as well as a mask (using the example sprite shown above). When combined and the sequence is played, the clipping mask group reveals the base sprite underneath, creating our cooldown effect.</p>
-  <p>Note that clipping mask groups can be treated as a single item in the track list and dope sheet, and you can add rotation and position parameter tracks to the group <em>as a whole</em>. You can also apply clipping mask groups to group folders of assets or even to <em>other</em> clipping mask groups, making them a very powerful tool.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 클리핑 마스크</h1><p> <a href="The_Track_Panel.htm">트랙 패널</a> 페이지에서 언급했듯이 트랙 편집기에 <strong>클리핑 마스크 그룹</strong> 이라는 것을 생성하는 작업이 있습니다. 이것은<img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png"
+    /> 트랙 패널 하단의 버튼:</p><p><img alt="Clip Mask Button in the Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Panel_ClipMask_Button.png" /> 이것을 클릭하면 그룹의 <strong>주제</strong> 나 <strong>마스크</strong> 로 사용할 수 있는 두 개의 하위 자산 세트로 구성된 클리핑 마스크 그룹이 생성됩니다. 기본적으로 주제는 마스킹할 자산이고 마스크는 마스킹을 수행할 자산입니다.</p><p><img alt="Basic Clipping Mask" class="center" src="../../assets/Images/Asset_Editors/Track_Clipping_Mask.png" /> 클리핑 마스크를 사용하는 배경은 주제 스프라이트를 추가한 다음 마스크 스프라이트를 추가하면 마스크 스프라이트가 주제를 &quot;숨기기&quot;(마스크)한다는 것입니다. 그런 다음 마스크 스프라이트 애니메이션을 사용하거나 마스크 스프라이트를 이동하거나 크기를 조정하여 피사체(또는 피사체의 일부)의 가시성을 변경할 수 있습니다. 각 그룹(마스크 및 주제)에는 여러 자산이 포함될 수 있으며 각 자산에는 여러 매개변수 트랙이 있을 수 있습니다.</p><p> 주제와 마스크를 추가하려면 자산 브라우저에서 스프라이트, 개체 또는 시퀀스를 추가하려는 폴더 위로 드래그하기만 하면 됩니다.</p><p><img alt="Add A Clipping Mask" src="../../assets/Images/Asset_Editors/Track_Add_Clipping_Mask.gif" /></p><p> 마스크 스프라이트 <em>알파</em> 는 그 아래에 있는 피사체를 &quot;숨기기&quot; 위해 사용됩니다. 여기서 100% 알파(불투명) 값은 완전히 마스크되고 0% 알파(투명) 값은 표시됩니다. 예를 들어 마스킹을 위한 다음 스프라이트가 있습니다.</p><p><img alt="Clipping Mask Example Sprite" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Sprite.png" /> 그런 다음 이것을 아이콘에 클리핑 마스크로 적용하여 다음과 같이 &quot;쿨다운&quot; 효과를 만들 수 있습니다.</p><p><img alt="Animated Clipping Mask Example" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Example.gif" /> 위의 예에서 &quot;<span class="inline">Sprite_2</span> &quot;는 기본 아이콘인 정적 스프라이트 자산이며 그 위에 그레이스케일 버전의 스프라이트와 마스크(위에 표시된 예제 스프라이트 사용)가 있는 클리핑 마스크 그룹을 만들었습니다. 시퀀스가 재생되면 클리핑 마스크 그룹이 아래에 있는 기본 스프라이트를 드러내어 쿨다운 효과를 만듭니다.</p><p> 클리핑 마스크 그룹은 트랙 목록 및 도프 시트에서 단일 항목으로 처리될 수 있으며 그룹 <em>전체</em> 에 회전 및 위치 매개변수 트랙을 추가할 수 있습니다. 또한 클리핑 마스크 그룹을 자산의 그룹 폴더 또는 <em>다른</em> 클리핑 마스크 그룹에 적용하여 매우 강력한 도구로 만들 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Sequences.htm">시퀀스</a></div><div style="float:right"> 다음: <a href="Using_The_Dope_Sheet.htm">도프 시트 사용</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Clipping Masks

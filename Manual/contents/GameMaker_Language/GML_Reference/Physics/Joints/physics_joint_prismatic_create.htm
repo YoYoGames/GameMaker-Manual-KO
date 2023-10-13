@@ -6,122 +6,21 @@
   <title>physics_joint_prismatic_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_joint_prismatic_create" />
+  <meta name="topic-comment" content="physical_joint_prismatic_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_joint_prismatic_create" />
   <meta name="search-keywords" content="physics_joint_prismatic_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_prismatic_create</h1>
-  <p>Like a revolute joint, the prismatic joint only has one degree of freedom, but with this joint it is directional relative to an axis rather than rotational and actually prevents any form of rotation. Here is an image to help you visualise how this works:</p>
-  <p><img alt="Prismatic joint anchor points illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_1.png" />We have two instances joined at the anchor point, with an axis for movement defined from the vector the two w_axis x/y coordinates relative to the (0,0) coordinates of the physics world (so an x component of 0 and a y component of 1 (0,1) would make the joint a vertical prismatic joint). This joint can then <i>only</i> move relative to this axis, like a spring or a piston. If you set the lower or upper trans limit, you are basically limiting the amount of movement along this axis, where the 0 position is the exact spot that you defined with w_anchor x/y, so a negative value would go to the &quot;left&quot; of that point along the axis and a positive value to the &quot;right&quot; as shown in the following diagram (realise that &quot;left&quot; and &quot;right&quot; are relative terms!):</p>
-  <p><img alt="Prismatic joint limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_2.png" />You can also define the joint as having a motor or not. This means that when un-influenced by a collision the joint will move in a direction along the axis. this direction is defined by the motor speed, with a positive number being towards the axis coordinates (&quot;right&quot;) and a negative number being towards the anchor point (&quot;left&quot;). The &quot;max_motor_force&quot; argument is for limiting the speed of the movement so that you don&#39;t get a perpetually accelerating motor and to limit the influence that a collision may have on the movement. In this way you can use a joint motor to simulate joint friction by setting the joint speed to zero and maximum force to some small, but significant value. The motor will try to prevent the joint from moving, but will yield to a significant load.</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>w_anchor_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_axis_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x component of the axis vector</td>
-      </tr>
-      <tr>
-        <td>w_axis_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y component of the axis vector</td>
-      </tr>
-      <tr>
-        <td>lower_trans_limit</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The lower permitted limit for the joint movement</td>
-      </tr>
-      <tr>
-        <td>upper_trans_limit</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The lower permitted limit for the joint movement</td>
-      </tr>
-      <tr>
-        <td>limit</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether to limit the movement of the joint (true) or not (false)</td>
-      </tr>
-      <tr>
-        <td>max_motor_force</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Sets the maximum movement speed for the motor</td>
-      </tr>
-      <tr>
-        <td>motor_speed</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the speed at which the motor should move</td>
-      </tr>
-      <tr>
-        <td>motor</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the motor should be active (true) or not (false)</td>
-      </tr>
-      <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var mainFixture, o_id;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_prismatic_create</h1><p> 회전 관절과 마찬가지로 프리즘 관절은 자유도가 1개뿐이지만 이 관절을 사용하면 회전이 아닌 축에 대해 방향성을 가지며 실제로 어떤 형태의 회전도 방지합니다. 다음은 작동 방식을 시각화하는 데 도움이 되는 이미지입니다.</p><p><img alt="Prismatic joint anchor points illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_1.png" /> 고정점에서 결합된 두 개의 인스턴스가 있습니다. 벡터에서 정의된 두 개의 w_axis x/y 좌표는 물리 세계의 (0,0) 좌표를 기준으로 합니다(따라서 x 구성 요소는 0이고 y 구성 요소는 1(0,1)은 조인트를 수직 프리즘 조인트로 만듭니다). 그러면 이 관절은 스프링이나 피스톤과 같이 이 축에 <i>대해서만</i> 이동할 수 있습니다. 하한 또는 상한 트랜스 제한을 설정하면 기본적으로 이 축을 따라 이동하는 양을 제한하게 됩니다. 여기서 0 위치는 w_anchor x/y로 정의한 정확한 지점이므로 음수 값은 &quot;왼쪽&quot;으로 이동합니다. 다음 다이어그램과 같이 축을 따라 해당 지점의 점과 &quot;오른쪽&quot;에 양수 값이 표시됩니다(&quot;왼쪽&quot;과 &quot;오른쪽&quot;은 상대적인 용어입니다!).</p><p><img alt="Prismatic joint limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_2.png" /> 관절을 모터가 있는지 없는지 정의할 수도 있습니다. 이것은 충돌의 영향을 받지 않을 때 관절이 축을 따라 이동한다는 것을 의미합니다. 이 방향은 모터 속도에 의해 정의되며 양수는 축 좌표(&quot;오른쪽&quot;)를 향하고 음수는 앵커 포인트(&quot;왼쪽&quot;)를 향합니다. &quot;max_motor_force&quot; 인수는 계속해서 가속되는 모터를 얻지 않도록 이동 속도를 제한하고 충돌이 이동에 미칠 수 있는 영향을 제한하기 위한 것입니다. 이런 식으로 관절 속도를 0으로 설정하고 최대 힘을 작지만 중요한 값으로 설정하여 관절 모터를 사용하여 관절 마찰을 시뮬레이션할 수 있습니다. 모터는 조인트가 움직이는 것을 방지하려고 하지만 상당한 부하를 받게 됩니다.</p><p> 모든 관절과 마찬가지로 &quot;col&quot; 값을 다음으로 설정하면 <span class="inline">true</span> 두 인스턴스는 서로 상호 작용하고 충돌할 수 있지만 충돌 이벤트가 있는 경우 <i>에만</i> 가능합니다. <span class="inline">false</span>, 그들은 무슨 일이 있어도 충돌하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The first instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">inst2</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The second instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">w_anchor_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x coordinate where the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y coordinate where the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">w_axis_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x component of the axis vector</span></td></tr><tr><td> <span class="notranslate">w_axis_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y component of the axis vector</span></td></tr><tr><td> <span class="notranslate">lower_trans_limit</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The lower permitted limit for the joint movement</span></td></tr><tr><td> <span class="notranslate">upper_trans_limit</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The lower permitted limit for the joint movement</span></td></tr><tr><td> <span class="notranslate">limit</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether to limit the movement of the joint (true) or not (false)</span></td></tr><tr><td> <span class="notranslate">max_motor_force</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Sets the maximum movement speed for the motor</span></td></tr><tr><td> <span class="notranslate">motor_speed</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">This is the speed at which the motor should move</span></td></tr><tr><td> <span class="notranslate">motor</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the motor should be active (true) or not (false)</span></td></tr><tr><td> <span class="notranslate">col</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p><p></p><h4> 예시:</h4><p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
     o_id = instance_create_layer(x+25, y, &quot;Instances&quot;, obj_Piston);<br />
     physics_fixture_bind(mainFixture, id);<br />
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_prismatic_create(id, o_id, x, y, 0, 10, 0, 0, 0, 5, 0, 1, 1);<br />
-    physics_fixture_delete(mainFixture);</p>
-  <p>The above code creates and defines a new fixture and then creates an instance of &quot;obj_Piston&quot;, binding the created fixture to the two new objects. They are then joined by a prismatic joint with the anchor position at the same x/y coordinates of the first instance and an axis formed by the vector of the x/y position and the axis x/y (in this case 0,10, which is &quot;down&quot;). There are no limits placed on the amount of movement along this axis, but we have added a motor with 0 speed and a maximum force of 5 to simulate joint friction.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_pulley_create.htm">physics_joint_pulley_create</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    physics_fixture_delete(mainFixture);</p><p> 위의 코드는 새로운 조명기를 만들고 정의한 다음 &quot;obj_Piston&quot;의 인스턴스를 만들어 생성된 조명기를 두 개의 새 객체에 바인딩합니다. 그런 다음 첫 번째 인스턴스의 동일한 x/y 좌표에서 앵커 위치와 x/y 위치와 x/y 축(이 경우 0,10, &quot;아래로&quot;). 이 축을 따라 이동하는 양에는 제한이 없지만 관절 마찰을 시뮬레이션하기 위해 속도가 0이고 최대 힘이 5인 모터를 추가했습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_pulley_create.htm"><span class="notranslate">physics_joint_pulley_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_prismatic_create

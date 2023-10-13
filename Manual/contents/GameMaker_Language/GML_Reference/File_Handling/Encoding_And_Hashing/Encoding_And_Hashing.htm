@@ -3,65 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Encoding And Hashing</title>
+  <title>인코딩 및 해싱</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for the File Encoding And Hashing functions" />
+  <meta name="topic-comment" content="파일 인코딩 및 해싱 기능에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="File Encoding,File Hashing,encode,decode,sha1,md5,crc32,base64" />
+  <meta name="search-keywords" content="파일 인코딩,파일 해싱,인코딩,풀다,샤1,MD5,crc32,베이스64" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Encoding And Hashing</h1>
-  <p>When dealing with external files, there is always the possibility that the end user could open and change the information that they contain, and so change your game. This can result in broken game-play elements or fraudulent scores on-line (for example), and so <span data-keyref="GameMaker Name">GameMaker</span> provides you with some basic <a class="glossterm" data-glossterm="encoding" href="#">encoding</a> functions as well as functions to perform <a class="glossterm" data-glossterm="hashing" href="#">hashing</a> checks on strings and files to make sure that they have maintained their integrity before being used. There are also some functions supplied for encoding and decoding <a class="glossterm" data-glossterm="JSON" href="#">JSON</a> format strings, as well as for creating ZIP files.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>Encoding is NOT encryption! A base64 encoding renders the file unreadable to the naked eye and will require an effort on behalf of the user to decode, but it is not secure from hacking. It is recommended that you mix those functions with your own encryption (there are many forms of encryption and script functions for GameMaker are available on the internet).</p>
-  <ul class="colour">
-    <li><a href="json_encode.htm">json_encode</a></li>
-    <li><a href="json_decode.htm">json_decode</a></li>
-    <li><a href="json_stringify.htm">json_stringify</a></li>
-    <li><a href="json_parse.htm">json_parse</a></li>
-    <li><a href="base64_encode.htm">base64_encode</a></li>
-    <li><a href="base64_decode.htm">base64_decode</a></li>
-    <li><a href="md5_string_utf8.htm">md5_string_utf8</a></li>
-    <li><a href="md5_string_unicode.htm">md5_string_unicode</a></li>
-    <li><a href="md5_file.htm">md5_file</a></li>
-    <li><a href="sha1_string_utf8.htm">sha1_string_utf8</a></li>
-    <li><a href="sha1_string_unicode.htm">sha1_string_unicode</a></li>
-    <li><a href="sha1_file.htm">sha1_file</a></li>
-    <li><a href="load_csv.htm">load_csv</a></li>
-  </ul>
-  <p> </p>
-  <p>The following functions are provided for working with ZIP files:</p>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="zip_unzip.htm">zip_unzip</a></li>
-    <li><a data-xref="{title}" href="zip_unzip_async.htm">zip_unzip_async</a></li>
-    <li><a data-xref="{title}" href="zip_create.htm">zip_create</a></li>
-    <li><a data-xref="{title}" href="zip_add_file.htm">zip_add_file</a></li>
-    <li><a data-xref="{title}" href="zip_save.htm">zip_save</a></li>
-  </ul>
-  <p> </p>
-  <p>It is worth noting that there are also a number of functions related to encoding and hashing <a href="../../Buffers/Buffers.htm">Buffers</a>, which you can find from the following links:</p>
-  <ul class="colour">
-    <li><a href="../../Buffers/buffer_md5.htm">buffer_md5</a></li>
-    <li><a href="../../Buffers/buffer_sha1.htm">buffer_sha1</a></li>
-    <li><a href="../../Buffers/buffer_crc32.htm">buffer_crc32</a></li>
-    <li><a href="../../Buffers/buffer_base64_encode.htm">buffer_base64_encode</a></li>
-    <li><a href="../../Buffers/buffer_base64_decode.htm">buffer_base64_decode</a></li>
-    <li><a href="../../Buffers/buffer_base64_decode_ext.htm">buffer_base64_decode_ext</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../File_Handling.htm">File Handling</a></div>
-        <div style="float:right">Next: <a href="../File_System/File_System.htm">File System</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 인코딩 및 해싱</h1><p> 외부 파일을 처리할 때 최종 사용자가 파일에 포함된 정보를 열고 변경하여 게임을 변경할 가능성이 항상 있습니다. 이로 인해 게임 플레이 요소가 손상되거나 온라인에서 사기 점수가 발생할 수 있습니다(예:). 따라서 <span data-keyref="GameMaker Name">GameMaker</span> 는 몇 가지 기본 <a class="glossterm" data-glossterm="부호화" href="#">인코딩</a> 기능과 문자열 및 파일에 대한 <a class="glossterm" data-glossterm="해싱" href="#">해싱</a> 검사를 수행하는 기능을 제공합니다. 사용하기 전에 무결성. <a class="glossterm" data-glossterm="JSON" href="#">JSON</a> 형식 문자열을 인코딩 및 디코딩하기 위해 제공되는 일부 기능도 있습니다.</p><p class="note"> <b><span class="note">참고</span></b> 인코딩은 암호화가 아닙니다! base64 인코딩은 파일을 육안으로 읽을 수 없도록 렌더링하고 사용자를 대신하여 디코딩하는 노력이 필요하지만 해킹으로부터 안전하지 않습니다. 이러한 기능을 자체 암호화와 함께 사용하는 것이 좋습니다(인터넷에서 GameMaker용 암호화 및 스크립트 기능의 다양한 형태를 사용할 수 있음).</p><ul class="colour"><li> <a href="json_encode.htm"><span class="notranslate">json_encode</span></a></li><li> <a href="json_decode.htm"><span class="notranslate">json_decode</span></a></li><li> <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a></li><li> <a href="json_parse.htm"><span class="notranslate">json_parse</span></a></li><li> <a href="base64_encode.htm"><span class="notranslate">base64_encode</span></a></li><li> <a href="base64_decode.htm"><span class="notranslate">base64_decode</span></a></li><li> <a href="md5_string_utf8.htm"><span class="notranslate">md5_string_utf8</span></a></li><li> <a href="md5_string_unicode.htm"><span class="notranslate">md5_string_unicode</span></a></li><li> <a href="md5_file.htm"><span class="notranslate">md5_file</span></a></li><li> <a href="sha1_string_utf8.htm"><span class="notranslate">sha1_string_utf8</span></a></li><li> <a href="sha1_string_unicode.htm"><span class="notranslate">sha1_string_unicode</span></a></li><li> <a href="sha1_file.htm"><span class="notranslate">sha1_file</span></a></li><li> <a href="zip_unzip.htm"><span class="notranslate">zip_unzip</span></a></li><li> <a href="load_csv.htm"><span class="notranslate">load_csv</span></a></li></ul><p></p><p> 다음 링크에서 찾을 수 있는 인코딩 및 해싱 <a href="../../Buffers/Buffers.htm">Buffers</a> 와 관련된 여러 기능도 있다는 점은 주목할 가치가 있습니다.</p><ul class="colour"><li> <a href="../../Buffers/buffer_md5.htm"><span class="notranslate">buffer_md5</span></a></li><li> <a href="../../Buffers/buffer_sha1.htm"><span class="notranslate">buffer_sha1</span></a></li><li> <a href="../../Buffers/buffer_crc32.htm"><span class="notranslate">buffer_crc32</span></a></li><li> <a href="../../Buffers/buffer_base64_encode.htm"><span class="notranslate">buffer_base64_encode</span></a></li><li> <a href="../../Buffers/buffer_base64_decode.htm"><span class="notranslate">buffer_base64_decode</span></a></li><li> <a href="../../Buffers/buffer_base64_decode_ext.htm"><span class="notranslate">buffer_base64_decode_ext</span></a></li> </ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../File_Handling.htm">파일 처리</a></div><div style="float:right"> 다음: <a href="../File_System/File_System.htm">파일 시스템</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 File Encoding

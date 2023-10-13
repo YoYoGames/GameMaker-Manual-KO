@@ -6,53 +6,17 @@
   <title>object_get_solid</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function object_get_solid" />
+  <meta name="topic-comment" content="object_get_solid 함수 개요 페이지" />
   <meta name="rh-index-keywords" content="object_get_solid" />
   <meta name="search-keywords" content="object_get_solid" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_get_solid</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;solid&quot; or not. A solid object generates a special collision event when using the traditional collision system (ie: the physics world is off). Please note that this is not an instance function! So, you can have a solid object and a normal instance of the same object and vice-versa. You can set an individual instances solid flag using the <a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">object_get_solid(obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_solid</h1><p> 이 기능은 확인 중인 개체가 &quot;단색&quot;으로 플래그 지정되었는지 여부를 알려줍니다. 솔리드 오브젝트는 기존 충돌 시스템을 사용할 때 특수 충돌 이벤트를 생성합니다(예: 물리 세계가 꺼져 있음). 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 따라서 솔리드 개체와 동일한 개체의 일반 인스턴스를 가질 수 있으며 그 반대의 경우도 마찬가지입니다. 다음을 사용하여 개별 인스턴스 솔리드 플래그를 설정할 수 있습니다.<a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> 인스턴스 변수.</p><p></p><h4> 통사론:</h4><p class="code">object_get_solid(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br />
     {<br />
         solid = true;<br />
-    }</p>
-  <p>The above code will check the instance running it to see if it is solid or not as well as check the object index of the instance to see if it is flagged as solid or not. If the instance is <i>not</i> solid yet the object index is flagged as solid, it will set &quot;solid&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_sprite.htm">object_get_sprite</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 실행 중인 인스턴스를 확인하여 솔리드인지 아닌지 확인하고 인스턴스의 개체 인덱스를 확인하여 솔리드로 플래그가 지정되었는지 확인합니다. 인스턴스가 솔리드가 <i>아니지만</i> 객체 인덱스가 솔리드로 플래그가 지정되면 해당 인스턴스에 대해 &quot;솔리드&quot;를 true로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Objects.htm">개체</a></div><div style="float:right"> 다음: <a href="object_get_sprite.htm"><span class="notranslate">object_get_sprite</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_solid

@@ -6,58 +6,19 @@
   <title>skeleton_animation_is_finished</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Bart Teunis" />
-  <meta name="topic-comment" content="Page explaining the function skeleton_animation_is_finished" />
+  <meta name="topic-comment" content="skeleton_animation_is_finished 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="skeleton_animation_is_finished" />
   <meta name="search-keywords" content="skeleton_animation_is_finished" />
   <meta name="is_pure" content="true" />
   <meta name="template" content="../../../../../../assets/masterpages/Manual_Page.htt" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">skeleton_animation_is_finished</span></h1>
-  <p>With this function you can check if the current skeletal animation has finished playing on the given track.</p>
-  <p class="note"><span data-conref="../../../../../../assets/snippets/Tag_note.hts"> </span> This function will always return <span class="inline2">false</span> if the animation is set to loop (<span class="inline3_func"><a data-xref="{title}" href="skeleton_animation_is_looping.htm">skeleton_animation_is_looping</a></span>), as an animation cannot have finished if it is still looping.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">skeleton_animation_is_finished</span>(track);</p>
-  <div>
-    <table>
-      <tbody>
-        <tr>
-          <th style="">Argument</th>
-          <th>Data Type</th>
-          <th style="">Description</th>
-        </tr>
-        <tr>
-          <td style=""><b>track</b></td>
-          <td><span data-keyref="Type_Real"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-          <td style="">The index of the animation track</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _finished = <span data-field="title" data-format="default">skeleton_animation_is_finished</span>(1);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span data-field="title" data-format="default">skeleton_animation_is_finished</span></h1><p> 이 기능을 사용하면 현재 반복되지 않는 스켈레탈 애니메이션이 주어진 트랙에서 재생을 완료했는지 확인할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code"><span data-field="title" data-format="default">skeleton_animation_is_finished</span>(track);</p><div><table><tbody><tr><th style=""> 논쟁</th><th> 데이터 형식</th><th style=""> 설명</th></tr><tr><td style=""> <b>길</b></td><td> <span data-keyref="Type_Real"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td style=""> 애니메이션 트랙의 인덱스</td></tr></tbody></table></div><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">var _finished = <span data-field="title" data-format="default">skeleton_animation_is_finished</span>(1);<br />
     if _finished<br />
     {<br />
         show_debug_message(&quot;The animation has finished playing&quot;);<br />
-    }</p>
-  <p>The above code first checks if the animation on track 1 has finished playing and stores the result in a local variable <span class="inline2">_finished</span>. It then shows a debug message in case the animation did finish playing.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Animation.htm">Animation</a></div>
-        <div style="float:right">Next: <a href="../Skins/skeleton_skin_get.htm">skeleton_skin_get</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 먼저 트랙 1의 애니메이션 재생이 완료되었는지 확인하고 결과를 로컬 변수에 저장합니다. <span class="inline">_finished</span>. 그런 다음 애니메이션 재생이 완료된 경우 디버그 메시지를 표시합니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Animation.htm">애니메이션</a></div><div style="float:right"> 다음: <a href="../Skins/skeleton_skin_get.htm"><span class="notranslate">skeleton_skin_get</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_is_finished

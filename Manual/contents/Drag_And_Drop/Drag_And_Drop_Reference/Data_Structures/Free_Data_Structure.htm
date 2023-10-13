@@ -3,58 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Free Data Structure</title>
+  <title>자유 데이터 구조</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Free Data Structure action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Free Data Structure" />
-  <meta name="search-keywords" content="Free Data Structure" />
+  <meta name="topic-comment" content="자유 데이터 구조 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 무료 데이터 구조" />
+  <meta name="search-keywords" content="자유 데이터 구조" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Free Data Structure Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Free_Data_Structure.png" /> Free Data Structure</h1>
-  <p>This action will free the data structure from memory and should be called whenever a data structure is no longer required, for example in the Destroy even of an instance or the Room End event, etc... Freeing a data structure means that no further actions
-    can be used to reference it as it will no longer exist, although you can also check for this using the action <a href="If_Data_Structure_Exists.htm">If Data Structure Exists</a>.</p>
-  <p>Note that unless the data structure has an index assigned to a global scope variable, it will not be carried across from one room to another. For example, if you create a player instance and a list data structure is assigned to a variable in that instance,
-    the list will need to be freed if the player is destroyed <i>or</i> if the room changes with the player instance in it (unless the player instance is flagged as persistent), so the player instance would have two Free Data Structure actions in it for
-    both those events. It is important that all created data structures are destroyed in this way when no longer required to prevent memory leaks which can cause performance issues or even crash your game.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Free Data Structure Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Free_Data_Structure.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The type of data structure you are freeing (List, Map, Grid or Stack)</td>
-      </tr>
-      <tr>
-        <td>Variable</td>
-        <td>The variable holding the index of the data structure to free</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Free Data Structure Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Free_Data_Structure.png" />The above action block code gets the size of the list referenced in the global
-    variable and then uses a for loop to loop through it and destroy the instances with the IDs stored in the list. After the loop is finished, the list is freed from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Add_To_List.htm">Add To List</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Free Data Structure Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Free_Data_Structure.png" /> 자유 데이터 구조</h1><p> 이 작업은 메모리에서 데이터 구조를 해제하고 데이터 구조가 더 이상 필요하지 않을 때마다 호출되어야 합니다. 예를 들어 Destroy even of instance 또는 Room End 이벤트 등... 데이터 구조를 해제하면 추가 작업이 없습니다. 더 이상 존재하지 않으므로 참조하는 데 사용할 수 있지만 <a href="If_Data_Structure_Exists.htm">If Data Structure Exists</a> 작업을 사용하여 이를 확인할 수도 있습니다.</p><p> 데이터 구조에 전역 범위 변수에 할당된 인덱스가 없으면 한 방에서 다른 방으로 전달되지 않습니다. 예를 들어 플레이어 인스턴스를 만들고 목록 데이터 구조가 해당 인스턴스의 변수에 할당된 경우 플레이어가 파괴 <i>되거나</i> 방이 플레이어 인스턴스로 변경되면 목록을 해제해야 합니다(플레이어 인스턴스는 지속적으로 플래그가 지정됨), 따라서 플레이어 인스턴스에는 두 이벤트 모두에 대해 두 개의 자유 데이터 구조 작업이 있습니다. 성능 문제를 일으키거나 게임을 중단시킬 수 있는 메모리 누수를 방지하기 위해 더 이상 필요하지 않은 경우 생성된 모든 데이터 구조를 이러한 방식으로 파괴하는 것이 중요합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Free Data Structure Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Free_Data_Structure.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 해제하려는 데이터 구조의 유형(목록, 맵, 그리드 또는 스택)</td></tr><tr><td> <span class="notranslate">Variable</span></td><td> 해제할 데이터 구조의 인덱스를 보유하는 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Free Data Structure Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Free_Data_Structure.png" /> 위의 액션 블록 코드는 전역 변수에서 참조하는 목록의 크기를 가져온 다음 for 루프를 사용하여 반복하고 목록에 저장된 ID로 인스턴스를 파괴합니다. 루프가 완료되면 목록이 메모리에서 해제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Structure_Actions.htm">데이터 구조 작업</a></div><div style="float:right"> 다음: <a href="Add_To_List.htm">목록에 추가</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Free Data Structure

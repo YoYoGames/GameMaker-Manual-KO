@@ -6,18 +6,13 @@
   <title>array_resize</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function array_resize" />
+  <meta name="topic-comment" content="array_resize 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="array_resize" />
   <meta name="search-keywords" content="array_resize" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>array_resize</h1>
-  <p>With this function you can resize an existing array dimension to a new size. You supply the array to be resized as well as the new number of indices for the array, and the function will resize that array. Note that this function is designed for resizing an array <i>down</i> to a smaller length as you can resize up by simply setting a new index in the array. That said, if you do use it to size up an array, any new indices will be set to the default value of 0.</p>
-  <p>This function can also be used for multi-dimension arrays, as long as you specify which dimension you want to resize when you supply the array index, following this pattern:</p>
-  <p class="code">// Resize the first dimension of the array<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>array_resize</h1><p> 이 기능을 사용하면 기존 배열 차원의 크기를 새 크기로 조정할 수 있습니다. 크기를 조정할 배열과 배열에 대한 새 인덱스 수를 제공하면 함수가 해당 배열의 크기를 조정합니다. 이 함수는 배열에 새 인덱스를 설정하기만 하면 크기를 늘릴 수 있으므로 배열의 크기를 더 <i>작게</i> 조정하도록 설계되었습니다. 즉, 배열 크기를 늘리는 데 사용하는 경우 새 인덱스는 기본값 0으로 설정됩니다.</p><p> 이 함수는 다음 패턴에 따라 배열 인덱스를 제공할 때 크기를 조정할 차원을 지정하는 한 다차원 배열에도 사용할 수 있습니다.</p><p class="code">// Resize the first dimension of the array<br />
     array_resize(my_array, 10);<br />
     <br />
     // Resize the second dimension of the array (only for the first slot)<br />
@@ -27,54 +22,11 @@
     array_resize(my_array[0][0], 10);<br />
     <br />
     // ...and so on.
-  </p>
-  <p>The code states that only the first slot of the second dimension is resized, since the slots in any given array dimension are <em>not</em> interconnected and can have different sizes; for example:</p>
-  <p class="code">array_resize(my_array[0], 10);<br />
-    array_resize(my_array[1], 22);</p>
-  <p>In the above code, the length of the array&#39;s second dimension is 10 in the first slot but 22 in the second slot.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">array_resize(array_index, new_size);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>array_index</td>
-        <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></td>
-        <td>The index of the array to resize.</td>
-      </tr>
-      <tr>
-        <td>new_size</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The new size for the array (an integer, starting from 0).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if array_length(a) &gt; 10<br />
+  </p><p> 코드는 주어진 배열 차원의 슬롯이 서로 연결 <em>되지 않고</em> 다른 크기를 가질 수 있기 때문에 두 번째 차원의 첫 번째 슬롯만 크기가 조정된다고 명시합니다. 예를 들어:</p><p class="code">array_resize(my_array[0], 10);<br />
+    array_resize(my_array[1], 22);</p><p> 위의 코드에서 배열의 두 번째 차원 길이는 첫 번째 슬롯에서는 10이지만 두 번째 슬롯에서는 22입니다.</p><p></p><h4> 통사론:</h4><p class="code">array_resize(array_index, new_size);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">array_index</span></td><td><span data-keyref="Type_Array"></span></td><td> <span class="notranslate">The index of the array to resize.</span></td></tr><tr><td> <span class="notranslate">new_size</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new size for the array (an integer, starting from 0).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if array_length(a) &gt; 10<br />
     {<br />
         array_resize(a, 10);<br />
-    }</p>
-  <p>The above code checks the length of an array and if it has more than 10 indices, it is resized.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Array_Functions.htm">Array Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="array_length_1d.htm">array_length_1d</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 배열의 길이를 확인하고 인덱스가 10개 이상인 경우 크기를 조정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="array_length_1d.htm"><span class="notranslate">array_length_1d</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 array_resize

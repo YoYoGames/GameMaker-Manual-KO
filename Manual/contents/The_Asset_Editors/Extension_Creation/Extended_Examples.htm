@@ -3,90 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Source Examples</title>
+  <title>소스 예</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page containing extended examples for extensions" />
-  <meta name="rh-index-keywords" content="Source Extension Examples" />
-  <meta name="search-keywords" content="source android ios extensions native" />
+  <meta name="topic-comment" content="확장에 대한 확장 예제가 포함된 페이지" />
+  <meta name="rh-index-keywords" content="소스 확장 예제" />
+  <meta name="search-keywords" content="소스 안드로이드 ios 확장 기본" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Source Examples</h1>
-  <p>This page contains examples and information on extension source code for Android and iOS, to help you create your own native extensions for those platforms.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Android (Base Example)</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p>Our example extension for Android will contain functions that do the following:</p>
-    <ul class="dropspotlist">
-      <li>Return two numbers added together</li>
-      <li>Return a string consisting of an input string and value</li>
-      <li>Return a string consisting of two input strings</li>
-      <li>Trigger the <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> event and fill values in its <span class="inline">async_load</span> map</li>
-    </ul>
-    <p>This extension will make use of a <span class="inline">.java</span> file, the contents of which are given below (click to open):</p>
-    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest.htm">GenericTest.java</a></p>
-    <p>To add such a file to your extension, you need to go under its <a href="Android_Extensions.htm">Android Properties</a> and first enter a class name (for this example, &quot;GenericTest&quot;), then click on &quot;Add Source&quot; and select the <span class="inline">.java</span> file. This will add the selected file to your project directory -- you can right-click on your extension, select &quot;Open in Explorer&quot; and see the source files there.</p>
-    <p>You can now add a new placeholder file to your extension and create functions inside it with the following properties:</p>
-    <ul class="dropspotlist">
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">AddTwoNumbers</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">AddTwoNumbers(value1, value2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">double</span>
-      </li>
-      <li><em>function / external name:</em><span> </span><span class="inline">HowManyObjects</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2, string)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double, </span><span class="inline">string</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">string</span>
-      </li>
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">BuildAString</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">BuildAString(string1, string2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">string, </span><span class="inline">string</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">string</span>
-      </li>
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">ReturnAsync</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">ReturnAsync(value1, value2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double,</span><span> </span><span class="inline">double</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">double</span>
-      </li>
-    </ul>
-    <p>Here is an example of the <span class="inline">AddTwoNumbers()</span> function:</p>
-    <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_EE1_Function.png" />You can now call these functions from your game code and use them like any other built-in function:</p>
-    <p class="code">var result1 = string(AddTwoNumbers(irandom(100), 50));<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 소스 예</h1><p> 이 페이지에는 Android 및 iOS용 확장 소스 코드에 대한 예제와 정보가 포함되어 있어 해당 플랫폼에 대한 고유한 확장을 만드는 데 도움이 됩니다.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">안드로이드(기본 예시)</a></p><div class="droptext" data-targetname="drop-down"><p> Android용 예제 확장에는 다음을 수행하는 함수가 포함됩니다.</p><ul class="dropspotlist"><li> 함께 더한 두 숫자 반환</li><li> 입력 문자열과 값으로 구성된 문자열 반환</li><li> 두 개의 입력 문자열로 구성된 문자열 반환</li><li> <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> 이벤트를 트리거하고 해당 이벤트에 값을 채웁니다. <span class="inline">async_load</span> 지도</li></ul><p> 이 확장은 다음을 사용합니다. <span class="inline">.java</span> 파일의 내용은 아래에 나와 있습니다(열려면 클릭).</p><p class="note"> <a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest.htm">GenericTest.java</a></p><p> 이러한 파일을 확장에 추가하려면 해당 <a href="Android_Extensions.htm">Android 속성</a> 으로 이동하여 먼저 클래스 이름(예: &quot;GenericTest&quot;)을 입력한 다음 &quot;소스 추가&quot;를 클릭하고 <span class="inline">.java</span> 파일. 이렇게 하면 선택한 파일이 프로젝트 디렉토리에 추가됩니다. 확장을 마우스 오른쪽 버튼으로 클릭하고 &quot;탐색기에서 열기&quot;를 선택하고 소스 파일을 볼 수 있습니다.</p><p> 이제 확장에 새 자리 표시자 파일을 추가하고 그 안에 다음 속성을 사용하여 함수를 만들 수 있습니다.</p><ul class="dropspotlist"><li> <em>기능 / 외부 이름:</em><span><span> </span></span><span class="inline">AddTwoNumbers</span><br /><em>돕다:</em><span><span> </span></span><span class="inline">AddTwoNumbers(value1, value2)</span><br /><em>인수:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double</span><br /><em>반환 유형:</em><span><span> </span></span><span class="inline">double</span></li><li><em>기능 / 외부 이름:</em><span> </span><span class="inline">HowManyObjects</span><br /><em>돕다:</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2, string)</span><br /><em>인수:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double, </span><span class="inline">string</span><br /> <em>반환 유형:</em><span><span> </span></span><span class="inline">string</span></li><li><em>기능 / 외부 이름:</em><span><span> </span></span><span class="inline">BuildAString</span><br /><em>돕다:</em><span><span> </span></span><span class="inline">BuildAString(string1, string2)</span><br /><em>인수:</em><span><span> </span></span><span class="inline">string, </span><span class="inline">string</span><br /><em>반환 유형:</em><span><span> </span></span><span class="inline">string</span></li><li><em>기능 / 외부 이름:</em><span><span> </span></span><span class="inline">ReturnAsync</span><br /><em>돕다:</em><span><span> </span></span><span class="inline">ReturnAsync(value1, value2)</span><br /><em>인수:</em><span><span> </span></span><span class="inline">double,</span><span> </span><span class="inline">double</span><br /><em>반환 유형:</em><span><span> </span></span><span class="inline">double</span></li></ul><p>다음은 의 예입니다 <span class="inline">AddTwoNumbers()</span> 함수:</p><p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_EE1_Function.png" /> 이제 게임 코드에서 이러한 함수를 호출하고 다른 내장 함수처럼 사용할 수 있습니다.</p><p class="code">var result1 = string(AddTwoNumbers(irandom(100), 50));<br />
       var result2 = BuildAString(&quot;Hello&quot;, &quot;World&quot;);<br />
       var result3 = HowManyObjects(irandom(1000), irandom(1000), &quot;Targets&quot;);<br />
-      ReturnAsync(irandom(1000), irandom(1000));</p>
-    <p>The <span class="inline">ReturnAsync()</span> function will trigger the <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> event, so you will need to add that event to your object and read data from its <span class="inline">async_load</span> map (which is filled by the extension&#39;s source code given above).</p>
-    <p class="code">var type = async_load[? &quot;type&quot;];<br />
+      ReturnAsync(irandom(1000), irandom(1000));</p><p> 그만큼 <span class="inline">ReturnAsync()</span> 함수는 <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> 이벤트를 트리거하므로 해당 이벤트를 개체에 추가하고 개체에서 데이터를 읽어야 합니다. <span class="inline">async_load</span> 맵(위에 제공된 확장의 소스 코드로 채워짐).</p><p class="code">var type = async_load[? &quot;type&quot;];<br />
       <br />
       if (type == &quot;finished&quot;)<br />
       {<br />
           var result4 = &quot;value1: &quot; + string(async_load[? &quot;argument0&quot;]) + &quot;, &quot;;<br />
           result4 += &quot;value2: &quot; + string(async_load[? &quot;argument1&quot;]);<br />
       }
-    </p>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">iOS (Base Example)</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p>The example provided for iOS is the same as the Android example given above; only the source files differ, which we&#39;ll cover in this section.</p>
-    <p>iOS extensions make use of an <span class="inline">.h</span> and an <span class="inline">.mm</span> file, and the contents of both are given below (click to open):</p>
-    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest-iOS.htm">GenericTest iOS Source Files</a></p>
-    <p>To add these files to your extension, you first need to go under its <a href="iOS_Extensions.htm">iOS Properties</a> and enter a class name (for this example, &quot;GenericTest&quot;). You can then use either the &quot;Enter framework path&quot; option (if the files are present on your macOS machine used for building) or the &quot;Add Source&quot; option (if they are on your development machine); regardless of the option you use, you will need to point them to the directory that contains your <span class="inline">.h</span> and <span class="inline">.mm</span> files.</p>
-    <p>You can add these source files to the same extension that was set up in the previous section for Android, meaning that any functions already defined in that extension will now work on iOS too (given that the <em>External Names</em> of all functions on Android and iOS are the same). If you are creating a new extension, you can simply create the functions in the same way as previously described.</p>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Android (Callbacks)</a></p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p>You can use the following callback functions in your <span class="inline">.java</span> extension files:</p>
-    <p class="code">public void onStart()<br />public void onRestart()<br />public void onStop()<br />public void onDestroy()<br />public void onPause()<br />public void onResume()<br />public void onActivityResult(int requestCode, int resultCode, Intent data)<br />public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)<br />public void onNewIntent(android.content.Intent newIntent)<br />public void onWindowFocusChanged(boolean hasFocus)<br />public void onConfigurationChanged(Configuration newConfig)<br /></p>
-    <p><br /></p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">iOS (Callbacks)</a></p>
-  <div class="droptext" data-targetname="drop-down7">
-    <p>You can use the following callback functions in your <span class="inline">.mm</span> extension files:</p>
-    <p class="code">-(void) Init<br />
+    </p><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">iOS(기본 예)</a></p><div class="droptext" data-targetname="drop-down1"><p> iOS용으로 제공된 예제는 위에 제공된 Android 예제와 동일합니다. 이 섹션에서 다룰 소스 파일만 다릅니다.</p><p> iOS 확장은 다음을 사용합니다. <span class="inline">.h</span> 그리고 <span class="inline">.mm</span> 파일 및 둘 다의 내용은 아래에 제공됩니다(열려면 클릭).</p><p class="note"> <a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest-iOS.htm">GenericTest iOS 소스 파일</a></p><p> 이러한 파일을 확장에 추가하려면 먼저 <a href="iOS_Extensions.htm">iOS 속성</a> 으로 이동하여 클래스 이름(이 예에서는 &quot;GenericTest&quot;)을 입력해야 합니다. 그런 다음 &quot;프레임워크 경로 입력&quot; 옵션(파일이 빌드에 사용되는 macOS 컴퓨터에 있는 경우) 또는 &quot;소스 추가&quot; 옵션(개발 컴퓨터에 있는 경우)을 사용할 수 있습니다. 사용하는 옵션에 관계없이 해당 옵션이 포함된 디렉토리를 가리키도록 해야 합니다. <span class="inline">.h</span> 그리고 <span class="inline">.mm</span> 파일.</p><p> 이 소스 파일을 Android에 대해 이전 섹션에서 설정한 것과 동일한 확장에 추가할 수 있습니다. 즉, 해당 확장에 이미 정의된 모든 기능이 이제 iOS에서도 작동합니다(Android 및 iOS의 모든 기능의 <em>외부 이름</em> 이 똑같다). 새 확장을 생성하는 경우 앞에서 설명한 것과 같은 방법으로 간단히 기능을 생성할 수 있습니다.</p><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">안드로이드(콜백)</a></p><div class="droptext" data-targetname="drop-down5"><p> 다음 콜백 함수를 사용할 수 있습니다. <span class="inline">.java</span> 확장 파일:</p><p class="code">public void onStart()<br />public void onRestart()<br />public void onStop()<br />public void onDestroy()<br />public void onPause()<br />public void onResume()<br />public void onActivityResult(int requestCode, int resultCode, Intent data)<br />public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)<br />public void onNewIntent(android.content.Intent newIntent)<br />public void onWindowFocusChanged(boolean hasFocus)<br />public void onConfigurationChanged(Configuration newConfig)<br /></p><p><br /></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">iOS(콜백)</a></p><div class="droptext" data-targetname="drop-down7"><p> 다음 콜백 함수를 사용할 수 있습니다. <span class="inline">.mm</span> 확장 파일: </p><p class="code">-(void) Init<br />
       -(void) onLaunch:(NSDictionary*)launchOptions<br />
       -(void) onResume<br />
       -(void) onPause<br />
@@ -104,18 +40,7 @@
       -(void) application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *replyInfo))reply<br />
       -(void) applicationShouldRequestHealthAuthorization:(UIApplication *)application<br />
       -(void) openURL:(NSURL *)url sourceApplication:(NSString *) sourceApplication annotation:(id)annotation<br />
-      -(void) application:(UIApplication *)application userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *)cloudKitShareMetadata</p>
-    <p> </p>
-  </div>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
-        <div style="float:right">Next: <a href="Creating_An_Extension.htm">Creating An Extension</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+      -(void) application:(UIApplication *)application userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *)cloudKitShareMetadata</p><p></p></div><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Extensions.htm">확장 편집기</a></div><div style="float:right"> 다음: <a href="Creating_An_Extension.htm">확장 생성</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Android Extensions

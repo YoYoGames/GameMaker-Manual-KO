@@ -6,59 +6,21 @@
   <title>layer_get_id_at_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function layer_get_id_at_depth" />
+  <meta name="topic-comment" content="layer_get_id_at_depth 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_get_id_at_depth" />
   <meta name="search-keywords" content="layer_get_id_at_depth" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_id_at_depth</h1>
-  <p>You can use this function to get the IDs of all layers assigned a specific depth. You give the depth to check and the function will return an <a href="../../../../GML_Overview/Arrays.htm">array</a> with 1 or more entries depending on whether there are any layers at the given depth or not. If there are no layers at the given depth then the array will have a single entry at the [0] position with a value of -1, but, if there are layers at the depth, then an entry will be made in the array for each layer found - the entry value will be the unique ID value for a layer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">layer_get_id_at_depth(depth)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>depth</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The depth to check and retrieve the layer IDs from.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array">Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var a = layer_get_id_at_depth(0);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_id_at_depth</h1><p> 이 기능을 사용하여 특정 깊이가 할당된 모든 레이어의 ID를 가져올 수 있습니다. 확인할 깊이를 지정하면 함수는 주어진 깊이에 레이어가 있는지 여부에 따라 1개 이상의 항목이 있는 <a href="../../../../GML_Overview/Arrays.htm">배열</a> 을 반환합니다. 주어진 깊이에 레이어가 없으면 배열은 값이 -1인 [0] 위치에 단일 항목을 갖지만 깊이에 레이어가 있는 경우 배열에 대한 항목이 만들어집니다. 발견된 각 레이어 - 항목 값은 레이어의 고유 ID 값이 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_id_at_depth(depth)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">depth</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The depth to check and retrieve the layer IDs from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span></p><p></p><h4> 예시:</h4><p class="code">var a = layer_get_id_at_depth(0);<br />
     if a[0] != -1<br />
     {<br />
         for (var i = 0; i &lt; array_length(a); i++;)<br />
         {<br />
             layer_destroy(a[i]);<br />
         }<br />
-    }</p>
-  <p>The above code retrieves data about the layers with a depth of 0. A check is done to see if any layers exist at that depth, and if there are then the returned array is parsed and each of the found layers is destroyed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_name.htm">layer_get_name</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 깊이가 0인 레이어에 대한 데이터를 검색합니다. 해당 깊이에 레이어가 있는지 확인하기 위해 검사가 수행되고, 있으면 반환된 배열이 구문 분석되고 발견된 각 레이어가 파괴됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="General_Layer_Functions.htm">일반 레이어 기능</a></div><div style="float:right"> 다음: <a href="layer_get_name.htm"><span class="notranslate">layer_get_name</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_id_at_depth

@@ -6,69 +6,19 @@
   <title>physics_apply_impulse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_apply_impulse" />
+  <meta name="topic-comment" content="physical_apply_impulse에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_apply_impulse" />
   <meta name="search-keywords" content="physics_apply_impulse" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_impulse</h1>
-  <p>Not only can you apply force and gravity to an object with the physics in <span data-keyref="GameMaker Name">GameMaker</span> but you can also apply an impulse. This is slightly different to a force in that when it is applied it will <i>immediately </i>affect the speed, and, potentially the torque (or &quot;spin&quot;) of the object, particularly if the point chosen to apply the impulse is not aligned with the center of mass (note: the center of mass is <i>not necessarily</i> the same as the origin!). Here is an illustration:</p>
-  <p><img alt="Apply physics impulse illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_apply_impulse_image.png" />As you can see, the player has clicked on the ball and this has given it an impulse to move to the upper right, spinning as it goes. The exact impulse is defined by the vector we get from the components ximpulse/yimpulse in relation to the xpos/ypos coordinates - which simply means that the impulse is calculated as the distance from xpos/ypos to ximpulse/yimpulse in Newtons, and the direction is the angle that we get from xpos/ypos to ximpulse/yimpulse.</p>
-  <p class="note"><b>NOTE</b>: The physics world uses meters for all its calculations, and the ratio of pixels per meter is defined in the room editor or using <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_apply_impulse(xpos, ypos, ximpulse, yimpulse)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>xpos</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate <i>in the room</i> where the impulse will be applied</td>
-     </tr>
-      <tr>
-        <td>ypos</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate <i>in the room</i> where the impulse will be applied</td>
-     </tr>
-      <tr>
-        <td>ximpulse</td><td><span data-keyref="Type_Real"></span></td>
-        <td>the x component of the impulse vector</td>
-     </tr>
-      <tr>
-        <td>yimpulse</td><td><span data-keyref="Type_Real"></span></td>
-        <td>the y component of the impulse vector</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if mouse_check_button_pressed(mb_left)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_apply_impulse</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 의 물리학을 사용하여 물체에 힘과 중력을 적용할 수 있을 뿐만 아니라 임펄스를 적용할 수도 있습니다. 이것은 힘이 가해지면 속도와 잠재적으로 물체의 토크(또는 &quot;회전&quot;)에 <i>즉시</i> 영향을 미친다는 점에서 힘과 약간 다릅니다. 특히 충격을 적용하기 위해 선택한 점이 중심과 정렬되지 않은 경우 질량의 중심(참고: 질량 중심이 원점과 <i>반드시 같을 필요는 없습니다</i>!). 다음은 예시입니다.</p><p><img alt="Apply physics impulse illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_apply_impulse_image.png" /> 보시다시피, 플레이어는 공을 클릭했고 이것은 공이 진행하면서 회전하면서 오른쪽 상단으로 이동하려는 충동을 주었습니다. 정확한 임펄스는 xpos/ypos 좌표와 관련하여 ximpulse/yimpulse 구성 요소에서 얻은 벡터에 의해 정의됩니다. 이는 단순히 임펄스가 xpos/ypos에서 ximpulse/yimpulse까지의 거리(뉴턴 단위 및 방향)로 계산됨을 의미합니다. xpos/ypos에서 ximpulse/yimpulse까지의 각도입니다.</p><p class="note"> <b>참고</b>: 물리학 세계는 모든 계산에 미터를 사용하며 미터당 픽셀 비율은 룸 편집기 또는 다음을 사용하여 정의됩니다. <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p><p></p><h4> 통사론:</h4><p class="code">physics_apply_impulse(xpos, ypos, ximpulse, yimpulse)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">xpos</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate <i>in the room</i> where the impulse will be applied</span></td></tr><tr><td> <span class="notranslate">ypos</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate <i>in the room</i> where the impulse will be applied</span></td></tr><tr><td> <span class="notranslate">ximpulse</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">the x component of the impulse vector</span></td></tr><tr><td> <span class="notranslate">yimpulse</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">the y component of the impulse vector</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br />
     {<br />
         with (place_meeting(mouse_x, mouse_y, all))<br />
         {<br />
             physics_apply_impulse(mouse_x, mouse_y, -10 + irandom(20), -10 + irandom(20));<br />
         }<br />
-    }</p>
-  <p>The code above will apply an impulse with a random vector to an instance that is at the mouse position when the left button is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Forces.htm">Forces</a></div>
-        <div style="float:right">Next: <a href="physics_apply_local_force.htm">physics_apply_local_force</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 왼쪽 버튼을 눌렀을 때 마우스 위치에 있는 인스턴스에 임의의 벡터가 있는 임펄스를 적용합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Forces.htm">힘</a></div><div style="float:right"> 다음: <a href="physics_apply_local_force.htm"><span class="notranslate">physics_apply_local_force</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_apply_impulse

@@ -6,61 +6,17 @@
   <title>layer_sequence_angle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function layer_sequence_angle" />
+  <meta name="topic-comment" content="layer_sequence_angle 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_sequence_y" />
   <meta name="search-keywords" content="layer_sequence_angle" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_angle</h1>
-  <p>With this function you can set the angle of rotation for the given sequence element. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new angle to set and the sequence will be rotated about its origin to the new position. Angles in GameMaker are calculated with 0º to the right, and go anti-clockwise - so 90º is up, 180º is left and 270º is down - and the default angle for a sequence would be 0º.</p>
-  <p>Note that you shouldn&#39;t change the <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables for any instances in a sequence that uses this function as they will be overwritten as soon as the sequence updates after calling the function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">layer_sequence_angle(sequence_element_id, angle)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>sequence_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Sequence">Sequence Element ID</span></td>
-        <td>The unique ID value of the sequence element to target</td>
-      </tr>
-      <tr>
-        <td>angle</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The new angle to rotate the sequence element to</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if current_angle &lt; 90<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_angle</h1><p> 이 기능을 사용하여 주어진 시퀀스 요소에 대한 회전 각도를 설정할 수 있습니다. 다음에서 반환된 시퀀스 요소 ID를 제공합니다.<a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> 또는 <a href="../General_Layer_Functions/General_Layer_Functions.htm">레이어 요소 중 하나가 설정할 새 각도와 함께 기능</a> 을 수행하면 시퀀스가 원점을 기준으로 새 위치로 회전됩니다. GameMaker의 각도는 오른쪽으로 0º로 계산되며 시계 반대 방향으로 이동합니다. 따라서 90º는 위쪽, 180º는 왼쪽, 270º는 아래쪽이며 시퀀스의 기본 각도는 0º입니다.</p><p> 변경하면 안 됩니다. <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> 이 함수를 사용하는 시퀀스의 모든 인스턴스에 대한 변수는 함수를 호출한 후 시퀀스가 업데이트되는 즉시 덮어쓰여집니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_sequence_angle(sequence_element_id, angle)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> <span data-keyref="Type_ID_Element_Sequence">시퀀스 요소 ID</span></td><td> <span class="notranslate">The unique ID value of the sequence element to target</span></td></tr><tr><td> <span class="notranslate">angle</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new angle to rotate the sequence element to</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if current_angle &lt; 90<br />
     {<br />
         current_angle += 1;<br />
         layer_sequence_angle(my_seq, current_angle);<br />
-    }</p>
-  <p>The above code checks the value held in the <span class="inline">current_angle</span> variable, and if it is less than 90 then it adds to it then uses the value to set the angle of the sequence element referenced in the variable <span class="inline">my_seq</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sequence_xscale.htm">layer_sequence_xscale</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 <span class="inline">current_angle</span> 변수이고 90보다 작으면 변수에 더한 다음 값을 사용하여 변수에서 참조하는 시퀀스 요소의 각도를 설정합니다. <span class="inline">my_seq</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequence_Layers.htm">시퀀스 레이어</a></div><div style="float:right"> 다음: <a href="layer_sequence_xscale.htm"><span class="notranslate">layer_sequence_xscale</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_angle

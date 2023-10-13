@@ -6,44 +6,13 @@
   <title>path_delete_point</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_delete_point" />
+  <meta name="topic-comment" content="path_delete_point 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_delete_point" />
   <meta name="search-keywords" content="path_delete_point" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_delete_point</h1>
-  <p>With this function you can remove a point from the specified path. Path points are numbered from 0 so the first point is always the 0th point and the last path point will be <a href="../path_get_number.htm"><span class="inline">path_get_number()</span></a> - 1. If you call this function on a path asset, <strong>then the removal of the point will be permanent</strong> and all instances assigned the path in the future will be missing the point that was removed. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_delete_point(ind, n);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to delete a point from.</td>
-      </tr>
-      <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The defining point to delete.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _col = true;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_delete_point</h1><p> 이 기능을 사용하면 지정된 경로에서 점을 제거할 수 있습니다. 경로 점은 0부터 번호가 지정되므로 첫 번째 점은 항상 0번째 점이고 마지막 경로 점은<a href="../path_get_number.htm"><span class="inline">path_get_number()</span></a> - 1. 경로 자산에서 이 함수를 호출 <strong>하면 점 제거가 영구적으로 유지</strong> 되고 향후 경로에 할당된 모든 인스턴스는 제거된 점이 누락됩니다. 이것이 필요한 것이 아닌 경우 다음과 같은 기능을 사용해야 합니다. <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p></p><h4> 통사론:</h4><p class="code">path_delete_point(ind, n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to delete a point from.</span></td></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The defining point to delete.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _col = true;<br />
     while (_col)<br />
     {<br />
         var _num = path_get_number(mypath) - 1;<br />
@@ -61,19 +30,7 @@
             else _col = false;<br />
         }<br />
         else _col = false;<br />
-    }</p>
-  <p>The above code generates a loop that checks the points on a backwards from the end for a collision with the given object. If a collision is found, a path point is deleted, until there is no collision, or the path is only 2 points long.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_clear_points.htm">path_clear_points</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 주어진 객체와의 충돌에 대해 끝에서 거꾸로 점을 확인하는 루프를 생성합니다. 충돌이 발견되면 충돌이 없거나 경로 길이가 2포인트에 불과할 때까지 경로 포인트가 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_clear_points.htm"><span class="notranslate">path_clear_points</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_delete_point

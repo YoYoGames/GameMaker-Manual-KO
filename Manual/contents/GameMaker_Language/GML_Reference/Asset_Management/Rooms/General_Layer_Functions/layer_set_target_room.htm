@@ -4,43 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_set_target_room</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function layer_set_target_room" />
+  <meta name="topic-comment" content="layer_set_target_room 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_set_target_room" />
   <meta name="search-keywords" content="layer_set_target_room" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
-  <p>This function tells <span data-keyref="GameMaker Name">GameMaker</span> that <i>all further layer functions should be applied to the given room</i>. In this way you can procedurally change or generate layers and layer contents in a room that is not the current room.</p>
-  <p>When you are finished adding layers or layer elements to a room, call the function <span class="inline3_func"><a data-xref="{title}" href="layer_reset_target_room.htm">layer_reset_target_room</a></span> to reset the room target or call this function again with a <span class="inline2">room</span> argument of <span class="inline2">-1</span>.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_warning.hts"> </span> While targeting another room, you can use all the regular layer functions <b>except</b> you cannot create instances using <span class="inline3_func"><a data-xref="{title}" href="../../Instances/instance_create_layer.htm">instance_create_layer</a></span> or <span class="inline3_func"><a data-xref="{title}" href="../../Instances/instance_create_depth.htm">instance_create_depth</a></span>, nor will the layer function <span class="inline3_func"><a data-xref="{title}" href="layer_add_instance.htm">layer_add_instance</a></span> be available.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>room</td>
-        <td><span data-keyref="Type_Asset_Room"><a href="The_Asset_Editors/Rooms.htm" target="_blank">Room Asset</a></span></td>
-        <td>The room to target for all further layer functions, or -1 for the current room</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">layer_set_target_room(rm_Game);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_set_target_room</h1><p> 이 함수를 호출하면 <span data-keyref="GameMaker Name">GameMaker</span> 에 <i>모든 추가 레이어 함수가 주어진 방에 적용되어야 한다고</i> 말하는 것입니다. 이러한 방식으로 현재 룸이 아닌 룸에서 레이어 및 레이어 콘텐츠를 절차적으로 변경하거나 생성할 수 있습니다. 방에 레이어 또는 레이어 요소 추가를 마쳤으면 함수를 호출합니다.<a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> 방 목표를 재설정하려면(또는 방 인수 -1로 이 함수를 다시 호출하십시오). 이 기능은 <i>현재 방이 아닌 다른 방</i> 에서만 사용할 수 있으며, 현재 실행 중인 방이 아닌 다른 방에 레이어 및 레이어 요소를 추가/제거할 수 있도록 설계되었습니다.</p><p class="note"> <b>경고!</b> 다른 방을 대상으로 하는 동안 다음을 사용하여 인스턴스를 생성할 수 없다는 점을 <b>제외하고</b> 모든 일반 레이어 기능을 사용할 수 있습니다. <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> 또는 <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>, 레이어도 작동하지 않습니다 <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> 는 가능하다.</p><p></p><h4> 통사론:</h4><p class="code">layer_set_target_room(room)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">room</span></td><td><span data-keyref="Type_Asset_Room"></span></td><td> <span class="notranslate">The room to target for all further layer functions</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">layer_set_target_room(rm_Game);<br />
     var l = layer_get_id(&quot;SpriteAssets&quot;);<br />
     repeat(50)<br />
     {<br />
@@ -48,18 +20,7 @@
         var _y = irandom(1000);<br />
         layer_sprite_create(l, _x, _y, spr_Trees);<br />
     }<br />
-    layer_reset_target_room();</p>
-  <p>The above code sets the target room to the room &quot;rm_Game&quot; and then gets the layer ID for the layer called &quot;SpriteAssets&quot; in that room. This layer ID is then used to add 50 random sprite assets to the layer, before the layer target is reset to the current room.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_target_room.htm">layer_get_target_room</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    layer_reset_target_room();</p><p> 위의 코드는 대상 방을 &quot;rm_Game&quot; 방으로 설정한 다음 해당 방의 &quot;SpriteAssets&quot;라는 레이어에 대한 레이어 ID를 가져옵니다. 그런 다음 이 레이어 ID는 레이어 대상이 현재 방으로 재설정되기 전에 50개의 임의 스프라이트 자산을 레이어에 추가하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="General_Layer_Functions.htm">일반 레이어 기능</a></div><div style="float:right"> 다음: <a href="layer_get_target_room.htm"><span class="notranslate">layer_get_target_room</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 layer_set_target_room

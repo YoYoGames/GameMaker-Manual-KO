@@ -3,66 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Stacked Sprites</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>스택 스프라이트 그리기</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Draw Stacked Sprites action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Draw Stacked Sprites" />
-  <meta name="search-keywords" content="Draw Stacked Sprites" />
+  <meta name="topic-comment" content="스택 스프라이트 그리기 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 스택 스프라이트 그리기" />
+  <meta name="search-keywords" content="스택 스프라이트 그리기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /> Draw Stacked Sprites</h1>
-  <p>This action will draw a sprite a given number of sprites one after another at a given position within the room. You give the sprite to draw and the stack order, which can be either <b>Row</b> (horizontally, left to right), or <b>column</b> (vertically, top to bottom), as well as the number of sprites to draw and the position. The position can be an absolute position within the room, or one relative to the position of the instance doing the drawing, and the spacing between images will be based on the width or height of the sprite. Note that this simply draws a static image - the initial single image (frame 0) of the given sprite - and any further frames will be ignored, as will any transforms that have been added through changing the <a href="../Instance/Set_Instance_Variable.htm">instance variables</a> (like <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span> or <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">image_blend</a></span>).<b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Stacked Sprites Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Stacked_Sprites.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
-      </tr>
-      <tr>
-        <td>Stack Order</td>
-        <td>The order to draw in (either Row or Column)</td>
-      </tr>
-      <tr>
-        <td>Number</td>
-        <td>The number of sprites to draw</td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Stacked Sprites Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Stacked_Sprites.png" />The above action block code gets the number of instances of the object &quot;obj_Player&quot; and then uses this to draw a number of marker sprites to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Rectangle.htm">Draw Rectangle</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /> 누적 스프라이트 그리기</h1><p> 이 작업은 방 내의 주어진 위치에 주어진 수의 스프라이트를 차례로 그립니다. 그릴 스프라이트와 스택 순서는 <b>행</b> (가로, 왼쪽에서 오른쪽으로) 또는 <b>열</b> (세로, 위에서 아래로)일 수 있으며 그릴 스프라이트 수와 위치도 제공합니다. 위치는 방 내의 절대 위치이거나 그림을 그리는 인스턴스의 위치에 상대적일 수 있으며 이미지 사이의 간격은 스프라이트의 너비 또는 높이를 기준으로 합니다. 이것은 단순히 정적 이미지(주어진 스프라이트의 초기 단일 이미지(프레임 0))를 그리고 <a href="../Instance/Set_Instance_Variable.htm">인스턴스 변수</a> (예: <span class="inline">image_xscale</span> 또는 <span class="inline">image_blend</span> ).</p><p class="note"><b></b> <b>참고</b>: 이 작업은 다양한 <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">그리기 이벤트</a> 에서만 사용되며 다른 곳에서 사용되는 경우 아무 것도 그리지 않습니다.</p><p></p><p></p><h4> 동작 구문:</h4><p><img alt="Draw Stacked Sprites Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Stacked_Sprites.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Sprite</span></td><td> 그릴 스프라이트</td></tr><tr><td> <span class="notranslate">Stack Order</span></td><td> 그리는 순서(행 또는 열)</td></tr><tr><td> <span class="notranslate">Number</span></td><td> 그릴 스프라이트의 수</td></tr><tr><td> <span class="notranslate">x</span></td><td> 그릴 x 위치</td></tr><tr><td> <span class="notranslate">y</span></td><td> 그릴 y 위치</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Draw Stacked Sprites Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Stacked_Sprites.png" /> 위의 액션 블록 코드는 &quot;obj_Player&quot; 개체의 인스턴스 수를 가져온 다음 이를 사용하여 화면에 마커 스프라이트 수를 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Drawing_Actions.htm">그리기 작업</a></div><div style="float:right"> 다음: <a href="Draw_Rectangle.htm">사각형 그리기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Stacked Sprites

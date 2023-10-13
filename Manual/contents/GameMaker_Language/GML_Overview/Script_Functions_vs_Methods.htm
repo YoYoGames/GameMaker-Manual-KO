@@ -4,35 +4,23 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Script Functions vs. Methods</title>
+  <title>스크립트 함수와 메서드</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page explaining practical differences between Script Functions and Methods." />
-  <meta name="rh-index-keywords" content="Script Functions vs. Methods" />
-  <meta name="search-keywords" content="calling methods, calling script functions, method performance" />
+  <meta name="topic-comment" content="Script Functions와 Methods의 실질적인 차이점을 설명하는 페이지입니다." />
+  <meta name="rh-index-keywords" content="스크립트 함수와 메서드" />
+  <meta name="search-keywords" content="메소드 호출,스크립트 함수 호출,메소드 성능" />
 </head>
-<body>
-  <h1>Script Functions vs. Methods</h1>
-  <p>This page covers essential information about using script functions vs. methods.</p>
-  <h2>Basic Difference</h2>
-  <p>A <a href="Script_Functions.htm">script function</a> is created with this syntax:</p>
-  <p class="code">function name()<br />
+<body><h1>스크립트 함수와 메서드</h1><p> 이 페이지는 스크립트 함수와 메소드 사용에 대한 필수 정보를 다룹니다.</p><h2> 기본적인 차이점</h2><p> 다음 구문으로 <a href="Script_Functions.htm">스크립트 함수</a> 가 생성됩니다.</p><p class="code">function name()<br />
     {<br />
         code;<br />
-    }</p>
-  <p>A <a href="Method_Variables.htm">method variable</a> is created with this syntax:</p>
-  <p class="code">name = function()<br />
+    }</p><p> 다음 구문으로 <a href="Method_Variables.htm">메서드 변수</a> 가 생성됩니다.</p><p class="code">name = function()<br />
     {<br />
         code;<br />
-    }</p>
-  <p>You should use the first syntax in scripts, to create global functions that can be called from any scope in your game.</p>
-  <p>You should use the second syntax when creating functions in <a href="Structs.htm">structs/constructors</a> and objects. This syntax creates a variable containing a method.</p>
-  <h2>Direct Calls</h2>
-  <p>You can call both script functions and methods directly by using parentheses <span class="inline2">()</span>,  just like a <a href="Runtime_Functions.htm">runtime function</a>:</p>
-  <p class="code">// Create the function<br />
+    }</p><p> 게임의 모든 범위에서 호출할 수 있는 전역 함수를 만들려면 스크립트의 첫 번째 구문을 사용해야 합니다.</p><p> <a href="Structs.htm">구조체/생성자</a> 및 개체에서 함수를 생성할 때 두 번째 구문을 사용해야 합니다. 이 구문은 메서드를 포함하는 변수를 만듭니다.</p><h2> 직접 통화</h2><p> <a href="Runtime_Functions.htm">런타임 함수</a> 처럼 괄호 <span class="inline">script_execute()>()</span> 를 사용하여 스크립트 함수와 메서드를 직접 호출할 수 있습니다.</p><p class="code">// Create the function<br />
     function reset_x()<br />
     {<br />
         x = xstart;<br />
@@ -40,11 +28,7 @@
     <br />
     // Call the function<br />
     reset_x();
-  </p>
-  <p>You can also use the function <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> to run a script function, although it&#39;s now a legacy function and not recommended for use.</p>
-  <h2>Indirect Calls: Methods</h2>
-  <p>You can store a reference to a method, in another variable, to call it later through that different variable:</p>
-  <p class="code">// Create method<br />
+  </p><p> 기능을 사용할 수도 있습니다. <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> 지금은 레거시 기능이고 사용을 권장하지 않지만 스크립트 기능을 실행합니다.</p><h2> 간접 호출: 메서드</h2><p> 메소드에 대한 참조를 다른 변수에 저장하여 나중에 다른 변수를 통해 호출할 수 있습니다.</p><p class="code">// Create method<br />
     reset_alpha = function()<br />
     {<br />
         image_alpha = 1;<br />
@@ -53,13 +37,7 @@
     // Pass reference and call<br />
     temp_1 = reset_alpha;<br />
     temp_1();
-  </p>
-  <p class="note"><span class="note">NOTE</span> See how the code doesn&#39;t put <span class="inline2">()</span> after <span class="inline2">reset_alpha</span>. That&#39;s because we&#39;re reading the method reference and not calling it.</p>
-  <p>In this example, calling <span class="inline2">temp_1</span> will call <span class="inline2">reset_alpha</span>, as it stores a reference to that <strong>method</strong>.</p>
-  <p>You are completely fine to pass around a method reference in this way. When using script functions though, there is a caveat.</p>
-  <h2>Indirect Calls: Script Functions</h2>
-  <p>You can also store a reference to a script function, in another variable:</p>
-  <p class="code">// Create function<br />
+  </p><p class="note"> <span class="note">참고</span> 코드가 어떻게 <span class="inline">method()>reset_alpha</span> 뒤에 <span class="inline2">()</span> 를 넣지 않는지 보십시오. 그것은 우리가 메소드 참조를 읽고 있고 그것을 호출하지 않기 때문입니다.</p><p> 이 예에서 <span class="inline2">temp_1</span> 을 호출하면 해당 <strong>메서드</strong> 에 대한 참조를 저장 <span class="inline2">하므로 reset_alpha</span> 를 호출합니다.</p><p> 이 방법으로 메서드 참조를 전달해도 무방합니다. 그러나 스크립트 기능을 사용할 때 주의 사항이 있습니다.</p><h2> 간접 호출: 스크립트 함수</h2><p> 다른 변수에 스크립트 함수에 대한 참조를 저장할 수도 있습니다.</p><p class="code">// Create function<br />
     function reset_x()<br />
     {<br />
         x = xstart;<br />
@@ -67,31 +45,7 @@
     <br />
     // Store reference<br />
     temp_1 = reset_x;
-  </p>
-  <p>Now, you can call <span class="inline2">temp_1</span> by doing this:</p>
-  <p class="code">temp_1();</p>
-  <p>However, since this variable refers to a <strong>script function</strong>, it first has to convert it into a <strong>method</strong>, and then call it.</p>
-  <p>This can easily result in increased memory usage, especially if you&#39;re calling it every frame, because the engine now has to create a new method every frame for this call. </p>
-  <p>So, what is the solution?</p>
-  <ul class="colour">
-    <li>Use <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> to call the script function via its reference, which will not create a method.</li>
-    <li>Or, the better solution: convert your script function <a href="../GML_Reference/Variable_Functions/method.htm">into a method</a> when passing its reference.</li>
-  </ul>
-  <p>To implement the second solution, your code would look like this:</p>
-  <p class="code">temp_1 = method(undefined, reset_x);</p>
-  <p>This is creating a new method from the <span class="inline2">reset_x</span> script function, using <a href="../GML_Reference/Variable_Functions/method.htm"><span class="inline">method()</span></a>.</p>
-  <p>Calling <span class="inline2">temp_1()</span> now using parentheses will not increase memory usage, as the method is already created for you.</p>
-  <p>Again, this only applies if you&#39;re calling a script function <strong>indirectly</strong>, via a reference stored in a variable. Calling it directly doesn&#39;t cause such problems.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="GML_Overview.htm">GML Code Overview</a></div>
-        <div>Next: <a data-xref="{title}" href="Functions/Static_Variables.htm">Static Variables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 이제 다음을 수행하여 <span class="inline2">temp_1</span> 을 호출할 수 있습니다.</p><p class="code">temp_1();</p><p> 그러나 이 변수는 <strong>스크립트 함수</strong> 를 참조하므로 먼저 <strong>메서드</strong> 로 변환한 다음 호출해야 합니다.</p><p> 이것은 엔진이 이제 이 호출에 대해 매 프레임마다 새 메서드를 생성해야 하기 때문에 특히 매 프레임마다 호출하는 경우 메모리 사용량이 증가할 수 있습니다.</p><p> 그래서, 해결책은 무엇입니까?</p><ul class="colour"><li> 사용 <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline"></span></a> 메서드를 생성하지 않는 참조를 통해 스크립트 함수를 호출합니다.</li><li> 또는 더 나은 솔루션: 참조를 전달할 때 스크립트 함수 <a href="../GML_Reference/Variable_Functions/method.htm">를 메서드로</a> 변환합니다.</li></ul><p> 두 번째 솔루션을 구현하기 위한 코드는 다음과 같습니다.</p><p class="code">temp_1 = method(undefined, reset_x);</p><p> 이것은 <span class="inline2">reset_x</span> 스크립트 함수에서 다음을 사용하여 새 메소드를 생성하는 것입니다.<a href="../GML_Reference/Variable_Functions/method.htm"><span class="inline"></span></a>.</p><p> 메서드가 이미 생성되어 있으므로 괄호를 사용하여 <span class="inline2">temp_1()</span> 을 호출해도 메모리 사용량이 증가하지 않습니다.</p><p> 다시 말하지만, 이것은 변수에 저장된 참조를 통해 <strong>간접적으로</strong> 스크립트 함수를 호출하는 경우에만 적용됩니다. 직접 호출하면 이러한 문제가 발생하지 않습니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="GML_Overview.htm">GML 코드 개요</a></div><div> 다음: <a data-xref="{title}" href="Functions/Static_Variables.htm">정적 변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions vs. Methods

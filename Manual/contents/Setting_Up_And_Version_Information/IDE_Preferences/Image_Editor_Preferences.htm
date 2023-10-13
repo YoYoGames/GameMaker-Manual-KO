@@ -1,164 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Image Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="The Image Editor Preferences" />
-  <meta name="rh-index-keywords" content="Prefs - Images" />
-  <meta name="search-keywords" content="Image Prefs,Image Editor Preferences" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>이미지 편집기 기본 설정</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="이미지 편집기 기본 설정"/>
+  <meta name="rh-index-keywords" content="환경 설정 - 이미지"/>
+  <meta name="search-keywords" content="이미지 기본 설정,이미지 편집기 기본 설정"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Image Editor Preferences</h1>
-  <p><img alt="Image Editor Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Image_Editor_Prefs.png" /></p>
-  <p>The <strong>Image Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Image_Editor.htm">Image Editor</a> window looks and feels. The following are the general options:</p>
-  <ul class="colour">
-    <li><strong>Image Selection Copy/Paste</strong>: Choose whether you want CTRL+V (paste) to insert the copied image as a brush, or as a new layer.</li>
-    <li><strong>Expand sprite controls overlay by default</strong>: When this is checked, the sprite controls and frame information will be shown in the Image Editor every time you open a sprite for editing (this can be closed again using the collapse button <img alt="Collapse Nodes Icon" class="icon" src="../../assets/Images/Icons/Icon_Collapse.png" />, but it will reopen on editing the sprite again later). When this is unchecked, the sprite controls and frame information will be hidden on opening a sprite. The default is to have this unchecked.</li>
-    <li><strong>Default Loop Mode</strong>: The loop button in the Image Editor can be set to function in two different modes: either play once, where the animation will stop when it gets to the last frame, loop from the start, where the animation will go back to the first frame when it finishes, or ping pong, where the animation will go up through the images to the end and then back down through them again to the beginning. The default value here is &quot;loop&quot;.</li>
-    <li><strong>Draw thin selection outline</strong>: If this is checked then the outline for selections will be an absolute 1px in width, regardless of the scale of the image, while having it un-checked will make the selection outline a relative 1px in width and scale with the image. The default is to have this option checked.</li>
-    <li><strong>Selection outline primary colour</strong>: The section outline is a dashed line that alternates between two colours. This option permits you to set the first of those colours to use (including alpha), and has a default value of <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> #FFFFFD0.</li>
-    <li><strong>Selection outline secondary colour</strong>: The section outline is a dashed line that alternates between two colours. This option permits you to set the second of those colours to use (including alpha), and has a default value of ARGB #0000D0.</li>
-    <li><strong>Editor background colour</strong>: While editing a sprite frame the image may be scaled in or out or may not fit the whole drawing in window, in which case a background colour will be shown which you can set here. The default value is ARGB #282828FF.</li>
-  </ul>
-  <p>The Image Editor Preferences also has the following sub-categories:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Background</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" class="center" alt="Image Editor Background Prefs" />
-    </p>
-    <p class="dropspot">Here you can set the options for the background that you edit your sprite images over. By default this is a grid of grey squares, but you can use the following settings to change it:</p>
-    <ul class="dropspotlist">
-      <li>
-        <strong>Canvas style</strong>: Here you set the &quot;style&quot; for the background, which can either be &quot;
-        <em>Block Pattern</em>&quot; or &quot;
-        <em>Single Colour</em>&quot;. Single colour simply sets the background to the colour of your choice (using the Colour 1 setting, as explained below) while block pattern is the default setting (which can also be edited using the rest of the dialogue
-        options shown below). Default is &quot;
-        <em>Block Pattern</em>&quot;.
-      </li>
-      <li>
-        <strong>Canvas block size</strong>: When you have selected
-        <em>Block Pattern</em> for the background, you can set the size of the individual block here. Default is 16px, with a minimum value of 2px and a maximum of 256px permitted.
-      </li>
-      <li>
-        <strong>Canvas primary colour</strong>: If you have
-        <em>Single Colour</em> chosen for the background, then the colour used is this one. You can click the colour swatch to open the colour editor and change it. When using the
-        <em>Block Pattern</em> option, this sets the first colour for alternate blocks. Default colour is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFC3C3C3.
-      </li>
-      <li>
-        <strong>Canvas secondary colour (block pattern style)</strong>: If you have
-        <em>Block Pattern</em> chosen for the background, then the colour used to alternate with colour 1 (above) is this one. You can click the colour swatch to open the colour editor and change it. Default colour is (ARGB) #FF808080.
-      </li>
-    </ul>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Confirm Dialogs</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" alt="Image Editor Confirm Prefs" class="center" width="822" height="463" />
-    </p>
-    <p class="dropspot">Here you can select the behaviour of the confirmation dialogues when you perform different actions on the current sprite. They are:</p>
-    <ul class="dropspotlist">
-      <li>
-        <strong>Automatic response to deleting frames</strong>: When you delete a frame by default a message shows to ask if you are sure you want to do this. By setting this option to &quot;OK&quot; you can remove this message and permit frame deletion
-        without further messages being shown. Default is &quot;Show message&quot;.
-      </li>
-      <li>
-        <strong>Automatic response to replacing images during strip import</strong>: When you select Import Strip from the Image drop down menu, you will get a message warning you that you will be overwriting any images already in the sprite resource,
-        with the option to continue or not. You can set here whether to show this message, or have the IDE simply choose the &quot;Yes&quot; or &quot;No&quot; option. The default value is &quot;Show Message&quot;.
-      </li>
-      <li>
-        <strong>Automatic response to committing changes on tool change</strong>: When you change draw tools after editing a frame, by default a message shows to ask if you want to commit the changes made. By setting this option to &quot;OK&quot; you
-        can remove this message and permit frame edition to be committed without further messages being shown when you change tools. If you choose &quot;No&quot;, then frame edition will be silently cancelled when you change tools. Default is &quot;Show
-        message&quot;.
-      </li>
-      <li>
-        <strong>Automatic response to locked layer warning</strong>: If you try to edit a locked layer you&#39;ll get a message by default informing you that you can&#39;t do this. If you set this option to &quot;OK&quot; then no message will be shown
-        and the edition will silently fail.
-      </li>
-      <li>
-        <strong>Automatic response to group selected warning</strong>: If you select multiple layers in the layer editor and then try to draw or edit then you will be shown a message by default to inform you that it is not possible. You can select &quot;OK&quot;
-        here to remove this message and silently fail to edit the images together until only a single layer is selected. Default is &quot;Show message&quot;.
-      </li>
-    </ul>
-    <p>
-      <br /><br />
-    </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Grid Settings</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" class="center" alt="Image Editor Grid Settings" />Grid
-      Settings preferences are used to set how the image grid will be presented, with the following options available:
-    </p>
-    <ul class="dropspotlist">
-      <li>
-        <strong>Grid horizontal spacing (px)</strong>: This value sets the spacing for the horizontal lines of the image grid. The default value is 1px.
-      </li>
-      <li>
-        <strong>Grid vertical spacing (px)</strong>: This value sets the spacing for the vertical lines of the image grid. The default value is 1px.
-      </li>
-      <li>
-        <strong>Display Grid</strong>: If this is checked then the Image Editor will open with the image grid on. Default is off.
-      </li>
-      <li>
-        <strong>Snap To Grid</strong>: If this is checked then the image editor will automatically snap certain tools to the image grid. Default is off.
-      </li>
-      <li>
-        <strong>Grid line Colou</strong>r: Here you can set the colour (including alpha value) for the image grid. Default is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FF000000.
-      </li>
-    </ul>
-    <p> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Tools</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" class="center" />Here you can set the ddifferent options
-      for how some of the drawing tools operate and are shown.
-      <br /><br />
-    </p>
-    <p class="dropspot">If you are using the
-      <strong>Arc Tool</strong>
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" class="icon" alt="Arc Tool Icon" width="32" height="32" /> then here
-      you can set the different colours used to draw the node properties:
-    </p>
-    <ul class="dropspotlist">
-      <li>
-        <strong>Anchor point colour</strong>: Set the colour for the different anchor points on the spline/arc. Default is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFFF0000.
-      </li>
-      <li>
-        <strong>Control point colour</strong>: Set the colour for each of the control point &quot;handles&quot; on an anchor point. Default is (ARGB) #FFFF0000.
-      </li>
-      <li>
-        <strong>Tangent line colour</strong>: Set the colour for the lines linking the control points to the anchors. Default is (ARGB) #FF00FFFF.
-      </li>
-      <li>
-        <strong>Selected point colour</strong>: Set the colour to be used for any selected anchor points on the spline/arc. Default is (ARGB) #FF00FF00.
-      </li>
-      <li>
-        <strong>Point size</strong>: Set the size of the different anchor points and control points to be used. Default is 10px.
-      </li>
-    </ul>
-  </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Sprite_Editor_Preferences.htm">Sprite Editor Preferences</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 이미지 편집기 기본 설정</h1><p><img alt="Image Editor Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Image_Editor_Prefs.png"/></p><p> <strong>이미지 편집기 기본 설정</strong> 은 <a href="../../The_Asset_Editors/Image_Editor.htm">이미지 편집기</a> 창의 모양과 느낌을 정의하는 데 사용됩니다. 다음은 일반 옵션입니다.</p><ul class="colour"><li> <strong>기본적으로 스프라이트 컨트롤 오버레이 확장</strong>: 이 옵션을 선택하면 편집을 위해 스프라이트를 열 때마다 스프라이트 컨트롤과 프레임 정보가 이미지 편집기에 표시됩니다(접기 버튼을 사용하여 다시 닫을 수 있습니다.<img alt="Collapse Nodes Icon" class="icon" src="../../assets/Images/Icons/Icon_Collapse.png"/>, 그러나 나중에 다시 스프라이트를 편집하면 다시 열립니다). 체크하지 않으면 스프라이트를 열 때 스프라이트 컨트롤과 프레임 정보가 숨겨집니다. 기본값은 이 옵션을 선택하지 않는 것입니다.</li><li> <strong>기본 루프 모드</strong>: 이미지 편집기의 루프 버튼은 두 가지 다른 모드에서 작동하도록 설정할 수 있습니다. 애니메이션이 끝날 때 첫 번째 프레임 또는 핑퐁에서 애니메이션이 이미지를 통해 끝까지 올라가고 다시 시작 부분으로 다시 내려갑니다. 여기서 기본값은 &quot;루프&quot;입니다.</li><li> <strong>얇은 선택 윤곽선 그리기</strong>: 이 옵션을 선택하면 이미지의 크기에 관계없이 선택 영역의 윤곽선 너비가 절대 1픽셀이 됩니다. 영상. 기본값은 이 옵션을 선택하는 것입니다.</li><li> <strong>선택 윤곽 기본 색상</strong>: 단면 윤곽은 두 가지 색상을 번갈아 가며 나타나는 점선입니다. 이 옵션을 사용하면 사용할 첫 번째 색상(알파 포함)을 설정할 수 있으며 기본값은 <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> #FFFFFD0입니다.</li><li> <strong>선택 윤곽 보조 색상</strong>: 단면 윤곽은 두 가지 색상을 번갈아 가며 나타나는 점선입니다. 이 옵션을 사용하면 사용할 두 번째 색상(알파 포함)을 설정할 수 있으며 기본값은 ARGB #0000D0입니다.</li><li> <strong>편집기 배경색</strong>: 스프라이트 프레임을 편집하는 동안 이미지가 축소 또는 축소되거나 창의 전체 도면에 맞지 않을 수 있습니다. 이 경우 여기에서 설정할 수 있는 배경색이 표시됩니다. 기본값은 ARGB #282828FF입니다.</li></ul><p> 이미지 편집기 기본 설정에는 다음과 같은 하위 범주도 있습니다.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">배경</a> </p><div class="droptext" data-targetname="drop-down"><p class="dropspot"><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" class="center" alt="Image Editor Background Prefs"/></p><p class="dropspot"> 여기에서 스프라이트 이미지를 편집할 배경에 대한 옵션을 설정할 수 있습니다. 기본적으로 이것은 회색 사각형 격자이지만 다음 설정을 사용하여 변경할 수 있습니다.</p><ul class="dropspotlist"><li> <strong>캔버스 스타일</strong>: 여기에서 &quot; <em>블록 패턴</em> &quot; 또는 &quot; <em>단색</em> &quot;이 될 수 있는 배경의 &quot;스타일&quot;을 설정합니다. 단일 색상은 단순히 배경을 원하는 색상으로 설정하는 반면(아래에 설명된 대로 색상 1 설정 사용) 블록 패턴은 기본 설정입니다(아래에 표시된 나머지 대화 옵션을 사용하여 편집할 수도 있음). 기본값은 &quot; <em>블록 패턴</em> &quot;입니다.</li><li> <strong>캔버스 블록 크기</strong>: 배경으로 <em>블록 패턴</em> 을 선택한 경우 여기에서 개별 블록의 크기를 설정할 수 있습니다. 기본값은 16px이며 최소값은 2px, 최대값은 256px입니다.</li><li> <strong>캔버스 기본 색상</strong>: 배경에 <em>단일 색상</em> 을 선택한 경우 사용되는 색상은 이 색상입니다. 색상 견본을 클릭하여 색상 편집기를 열고 변경할 수 있습니다. <em>블록 패턴</em> 옵션을 사용할 때 대체 블록의 첫 번째 색상을 설정합니다. 기본 색상은 ( <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a> ) #FFC3C3C3입니다.</li><li> <strong>캔버스 보조 색상(블록 패턴 스타일)</strong>: 배경으로 <em>블록 패턴</em> 을 선택한 경우 색상 1(위)과 대체하는 데 사용되는 색상이 이 색상입니다. 색상 견본을 클릭하여 색상 편집기를 열고 변경할 수 있습니다. 기본 색상은 (ARGB) #FF808080입니다.</li></ul><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">확인 대화 상자</a> </p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" alt="Image Editor Confirm Prefs" class="center" width="822" height="463"/></p><p class="dropspot"> 여기에서 현재 스프라이트에 대해 다른 작업을 수행할 때 확인 대화 상자의 동작을 선택할 수 있습니다. 그들은:</p><ul class="dropspotlist"><li> <strong>프레임 삭제에 대한 자동 응답</strong>: 기본적으로 프레임을 삭제할 때 정말로 삭제할 것인지 묻는 메시지가 표시됩니다. 이 옵션을 &quot;확인&quot;으로 설정하면 이 메시지를 제거하고 추가 메시지를 표시하지 않고 프레임 삭제를 허용할 수 있습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li><li> <strong>스트립 가져오기 중 이미지 교체에 대한 자동 응답</strong>: 이미지 드롭다운 메뉴에서 스트립 가져오기를 선택하면 계속할지 여부에 대한 옵션과 함께 이미 스프라이트 리소스에 있는 이미지를 덮어쓸 것이라는 경고 메시지가 표시됩니다. 여기에서 이 메시지를 표시할지 여부를 설정하거나 IDE에서 &quot;예&quot; 또는 &quot;아니요&quot; 옵션을 선택하도록 할 수 있습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li><li> <strong>도구 변경 시 변경 사항 커밋에 대한 자동 응답</strong>: 프레임을 편집한 후 그리기 도구를 변경하면 기본적으로 변경 사항을 커밋할지 묻는 메시지가 표시됩니다. 이 옵션을 &quot;확인&quot;으로 설정하면 이 메시지를 제거하고 도구를 변경할 때 추가 메시지가 표시되지 않고 프레임 편집이 커밋되도록 허용할 수 있습니다. &quot;아니오&quot;를 선택하면 도구를 변경할 때 프레임 편집이 자동으로 취소됩니다. 기본값은 &quot;메시지 표시&quot;입니다.</li><li> <strong>잠긴 레이어 경고에 대한 자동 응답</strong>: 잠긴 레이어를 편집하려고 하면 기본적으로 이 작업을 수행할 수 없다는 메시지가 표시됩니다. 이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 에디션이 자동으로 실패합니다.</li><li> <strong>그룹 선택 경고에 대한 자동 응답</strong>: 레이어 편집기에서 여러 레이어를 선택한 다음 그리기 또는 편집을 시도하면 기본적으로 불가능하다는 메시지가 표시됩니다. 여기에서 &quot;확인&quot;을 선택하여 이 메시지를 제거하고 단일 레이어만 선택될 때까지 이미지를 함께 편집하는 데 자동으로 실패할 수 있습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li></ul><p><br/><br/></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">그리드 설정</a></p><div class="droptext" data-targetname="drop-down2"><p class="dropspot"><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" class="center" alt="Image Editor Grid Settings"/> 격자 설정 기본 설정은 다음 옵션을 사용하여 이미지 격자가 표시되는 방식을 설정하는 데 사용됩니다.</p><ul class="dropspotlist"><li> <strong>격자 가로 간격(px)</strong>: 이 값은 이미지 격자의 가로줄 간격을 설정합니다. 기본값은 1px입니다.</li><li> <strong>격자 세로 간격(px)</strong>: 이 값은 이미지 격자의 세로줄 간격을 설정합니다. 기본값은 1px입니다.</li><li> <strong>그리드 표시</strong>: 이 옵션을 선택하면 이미지 그리드가 켜진 상태로 이미지 편집기가 열립니다. 기본값은 꺼져 있습니다.</li><li> <strong>Snap To Grid</strong>: 이 옵션을 선택하면 이미지 편집기가 자동으로 특정 도구를 이미지 격자에 맞춥니다. 기본값은 꺼져 있습니다.</li><li> <strong>격자선</strong> 색상: 여기에서 이미지 격자의 색상(알파 값 포함)을 설정할 수 있습니다. 기본값은 ( <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a> ) #FF000000입니다.</li></ul><p></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">도구</a></p><div class="droptext" data-targetname="drop-down3"><p class="dropspot"><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" class="center"/> 여기에서 일부 그리기 도구가 작동하고 표시되는 방식에 대한 ddifferent 옵션을 설정할 수 있습니다.<br/><br/></p><p class="dropspot"> <strong>호 도구</strong> 를 사용하는 경우<img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" class="icon" alt="Arc Tool Icon" width="32" height="32"/> 그런 다음 여기에서 노드 속성을 그리는 데 사용되는 다양한 색상을 설정할 수 있습니다.</p><ul class="dropspotlist"><li> <strong>앵커 포인트 색상</strong>: 스플라인/호의 다른 앵커 포인트에 대한 색상을 설정합니다. 기본값은 ( <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a> ) #FFFF0000입니다.</li><li> <strong>제어점 색상</strong>: 기준점의 각 제어점 &quot;핸들&quot;에 대한 색상을 설정합니다. 기본값은 (ARGB) #FFFF0000입니다.</li><li> <strong>접선 색상</strong>: 기준점과 기준점을 연결하는 선의 색상을 설정합니다. 기본값은 (ARGB) #FF00FFFF입니다.</li><li> <strong>선택한 포인트 색상</strong>: 스플라인/호에서 선택한 앵커 포인트에 사용할 색상을 설정합니다. 기본값은 (ARGB) #FF00FF00입니다.</li><li> <strong>포인트 크기</strong>: 사용할 다양한 기준점과 제어점의 크기를 설정합니다. 기본값은 10px입니다. </li></ul></div><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../IDE_Preferences.htm">IDE 기본 설정</a></div><div style="float:right"> 다음: <a href="Sprite_Editor_Preferences.htm">스프라이트 편집기 기본 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Image Editor
@@ -166,5 +19,5 @@ Preferences - Image Editor
   <!-- TAGS
 prefs_image_editor
 -->
-</body>
-</html>
+
+</body></html>

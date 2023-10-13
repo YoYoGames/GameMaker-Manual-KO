@@ -6,56 +6,13 @@
   <title>physics_remove_fixture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_remove_fixture" />
+  <meta name="topic-comment" content="physical_remove_fixture에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_remove_fixture" />
   <meta name="search-keywords" content="physics_remove_fixture" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_remove_fixture</h1>
-  <p>This function removes (or &quot;un-binds&quot;) a fixture from an instance or instances. It requires the unique &quot;id&quot; of the bound fixture (as returned by the function <span class="inline3_func"><a data-xref="{title}" href="physics_fixture_bind.htm">physics_fixture_bind</a></span> and it will remove all the currently defined physics properties for the instance, permitting you to redefine a new fixture and bind that to the instance. In this way you can change the instances physical properties without having to destroy and re-create it.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_remove_fixture(id, fixture)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></td>
-        <td>The ID of the instance to remove the fixture from</td>
-      </tr>
-      <tr>
-        <td>fixture</td>
-        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">Physics Fixture ID</a></span></td>
-        <td>The ID of the fixture that is to be removed from the instance</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">physics_remove_fixture(id, my_fix);</p>
-  <p>The code above will remove the fixture with the &quot;id&quot; stored in the variable &quot;my_fix&quot; from the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_fixture_set_box_shape.htm">physics_fixture_set_box_shape</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_remove_fixture</h1><p> 이 기능은 인스턴스에서 조명기를 제거(또는 &quot;바인딩 해제&quot;)합니다. 바인딩된 조명기의 고유한 &quot;id&quot;가 필요합니다(함수에 의해 반환됨).<a href="physics_fixture_bind.htm"><span class="inline">physics_fixture_bind()</span></a> 그러면 인스턴스에 대해 현재 정의된 모든 물리적 속성이 제거되어 새 조명기를 재정의하고 인스턴스에 바인딩할 수 있습니다. 이러한 방식으로 인스턴스를 삭제하고 다시 생성하지 않고도 인스턴스의 물리적 속성을 변경할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_remove_fixture(id, fixture)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The ID of the instance to remove the fixture from</span></td></tr><tr><td> <span class="notranslate">fixture</span></td><td> <span data-keyref="Type_ID_PhyFixture">물리 픽스처 ID</span></td><td> <span class="notranslate">The ID of the fixture that is to be removed from the instance</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">physics_remove_fixture(id, my_fix);</p><p> 위의 코드는 인스턴스에서 변수 &quot;my_fix&quot;에 저장된 &quot;id&quot;를 가진 조명기를 제거합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Fixtures.htm">비품</a></div><div style="float:right"> 다음: <a href="physics_fixture_set_box_shape.htm"><span class="notranslate">physics_fixture_set_box_shape</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_remove_fixture

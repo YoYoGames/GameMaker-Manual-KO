@@ -6,58 +6,15 @@
   <title>layer_sprite_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function layer_sprite_speed" />
+  <meta name="topic-comment" content="layer_sprite_speed 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_sprite_speed" />
   <meta name="search-keywords" content="layer_sprite_speed" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sprite_speed</h1>
-  <p>This function can be used to set the speed of an animating image that has been assigned to a sprite element. You give the sprite element ID (which you get when you create a sprite element using <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> or when you use the function <a href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a>), and then set the animation speed. If the IDE has set the animation speed for the sprite used to be calculated as Frames Per Game Frame, then the speed value given is a <i>multiplier</i>, with 1 being the default value, and setting it to 0.5 will half the animation speed, while setting it to 1.5 will double it. However, if the IDE has set the animation speed for the sprite used to be calculated as Frames Per Second, then the speed value given is a literal frames per second value, so setting this to 5, for example, will set the animation to loop 5 frames every second that the game runs. If the sprite used has no sub-images, this function will have no effect.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">layer_sprite_speed(sprite_element_id, speed);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>sprite_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Sprite">Sprite Asset</span></td>
-        <td>The unique ID value of the sprite element to change</td>
-      </tr>
-      <tr>
-        <td>speed</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The speed multiplier/value to use for the element</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var lay_id = layer_get_id(&quot;Assets_water&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sprite_speed</h1><p> 이 함수는 스프라이트 요소에 할당된 애니메이션 이미지의 속도를 설정하는 데 사용할 수 있습니다. 스프라이트 요소 ID를 제공합니다(다음을 사용하여 스프라이트 요소를 생성할 때 얻습니다.<a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> 또는 기능을 사용할 때<a href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a> )를 클릭한 다음 애니메이션 속도를 설정합니다. IDE가 게임 프레임당 프레임으로 계산되는 데 사용된 스프라이트의 애니메이션 속도를 설정한 경우 주어진 속도 값은 <i>승수</i> 이며 1이 기본값이고 0.5로 설정하면 애니메이션 속도의 절반이 됩니다. 1.5로 하면 2배가 됩니다. 그러나 IDE에서 초당 프레임으로 계산되는 데 사용된 스프라이트의 애니메이션 속도를 설정한 경우 지정된 속도 값은 문자 그대로 초당 프레임 값이므로 예를 들어 이 값을 5로 설정하면 애니메이션이 루프로 설정됩니다. 게임이 실행되는 초당 5프레임. 사용된 스프라이트에 하위 이미지가 없으면 이 기능은 효과가 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_sprite_speed(sprite_element_id, speed);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sprite_element_id</span></td><td> <span data-keyref="Type_ID_Element_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The unique ID value of the sprite element to change</span></td></tr><tr><td> <span class="notranslate">speed</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The speed multiplier/value to use for the element</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Assets_water&quot;);<br />
     var spr_id = layer_sprite_get_id(lay_id, &quot;gfc_water&quot;);<br />
-    layer_sprite_speed(spr_id, 0.5);</p>
-  <p>The above code will get the layer ID for the layer named &quot;Assets_water&quot; and then use that to get the ID of the given sprite element on that layer. This ID is then used to change the element image speed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Layers.htm">Sprite Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sprite_xscale.htm">layer_sprite_xscale</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    layer_sprite_speed(spr_id, 0.5);</p><p> 위의 코드는 &quot;Assets_water&quot;라는 레이어에 대한 레이어 ID를 얻은 다음 이를 사용하여 해당 레이어에 있는 주어진 스프라이트 요소의 ID를 가져옵니다. 이 ID는 요소 이미지 속도를 변경하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sprite_Layers.htm">스프라이트 레이어</a></div><div style="float:right"> 다음: <a href="layer_sprite_xscale.htm"><span class="notranslate">layer_sprite_xscale</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_speed

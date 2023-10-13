@@ -4,98 +4,24 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_create_layer</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function instance_create_layer" />
+  <meta name="topic-comment" content="instance_create_layer 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="instance_create_layer" />
   <meta name="search-keywords" content="instance_create_layer" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_create_layer</h1>
-  <p>With this function you can create a new instance of the specified object at any given point within the room and on the layer specified. The layer can be identified using the layer ID value (as returned by the function <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) or by the name of the layer (as a string, for example &quot;instance_layer&quot;) as defined in the <a href="../../../../The_Asset_Editors/Rooms.htm">room editor</a>.</p>
-  <p>This function returns the <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> of the new instance which can then be stored in a variable and used to access that instance. Note that this function will also call the <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Create Event</a> of the instance being created <i>before</i> continuing with the code or actions for the event that called the function.</p>
-  <div data-conref="../../../../assets/snippets/Note_layer_depth_range.hts"> </div>
-  <h2>Optional Struct</h2>
-  <p>The last argument, <span class="inline2">var_struct</span>, is optional and takes a struct containing additional variables for the new instance.</p>
-  <p>Variables from this struct are applied to the new instance <em>before</em> its Create event runs, but <em>after</em> its <a href="../../../../The_Asset_Editors/Object_Properties/Object_Variables.htm">Variable Definitions</a> are set.</p>
-  <p>This means that the values from that struct are readable in the Create event of the new instance. See <strong>Example 2</strong> at the bottom.</p>
-  <p>Values applied to the new instance through this struct can be of any type, including <a href="../../../GML_Overview/Method_Variables.htm">method</a> variables. <a href="Instance_Variables/Instance_Variables.htm">Built-in variables</a> can be changed as well.</p>
-  <p class="note"><span class="note">NOTE</span> Variables from the struct are &quot;shallow-copied&quot; to the new instance, meaning any arrays, structs, and other resources are copied by reference and not duplicated.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x position the object will be created at</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y position the object will be created at</td>
-      </tr>
-      <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_ID_Layer"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span> or <span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The layer ID (or name) to assign the created instance to</td>
-      </tr>
-      <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object index of the object to create an instance of</td>
-      </tr>
-      <tr>
-        <td>var_struct</td>
-        <td><span data-keyref="Type_Struct"><a href="GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
-        <td><span class="optional">OPTIONAL</span> A struct with variables to assign to the new instance</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></p>
-  <p> </p>
-  <h4>Example 1:</h4>
-  <p class="code">var inst = instance_create_layer(x, y, &quot;Instances&quot;, obj_bullet);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_create_layer</h1><p> 이 기능을 사용하면 지정된 방과 지정된 레이어의 지정된 지점에서 지정된 개체의 새 인스턴스를 만들 수 있습니다. 레이어는 레이어 ID 값을 사용하여 식별할 수 있습니다(함수에서 반환된<a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 <a href="../../../../The_Asset_Editors/Rooms.htm">룸 편집기</a> 에 정의된 레이어 이름(문자열, 예: &quot;instance_layer&quot;)</p><p> 이 함수는<a href="Instance_Variables/id.htm"><span class="inline">id</span></a> 그런 다음 변수에 저장하고 해당 인스턴스에 액세스하는 데 사용할 수 있는 새 인스턴스의 이 함수는 함수를 호출한 이벤트에 대한 코드 또는 작업을 계속 <i>하기 전에</i> 생성 중인 인스턴스의 <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">이벤트 생성</a> 도 호출합니다.</p><p class="note"> <span class="important">중요</span> 최소 및 최대 레이어 깊이는 -16000 ~ 16000입니다. 모든 이벤트는 여전히 정상적으로 실행되지만 해당 범위 밖의 레이어에 배치된 모든 항목은 <b>그려지지 않습니다</b>.</p><h2> 선택적 구조체</h2><p> 마지막 인수인 <span class="inline">speed>var_struct</span> 는 선택 사항이며 새 인스턴스에 대한 추가 변수가 포함된 구조체를 사용합니다.</p><p> 이 구조체의 변수는 Create 이벤트가 실행 <em>되기 전에</em> 새 인스턴스에 적용되지만 <a href="../../../../The_Asset_Editors/Object_Properties/Object_Variables.htm">변수 정의</a> 가 설정된 <em>후에</em> 적용됩니다.</p><p> 이는 해당 구조체의 값을 새 인스턴스의 Create 이벤트에서 읽을 수 있음을 의미합니다. 하단의 <strong>예 2</strong> 를 참조하십시오.</p><p> 이 구조체를 통해 새 인스턴스에 적용된 값은 <a href="../../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a> 변수를 포함하여 모든 유형이 될 수 있습니다. <a href="Instance_Variables/Instance_Variables.htm">내장 변수</a> 도 변경할 수 있습니다.</p><p class="note"> <span class="note">참고</span> 구조체의 변수는 새 인스턴스에 &quot;얕게 복사&quot;됩니다. 즉, 모든 배열, 구조체 및 기타 리소스가 참조로 복사되고 복제되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">instance_create_layer(x, y, layer_id, obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">x</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The x position the object will be created at</span></td></tr><tr><td> <span class="notranslate">y</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The y position the object will be created at</span></td></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_ID_Layer"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">레이어 ID</a></span> 또는 <span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">문자열</a></span></td><td> <span class="notranslate">The layer ID (or name) to assign the created instance to</span></td></tr><tr><td> <span class="notranslate">obj</span></td><td> <span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">개체 자산</a></span></td><td> <span class="notranslate">The object index of the object to create an instance of</span></td></tr><tr><td> <span class="notranslate">var_struct</span></td><td> <span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">구조체</a></span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> A struct with variables to assign to the new instance</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></p><p></p><h4> 예 1:</h4><p class="code">var inst = instance_create_layer(x, y, &quot;Instances&quot;, obj_bullet);<br />
     with (inst)<br />
     {<br />
         speed = other.shoot_speed;<br />
         direction = other.image_angle;<br />
-    }</p>
-  <p>The above code creates a new instance of the object <span class="inline2">obj_bullet</span> in the &quot;Instances&quot; layer, and stores the instance ID in a variable. This variable is then used to assign <span class="inline">speed</span> and <span class="inline">direction</span> to the new instance.</p>
-  <p>This will first create the instance, run its Create event, and <em>then</em> assign values to its variables.</p>
-  <p>If you want to assign some variables <em>before</em> the Create event runs, see the example below.</p>
-  <p> </p>
-  <h4>Example 2:</h4>
-  <p class="code">var inst = instance_create_layer(x, y, &quot;Instances&quot;, obj_bullet,<br />
+    }</p><p> 위의 코드는 &quot;Instances&quot; 레이어에 <span class="inline">direction>obj_bullet</span> 개체의 새 인스턴스를 만들고 인스턴스 ID를 변수에 저장합니다. 이 변수는 다음을 할당하는 데 사용됩니다.<span class="inline"></span> 그리고<span class="inline"></span> 새 인스턴스에.</p><p> 이렇게 하면 먼저 인스턴스를 만들고 Create 이벤트를 실행 <em>한 다음</em> 변수에 값을 할당합니다.</p><p> Create 이벤트가 실행 <em>되기 전에</em> 일부 변수를 할당하려면 아래 예를 참조하세요.</p><p></p><h4> 예 2:</h4><p class="code">var inst = instance_create_layer(x, y, &quot;Instances&quot;, obj_bullet,<br />
     {<br />
         speed : shoot_speed,<br />
         direction : image_angle<br />
-    });</p>
-  <p>The above code creates an instance of <span class="inline2">obj_bullet</span>, and passes in a struct as the last argument.</p>
-  <p>That struct has variables for the speed and direction. It pulls its values from the calling instance, without the need to use <span class="inline2">other</span>.</p>
-  <p>These variables are applied to the new instance before its Create event runs.</p>
-  <p>You&#39;re not limited to a struct literal, as you can also pass in a variable that stores an existing struct, or create a <a href="../../../GML_Overview/Language_Features/new.htm">new</a> struct from a <a href="../../../GML_Overview/Structs.htm#constr">constructor</a>.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="instance_create_depth.htm">instance_create_depth</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    });</p><p> 위의 코드는 <span class="inline2">obj_bullet</span> 의 인스턴스를 만들고 마지막 인수로 구조체를 전달합니다.</p><p> 그 구조체에는 속도와 방향에 대한 변수가 있습니다. <span class="inline2">other</span> 를 사용할 필요 없이 호출 인스턴스에서 값을 가져옵니다.</p><p> 이러한 변수는 Create 이벤트가 실행되기 전에 새 인스턴스에 적용됩니다.</p><p> 기존 구조체를 저장하는 변수를 전달하거나 <a href="../../../GML_Overview/Structs.htm#constr"><span class="notranslate">constructor</span></a> 에서 <a href="../../../GML_Overview/Language_Features/new.htm"><span class="notranslate">new</span></a> 구조체를 생성할 수도 있으므로 구조체 리터럴에 제한되지 않습니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instances.htm">인스턴스</a></div><div style="float:right"> 다음: <a href="instance_create_depth.htm"><span class="notranslate">instance_create_depth</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_create_layer

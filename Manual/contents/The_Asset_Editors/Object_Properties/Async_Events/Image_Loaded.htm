@@ -1,48 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Image Loaded</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing the Image Loaded async event." />
-  <meta name="rh-index-keywords" content="Objects - Async Image Loaded Event" />
-  <meta name="search-keywords" content="Image Loaded,ev_async_web_image_load" />
-  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>이미지 로드됨</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="이미지 로드된 비동기 이벤트를 자세히 설명하는 페이지입니다."/>
+  <meta name="rh-index-keywords" content="개체 - 비동기 이미지 로드 이벤트"/>
+  <meta name="search-keywords" content="이미지 로드됨,ev_web_image_load"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Image Loaded</span></h1>
-  <p><img alt="Image Loaded Event" class="center" src="../../../assets/Images/Asset_Editors/Async_ImageLoaded.png" />This event is triggered when you load an image into <span data-keyref="GameMaker Name">GameMaker</span> either on HTML5, or through a <a class="glossterm" data-glossterm="URL" href="#">URL</a>. For example, say you want to load a sprite image, and only change the current sprite for the instance to the new one after it has loaded. You would have something like this in the Create event (or any other event):</p>
-  <p class="code">var _url = &quot;http://www.angusgames.com/game/background1.png&quot;;<br />
-    spr = sprite_add(_url, 0, false, false, 0, 0);</p>
-  <p>This will now start to load the image into the device or the browser, but it will not block <span data-keyref="GameMaker Name">GameMaker</span> while it waits for the file to be loaded. Instead <span data-keyref="GameMaker Name">GameMaker</span> will keep running as normal until the image is loaded and the <a class="glossterm" data-glossterm="callback" href="#">callback</a> triggers the <strong>Image Loaded Event</strong>, where a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> is created and stored in the special variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. The map contains the following information:</p>
-  <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">filename</span>&quot;: The complete path to the file you requested.</li>
-    <li class="dropspot">&quot;<span class="inline">id</span>&quot;: The ID of the resource that you have loaded. This will be the same as the variable that you have assigned the resource to.</li>
-    <li class="dropspot">&quot;<span class="inline">status</span>&quot;: Returns a value of less than 0 for an error.</li>
-  </ul>
-  <p>You would then assign the newly loaded image to a sprite in this event. The following code example demonstrates how the returned information would be used:</p>
-  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == spr<br />
-    {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0<br />
-        {<br />
-            sprite_index = spr;<br />
-        }<br />
-    }</p>
-  <p>The above code will first check the <span class="inline">id</span> of the DS map that has been created, then check the <span class="inline">status</span> of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will then be used to set the sprite index to the newly loaded image.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Networking.htm">Networking</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 이미지 로드됨</h1><p><img alt="Image Loaded Event" class="center" src="../../../assets/Images/Asset_Editors/Async_ImageLoaded.png"/> 이 이벤트는 HTML5 또는 <a class="glossterm" data-glossterm="URL" href="#">URL</a> 을 통해 <span data-keyref="GameMaker Name">GameMaker</span> 에 이미지를 로드할 때 트리거됩니다. 예를 들어, 스프라이트 이미지를 로드하고 인스턴스가 로드된 후에만 인스턴스의 현재 스프라이트를 새 스프라이트로 변경하려고 한다고 가정해 보겠습니다. Create 이벤트(또는 다른 이벤트)에는 다음과 같은 항목이 있습니다.</p><p class="code">var _url = &quot;http://www.angusgames.com/game/background1.png&quot;;<br/> spr = sprite_add(_url, 0, false, false, 0, 0);</p><p> 이제 이미지를 장치나 브라우저에 로드하기 시작하지만 파일이 로드되기를 기다리는 동안 <span data-keyref="GameMaker Name">GameMaker</span> 를 차단하지 않습니다. 대신 <span data-keyref="GameMaker Name">GameMaker</span> 는 이미지가 로드되고 <a class="glossterm" data-glossterm="콜백" href="#">콜백</a> 이 <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> 이 생성되어 특수 변수에 저장되는 <strong>Image Loaded Event</strong> 를 트리거할 때까지 정상적으로 계속 실행됩니다. <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. 지도에는 다음 정보가 포함되어 있습니다.</p><ul class="dropspotlist"><li class="dropspot"> &quot;<span class="inline">filename</span> &quot;: 요청한 파일의 전체 경로입니다.</li><li class="dropspot"> &quot;<span class="inline">id</span> &quot;: 로드한 리소스의 ID입니다. 이것은 리소스를 할당한 변수와 동일합니다.</li><li class="dropspot"> &quot;<span class="inline">status</span> &quot;: 오류에 대해 0보다 작은 값을 반환합니다.</li></ul><p> 그런 다음 이 이벤트에서 새로 로드된 이미지를 스프라이트에 할당합니다. 다음 코드 예제에서는 반환된 정보가 사용되는 방법을 보여줍니다.</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == spr<br/> {
+    <br/>     if ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0<br/>     {<br/>         sprite_index = spr;<br/>     }<br/> }
+  </p><p> 위의 코드는 먼저 <span class="inline">id</span> 생성된 DS 맵의 <span class="inline">status</span> 콜백의. 값이 0보다 크거나 같으면(성공 신호) 콜백의 결과가 스프라이트 인덱스를 새로 로드된 이미지로 설정하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Async_Events.htm">비동기 이벤트</a></div><div style="float:right"> 다음: <a href="Networking.htm">네트워킹</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Image Loaded Event
@@ -51,5 +22,5 @@ ev_web_image_load
   <!-- TAGS
 ev_web_image_load
 -->
-</body>
-</html>
+
+</body></html>

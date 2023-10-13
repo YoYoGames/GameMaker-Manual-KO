@@ -6,40 +6,14 @@
   <title>skeleton_slot_colour_get</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function skeleton_slot_colour_get" />
+  <meta name="topic-comment" content="skeleton_slot_colour_get 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="skeleton_slot_colour_get" />
   <meta name="search-keywords" content="skeleton_slot_colour_get,skeleton_slot_color_get" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_slot_colour_get</h1>
-  <p>With this function you can get an attachment slot colour. You supply the slot name (a string) and the function will return an integer value for the colour.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">skeleton_slot_colour_get(slot);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>slot</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The slot name to check, a string</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">slot_list = ds_list_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_slot_colour_get</h1><p> 이 기능을 사용하면 부착 슬롯 색상을 얻을 수 있습니다. 슬롯 이름(문자열)을 제공하면 함수가 색상에 대한 정수 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_slot_colour_get(slot);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">slot</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The slot name to check, a string</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">slot_list = ds_list_create();<br />
     skeleton_find_slot(mouse_x, mouse_y, slot_list);<br />
     if !ds_list_empty(slot_list)<br />
     {<br />
@@ -50,19 +24,7 @@
                 skeleton_slot_colour_set(slot_list[| i], c_white, 1);<br />
             }<br />
         }<br />
-    }</p>
-  <p>The above code creates a DS list and then populates it with the slot names found at the position of the mouse in the room. It then loops through the slot list and resets the colour for the found slots to white with an alpha of 1 if the colour is not already white.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Slots.htm">Slots</a></div>
-        <div style="float:right">Next: <a href="skeleton_slot_alpha_get.htm">skeleton_slot_alpha_get</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 DS 목록을 만든 다음 방에서 마우스 위치에 있는 슬롯 이름으로 DS 목록을 채웁니다. 그런 다음 슬롯 목록을 반복하고 색상이 이미 흰색이 아닌 경우 발견된 슬롯의 색상을 알파 1과 함께 흰색으로 재설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Slots.htm">슬롯</a></div><div style="float:right"> 다음: <a href="skeleton_slot_alpha_get.htm"><span class="notranslate">skeleton_slot_alpha_get</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_slot_colour_get

@@ -4,86 +4,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Text in Sequences</title>
+  <title>시퀀스의 텍스트</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <meta name="template" content="../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Overview of text tracks in the Sequence Editor" />
-  <meta name="rh-index-keywords" content="Text, Sequences" />
-  <meta name="search-keywords" content="Text in Sequences, animate text" />
+  <meta name="topic-comment" content="시퀀스 편집기의 텍스트 트랙 개요" />
+  <meta name="rh-index-keywords" content="텍스트,시퀀스" />
+  <meta name="search-keywords" content="시퀀스의 텍스트,애니메이션 텍스트" />
 </head>
-<body>
-  <h1>Text in Sequences</h1>
-  <p>Text tracks can be added to a Sequence through the editor. This is done by selecting the <img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> <strong>Add a Text Track</strong> button from the Canvas Toolbox, and then clicking (and optionally dragging) in the Canvas to create a text track.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextOverview.png" /></p>
-  <p>This page covers the following topics:</p>
-  <ol class="Decimal">
-    <li><a href="#s1">Creating Text</a></li>
-    <li><a href="#s2">Modifying Text</a></li>
-    <li><a href="#s3">Font Assets</a></li>
-    <li><a href="#s4">Parameters</a></li>
-    <li><a href="#s5">Inspector</a></li>
-  </ol>
-  <h2 id="s1">Creating Text</h2>
-  <p>There are two ways of creating a text track. After selecting the <img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> <strong>Text</strong> tool from the Toolbox, you can:</p>
-  <ul class="colour">
-    <li><strong>Click once in the canvas</strong>: This creates an &quot;unwrapped&quot; text track. This means the text can be as long as you want and it will stay on one line. Wrapping can easily be enabled later through the <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a>.<br />
-      <video class="center" src="../../assets/Videos/AssetEditors/SeqTextUnwrapped.mp4" width="700" height="330" controls=""></video>
-    </li>
-    <li><strong>Click and drag in the canvas</strong>: This creates a &quot;wrapped&quot; text track, meaning the text only displays inside a frame. The size of this frame is set by dragging while creating the text track. Its size can also be changed later via parameter tracks or the Inspector. <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330" controls=""></video> It is recommended to use wrapped text tracks as it makes it much easier to align your text and get consistent results while animating.</li>
-  </ul>
-  <h2 id="s2">Modifying Text</h2>
-  <p>When you create a new text track, GameMaker opens the <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a> and automatically selects the <strong>Text</strong> field, allowing you to start writing your text.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextEditFromInspector.png" />To edit the text for a track at any time, simply select that track, go into the Inspector and modify the <strong>Text</strong> field again.</p>
-  <p class="note_heading">Resize Behaviour</p>
-  <p class="note">Resizing your text track in the Canvas will work differently depending on whether your text track is <strong>wrapped</strong> or <strong>unwrapped</strong>.<br />
-    <br />
-    If unwrapped, your text track will be scaled, similar to how you scale sprites and objects. However, resizing a <strong>wrapped</strong> text track modifies its <strong>frame size</strong> instead of modifying its scale values.<br />
-    <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextResizeBehaviour.png" />To scale a wrapped text track, use <a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360" href="The_Sequence_Canvas.htm#gizmos">Gizmos</a> instead, or edit the values in the Scale parameter track manually.
-  </p>
-  <h2 id="s3">Font Assets</h2>
-  <p>Text tracks are tied to <a href="../Fonts.htm">Font assets</a>. When you create a new text track, it will look for a font asset within your project, and use the one that was last added. If your project has no fonts, it will automatically create a new font asset.</p>
-  <p>When you delete a font, all text tracks that use that font are deleted as well, so ensure you don&#39;t accidentally delete font assets that are used in Sequences.</p>
-  <h2 id="s4">Parameters</h2>
-  <p>You can modify and animate all the usual parameters that are provided for a sprite track, like Position, Rotation, Scale, Origin and Colour Multiply. Using these parameters you can move and rotate your text, make it bigger or smaller, and change its colour and alpha.</p>
-  <p>There are some text-specific parameters provided as well, which can also be animated:<img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParameters.png" /></p>
-  <ul class="colour">
-    <li><strong>Character Spacing</strong>: This is the space between each character (in pixels).<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextCharacterSpacing.png" />
-    </li>
-    <li><strong>Line Spacing</strong>: This is the space between each line of text (in pixels).<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextLineSpacing.png" />
-    </li>
-    <li><strong>Paragraph Scaling</strong>: This is the space between each paragraph of text (in pixels). A new paragraph starts when you add a line break manually by pressing <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Enter.png" width="55" />.<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParagraphSpacing.png" />
-    </li>
-    <li><strong>Frame Size</strong>: This is the size of the text&#39;s frame, and is only used when <strong>Wrap</strong> is enabled in the Inspector (see its section below for more information).</li>
-  </ul>
-  <p> </p>
-  <h2 id="s5">Inspector</h2>
-  <p>There are some properties that can only be changed through the Inspector. Such properties cannot be animated as they are not parameter tracks, but simple options that apply to the whole track.</p>
-  <p>The Inspector shows you the following properties when a text track is selected:</p>
-  <p class="note"><span class="note">NOTE</span> The Inspector should open automatically when you create or select a text track, but if your Inspector is closed, you can open it manually from the <a href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows</a> menu at the top.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextInspector.png" /></p>
-  <p>Some of the parameter tracks (such as <strong>Colour</strong>, <strong>Character Spacing</strong>, <strong>Line Spacing</strong>, etc.) are included here, and changing them will create a keyframe at the playhead if <img class="icon" src="../../assets/Images/Icons/Icon_Seq_Record.png" /> <strong>Automatically record changes</strong> is enabled, or modify the selected keyframe. The rest of the options are &quot;static&quot; (as they cannot be animated) and are as follows:</p>
-  <ul class="colour">
-    <li>At the top it shows you the font asset that is selected. You can use this option to select an existing font asset, or create a new one and assign it to the selected text track.</li>
-    <li><strong>Text</strong>: This is the text that is displayed on your text track. You can enter multiple lines here, however empty lines will not be displayed.</li>
-    <li><strong>Alignment</strong>: Here you can change how your text is aligned within the frame horizontally (left, centre, right, justified) and vertically (bottom, top, middle). This only applies when the <strong>Wrap</strong> option is enabled.</li>
-    <li><strong>Wrap</strong>: This controls whether the text should automatically wrap within the defined frame. When this is enabled, your text will automatically move to the next line when it hits the end of the frame, and will always be cut off if the text happens to be longer than the height of the frame. When this is disabled, all of your text will be displayed on a single line, and the frame will not be displayed in the canvas anymore.</li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../Sequences.htm">Sequences</a></div>
-        <div>Next: <a data-xref="{title}" href="Clipping_Masks.htm">Clipping Masks</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><h1>시퀀스의 텍스트</h1><p> 텍스트 트랙은 편집기를 통해 시퀀스에 추가할 수 있습니다. 이것은 선택하여 수행됩니다.<img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> 캔버스 도구 상자에서 <strong>텍스트 트랙 버튼을 추가한</strong> 다음 캔버스를 클릭(및 선택적으로 드래그)하여 텍스트 트랙을 생성합니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextOverview.png" /></p><p> 이 페이지에서는 다음 항목을 다룹니다.</p><ol class="Decimal"><li> <a href="#s1">텍스트 만들기</a></li><li> <a href="#s2">텍스트 수정</a></li><li> <a href="#s3">글꼴 자산</a></li><li> <a href="#s4">매개변수</a></li><li> <a href="#s5">조사관</a></li></ol><h2 id="s1"> 텍스트 만들기</h2><p> 텍스트 트랙을 만드는 방법에는 두 가지가 있습니다. 선택 후<img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> 도구 상자의 <strong>텍스트</strong> 도구를 사용하여 다음을 수행할 수 있습니다.</p><ul class="colour"><li> <strong>캔버스에서 한 번 클릭</strong>: &quot;래핑되지 않은&quot; 텍스트 트랙을 만듭니다. 이것은 텍스트가 원하는 만큼 길어질 수 있고 한 줄에 유지됨을 의미합니다. 나중에 <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a> 를 통해 래핑을 쉽게 활성화할 수 있습니다. <br /><video class="center" src="../../assets/Videos/AssetEditors/SeqTextUnwrapped.mp4" width="700" height="330" controls=""></video></li><li> <strong>캔버스에서 클릭하고 끌기</strong>: &quot;감겨진&quot; 텍스트 트랙을 생성합니다. 즉, 텍스트는 프레임 내부에만 표시됩니다. 이 프레임의 크기는 텍스트 트랙을 만드는 동안 드래그하여 설정됩니다. 그 크기는 나중에 매개변수 트랙이나 인스펙터를 통해 변경할 수도 있습니다. <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330" controls=""></video> 줄 바꿈된 텍스트 트랙을 사용하면 애니메이션을 적용하는 동안 텍스트를 훨씬 쉽게 정렬하고 일관된 결과를 얻을 수 있으므로 사용하는 것이 좋습니다.</li></ul><h2 id="s2"> 텍스트 수정</h2><p> 새 텍스트 트랙을 생성하면 GameMaker는 <a href="../../IDE_Tools/The_Inspector.htm">검사기</a> 를 열고 자동으로 <strong>텍스트</strong> 필드를 선택하여 텍스트 쓰기를 시작할 수 있습니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextEditFromInspector.png" /> 언제든지 트랙의 텍스트를 편집하려면 해당 트랙을 선택하고 Inspector로 이동하여 <strong>Text</strong> 필드를 다시 수정하면 됩니다.</p><p class="note_heading"> 크기 조정 동작</p><p class="note"> 캔버스에서 텍스트 트랙의 크기를 조정하는 것은 텍스트 트랙이 <strong>래핑</strong> 되었는지 <strong>언</strong> 래핑되었는지에 따라 다르게 작동합니다.<br /><br /> 래핑을 해제하면 스프라이트 및 개체의 크기를 조정하는 방식과 유사하게 텍스트 트랙의 크기가 조정됩니다. 그러나 <strong>래핑된</strong> 텍스트 트랙의 크기를 조정하면 축척 값을 수정하는 대신 <strong>프레임 크기</strong> 가 수정됩니다.<br /><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextResizeBehaviour.png" /> 래핑된 텍스트 트랙의 배율을 조정하려면 대신 <a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360" href="The_Sequence_Canvas.htm#gizmos">기즈모</a> 를 사용하거나 배율 매개변수 트랙의 값을 수동으로 편집하십시오.</p><h2 id="s3"> 글꼴 자산</h2><p> 텍스트 트랙은 <a href="../Fonts.htm">글꼴 자산</a> 에 연결됩니다. 새 텍스트 트랙을 만들 때 프로젝트 내에서 글꼴 자산을 찾고 마지막으로 추가된 것을 사용합니다. 프로젝트에 글꼴이 없으면 새 글꼴 자산이 자동으로 생성됩니다.</p><p> 글꼴을 삭제하면 해당 글꼴을 사용하는 모든 텍스트 트랙도 삭제되므로 시퀀스에서 사용되는 글꼴 자산을 실수로 삭제하지 않도록 하십시오.</p><h2 id="s4"> 매개변수</h2><p> Position, Rotation, Scale, Origin 및 Color Multiply와 같이 스프라이트 트랙에 제공되는 모든 일반적인 매개변수를 수정하고 애니메이션할 수 있습니다. 이 매개변수를 사용하여 텍스트를 이동 및 회전하고, 더 크거나 작게 만들고, 색상과 알파를 변경할 수 있습니다.</p><p> 애니메이션을 적용할 수도 있는 일부 텍스트 관련 매개변수도 제공됩니다.<img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParameters.png" /></p><ul class="colour"><li> <strong>문자 간격</strong>: 각 문자 사이의 간격(픽셀)입니다.<br /><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextCharacterSpacing.png" /></li><li> <strong>줄 간격</strong>: 각 텍스트 줄 사이의 간격(픽셀)입니다.<br /><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextLineSpacing.png" /></li><li> <strong>단락 크기 조정</strong>: 텍스트의 각 단락 사이의 간격(픽셀 단위)입니다. 를 눌러 수동으로 줄 바꿈을 추가하면 새 단락이 시작됩니다.<img class="icon" height="20" src="../../assets/Images/Icons/Icon_Enter.png" width="55" />.<br /><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParagraphSpacing.png" /></li><li> <strong>프레임 크기</strong>: 이것은 텍스트 프레임의 크기이며 인스펙터에서 줄 <strong>바꿈</strong> 이 활성화된 경우에만 사용됩니다(자세한 내용은 아래 섹션 참조).</li></ul><p></p><h2 id="s5"> 조사관</h2><p> Inspector를 통해서만 변경할 수 있는 속성이 있습니다. 이러한 속성은 매개변수 트랙이 아니라 전체 트랙에 적용되는 간단한 옵션이므로 애니메이션할 수 없습니다.</p><p> Inspector는 텍스트 트랙을 선택하면 다음 속성을 보여줍니다.</p><p class="note"> <span class="note">참고</span> Inspector는 텍스트 트랙을 생성하거나 선택할 때 자동으로 열려야 하지만 Inspector가 닫혀 있으면 상단의 <a href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows</a> 메뉴에서 수동으로 열 수 있습니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextInspector.png" /></p><p> 일부 매개변수 트랙(예: <strong>Color</strong>, <strong>Character Spacing</strong>, <strong>Line Spacing</strong> 등)이 여기에 포함되며 변경하면 재생 헤드에 키프레임이 생성됩니다.<img class="icon" src="../../assets/Images/Icons/Icon_Seq_Record.png" /> <strong>변경 사항 자동 기록</strong> 이 활성화되거나 선택한 키프레임을 수정합니다. 나머지 옵션은 &quot;정적&quot;이며(애니메이션할 수 없기 때문에) 다음과 같습니다.</p><ul class="colour"><li> 상단에는 선택한 글꼴 자산이 표시됩니다. 이 옵션을 사용하여 기존 글꼴 자산을 선택하거나 새 글꼴 자산을 만들어 선택한 텍스트 트랙에 할당할 수 있습니다.</li><li> <strong>텍스트</strong>: 텍스트 트랙에 표시되는 텍스트입니다. 여기에 여러 줄을 입력할 수 있지만 빈 줄은 표시되지 않습니다.</li><li> <strong>정렬</strong>: 여기에서 텍스트가 프레임 내에서 수평(왼쪽, 중앙, 오른쪽, 양쪽 맞춤) 및 수직(하단, 상단, 가운데) 정렬 방식을 변경할 수 있습니다. <strong>랩</strong> 옵션이 활성화된 경우에만 적용됩니다.</li><li> 줄 <strong>바꿈</strong>: 텍스트가 정의된 프레임 내에서 자동으로 줄바꿈할지 여부를 제어합니다. 이 기능이 활성화되면 텍스트가 프레임 끝에 도달할 때 자동으로 다음 줄로 이동하고 텍스트가 프레임 높이보다 긴 경우 항상 잘립니다. 이것이 비활성화되면 모든 텍스트가 한 줄에 표시되고 프레임이 더 이상 캔버스에 표시되지 않습니다.</li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="../Sequences.htm">시퀀스</a></div><div> 다음: <a data-xref="{title}" href="Clipping_Masks.htm">클리핑 마스크</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
 </body>
 </html>

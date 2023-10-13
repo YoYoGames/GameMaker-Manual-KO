@@ -6,59 +6,13 @@
   <title>path_rescale</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_rescale" />
+  <meta name="topic-comment" content="path_rescale 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_rescale" />
   <meta name="search-keywords" content="path_rescale" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_rescale</h1>
-  <p>This function can be used to re-scale the given path along both (or either) the vertical and horizontal axis, basically moving each of the path points to a new position corresponding to this scale around the centre of the path. <strong>This function changes the actual path asset</strong>,
-    and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span>    to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_rescale(index, xscale, yscale);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to scale.</td>
-     </tr>
-      <tr>
-        <td>xscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>What to multiply the current horizontal scale by. Default scale is 1.</td>
-     </tr>
-      <tr>
-        <td>yscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>What to multiply the current vertical scale by. Default scale is 1.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">path_rescale(pth_AI, 3, 3);</p>
-  <p>This would re-scale the given path to three times its original size.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_set_closed.htm">path_set_closed</a></div>
-        
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_rescale</h1><p> 이 기능은 세로 및 가로 축 모두(또는 둘 중 하나)를 따라 지정된 경로의 크기를 다시 조정하는 데 사용할 수 있으며 기본적으로 각 경로 포인트를 경로 중심 주위의 이 비율에 해당하는 새 위치로 이동합니다. <strong>이 함수는 실제 경로 자산을 변경</strong> 하므로 함수가 사용되는 순간부터 게임이 끝날 때까지 게임의 모든 인스턴스에서 경로가 사용되는 방식에 영구적으로 영향을 미칩니다. 이것이 필요한 것이 아닌 경우 다음과 같은 기능을 사용해야 합니다. <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p></p><h4> 통사론:</h4><p class="code">path_rescale(index, xscale, yscale);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to scale.</span></td></tr><tr><td> <span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">What to multiply the current horizontal scale by. Default scale is 1.</span></td></tr><tr><td> <span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">What to multiply the current vertical scale by. Default scale is 1.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">path_rescale(pth_AI, 3, 3);</p><p> 이렇게 하면 지정된 경로가 원래 크기의 3배로 다시 조정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_set_closed.htm"><span class="notranslate">path_set_closed</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 path_scale

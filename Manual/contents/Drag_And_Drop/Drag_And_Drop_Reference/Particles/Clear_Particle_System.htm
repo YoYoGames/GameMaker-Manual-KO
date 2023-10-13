@@ -3,50 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Clear Particle System</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>투명 입자 시스템</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Clear Particle System action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Clear Particle System" />
-  <meta name="search-keywords" content="Clear Particle System" />
+  <meta name="topic-comment" content="Clear Particle System 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 클리어 파티클 시스템" />
+  <meta name="search-keywords" content="투명 입자 시스템" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Clear Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png" width="32" /> Clear Particle System</h1>
-  <p>With this action you can clear the given particle system to its <b>default</b> state, removing all emitters (there is also no need to call the <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a> action as this is taken care of automatically) and clearing all particles from the screen. You supply the unique ID value for the system to clear, as returned when you created the system with the action <a href="Create_Particle_System.htm">Create Particle System</a>. Care must be taken when using this action since it destroys all the emitters associated with the particle system - this means that any instance in the room that uses an emitter may give an error as that emitter no longer exists, so make sure that the action is only called when you are not going to be creating any new particles from that emitter (for more information on particle emitters see <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action will only <b>clear</b> the visible particles in the room, but it does not clear the particle properties nor does it remove them from memory. For that you should use the action <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Clear Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Clear_Particle_System.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td>The unique ID value for the system to be destroyed</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Clear Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Clear_Particle_System.png" />The above action block code will clear all the particles from the screen if the player has 0 or less lives and then restart the room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Pause_Particle_System.htm">Pause Particle System</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Clear Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png" width="32" /> 투명 입자 시스템</h1><p> 이 작업으로 주어진 파티클 시스템을 <b>기본</b> 상태로 지우고 모든 이미터를 제거하고(자동으로 처리되기 때문에 <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a> 액션을 호출할 필요도 없음) 화면에서 모든 파티클을 지울 수 있습니다. <a href="Create_Particle_System.htm">Create Particle System</a> 작업으로 시스템을 만들 때 반환된 대로 지울 시스템의 고유 ID 값을 제공합니다. 이 작업을 사용할 때는 파티클 시스템과 관련된 모든 에미터를 파괴하므로 주의해야 합니다. 즉, 에미터를 사용하는 방의 인스턴스는 해당 에미터가 더 이상 존재하지 않기 때문에 오류가 발생할 수 있으므로 작업이 다음과 같은지 확인하십시오. 해당 이미터에서 새 파티클을 생성하지 않을 때만 호출됩니다(파티클 이미터에 대한 자세한 내용은 파티클 이미터 <a href="Create_Particle_Emitter.htm">생성</a> 참조).</p><p class="note"> <b>참고</b>: 이 작업은 방에서 보이는 입자만 <b>지우지</b> 만 입자 속성을 지우거나 메모리에서 제거하지 않습니다. 이를 위해서는 <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a> 작업을 사용해야 합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Clear Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Clear_Particle_System.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">System</span></td><td> 파기할 시스템의 고유 ID 값</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Clear Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Clear_Particle_System.png" /> 위의 액션 블록 코드는 플레이어의 생명이 0 이하인 경우 화면에서 모든 입자를 지운 다음 방을 다시 시작합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Pause_Particle_System.htm">입자 시스템 일시 중지</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Clear Particle System

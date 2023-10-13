@@ -6,86 +6,13 @@
   <title>exception_unhandled_handler</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for exception_unhandled_handler" />
+  <meta name="topic-comment" content="exception_unhandled_handler에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="exception_unhandled_handler" />
   <meta name="search-keywords" content="exception_unhandled_handler" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>exception_unhandled_handler</h1>
-  <p>This runtime function can be used to &quot;take over&quot; the default <span data-keyref="GameMaker Name">GameMaker</span> error message when a runtime exception occurs. You supply a method or function which is called when the exception occurs, and its first argument will be a struct (known as the <strong><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Exception Struct</a></span></strong>) containing information about the exception. This struct has the following format:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Exception Struct</a></span></th>
-      </tr>
-      <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">message</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A short message for the exception</td>
-      </tr>
-      <tr>
-        <td><span class="inline">longMessage</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A longer message for the exception</td>
-      </tr>
-      <tr>
-        <td><span class="inline">script</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A string that describes where the exception came from</td>
-      </tr>
-      <tr>
-        <td><span class="inline">line</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The line number where the exception came from</td>
-      </tr>
-      <tr>
-        <td><span class="inline">stacktrace</span></td>
-        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span>s</td>
-        <td>An array of strings that is the <a href="debug_get_callstack.htm">callstack</a> for the frame when the exception was generated</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>You can also supply <span class="inline">undefined</span> as the argument, which will remove the custom exception handler (if set) and revert to <span data-keyref="GameMaker Name">GameMaker</span>&#39;s default error message.</p>
-  <p>This function will return the previously set exception handler method, however if it was never changed or it was previously reset using <span class="inline">undefined</span>, then it will simply return <span class="inline">undefined</span>.</p>
-  <p>Passing a method to this function means that no error message will be shown to the user, and you will be allowed to handle the exception yourself. However you cannot use this to &quot;break out&quot; of the exception to continue your game, as the game will still close after the exception handler is called. You also cannot call functions that keep the game running for longer than the final frame (e.g. <span class="inline"><a href="../General_Game_Control/game_restart.htm">game_restart()</a></span>) as the game needs to close after the crash.</p>
-  <p>Note that the context for running the method is <i>not</i> in an event, so nothing can be rendered to the screen at this time. In general, the safest thing that could be done at this point is to save a file with the exception context information so it could be - for example - parsed and processed on the next run of the game and then dealt with.</p>
-  <p>Note that if you use the <span class="inline">return</span> statement in the supplied method, then the given value will be converted to an integer and used as the exit code from the runner.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">exception_unhandled_handler(user_handler);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>user_handler</td>
-        <td><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></span></td>
-        <td>The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> to reset it to default.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></span> (or <span data-keyref="Type_Undefined"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">undefined</a></span>)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">exception_unhandled_handler(function(ex)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>exception_unhandled_handler</h1><p> 이 런타임 기능은 런타임 예외가 발생할 때 기본 <span data-keyref="GameMaker Name">GameMaker</span> 오류 메시지를 &quot;인계&quot;하는 데 사용할 수 있습니다. 예외가 발생할 때 호출되는 메서드나 함수를 제공하고, 첫 번째 인수는 예외에 대한 정보를 포함하는 구조체( <strong><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Exception Struct</a></span></strong> 로 알려짐)가 됩니다. 이 구조체의 형식은 다음과 같습니다.</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th colspan="3"> <span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">예외 구조체</a></span></th></tr><tr><th> 변하기 쉬운</th><th> 유형</th><th> 설명</th></tr><tr><td><span class="inline">message</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">끈</a></span></td><td> 예외에 대한 짧은 메시지</td></tr><tr><td><span class="inline">longMessage</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">끈</a></span></td><td> 예외에 대한 더 긴 메시지</td></tr><tr><td><span class="inline">script</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">끈</a></span></td><td> 예외가 발생한 위치를 설명하는 문자열</td></tr><tr><td><span class="inline">line</span></td><td> <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">진짜</a></span></td><td> 예외가 발생한 줄 번호</td></tr><tr><td><span class="inline">stacktrace</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">문자열</a></span> <span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">배열</a></span></td><td> 예외가 생성되었을 때 프레임에 대한 <a href="debug_get_callstack.htm">호출 스택</a> 인 문자열 배열</td></tr></tbody></table><p> 당신은 또한 공급할 수 있습니다 <span class="inline">undefined</span> 사용자 정의 예외 처리기(설정된 경우)를 제거하고 <span data-keyref="GameMaker Name">GameMaker</span> 의 기본 오류 메시지로 되돌리는 인수로 사용합니다.</p><p> 이 함수는 이전에 설정된 예외 처리기 메서드를 반환하지만 변경되지 않았거나 다음을 사용하여 이전에 재설정된 경우 <span class="inline">undefined</span>, 그러면 단순히 반환됩니다. <span class="inline">undefined</span>.</p><p> 이 함수에 메서드를 전달하면 사용자에게 오류 메시지가 표시되지 않으며 예외를 직접 처리할 수 있습니다. 그러나 예외 처리기가 호출된 후에도 게임이 계속 닫히기 때문에 이것을 사용하여 예외를 &quot;해제&quot;하여 게임을 계속할 수는 없습니다. 또한 최종 프레임보다 더 오래 게임을 실행하는 함수를 호출할 수 없습니다(예:<span class="inline"><a href="../General_Game_Control/game_restart.htm">game_restart()</a></span> ) 충돌 후 게임을 닫아야 하기 때문입니다.</p><p> 메서드를 실행하기 위한 컨텍스트는 이벤트에 <i>있지 않으므로</i> 현재 화면에 아무 것도 렌더링할 수 없습니다. 일반적으로 이 시점에서 할 수 있는 가장 안전한 방법은 예외 컨텍스트 정보와 함께 파일을 저장하는 것입니다. 예를 들어 다음 게임 실행 시 구문 분석 및 처리된 다음 처리될 수 있습니다.</p><p> 사용하는 경우 참고하세요. <span class="inline">return</span> 제공된 메서드에서 문을 입력하면 지정된 값이 정수로 변환되어 러너의 종료 코드로 사용됩니다.</p><p></p><h4> 통사론:</h4><p class="code">exception_unhandled_handler(user_handler);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">user_handler</span></td><td> <span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">방법</a></span></td><td> <span class="notranslate">The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> to reset it to default.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></span> (or <span data-keyref="Type_Undefined"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">undefined</a></span>)</p><p></p><h4> 예시:</h4><p class="code">exception_unhandled_handler(function(ex)<br />
     {<br />
         // Print some messages to the output log<br />
         show_debug_message( &quot;--------------------------------------------------------------&quot;);<br />
@@ -103,18 +30,7 @@
     <br />
         return 0;<br />
     });
-  </p>
-  <p>The above code will create an exception handler method and use it to save a file with the exception data; it will also show the long error message in a new pop-up window for debug purposes.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="get_integer.htm">get_integer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 예외 처리기 메서드를 만들고 이를 사용하여 예외 데이터가 있는 파일을 저장합니다. 또한 디버그 목적으로 새 팝업 창에 긴 오류 메시지가 표시됩니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Debugging.htm">디버깅</a></div><div style="float:right"> 다음: <a href="get_integer.htm"><span class="notranslate">get_integer</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 exception_unhandled_handler

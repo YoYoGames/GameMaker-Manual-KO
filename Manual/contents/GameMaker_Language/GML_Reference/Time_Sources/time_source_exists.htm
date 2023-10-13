@@ -7,63 +7,20 @@
   <title>time_source_exists</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for time_source_exists" />
+  <meta name="topic-comment" content="time_source_exists에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="time_source_exists" />
   <meta name="search-keywords" content="time_source_exists" />
 </head>
-<body>
-  <h1>time_source_exists</h1>
-  <p>This function returns whether the given ID is a valid <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
-  <p>If the <span data-keyref="Type_Resource_TimeSource">Time Source</span> was <a href="time_source_destroy.htm">destroyed</a>, this will return <span class="inline2">false</span>, however if the <span data-keyref="Type_Resource_TimeSource">Time Source</span> was <a href="time_source_stop.htm">stopped</a> or it merely expired, it will continue to exist, meaning this function returns <span class="inline2">true</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">time_source_exists(id);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></td>
-        <td>The <span data-keyref="Type_Resource_TimeSource">Time Source</span> to check</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (time_source_exists(global.spawn_time_source))<br />
+<body><h1>time_source_exists</h1><p> 이 함수는 주어진 ID가 유효한 <span data-keyref="Type_Resource_TimeSource">시간 소스</span> 인지 여부를 반환합니다.</p><p> <span data-keyref="Type_Resource_TimeSource">Time Source</span> 가 <a href="time_source_destroy.htm">소멸된</a> 경우 <span class="inline2">false</span> 를 반환하지만 <span data-keyref="Type_Resource_TimeSource">Time Source</span> 가 <a href="time_source_stop.htm">중지</a> 되었거나 만료된 경우 계속 존재하므로 이 함수는 <span class="inline2">true</span> 를 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">time_source_exists(id);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">시간 소스 ID</a></span></td><td> <span class="notranslate">The <span data-keyref="Type_Resource_TimeSource">Time Source</span> to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if (time_source_exists(global.spawn_time_source))<br />
     {<br />
         if (keyboard_check_pressed(vk_space))<br />
         {<br />
             time_source_destroy(global.spawn_time_source);<br />
         }<br />
-    }</p>
-  <p>This code checks if a <span data-keyref="Type_Resource_TimeSource">Time Source</span> exists. If it does, it checks if the Space key was pressed.</p>
-  <p>In that case, it destroys the <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a></div>
-        <div>Next: <a data-xref="{title}" href="time_source_get_children.htm">time_source_get_children</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 이 코드는 <span data-keyref="Type_Resource_TimeSource">시간 소스</span> 가 존재하는지 확인합니다. 그렇다면 Space 키를 눌렀는지 확인합니다.</p><p> 그 경우, <span data-keyref="Type_Resource_TimeSource">타임 소스</span> 를 파괴합니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Time_Sources.htm">시간 소스</a></div><div> 다음: <a data-xref="{title}" href="time_source_get_children.htm">time_source_get_children</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 time_source_exists

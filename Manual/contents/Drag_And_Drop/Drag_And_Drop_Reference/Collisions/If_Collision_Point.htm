@@ -3,83 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Collision Point</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>충돌 지점인 경우</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the If Collision Point action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - If Collision Point" />
-  <meta name="search-keywords" content="If Collision Point" />
+  <meta name="topic-comment" content="If Collision Point 액션을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 충돌 지점인 경우" />
+  <meta name="search-keywords" content="충돌 지점인 경우" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Collision Point Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Point.png" /> If Collision Point</h1>
-  <p>This action is used to check and see if there is a collision with one or more instances of the given object(s) at a specific point in the room and will evaluate to <span class="inline">true</span> if a collision is detected, or <span class="inline">false</span> otherwise. You give the object to check for and the position to check at - which can be an absolute position in the room or a position relative to the instance - and you can also check the <b>Not</b> flag to check if there is <i>not</i> a collision at the given position, meaning that the action will then only evaluate as <span class="inline">true</span> if <i>no</i> collisions are found, otherwise it will evaluate as <span class="inline">false</span>. You can also set the <b>Exclude Self</b> option to exclude the calling instance from the collision check.</p>
-  <p>Next you can check/uncheck the option to <b>Return List</b>. Checking this means the action will create and populate a <a href="../Data_Structures/Data_Structure_Actions.htm">list</a><span> </span>data structure with <i>all</i> instances in collision with the point and set the <b>Target</b> variable to the DS list ID. When unchecked, it will only set the <b>Target</b> variable to a value less than 0 when no collision is detected, or the unique ID value of <i>one</i> of the instances in the collision (note that if multiple instances are in collision then you have no way of knowing which instance ID will be returned when not using a list).</p>
-  <p>If you have selected to return a list - and the Target variable is <i>not</i> set to <b>Temp</b> - then you can also select the <b>Free Target</b> option. When set to <span class="inline">true</span>, then the list contained in the target variable will be destroyed and a new list created (and returned to the target variable) each time you call the action. In this way you can re-use the same variable without worrying about memory leaks, as, if you do <i>not</i> check <b>Free Target</b> option, you become responsible for destroying the list before using the variable again in the action. Note that <i>regardless</i> of whether this option is checked or not, if you have set the action to <b>Return List</b>, then the target variable will <i>always contain a list ID</i>, and as such, this will need to be freed when the instance is destroyed or the room ends (you can use the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a> event for this, for example, along with the <a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a><span> </span>action). It is worth noting that you can set the <b>Free Target</b> option to use a pre-defined variable or an expression and so control when the list data structure is freed by setting the variable elsewhere (or having different outcomes for the expression) as long as it evaluates to <span class="inline">true</span>/<span class="inline">false</span>.</p>
-  <p>Finally, you supply the <b>Target</b> variable that you want to hold the returned value or list ID. If you flag the Target variable to hold the returned value as being a <b>Temp</b> (local) variable, then the action will create this variable to hold the return value <i>only</i> until the end of the event, in this case the Free Target option does nothing and you will be responsible for destroying the DS list if that option has been checked. If no target variable is supplied and the <b>Return List</b> option is checked, no list will be created.</p>
-  <p class="note"><b>IMPORTANT!</b> Collisions will only register for those instances that have a valid collision mask, ie: they have a sprite assigned to the <span class="inline">sprite_index</span>, or a sprite assigned to the <span class="inline">mask_index</span>. If the instances of the object being checked for in this action have no collision mask then the collision will not be detected, regardless of what the instance is drawing at the time.</p>
-  <p>Note that to add actions into an &quot;<span class="inline">if</span>&quot; block, they should be dropped to the <i>side</i> of the action, as shown in the image below:</p>
-  <p><img alt="If Collision Point drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Point.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="If Collision Point Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Point.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Object</td>
-        <td>The object or instance to check for collisions. You can click the <img class="icon" src="../../../assets/Images/Icons/Icon_AddVisualItem.png" /> icon to add multiple objects to check collisions with.</td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x position to check</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y position to check</td>
-      </tr>
-      <tr>
-        <td>Exclude Self</td>
-        <td>Whether the collision checker should ignore the current instance or not</td>
-      </tr>
-      <tr>
-        <td>Not</td>
-        <td>Used to invert the condition; only satisfies if a collision is <strong>not</strong> found</td>
-      </tr>
-      <tr>
-        <td>Return List</td>
-        <td>Whether a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">list</a> of collisions should be returned in <strong>Target</strong>, or only the first collision</td>
-      </tr>
-      <tr>
-        <td>Free Target</td>
-        <td>Can be set to a variable or expression, or set to <span class="inline">true</span>/<span class="inline">false</span> to control freeing of the list memory when re-using a list variable</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The variable to target for the return value of the action</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If Collision Point Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Point.png" />The above action block code checks for a collision at the mouse x/y position with an instance of the object &quot;obj_Enemy&quot;. If one (or more) collisions is found, an effect is created and at the position of the instance with the ID stored in the Target variable, and then the instance is destroyed. If no collision is found, a different effect is created at the mouse position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Collision_Actions.htm">Collision Actions</a></div>
-        <div style="float:right">Next: <a href="If_Any_Object_At_Place.htm">If Any Object At Place</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If Collision Point Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Point.png" /> 충돌 지점인 경우</h1><p> 이 작업은 방의 특정 지점에서 주어진 개체의 하나 이상의 인스턴스와 충돌이 있는지 확인하고 확인하는 데 사용되며 다음과 같이 평가됩니다. <span class="inline">true</span> 충돌이 감지되거나 <span class="inline">false</span> 그렇지 않으면. 검사할 객체와 검사할 위치를 지정합니다. 이 위치는 방의 절대 위치 또는 인스턴스에 상대적인 위치일 수 있습니다. 또한 <b>Not</b> 플래그를 검사하여 주어진 위치에 충돌이 <i>없는지</i> 확인할 수도 있습니다. 즉, 액션은 다음과 같이 평가됩니다. <span class="inline">true</span> 충돌이 발견 <i>되지</i> 않으면 다음과 같이 평가됩니다. <span class="inline">false</span>. 충돌 검사에서 호출 인스턴스를 제외하도록 <b>Exclude Self</b> 옵션을 설정할 수도 있습니다.</p><p> 다음으로 <b>Return List</b> 옵션을 선택/선택 취소할 수 있습니다. 이 항목을 선택하면 작업이 <a href="../Data_Structures/Data_Structure_Actions.htm">목록</a> 을 만들고 채웁니다.<span> </span><i>모든</i> 인스턴스가 포인트와 충돌하는 데이터 구조를 만들고 <b>Target</b> 변수를 DS 목록 ID로 설정합니다. 선택하지 않으면 충돌이 감지되지 않은 경우에만 <b>Target</b> 변수를 0보다 작은 값으로 설정하거나 충돌에 있는 인스턴스 <i>중 하나</i> 의 고유 ID 값으로 설정합니다(여러 인스턴스가 충돌하는 경우 목록을 사용하지 않을 때 반환될 인스턴스 ID를 알고 있음).</p><p> 목록을 반환하도록 선택하고 Target 변수가 <b>Temp</b> 로 설정 <i>되지 않은</i> 경우 <b>Free Target</b> 옵션을 선택할 수도 있습니다. 로 설정하면 <span class="inline">true</span>, 그러면 대상 변수에 포함된 목록이 삭제되고 작업을 호출할 때마다 새 목록이 생성되고 대상 변수로 반환됩니다. 이런 식으로 메모리 누수에 대해 걱정하지 않고 동일한 변수를 재사용할 수 있습니다. <b>Free Target</b> 옵션을 선택하지 <i>않으면</i> 액션에서 변수를 다시 사용하기 전에 목록을 파괴하는 책임이 있기 때문입니다. 이 옵션이 선택되었는지 여부에 <i>관계없이</i> 작업을 <b>Return List</b> 로 설정한 경우 대상 변수에는 <i>항상 목록 ID가 포함</i> 되므로 인스턴스가 파괴되거나 방 끝(예를 들어 <a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a> 와 함께 <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a> 이벤트를 사용할 수 있습니다.<span> </span>동작). 미리 정의된 변수 또는 표현식을 사용하도록 <b>자유 대상</b> 옵션을 설정할 수 있으므로 변수를 다른 곳에 설정하여(또는 표현식에 대해 다른 결과를 갖는) 목록 데이터 구조가 해제되는 시기를 제어할 수 있다는 점은 주목할 가치가 있습니다. 평가하다 <span class="inline">true</span> /<span class="inline">false</span>.</p><p> 마지막으로 반환된 값 또는 목록 ID를 보유하려는 <b>대상</b> 변수를 제공합니다. 반환된 값을 <b>임시</b> (로컬) 변수로 유지하도록 Target 변수에 플래그를 지정하면 작업은 이벤트가 끝날 때 <i>까지만</i> 반환 값을 유지하도록 이 변수를 생성합니다. 이 경우 Free Target 옵션은 아무 작업도 수행하지 않고 해당 옵션이 선택된 경우 DS 목록을 파기할 책임이 있습니다. 대상 변수가 제공되지 않고 목록 <b>반환</b> 옵션이 선택되어 있으면 목록이 생성되지 않습니다.</p><p class="note"> <b>중요한!</b> 충돌은 유효한 충돌 마스크가 있는 인스턴스에 대해서만 등록됩니다. 예: 인스턴스에 할당된 스프라이트가 있습니다. <span class="inline">sprite_index</span>, 또는 할당된 스프라이트 <span class="inline">mask_index</span>. 이 작업에서 검사 중인 개체의 인스턴스에 충돌 마스크가 없으면 해당 인스턴스가 그 당시에 무엇을 그리는지에 관계없이 충돌이 감지되지 않습니다.</p><p> &quot;에 작업을 추가하려면<span class="inline">if</span> &quot; 블록은 아래 이미지와 같이 작업 <i>옆</i> 에 놓아야 합니다.</p><p><img alt="If Collision Point drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Point.png" /></p><p></p><h4> 동작 구문:</h4><p><img alt="If Collision Point Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Point.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Shape</span></td><td> 사용할 모양</td></tr><tr><td> <span class="notranslate">Object</span></td><td> 인스턴스를 확인할 개체</td></tr><tr><td> <span class="notranslate">x1</span></td><td> 시작할 x 위치</td></tr><tr><td> <span class="notranslate">y1</span></td><td> 시작할 y 위치</td></tr><tr><td> <span class="notranslate">x2</span></td><td> 끝나는 x 위치</td></tr><tr><td> <span class="notranslate">y2</span></td><td> 끝나는 y 위치</td></tr><tr><td> <span class="notranslate">Free Target</span></td><td> 변수 또는 표현식으로 설정하거나 다음으로 설정할 수 있습니다. <span class="inline">true</span> /<span class="inline">false</span> 목록 변수를 재사용할 때 목록 메모리 해제를 제어하기 위해</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 작업의 반환 값을 대상으로 하는 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="If Collision Point Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Point.png" /> 위의 액션 블록 코드는 &quot;obj_Enemy&quot; 개체의 인스턴스와 마우스 x/y 위치의 충돌을 확인합니다. 하나 이상의 충돌이 발견되면 Target 변수에 ID가 저장된 인스턴스 위치에 효과가 생성된 다음 인스턴스가 소멸됩니다. 충돌이 발견되지 않으면 마우스 위치에 다른 효과가 생성됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Collision_Actions.htm">충돌 동작</a></div><div style="float:right"> 다음: <a href="If_Any_Object_At_Place.htm">물체가 제자리에 있는 경우</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Collision Point

@@ -3,56 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Particle Type</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>입자 유형 생성</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Create Particle Type action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Particle Type" />
-  <meta name="search-keywords" content="Create Particle Type" />
+  <meta name="topic-comment" content="입자 유형 생성 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 입자 유형 생성" />
+  <meta name="search-keywords" content="입자 유형 생성" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /> Create Particle Type</h1>
-  <p>In your projects you can have multiple different particle <i>types</i>, each with their own properties like direction and colour, etc... which are set using the different particle type actions. However you first need to create a <b>particle type</b> using this action, which essentially allocates a small amount of memory to hold all the particle details so that you can use the particles at any time in the future. You give a variable to hold the unique ID value for the particle type, and then in all future actions relating to this particle you can call the variable. You can choose to flag this variable as being a temporary local variable, but that will mean that it is discarded at the end of the action script or event, meaning that the particle type will still exist but leave you without any means to access it, so care must be taken when using this (in general particle types will never need to be stored in a temporary local variable, but for certain things, like drawing particles to a surface, it may be required).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> A particle type, once created, remains resident in the system memory for the duration of the game, and so if you need to recreate it at any point (for example, if you call the <a href="../Game/Restart_Game.htm">Restart Game</a> action), then you <b>must destroy the current particle type</b> otherwise you get a memory leak. This happens when a resource is added to memory and then &quot;de-referenced&quot;, meaning that <span data-keyref="GameMaker Name">GameMaker</span> has no way to interact with that resource any more. This leads to the memory being clogged by inaccessible resources which in turn can cause issues with your game. To destroy a particle type when no longer required use the action <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a>.</p>
-  <p>You can also set the <b>Blend</b> mode to be used for the particles. By default they will be drawn with a &quot;normal&quot; blend mode, so colours will not be modified by what was drawn underneath the particle, however when the &quot;Blend&quot; option is enabled, they will be drawn using <i>additive</i> blending, which means that things will be drawn with changes to the colours based on what was drawn under the particle. Additive blending gives very bright and &quot;glowing&quot; effects, and is ideal for explosions, lasers, fire, etc. while normal blending is better for things like rain, smoke, and debris effects. The image below shows the same effect with additive blending off (left) and on (right):</p>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Blending.gif" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Particle Type Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_Type.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned type ID value</td>
-      </tr>
-      <tr>
-        <td>Blend</td>
-        <td>Whether the particle type should use additive blending</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /> 입자 유형 생성</h1><p> 프로젝트에서 방향 및 색상 등과 같은 고유한 속성을 가진 여러 개의 서로 다른 입자 <i>유형</i> 을 가질 수 있습니다. 이 유형은 서로 다른 입자 유형 작업을 사용하여 설정됩니다. 그러나 먼저 이 작업을 사용하여 <b>입자 유형</b> 을 만들어야 합니다. 기본적으로 모든 입자 세부 정보를 보유하기 위해 소량의 메모리를 할당하므로 나중에 언제든지 입자를 사용할 수 있습니다. 입자 유형에 대한 고유한 ID 값을 보유하는 변수를 제공하면 이 입자와 관련된 모든 향후 작업에서 변수를 호출할 수 있습니다. 이 변수를 임시 로컬 변수로 플래그 지정하도록 선택할 수 있지만 이는 작업 스크립트 또는 이벤트가 끝날 때 삭제됨을 의미합니다. 즉, 입자 유형은 여전히 존재하지만 액세스할 수단이 없습니다. 따라서 이것을 사용할 때 주의를 기울여야 합니다(일반적으로 입자 유형은 임시 로컬 변수에 저장할 필요가 없지만 표면에 입자를 그리는 것과 같은 특정 항목의 경우 필요할 수 있습니다).</p><p class="note"> <b>참고</b>: 파티클 유형은 한 번 생성되면 게임이 진행되는 동안 시스템 메모리에 남아 있으므로 언제든지 다시 생성해야 하는 경우(예: <a href="../Game/Restart_Game.htm">게임 다시 시작</a> 작업을 호출하는 경우) <b>제거해야 합니다</b>. <b>현재 입자 유형</b> 이 아니면 메모리 누수가 발생합니다. 이것은 리소스가 메모리에 추가된 다음 &quot;역참조&quot;될 때 발생합니다. 즉, <span data-keyref="GameMaker Name">GameMaker</span> 는 더 이상 해당 리소스와 상호 작용할 수 없습니다. 이로 인해 액세스할 수 없는 리소스로 인해 메모리가 막혀 게임에 문제가 발생할 수 있습니다. 더 이상 필요하지 않을 때 입자 유형을 제거하려면 <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a> 작업을 사용합니다.</p><p> 입자에 사용할 <b>혼합</b> 모드를 설정할 수도 있습니다. 기본적으로 &quot;일반&quot; 블렌드 모드로 그려지므로 입자 아래에 그려진 색상으로 색상이 수정되지 않습니다. 그러나 &quot;블렌드&quot; 옵션이 활성화되면 <i>추가</i> 블렌딩을 사용하여 그려집니다. 즉, 입자 아래에 그려진 내용을 기반으로 색상이 변경되어 그려집니다. 애디티브 블렌딩은 매우 밝고 &quot;빛나는&quot; 효과를 제공하며 폭발, 레이저, 화재 등에 이상적이며 일반 블렌딩은 비, 연기 및 파편 효과에 더 좋습니다. 아래 이미지는 애디티브 블렌딩을 끔(왼쪽)과 켬(오른쪽)에서 동일한 효과를 보여줍니다.</p><p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Blending.gif" /></p><p></p><h4> 동작 구문:</h4><p><img alt="Create Particle Type Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_Type.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 유형 ID 값을 보유할 대상 변수</td></tr><tr><td> <span class="notranslate">Blend</span></td><td> 입자 유형이 첨가제 혼합을 사용해야 하는지 여부</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" /> 위의 작업 블록 코드는 새 입자 유형을 만들고 고유 ID 값을 전역 변수에 할당합니다. 그런 다음 입자 유형에 대한 모든 속성을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Destroy_Particle_Type.htm">입자 유형 파괴</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Particle Type

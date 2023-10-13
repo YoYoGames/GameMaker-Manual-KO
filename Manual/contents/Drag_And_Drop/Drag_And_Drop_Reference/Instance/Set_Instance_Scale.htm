@@ -3,59 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Instance Scale</title>
+  <title>인스턴스 규모 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Instance Scale action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Instance Scale" />
-  <meta name="search-keywords" content="Set Instance Scale" />
+  <meta name="topic-comment" content="인스턴스 규모 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 인스턴스 규모 설정" />
+  <meta name="search-keywords" content="인스턴스 규모 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Instance Scale Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png" width="32" /> Set Instance Scale</h1>
-  <p>This action block sets the <span class="inline">image_xscale</span> and <span class="inline">image_yscale</span> values for the instance. The input values here are modifiers which will be applied to the sprite assigned to the instance, where a scale of 1 (the default value) indicates no
-    scaling (1:1), smaller values will scale down (0.5, for example, will half the width of the sprite), and larger values will scale up. You can use negative values to flip the sprite and scale it unless the value used is exactly -1 (in which case the
-    sprite is just flipped or mirrored about its origin with no scaling). You can choose to set the horizontal or vertical scale relative to the current values, in which case you will be adding or subtracting the new value from the current scale values.</p>
-  <p>Note that changing these values will also change how the instance detects collisions, unless you have supplied a separate <span class="inline">mask_index</span> (collision mask) in the <a href="../../../The_Asset_Editors/Objects.htm">Object Editor</a>. Please note that
-    for changes in this variable to be visible, the instance should have either <i>no</i> draw event (and so <span data-keyref="GameMaker Name">GameMaker</span> will default draw the sprite) or be drawn using <a href="../Drawing/Draw_Self.htm">Draw Self</a> action.</p>
-  <p><img alt="Examples of scaled sprites" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Instance Scale Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Scale.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Horizontal</td>
-        <td>The vertical scaling factor to use (default is 1).</td>
-      </tr>
-      <tr>
-        <td>Vertical</td>
-        <td>The horizontal scaling factor to use (default is 1).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><span><img alt="Set Instance Scale Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Sprite.png"/></span>The above action block code sets a new sprite as well as a number of other
-    properties for how that sprite is to be displayed, including setting it to scale to three quarters of its base size along both axis.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Instance_Alpha.htm">Set Instance Alpha</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Instance Scale Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png" width="32" /> 인스턴스 규모 설정</h1><p> 이 작업 블록은 다음을 설정합니다. <span class="inline">image_xscale</span> 그리고 <span class="inline">image_yscale</span> 인스턴스에 대한 값. 여기의 입력 값은 인스턴스에 할당된 스프라이트에 적용되는 수정자입니다. 여기서 스케일 1(기본값)은 스케일링이 없음(1:1)을 나타내고, 더 작은 값은 축소됩니다(예: 0.5, 절반 스프라이트의 너비), 더 큰 값은 확장됩니다. 사용된 값이 정확히 -1이 아닌 경우 음수 값을 사용하여 스프라이트를 뒤집고 크기를 조정할 수 있습니다(이 경우 스프라이트는 크기 조정 없이 원점에 대해 뒤집히거나 미러링됨). 현재 값을 기준으로 수평 또는 수직 스케일을 설정하도록 선택할 수 있습니다. 이 경우 현재 스케일 값에서 새 값을 더하거나 뺍니다.</p><p> 이 값을 변경하면 별도의 값을 제공하지 않는 한 인스턴스가 충돌을 감지하는 방법도 변경됩니다. <span class="inline">mask_index</span> (충돌 마스크) <a href="../../../The_Asset_Editors/Objects.htm">개체 편집기</a>. 이 변수의 변경 사항이 표시되려면 인스턴스에 그리기 이벤트가 <i>없어야</i> 하고(따라서 <span data-keyref="GameMaker Name">GameMaker</span> 는 기본적으로 스프라이트를 그립니다) <a href="../Drawing/Draw_Self.htm">자체 그리기</a> 작업을 사용하여 그려야 합니다.</p><p><img alt="Examples of scaled sprites" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p><p></p><h4> 동작 구문:</h4><p><img alt="Set Instance Scale Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Scale.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Horizontal</span></td><td> 사용할 수직 배율 인수(기본값은 1).</td></tr><tr><td> <span class="notranslate">Vertical</span></td><td> 사용할 수평 배율 인수(기본값은 1)입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><span><img alt="Set Instance Scale Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Sprite.png"/></span> 위의 작업 블록 코드는 새 스프라이트와 함께 해당 스프라이트가 표시되는 방식에 대한 기타 여러 속성을 설정합니다. 여기에는 두 축을 따라 기본 크기의 3/4로 확장되도록 설정하는 것이 포함됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Actions_Library.htm">인스턴스 작업</a></div><div style="float:right"> 다음: <a href="Set_Instance_Alpha.htm">인스턴스 알파 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Instance Scale

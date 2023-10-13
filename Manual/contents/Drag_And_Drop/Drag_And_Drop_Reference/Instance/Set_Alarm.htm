@@ -3,58 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Alarm</title>
+  <title>알람을 설정하다</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Alarm action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Alarm" />
-  <meta name="search-keywords" content="Set Alarm" />
+  <meta name="topic-comment" content="알람 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 알람 설정" />
+  <meta name="search-keywords" content="알람을 설정하다" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Alarm Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Alarm.png" /> Set Alarm Countdown</h1>
-  <p>This action block sets a given alarm to countdown, and when the alarm reaches zero the associated <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Alarm Event</a> will be triggered. You supply the alarm number from 0 to 11, and
-    then the value to set the alarm to. The value used is the number of &quot;game steps&quot; that you want to pass before the alarm event is triggered, and you can set this to be relative to the current alarm value (adding or subtracting to the current
-    value). Note that the value must be an integer value, and you can set it to -1 to stop the alarm. Note that when an alarm counts down, the event is run when it reaches 0, but the alarm then counts down to -1 to show that it has finished. Setting an
-    alarm to 0 will <i>not</i> run the event, since it will then count down to -1 next step, so to run an alarm immediately it should be set to 1. Note that you can set additional alarms in the same action by clicking the plus icon <img alt="Expand Arguments Icon"
-      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> beside the action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Alarm Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Alarm.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Alarm</td>
-        <td>The alarm to set (the corresponding Alarm Event will be triggered when it reaches 0).</td>
-      </tr>
-      <tr>
-        <td>Countdown</td>
-        <td>The count down value in game steps.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Alarm Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Alarm.png" />The above action block code creates a local (temporary) variable and stores the current value of
-    the alarm[0]. This is then checked and if it is less than 0, the alarm is set to 60.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Alarm.htm">Get Alarm Countdown</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Alarm Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Alarm.png" /> 알람 카운트다운 설정</h1><p> 이 작업 블록은 주어진 알람을 카운트다운으로 설정하고 알람이 0에 도달하면 관련 <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">알람 이벤트</a> 가 트리거됩니다. 0에서 11까지의 알람 번호를 입력한 다음 알람을 설정할 값을 입력합니다. 사용된 값은 알람 이벤트가 트리거되기 전에 전달하려는 &quot;게임 단계&quot;의 수이며 현재 알람 값에 상대적으로 설정할 수 있습니다(현재 값에 더하거나 빼기). 값은 정수 값이어야 하며 -1로 설정하여 알람을 중지할 수 있습니다. 알람이 카운트다운되면 이벤트가 0에 도달할 때 실행되지만 알람은 완료되었음을 나타내기 위해 -1까지 카운트다운됩니다. 알람을 0으로 설정하면 다음 단계에서 -1까지 카운트다운되므로 이벤트가 실행 <i>되지 않으므로</i> 즉시 알람을 실행하려면 1로 설정해야 합니다. 더하기 아이콘<img alt="Expand Arguments Icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> 행동 옆에.</p><p></p><h4> 동작 구문:</h4><p><img alt="Set Alarm Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Alarm.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Alarm</span></td><td> 설정할 알람(해당 알람 이벤트가 0에 도달하면 트리거됨).</td></tr><tr><td> <span class="notranslate">Countdown</span></td><td> 게임 단계의 카운트다운 값입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Set Alarm Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Alarm.png" /> 위의 액션 블록 코드는 로컬(임시) 변수를 생성하고 알람[0]의 현재 값을 저장합니다. 그런 다음 이를 확인하고 0보다 작으면 알람을 60으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Actions_Library.htm">인스턴스 작업</a></div><div style="float:right"> 다음: <a href="Get_Alarm.htm">알람 카운트다운 받기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Alarm

@@ -4,55 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_set_circle_precision</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function draw_set_circle_precision" />
+  <meta name="topic-comment" content="함수 draw_set_circle_precision에 대한 참조" />
   <meta name="rh-index-keywords" content="draw_set_circle_precision" />
   <meta name="search-keywords" content="draw_set_circle_precision" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_set_circle_precision</h1>
-  <p>To optimise performance when drawing circles, <span data-keyref="GameMaker Name">GameMaker</span> basically draws a polygon shape with enough sides to make it <i>appear</i> circular. However, depending on how big or small you need your circles to be, you may find that changing this value can help increase the performance of your game, or make the circles look better. The precision value that you can input into this function is the number of sides the circle polygon has, and this number can be anything between 4 and 64, <i>but must be a number divisible by 4</i>, with a default value of 24.</p>
-  <p><img alt="Circle precision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_set_circle_precision.png" /></p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">draw_set_circle_precision(precision);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>precision</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The precision of all circles drawn after this function is called.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">draw_set_circle_precision(12);</p>
-  <p>The above code will draw all circles using a 12 sided polygon.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_button.htm">draw_button</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_set_circle_precision</h1><p> 원을 그릴 때 성능을 최적화하기 위해 <span data-keyref="GameMaker Name">GameMaker</span> 는 기본적으로 원형으로 <i>보이</i> 도록 충분한 면이 있는 다각형 모양을 그립니다. 그러나 필요한 서클의 크기에 따라 이 값을 변경하면 게임 성능을 높이거나 서클을 더 잘 보이게 할 수 있습니다. 이 함수에 입력할 수 있는 정밀도 값은 원 다각형의 면 수이며 이 숫자는 4에서 64 사이의 값이 <i>될 수 있지만 4로 나눌 수 있는 숫자여야 하며</i> 기본값은 24입니다.</p><p><img alt="Circle precision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_set_circle_precision.png" /></p><p class="note"> <b>참고</b>: 셰이더를 사용하여 모양을 그리고 싶다면 대부분의 셰이더가 정점, 질감, 색상과 같은 입력을 예상한다는 점을 알아야 합니다. 그러나 이 기능을 사용할 때 정점과 색상 데이터만 전달되기 때문에 셰이더는 아무 것도 그리지 않을 수 있습니다. 이러한 방식으로 모양을 그려야 하는 경우 이를 염두에 두고 셰이더를 사용자 정의해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">draw_set_circle_precision(precision);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">precision</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The precision of all circles drawn after this function is called.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">draw_set_circle_precision(12);</p><p> 위의 코드는 12면 다각형을 사용하여 모든 원을 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Basic_Forms.htm">기본 양식</a></div><div style="float:right"> 다음: <a href="draw_button.htm"><span class="notranslate">draw_button</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 draw_set_circle_precision

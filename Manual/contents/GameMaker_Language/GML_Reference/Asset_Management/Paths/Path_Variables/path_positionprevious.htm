@@ -6,43 +6,18 @@
   <title>path_positionprevious</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_positionprevious" />
+  <meta name="topic-comment" content="path_positionprevious 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_positionprevious" />
   <meta name="search-keywords" content="path_positionprevious" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_positionprevious</h1>
-  <p>This variable can be used to get or to set the position of an instance along its current path in the previous step, and is a normalised value between 0 and 1 ie: 0 is the start position of the path and 1 would be the end position. It is similar to the <a href="../../Instances/Instance_Variables/xprevious.htm"><span class="inline">xprevious</span></a> and <a href="../../Instances/Instance_Variables/yprevious.htm"><span class="inline">yprevious</span></a> variables in how it works, only it is specific for paths. It can be useful for things like temporarily stopping a path follower if something is in the way (see the example code below).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_positionprevious;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _x = x + lengthdir_x(16, direction);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_positionprevious</h1><p> 이 변수는 이전 단계에서 현재 경로를 따라 인스턴스의 위치를 가져오거나 설정하는 데 사용할 수 있으며 0과 1 사이의 정규화된 값입니다. 즉, 0은 경로의 시작 위치이고 1은 끝 위치입니다.. 와 비슷하다<a href="../../Instances/Instance_Variables/xprevious.htm"><span class="inline">xprevious</span></a> 그리고<a href="../../Instances/Instance_Variables/yprevious.htm"><span class="inline">yprevious</span></a> 작동 방식의 변수이며 경로에만 해당됩니다. 방해가 되는 경우 경로 추적기를 일시적으로 중지하는 것과 같은 작업에 유용할 수 있습니다(아래 예제 코드 참조).</p><p></p><h4> 통사론:</h4><p class="code">path_positionprevious;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var _x = x + lengthdir_x(16, direction);<br />
     var _y = y + lengthdir_y(16, direction);<br />
     if collision_circle(xx, yy, 16, obj_Player, false,true)<br />
     {<br />
         path_position = path_positionprevious;<br />
-    }</p>
-  <p>The above code checks an area in front of the instance for a collision with the object &quot;obj_Player&quot; and if there is one, it sets the instance back to the previous position it occupied on the current path, as assigned by the function <span class="inline"><a href="../path_start.htm">path_start()</a></span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Variables.htm">Path Variables</a></div>
-        <div style="float:right">Next: <a href="path_speed.htm">path_speed</a></div>
-        
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 개체 &quot;obj_Player&quot;와의 충돌에 대해 인스턴스 앞 영역을 확인하고 충돌이 있는 경우 인스턴스를 함수에 의해 할당된 현재 경로에서 차지했던 이전 위치로 다시 설정합니다. <span class="inline"><a href="../path_start.htm">path_start()</a></span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Variables.htm">경로 변수</a></div><div style="float:right"> 다음: <a href="path_speed.htm"><span class="notranslate">path_speed</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 path_positionprevious

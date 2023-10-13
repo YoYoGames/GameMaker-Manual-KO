@@ -3,84 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Instance Health</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>인스턴스 상태 그리기</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Draw Instance Health action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Draw Instance Health" />
-  <meta name="search-keywords" content="Draw Instance Health" />
+  <meta name="topic-comment" content="인스턴스 상태 그리기 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 인스턴스 상태 그리기" />
+  <meta name="search-keywords" content="인스턴스 상태 그리기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /> Draw Instance Health</h1>
-  <p>With this action you can draw a coloured bar to show a graphic representation of the instance variable <span class="inline">health</span> (when you use <i>any</i> &quot;health&quot; action in <span data-keyref="GameMaker Name">GameMaker</span> the instance that calls it will have a new instance scope variable called <span class="inline">health</span> added). The amount to be displayed is a percentage value that falls within the range of 0 - 100. You can set the direction anchor for drawing the healthbar (from left-to-right or right-to-left and top-to-bottom or bottom-to-top) as well as the position, either within the room or relative to the instance calling the action. You can also set the colour to be blended from each of the four corners of the healthbar, creating gradients from red to green (for example, but you can use any colours). Below you can see an image of how a simple healthbar looks with the different options:</p>
-  <p><b><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png" /></b></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action is only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>, and will not draw anything if used elsewhere.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Instance Health Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Health.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Direction</td>
-        <td>The direction to draw the healthbar contents</td>
-      </tr>
-      <tr>
-        <td>Left</td>
-        <td>The position of the left side of the healthbar</td>
-      </tr>
-      <tr>
-        <td>Top</td>
-        <td>The position of the top of the healthbar</td>
-      </tr>
-      <tr>
-        <td>Right</td>
-        <td>The position of the right side of the healthbar</td>
-      </tr>
-      <tr>
-        <td>Bottom</td>
-        <td>The position of the bottom of the healthbar</td>
-      </tr>
-      <tr>
-        <td>Background</td>
-        <td>The colour to draw as the background on the healthbar</td>
-      </tr>
-      <tr>
-        <td>Outline</td>
-        <td>The colour to use to outline the healthbar</td>
-      </tr>
-      <tr>
-        <td>Min Colour</td>
-        <td>The colour to blend from the minimum value</td>
-      </tr>
-      <tr>
-        <td>Max Colour</td>
-        <td>The colour to blend from the maximum value</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Instance Health Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Health.png" />The above action block code draws a healthbar in the top left of the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Instance_Lives.htm">Draw Instance Lives</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /> 인스턴스 상태 그리기</h1><p> 이 작업으로 인스턴스 변수의 그래픽 표현을 표시하기 위해 색상 막대를 그릴 수 있습니다. <span class="inline">health</span> ( <span data-keyref="GameMaker Name">GameMaker</span> 에서 &quot;health&quot; 작업을 사용 <i>하면</i> 이를 호출하는 인스턴스에 <span class="inline">health</span> 추가). 표시되는 양은 0 - 100 범위에 속하는 백분율 값입니다. 헬스바를 그리기 위한 방향 앵커를 설정할 수 있습니다(왼쪽에서 오른쪽 또는 오른쪽에서 왼쪽 및 위에서 아래 또는 아래로) -to-top) 뿐만 아니라 방 내에서 또는 작업을 호출하는 인스턴스에 상대적인 위치. 또한 건강 표시줄의 네 모서리 각각에서 혼합할 색상을 설정하여 빨간색에서 녹색으로 그라데이션을 생성할 수도 있습니다(예: 모든 색상을 사용할 수 있음). 아래에서 다양한 옵션으로 간단한 체력 표시줄이 어떻게 보이는지 이미지를 볼 수 있습니다.</p><p><b><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png"/></b></p><p class="note"> <b>참고</b>: 이 작업은 다양한 <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">그리기 이벤트</a> 에서만 사용되며 다른 곳에서 사용되는 경우 아무 것도 그리지 않습니다.</p><p></p><p></p><h4> 동작 구문:</h4><p><img alt="Draw Instance Health Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Health.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Direction</span></td><td> 헬스바 내용을 그리는 방향</td></tr><tr><td> <span class="notranslate">Left</span></td><td> 체력바 왼쪽의 위치</td></tr><tr><td> <span class="notranslate">Top</span></td><td> 체력바 상단 위치</td></tr><tr><td> <span class="notranslate">Right</span></td><td> 체력바 우측의 위치</td></tr><tr><td> <span class="notranslate">Bottom</span></td><td> 체력바 하단 위치</td></tr><tr><td> <span class="notranslate">Background</span></td><td> 체력바에 배경으로 그릴 색</td></tr><tr><td> <span class="notranslate">Outline</span></td><td> 체력 표시줄의 윤곽선을 표시하는 데 사용할 색상</td></tr><tr><td> <span class="notranslate">Min Colour</span></td><td> 최소값에서 혼합할 색상</td></tr><tr><td> <span class="notranslate">Max Colour</span></td><td> 최대값에서 혼합할 색상</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Draw Instance Health Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Health.png" /> 위의 액션 블록 코드는 화면 왼쪽 상단에 체력 표시줄을 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Drawing_Actions.htm">그리기 작업</a></div><div style="float:right"> 다음: <a href="Draw_Instance_Lives.htm">인스턴스 라이브 그리기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Instance Health

@@ -3,59 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Accessors</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>접근자</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different Accessors" />
-  <meta name="rh-index-keywords" content="Accessors" />
-  <meta name="search-keywords" content="Accessors,@,[| ],[@ ],[# ],[? ],grid accessor,list accessor,map accessor,array accessor" />
+  <meta name="topic-comment" content="다양한 접근자를 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="접근자" />
+  <meta name="search-keywords" content="접근자,@,[| ],[@ ],[# ],[? ],그리드 접근자,목록 접근자,지도 접근자,배열 접근자" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Accessors</span></h1>
-  <p>The GameMaker Language (GML) also permits you to access certain <a href="../GML_Reference/Data_Structures/Data_Structures.htm">Data Structures</a> and <a href="Arrays.htm">Arrays</a> through the use of logical expressions called <b>accessors</b>. This is structured in a similar way as when you are normally working with an array, only we use an <em>identifier symbol</em> before the first argument to tell <span data-keyref="GameMaker Name">GameMaker</span> that you are working on a (previously created) data structure or the array literal.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS Lists [| ]</a></p>
-  <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The syntax for <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS lists</a> is:</p>
-    <p class="code">list_index[| index]</p>
-    <p class="dropspot">So when you have used <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm">ds_list_create</a></span> to create your list, you would use the list index (that you have stored in a variable) to reference it, with the <span class="inline2">index</span> value being the position in the list to set or add. For example, the following code creates a list and then adds 10 entries, setting each entry to random number from 0 to 9:</p>
-    <p class="code">ds = ds_list_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 접근자</h1><p> GameMaker Language(GML)는 또한 접근자 라고 하는 논리 표현식을 사용하여 특정 <a href="../GML_Reference/Data_Structures/Data_Structures.htm">데이터 구조</a> 및 <a href="Arrays.htm">배열</a> 에 <b>접근</b> 할 수 있도록 합니다. 이것은 일반적으로 배열로 작업할 때와 유사한 방식으로 구성되어 있습니다. 첫 번째 인수 앞에 <em>식별자 기호</em> 만 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에 (이전에 생성된) 데이터 구조 또는 배열 리터럴에서 작업 중임을 알립니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS 목록 [| ]</a></p><div class="droptext" data-targetname="drop-down10"><p class="dropspot"> <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS 목록</a> 의 구문은 다음과 같습니다.</p><p class="code">list_index[| index]</p><p class="dropspot"> 그래서 당신이 사용했을 때<span class="inline">ds_list_create()</span> 목록을 만들려면 목록 인덱스(변수에 저장한)를 사용하여 참조하고 &quot;색인&quot; 값은 설정하거나 추가할 목록의 위치입니다. 예를 들어 다음 코드는 목록을 만든 다음 10개의 항목을 추가하여 각 항목을 0에서 9 사이의 임의의 숫자로 설정합니다.</p><p class="code">ds = ds_list_create();<br />
       var index = 0;<br />
       repeat(10)<br />
       {<br />
           ds[| index++] = irandom(9);<br />
-      }</p>
-    <p class="dropspot">Note that if you are using an expression to add a reference to an index that already has a value, the previous value will be replaced rather than have a further index added to the list. To add further entries you would need to know the DS list size and add them to the end. It is also worth noting that you can set a list index that is <i>greater</i> than the size of the list being referenced, and this will set that value, expanding the list at the same time and initialising all the positions in the list up to the given index to 0.</p>
-    <p class="dropspot">Once you have created your list structure and filled it with data, to get values from the list you would have something like:</p>
-    <p class="code">value = ds[| 5];</p>
-    <p class="dropspot">The above will get the value from position 5 (the sixth index, since lists start at 0) and store it in a variable. If you supply a position that is outside of the list size then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">DS Maps [? ]</a></p>
-  <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">The accessor for <a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Maps</a> is <span class="inline2"><a id="?"></a>?</span> and the syntax is: </p>
-    <p class="code">map_index[? key]</p>
-    <div data-conref="../../assets/snippets/Note_Tip_Map_Key_Can_Be_Any.hts"> </div>
-    <p class="dropspot">After creating your map with <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm#h">ds_map_create</a></span>, you would use the map index that you have stored in a variable to reference it, with the <span class="inline2">key</span> value being the map key to set or get. For example, the following code creates a map and then adds a few entries to it using this syntax: </p>
-    <p class="code">ds = ds_map_create();<br />
+      }</p><p class="dropspot"> 표현식을 사용하여 이미 값이 있는 인덱스에 대한 참조를 추가하는 경우 목록에 추가 인덱스가 추가되지 않고 이전 값이 대체됩니다. 항목을 더 추가하려면 ds_list 크기를 알고 끝에 추가해야 합니다. 또한 참조되는 목록의 크기 <i>보다 큰</i> 목록 인덱스를 설정할 수 있으며, 이렇게 하면 해당 값이 설정되고 목록이 동시에 확장되고 목록의 모든 위치가 지정된 값까지 초기화됩니다. 인덱스를 0으로 합니다.</p><p class="dropspot"> 목록 구조를 만들고 데이터로 채우면 목록에서 값을 얻으려면 다음과 같이 됩니다.</p><p class="code">value = ds[| 5];</p><p class="dropspot"> 위는 위치 5(목록이 0에서 시작하기 때문에 여섯 번째 인덱스)에서 값을 가져와 변수에 저장합니다. 목록 크기를 벗어난 위치를 제공하면 값 <span class="inline">undefined</span> 함수 사용을 확인할 수 있는 반환됩니다.<a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">DS 맵 [? ]</a></p><div class="droptext" data-targetname="drop-down13"><p class="dropspot"> <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 의 구문은 다음과 같습니다.</p><p class="code">map_index[? key]</p><p class="dropspot"> 로 지도를 만든 후<span class="inline">ds_map_create()</span>, 변수에 저장한 맵 인덱스를 사용하여 참조하며 &quot;key&quot; 값은 설정하거나 가져올 맵 키입니다. 예를 들어 다음 코드는 맵을 만든 다음 이 구문을 사용하여 맵에 몇 가지 항목을 추가합니다.</p><p class="code">ds = ds_map_create();<br />
       ds[? &quot;Name&quot;] = &quot;Hamish&quot;;<br />
       ds[? &quot;Company&quot;] = &quot;MacSeweeny Games&quot;;<br />
-      ds[? &quot;Game&quot;] = &quot;Catch The Haggis&quot;;</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the map already contains the same key value as you are trying to add, it will not create a duplicate key with the new value, but rather the previous value will be replaced.</p>
-    <p class="dropspot">Once you have created your map structure and filled it with data, to get values from a specific map key you would have something like this:</p>
-    <p class="code">value = ds[? &quot;Name&quot;];</p>
-    <p class="dropspot">The above will get the value from the key <span class="inline2">&quot;Name&quot;</span> and store it in a variable, but be aware that if the given key does not exist in the DS map, then the value returned will be <span class="inline2">undefined</span>. This can be checked for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS Grids [# ]</a></p>
-  <div class="droptext" data-targetname="drop-down14">
-    <p class="dropspot">The syntax for <a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm#h">DS Grids</a> is:</p>
-    <p class="code">grid_index[# xpos, ypos]</p>
-    <p class="dropspot">After creating your grid with the <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm">ds_grid_create</a></span> function, you would use the grid index that you have stored in a variable to reference it, with the <span class="inline2">xpos</span> and <span class="inline2">ypos</span> being the position within the grid to get or set a value. For example, the following code creates a grid, clears it to 0, then and then adds a few entries to it:</p>
-    <p class="code">ds = ds_grid_create();<br />
+      ds[? &quot;Game&quot;] = &quot;Catch The Haggis&quot;;</p><p class="dropspot"> 맵에 추가하려는 것과 동일한 키 값이 이미 포함되어 있는 경우 새 값으로 중복 키가 생성되지 않고 이전 값이 대체됩니다.</p><p class="dropspot"> 맵 구조를 만들고 데이터로 채우면 특정 맵 키에서 값을 가져오려면 다음과 같이 됩니다.</p><p class="code">value = ds[? &quot;Name&quot;];</p><p class="dropspot"> 위의 내용은 &quot;Name&quot; 키에서 값을 가져와 변수에 저장하지만 주어진 키가 DS 맵에 없으면 반환되는 값은 다음과 같습니다. <span class="inline">undefined</span>. 기능 사용 여부를 확인할 수 있습니다.<a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS 그리드 [# ]</a></p><div class="droptext" data-targetname="drop-down14"><p class="dropspot"> <a href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">DS 그리드</a> 의 구문은 다음과 같습니다.</p><p class="code">grid_index[# xpos, ypos]</p><p class="dropspot"> 로 그리드를 생성한 후<span class="inline">ds_grid_create()</span> 함수를 사용하는 경우 변수에 저장한 그리드 인덱스를 사용하여 참조하며 &quot;xpos&quot; 및 &quot;ypos&quot;는 값을 가져오거나 설정하기 위한 그리드 내의 위치입니다. 예를 들어 다음 코드는 그리드를 만들고 0으로 지운 다음 몇 가지 항목을 추가합니다.</p><p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
       var gw = ds_grid_width(ds) - 1;<br />
       var gh = ds_grid_height(ds) - 1;<br />
@@ -67,23 +32,8 @@
           {<br />
               ds[# xx, yy] = 1;<br />
           }<br />
-      }</p>
-    <p class="dropspot">Once you have created your grid structure and filled it with data, to get values from a specific grid position you would have something like:</p>
-    <p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
-    <p class="dropspot">The above will get the value from the given DS grid based on the mouse position (divided by the &quot;cell&quot; width in the room to get the correct location). If you supply a position that is outside of the grid boundaries then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Arrays [@ ]</a></p>
-  <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">This accessor is only used when the <a href="../../Settings/Game_Options.htm">Copy on Write option</a> is enabled.</p>
-    <p class="dropspot">Arrays also have their own accessors which works in a similar way as those listed above for data structures. However array accessors have an interesting property and that is to permit you to modify an array from a <a href="Script_Functions.htm">script function</a> or <a href="Method_Variables.htm">method</a> without having to copy it. When you pass an array into a function, it is <strong>passed by reference</strong>, meaning that the array itself isn&#39;t being given into the script but rather it is simply being referenced to get the data. Normally if you then need to change the array, it would be <em>copied </em>to the script and then you would need to pass back (return) the copied array for the original array to be updated. This can have costly processing overheads, and so you can use the accessor instead, as that will change the original array <em>directly </em>without the need for it to be copied. You can see how this works in the examples below.</p>
-    <p class="dropspot">The syntax for arrays, using the <span class="inline2">@</span> accessor, is:</p>
-    <p class="code">array[@ i]</p>
-    <p class="dropspot">After you have created your array in an instance, you can then pass it to a script by reference and use the accessor <span class="inline">@</span> to change it directly. For example you would create the array and call the funtion like this:</p>
-    <p class="code">array[99] = 0;<br />
-      array_populate(array);</p>
-    <p class="dropspot">The function itself would have something like this:</p>
-    <p class="code">function array_populate(_array)<br />
+      }</p><p class="dropspot"> 그리드 구조를 만들고 데이터로 채우면 특정 그리드 위치에서 값을 얻으려면 다음과 같이 됩니다.</p><p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p><p class="dropspot"> 위는 마우스 위치를 기반으로 주어진 ds_grid에서 값을 가져옵니다(정확한 위치를 얻기 위해 방의 &quot;셀&quot; 너비로 나눕니다). 그리드 경계 외부에 있는 위치를 제공하면 값 <span class="inline">undefined</span> 함수 사용을 확인할 수 있는 반환됩니다.<a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">배열 [@ ]</a></p><div class="droptext" data-targetname="drop-down15"><p class="dropspot"> 이 접근자는 <a href="../../Settings/Game_Options.htm">쓰기 시 복사 옵션이 활성화된</a> 경우에만 사용됩니다.</p><p class="dropspot"> 배열에는 데이터 구조에 대해 위에 나열된 것과 유사한 방식으로 작동하는 자체 접근자가 있습니다. 그러나 배열 접근자는 흥미로운 속성을 가지고 있으며 복사할 필요 없이 <a href="Script_Functions.htm">스크립트 함수</a> 또는 <a href="Method_Variables.htm"><span class="notranslate">method</span></a> 에서 배열을 수정할 수 있도록 합니다. 배열을 함수에 전달할 때 <strong>참조로 전달됩니다</strong>. 즉, 배열 자체가 스크립트에 제공되는 것이 아니라 단순히 데이터를 가져오기 위해 참조되는 것입니다. 일반적으로 배열을 변경해야 하는 경우 스크립트에 <em>복사</em> 한 다음 원본 배열이 업데이트되도록 복사한 배열을 다시 전달(반환)해야 합니다. 이것은 비용이 많이 드는 처리 오버헤드를 가질 수 있으므로 복사할 필요 없이 원래 배열 <em>을 직접</em> 변경하므로 접근자를 대신 사용할 수 있습니다. 아래 예에서 이것이 어떻게 작동하는지 확인할 수 있습니다.</p><p class="dropspot"> 다음을 사용하는 배열 구문 <span class="inline">@</span> 접근자는 다음과 같습니다.</p><p class="code">array[@ i]</p><p class="dropspot"> 인스턴스에서 배열을 만든 후 참조로 스크립트에 전달하고 접근자를 사용할 수 있습니다.<span class="inline">@</span> 직접 변경합니다. 예를 들어 배열을 만들고 다음과 같이 함수를 호출합니다.</p><p class="code">array[99] = 0;<br />
+      array_populate(array);</p><p class="dropspot"> 함수 자체에는 다음과 같은 내용이 있습니다.</p><p class="code">function array_populate(_array)<br />
       {<br />
           var a = _array; var i = 0; repeat(25)<br />
           {<br />
@@ -94,30 +44,7 @@
               }<br />
               a[@ i] = 100;<br />
           }<br />
-      }</p>
-    <p class="dropspot">All this function is doing is selecting 25 random positions in the array and setting the value of the chosen array position to 100.</p>
-    <p class="dropspot">Of course, the <span class="inline">@</span> accessor is not required when <strong>Copy on Write</strong> is disabled.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You cannot use the array accessor <span class="inline">@</span>  when working with the <span class="inline">argument[n]</span> array in script functions.</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Structs [$ ]</a></p>
-  <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot"><span>The struct accessor uses the <span class="inline2"><a id="$"></a>$</span> sign as the identifier symbol. This makes the accessor syntax for <a href="Structs.htm">structs</a>: </span></p>
-    <p class="code">struct[$ &quot;name&quot;]</p>
-    <p class="dropspot">This accessor is essentially a wrapper for the functions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> and <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, and you would use it much like the accessor for a DS map. For example, if you have created a struct and want to retrieve a value from a variable called &quot;my_health&quot; then you&#39;d do:</span></p>
-    <p class="code">var _hp = struct[$ &quot;my_health&quot;];</p>
-    <p class="dropspot">As you can see, you don&#39;t supply the variable itself, but rather a <em>string</em> with the variable&#39;s name.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the struct does not have a variable with the given name, then the accessor will return <span class="inline2">undefined</span> as the value.</p>
-    <div data-conref="../../assets/snippets/Note_tip_use_nullish_with_accessors.hts"> </div>
-    <p class="dropspot">To set a variable in a struct then you would do the following</p>
-    <p class="code">struct[$ &quot;my_score&quot;] = 100;</p>
-    <p class="dropspot">As with getting a value, you supply the name of the variable to set as a string, and it will be set to the value given. If the variable name used doesn&#39;t exist in the struct, then it will be created and set to the given value.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p>An important feature of accessors is the fact that they can be <i>chained</i> together. This means that if you have several nested data structures and/or arrays, there is no longer the need to use a variety of functions to get access to a value that is deep within the nested structure. For example, say you have an array, and each item in the array is a DS list, like this:</p>
-  <p class="code">array = array_create(3);<br />
+      }</p><p class="dropspot"> 이 함수가 하는 모든 일은 배열에서 25개의 임의 위치를 선택하고 선택한 배열 위치의 값을 100으로 설정하는 것입니다.</p><p class="dropspot"> 물론, <span class="inline">@</span> <strong>Copy on Write</strong> 가 비활성화된 경우 접근자가 필요하지 않습니다.</p><p class="note"> <span class="note">참고</span> 어레이 접근자를 사용할 수 없습니다. <span class="inline">@</span> 작업할 때<span class="inline">argument[n]</span> 스크립트 함수의 배열.</p><p class="dropspot"></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">구조체 [$ ]</a></p><div class="droptext" data-targetname="drop-down16"><p class="dropspot"> <span><a href="Structs.htm">구조체</a> 의 구문은 다음과 같습니다.</span></p><p class="code">struct[$ &quot;name&quot;]</p><p class="dropspot"> 이 접근자는 본질적으로 함수에 대한 래퍼입니다. <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> 그리고 <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, 그리고 DS 맵에 대한 접근자와 매우 유사하게 사용합니다. 예를 들어 구조체를 만들고 &quot;my_health&quot;라는 변수에서 값을 검색하려면 다음을 수행합니다.</span></p><p class="code">var _hp = struct[$ &quot;my_health&quot;];</p><p class="dropspot"> 보시다시피 변수 자체를 제공하지 않고 변수와 함께 <em>문자열</em> 을 제공합니다. 구조체에 주어진 이름의 변수가 없으면 접근자는 다음을 반환합니다. <span class="inline">undefined</span> 값으로.</p><p class="dropspot"> 구조체에서 변수를 설정하려면 다음을 수행합니다.</p><p class="code">struct[$ &quot;my_score&quot;] = 100;</p><p class="dropspot"> 값을 가져올 때와 마찬가지로 문자열로 설정할 변수의 이름을 제공하면 주어진 값으로 설정됩니다. 사용된 변수 이름이 구조체에 존재하지 않으면 생성되어 지정된 값으로 설정됩니다.</p><p class="dropspot"></p></div><p></p><p> 접근자의 중요한 특징은 서로 <i>연결될</i> 수 있다는 사실입니다. 즉, 중첩된 데이터 구조 및/또는 배열이 여러 개 있는 경우 중첩된 구조 내 깊숙한 값에 액세스하기 위해 더 이상 다양한 함수를 사용할 필요가 없습니다. 예를 들어 배열이 있고 배열의 각 항목이 다음과 같이 DS 목록이라고 가정해 보겠습니다.</p><p class="code">array = array_create(3);<br />
     for (var i = 0; i &lt; 3; ++i;)<br />
     {<br />
         array[i] = ds_list_create();<br />
@@ -136,14 +63,8 @@
             break;<br />
         }<br />
     }
-  </p>
-  <p>In the above code we&#39;ve created a 3 item array and assigned a DS list to each of them, and then we&#39;ve populated the different lists with the instance IDs of various objects in the game. Now, to access an ID in one of the lists we can do the following:</p>
-  <p class="code">var _list = array[0];<br />
-    var _id = ds_list_find_value(_list, 0);</p>
-  <p>However, you can do the same thing using chained accessors in a much cleaner way that uses less code:</p>
-  <p class="code">var _id = array[0][| 0];</p>
-  <p>You can chain multiple accessors together in this way and they can be of multiple types to get access to the information stored in each part of the nested structure. Here are some more examples:</p>
-  <p class="code">// Access a grid that has been added to a list that is part of a map:<br />
+  </p><p> 위의 코드에서 3개의 항목 배열을 만들고 각각에 DS 목록을 할당한 다음 게임에 있는 다양한 개체의 인스턴스 ID로 다른 목록을 채웠습니다. 이제 목록 중 하나의 ID에 액세스하기 위해 다음을 수행할 수 있습니다.</p><p class="code">var _list = array[0];<br />
+    var _id = ds_list_find_value(_list, 0);</p><p> 그러나 더 적은 코드를 사용하는 훨씬 깔끔한 방식으로 연결된 접근자를 사용하여 동일한 작업을 수행할 수 있습니다.</p><p class="code">var _id = array[0][| 0];</p><p> 이러한 방식으로 여러 접근자를 함께 연결할 수 있으며 중첩 구조의 각 부분에 저장된 정보에 액세스하기 위해 여러 유형이 될 수 있습니다. 다음은 몇 가지 예입니다.</p><p class="code">// Access a grid that has been added to a list that is part of a map:<br />
     var _a = data[? &quot;lists&quot;][| 0][# 0, 0];<br />
     <br />
     // Access an array nested in a list from a script and modify it:<br />
@@ -151,33 +72,17 @@
     <br />
     // Access a map nested in a grid nested in a list nested in an array:<br />
     data[0][| 10][# 3, 4][? &quot;key&quot;] = &quot;hello world&quot;;
-  </p>
-  <p>Using chained accessors for things not only means you can write more compact code, it will also permit you to use iteration (for example, using a <a href="Language_Features/for.htm"><span class="inline">for</span></a> loop) and other techniques to access your data in a cleaner and more intuitive manner.</p>
-  <p>It is worth noting that when using accessors in this way, you should always use the <span class="inline2">@</span> accessor for arrays, as otherwise you will be adding extra overhead to any actions being performed. As mentioned above, by default arrays are passed by reference into functions and then use the &quot;copy on write&quot; behaviour when modified. However, if the array is part of a chain, then the previous item in the chain will be updated with the copied array and the &quot;original&quot; will be deleted. For example, doing something like this:</p>
-  <p class="code">// In an object event<br />
+  </p><p> 사물에 연결된 접근자를 사용하면 더 간결한 코드를 작성할 수 있을 뿐만 아니라 반복을 사용할 수 있습니다(예:<a href="Language_Features/for.htm"><span class="inline">for</span></a> 루프) 및 기타 기술을 사용하여 보다 깨끗하고 직관적인 방식으로 데이터에 액세스할 수 있습니다.</p><p> 이런 식으로 접근자를 사용할 때는 항상 <span class="inline">@</span> 그렇지 않으면 수행 중인 모든 작업에 추가 오버헤드가 추가됩니다. 위에서 언급했듯이 기본적으로 배열은 참조에 의해 함수에 전달된 다음 수정될 때 &quot;쓰기 시 복사&quot; 동작을 사용합니다. 그러나 배열이 체인의 일부인 경우 체인의 이전 항목이 복사된 배열로 업데이트되고 &quot;원본&quot;이 삭제됩니다. 예를 들어 다음과 같이 합니다.</p><p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][0] = 200;
-  </p>
-  <p>achieves the same results as doing this:</p>
-  <p class="code">// In an object event<br />
+  </p><p> 다음을 수행하는 것과 동일한 결과를 얻습니다.</p><p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][@ 0] = 200;
-  </p>
-  <p>However, the second example is better as it works without the unnecessary overhead of copying the entire array first.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Language_Features.htm">Language Features</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 그러나 두 번째 예는 전체 어레이를 먼저 복사하는 불필요한 오버헤드 없이 작동하므로 더 좋습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GML_Overview.htm">GML 개요</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="Language_Features.htm">언어 기능</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div

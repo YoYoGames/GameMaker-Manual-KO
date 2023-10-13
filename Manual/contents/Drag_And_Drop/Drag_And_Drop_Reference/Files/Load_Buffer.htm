@@ -3,56 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Load Buffer</title>
+  <title>로드 버퍼</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Load Buffer action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Load Buffer" />
-  <meta name="search-keywords" content="Load Buffer" />
+  <meta name="topic-comment" content="로드 버퍼 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 로드 버퍼" />
+  <meta name="search-keywords" content="로드 버퍼" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /> Load Buffer</h1>
-  <p>With this action you can load a buffer that was previously saved with the action <a href="Save_Buffer.htm">Save Buffer</a>. The action will create a new buffer, load the data file into it, and return the unique ID value to identify the buffer to the
-    variable. You supply the name of the file to load (as a string) and a variable to store the returned buffer ID in. Note that if you flag the variable as a temporary local variable, you need to make sure to delete the buffer this function creates before
-    the end of the action script or event, otherwise you will lose the reference to it and get a memory leak when the variable is discarded.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Load Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Load_Buffer.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Filename</td>
-        <td>The name (as a string) of the file to open</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the unique ID value for the buffer created on load</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Load Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" />The above action block code will create a variable to hold buffer data and then check to see if a
-    buffer save file has been made previously. If the file exists, then it is loaded into the buffer variable that we created, but if it doesn&#39;t exist, it is created, written to and then saved out ready for loading the next time.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Save_Buffer.htm">Save Buffer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /> 로드 버퍼</h1><p> 이 작업을 통해 이전에 버퍼 저장 작업으로 <a href="Save_Buffer.htm">저장</a> 한 버퍼를 로드할 수 있습니다. 이 작업은 새 버퍼를 만들고 데이터 파일을 버퍼에 로드하고 고유한 ID 값을 반환하여 버퍼를 변수에 식별합니다. 로드할 파일의 이름(문자열으로)과 반환된 버퍼 ID를 저장할 변수를 제공합니다. 변수를 임시 로컬 변수로 플래그 지정하는 경우 이 함수가 생성하는 버퍼를 삭제해야 합니다. 액션 스크립트 또는 이벤트가 끝나기 전에 그렇지 않으면 변수에 대한 참조가 손실되고 변수가 삭제될 때 메모리 누수가 발생합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Load Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Load_Buffer.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Filename</span></td><td> 열려는 파일의 이름(문자열)</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 로드 시 생성된 버퍼의 고유 ID 값을 보유할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Load Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" /> 위의 액션 블록 코드는 버퍼 데이터를 담을 변수를 생성하고 버퍼 세이브 파일이 이전에 생성되었는지 확인합니다. 파일이 존재하면 우리가 생성한 버퍼 변수에 로드되지만 존재하지 않으면 파일이 생성되어 다음에 로드될 수 있도록 작성되어 저장됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Actions.htm">파일 작업</a></div><div style="float:right"> 다음: <a href="Save_Buffer.htm">버퍼 저장</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Buffer

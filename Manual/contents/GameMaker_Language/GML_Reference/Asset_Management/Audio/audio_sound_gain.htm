@@ -4,77 +4,20 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_sound_gain</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function audio_sound_gain" />
+  <meta name="topic-comment" content="audio_sound_gain 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="audio_sound_gain" />
   <meta name="search-keywords" content="audio_sound_gain" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
-  <p>With this function you can fade a sound asset or instance in or out over a given length of time, or it can be used to set the sound gain instantly.</p>
-  <p>The time is measured in milliseconds, and the function requires that you input a final level of gain for the sound to have reached by the end of that time. This gain can be between 0 (silent) and any value greater than 0, although normally you&#39;d consider the maximum volume as 1. Anything over 1 can be used but, depending on the sound used and the platform being compiled to, you may get distortion or clipping when the sound is played back. Note that the gain scale is linear, and to instantly change the gain, simply set the time argument to 0.</p>
-  <div data-conref="../../../../assets/snippets/Note_Gain_Linear_dB.hts"> </div>
-  <p>This function will affect <i>all</i> instances of the sound that are playing currently in the room if the index is a sound resource, and the final volume will be the volume at which all further instances of the sound will be played. However if you have used the index returned from a function like <span class="inline2"><a data-xref="{title}" href="audio_play_sound.htm">audio_play_sound</a></span> it will only affect that one instance of the sound.</p>
-  <p>The default value for the sound <strong>asset</strong> gain is taken from the &quot;Volume&quot; slider in the Sound Editor: </p>
-  <p><img class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Asset_Gain_IDE.png" /></p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(index, volume, time);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span> or <span data-keyref="Type_ID_Sound_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_play_sound.htm" target="_blank">Sound Instance ID</a></span> or <span data-keyref="Type_ID_Audio_Queue"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_play_queue.htm" target="_blank">Audio Queue ID</a></span></td>
-        <td>The index of the sound to set the gain for.</td>
-      </tr>
-      <tr>
-        <td>volume</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Value for the music volume.</td>
-      </tr>
-      <tr>
-        <td>time</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The length for the change in gain in milliseconds.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example 1:</h4>
-  <p class="code">if val<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_sound_gain</h1><p> 이 기능을 사용하여 주어진 시간 동안 사운드를 페이드 인 또는 페이드 아웃하거나 사운드 게인을 즉시 설정하는 데 사용할 수 있습니다.</p><p> 시간은 밀리초 단위로 측정되며 이 기능을 사용하려면 해당 시간이 끝날 때까지 사운드에 도달하기 위한 최종 게인 레벨을 입력해야 합니다. 이 게인은 0(무음)과 0보다 큰 값 사이일 수 있지만 일반적으로 최대 볼륨을 1로 간주합니다. 1을 초과하는 모든 것을 사용할 수 있지만 사용되는 사운드와 컴파일할 플랫폼에 따라 사운드가 재생될 때 왜곡 또는 클리핑이 발생합니다. 게인 스케일은 선형이며 게인을 즉시 변경하려면 시간 인수를 0으로 설정하기만 하면 됩니다.</p><p> 인덱스가 사운드 리소스인 경우 이 기능은 현재 방에서 재생 중인 <i>모든</i> 사운드 인스턴스에 영향을 미치고 최종 볼륨은 사운드의 모든 추가 인스턴스가 재생될 볼륨이 됩니다. 그러나 다음과 같은 함수에서 반환된 인덱스를 사용한 경우<a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> 사운드의 한 인스턴스에만 영향을 미칩니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_sound_gain(index, volume, time);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Sound">사운드 자산</span> 또는 <span data-keyref="Type_ID_Sound_Instance">사운드 인스턴스 ID</span></td><td> <span class="notranslate">The index of the sound to set the gain for.</span></td></tr><tr><td> <span class="notranslate">volume</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Value for the music volume.</span></td></tr><tr><td> <span class="notranslate">time</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The length for the change in gain in milliseconds.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if val<br />
     {<br />
-        var snd = audio_play_sound(snd_fountain, 10, true);<br />
-        <span data-field="title" data-format="default">audio_sound_gain</span>(snd, 0, 0);<br />
-        <span data-field="title" data-format="default">audio_sound_gain</span>(snd, 1, 5000);<br />
-    }</p>
-  <p>The above code checks a variable <span class="inline2">val</span>. If it returns <span class="inline">true</span> it will then assign the index of a sound to be played to the local variable <span class="inline2">snd</span>. This variable is then used to reduce the volume of that specific sound to 0 and fade up to full volume over 5 seconds.</p>
-  <p> </p>
-  <h4>Example 2:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(snd_fountain, 0.5, 0);<br />
-    var snd = audio_play_sound(snd_fountain, 0, true, 2);</p>
-  <p>The above code first sets the gain of the sound asset &quot;snd_fountain&quot; to 0.5. It then plays this sound using <span class="inline2"><a data-xref="{title}" href="audio_play_sound.htm">audio_play_sound</a></span> and sets the gain of this new sound instance to 2 (using the optional &quot;gain&quot; parameter of the function).</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="audio_sound_get_gain.htm">audio_sound_get_gain</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+        var snd = audio_play_sound(snd_fountain);<br />
+        audio_sound_gain(snd, 0, 0);<br />
+        audio_sound_gain(snd, 1, 5000);<br />
+    }</p><p> 위의 코드는 변수를 확인하고 반환하는 경우 <span class="inline">true</span> 그런 다음 재생할 사운드의 인덱스를 로컬 변수 &quot;snd&quot;에 할당합니다. 그런 다음 이 변수를 사용하여 해당 특정 사운드의 볼륨을 0으로 줄이고 5초에 걸쳐 최대 볼륨으로 페이드업합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio.htm">오디오</a></div><div style="float:right"> 다음: <a href="audio_sound_get_gain.htm"><span class="notranslate">audio_sound_get_gain</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_sound_gain

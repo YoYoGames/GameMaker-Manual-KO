@@ -7,60 +7,18 @@
   <title>time_seconds_to_bpm</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for time_seconds_to_bpm" />
+  <meta name="topic-comment" content="time_seconds_to_bpm에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="time_seconds_to_bpm" />
   <meta name="search-keywords" content="time_seconds_to_bpm" />
 </head>
-<body>
-  <h1>time_seconds_to_bpm</h1>
-  <p>This function takes the length of a beat in seconds, and returns a beats-per-minute value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">time_seconds_to_bpm(seconds);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>seconds</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The seconds-per-beat value to convert into beats-per-minute</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _period = time_source_get_period(time_source);<br />
+<body><h1>time_seconds_to_bpm</h1><p> 이 함수는 비트의 길이를 초 단위로 취하고 분당 비트 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">time_seconds_to_bpm(seconds);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">seconds</span></td><td> <span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The seconds-per-beat value to convert into beats-per-minute</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p><p></p><h4> 예시:</h4><p class="code">var _period = time_source_get_period(time_source);<br />
     var _bpm = time_seconds_to_bpm(_period);<br />
     <br />
     show_debug_message(_bpm);
-  </p>
-  <p>This function gets the period of a <span data-keyref="Type_Resource_TimeSource">Time Source</span>, converts it to BPM and prints that value to the output log.</p>
-  <p>This code follows the example for <a href="time_bpm_to_seconds.htm"><span class="inline">time_bpm_to_seconds()</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a></div>
-        <div>Next: <a data-xref="{title}" href="call_later.htm">call_later</a><a href="call_later.htm"></a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 이 함수는 <span data-keyref="Type_Resource_TimeSource">시간 소스</span> 의 기간을 가져와 BPM으로 변환하고 해당 값을 출력 로그에 인쇄합니다.</p><p> 이 코드는 다음 예제를 따릅니다.<a href="time_bpm_to_seconds.htm"><span class="inline">time_bpm_to_seconds()</span></a>.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Time_Sources.htm">시간 소스</a></div><div> 다음: <a data-xref="{title}" href="call_later.htm">call_later</a><a href="call_later.htm"></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 time_seconds_to_bpm

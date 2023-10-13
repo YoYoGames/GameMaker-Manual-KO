@@ -3,47 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Text Files</title>
+  <title>텍스트 파일</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for the Text File functions" />
+  <meta name="topic-comment" content="텍스트 파일 기능에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Text Files" />
+  <meta name="search-keywords" content="텍스트 파일" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Text Files</h1>
-  <p>Text files are a useful way to store large amounts of data externally from your game. Contrary to ini files, you can have up to 32 text files open at once, and you can read and write large chunks of data to them as well. However, it is up to you to decide how that data should be structured as there is no set &quot;section&quot; or &quot;key&quot; structure like with <a href="../Ini_Files/Ini_Files.htm"><span class="inline">*.ini</span> files</a>.</p>
-  <p>Please note that for games with localizations it is very important that accented letters can be read from external files. This means that you should create the txt file in <b>UTF8</b> format <i>first</i> and then add it into <span data-keyref="GameMaker Name">GameMaker</span> as an included file so that it is exported on running the game and used instead of the default ANSI format txt file that is created by the <span data-keyref="GameMaker Name">GameMaker</span> file functions when no file is previously supplied. In this way, you can read and write to it correctly with all accents and non-roman letters being maintained.</p>
-  <p>The following functions exist that deal with files:</p>
-  <ul class="colour">
-    <li><a href="file_text_open_read.htm">file_text_open_read</a></li>
-    <li><a href="file_text_open_write.htm">file_text_open_write</a></li>
-    <li><a href="file_text_open_append.htm">file_text_open_append</a></li>
-    <li><a href="file_text_open_from_string.htm">file_text_open_from_string</a></li>
-    <li><a href="file_text_read_real.htm">file_text_read_real</a></li>
-    <li><a href="file_text_read_string.htm">file_text_read_string</a></li>
-    <li><a href="file_text_readln.htm">file_text_readln</a></li>
-    <li><a href="file_text_write_real.htm">file_text_write_real</a></li>
-    <li><a href="file_text_write_string.htm">file_text_write_string</a></li>
-    <li><a href="file_text_writeln.htm">file_text_writeln</a></li>
-    <li><a href="file_text_eoln.htm">file_text_eoln</a></li>
-    <li><a href="file_text_eof.htm">file_text_eof</a></li>
-    <li><a href="file_text_close.htm">file_text_close</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../File_Handling.htm">File Handling</a></div>
-        <div style="float:right">Next: <a href="../Binary_Files/Binary_Files.htm">Binary Files</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 텍스트 파일</h1><p> 텍스트 파일은 게임 외부에 있는 많은 양의 데이터를 저장하는 데 유용한 방법입니다. ini 파일과 달리 한 번에 최대 32개의 텍스트 파일을 열 수 있으며 많은 양의 데이터를 읽고 쓸 수도 있습니다. 그러나 다음과 같이 &quot;섹션&quot; 또는 &quot;키&quot; 구조가 설정되어 있지 않으므로 해당 데이터를 구조화하는 방법을 결정하는 것은 사용자의 몫입니다. <a href="../Ini_Files/Ini_Files.htm"><span class="inline">*.ini</span>파일</a>.</p><p> 현지화 게임의 경우 외부 파일에서 악센트 문자를 읽을 수 있다는 것이 매우 중요합니다. 즉, <b>UTF8</b> 형식의 txt 파일을 <i>먼저</i> 생성한 다음 게임메이커에 포함된 파일로 추가해야 게임 실행 시 내보내 <span data-keyref="GameMaker Name">지고 GameMaker</span> <span data-keyref="GameMaker Name">파일</span> 기능에 의해 생성되는 기본 ANSI 형식 txt 파일 대신 사용됩니다. 파일이 이전에 제공되지 않은 경우. 이런 식으로 모든 악센트와 비로마 문자를 유지하면서 올바르게 읽고 쓸 수 있습니다.</p><p> 파일을 처리하는 다음 함수가 존재합니다.</p><ul class="colour"><li> <a href="file_text_open_read.htm"><span class="notranslate">file_text_open_read</span></a></li><li> <a href="file_text_open_write.htm"><span class="notranslate">file_text_open_write</span></a></li><li> <a href="file_text_open_append.htm"><span class="notranslate">file_text_open_append</span></a></li><li> <a href="file_text_open_from_string.htm"><span class="notranslate">file_text_open_from_string</span></a></li><li> <a href="file_text_read_real.htm"><span class="notranslate">file_text_read_real</span></a></li><li> <a href="file_text_read_string.htm"><span class="notranslate">file_text_read_string</span></a></li><li> <a href="file_text_readln.htm"><span class="notranslate">file_text_readln</span></a></li><li> <a href="file_text_write_real.htm"><span class="notranslate">file_text_write_real</span></a></li><li> <a href="file_text_write_string.htm"><span class="notranslate">file_text_write_string</span></a></li><li> <a href="file_text_writeln.htm"><span class="notranslate">file_text_writeln</span></a></li><li> <a href="file_text_eoln.htm"><span class="notranslate">file_text_eoln</span></a></li><li> <a href="file_text_eof.htm"><span class="notranslate">file_text_eof</span></a></li><li> <a href="file_text_close.htm"><span class="notranslate">file_text_close</span></a></li> </ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../File_Handling.htm">파일 처리</a></div><div style="float:right"> 다음: <a href="../Binary_Files/Binary_Files.htm">이진 파일</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Text Files

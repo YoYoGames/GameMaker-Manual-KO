@@ -6,64 +6,21 @@
   <title>path_get_point_y</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_get_point_y" />
+  <meta name="topic-comment" content="path_get_point_y 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_get_point_y" />
   <meta name="search-keywords" content="path_get_point_y" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_get_point_y</h1>
-  <p>This function will return the y position (in room coordinates) of the point that you input for the path that you index. If the point is outside of the range of the path (ie: a path has 8 points and you ask for the y position of point 10) then a value of 0 will be returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_get_point_y(index, n);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to check.</td>
-      </tr>
-      <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The point number to check.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (path_position == 1)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_get_point_y</h1><p> 이 함수는 인덱싱하는 경로에 대해 입력한 점의 y 위치(실 좌표)를 반환합니다. 점이 경로 범위 밖에 있는 경우(예: 경로에 점이 8개 있고 점 10의 y 위치를 묻는 경우) 값 0이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_point_y(index, n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The point number to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">if (path_position == 1)<br />
     {<br />
         var _num = path_get_number(pth_Patrol);<br />
         var _pos = floor(random(_num));<br />
         x = path_get_point_x(pth_Patrol, _pos);<br />
         y = path_get_point_y(pth_Patrol, _pos);<br />
         path_position = (1 / _num) * _pos;<br />
-    }</p>
-  <p>The above code will check to see if an instance is at the end of a path. If it is it will then choose a random point on the path and move the instance to that point.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
-        <div style="float:right">Next: <a href="path_get_precision.htm">path_get_precision</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 인스턴스가 경로 끝에 있는지 확인합니다. 그렇다면 경로에서 임의의 지점을 선택하고 인스턴스를 해당 지점으로 이동합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Paths.htm">경로</a></div><div style="float:right"> 다음: <a href="path_get_precision.htm"><span class="notranslate">path_get_precision</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_get_point_y

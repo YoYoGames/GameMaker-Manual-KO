@@ -6,72 +6,13 @@
   <title>gamepad_set_option</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gamepad_set_option" />
+  <meta name="topic-comment" content="gamepad_set_option에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_set_option" />
   <meta name="search-keywords" content="gamepad_set_option" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_option</h1>
-  <p>This function can be used to set any of the available gamepad options. You supply the gamepad &quot;slot&quot; to set the option on, as well as the option string to set and the value to use. The available option string will depend on the platform that the project is being run on, as listed below:</p>
-  <p> </p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Option</th>
-        <th>Platform</th>
-        <th>Description</th>
-        <th>Value</th>
-      </tr>
-      <tr>
-        <td>&quot;allow_rotation&quot;</td>
-        <td>tvOS</td>
-        <td>Set whether the Siri Remote will be rotation locked (ie: can only be used vertically) or not. When unlocked (a value of <span class="inline">true</span>) rotating the control will change the input, such that a rotation of 90º to the left will make the &quot;right&quot; side of the touch pad return &quot;up&quot;, etc... such that all input will be relative to the orientation of the device. When locked (a value of <span class="inline">false</span>) then the input will not be changed relative to the position of the controller and will always be treated as if the controller is in a vertical position.</td>
-        <td>Boolean</td>
-      </tr>
-      <tr>
-        <td>&quot;dpad_absolute&quot;</td>
-        <td>tvOS</td>
-        <td>Set whether the Siri Remote touchpad accepts absolute input, or relative input. In absolute mode (a value of <span class="inline">true</span>) the center of the touch pad is considered the (0,0) position - ie: where the analog stick is at rest or where the center of the dpad would be - and movement around this position will generate input. When set to relative (a value of <span class="inline">false</span> then the (0,0) position will be considered as being wherever the initial touch on the pad is made and all input will be generated from that position, not the center of the pad.</td>
-        <td>Boolean</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gamepad_set_option(device, option_name, value);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>device</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Which gamepad device &quot;slot&quot; to set.</td>
-      </tr>
-      <tr>
-        <td>option_name</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the option to set (a string, see the table above)</td>
-      </tr>
-      <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_Bool">Boolean</span>, or <span data-keyref="Type_String">String</span></td>
-        <td>The value to set the option to (can be boolean, real or string - see the table above)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">for(var i = 0; i &lt; 12; ++i;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_option</h1><p> 이 기능은 사용 가능한 게임패드 옵션을 설정하는 데 사용할 수 있습니다. 옵션을 설정하기 위한 게임패드 &quot;슬롯&quot;과 설정할 옵션 문자열 및 사용할 값을 제공합니다. 사용 가능한 옵션 문자열은 아래와 같이 프로젝트가 실행되는 플랫폼에 따라 다릅니다.</p><p></p><table><tbody><tr><th> 옵션</th><th> 플랫폼</th><th> 설명</th><th> 값</th></tr><tr><td> &quot;allow_rotation&quot;</td><td> tvOS</td><td> Siri Remote의 회전 잠금 여부를 설정합니다(예: 세로로만 사용할 수 있음). 잠금 해제 시(값 <span class="inline">true</span> ) 컨트롤을 회전하면 입력이 변경되어 왼쪽으로 90º 회전하면 터치 패드의 &quot;오른쪽&quot;이 &quot;위쪽&quot;으로 돌아가게 됩니다. 장치. 잠긴 경우(값 <span class="inline">false</span> ) 그러면 입력은 컨트롤러의 위치와 관련하여 변경되지 않고 항상 컨트롤러가 수직 위치에 있는 것처럼 처리됩니다.</td><td> 부울</td></tr><tr><td> &quot;dpad_absolute&quot;</td><td> tvOS</td><td> Siri Remote 터치패드가 절대 입력을 허용할지 아니면 상대 입력을 허용할지 설정합니다. 절대 모드에서(값 <span class="inline">true</span> ) 터치 패드의 중심은 (0,0) 위치로 간주됩니다. 즉, 아날로그 스틱이 정지된 위치 또는 dpad의 중심이 있어야 하는 위치 - 이 위치를 중심으로 이동하면 입력이 생성됩니다. 상대 값으로 설정하면 <span class="inline">false</span> 그러면 (0,0) 위치는 패드를 처음 터치하는 위치로 간주되고 모든 입력은 패드의 중심이 아니라 해당 위치에서 생성됩니다.</td><td> 부울</td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">gamepad_set_option(device, option_name, value);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to set.</span></td></tr><tr><td> <span class="notranslate">option_name</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name of the option to set (a string, see the table above)</span></td></tr><tr><td> <span class="notranslate">value</span></td><td> <span data-keyref="Type_Real">실수</span>, <span data-keyref="Type_Bool">부울</span> 또는 <span data-keyref="Type_String">문자열</span></td><td> <span class="notranslate">The value to set the option to (can be boolean, real or string - see the table above)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">for(var i = 0; i &lt; 12; ++i;)<br />
     {<br />
         if gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == &quot;tvOS Siri Remote&quot;<br />
         {<br />
@@ -80,19 +21,7 @@
                 gamepad_set_option(i, &quot;allow_rotation&quot;, true);<br />
             }<br />
         }<br />
-    }</p>
-  <p>The above code loops through all the gamepad slots and checks for the &quot;Siri Remote&quot; on the tvOS platform. If one is detected, it then sets the remote to allow input rotation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_axis_count.htm"> gamepad_axis_count </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 모든 게임패드 슬롯을 반복하고 tvOS 플랫폼에서 &quot;Siri Remote&quot;를 확인합니다. 하나가 감지되면 입력 회전을 허용하도록 리모컨을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Input.htm">게임패드 입력</a></div><div style="float:right"> 다음: <a href="gamepad_axis_count.htm">gamepad_axis_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_option

@@ -9,48 +9,12 @@
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for video_draw" />
+  <meta name="topic-comment" content="video_draw에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="video_draw" />
-  <meta name="search-keywords" content="video_draw, draw video, render video" />
+  <meta name="search-keywords" content="video_draw,비디오 그리기,비디오를 렌더링" />
   <meta name="condition-tags" content="" />
 </head>
-<body>
-  <h1>video_draw</h1>
-  <p>This function draws the current frame of the <a href="video_open.htm">opened video</a> to a surface (or two surfaces). It returns the surface(s) as part of its return array, which can be <a href="../Surfaces/draw_surface.htm">drawn manually</a>.</p>
-  <p>The function also returns data regarding the status of the video, which is expanded upon below.</p>
-  <p>Ensure that this is only called after a <span class="inline"><a href="video_open.htm">video_open()</a></span> call but before a <span class="inline"><a href="video_close.htm">video_close()</a></span> call, otherwise it will not do anything (as there will not be a video loaded).</p>
-  <h2>Return Data</h2>
-  <p>The function will return an array, the first element (<span class="inline2">[0]</span>) of which will be a real value. This value tells the status of the video, and will be:</p>
-  <ul class="colour">
-    <li><strong>0</strong>, if the video is playing without any issues</li>
-    <li><strong>-1</strong>, if there was an error</li>
-    <li>On some platforms, <strong>-2</strong>, if the video finished playing (at which point it can be removed from memory with a <span class="inline"><a href="video_close.htm">video_close()</a></span> call)
-      <ul>
-        <li>It&#39;s recommended to use the <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> instead to know when a video ends</li>
-      </ul>
-    </li>
-  </ul>
-  <p>When this status value is <strong>0</strong>, the array will contain more data, which will depend on the format of the video. You can know the video format by calling <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
-  <h2>RGBA Videos</h2>
-  <p><span>For RGBA videos, the position <span class="inline2">[1]</span> will contain the surface where the video frame was drawn. You can get this surface and <a href="../Surfaces/draw_surface.htm">draw it</a> manually.</span></p>
-  <h2>YUV Videos</h2>
-  <p><span>Some platforms (especially consoles) use the YUV colour format for videos, which makes use of two surfaces. In that case the array will have positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span> with two surfaces:</span></p>
-  <ul class="colour">
-    <li><span><span class="inline2">[1]</span> is the main video surface in black and white</span></li>
-    <li><span><span class="inline2">[2]</span> is the chroma surface that contains all the colour data</span></li>
-  </ul>
-  <p>Both these surfaces are then combined using a YUV shader before being used to texture a custom quad, which will draw the video to the screen.</p>
-  <p>Read <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a> for steps on drawing these two surfaces using a shader.</p>
-  <p>For the specific implementation details for a particular console, please refer to its documentation on the <a href="https://help.yoyogames.com/hc/en-us/">YoYo Games Helpdesk</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">video_draw();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _data = video_draw();<br />
+<body><h1>video_draw</h1><p> 이 함수는 <a href="video_open.htm">열린 비디오</a> 의 현재 프레임을 표면(또는 두 표면)에 그립니다. <a href="../Surfaces/draw_surface.htm">수동으로 그릴</a> 수 있는 반환 배열의 일부로 표면을 반환합니다.</p><p> 이 함수는 또한 아래에서 확장된 비디오 상태에 관한 데이터를 반환합니다.</p><p> 이것이 호출된 후에만 호출되는지 확인하십시오. <span class="inline"><a href="video_open.htm">video_open()</a></span> 전화하지만 전에 <span class="inline"><a href="video_close.htm">video_close()</a></span> 호출하지 않으면 아무 작업도 수행하지 않습니다(로드된 비디오가 없기 때문에).</p><h2> 데이터 반환</h2><p> 이 함수는 배열을 반환하며, 첫 번째 요소( <span class="inline"><a href="video_close.htm">video_close()</a>>[0]</span> )는 실제 값이 됩니다. 이 값은 비디오의 상태를 나타내며 다음과 같습니다.</p><ul class="colour"><li> <strong>0</strong>, 동영상이 문제 없이 재생되는 경우</li><li> <strong>-1</strong>, 오류가 있는 경우</li><li> 일부 플랫폼에서 <strong>-2</strong>, 비디오 재생이 끝나면(이 시점에서<span class="inline"><a href="video_get_format.htm">video_get_format()</a></span> 전화)<ul><li> 비디오가 끝나는 시점을 알기 위해 대신 <a data-xref="{text}" href="Videos.htm#h">비동기 콜백</a> 을 사용하는 것이 좋습니다.</li></ul></li></ul><p> 이 상태 값이 <strong>0</strong> 이면 배열에 더 많은 데이터가 포함되며 이는 비디오 형식에 따라 다릅니다. 전화를 걸어 비디오 형식을 알 수 있습니다. <span class="inline">video_draw()</span>.</p><h2> RGBA 비디오</h2><p> <span>RGBA 비디오의 경우 위치 <span class="inline2">[1]</span> 에는 비디오 프레임이 그려진 표면이 포함됩니다. 이 표면을 가져와 수동으로 <a href="../Surfaces/draw_surface.htm">그릴 수</a> 있습니다.</span></p><h2> YUV 비디오</h2><p> <span>일부 플랫폼(특히 콘솔)은 두 개의 표면을 사용하는 비디오에 YUV 색상 형식을 사용합니다. 이 경우 배열에는 두 개의 표면이 있는 <span class="inline2">[1]</span> 및 <span class="inline2">[2]</span> 위치가 있습니다.</span></p><ul class="colour"><li> <span><span class="inline2">[1]</span> 은 흑백의 주요 비디오 표면입니다.</span></li><li> <span><span class="inline2">[2]</span> 는 모든 색상 데이터를 포함하는 채도 표면입니다.</span></li></ul><p> 그런 다음 이 두 표면을 YUV 셰이더를 사용하여 결합한 다음 사용자 지정 쿼드를 텍스처링하는 데 사용합니다. 그러면 비디오가 화면에 그려집니다.</p><p> 셰이더를 사용하여 이 두 표면을 그리는 단계에 대해서는 <a data-xref="{title}" href="YUV_Videos.htm">YUV 비디오</a> 를 읽으십시오.</p><p> 특정 콘솔에 대한 구체적인 구현 정보는 <a href="https://help.yoyogames.com/hc/en-us/">YoYo Games Helpdesk</a> 에서 해당 문서를 참조하십시오.</p><p></p><h4> 통사론:</h4><p class="code">video_draw();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p><p></p><h4> 예시:</h4><p class="code">var _data = video_draw();<br />
     var _status = _data[0];<br />
     <br />
     if (_status == 0)<br />
@@ -59,19 +23,7 @@
     <br />
         draw_surface(_surface, x, y);<br />
     }
-  </p>
-  <p>The above code calls <span class="inline">video_draw()</span>, and checks if the returned status is 0, meaning the video is playing. In that case it gets the surface ID and draws it at the instance&#39;s position. This will only work for RGBA videos.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드 호출<span class="inline"></span>, 반환된 상태가 0인지 확인하여 동영상이 재생 중임을 의미합니다. 이 경우 표면 ID를 가져와 인스턴스의 위치에 그립니다. 이것은 RGBA 비디오에서만 작동합니다.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Videos.htm">비디오 재생</a></div><div> 다음: <a data-xref="{title}" href="YUV_Videos.htm">YUV 비디오</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 video_draw

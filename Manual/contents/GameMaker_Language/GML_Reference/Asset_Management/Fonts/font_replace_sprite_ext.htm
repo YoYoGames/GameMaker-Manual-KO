@@ -6,74 +6,13 @@
   <title>font_replace_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function font_replace_sprite_ext" />
+  <meta name="topic-comment" content="font_replace_sprite_ext 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="font_replace_sprite_ext" />
   <meta name="search-keywords" content="font_replace_sprite_ext" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_replace_sprite_ext</h1>
-  <p>This function will replace a sprite font that you created previously using the function <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. It uses a &quot;sprite strip&quot;, where each sub-image is be an individual symbol or letter, and the images are mapped to letters based on the argument &quot;string_map&quot; of the function. This argument is a string that you can use to tell <span data-keyref="GameMaker Name">GameMaker</span> what order the sub-images of the sprite font are and it will map these automatically when writing text. So, for example, if you have a string-map of &quot;AaBbCcDdEeFfGgHh&quot;, your sprite font <i>must</i> have the sub-images ordered in this way.</p>
-  <p>You can also set the spacing for the font to be proportional (<span class="inline">true</span>) or not (<span class="inline">false</span>), where a proportional font is spaced based on the actual width of the letters (so the letter &quot;i&quot; takes less room than the letter &quot;w&quot;, for example) while a non-proportional font will be spaced based on the sub-image width, like a monospaced font. Finally, you can define the space to leave between each letter when writing, and this can be any integer value, with 0 being no space (the letters will &quot;touch&quot; if proportional). The function returns an <i>index</i> value that should be stored in a variable as this will be needed in all further codes that refer to this font.</p>
-  <p>If the function fails, then it will fail silently without replacing the given sprite font.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>This function requires you to have previously added a sprite font using <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>, as it will replace that and cannot be used on fonts that are included as part of the game resources.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>font</td>
-        <td><span data-keyref="Type_Asset_Font">Font Asset</span></td>
-        <td>The font to replace.</td>
-      </tr>
-      <tr>
-        <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
-        <td>The sprite to add a font based on.</td>
-      </tr>
-      <tr>
-        <td>string_map</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>String from which sprite sub-image order is taken.</td>
-      </tr>
-      <tr>
-        <td>prop</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Set as proportional font or not.</td>
-      </tr>
-      <tr>
-        <td>sep</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The space to leave between each letter.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">font_replace_sprite_ext(global.Font, spr_CalcFont, &quot;0123456789+-*/=&quot;, true, 2);</p>
-  <p>The above code will replace a sprite font asset that is indexed in the variable &quot;global.Font&quot; with sprite images indexed in the variable &quot;spr_CalcFont&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a href="font_delete.htm">font_delete</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_replace_sprite_ext</h1><p> 이 함수는 이전에 함수를 사용하여 만든 스프라이트 글꼴을 대체합니다.<a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. 각 하위 이미지는 개별 기호 또는 문자이고 이미지는 함수의 &quot;string_map&quot; 인수를 기반으로 문자에 매핑되는 &quot;스프라이트 스트립&quot;을 사용합니다. 이 인수는 <span data-keyref="GameMaker Name">GameMaker</span> 에 스프라이트 글꼴의 하위 이미지 순서를 알려주는 데 사용할 수 있는 문자열이며 텍스트를 작성할 때 자동으로 매핑합니다. 따라서 예를 들어 &quot;AaBbCcDdEeFfGgHh&quot;의 문자열 맵이 있는 경우 스프라이트 글꼴에는 이러한 방식으로 정렬된 하위 이미지가 <i>있어야 합니다</i>.</p><p> 글꼴의 간격을 비례하도록 설정할 수도 있습니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ), 여기서 비례 글꼴은 문자의 실제 너비를 기준으로 간격을 두는 반면(예: 문자 &quot;i&quot;는 문자 &quot;w&quot;보다 공간을 적게 차지함) 비례하지 않는 글꼴은 하위 고정 폭 글꼴과 같은 이미지 너비. 마지막으로, 쓸 때 각 문자 사이에 공백을 남길 수 있습니다. 이것은 임의의 정수 값이 될 수 있으며 0은 공백이 없습니다(문자가 비례하는 경우 &quot;접촉&quot;). 이 함수는 이 글꼴을 참조하는 모든 추가 코드에 필요하므로 변수에 저장해야 하는 <i>인덱스</i> 값을 반환합니다.</p><p> 함수가 실패하면 주어진 스프라이트 글꼴을 바꾸지 않고 자동으로 실패합니다.</p><p class="note"> <b><span class="note">참고</span></b> 이 기능을 사용하려면 이전에 다음을 사용하여 스프라이트 글꼴을 추가해야 합니다.<span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>, 대체할 것이며 게임 리소스의 일부로 포함된 글꼴에는 사용할 수 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">font</span></td><td> <span data-keyref="Type_Asset_Font">글꼴 자산</span></td><td> <span class="notranslate">The font to replace.</span></td></tr><tr><td> <span class="notranslate">spr</span></td><td> <span data-keyref="Type_Asset_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The sprite to add a font based on.</span></td></tr><tr><td> <span class="notranslate">string_map</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">String from which sprite sub-image order is taken.</span></td></tr><tr><td> <span class="notranslate">prop</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Set as proportional font or not.</span></td></tr><tr><td> <span class="notranslate">sep</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The space to leave between each letter.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">font_replace_sprite_ext(global.Font, spr_CalcFont, &quot;0123456789+-*/=&quot;, true, 2);</p><p> 위의 코드는 &quot;global.Font&quot; 변수에 인덱싱된 스프라이트 글꼴 자산을 &quot;spr_CalcFont&quot; 변수에 인덱싱된 스프라이트 이미지로 대체합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Fonts.htm">글꼴</a></div><div style="float:right"> 다음: <a href="font_delete.htm"><span class="notranslate">font_delete</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_replace_sprite_ext

@@ -3,61 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Insert Into List</title>
+  <title>목록에 삽입</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Insert Into List Item action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Insert Into List" />
-  <meta name="search-keywords" content="Insert Into List" />
+  <meta name="topic-comment" content="목록 항목에 삽입 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 목록에 삽입" />
+  <meta name="search-keywords" content="목록에 삽입" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Insert Into List Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Insert_Into_List.png" /> Insert Into List</h1>
-  <p>With this action you can recover the index position of an item within the given list. You supply the variable that stores the list index (as returned by the action <a href="Create_List.htm">Create List</a>) and the value you want to find the index position
-    of within the list, as well as a target variable to store the returned index position for the item (which can be flagged as a temporary local variable to be used until the end of the script or event). When you insert a value into a list, all indices
-    above the given index for inserting will be moved up one, so if you have a list with 4 items in it (index position 0 to 3) and place a new item at index position 2, the previous item 2 will become item 3 and the previous item 3 will become item 4.
-    Note that if the value you are looking for does not exist within the list, then there will be no list index position to return, and so the return value will be -1.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Insert Into List Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Insert_Into_List.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>List</td>
-        <td>The index (stored in a variable) of the list to insert into</td>
-      </tr>
-      <tr>
-        <td>Index</td>
-        <td>The index position within the list to insert a value</td>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The value to be stored at the position</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Inset Into List Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Insert_Into_List.png" />The above action block code uses a repeat loop to get the size of the list then generate
-    a random position within the list. It then generates a random value and inserts this value into the list at the random position defined previously.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Get_List_Item_Count.htm">Get List Item Count</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Insert Into List Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Insert_Into_List.png" /> 목록에 삽입</h1><p> 이 작업으로 주어진 목록 내 항목의 인덱스 위치를 복구할 수 있습니다. <a href="Create_List.htm">Create List</a> 작업에서 반환된 목록 인덱스를 저장하는 변수와 목록 내에서 인덱스 위치를 찾고자 하는 값은 물론 항목에 대해 반환된 인덱스 위치를 저장하기 위한 대상 변수( 스크립트 또는 이벤트가 끝날 때까지 사용할 임시 지역 변수로 플래그를 지정할 수 있습니다. 목록에 값을 삽입하면 삽입을 위해 지정된 인덱스 위의 모든 인덱스가 위로 이동하므로 목록에 4개의 항목(인덱스 위치 0~3)이 있는 목록이 있는 경우 인덱스 위치 2에 새 항목을 배치합니다., 이전 항목 2는 항목 3이 되고 이전 항목 3은 항목 4가 됩니다. 찾고 있는 값이 목록 내에 없으면 반환할 목록 인덱스 위치가 없으므로 반환합니다. 값은 -1이 됩니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Insert Into List Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Insert_Into_List.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">List</span></td><td> 삽입할 목록의 인덱스(변수에 저장됨)</td></tr><tr><td> <span class="notranslate">Index</span></td><td> 값을 삽입할 목록 내 인덱스 위치</td></tr><tr><td> <span class="notranslate">Value</span></td><td> 해당 위치에 저장할 값</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Inset Into List Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Insert_Into_List.png" /> 위의 액션 블록 코드는 반복 루프를 사용하여 목록의 크기를 얻은 다음 목록 내에서 임의의 위치를 생성합니다. 그런 다음 임의의 값을 생성하고 이 값을 이전에 정의된 임의의 위치에 있는 목록에 삽입합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Structure_Actions.htm">데이터 구조 작업</a></div><div style="float:right"> 다음: <a href="Get_List_Item_Count.htm">목록 항목 수 가져오기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Insert Into List

@@ -6,102 +6,14 @@
   <title>physics_particle_set_category_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_particle_set_category_flags" />
+  <meta name="topic-comment" content="physical_particle_set_category_flags에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
   <meta name="search-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_category_flags</h1>
-  <p>With this function you can change the particle flags for a category of particles. The <span class="inline">category</span> value is that which you defined in the function <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> or (if you created a group) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_water</span></td>
-        <td>The default properties for a soft body particle.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_zombie</span></td>
-        <td>A zombie particle is one that will be destroyed in a single step with all others flagged in this way.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_wall</span></td>
-        <td>This defines the particle as <i>static</i>, essentially creating it as an immovable object in the physics simulation, as they will remain in a fixed position no matter what collides with them. You should use this flag rather than set the density to 0.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_spring</span></td>
-        <td>Spring particles produce the effect of being attached to one another, as if by a spring. Particles created with this flag are &quot;connected&quot; in pairs, with each particle being connected to the one that was closest to it at the time of creation. Once paired, particles do not change &quot;partners&quot; , and the farther an external force pulls them from one another, the greater the power with which they will collide when that external force is removed. Note that no matter how far paired particles get from each another, the connection between them will not snap.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_elastic</span></td>
-        <td>Elastic particles deform and may also bounce when they collide with other rigid bodies in the physics simulation.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_viscous</span></td>
-        <td>A viscous particle is one that exhibits &quot;clinginess&quot; or &quot;stickiness&quot;, like oil. Viscous particles will clump and stick together more.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_powder</span></td>
-        <td>Powder particles produce a scattering effect such as you might see with sand or dust.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_tensile</span></td>
-        <td>Tensile particles are used to produce the effect of surface tension, or the taut curvature on the surface of a body of liquid. They might be used, for example, to create the surface tension you would see on a drop of water. Once the tension is broken, the particles bounce as if they were elastic, but also continue to attract each other. As a result, particles tend to form clusters as they bounce.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_flag_colourmixing</span></td>
-        <td>Colour-mixing particles take on some of the colour of other particles with which they collide. Note that if only one of the two colliding particles is a colour-mixing one, the other particle retains its pre-collision colour.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>These flags use bit-masking to create a final output value that is then checked to set the different basic properties of the particle category (with the base property always being that of <span class="inline">phy_particle_flag_water</span>). For example, if you want to simulate a viscous liquid with surface tension you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask off the appropriate bits as shown in the example below. In this way you can set different properties (other than the global properties) for each category of particle created.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_particle_set_category_flags(category, flags)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>category</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The particle category to set.</td>
-      </tr>
-      <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Physics Particle Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle category.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
-    physics_particle_set_category_flags(1, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags of all particles created with the category value of 1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_set_group_flags.htm">physics_particle_set_group_flags</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_category_flags</h1><p> 이 기능을 사용하면 입자 범주에 대한 입자 플래그를 변경할 수 있습니다. 그만큼 <span class="inline">category</span> 값은 함수에서 정의한 값입니다.<a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> 또는 (그룹을 만든 경우)<a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, 플래그는 다음 <b>상수</b> 조합의 반환 값입니다.</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_water</span></span></td><td> 소프트 바디 입자의 기본 속성입니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_zombie</span></span></td><td> 좀비 입자는 이러한 방식으로 플래그가 지정된 다른 모든 입자와 함께 한 번에 파괴되는 입자입니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_wall</span></span></td><td> 이것은 파티클을 <i>static</i> 으로 정의하며, 기본적으로 물리 시뮬레이션에서 움직일 수 없는 객체로 생성합니다. 이는 무엇과 충돌하더라도 고정된 위치에 남아 있기 때문입니다. 밀도를 0으로 설정하는 대신 이 플래그를 사용해야 합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_spring</span></span></td><td> 스프링 입자는 스프링에 의해 서로 붙는 듯한 효과를 냅니다. 이 플래그로 생성된 입자는 쌍으로 &quot;연결&quot;되며 각 입자는 생성 당시 가장 가까웠던 입자에 연결됩니다. 한 번 짝을 이룬 입자는 &quot;파트너&quot;를 변경하지 않으며 외부 힘이 서로를 멀리 끌어당길수록 외부 힘이 제거될 때 충돌하는 힘이 커집니다. 쌍을 이루는 입자가 서로 얼마나 멀리 떨어져 있더라도 이들 사이의 연결은 끊어지지 않습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_elastic</span></span></td><td> 탄성 입자는 물리 시뮬레이션에서 다른 강체와 충돌할 때 변형되고 바운스될 수도 있습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_viscous</span></span></td><td> 점성 입자는 오일과 같이 &quot;달라붙는&quot; 또는 &quot;끈적임&quot;을 나타내는 입자입니다. 점성 입자가 덩어리져 더 많이 붙습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_powder</span></span></td><td> 분말 입자는 모래나 먼지에서 볼 수 있는 것과 같은 산란 효과를 생성합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_tensile</span></span></td><td> 인장 입자는 표면 장력의 효과 또는 액체 표면의 팽팽한 곡률을 생성하는 데 사용됩니다. 예를 들어 물방울에서 볼 수 있는 표면 장력을 만드는 데 사용할 수 있습니다. 장력이 끊어지면 입자는 마치 탄성이 있는 것처럼 튕기지만 계속해서 서로를 끌어당깁니다. 결과적으로 입자는 바운스될 때 클러스터를 형성하는 경향이 있습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_flag_colourmixing</span></span></td><td> 색상 혼합 입자는 충돌하는 다른 입자의 색상 중 일부를 취합니다. 충돌하는 두 입자 중 하나만 색상 혼합 입자인 경우 다른 입자는 충돌 전 색상을 유지합니다.</td></tr></tbody></table><p> 이 플래그는 비트 마스킹을 사용하여 최종 출력 값을 만든 다음 파티클 범주의 다른 기본 속성을 설정하기 위해 검사됩니다(기본 속성은 항상 <span class="inline">phy_particle_flag_water</span> ). 예를 들어, 표면 장력이 있는 점성 액체를 시뮬레이션하려면 <a href="../../../../Additional_Information/Bitwise_Operators.htm">비트 <i>또는</i></a> &quot;|&quot; 아래 예와 같이 적절한 비트를 마스킹합니다. 이러한 방식으로 생성된 입자의 각 범주에 대해 다른 속성(전역 속성 제외)을 설정할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_particle_set_category_flags(category, flags)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">category</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The particle category to set.</span></td></tr><tr><td> <span class="notranslate">flags</span></td><td> <span data-keyref="Type_Constant_Phy_Particle_Flag">물리 입자 플래그 상수</span> (들)</td><td> <span class="notranslate">The flags to set on the particle category.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
+    physics_particle_set_category_flags(1, flags);</p><p> 위의 코드는 플래그 값을 저장할 변수를 만든 다음 범주 값 1로 생성된 모든 입자의 플래그를 설정하는 데 사용합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Soft_Body_Particles.htm">부드러운 바디 입자</a></div><div style="float:right"> 다음: <a href="physics_particle_set_group_flags.htm"><span class="notranslate">physics_particle_set_group_flags</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_category_flags

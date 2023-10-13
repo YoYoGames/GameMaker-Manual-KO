@@ -3,86 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>String To Number</title>
+  <title>문자열을 숫자로</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the String To Number action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - String To Number" />
-  <meta name="search-keywords" content="String To Number" />
+  <meta name="topic-comment" content="문자열을 숫자로 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 문자열을 숫자로" />
+  <meta name="search-keywords" content="문자열을 숫자로" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="String To Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_String_To_Number.png" /> String To Number</h1>
-  <p>This action can convert a string into a number. You provide the string to change and then give a target variable to return the real number back to (this variable can be flagged as a temporary local variable). Note that if the string has any characters
-    other than numbers and a decimal point, it will <i>not</i> be converted, although if the string <i>starts</i> with a number then those will be converted and the rest of the string excluded. It is important to note that when passing decimals into this
-    action, the returned string will be rounded to <i>two</i> decimal places only. Below is a table of input values and what you&#39;d expect returned</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>String</th>
-        <th>Returned Value</th>
-      </tr>
-      <tr>
-        <td>&quot;123&quot;</td>
-        <td>123</td>
-      </tr>
-      <tr>
-        <td>&quot;123 Hello World&quot;</td>
-        <td>123</td>
-      </tr>
-      <tr>
-        <td>&quot;Hello World&quot;</td>
-        <td>0 (by default if the string can&#39;t be converted, 0 will be returned)</td>
-      </tr>
-      <tr>
-        <td>&quot;Hello World 123&quot;</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>&quot;123.45678&quot;</td>
-        <td>123.46</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="String To Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_String_To_Number.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The string to convert</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned value</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="String To Number Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_String_To_Number.png" />The above action block code initialises a global variable and then loads a file with
-    a buffer saved in it. Two strings are read from the buffer and stored in a temporary local variables before one of them is converted into a real number and stored in another temporary local variable. These are then assigned to global variables, and
-    the buffer is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Type_Actions.htm">Data Type Actions</a></div>
-        <div style="float:right">Next: <a href="Number_To_String.htm">Number To String</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="String To Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_String_To_Number.png" /> 문자열을 숫자로</h1><p> 이 작업은 문자열을 숫자로 변환할 수 있습니다. 변경할 문자열을 제공한 다음 실수를 다시 반환할 대상 변수를 제공합니다(이 변수는 임시 지역 변수로 플래그가 지정될 수 있음). 문자열에 숫자와 소수점 이외의 문자가 있는 경우 변환 <i>되지 않지만</i> 문자열이 숫자로 <i>시작</i> 하면 변환되고 나머지 문자열은 제외됩니다. 이 작업에 소수점을 전달할 때 반환된 문자열은 소수점 이하 <i>두</i> 자리까지만 반올림된다는 점에 유의하는 것이 중요합니다. 다음은 입력 값과 반환될 것으로 예상되는 표입니다.</p><table><tbody><tr><th> 끈</th><th> 반환된 값</th></tr><tr><td> <span class="notranslate">&quot;123&quot;</span></td><td> 123</td></tr><tr><td> <span class="notranslate">&quot;123 Hello World&quot;</span></td><td> 123</td></tr><tr><td> <span class="notranslate">&quot;Hello World&quot;</span></td><td> 0(문자열을 변환할 수 없는 경우 기본적으로 0이 반환됨)</td></tr><tr><td> <span class="notranslate">&quot;Hello World 123&quot;</span></td><td> 0</td></tr><tr><td> <span class="notranslate">&quot;123.45678&quot;</span></td><td> 123.46</td></tr></tbody></table><p></p><h4> 동작 구문:</h4><p><img alt="String To Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_String_To_Number.png" /></p><h4> 인수:</h4><p></p><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Value</span></td><td> 변환할 문자열</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 값을 저장할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="String To Number Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_String_To_Number.png" /> 위의 액션 블록 코드는 전역 변수를 초기화한 다음 버퍼가 저장된 파일을 로드합니다. 버퍼에서 두 개의 문자열을 읽고 그 중 하나가 실수로 변환되어 다른 임시 지역 변수에 저장되기 전에 임시 지역 변수에 저장됩니다. 그런 다음 전역 변수에 할당되고 버퍼가 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Type_Actions.htm">데이터 유형 작업</a></div><div style="float:right"> 다음: <a href="Number_To_String.htm">숫자를 문자열로</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - String To Number

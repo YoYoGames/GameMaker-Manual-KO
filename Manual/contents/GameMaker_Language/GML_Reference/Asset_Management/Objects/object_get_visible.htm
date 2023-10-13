@@ -6,53 +6,17 @@
   <title>object_get_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function object_get_visible" />
+  <meta name="topic-comment" content="object_get_visible 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="object_get_visible" />
   <meta name="search-keywords" content="object_get_visible" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_get_visible</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;visible&quot; (runs its draw event) or not (does not run its draw event). Please note that this is not an instance function! So, you can have a visible object and an invisible instance of the same object and vice-versa. You can set an individual instances visibility using the <a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">object_get_visible(obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_visible</h1><p> 이 함수는 확인하고 있는 개체가 &quot;표시&quot;(그 그리기 이벤트 실행) 플래그가 지정되었는지 여부(그리기 이벤트를 실행하지 않음)를 알려줍니다. 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 따라서 동일한 개체의 보이는 개체와 보이지 않는 인스턴스를 가질 수 있으며 그 반대의 경우도 마찬가지입니다. 다음을 사용하여 개별 인스턴스 가시성을 설정할 수 있습니다.<a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a> 인스턴스 변수.</p><p></p><h4> 통사론:</h4><p class="code">object_get_visible(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br />
     {<br />
         visible = true;<br />
-    }</p>
-  <p>The above code will check the instance running it to see if it is visible or not as well as check the object index of the instance to see if it is flagged as visible or not. If the instance is <i>not</i> visible yet the object index is flagged as on, it will set &quot;visible&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_physics.htm">object_get_physics</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 실행 중인 인스턴스를 확인하여 표시되는지 여부를 확인하고 인스턴스의 개체 인덱스를 확인하여 표시되는지 여부를 확인합니다. 인스턴스가 <i>아직</i> 표시되지 않는 경우 개체 인덱스가 켜짐으로 플래그 지정되면 해당 인스턴스에 대해 &quot;표시됨&quot;이 true로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Objects.htm">개체</a></div><div style="float:right"> 다음: <a href="object_get_physics.htm"><span class="notranslate">object_get_physics</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_visible

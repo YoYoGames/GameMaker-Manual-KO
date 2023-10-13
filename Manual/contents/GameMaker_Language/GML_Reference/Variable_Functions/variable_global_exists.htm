@@ -6,55 +6,17 @@
   <title>variable_global_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function variable_global_exists" />
+  <meta name="topic-comment" content="variable_global_exists 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="variable_global_exists" />
   <meta name="search-keywords" content="variable_global_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_global_exists</h1>
-  <p>With this function you can check whether a global scope variable exists or not. You supply the global variable name to check for <i>as a string</i> (see example code below) and the function will return <span class="inline">true</span> if a global variable with the given name exists or <span class="inline">false</span> otherwise.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">variable_global_exists(name);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the global variable to check for (as a string)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>variable_global_exists</h1><p> 이 기능을 사용하면 전역 범위 변수의 존재 여부를 확인할 수 있습니다. 확인할 전역 변수 이름을 <i>문자열로</i> 제공하면(아래 예제 코드 참조) 함수는 다음을 반환합니다. <span class="inline">true</span> 주어진 이름의 전역 변수가 존재하거나 <span class="inline">false</span> 그렇지 않으면.</p><p></p><h4> 통사론:</h4><p class="code">variable_global_exists(name);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">name</span></td><td> <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The name of the global variable to check for (as a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br />
     {<br />
         global.enemy_num = instance_number(obj_Enemey_Parent);<br />
-    }</p>
-  <p>The above code will check to see if the global variable called &quot;enemy_num&quot; exists and if it does not it is created and set a value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_global_get.htm">variable_global_get</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;enemy_num&quot;이라는 전역 변수가 있는지 확인하고 없으면 생성하여 값을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="variable_global_get.htm"><span class="notranslate">variable_global_get</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_global_exists

@@ -6,43 +6,29 @@
   <title>xboxlive_achievement_show_achievements</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module">
+  <script src="../../../../assets/scripts/main_script.js">
+    //<![CDATA[
+    <
+    meta name = "rh-authors"
+    content = "Mark Alexander" / >
+      <
+      meta name = "topic-comment"
+    content = "Reference page for xboxlive_achievement_show_achievements" / >
+      <
+      meta name = "rh-index-keywords"
+    content = "achievement_show_achievements" / >
+      <
+      meta name = "search-keywords"
+    content = "achievement_show_achievements" / >
+    //]]>
   </script>
-    <meta name = "rh-authors" content = "Mark Alexander" />
-      <meta name = "topic-comment" content = "Reference page for xboxlive_achievement_show_achievements" />
-      <meta name = "rh-index-keywords" content = "achievement_show_achievements" />
-      <meta name = "search-keywords" content = "achievement_show_achievements" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_achievement_show_achievements</h1>
-  <p>This function will open the achievements page for the chosen platform. Please note that this is an <i>asynchronous function</i>, ie: your game will continue to run in the background while the achievements page is being shown. As such, you should be careful where you use this and make sure to pause the game or only permit it to be shown in areas of your game where it will not interfere with the game-play.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code">xboxlive_achievement_show_achievements()</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if achievements_enabled<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> xboxlive_achievement_show_achievements</h1><p> 이 기능은 선택한 플랫폼의 업적 페이지를 엽니다. 이것은 <i>비동기 함수</i> 라는 점에 유의하십시오. 즉, 업적 페이지가 표시되는 동안 게임이 백그라운드에서 계속 실행됩니다. 따라서 이것을 사용하는 위치에 주의해야 하며 게임을 일시 중지하거나 게임 플레이를 방해하지 않는 게임 영역에서만 표시되도록 허용해야 합니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">xboxlive_achievement_show_achievements()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if achievements_enabled<br />
     {<br />
         global.Pause = true;<br />
         instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br />
         xboxlive_achievement_show_achievements();<br />
-    }</p>
-  <p>The above code checks a custom variable to see if achievements are enabled, and if so it sets a global variable and creates a controller &quot;pause&quot; instance before calling the function to show the achievements on screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="xboxlive_achievement_load_friends.htm">xboxlive_achievement_load_friends</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 사용자 정의 변수를 확인하여 업적이 활성화되었는지 확인하고, 그렇다면 전역 변수를 설정하고 화면에 업적을 표시하기 위해 함수를 호출하기 전에 컨트롤러 &quot;일시 중지&quot; 인스턴스를 만듭니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">통계 및 순위표</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="xboxlive_achievement_load_friends.htm">xboxlive_achievement_load_friends</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 achievement_show_achievements

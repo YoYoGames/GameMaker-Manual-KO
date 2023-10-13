@@ -3,57 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Change Object Instance</title>
+  <title>개체 인스턴스 변경</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Change Object Instance action" />
+  <meta name="topic-comment" content="개체 인스턴스 변경 작업을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Change Object INdex" />
+  <meta name="search-keywords" content="객체 인덱스 변경" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /> Change Object Instance</h1>
-  <p>With this action you can change one instance into another instance. You need to specify the object that the instance it change into another instance of, and the action will change the instance, performing the Destroy Event and the Clean Up Event of
-    the initial instance and the Create Event of the new instance. Note that if you do not specify a direction or a speed etc... then the new instance will &quot;inherit&quot; these values. For example, if the initial instance has an <span class="inline">image_angle</span> (rotation)
-    of 180, travels at 2px per game tick and has an <span class="inline">image_speed</span> (animation speed) of 0.5, then the instance it changes into will maintain these values unless explicitly set in the Create event of the new instance.</p>
-  <p>It is worth noting that changing the instance means that you <i>can perform no further actions with that instance until the next game tick</i>, in particular trying to access variables etc... as that will cause an error. Basically, you
-    change the instance but it is not actually available until the end of the current step, so to access any of the variables it contains directly (for example, calling <span class="inline">inst_changed.x</span>) will not work.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Change Object Instance Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Change.png" /></p>
-  <h4>Arguments:</h4>
-  <p></p>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>Argument</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Object</td>
-          <td>The name of the object to change to an instance of.</td>
-        </tr>
-      </tbody>
-    </table>
-  
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Change Object Instance Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Change.png" />The above action block code checks for a mouse press and if one is detected
-    then it changes the instance into different one.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Alarm.htm">Set Alarm Countdown</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /> 개체 인스턴스 변경</h1><p> 이 작업으로 한 인스턴스를 다른 인스턴스로 변경할 수 있습니다. 인스턴스가 다른 인스턴스로 변경되는 개체를 지정해야 하며 초기 인스턴스의 Destroy Event 및 Clean Up Event 및 새 인스턴스의 Create Event를 수행하여 해당 인스턴스가 변경되는 작업을 수행합니다. 방향이나 속도 등을 지정하지 않으면 새 인스턴스가 이러한 값을 &quot;상속&quot;합니다. 예를 들어 초기 인스턴스에 <span class="inline">image_angle</span> (회전) 180, 게임 틱당 2px로 이동하고 <span class="inline">image_speed</span> (애니메이션 속도)가 0.5이면 변경되는 인스턴스는 새 인스턴스의 Create 이벤트에서 명시적으로 설정하지 않는 한 이러한 값을 유지합니다.</p><p> 인스턴스를 변경 <i>하면 다음 게임 틱까지 해당 인스턴스로 더 이상 작업을 수행할 수 없음을</i> 의미합니다. 특히 변수에 액세스하려고 하면 오류가 발생하므로... 기본적으로 인스턴스를 변경하지만 현재 단계가 끝날 때까지 실제로 사용할 수 없으므로 포함된 변수에 직접 액세스하려면(예: <span class="inline">inst_changed.x</span> ) 작동 안 할 것이다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Change Object Instance Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Change.png" /></p><h4> 인수:</h4><p></p><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Object</span></td><td> 인스턴스로 변경할 개체의 이름입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Change Object Instance Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Change.png" /> 위의 액션 블록 코드는 마우스 누름을 확인하고 감지되면 인스턴스를 다른 것으로 변경합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Actions_Library.htm">인스턴스 작업</a></div><div style="float:right"> 다음: <a href="Set_Alarm.htm">알람 카운트다운 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Change Object Instance

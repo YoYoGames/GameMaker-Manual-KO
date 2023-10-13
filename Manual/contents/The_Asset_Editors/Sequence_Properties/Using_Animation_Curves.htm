@@ -3,151 +3,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Using Animation Curves</title>
+  <title>애니메이션 곡선 사용</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing how to use animation curves with sequences
-" />
-  <meta name="rh-index-keywords" content="Sequences - Animation Curves" />
-  <meta name="search-keywords" content="curves,animation curves" />
+  <meta name="topic-comment" content="시퀀스와 함께 애니메이션 곡선을 사용하는 방법을 자세히 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="시퀀스 - 애니메이션 곡선" />
+  <meta name="search-keywords" content="곡선,애니메이션 곡선" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Using Animation Curves</h1>
-  <p>An important feature of the <a href="Using_The_Dope_Sheet.htm">dope sheet</a> is the ability to assign <a href="../Animation_Curves.htm">Animation Curves</a> to parameter tracks within the sequence to create <strong>parameter curves</strong> instead
-    of parameter keyframes. There are two types of curves that can be used for parameter tracks:</p>
-  <ul class="colour">
-    <li><strong>Embedded Curves</strong>: These are curves that are embedded in the sequence and are unique to the parameter track they are used on.</li>
-    <li><strong>Shared Curves</strong>: These are curves that are created independently of the sequence using the <a href="../Animation_Curves.htm">Animation Curve Editor</a>.</li>
-  </ul>
-  <p>We&#39;ll start by explaining how to use an Animation Curve asset, which is simply a case of creating a new curve, setting up the channels in the Animation Curve Editor, and then dragging the curve asset into the dope sheet to apply it to a parameter
-    track:</p>
-  <p><br/>
-    <img alt="Add Animation Curve Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_AddAnimCurve.gif" /></p>
-  <p>You can also use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Assign Shared Curve (Import)</strong><strong> </strong>to add an animation curve asset
-    to the selected parameter track. This will open the Asset Explorer where you can select the required curve from the ones presented to you:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" />It is important to note that the animation curve asset <strong>must have the correct number of channels for the track it is being applied to</strong>, as each
-    type of parameter track will require a different number of channels in the animation curve. Any animation curves that do not have enough channels will be shown with a <img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
-    /> indicator in the asset browser.</p>
-  <p>Below is a list of the different parameter tracks and the channels that they will require in each curve asset (channels should be added in the order given for each parameter type):</p>
-  <ul class="colour">
-    <li><strong>Position</strong>: 2 channels, X and Y.</li>
-    <li><strong>Rotation</strong>: 1 channel.</li>
-    <li><strong>Colour Multiply</strong>: 4 channels, Alpha, Red, Green and Blue, and the range <em>must</em> be between 0 and 255.</li>
-    <li><strong>Image Index</strong>: 1 channel.</li>
-    <li><strong>Image Speed</strong>: 1 channel.</li>
-    <li><strong>Origin</strong>: 2 channels, X and Y.</li>
-    <li><strong>Scale</strong>: 2 channels, X scale and Y scale, and note that the value is a multiplier, so the base value is 1 (no scale) and greater than one will make the image bigger, and less than 1 will make it smaller. Negative values will flip or
-      mirror the image as well as apply scale.</li>
-    <li><strong>Pitch</strong>: 1 channel, which <em>must</em> be a minimum of 0, where 1 is the default pitch of the sound.</li>
-    <li><strong>Volume</strong>: 1 channel, which <em>must </em>be a minimum of 0 and a maximum of 1.</li>
-  </ul>
-  <p>If you import an animation curve that does not have enough channels for the parameter track, you will be prompted to choose whether any missing channels should be added into the animation curve:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p>
-  <p>Shared curves can also be made invalid if any required channels are deleted in an external animation curve editor. In such a case the shared curve will appear as invalid in the dope sheet, and you can click on &quot;Add Channel(s)&quot; to create any
-    missing channels which will make the curve valid again:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p>
-  <p>By default, the animation curve will be applied along the entire length of the asset key it is attached to, however, much like with keyframes, you can click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"
-    /> on a curve and drag it to re-position it on the timeline, and you can also hold down the <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55" /> key and and drag to resize the length of the curve
-    (this also applies to <strong>embedded curves</strong>):</p>
-  <p><img alt="Resize and reposition anim curves" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ResizeCurve.gif" />The other way to add a parameter curve to a track is to embed it. This can be done by either clicking the right mouse button
-    <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on the parameter track and selecting &quot;<em>Convert to Curve</em>&quot;, or by clicking on the <strong>Toggle Curve Mode</strong> <img src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button, which will show you the track as an animation curve in the full dope sheet area, and you can then click the <strong>Convert To Curve</strong> button:</p>
-  <p><img alt="Convert keyframes to a curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ConvertToCurve.gif" />Once you have converted the parameter keyframe track to a curve it can be edited within the dope sheet, exactly the same way
-    that you can edit <a href="../Animation_Curves.htm">animation curve assets</a>, this includes adding or removing points, changing their position, changing the curve type (linear, smooth or bezier), applying presets, and renaming channels and the colours
-    associated with them.</p>
-  <p class="note"><strong>IMPORTANT</strong>: You can also edit animation curve assets that have been applied to parameter tracks in this way, however any changes you make <strong>will be applied to all tracks that use the animation curve</strong>, as you are editing
-    the curve asset and not a single copy of it. To edit an animation curve asset that has been applied to a track <strong>only</strong> on that track, you must first use the right mouse menu <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-      width="21" /> on the parameter track and select <b>Embed Curve</b>. This will duplicate the animation curve asset and embed it in the pararmeter track as an independent curve only for that track. Conversely, you can convert an embedded animation curve
-    into an Animation Curve asset using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Export To Shared Curve</strong>. This will convert the embedded
-    curve into a new asset which can then be edited as normal as well as applied to other parameter tracks if required.</p>
-  <p><img alt="The dope sheet curve editor" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_EmbeddedCurves.png" /></p>
-  <p>The image above shows how the embedded animation curve editor looks, and it&#39;s very similar to the <a href="../Animation_Curves.htm">Animation Curve Editor</a>. Expand each section below for more information on the different sections.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Name</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This will be the name of the external animation curve asset or the name of the parameter track for an embedded curve.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Curve Library</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button opens the <strong><span data-keyref="Animation_Curve_Presets_Library">Animation Curve Library</span></strong> window,
-      which allows you to change the Curve Type of the embedded or shared curve, and apply a preset to the selected channel.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" />See the section on <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Animation Curve Library</a> for
-      information on Curve Types and Presets. Note that opening the window through the <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button will have the <strong>&quot;Overwrite&quot;</strong>      Apply Mode selected by default.</p>
-    <ul class="dropspotlist"><br/>
-    </ul>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Channel List</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The channel list is where you can edit the different channels that comprise your parameter curve. Each channel must have a unique name (using <span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>),
-      and you can also set the colour for the channel by double clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on the colour swatch to the left, which will open the colour picker to let you choose a new colour.
-      To rename the channel, you can do a slow double click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and rename, and you can also use the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"
-      /> to open a menu where you can choose to rename, change the colour or copy the channel. Channels can be expanded by clicking the arrow beside the name to show each of the points on the channel curve, and these points can be edited manually by clicking
-      the current value and typing in the new value. You can also toggle the channel visibility in the dope sheet by clicking on the &quot;eye&quot; icon <img alt="Eye Icon" class="icon" src="../../assets/Images/Icons/Icon_ToggleVisibility.png" />.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Conversion Control</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Here keyframes can be converted into parameter curves (as explained fiurther up this page) but there is also a button to convert parameter curves into keyframes. However, you should be aware that when doing this there are a couple of caveats. Keyframes
-      cannot be &quot;between&quot; frames, and so some curve values will need to be rounded to the nearest frame, which in turn will change the way the parameter track behaves. Also, if the parameter curve uses catmull-rom or bezier interpolation, <strong>this will be lost </strong>and
-      the interpolation between keyframes will be set to linear interpolation.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Curve Menu</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This menu contains options available elsewhere in the editor, but all in one place. The options are:</p>
-    <ul class="dropspotlist">
-      <li><strong>Set Range</strong>: Set the vertical range of the parameter curve (see <em>Channel Range</em>, below).</li>
-      <li><strong>Convert To Curve</strong>: Convert the selected parameter track using keyframes into a parameter curve.</li>
-      <li><strong>Embed Curve</strong>: Embed the shared curve asset being used by the parameter track into the track.</li>
-      <li><strong>Assigned Shared Curve (Import)</strong>: Assign an Animation Curve asset to be used as a shared curve for the parameter track.</li>
-      <li><strong>Convert To Keys</strong>: Convert the selected parameter track using parameter curves into keyframes.</li>
-      <li><strong>Export to Shared Curve</strong>: Convert the embedded curve into a shared curve asset.</li>
-    </ul>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Channel Range</a></p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The Channel Range button is used for setting the visual vertical range for the Channel Editor. By default this will be set from -1 to 1, but clicking this button will open the following window:</p>
-    <p><img alt="Animation Curve Editor Channel Range" class="center" height="136" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" width="198" /></p>
-    <p class="dropspot">Changing these values will change the way the data is represented in the Channel Editor section, permitting you to have higher/lower values along the channel curve than just -1 to 1. Note that this is purely visual and does not clamp the values for
-      the channel.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Channel Editor</a></p>
-  <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The Channel Editor shows a visual representation of the different channels used in the parameter curve. By default, all channels will be shown here, but you can only edit the channel currently selected from the Channel List, which will be highlighted
-      in the editor. You can change the position of any of the points along the channel curve by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on them and dragging them around within the editor, but note that
-      the first and last point can only be changed along the vertical axis and their horizontal value will always be 0 and 1 respectively.</p>
-    <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot">You can add points directly to the channel curve by moving the mouse close to the main channel line and then clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> when the cursor changes to the &quot;<strong>Add Point</strong>&quot;
-        tool, and you can then edit these points by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and dragging or by changing their values in the expanded channel options in the Channel List:</p>
-      <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor.gif" /></p>
-    </div>
-    <p class="dropspot">You can edit multiple points at once by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging within the editor to select all the points you want to edit or by using <img alt="CTRL Icon"
-        class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
-        width="21" /> to add points to the selection individually. Releasing the mouse button and then clicking again on any of the points in the selection and dragging will move them all together:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Move.gif" />You can <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> right-click anywhere in the Channel Editor to open the <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a>      window (only when the selected Curve Type is <strong>Bezier</strong>). Applying a preset in this way will affect the whole channel. To modify only a part of the channel, you can <img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-        width="21" /> right-click on an individual line to apply a preset to it, or select multiple lines by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging, then <img class="icon"
-        height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on the selection to apply a preset to the selected lines.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Library.gif" />Note that opening the <strong>Animation Curve Library</strong> window through the Channel Editor will have the <strong>&quot;Between&quot;</strong>      Apply Mode selected by default.</p>
-  </div>
-  <p> </p>
-  <p>Once you are finished editing the parameter curves you can go back to the regular dope sheet view of the different tracks by clicking on the the <strong>Toggle Curve Mode</strong> <img class="icon" src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Broadcast_Messages.htm">Broadcast Messages</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 애니메이션 곡선 사용</h1><p> <a href="Using_The_Dope_Sheet.htm">도프 시트</a> 의 중요한 기능은 <a href="../Animation_Curves.htm">애니메이션 곡선</a> 을 시퀀스 내의 매개변수 트랙에 할당하여 매개변수 키프레임 대신 <strong>매개변수 곡선</strong> 을 생성하는 기능입니다. 매개변수 트랙에 사용할 수 있는 두 가지 유형의 곡선이 있습니다.</p><ul class="colour"><li> <strong>포함된 곡선</strong>: 시퀀스에 포함된 곡선이며 사용되는 매개변수 트랙에 고유합니다.</li><li> <strong>공유 곡선</strong>: <a href="../Animation_Curves.htm">애니메이션 곡선 편집기</a> 를 사용하여 시퀀스와 독립적으로 생성되는 곡선입니다.</li></ul><p> 애니메이션 곡선 자산을 사용하는 방법을 설명하는 것으로 시작하겠습니다. 이는 단순히 새 곡선을 만들고, 애니메이션 곡선 편집기에서 채널을 설정한 다음, 곡선 자산을 도프 시트로 끌어서 적용하는 경우입니다. 매개변수 트랙:</p><p><br/><img alt="Add Animation Curve Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_AddAnimCurve.gif" /></p><p> 마우스 오른쪽 버튼을 사용할 수도 있습니다.<img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> 메뉴 옵션 <strong>공유 곡선 할당(가져오기)</strong><strong> </strong>선택한 매개변수 트랙에 애니메이션 곡선 자산을 추가합니다. 그러면 자산 탐색기가 열리며 여기에서 제시된 곡선 중에서 필요한 곡선을 선택할 수 있습니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" /> 매개변수 트랙의 각 유형에는 애니메이션 곡선에서 다른 수의 채널이 필요하기 때문에 애니메이션 곡선 자산 <strong>에는 적용 중인 트랙에 대한 올바른 수의 채널이 있어야</strong> 한다는 점에 유의하는 것이 중요합니다. 채널이 충분하지 않은 모든 애니메이션 곡선은<img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
+    /> 자산 브라우저의 표시기.</p><p> 다음은 각 곡선 자산에 필요한 다양한 매개변수 트랙 및 채널 목록입니다(채널은 각 매개변수 유형에 대해 지정된 순서대로 추가되어야 함).</p><ul class="colour"><li> <strong>위치</strong>: X, Y 2채널</li><li> <strong>회전</strong>: 1 채널.</li><li> <strong>Color Multiply</strong>: 4채널, Alpha, Red, Green, Blue이며 범위는 0에서 255 사이 <em>여야 합니다</em>.</li><li> <strong>이미지 인덱스</strong>: 1채널.</li><li> <strong>이미지 속도</strong>: 1 채널.</li><li> <strong>원점</strong>: X, Y 2채널</li><li> <strong>Scale</strong>: 2채널, X scale, Y scale, 그리고 값은 승수이므로 기본 값은 1(눈금 없음)이며 1보다 크면 이미지가 커지고 1보다 작으면 작아집니다. 음수 값은 배율을 적용할 뿐만 아니라 이미지를 뒤집거나 미러링합니다.</li><li> <strong>피치</strong>: 1 채널, 최소 0 <em>이어야</em> 하며, 여기서 1은 사운드의 기본 피치입니다.</li><li> <strong>볼륨</strong>: 최소 0, 최대 1 <em>이어야</em> 하는 1 채널.</li></ul><p> 매개변수 트랙에 대한 채널이 충분하지 않은 애니메이션 곡선을 가져오면 누락된 채널을 애니메이션 곡선에 추가할지 여부를 선택하라는 메시지가 표시됩니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p><p> 외부 애니메이션 곡선 편집기에서 필요한 채널이 삭제된 경우 공유 곡선을 무효화할 수도 있습니다. 이러한 경우 공유 곡선은 도프 시트에서 유효하지 않은 것으로 나타나며 &quot;채널 추가&quot;를 클릭하여 누락된 채널을 생성하여 곡선을 다시 유효하게 만들 수 있습니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p><p> 기본적으로 애니메이션 곡선은 연결된 자산 키의 전체 길이를 따라 적용되지만 키프레임과 마찬가지로<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"
+    /> 곡선에서 드래그하여 타임라인에 다시 배치할 수 있습니다.<img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55" /> 키를 누르고 드래그하여 곡선 길이의 크기를 조정합니다( <strong>포함된 곡선</strong> 에도 적용됨).</p><p><img alt="Resize and reposition anim curves" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ResizeCurve.gif" /> 트랙에 매개변수 곡선을 추가하는 다른 방법은 이를 포함하는 것입니다. 이것은 마우스 오른쪽 버튼을 클릭하여 수행할 수 있습니다.<img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> 매개변수 트랙에서 &quot; <em>곡선으로 변환 &quot;을</em> 선택하거나 <strong>곡선 모드 토글</strong> 을 클릭하여<img src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
+    /> 버튼을 클릭하면 전체 도프 시트 영역에서 트랙이 애니메이션 곡선으로 표시됩니다. 그런 다음 <strong>곡선으로 변환</strong> 버튼을 클릭할 수 있습니다.</p><p><img alt="Convert keyframes to a curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ConvertToCurve.gif" /> 매개변수 키프레임 트랙을 곡선으로 변환하면 <a href="../Animation_Curves.htm">애니메이션 곡선 자산</a> 을 편집할 수 있는 것과 똑같은 방식으로 도프 시트 내에서 편집할 수 있습니다. 여기에는 점 추가 또는 제거, 위치 변경, 곡선 유형 변경(선형, 스무드 또는 베지어), 사전 설정 적용, 채널 및 관련 색상 이름 변경.</p><p class="note"> <strong>중요</strong>: 이 방법으로 매개변수 트랙에 적용된 애니메이션 곡선 자산을 편집할 수도 있지만 변경 사항은 단일 복사본이 아니라 곡선 자산을 편집하는 중이므로 <strong>애니메이션 곡선을 사용하는 모든 트랙에 적용됩니다.</strong> 그것. 해당 트랙의 트랙 <strong>에만</strong> 적용된 애니메이션 곡선 자산을 편집하려면 먼저 오른쪽 마우스 메뉴를 사용해야 합니다.<img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
+      width="21" /> 매개변수 트랙에서 <b>Embed Curve</b> 를 선택합니다. 그러면 애니메이션 곡선 자산이 복제되고 해당 트랙에 대해서만 독립 곡선으로 매개변수 트랙에 포함됩니다. 반대로, 마우스 오른쪽 버튼을 사용하여 포함된 애니메이션 곡선을 애니메이션 곡선 자산으로 변환할 수 있습니다.<img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> 메뉴 옵션 <strong>공유 곡선으로 내보내기</strong>. 이렇게 하면 포함된 곡선을 새 자산으로 변환한 다음 정상적으로 편집할 수 있을 뿐만 아니라 필요한 경우 다른 매개변수 트랙에도 적용할 수 있습니다.</p><p><img alt="The dope sheet curve editor" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_EmbeddedCurves.png" /></p><p> 위 이미지는 포함된 애니메이션 곡선 편집기의 모양을 보여주며 애니메이션 곡선 <a href="../Animation_Curves.htm">편집기</a> 와 매우 유사합니다. 다른 섹션에 대한 자세한 내용을 보려면 아래의 각 섹션을 펼치십시오.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">곡선 이름</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> 이것은 외부 애니메이션 곡선 자산의 이름이거나 포함된 곡선에 대한 매개변수 트랙의 이름입니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">곡선 라이브러리</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> 그만큼<img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> 버튼을 누르면 포함 또는 공유 곡선의 곡선 유형을 변경하고 선택한 채널에 사전 설정을 적용할 수 있는 <strong><span data-keyref="Animation_Curve_Presets_Library">애니메이션 곡선 라이브러리</span></strong> 창이 열립니다.</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" /> 곡선 유형 및 사전 설정에 대한 정보는 <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="애니메이션 곡선 라이브러리">애니메이션 곡선 라이브러리</a> 섹션을 참조하십시오. 참고로 창을 열면<img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> 버튼을 누르면 기본적으로 <strong>&quot;덮어쓰기&quot;</strong> 적용 모드가 선택됩니다.</p><ul class="dropspotlist"><br/></ul></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">채널 목록</a></p><div class="droptext" data-targetname="drop-down2"><p class="dropspot"> 채널 목록은 매개변수 곡선을 구성하는 다양한 채널을 편집할 수 있는 곳입니다. 각 채널에는 고유한 이름이 있어야 하며( <span data-keyref="Asset name restriction">영숫자와 &quot;_&quot; 밑줄 기호만 사용</span> ) 채널의 색상을 두 번 클릭하여 설정할 수도 있습니다.<img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 새 색상을 선택할 수 있는 색상 선택기가 열릴 것입니다. 채널 이름을 바꾸려면 느린 두 번 클릭을 수행할 수 있습니다.<img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 이름을 바꾸고 마우스 오른쪽 버튼을 사용할 수도 있습니다.<img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"
+      /> 이름을 바꾸거나 색상을 변경하거나 채널을 복사하도록 선택할 수 있는 메뉴를 엽니다. 채널은 이름 옆에 있는 화살표를 클릭하여 채널 곡선의 각 포인트를 표시하여 확장할 수 있으며 이러한 포인트는 현재 값을 클릭하고 새 값을 입력하여 수동으로 편집할 수 있습니다. &quot;눈&quot; 아이콘을 클릭하여 도핑 시트에서 채널 가시성을 전환할 수도 있습니다.<img alt="Eye Icon" class="icon" src="../../assets/Images/Icons/Icon_ToggleVisibility.png" />.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">변환 제어</a></p><div class="droptext" data-targetname="drop-down3"><p class="dropspot"> 여기에서 키프레임을 매개변수 곡선으로 변환할 수 있지만(이 페이지의 뒤에서 설명함) 매개변수 곡선을 키프레임으로 변환하는 버튼도 있습니다. 그러나 이 작업을 수행할 때 몇 가지 주의 사항이 있음을 알아야 합니다. 키프레임은 &quot;사이&quot; 프레임일 수 없으므로 일부 곡선 값은 가장 가까운 프레임으로 반올림해야 합니다. 그러면 매개변수 트랙이 작동하는 방식이 변경됩니다. 또한 매개변수 곡선이 catmull-rom 또는 베지어 보간을 사용하는 경우 <strong>이 값이 손실</strong> 되고 키프레임 간의 보간이 선형 보간으로 설정됩니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">커브 메뉴</a></p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"> 이 메뉴에는 편집기의 다른 곳에서 사용할 수 있는 옵션이 포함되어 있지만 모두 한 곳에 있습니다. 옵션은 다음과 같습니다.</p><ul class="dropspotlist"><li> <strong>범위 설정</strong>: 매개변수 곡선의 수직 범위를 설정합니다(아래 <em>채널 범위</em> 참조).</li><li> <strong>곡선으로</strong> 변환: 키프레임을 사용하여 선택한 매개변수 트랙을 매개변수 곡선으로 변환합니다.</li><li> <strong>Embed Curve</strong>: 매개변수 트랙에서 사용 중인 공유 곡선 자산을 트랙에 포함합니다.</li><li> <strong>할당된 공유 곡선(가져오기)</strong>: 매개변수 트랙의 공유 곡선으로 사용할 애니메이션 곡선 자산을 할당합니다.</li><li> <strong>키로</strong> 변환: 매개변수 곡선을 사용하여 선택한 매개변수 트랙을 키프레임으로 변환합니다.</li><li> <strong>공유 곡선으로 내보내기</strong>: 포함된 곡선을 공유 곡선 자산으로 변환합니다.</li></ul><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">채널 범위</a></p><div class="droptext" data-targetname="drop-down5"><p class="dropspot"> 채널 범위 버튼은 채널 편집기의 시각적 수직 범위를 설정하는 데 사용됩니다. 기본적으로 이것은 -1에서 1로 설정되지만 이 버튼을 클릭하면 다음 창이 열립니다:</p><p><img alt="Animation Curve Editor Channel Range" class="center" height="136" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" width="198" /></p><p class="dropspot"> 이 값을 변경하면 채널 편집기 섹션에 데이터가 표시되는 방식이 변경되어 채널 곡선을 따라 -1에서 1보다 더 높거나 낮은 값을 가질 수 있습니다. 이것은 순전히 시각적이며 값을 고정하지 않습니다. 채널.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">채널 편집기</a></p><div class="droptext" data-targetname="drop-down6"><p class="dropspot"> 채널 편집기는 매개변수 곡선에 사용된 다양한 채널의 시각적 표현을 보여줍니다. 기본적으로 모든 채널이 여기에 표시되지만 편집기에서 강조 표시될 채널 목록에서 현재 선택된 채널만 편집할 수 있습니다. 다음을 클릭하여 채널 곡선을 따라 점의 위치를 변경할 수 있습니다.<img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 편집기 내에서 드래그하지만 첫 번째 점과 마지막 점은 세로 축을 따라 변경할 수만 있고 가로 값은 항상 각각 0과 1입니다.</p><div class="droptext" data-targetname="drop-down7"><p class="dropspot"> 마우스를 메인 채널 라인에 가깝게 이동한 다음 클릭하여 채널 곡선에 직접 포인트를 추가할 수 있습니다<img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 커서가 &quot; <strong>포인트 추가</strong> &quot; 도구로 바뀌면 클릭하여 이 포인트를 편집할 수 있습니다.<img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 드래그하거나 채널 목록의 확장된 채널 옵션에서 값을 변경하여:</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor.gif" /></p></div><p class="dropspot"> 클릭하면 여러 포인트를 한 번에 편집할 수 있습니다.<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> 편집기 내에서 드래그하여 편집하려는 모든 점을 선택하거나 다음을 사용하여<img alt="CTRL Icon"
+        class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> /<img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> +<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
+        width="21" /> 선택 항목에 개별적으로 점을 추가합니다. 마우스 버튼에서 손을 뗀 다음 선택 영역의 임의의 점을 다시 클릭하고 드래그하면 모두 함께 이동합니다.</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Move.gif" /> 당신은 할 수 있습니다<img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> 채널 편집기의 아무 곳이나 마우스 오른쪽 버튼으로 클릭하여 <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">애니메이션 곡선 라이브러리</a> 창을 엽니다(선택한 곡선 유형이 <strong>베지어인</strong> 경우에만). 이러한 방식으로 사전 설정을 적용하면 전체 채널에 영향을 줍니다. 채널의 일부만 수정하려면 다음을 수행할 수 있습니다.<img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
+        width="21" /> 개별 라인을 마우스 오른쪽 버튼으로 클릭하여 사전 설정을 적용하거나<img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> 드래그한 다음<img class="icon"
+        height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> 선택 항목을 마우스 오른쪽 버튼으로 클릭하여 선택한 라인에 사전 설정을 적용합니다.</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Library.gif" /> 채널 편집기를 통해 <strong>애니메이션 곡선 라이브러리</strong> 창을 열면 기본적으로 <strong>&quot;사이&quot;</strong> 적용 모드가 선택됩니다.</p></div><p></p><p> 매개변수 곡선 편집이 끝나면 <strong>Toggle Curve Mode</strong> 를 클릭하여 다른 트랙의 일반 도프 시트 보기로 돌아갈 수 있습니다.<img class="icon" src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
+    /> 단추. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Sequences.htm">시퀀스</a></div><div style="float:right"> 다음: <a href="Broadcast_Messages.htm">브로드캐스트 메시지</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Room Editor

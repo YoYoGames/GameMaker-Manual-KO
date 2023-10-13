@@ -3,50 +3,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Basic Code Structure</title>
+  <title>기본 코드 구조</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the basic code structure when using GML" />
-  <meta name="rh-index-keywords" content="Code Structure" />
-  <meta name="search-keywords" content="Code Structure,begin,end,statement" />
+  <meta name="topic-comment" content="GML을 사용할 때 기본 코드 구조를 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="코드 구조" />
+  <meta name="search-keywords" content="코드 구조,begin,end,성명" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Basic Code Structure</h1>
-  <p>Code is written in <em>blocks</em> and a typical code block consists of a set of instructions, called <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>, that are then interpreted by <span data-keyref="GameMaker Name">GameMaker</span> and used to make something happen within your game. That &quot;something&quot; can be as simple as adding 2 and 2 to get 4, or as complex as making an enemy run away when their health gets below a certain value. The actual structure of the program can vary greatly, depending on the functions it uses, but broken down to basics it just looks like this:</p>
-  <p class="code">&lt;statement&gt;;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 기본 코드 구조</h1><p> 코드는 <em>블록</em> 으로 작성되며 일반적인 코드 블록은 <a class="glossterm" data-glossterm="성명" href="#">명령문</a> <span class="glossextra">s</span> 라고 하는 명령 세트로 구성되며, 이 명령은 <span data-keyref="GameMaker Name">GameMaker</span> 에서 해석되어 게임 내에서 어떤 일이 일어나도록 하는 데 사용됩니다. 그 &quot;무언가&quot;는 2와 2를 더하여 4를 만드는 것처럼 간단할 수도 있고, 적의 건강이 특정 값 아래로 떨어지면 도망가게 만드는 것처럼 복잡할 수도 있습니다. 프로그램의 실제 구조는 사용하는 기능에 따라 크게 다를 수 있지만 기본적으로 분류하면 다음과 같습니다.</p><p class="code">&lt;statement&gt;;<br />
     &lt;statement&gt;;<br />
-    ...</p>
-  <p>Statements should be separated with a &#39;;&#39; symbol to prevent errors with <a class="glossterm" data-glossterm="variable" href="#">variable</a> declarations and to keep your code clean and tidy, and they can consist of variable declarations, <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> and calls to specific <strong>functions</strong>. You can also &quot;group&quot; statements together as a block using the curly brackets <span class="inline">{}</span> so that they run together, like in the following <a class="glossterm" data-glossterm="conditional" href="#">conditional</a> example:</p>
-  <p class="code">if (&lt;conditional&gt;)<br />
+    ...</p><p> 문은 &#39;;&#39;로 구분해야 합니다. <a class="glossterm" data-glossterm="변하기 쉬운" href="#">변수</a> 선언의 오류를 방지하고 코드를 깨끗하고 깔끔하게 유지하기 위한 기호이며 변수 선언, <a class="glossterm" data-glossterm="표현" href="#">표현식</a> <span class="glossextra">및</span> 특정 <strong>함수</strong> 호출로 구성될 수 있습니다. 중괄호를 사용하여 문을 블록으로 함께 &quot;그룹화&quot;할 수도 있습니다. <span class="inline">{}</span> 다음 <a class="glossterm" data-glossterm="가정 어구" href="#">조건부</a> 예제와 같이 함께 실행되도록 합니다.</p><p class="code">if (&lt;conditional&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
-    }</p>
-  <p class="note"><span class="note">NOTE</span> The GameMaker Language will also accept <span class="inline">begin</span><span> </span>and <span class="inline">end</span><span>  </span>instead of the curly brackets <span class="inline">{}</span>, although this is not typically the most common way to do it:</p>
-  <p class="code">if (&lt;conditional&gt;)<br />
+    }</p><p class="note"> <span class="note">참고</span> GameMaker 언어는 <span class="inline">begin</span><span> </span>그리고 <span class="inline">end</span><span>  </span>중괄호 대신 <span class="inline">{}</span>, 비록 이것이 일반적으로 가장 일반적인 방법은 아니지만:</p><p class="code">if (&lt;conditional&gt;)<br />
     begin<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
-    end</p>
-  <p>Here is a more visual representation of how a code block can look, this time created as a <b>script</b> in the <span data-keyref="GameMaker Name">GameMaker</span> <a href="../../The_Asset_Editors/Scripts.htm">Script Editor</a>:</p>
-  <p><img alt="Program Example" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p>
-  <p>There are a number of different types of statements, expressions, conditionals and functions, all of which are discussed at length in subsequent sections of the manual.</p>
-  <p class="note"><span class="note">NOTE</span> If you are new to programming then you may want to check out the <a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">Quick Start Guide</a> before continuing.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Runtime_Functions.htm">Runtime Functions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    end</p><p> 다음은 코드 블록이 어떻게 보이는지 더 시각적으로 표현한 것입니다. 이번에는 <span data-keyref="GameMaker Name">GameMaker</span> <a href="../../The_Asset_Editors/Scripts.htm">스크립트 편집기</a> 에서 <b>스크립트</b> 로 생성되었습니다.</p><p><img alt="Program Example" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p><p> 다양한 유형의 명령문, 표현식, 조건부 및 함수가 있으며, 이들 모두는 매뉴얼의 후속 섹션에서 자세히 설명합니다.</p><p class="note"> <span class="note">참고</span> 프로그래밍이 처음이라면 계속하기 전에 <a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">빠른 시작 안내서</a> 를 확인하는 것이 좋습니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GML_Overview.htm">GML 개요</a></div><div style="float:right"> 다음: <a href="Runtime_Functions.htm">런타임 함수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Basic Code Structure

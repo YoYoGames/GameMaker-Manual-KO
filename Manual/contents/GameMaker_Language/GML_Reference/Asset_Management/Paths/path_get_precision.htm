@@ -6,57 +6,20 @@
   <title>path_get_precision</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_get_precision" />
+  <meta name="topic-comment" content="path_get_precision 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_get_precision" />
   <meta name="search-keywords" content="path_get_precision" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_get_precision</h1>
-  <p>This function returns with what precision the given path has been &quot;smoothed&quot;, and will be an integer value from 1 to 8. Although you can get (and set) this value for a straight-line path it will have no influence over how an instance uses the path as it is only relevant when the path kind is set to &quot;smooth&quot;.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_get_precision(index);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to check.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (path_get_kind(pth_Patrol))<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_get_precision</h1><p> 이 함수는 주어진 경로가 &quot;스무딩&quot;된 정밀도로 반환되며 1에서 8 사이의 정수 값이 됩니다. 직선 경로에 대해 이 값을 얻을 수 있지만(설정할 수 있지만) 방법에 영향을 미치지 않습니다. instance는 경로 종류가 &quot;smooth&quot;로 설정된 경우에만 관련이 있는 경로를 사용합니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_precision(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (path_get_kind(pth_Patrol))<br />
     {<br />
         if (path_get_precision(pth_Patrol)) != 8<br />
         {<br />
             path_set_precision(pth_Patrol, 8);<br />
         }<br />
-    }</p>
-  <p>The above code checks the path indexed in &quot;pth_Patrol&quot; to see what kind it is and if it is smooth, it then checks how precise the smoothing is. If it is less than 8, it is then set to a value of 8.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
-        <div style="float:right">Next: <a href="path_get_speed.htm">path_get_speed</a></div>
-        
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;pth_Patrol&quot;에 인덱싱된 경로를 확인하여 경로의 종류를 확인하고 매끄럽다면 매끄럽게 하는 정도가 정확한지 확인합니다. 8보다 작으면 8 값으로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Paths.htm">경로</a></div><div style="float:right"> 다음: <a href="path_get_speed.htm"><span class="notranslate">path_get_speed</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 path_get_precision

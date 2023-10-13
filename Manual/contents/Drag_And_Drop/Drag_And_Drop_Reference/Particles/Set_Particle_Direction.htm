@@ -3,72 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Particle Direction</title>
+  <title>입자 방향 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Particle Direction action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Particler Direction" />
-  <meta name="search-keywords" content="Set Particle Direction" />
+  <meta name="topic-comment" content="입자 방향 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 파티클 방향 설정" />
+  <meta name="search-keywords" content="입자 방향 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Particle Direction Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" /> Set Particle Direction</h1>
-  <p>This action is used to set the particle direction, which can be static or set to increase / decrease over time. You supply the unique ID value for the type to set the size of (as returned when you created the type with the action <a href="Create_Particle_Type.htm">Create Particle Type</a>)
-    and then give a range of initial starting directions, then the increase amount and finally the &quot;wiggle&quot;. The direction a particle is created at is calculated such that 0 is right, 90 is up, 180 is left and 270 is down, so a minimum setting
-    of -45 and a maximum setting of 45 will emit particles only moving to the right, for example.</p>
-  <p>The option to increase a particle direction enables you to input a value which will be added on to the base direction value each game frame of the particle lifetime. So setting this value to, for example, 0.1 will add 0.1 to the direction each game
-    frame. Note that you can use negative values here too to make the particle move in the opposite direction down too, so positive values will make the particle spiral anti-clockwise, and negative clockwise. Note that the minimum direction <i>decrement</i>    that is accepted is -0.01 and the minimum <i>increment</i> is 0.01.</p>
-  <p>Finally you can set the &quot;wiggle&quot; option. This is a value that will be generated randomly between 0 and the value you give and then added or subtracted to the direction each step of the particles lifetime, causing the drawn image to fluctuate
-    in direction. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Particle Direction Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Direction.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The unique ID value for the particle type to set the direction of</td>
-      </tr>
-      <tr>
-        <td>Min Dir</td>
-        <td>The minimum direction for the particle type (from -360 to +360, default 0)</td>
-      </tr>
-      <tr>
-        <td>Max Dir</td>
-        <td>The maximum direction for the particle type (from -360 to +360, default 360)</td>
-      </tr>
-      <tr>
-        <td>Increase</td>
-        <td>The value to add on to the particle type direction every game frame (can be negative, minimum +/-0.01)</td>
-      </tr>
-      <tr>
-        <td>Wiggle</td>
-        <td>The maximum value to randomly be added or subtracted from the particles direction per step (+/-20).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique
-    ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Particle_Orientation.htm">Set Particle Orientation</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Particle Direction Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" /> 입자 방향 설정</h1><p> 이 동작은 입자 방향을 설정하는 데 사용되며, 정적으로 설정되거나 시간이 지남에 따라 증가/감소하도록 설정할 수 있습니다. 크기를 설정할 유형의 고유 ID 값( <a href="Create_Particle_Type.htm">Create Particle Type</a> 작업으로 유형을 생성할 때 반환됨)을 제공한 다음 초기 시작 방향 범위를 제공한 다음 증가량 및 마지막으로 &quot;흔들기&quot;를 제공합니다. 파티클이 생성되는 방향은 0이 오른쪽, 90이 위쪽, 180이 왼쪽, 270이 아래쪽으로 계산되므로 최소 설정이 -45이고 최대 설정이 45이면 오른쪽으로만 이동하는 파티클이 방출됩니다. 예시.</p><p> 입자 방향을 증가시키는 옵션을 사용하면 입자 수명의 각 게임 프레임에 기본 방향 값에 추가될 값을 입력할 수 있습니다. 따라서 이 값을 예를 들어 0.1로 설정하면 각 게임 프레임의 방향에 0.1이 추가됩니다. 여기서도 음수 값을 사용하여 입자가 반대 방향으로 아래로 이동하도록 할 수 있으므로 양수 값은 입자를 시계 반대 방향으로 나선형으로 만들고 음수는 시계 방향으로 나선형으로 만듭니다. 허용되는 최소 방향 <i>감소</i> 는 -0.01이고 최소 <i>증가</i> 는 0.01입니다.</p><p> 마지막으로 &quot;흔들기&quot; 옵션을 설정할 수 있습니다. 이것은 0과 사용자가 지정한 값 사이에서 무작위로 생성된 다음 입자 수명의 각 단계에서 방향에 더하거나 빼서 그려지는 이미지의 방향이 변동하는 값입니다. 분명히 큰 값은 작은 값보다 더 뚜렷하며 이 값은 최대 범위가 -20에서 20 사이인 음수일 수도 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Set Particle Direction Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Direction.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 방향을 설정할 입자 유형의 고유 ID 값</td></tr><tr><td> <span class="notranslate">Min Dir</span></td><td> 입자 유형의 최소 방향(-360~+360, 기본값 0)</td></tr><tr><td> <span class="notranslate">Max Dir</span></td><td> 입자 유형의 최대 방향(-360에서 +360, 기본값 360)</td></tr><tr><td> <span class="notranslate">Increase</span></td><td> 매 게임 프레임마다 파티클 유형 방향에 추가할 값(음수일 수 있음, 최소 +/-0.01)</td></tr><tr><td> <span class="notranslate">Wiggle</span></td><td> 단계당 입자 방향에서 임의로 더하거나 뺄 최대값(+/-20)입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" /> 위의 작업 블록 코드는 새 입자 유형을 만들고 고유 ID 값을 전역 변수에 할당합니다. 그런 다음 입자 유형에 대한 모든 속성을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Set_Particle_Orientation.htm">입자 방향 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Direction

@@ -6,41 +6,17 @@
   <title>gpu_get_tex_max_mip</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function gpu_get_tex_max_mip" />
+  <meta name="topic-comment" content="함수 gpu_get_tex_max_mip에 대한 참조" />
   <meta name="rh-index-keywords" content="gpu_get_tex_max_mip" />
   <meta name="search-keywords" content="gpu_get_tex_max_mip" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_max_mip</h1>
-  <p>With this function you can get the currently set maximum mipmap level which is to be used, where a value of 0 is the highest resolution, 1 is to use the first mipmap, 2 is the second etc... Note that this can be quite useful for avoiding bleeding artifacts when rendering textures, for example, setting the texture page border to 8px and then setting the max mipmap level to 3 will ensure you don&#39;t get any bleeding problems at greater render distances.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_get_tex_max_mip();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span> (default: 16)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if gpu_get_tex_max_mip() != 4<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_tex_max_mip</h1><p> 이 기능을 사용하면 현재 설정된 최대 밉맵 수준을 얻을 수 있습니다. 여기서 값 0은 가장 높은 해상도, 1은 첫 번째 밉맵, 2는 두 번째 등... 텍스처를 렌더링할 때 블리딩 아티팩트를 피하는 데 유용합니다. 예를 들어 텍스처 페이지 테두리를 8px로 설정한 다음 최대 밉맵 수준을 3으로 설정하면 더 먼 렌더링 거리에서 블리딩 문제가 발생하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_get_tex_max_mip();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (default: 16)</p><p></p><h4> 예시:</h4><p class="code">if gpu_get_tex_max_mip() != 4<br />
     {<br />
         gpu_set_tex_max_mip(4);<br />
-    }</p>
-  <p>The above code will check the current maximum mipmap level and if it is not 4 it is set to 4.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Mipmapping.htm">Mipmapping</a></div>
-        <div style="float:right">Next: <a href="gpu_get_tex_max_mip_ext.htm">gpu_get_tex_max_mip_ext</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 현재 최대 밉맵 레벨을 확인하고 4가 아니면 4로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Mipmapping.htm">밉매핑</a></div><div style="float:right"> 다음: <a href="gpu_get_tex_max_mip_ext.htm"><span class="notranslate">gpu_get_tex_max_mip_ext</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_max_mip

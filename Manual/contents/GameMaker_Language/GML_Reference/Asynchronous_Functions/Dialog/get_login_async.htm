@@ -6,68 +6,21 @@
   <title>get_login_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for get_login_async" />
+  <meta name="topic-comment" content="get_login_async에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="get_login_async" />
   <meta name="search-keywords" content="get_login_async" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_login_async</h1>
-  <p>This function opens a window that asks the user to input a username and password. These arguments can be set as an empty string or you can store previously entered values to use if you wish. This is an asynchronous function, and as such <span data-keyref="GameMaker Name">GameMaker</span> does <i>not</i> block the device it is being run on while waiting for an answer, but rather keeps on running events as normal. Once the user has input the details and pressed the &quot;Okay&quot; button, an asynchronous <b>User Interaction</b> event is triggered which, for the duration of that event <i>only</i>, will have a DS map stored in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
-  <p>This map will contain the two keys, &quot;<strong>username</strong>&quot; and &quot;<strong>password</strong>&quot;, with the corresponding user input stored in each. As it is a DS Map that has been created, this can then be used, for example, by the <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> function ready to be sent to a server or written to a file on the chosen device.</p>
-  <p>This function will return an index number for the async event that was triggered, which can then be checked in the corresponding event so that you can &quot;target&quot; specific data in case you&#39;re expecting more than one async events to be triggered (perhaps from some other function).</p>
-  <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> This function is <span data-keyref="Dialog for debug only">for <strong>debugging and testing use only</strong> and should not be used in released games. For that purpose you should create a custom user interface to receive input from players so that you have complete control over how the dialogs look and behave.</span></em></p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">get_login_async(name, password);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>username</td><td><span data-keyref="Type_String"></span></td>
-        <td>The default user name</td>
-     </tr>
-      <tr>
-        <td>password</td><td><span data-keyref="Type_String"></span></td>
-        <td>The default password</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <b>create event</b> (for example) of the object that is controlling the login of our user would have the following code:</p>
-  <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_login_async</h1><p> 이 기능은 사용자에게 사용자 이름과 암호를 입력하도록 요청하는 창을 엽니다. 이러한 인수는 빈 문자열로 설정하거나 원하는 경우 이전에 입력한 값을 저장하여 사용할 수 있습니다. 이것은 비동기 기능이며 <span data-keyref="GameMaker Name">GameMaker</span> 는 응답을 기다리는 동안 실행 중인 장치를 차단하지 <i>않고</i> 평소와 같이 이벤트를 계속 실행합니다. 사용자가 세부 정보를 입력하고 &quot;확인&quot; 버튼을 누르면 해당 이벤트 기간 동안에 <i>만</i> DS 맵이 변수에 저장되는 비동기 <b>사용자 상호 작용</b> 이벤트가 트리거됩니다. <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p><p> 이 맵에는 &quot; <strong>username</strong> &quot; 및 &quot; <strong>password</strong> &quot;라는 두 개의 키가 포함되며 각각에 해당하는 사용자 입력이 저장됩니다. 생성된 DS Map이므로 예를 들어 다음과 같이 사용할 수 있습니다.<a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> 서버로 보내거나 선택한 장치의 파일에 쓸 준비가 된 기능.</p><p> 이 함수는 트리거된 비동기 이벤트에 대한 인덱스 번호를 반환합니다. 그러면 해당 이벤트에서 확인할 수 있으므로 둘 이상의 비동기 이벤트가 트리거될 것으로 예상되는 경우 특정 데이터를 &quot;타겟팅&quot;할 수 있습니다. 다른 기능).</p><p class="note"> <strong><em><span class="note">참고</span></em></strong> <em>이 기능은 <span data-keyref="Dialog for debug only"><strong>디버깅 및 테스트 용도로만</strong> 사용되며 출시된 게임에서는 사용해서는 안 됩니다. 이를 위해서는 대화 상자의 모양과 동작을 완전히 제어할 수 있도록 플레이어로부터 입력을 수신하는 사용자 지정 사용자 인터페이스를 만들어야 합니다.</span></em></p><p></p><h4> 통사론:</h4><p class="code">get_login_async(name, password);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">username</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The default user name</span></td></tr><tr><td> <span class="notranslate">password</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The default password</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p><p></p><h4> 확장된 예:</h4><p> 사용자의 로그인을 제어하는 객체의 <b>create 이벤트</b> (예:)에는 다음 코드가 있습니다.</p><p class="code">ini_open(&quot;Profile.ini&quot;);<br />
     u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
     p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
     ini_close();<br />
-    login = get_login_async(u,p);</p>
-  <p>The above code opens an ini file (or creates one if it doesn&#39;t exist) and gets the name and password stored in that file. If they do not exist, then the default of an empty string (&quot;&quot;) is returned. These values are then used in <span class="inline">get_login_async()</span> to ask the user for their username and password details, with the request index being stored in the variable &quot;login&quot;. Note that while waiting for the user to give the necessary information the game and its events will continue to run as normal.</p>
-  <p>Now that the asynchronous code has been fired off, we need to check for the return value in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asynchronous event for Dialogs</a> in the following way:</p>
-  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == login<br />
+    login = get_login_async(u,p);</p><p> 위의 코드는 ini 파일을 열고(존재하지 않는 경우 새로 생성) 해당 파일에 저장된 이름과 비밀번호를 가져옵니다. 존재하지 않는 경우 빈 문자열(&quot;&quot;)의 기본값이 반환됩니다. 이러한 값은 다음에서 사용됩니다. <span class="inline">get_login_async()</span> &quot;login&quot; 변수에 저장된 요청 색인과 함께 사용자 이름과 비밀번호 세부 정보를 요청합니다. 사용자가 필요한 정보를 제공하기를 기다리는 동안 게임과 이벤트는 정상적으로 계속 실행됩니다.</p><p> 이제 비동기 코드가 시작되었으므로 다음과 같은 방식으로 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">Dialogs에 대한 비동기 이벤트</a> 의 반환 값을 확인해야 합니다.</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == login<br />
     {<br />
         u = ds_map_find_value(async_load, &quot;username&quot;);<br />
         p = ds_map_find_value(async_load, &quot;password&quot;);<br />
-    }</p>
-  <p>The above code checks the &quot;id&quot; key of the <span class="inline">async_load</span> DS map and if it holds the same value as that stored in the &quot;login&quot; variable, the map details are then read into the corresponding variables which you can then store or use to check against database values etc...</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
-        <div style="float:right">Next: <a href="get_string_async.htm">get_string_async</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;id&quot; 키를 확인합니다. <span class="inline">async_load</span> DS map 및 &quot;login&quot; 변수에 저장된 것과 동일한 값을 보유하는 경우 맵 세부 정보를 해당 변수로 읽어 저장하거나 데이터베이스 값 등을 확인하는 데 사용할 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Dialog.htm">대화</a></div><div style="float:right"> 다음: <a href="get_string_async.htm"><span class="notranslate">get_string_async</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 get_login_async

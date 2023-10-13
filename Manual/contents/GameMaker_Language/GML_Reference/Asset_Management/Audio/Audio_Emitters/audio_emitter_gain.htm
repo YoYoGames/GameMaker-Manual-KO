@@ -6,46 +6,13 @@
   <title>audio_emitter_gain</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function audio_emitter_gain" />
+  <meta name="topic-comment" content="audio_emitter_gain 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="audio_emitter_gain" />
   <meta name="search-keywords" content="audio_emitter_gain" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_gain</h1>
-  <p>This function sets the maximum gain (volume) for the sound. The perceived volume for a sound can change depending on the <a href="audio_emitter_falloff.htm">fall-off value</a> and the position it has relative to the <i>listener</i>, but by setting the gain with this function, the full volume will never exceed the specified gain value. The image below illustrates how gain affects the volume of the emitter when fall-off is greater than 0:</p>
-  <p><img alt="Audio Gain Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Gain.png" />This function will change the volume of the sound while it is being played as well all subsequent sounds played through the given emitter. Note that on some platforms you can have a gain of greater than 1, although a value of 1 is considered &quot;full volume&quot; and anything greater may introduce audio clipping or distortion.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>the final volume will also be influenced by the global audio gain that has been set by the function <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">audio_emitter_gain(emitter, gain);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>emitter</td>
-        <td><span data-keyref="Type_ID_Audio_Emitter">Audio Emitter ID</span></td>
-        <td>The index of the emitter to change.</td>
-      </tr>
-      <tr>
-        <td>gain</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum gain (default 1).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if up<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_emitter_gain</h1><p> 이 기능은 사운드의 최대 게인(볼륨)을 설정합니다. 사운드에 대해 인지되는 볼륨은 감쇠 <a href="audio_emitter_falloff.htm">값</a> 과 <i>청취자</i> 에 대한 상대적 위치에 따라 달라질 수 있지만 이 기능으로 게인을 설정하면 전체 볼륨이 지정된 게인 값을 초과하지 않습니다. 아래 이미지는 감쇠가 0보다 클 때 게인이 이미터의 볼륨에 미치는 영향을 보여줍니다.</p><p><img alt="Audio Gain Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Gain.png" /> 이 기능은 주어진 이미터를 통해 재생되는 모든 후속 사운드뿐만 아니라 재생되는 동안 사운드의 볼륨을 변경합니다. 일부 플랫폼에서는 게인이 1보다 클 수 있지만 값이 1이면 &quot;전체 볼륨&quot;으로 간주되고 그보다 크면 오디오 클리핑이나 왜곡이 발생할 수 있습니다.</p><p class="note"> <b><span class="note">참고</span></b> 최종 볼륨은 기능에 의해 설정된 전역 오디오 게인의 영향도 받습니다. <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p><p></p><h4> 통사론:</h4><p class="code">audio_emitter_gain(emitter, gain);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">emitter</span></td><td> <span data-keyref="Type_ID_Audio_Emitter">오디오 이미터 ID</span></td><td> <span class="notranslate">The index of the emitter to change.</span></td></tr><tr><td> <span class="notranslate">gain</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The maximum gain (default 1).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if up<br />
     {<br />
         gain += 0.05;<br />
         if gain &gt;= 1 up = false;<br />
@@ -57,19 +24,7 @@
     }<br />
     <br />
     audio_emitter_gain(s_emit, gain);
-  </p>
-  <p>The above code sets the variable &quot;gain&quot; to different values and then uses that same variable to set the gain of the emitter indexed in the variable &quot;s_emit&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Emitters.htm">Audio Emitters</a></div>
-        <div style="float:right">Next: <a href="audio_emitter_pitch.htm">audio_emitter_pitch</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 &quot;gain&quot; 변수를 다른 값으로 설정한 다음 동일한 변수를 사용하여 &quot;s_emit&quot; 변수에 인덱싱된 이미터의 이득을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio_Emitters.htm">오디오 이미터</a></div><div style="float:right"> 다음: <a href="audio_emitter_pitch.htm"><span class="notranslate">audio_emitter_pitch</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_gain

@@ -3,66 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Tile Index At Pixel</title>
+  <title>픽셀에서 타일 인덱스 가져오기</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Get Tile At Pixel action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Get Tile Index At Pixel" />
-  <meta name="search-keywords" content="Get Tile Index At Pixel" />
+  <meta name="topic-comment" content="픽셀에서 타일 가져오기 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 픽셀에서 타일 인덱스 가져오기" />
+  <meta name="search-keywords" content="픽셀에서 타일 인덱스 가져오기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_At_Pixel.png" /> Get Tile Index At Pixel</h1>
-  <p>This action is used to get a tile index on a given layer. The layer is specified from the layer name given (a string, as used to name the layer in the Room Editor), and then you give an x and y position to find the tile to get the index of. The tile
-    will be the one that the given position falls within in the room, and the index will be returned to the target variable, where 0 is no tile, and a positive integer is the index of the tile. The x and y position can be flagged as being relative to
-    the position of the calling instance, and the target variable can be flagged as a temporary (local) variable that can be used until the end of the event.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Tile Index At Pixel Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_At_Pixel.png" /></p>
-  <h4>Arguments:</h4>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>Argument</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Layer</td>
-          <td>The layer to set the tile on</td>
-        </tr>
-        <tr>
-          <td>x</td>
-          <td>The x position to check</td>
-        </tr>
-        <tr>
-          <td>y</td>
-          <td>The y position to check</td>
-        </tr>
-        <tr>
-          <td>Target</td>
-          <td>The target variable to store the tile index</td>
-        </tr>
-      </tbody>
-    </table>
-  
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Tile Index At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Get_Tile_At_Pixel.png" />The above action block code checks for a mouse left button
-    press and if one is detected it gets the index of the tile cell that the position of the mouse falls within. This tile index is then checked and if it is not 0, it is set to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Actions.htm">Tile Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Tile_Index_In_Cell.htm">Set Tile Index In Cell</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_At_Pixel.png" /> 픽셀에서 타일 인덱스 가져오기</h1><p> 이 작업은 주어진 레이어에서 타일 인덱스를 가져오는 데 사용됩니다. 레이어는 주어진 레이어 이름(룸 편집기에서 레이어 이름을 지정하는 데 사용되는 문자열)에서 지정한 다음 인덱스를 가져올 타일을 찾기 위해 x 및 y 위치를 지정합니다. 타일은 주어진 위치가 방에 속하는 타일이 될 것이며 인덱스는 대상 변수로 반환될 것입니다. 여기서 0은 타일이 없고 양의 정수는 타일의 인덱스입니다. x 및 y 위치는 호출 인스턴스의 위치를 기준으로 플래그를 지정할 수 있으며 대상 변수는 이벤트가 끝날 때까지 사용할 수 있는 임시(로컬) 변수로 플래그를 지정할 수 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Get Tile Index At Pixel Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_At_Pixel.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Layer</span></td><td> 타일을 설정할 레이어</td></tr><tr><td> <span class="notranslate">x</span></td><td> 확인할 x 위치</td></tr><tr><td> <span class="notranslate">y</span></td><td> 확인할 y 위치</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 타일 인덱스를 저장할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Get Tile Index At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Get_Tile_At_Pixel.png" /> 위의 액션 블록 코드는 마우스 왼쪽 버튼 누름을 확인하고 감지되면 마우스 위치가 속하는 타일 셀의 인덱스를 가져옵니다. 그런 다음 이 타일 인덱스를 확인하고 0이 아니면 0으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Tile_Actions.htm">타일 작업</a></div><div style="float:right"> 다음: <a href="Set_Tile_Index_In_Cell.htm">셀에서 타일 인덱스 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Tile Index At Pixel

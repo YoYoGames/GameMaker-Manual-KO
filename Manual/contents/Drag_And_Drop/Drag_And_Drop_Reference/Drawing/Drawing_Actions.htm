@@ -3,161 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Drawing Actions</title>
+  <title>그리기 작업</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section detailing all the Drawing actions" />
-  <meta name="rh-index-keywords" content="GML Visual Overview - Drawing Actions Library" />
-  <meta name="search-keywords" content="Drawing Actions" />
+  <meta name="topic-comment" content="모든 그리기 작업을 자세히 설명하는 섹션" />
+  <meta name="rh-index-keywords" content="GML 시각적 개요 - 그리기 작업 라이브러리" />
+  <meta name="search-keywords" content="그리기 작업" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Drawing Action Library</h1>
-  <p><img alt="Drawing Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Lib_Drawing.png" />The <b>Drawing</b> action library is where you can find the actions required to draw sprites, text or
-    shapes as well as set certain draw properties. Most of these actions are <strong>only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a></strong> of an object, and may not work if used outside
-    of the Draw Event. The exceptions to this are the <i>Set</i> actions, which can be added to any event and will affect all drawing for all instances afterwards.</p>
-  <p>It is important to note that if you add any actions into the main <b>Draw Event</b> of an object, then it will <i>not</i> draw the sprite that has been assigned to the instance unless you explicitly tell <span data-keyref="GameMaker Name">GameMaker</span> to draw it, using an action
-    like <a href="Draw_Self.htm">Draw Self</a>. Basically, <span data-keyref="GameMaker Name">GameMaker</span> will default draw any sprite assigned to an instance, only if there is <em>nothing </em>else in the Draw Event.</p>
-  <p>The Draw actions available are as follows:</p>
-  <table class="dnd" style="text-align: left;margin-left:">
-    <tbody>
-      <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Draw Self Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Self.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Self.htm">Draw Self</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Value.htm">Draw Value</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Transformed_Value.htm">Draw Transformed Value</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Sprite.htm">Draw Sprite</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Stacked_Sprites.htm">Draw Stacked Sprites</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Rectangle Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Rectangle.htm">Draw Rectangle</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Rectangle Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle_Gradient.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Gradient_Rectangle.htm">Draw Gradient Rectangle</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Ellipse Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Ellipse.htm">Draw Ellipse</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Ellipse Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse_Gradient.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Gradient_Ellipse.htm">Draw Gradient Ellipse</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Line Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Line.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Line.htm">Draw Line</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Healthbar Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Healthbar.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Healthbar.htm">Draw Healthbar</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Score Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Score.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Score.htm">Draw Instance Score</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Health.htm">Draw Instance Health</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Lives Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Lives.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Lives.htm">Draw Instance Lives</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Colour Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Colour.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Set_Draw_Colour.htm">Set Draw Colour</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Colour Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Colour.png" /></td>
-        <td class="dnd" style=""><a href="Get_Draw_Colour.htm">Get Draw Colour</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Alpha.png" /></td>
-        <td class="dnd" style=""><a href="Set_Draw_Alpha.htm">Set Draw Alpha</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Alpha Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Alpha.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Get_Draw_Alpha.htm">Get Draw Alpha</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Font.png" /></td>
-        <td class="dnd" style=""><a href="Set_Font.htm">Set Font</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Font.png" /></td>
-        <td class="dnd" style=""><a href="Get_Draw_Font.htm">Get Draw Font</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Text Alignment Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Text_Alignment.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Set_Text_Alignment.htm">Set Text Alignment</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Text_Alignment.png" /></td>
-        <td class="dnd" style=""><a href="Get_Text_Alignment.htm">Get Text Alignment</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a href="../Tiles/Tile_Actions.htm">Tile Actions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 그리기 작업 라이브러리</h1><p><img alt="Drawing Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Lib_Drawing.png" /> <b>그리기</b> 작업 라이브러리는 특정 그리기 속성을 설정하고 스프라이트, 텍스트 또는 모양을 그리는 데 필요한 작업을 찾을 수 있는 곳입니다. 이러한 작업의 대부분은 개체 <strong>의 다양한 <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">그리기 이벤트</a> 에서만 사용하기 위한</strong> 것이며 그리기 이벤트 외부에서 사용할 경우 작동하지 않을 수 있습니다. 이에 대한 예외는 모든 이벤트에 추가할 수 있고 이후의 모든 인스턴스에 대한 모든 도면에 영향을 줄 수 있는 <i>설정</i> 작업입니다.</p><p> 개체의 기본 <b>그리기 이벤트</b> 에 작업을 추가하는 경우 <a href="Draw_Self.htm">자체 그리기</a> 와 같은 작업을 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에 명시적으로 그리도록 지시하지 않는 한 인스턴스에 할당된 스프라이트를 그리지 <i>않는다는</i> 점에 유의하는 것이 중요합니다. 기본적으로 <span data-keyref="GameMaker Name">GameMaker</span> 는 그리기 이벤트에 다른 것이 <em>없는</em> 경우에만 인스턴스에 할당된 모든 스프라이트를 기본적으로 그립니다.</p><p> 사용 가능한 그리기 작업은 다음과 같습니다. </p><table class="dnd" style="text-align: left;margin-left:"><tbody><tr style="height: 1px;"><td class="icons" style="margin-left: 16px;"><img alt="Draw Self Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Self.png" /></td><td class="dnd" style=""> <a href="Draw_Self.htm">자기 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /></td><td class="dnd" style=""><a href="Draw_Value.htm">값 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /></td><td class="dnd" style=""><a href="Draw_Transformed_Value.htm">변환된 값 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /></td><td class="dnd" style=""><a href="Draw_Sprite.htm">스프라이트 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /></td><td class="dnd" style=""><a href="Draw_Sprite_Transformed.htm">변신된 스프라이트 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /></td><td class="dnd" style=""><a href="Draw_Stacked_Sprites.htm">누적 스프라이트 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Rectangle Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle.png" /></td><td class="dnd" style=""><a href="Draw_Rectangle.htm">사각형 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Rectangle Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle_Gradient.png" width="32" /></td><td class="dnd" style=""><a href="Draw_Gradient_Rectangle.htm">그라데이션 사각형 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Ellipse Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse.png" /></td><td class="dnd" style=""><a href="Draw_Ellipse.htm">타원 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Ellipse Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse_Gradient.png" width="32" /></td><td class="dnd" style=""><a href="Draw_Gradient_Ellipse.htm">그라데이션 타원 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Line Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Line.png" /></td><td class="dnd" style=""><a href="Draw_Line.htm">선 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Healthbar Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Healthbar.png" width="32" /></td><td class="dnd" style=""><a href="Draw_Healthbar.htm">체력바 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Score Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Score.png" /></td><td class="dnd" style=""><a href="Draw_Instance_Score.htm">인스턴스 점수 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /></td><td class="dnd" style=""><a href="Draw_Instance_Health.htm">인스턴스 상태 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Lives Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Lives.png" /></td><td class="dnd" style=""><a href="Draw_Instance_Lives.htm">인스턴스 라이브 그리기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Colour Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Colour.png" width="32" /></td><td class="dnd" style=""><a href="Set_Draw_Colour.htm">그리기 색상 설정</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Colour Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Colour.png" /></td><td class="dnd" style=""><a href="Get_Draw_Colour.htm">그리기 색상 가져오기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Alpha.png" /></td><td class="dnd" style=""><a href="Set_Draw_Alpha.htm">그리기 알파 설정</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Alpha Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Alpha.png" width="32" /></td><td class="dnd" style=""><a href="Get_Draw_Alpha.htm">무승부 알파 가져오기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Font.png" /></td><td class="dnd" style=""><a href="Set_Font.htm">글꼴 설정</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Font.png" /></td><td class="dnd" style=""><a href="Get_Draw_Font.htm">그리기 글꼴 가져오기</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Text Alignment Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Text_Alignment.png" width="32" /></td><td class="dnd" style=""><a href="Set_Text_Alignment.htm">텍스트 정렬 설정</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Text_Alignment.png" /></td><td class="dnd" style=""><a href="Get_Text_Alignment.htm">텍스트 정렬 가져오기</a> </td></tr></tbody></table><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../DnD_Reference.htm">인덱스</a></div><div style="float:right"> 다음: <a href="../Tiles/Tile_Actions.htm">타일 작업</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Drawing Actions

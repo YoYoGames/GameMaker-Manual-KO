@@ -6,77 +6,13 @@
   <title>physics_mass_properties</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_mass_properties" />
+  <meta name="topic-comment" content="physical_mass_properties에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_mass_properties" />
   <meta name="search-keywords" content="physics_mass_properties" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_mass_properties</h1>
-  <p>This function can be used to set custom mass and rotational inertia values for a physics enabled instance. Normally the mass, centre of mass, and rotational inertia for an instance are calculated using a combination the surface area of the bound fixtures and their density. However, in very special occasions, you may need to offset the centre of mass or change the inertia, and that is when you would use this function.</p>
-  <h3>Mass</h3>
-  <p>The mass is calculated in real world weight (i.e.: kilograms), so you should always try and keep values realistic for what you are modelling. So if your physics object is meant to represent a person, their mass could be, say, 70 kg, instead of something like 2 kg.</p>
-  <p>The mass cannot be negative.</p>
-  <h3>Centre of Mass</h3>
-  <p>The centre of mass is calculated automatically for you based on the shape of the fixture (or fixtures) you have defined. To get a general idea of where this could be, if you have a sprite that is the same shape as the fixtures you wish to create, then select the &quot;centre origin&quot; option and you will see approximately where the centre of mass will be too.</p>
-  <p>However, this may not be correct or you may be looking for a specific effect from your physics object, in which case this function can also be used to change the x and y coordinates for the centre of mass. These are <b>local/relative</b> values, so <span class="inline2">0,0</span> is the point at which the fixtures are bound to the instance (the origin of the instance). So a centre of mass of <span class="inline2">-4,0</span> would shift the centre of mass to the left of the origin, by 4 pixels.</p>
-  <h3>Rotational Inertia</h3>
-  <p><span>The inertia value defines how resistant this instance is to changes in its rotational velocity. A higher inertia makes it more resistant and a low inertia makes it less resistant.</span></p>
-  <p>The rotational inertia cannot be negative.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This function does not set mass and inertia for individual fixtures, but rather for the whole physics enabled instance, no matter how many fixtures are bound to it.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This function should only be used when necessary, as the physics simulation is designed for the mass and inertia to be optimal based on the density and size of the fixture. Changing these values may produce unexpected results.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_mass_properties(mass, local_center_x, local_center_y, inertia)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>mass</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The new mass that you want the fixture to have.</td>
-      </tr>
-      <tr>
-        <td>local_center_x</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The local x coordinate of the new center of mass.</td>
-      </tr>
-      <tr>
-        <td>local_center_y</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The local y coordinate of the new center of mass.</td>
-      </tr>
-      <tr>
-        <td>inertia</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The rotational inertia for the fixture.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">physics_mass_properties(phy_mass, -10, -10, phy_inertia);</p>
-  <p>The above code will shift the center of mass of the physical body to the left.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Physics.htm">Physics</a></div>
-        <div style="float:right">Next: <a href="physics_test_overlap.htm">physics_test_overlap</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_mass_properties</h1><p> 이 기능은 물리 활성화 인스턴스에 대한 사용자 정의 질량 및 회전 관성 값을 설정하는 데 사용할 수 있습니다. 일반적으로 예에 대한 질량, 질량 중심 및 회전 관성은 결합된 설비의 표면적과 해당 밀도의 조합을 사용하여 계산됩니다. 그러나 매우 특별한 경우에는 질량 중심을 오프셋하거나 관성을 변경해야 할 수 있으며 이때 이 기능을 사용합니다.</p><h3> 대량의</h3><p> 질량은 실제 무게(예: 킬로그램)로 계산되므로 항상 모델링하는 값에 대해 현실적인 값을 유지하려고 노력해야 합니다. 따라서 물리적 개체가 사람을 나타내기 위한 것이라면 질량은 예를 들어 2kg이 아니라 70kg이 될 수 있습니다.</p><p> 질량은 음수일 수 없습니다.</p><h3> 질량 중심</h3><p> 질량 중심은 정의한 설비(또는 설비)의 모양을 기반으로 자동으로 계산됩니다. 이것이 어디에 있을 수 있는지에 대한 일반적인 아이디어를 얻으려면 만들고자 하는 조명기와 같은 모양의 스프라이트가 있는 경우 &quot;중심 원점&quot; 옵션을 선택하면 대략적인 질량 중심 위치가 표시됩니다..</p><p> 그러나 이것은 정확하지 않거나 물리적 개체에서 특정 효과를 찾고 있을 수 있습니다. 이 경우 이 기능을 사용하여 질량 중심의 x 및 y 좌표를 변경할 수도 있습니다. 이것은 <b>지역/상대</b> 값이므로 <span class="inline2">0,0</span> 은 설비가 인스턴스(인스턴스의 원점)에 바인딩되는 지점입니다. 따라서 질량 중심이 <span class="inline2">-4,0</span> 이면 질량 중심이 원점의 왼쪽으로 4픽셀만큼 이동합니다.</p><h3> 회전 관성</h3><p> <span>관성 값은 이 인스턴스가 회전 속도의 변화에 얼마나 강한지를 정의합니다. 관성이 높으면 저항력이 높아지고 관성이 낮으면 저항력이 떨어집니다.</span></p><p> 회전 관성은 음수일 수 없습니다.</p><p class="note"> <span class="note">참고</span> 이 기능은 개별 조명기의 질량과 관성을 설정하지 않고, 얼마나 많은 조명기가 바인딩되어 있더라도 전체 물리학 활성화 인스턴스에 대해 설정합니다.</p><p class="note"> <span class="note">참고</span> 이 기능은 필요한 경우에만 사용해야 합니다. 물리 시뮬레이션은 고정물의 밀도와 크기를 기반으로 질량과 관성이 최적이 되도록 설계되었기 때문입니다. 이러한 값을 변경하면 예기치 않은 결과가 발생할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_mass_properties(mass, local_center_x, local_center_y, inertia)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">mass</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new mass that you want the fixture to have.</span></td></tr><tr><td> <span class="notranslate">local_center_x</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The local x coordinate of the new center of mass.</span></td></tr><tr><td> <span class="notranslate">local_center_y</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The local y coordinate of the new center of mass.</span></td></tr><tr><td> <span class="notranslate">inertia</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The rotational inertia for the fixture.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">physics_mass_properties(phy_mass, -10, -10, phy_inertia);</p><p> 위의 코드는 신체의 질량 중심을 왼쪽으로 이동합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Physics.htm">물리학</a></div><div style="float:right"> 다음: <a href="physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_mass_properties

@@ -4,85 +4,21 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_save_async</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for buffer_save_async" />
+  <meta name="topic-comment" content="buffer_save_async에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="buffer_save_async" />
   <meta name="search-keywords" content="buffer_save_async" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_save_async</h1>
-  <p>With this function you can save part of the contents of a buffer to a file, ready to be read back into memory using the <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> function (or any of the other functions for loading buffers). The &quot;offset&quot; defines the start position within the buffer for saving (in bytes), and the &quot;size&quot; is the size of the buffer area to be saved from that offset onwards (also in bytes). This function works asynchronously, and so the game will continue running while being saved, and all files saved using this function will be placed in a &quot;default&quot; folder. This folder does <i>not</i> need to be included in the filename as it is added automatically by GameMaker. For example the filename path &quot;<span class="inline">Data\Player_Save.sav</span>&quot; would actually be saved to &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot;. However, if you then load the file using the function <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>, you do not need to supply the &quot;default&quot; part of the path either (but any other file function <i>will</i> require it, except on consoles Xbox One, PS4 and Nintendo Switch).</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></b> On HTML5 &quot;default/&quot; is not added automatically and you may have to account for this in your code.</p>
-  <p>The function will return a unique ID value and trigger an <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">Asynchronous Save/Load Event</a> where you can use the returned ID to check the <span class="inline">async_load</span> ID value, as shown in the extended example below. The <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map in the event will have the following two key/value pairs:</p>
-  <ul>
-    <li><b>&quot;id&quot;: </b>the ID of the async function as returned by the save function.</li>
-    <li><b>&quot;status&quot;: </b>will return <span class="inline">true</span> if the data was saved/loaded correctly, and <span class="inline">false</span> otherwise.</li>
-  </ul>
-  <p>Note that you can save out multiple buffers in one by calling this function multiple times between calls to <a href="buffer_async_group_begin.htm"><span class="inline">buffer_async_group_begin()</span></a> and <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> (see those functions for further information on this).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> On HTML5 the returned results are saved as base64 encoded strings when saved to a file.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The index of the buffer to save.</td>
-      </tr>
-      <tr>
-        <td>filename</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the file to save as.</td>
-      </tr>
-      <tr>
-        <td>offset</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The offset within the buffer to save from (in bytes).</td>
-      </tr>
-      <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The size of the buffer area to save (in bytes).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <span class="inline">buffer_save_async()</span> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look something like this:</p>
-  <p class="code">saveid = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);</p>
-  <p>The above code saves the contents of the buffer &quot;<i>buff</i>&quot; to the given save file, storing the ID of the function call in the variable &quot;<i>saveid</i>&quot;. When the save is complete, the asynchronous Save/Load event will be triggered and you can parse the <span class="inline">async_load</span> map for the correct ID of the function, like this:</p>
-  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_save_async</h1><p> 이 기능을 사용하면 버퍼 내용의 일부를 파일에 저장할 수 있으며 다음을 사용하여 메모리로 다시 읽을 수 있습니다.<a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> 함수(또는 버퍼를 로드하기 위한 다른 함수). &quot;오프셋&quot;은 저장을 위한 버퍼 내의 시작 위치(바이트 단위)를 정의하고 &quot;크기&quot;는 오프셋부터 저장될 버퍼 영역의 크기(바이트 단위)입니다. 이 기능은 비동기식으로 작동하므로 게임이 저장되는 동안 계속 실행되며 이 기능을 사용하여 저장된 모든 파일은 &quot;기본&quot; 폴더에 저장됩니다. 이 폴더는 GameMaker에서 자동으로 추가하므로 파일 이름에 포함할 필요가 <i>없습니다</i>. 예를 들어 파일 이름 경로 &quot;<span class="inline">Data\Player_Save.sav</span> &quot; 실제로 &quot;에 저장됩니다.<span class="inline">default\Data\Player_Save.sav</span> &quot;. 그러나 함수를 사용하여 파일을 로드하면<a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>, 경로의 &quot;기본&quot; 부분도 제공할 필요가 없습니다(그러나 Xbox One, PS4 및 Nintendo Switch 콘솔을 제외하고 다른 파일 기능 <i>에는</i> 이를 필요로 함).</p><p class="note"> <b>참고</b>: HTML5에서 &quot;default/&quot;는 자동으로 추가되지 않으며 코드에서 이를 설명해야 할 수도 있습니다.</p><p> 이 함수는 고유한 ID 값을 반환하고 반환된 ID를 사용하여 확인할 수 있는 <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">비동기 저장/로드 이벤트</a> 를 트리거합니다. <span class="inline">async_load</span> 아래 확장된 예와 같이 ID 값입니다. 그만큼<a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> 이벤트의 맵에는 다음 두 개의 키/값 쌍이 있습니다.</p><ul><li> <b>&quot;id&quot;:</b> 저장 함수에서 반환된 비동기 함수의 ID입니다.</li><li> <b>&quot;상태&quot;:</b> 반환됩니다 <span class="inline">true</span> 데이터가 올바르게 저장/로드되었는지 여부, <span class="inline">false</span> 그렇지 않으면.</li></ul><p> 에 대한 호출 사이에 이 함수를 여러 번 호출하여 여러 버퍼를 하나로 저장할 수 있습니다.<a href="buffer_async_group_begin.htm"><span class="inline">buffer_async_group_begin()</span></a> 그리고<a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> (이에 대한 자세한 내용은 해당 기능을 참조하십시오).</p><p class="note"> <b>참고</b>: HTML5에서 반환된 결과는 파일에 저장할 때 base64로 인코딩된 문자열로 저장됩니다.</p><p></p><h4> 통사론:</h4><p class="code">buffer_save_async(buffer, filename, offset, size);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td><td> <span class="notranslate">The index of the buffer to save.</span></td></tr><tr><td> <span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The name of the file to save as.</span></td></tr><tr><td> <span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The offset within the buffer to save from (in bytes).</span></td></tr><tr><td> <span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The size of the buffer area to save (in bytes).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p><p></p><h4> 확장된 예:</h4><p> 그만큼 <span class="inline">buffer_save_async()</span> 함수는 모든 이벤트에서 호출할 수 있으며 비동기식이므로 콜백은 거의 즉각적이거나 몇 초가 걸릴 수 있습니다. 함수를 호출하는 것은 간단하며 다음과 같이 보일 것입니다.</p><p class="code">saveid = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);</p><p> 위의 코드는 버퍼 &quot; <i>buff</i> &quot;의 내용을 주어진 저장 파일에 저장하고 변수 &quot; <i>saveid</i> &quot;에 함수 호출의 ID를 저장합니다. 저장이 완료되면 비동기 저장/로드 이벤트가 트리거되고 파일을 구문 분석할 수 있습니다. <span class="inline">async_load</span> 다음과 같이 함수의 올바른 ID에 대한 맵:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
         if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />
-    }</p>
-  <p>The above code will first check the id of the DS map that has been created, then check the status of the callback, posting a debug message if there has been any issues.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_load.htm">buffer_load</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 먼저 생성된 DS 맵의 ID를 확인한 다음 콜백 상태를 확인하고 문제가 있으면 디버그 메시지를 게시합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffers.htm">버퍼</a></div><div style="float:right"> 다음: <a href="buffer_load.htm"><span class="notranslate">buffer_load</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_save_async

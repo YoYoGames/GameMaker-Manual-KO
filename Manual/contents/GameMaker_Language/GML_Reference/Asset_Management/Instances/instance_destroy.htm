@@ -6,69 +6,19 @@
   <title>instance_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function instance_destroy" />
+  <meta name="topic-comment" content="instance_destroy 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="instance_destroy" />
   <meta name="search-keywords" content="instance_destroy" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_destroy</h1>
-  <p>You call this function whenever you wish to &quot;destroy&quot; an instance, normally triggering a <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy Event</a> and also a <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up Event</a>. This will remove it from the room until the room is restarted (unless the room is persistent). Calling the function with no arguments will simply destroy the instance that is currently in scope and running the code, but you can provide an optional &quot;id&quot; argument and target a specific instance by using the instance <span class="inline"><a href="Instance_Variables/id.htm">id</a></span> value, or you can target all instances of a particular object by using an <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>. For example:</p>
-  <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
-    instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>
-  <p>The second <i>optional</i> flag permits you to &quot;switch off&quot; the Destroy Event for the instance being destroyed. By default the Destroy Event will <i>always</i> be performed, but if you set this flag to <span class="inline">false</span> then you can make the instance destroy itself and skip performing that event.</p>
-  <p class="note"><b>IMPORTANT!</b> This will skip the Destroy Event, but the Clean Up event will still be called.</p>
-  <p>It is worth noting that when you destroy an instance, its destroy event is called <i>immediately</i> after the code or action that calls the destroy function. Also, although the destroy event is performed, the instance <i>is not immediately removed from the game</i>, and it will continue to perform the code contained in the current event. Only when the current event is over will it be removed from the game.</p>
-  <p>So, if you have, for example, this code:</p>
-  <p class="code">if (hp &lt;= 0) instance_destroy();<br />
-    score += 10;</p>
-  <p>The variable &quot;score&quot; will be incremented <i>even though the <span class="inline">instance_destroy</span> function has been called</i>, and the instance will finally be removed from your game at the end of the event. Be careful of this, as if you have (for example) created a dynamic resource for the instance, like a data structure, and then have destroyed that resource in the destroy event, if there are any references to it after the destroy function or action has been performed then you will get an &quot;unknown resource&quot; error, as the destroy event removed it from the game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_Asset_Object">Object Asset</span></td>
-        <td><span class="optional">OPTIONAL</span> The instance ID to destroy, or the object asset to destroy instances of (optional, default is the calling instance)</td>
-      </tr>
-      <tr>
-        <td>execute_event_flag</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td><span class="optional">OPTIONAL</span> Set to <span class="inline">true</span> or <span class="inline">false</span> to perform the Destroy event or not (optional, default is <span class="inline">true</span>)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (bbox_right &lt; 0 || bbox_left &gt; room_width || bbox_bottom &lt; 0 || bbox_top &gt; room_height)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_destroy</h1><p> 인스턴스를 &quot;파괴&quot;하고 싶을 때마다 이 함수를 호출합니다. 일반적으로 <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy Event</a> 및 <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up Event</a> 도 트리거합니다. 이렇게 하면 룸이 다시 시작될 때까지 룸에서 제거됩니다(룸이 지속되지 않는 경우). 인수 없이 함수를 호출하면 현재 범위에 있고 코드를 실행 중인 인스턴스가 소멸되지만 선택적 &quot;id&quot; 인수를 제공하고 인스턴스를 사용하여 특정 인스턴스를 대상으로 지정할 수 있습니다. <span class="inline"><a href="Instance_Variables/id.htm">id</a></span> 값을 사용하거나<a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>. 예를 들어:</p><p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
+    instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p><p> 두 번째 <i>선택적</i> 플래그를 사용하면 파괴되는 인스턴스에 대한 Destroy Event를 &quot;스위치 끄기&quot;할 수 있습니다. 기본적으로 Destroy Event는 <i>항상</i> 수행되지만 이 플래그를 다음으로 설정하면 <span class="inline">false</span> 그런 다음 인스턴스를 자체적으로 파괴하고 해당 이벤트 수행을 건너뛸 수 있습니다.</p><p class="note"> <b>중요한!</b> 이렇게 하면 Destroy Event를 건너뛰지만 Clean Up 이벤트는 계속 호출됩니다.</p><p> 인스턴스를 파괴할 때 destroy 함수를 호출하는 코드 또는 작업 <i>직후</i> 에 해당 destroy 이벤트가 호출된다는 점은 주목할 가치가 있습니다. 또한 destroy 이벤트가 수행되더라도 인스턴스 <i>가 게임에서 즉시 제거되지 않고</i> 현재 이벤트에 포함된 코드를 계속 수행합니다. 현재 이벤트가 종료된 경우에만 게임에서 제거됩니다.</p><p> 예를 들어 다음 코드가 있는 경우:</p><p class="code">if (hp &lt;= 0) instance_destroy();<br />
+    score += 10;</p><p> 변수 &quot;점수&quot; <i>는 <span class="inline">instance_destroy</span> 함수가 호출되었으며</i> 이벤트가 끝나면 인스턴스가 마침내 게임에서 제거됩니다. (예를 들어) 데이터 구조와 같은 인스턴스에 대한 동적 리소스를 생성한 다음 destroy 함수 또는 작업 후에 해당 리소스에 대한 참조가 있는 경우 destroy 이벤트에서 해당 리소스를 파괴한 것처럼 이것을 주의하십시오. 제거 이벤트가 게임에서 제거되었기 때문에 &quot;알 수 없는 리소스&quot; 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">instance_destroy([id, execute_event_flag]);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span> 또는 <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> The instance ID to destroy, or the object asset to destroy instances of (optional, default is the calling instance)</span></td></tr><tr><td> <span class="notranslate">execute_event_flag</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> Set to <span class="inline">true</span> or <span class="inline">false</span> to perform the Destroy event or not (optional, default is <span class="inline">true</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (bbox_right &lt; 0 || bbox_left &gt; room_width || bbox_bottom &lt; 0 || bbox_top &gt; room_height)<br />
     {<br />
         instance_destroy(id, false);<br />
-    }</p>
-  <p>The above code will destroy the instance running the code without calling the Destroy Event if the instance is outside the room bounds.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="instance_exists.htm">instance_exists</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 인스턴스가 방 경계 밖에 있는 경우 Destroy Event를 호출하지 않고 코드를 실행하는 인스턴스를 파괴합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instances.htm">인스턴스</a></div><div style="float:right"> 다음: <a href="instance_exists.htm"><span class="notranslate">instance_exists</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_destroy

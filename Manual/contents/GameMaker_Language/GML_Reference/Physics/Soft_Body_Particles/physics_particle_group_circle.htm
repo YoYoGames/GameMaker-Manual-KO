@@ -6,52 +6,14 @@
   <title>physics_particle_group_circle</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_particle_group_circle" />
+  <meta name="topic-comment" content="physical_particle_group_circle에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_particle_group_circle" />
   <meta name="search-keywords" content="physics_particle_group_circle" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_group_circle</h1>
-  <p>This function will set the shape of the particle group that is being created. You must first have begun the group definition using the function <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, and then you would
-    use this function to set the approximate radius of the group in pixels - approximate because the exact radius will depend on the size of the base particles, as defined by the <a href="physics_particle_set_radius.htm"><span class="inline">physics_particle_set_radius()</span></a>    function, as the physics simulation tries to &quot;fit&quot; as many of the particles as possible into the defined shape. Finally you need to call <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a> to create the group
-    of particles in the room.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_particle_group_circle(radius)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>radius</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The radius (in pixels) of the circle to create.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> var groupflags = phy_particle_group_flag_solid;<br/> physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y, 0, 0, 0, 0, c_white, 1, 1, 2);<br/>    physics_particle_group_circle(100);
-    <br/> mLastGroup = physics_particle_group_end();</p>
-  <p>The above code stores the flags for the particle type and the particle group properties in variables then uses these to create a circular particle group with a 100px radius at the mouse position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_group_box.htm">physics_particle_group_box</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_group_circle</h1><p> 이 기능은 생성되는 입자 그룹의 모양을 설정합니다. 먼저 함수를 사용하여 그룹 정의를 시작해야 합니다.<a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, 그런 다음 이 기능을 사용하여 그룹의 대략적인 반경을 픽셀 단위로 설정합니다. 정확한 반경은<a href="physics_particle_set_radius.htm"><span class="inline">physics_particle_set_radius()</span></a> 물리학 시뮬레이션이 정의된 모양에 가능한 한 많은 입자를 &quot;맞추기&quot;를 시도하기 때문에 기능입니다. 마지막으로 전화해야합니다<a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a> 방에 입자 그룹을 만듭니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_particle_group_circle(radius)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">radius</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The radius (in pixels) of the circle to create.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> var groupflags = phy_particle_group_flag_solid;<br/> physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y, 0, 0, 0, 0, c_white, 1, 1, 2);<br/>    physics_particle_group_circle(100);
+    <br/> mLastGroup = physics_particle_group_end();</p><p> 위의 코드는 입자 유형에 대한 플래그와 입자 그룹 속성을 변수에 저장한 다음 이를 사용하여 마우스 위치에서 반경 100px의 원형 입자 그룹을 만듭니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Soft_Body_Particles.htm">부드러운 바디 입자</a></div><div style="float:right"> 다음: <a href="physics_particle_group_box.htm"><span class="notranslate">physics_particle_group_box</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_group_circle

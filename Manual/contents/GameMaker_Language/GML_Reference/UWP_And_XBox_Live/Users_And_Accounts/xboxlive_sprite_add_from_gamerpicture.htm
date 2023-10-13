@@ -6,55 +6,13 @@
   <title>xboxlive_sprite_add_from_gamerpicture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for xboxlive_sprite_add_from_gamerpicture" />
+  <meta name="topic-comment" content="xboxlive_sprite_add_from_gamerpicture에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="xboxlive_sprite_add_from_gamerpicture" />
   <meta name="search-keywords" content="xboxlive_sprite_add_from_gamerpicture" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_sprite_add_from_gamerpicture</h1>
-  <p>With this function you can get the gamer picture for a given user ID pointer. The function works asynchronously, and will trigger an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a> asynchronous event to inform you that the function is finished (like with HTML5/URL calls to <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a>). The Asynchronous Image Loaded event will have a DS map stored in the built in variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. The map contains the following information:</p>
-  <ul class="colour">
-    <li>&quot;<b>filename</b>&quot;: The complete path to the file you requested.</li>
-    <li>&quot;<b>id</b>&quot;: The ID of the resource that you have loaded. This will be the same as the variable that you have assigned the resource to.</li>
-    <li>&quot;<b>status</b>&quot;: Returns a value of less than 0 for an error.</li>
-  </ul>
-  <p class="note"><b>NOTE</b>: When you dynamically load a sprite into your game at runtime, you must remember to remove it again using <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><span class="inline">sprite_delete()</span></a> when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">xboxlive_sprite_add_from_gamerpicture(user_id, imagesize, xorig, yorig);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>user_id</td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
-        <td>The user ID (a pointer) to get the gamer picture for</td>
-     </tr>
-      <tr>
-        <td>imagesize</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Size in pixels of the sprite to be returned</td>
-     </tr>
-      <tr>
-        <td>xorig</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Indicate the x position of the origin in the sprite</td>
-     </tr>
-      <tr>
-        <td>yorig</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Indicate the y position of the origin in the sprite</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _a = 0;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_sprite_add_from_gamerpicture</h1><p> 이 기능을 사용하면 주어진 사용자 ID 포인터에 대한 게이머 사진을 얻을 수 있습니다. 이 함수는 비동기식으로 작동하며 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a> 비동기식 이벤트를 트리거하여 함수가 완료되었음을 알려줍니다(예: HTML5/URL 호출에서 <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a> ). 비동기식 이미지 로드 이벤트에는 내장 변수에 저장된 DS 맵이 있습니다. <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. 지도에는 다음 정보가 포함되어 있습니다.</p><ul class="colour"><li> &quot; <b>filename</b> &quot;: 요청한 파일의 전체 경로입니다.</li><li> &quot; <b>id</b> &quot;: 로드한 리소스의 ID입니다. 이것은 리소스를 할당한 변수와 동일합니다.</li><li> &quot; <b>status</b> &quot;: 오류에 대해 0보다 작은 값을 반환합니다.</li></ul><p class="note"> <b>참고</b>: 런타임에 게임에 동적으로 스프라이트를 로드할 때 다음을 사용하여 스프라이트를 다시 제거해야 합니다.<a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><span class="inline">sprite_delete()</span></a> 더 이상 필요하지 않을 때 메모리 누수의 위험이 있어 속도가 느려지고 결국 게임이 중단됩니다.</p><p></p><h4> 통사론:</h4><p class="code">xboxlive_sprite_add_from_gamerpicture(user_id, imagesize, xorig, yorig);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td><td> <span class="notranslate">The user ID (a pointer) to get the gamer picture for</span></td></tr><tr><td> <span class="notranslate">imagesize</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Size in pixels of the sprite to be returned</span></td></tr><tr><td> <span class="notranslate">xorig</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Indicate the x position of the origin in the sprite</span></td></tr><tr><td> <span class="notranslate">yorig</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Indicate the y position of the origin in the sprite</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p><p></p><h4> 예시:</h4><p class="code">var _a = 0;<br />
     var _num = xboxlive_get_user_count();<br />
     for (var i = 0; i &lt; _num; ++i;)<br />
     {<br />
@@ -67,19 +25,7 @@
             global.UserAvatar[_a] = xboxlive_sprite_add_from_gamerpicture(_uid, 256, 0, 0);<br />
             ++a;<br />
         }<br />
-    }</p>
-  <p>The above code loops through the logged in users and stores their gamer data in various global arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Users_And_Accounts.htm">Users And Accounts</a></div>
-        <div style="float:right">Next: <a href="xboxlive_generate_player_session_id.htm">xboxlive_generate_player_session_id</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 로그인한 사용자를 반복하고 게이머 데이터를 다양한 전역 배열에 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Users_And_Accounts.htm">사용자 및 계정</a></div><div style="float:right"> 다음: <a href="xboxlive_generate_player_session_id.htm"><span class="notranslate">xboxlive_generate_player_session_id</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_sprite_add_from_gamerpicture

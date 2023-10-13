@@ -3,68 +3,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Write To Ini File</title>
+  <title>Ini 파일에 쓰기</title>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Write To Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Write To Ini File"/>
-  <meta name="search-keywords" content="Write To Ini File"/>
+  <meta name="topic-comment" content="Ini 파일에 쓰기 작업을 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - Ini 파일에 쓰기"/>
+  <meta name="search-keywords" content="Ini 파일에 쓰기"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/> Write To Ini File</h1>
-  <p>With this action you can write a numeric value or a string to an Ini file. You must previously have opened the Ini file for reading/writing using the action <a href="Open_Ini_File.htm">Open Ini File</a>, and then with this action you give the type of
-    data to write (either a real number or a string enclosed in &quot;&quot;), as well as the section header, the key within that section and the value for the key. To help visualise the structure of an Ini file, see this image:</p>
-  <p><img alt="Example Ini File Contents" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Ini_Example.png"/>As you can see, Ini files are split into sections - where each section has its own header name - and
-    then each section is subsequently split into various key/value pairs (much like a <a href="../Data_Structures/Create_Map.htm">Map Data Structure</a>). Note that you can create Ini files yourself using any text processing software (like Notepad on
-    Windows) and then include them as an <a href="../../../Settings/Included_Files.htm">Included File</a> to read from and write to in your game.</p>
-  <p class="note"><b>IMPORTANT!</b> Trying to read data from an Ini file that has not been opened previously using the <a href="Open_Ini_File.htm">Open Ini File</a> action will cause a serious error and crash your game.<b></b></p>
-  <p class="note"><b>IMPORTANT!</b> This only writes the data to memory and to finally write the data to the file on disk, you <b>must call <a href="Close_Ini_File.htm">Close Ini File</a></b>, otherwise the data will not be saved.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Write To Ini Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Write_To_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The type of data to write, either a <span class="inline">string</span> (enclosed in quotes &quot;&quot;), or a <span class="inline">real number</span></td>
-      </tr>
-      <tr>
-        <td>Section</td>
-        <td>The section of the Ini file to write to (as a string)</td>
-      </tr>
-      <tr>
-        <td>Key</td>
-        <td>The key within the section to write to (as a string)</td>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The value to write, either a string or a real number based on the &quot;type&quot; argument (above)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Write To Ini Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Write_To_Ini_File.png"/>The above action block code will open an ini then write data to three different keys under
-    the same section header (one string and two real numbers) before closing the ini file again (thus writing the data to disk).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Read_Ini_File.htm">Read Ini File</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/> Ini 파일에 쓰기</h1><p> 이 작업으로 숫자 값이나 문자열을 Ini 파일에 쓸 수 있습니다. 이전에 <a href="Open_Ini_File.htm">Open Ini File</a> 작업을 사용하여 읽기/쓰기를 위해 Ini 파일을 연 다음 이 작업으로 쓸 데이터 유형(실수 또는 &quot;&quot;으로 묶인 문자열)과 섹션 헤더, 해당 섹션 내의 키 및 키 값. Ini 파일의 구조를 시각화하려면 다음 이미지를 참조하십시오.</p><p><img alt="Example Ini File Contents" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Ini_Example.png"/> 보시다시피, Ini 파일은 섹션으로 분할됩니다. 각 섹션에는 고유한 헤더 이름이 있습니다. 그런 다음 각 섹션은 이후에 다양한 키/값 쌍으로 분할됩니다( <a href="../Data_Structures/Create_Map.htm">Map 데이터 구조</a> 와 유사). 텍스트 처리 소프트웨어(Windows의 메모장과 같은)를 사용하여 직접 Ini 파일을 만든 다음 게임에서 읽고 쓸 수 있는 <a href="../../../Settings/Included_Files.htm">포함 파일</a> 로 포함할 수 있습니다.</p><p class="note"> <b>중요한!</b> Ini 파일 <a href="Open_Ini_File.htm">열기</a> 작업을 사용하여 이전에 열지 않은 Ini 파일에서 데이터를 읽으려고 하면 심각한 오류가 발생하고 게임이 중단됩니다.<b></b></p><p class="note"> <b>중요한!</b> 이것은 데이터를 메모리에만 쓰고 마지막으로 디스크의 파일에 데이터를 쓰려면 <b><a href="Close_Ini_File.htm">Close Ini File</a> 을 호출해야 합니다</b>. 그렇지 않으면 데이터가 저장되지 않습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Write To Ini Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Write_To_Ini_File.png"/></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 쓸 데이터 유형 <span class="inline">string</span> (따옴표 &quot;&quot;로 묶음) 또는 <span class="inline">real number</span></td></tr><tr><td> <span class="notranslate">Section</span></td><td> 쓸 Ini 파일의 섹션(문자열로)</td></tr><tr><td> <span class="notranslate">Key</span></td><td> 쓸 섹션 내의 키(문자열로)</td></tr><tr><td> <span class="notranslate">Value</span></td><td> 쓸 값, &quot;유형&quot; 인수(위)를 기반으로 하는 문자열 또는 실수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Write To Ini Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Write_To_Ini_File.png"/> 위의 작업 블록 코드는 ini를 연 다음 ini 파일을 다시 닫기 전에(따라서 데이터를 디스크에 쓰기) 동일한 섹션 헤더 아래에 있는 세 개의 다른 키(문자열 1개와 실수 2개)에 데이터를 씁니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Actions.htm">파일 작업</a></div><div style="float:right"> 다음: <a href="Read_Ini_File.htm">Ini 파일 읽기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Write To Ini File

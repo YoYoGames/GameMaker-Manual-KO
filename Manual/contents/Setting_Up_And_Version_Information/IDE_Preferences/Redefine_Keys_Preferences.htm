@@ -3,72 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Redefine Keys Preferences</title>
+  <title>키 기본 설정 재정의</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="The Redefine Keys Preferences" />
-  <meta name="rh-index-keywords" content="Prefs - Redefine Keys" />
-  <meta name="search-keywords" content="Redefine Keys, Controls, Redefining, Change Keys, Remapping, Remap, Rebinding, Bind" />
+  <meta name="topic-comment" content="재정의 키 기본 설정" />
+  <meta name="rh-index-keywords" content="Prefs - 키 재정의" />
+  <meta name="search-keywords" content="키 재정의,통제 수단,재정의,키 변경,다시 매핑,다시 매핑,리바인딩,묶다" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Redefine Keys Preferences</h1>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Preferences.png" />The <strong>Redefine Keys</strong> section of the Preferences allows you to change the mappings for the various <a href="../../IDE_Navigation/Keyboard_Shortcuts.htm">keyboard shortcuts</a> provided in the <span data-keyref="GameMaker Name">GameMaker</span> IDE.</p>
-  <h2>Search</h2>
-  <p>At the top you have the search bar, which you can use to look for specific commands by entering a name (e.g. &quot;<strong>Copy</strong>&quot;), a key combination (e.g. &quot;<strong>CTRL+C</strong>&quot;) or a location (e.g. &quot;<strong>Text Editor</strong>&quot;).</p>
-  <p>Enabling the <img class="icon" src="../../assets/Images/Icons/Redefine_Keys_Search_Side_Button.png" /> button next to the search field allows you search by entering a shortcut. Any keys you press while this is enabled will be entered as a shortcut instead of regular text.</p>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Search_Modes.gif" /></p>
-  <p>Next to the search bar you have the <strong>Filter</strong> menu which is described in its own section later on this page.</p>
-  <h2>Command List</h2>
-  <p>The &quot;Command List&quot; displays all the available shortcuts that can be remapped, separated into different categories based on the locations of those shortcuts. Clicking on any location in this list will display the commands that can be used within it:</p>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Preferences_Expanded.png" />Information for each command is separated into two columns:</p>
-  <ul class="colour">
-    <li><strong>Command</strong>: This is the name of the command/shortcut and describes what action it performs.</li>
-    <li><strong>Keys</strong>: This displays the current keyboard mapping for the command. You can <img class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> double click on any item in this column to reassign that command by simply pressing the appropriate combination of keys on the keyboard (they must be held simultaneously, similar to how the shortcut would actually be used). As soon as you release your new key combination, it will be registered and applied to the command.
-      <figure><img alt="GIF demonstrating changing a shortcut" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Example.gif" style="cursor: nwse-resize;" />
-        <figcaption>Double-click on a shortcut to enter a new one!</figcaption>
-      </figure>
-      Pressing <img alt="Escape" class="icon" height="20" src="../../assets/Images/Icons/Icon_Escape.png" title="" width="55" /> while editing a command will bring you out of edit mode and will not modify the selected command.
-    </li>
-  </ul>
-  <p>You can change the sorting of the Command List by <img class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> clicking on a column heading (either &quot;Command&quot; or &quot;Keys&quot;) to sort the list using the values from that column, alternating between ascending and descending with each click.</p>
-  <h2>Clash Window</h2>
-  <p>If you try to set a key combination that is already in use for other commands, you will see a special &quot;Clash&quot; window:<br />
-    <img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Clash_Window.png" />This window will show the location and name of the command that is already using the key combination that you are trying to use. In case the key combination is used by multiple commands, it will show all of them in a list.<br />
-    <br />
-    Here you have two options,<strong> &quot;Cancel&quot;</strong> and <strong>&quot;Override (ALL) and Reassign&quot;</strong>:
-  </p>
-  <ul class="colour">
-    <li>Pressing <strong>&quot;Cancel&quot;</strong> will close the Clash window and will not make any changes to any commands.</li>
-    <li>Pressing <strong>&quot;Override (ALL) and Reassign&quot;</strong> will assign the new key combination to your selected command and <strong>clear </strong>the bindings of all other commands that previously used the same combination.</li>
-  </ul>
-  <p>After using <strong>&quot;Override and Reassign&quot;</strong>, GameMaker will highlight the overridden command in the Command List so you can assign new a key combination to it. In case multiple commands were overridden, it will change the filter to display only those commands so you can apply new shortcuts to them. This filter can be cleared by clicking on &quot;Clear&quot;.<br />
-    <br />
-    If you wish to use a different binding for the selected command, you can expand the <strong>&quot;Suggested Free Keys&quot;</strong> section to see a list of key combinations that are not used anywhere in the IDE. Clicking on<strong> &quot;Use&quot;</strong> next to any one of these combinations will assign it to the selected command and solve the clash.
-  </p>
-  <h2 id="h">Filter Menu</h2>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Filter_Menu.png" />The Filter menu allows you specify what kind of commands should appear in the Command List. At the top, you have two options:</p>
-  <ul class="colour">
-    <li><strong>&quot;Show Unbound Commands&quot;</strong>: Enabling this will display any commands that have been unbound, i.e. their bindings have been cleared. Any commands that remain unbound cannot be used as there is no key combination assigned to them.</li>
-    <li><strong>&quot;Show Only Redefined Commands&quot;</strong>: Enabling this will display only those commands that have been changed manually, i.e. their bindings are different from their default bindings.</li>
-  </ul>
-  <p>Below that you have numerous options allowing you to specify the locations that are displayed in the Command List. By default, <strong>&quot;All Locations&quot;</strong> is checked, meaning that you will see commands from all locations in the IDE. Unchecking <strong>&quot;All Locations&quot;</strong> will uncheck every other item below it, allowing you to manually select the ones you would like to see; for example, unchecking all items and then checking <strong>&quot;Image Editor&quot;</strong> will only show you commands that can be used in the Image Editor.</p>
-  <h2>Clearing Commands</h2>
-  <p>Double-clicking on an existing key combination will allow you to change it, however while you are doing this you can click on the <strong>&quot;Clear&quot;</strong> button below the Command List to clear the binding for that command.</p>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Clear_Button.png" />If you have accidentally overridden some keyboard shortcuts and wish to reset them back to their default settings, you can click on the &quot;Restore defaults&quot; button at the top of the Preferences window to reset all commands to their default mappings, or check the <a href="../../IDE_Navigation/Keyboard_Shortcuts.htm">Keyboard Shortcuts</a> page to check the default bindings and revert your commands manually.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Anim_Curve_Editor_Preferences.htm">Animation Curve Editor Preferences</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 키 기본 설정 재정의</h1><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Preferences.png" /> 기본 설정의 <strong>키 재정</strong> 의 섹션을 사용하면 <span data-keyref="GameMaker Name">GameMaker</span> IDE에서 제공되는 다양한 <a href="../../IDE_Navigation/Keyboard_Shortcuts.htm">키보드 단축키</a> 에 대한 매핑을 변경할 수 있습니다.</p><h2> 검색</h2><p> 상단에는 이름(예: &quot; <strong>복사</strong> &quot;), 키 조합(예: &quot; <strong>CTRL+C</strong> &quot;) 또는 위치(예: &quot; <strong>텍스트 편집기</strong> &quot;)를 입력하여 특정 명령을 찾는 데 사용할 수 있는 검색 표시줄이 있습니다..</p><p> 활성화<img class="icon" src="../../assets/Images/Icons/Redefine_Keys_Search_Side_Button.png" /> 검색 필드 옆에 있는 버튼을 사용하면 바로 가기를 입력하여 검색할 수 있습니다. 이 기능이 활성화된 상태에서 누르는 모든 키는 일반 텍스트 대신 바로 가기로 입력됩니다.</p><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Search_Modes.gif" /></p><p> 검색 표시줄 옆에는 이 페이지 뒷부분의 해당 섹션에서 설명하는 <strong>필터</strong> 메뉴가 있습니다.</p><h2> 명령 목록</h2><p> &quot;명령 목록&quot;에는 다시 매핑할 수 있는 사용 가능한 모든 바로 가기가 표시되며 해당 바로 가기의 위치에 따라 다른 범주로 구분됩니다. 이 목록의 아무 위치나 클릭하면 그 안에서 사용할 수 있는 명령이 표시됩니다.</p><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Preferences_Expanded.png" /> 각 명령에 대한 정보는 두 개의 열로 구분됩니다.</p><ul class="colour"><li> <strong>명령</strong>: 이것은 명령/바로 가기의 이름이며 수행하는 작업을 설명합니다.</li><li> <strong>키</strong>: 명령에 대한 현재 키보드 매핑을 표시합니다. 당신은 할 수 있습니다<img class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 이 열의 항목을 두 번 클릭하면 키보드에서 적절한 키 조합을 눌러 해당 명령을 다시 할당할 수 있습니다(단축키가 실제로 사용되는 방식과 유사하게 동시에 누르고 있어야 함). 새 키 조합을 놓는 즉시 명령에 등록되고 적용됩니다.<figure><img alt="GIF demonstrating changing a shortcut" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Example.gif" style="cursor: nwse-resize;" /><figcaption> 바로 가기를 두 번 클릭하여 새 항목을 입력하십시오!</figcaption></figure> 누르기<img alt="Escape" class="icon" height="20" src="../../assets/Images/Icons/Icon_Escape.png" title="" width="55" /> 명령을 편집하는 동안 편집 모드가 종료되고 선택한 명령이 수정되지 않습니다.</li></ul><p> 다음을 통해 명령 목록의 정렬을 변경할 수 있습니다.<img class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> 열 머리글(&quot;명령&quot; 또는 &quot;키&quot;)을 클릭하여 해당 열의 값을 사용하여 목록을 정렬하고 클릭할 때마다 오름차순과 내림차순을 번갈아가며 수행합니다.</p><h2> 충돌 창</h2><p> 다른 명령에 이미 사용 중인 키 조합을 설정하려고 하면 특별한 &quot;충돌&quot; 창이 표시됩니다.<br /><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Clash_Window.png" /> 이 창에는 사용하려는 키 조합을 이미 사용 중인 명령의 위치와 이름이 표시됩니다. 키 조합이 여러 명령에서 사용되는 경우 모든 명령이 목록에 표시됩니다.<br /><br /> 여기에는 <strong>&quot;취소&quot;</strong> 와 <strong>&quot;재정의(ALL) 및 재할당&quot;</strong> 의 두 가지 옵션이 있습니다.</p><ul class="colour"><li> <strong>&quot;취소&quot;</strong> 를 누르면 충돌 창이 닫히고 명령이 변경되지 않습니다.</li><li> <strong>&quot;재정의(ALL) 및 재할당&quot;</strong> 을 누르면 선택한 명령에 새 키 조합이 할당되고 이전에 동일한 조합을 사용한 다른 모든 명령의 바인딩이 지워 <strong>집니다</strong>.</li></ul><p> <strong>&quot;재정의 및 재할당&quot;</strong> 을 사용한 후 GameMaker는 명령 목록에서 재정의된 명령을 강조 표시하므로 새 키 조합을 할당할 수 있습니다. 여러 명령이 재정의된 경우 새 바로 가기를 적용할 수 있도록 해당 명령만 표시하도록 필터가 변경됩니다. 이 필터는 &quot;지우기&quot;를 클릭하여 지울 수 있습니다.<br /><br /> 선택한 명령에 대해 다른 바인딩을 사용하려는 경우 <strong>&quot;제안된 자유 키&quot;</strong> 섹션을 확장하여 IDE의 어느 곳에서도 사용되지 않는 키 조합 목록을 볼 수 있습니다. 이러한 조합 중 하나 옆에 있는 <strong>&quot;사용&quot;</strong> 을 클릭하면 선택한 명령에 할당되고 충돌이 해결됩니다.</p><h2 id="h"> 필터 메뉴</h2><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Keys_Filter_Menu.png" /> 필터 메뉴를 사용하면 명령 목록에 표시해야 하는 명령의 종류를 지정할 수 있습니다. 상단에는 두 가지 옵션이 있습니다.</p><ul class="colour"><li> <strong>&quot;Show Unbound Commands&quot;</strong>: 이것을 활성화하면 바인딩이 해제된 명령, 즉 바인딩이 지워진 모든 명령이 표시됩니다. 바인딩되지 않은 상태로 남아 있는 모든 명령은 할당된 키 조합이 없기 때문에 사용할 수 없습니다.</li><li> <strong>&quot;재정의된 명령만 표시&quot;</strong>: 이 옵션을 활성화하면 수동으로 변경된 명령, 즉 해당 바인딩이 기본 바인딩과 다른 명령만 표시됩니다.</li></ul><p> 그 아래에는 명령 목록에 표시되는 위치를 지정할 수 있는 다양한 옵션이 있습니다. 기본적으로 <strong>&quot;모든 위치&quot;</strong> 가 선택되어 있습니다. 즉, IDE의 모든 위치에서 명령이 표시됩니다. <strong>&quot;모든 위치&quot;</strong> 를 선택 취소하면 그 아래에 있는 다른 모든 항목의 선택이 취소되어 보고 싶은 항목을 수동으로 선택할 수 있습니다. 예를 들어 모든 항목의 선택을 취소한 다음 <strong>&quot;이미지 편집기&quot;</strong> 를 선택하면 이미지 편집기에서 사용할 수 있는 명령만 표시됩니다.</p><h2> 명령 지우기</h2><p> 기존 키 조합을 두 번 클릭하면 변경할 수 있지만 이 작업을 수행하는 동안 명령 목록 아래에 있는 <strong>&quot;지우기&quot;</strong> 버튼을 클릭하여 해당 명령에 대한 바인딩을 지울 수 있습니다.</p><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Redefine_Clear_Button.png" /> 실수로 일부 키보드 단축키를 무시하고 기본 설정으로 다시 재설정하려는 경우 기본 설정 창 상단에 있는 &quot;기본값 복원&quot; 버튼을 클릭하여 모든 명령을 기본 매핑으로 재설정하거나 <a href="../../IDE_Navigation/Keyboard_Shortcuts.htm">키보드 단축키</a> 를 확인할 수 있습니다. 페이지에서 기본 바인딩을 확인하고 명령을 수동으로 되돌립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../IDE_Preferences.htm">IDE 기본 설정</a></div><div style="float:right"> 다음: <a href="Anim_Curve_Editor_Preferences.htm">애니메이션 곡선 편집기 기본 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Redefine Keys,

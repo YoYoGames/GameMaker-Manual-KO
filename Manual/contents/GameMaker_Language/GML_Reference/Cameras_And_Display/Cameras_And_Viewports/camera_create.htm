@@ -6,43 +6,18 @@
   <title>camera_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for camera_create" />
+  <meta name="topic-comment" content="camera_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="camera_create" />
   <meta name="search-keywords" content="camera_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_create</h1>
-  <p>This function will create an &quot;empty&quot; camera, ie: a camera with no view or projection settings defined. Once you have created the camera you can then use the different <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">matrix functions</a> to set the view and projection matrices. You can also use this function to create the camera and then use the different <span class="inline">camera_set_*</span> functions to set up the view, however note that you <i>must</i> provide at least a position and view size, otherwise the resulting camera will not be valid and give odd results if applied to a view port (if you do not set the object following, borders or move speed these will be set to the default values for a view camera in the Room Editor).</p>
-  <p>Note that cameras are like all dynamic resources and will occupy memory when created. This means that you need to take care not to create cameras unnecessarily and to destroy those that you don&#39;t need by calling the function <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. This also means that cameras will persist from room to room if assigned to a <span class="inline">global</span> variable (they will persist when assigned to instance or local variables too, but you can&#39;t access them after changing room, hence the memory leak), so that you can - for example - create a new camera, assign it to a global variable, and then at the start of each room set the required view and projection matrices and the view port you need to use.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">camera_create();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">view_camera[0] = camera_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_create</h1><p> 이 기능은 &quot;빈&quot; 카메라, 즉 정의된 보기 또는 투영 설정이 없는 카메라를 만듭니다. 카메라를 생성하고 나면 다른 <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">행렬 함수</a> 를 사용하여 보기 및 투영 행렬을 설정할 수 있습니다. 이 기능을 사용하여 카메라를 만든 다음 다른 <span class="inline">camera_set_*</span> 기능을 사용하여 보기를 설정하지만 최소한 위치와 보기 크기를 제공 <i>해야</i> 합니다. 그렇지 않으면 결과 카메라가 유효하지 않고 보기 포트에 적용되는 경우 이상한 결과를 제공합니다(다음 개체를 설정하지 않으면 테두리 또는 이동 속도는 룸 편집기에서 뷰 카메라의 기본값으로 설정됩니다.</p><p> 카메라는 모든 동적 리소스와 같으며 생성될 때 메모리를 차지합니다. 즉, 불필요하게 카메라를 생성하지 않도록 주의하고 함수를 호출하여 필요하지 않은 카메라를 파괴하지 않도록 주의해야 합니다.<a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. 이것은 또한 카메라가 할당된 경우 방에서 방으로 유지된다는 것을 의미합니다. <span class="inline">global</span> 변수(인스턴스 또는 로컬 변수에 할당될 때도 유지되지만 방을 변경한 후에는 액세스할 수 없으므로 메모리 누수), 예를 들어 새 카메라를 만들고 전역 변수에 할당할 수 있습니다., 그런 다음 각 방의 시작 부분에서 필요한 보기 및 투영 행렬과 사용해야 하는 보기 포트를 설정합니다.</p><p></p><h4> 통사론:</h4><p class="code">camera_create();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p><p></p><h4> 예시:</h4><p class="code">view_camera[0] = camera_create();<br />
     var viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br />
     var projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br />
     camera_set_view_mat(view_camera[0], viewmat);<br />
-    camera_set_proj_mat(view_camera[0], projmat);</p>
-  <p>The above code creates a new camera and assigns its ID to view[0]. The view and projection matrices are then created and stored in local variables before being used to set the camera.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="camera_create_view.htm">camera_create_view</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    camera_set_proj_mat(view_camera[0], projmat);</p><p> 위의 코드는 새 카메라를 만들고 해당 ID를 view[0]에 할당합니다. 그런 다음 카메라를 설정하는 데 사용되기 전에 뷰 및 투영 행렬이 생성되어 로컬 변수에 저장됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Cameras_And_View_Ports.htm">카메라 및 뷰 포트</a></div><div style="float:right"> 다음: <a href="camera_create_view.htm"><span class="notranslate">camera_create_view</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 camera_create

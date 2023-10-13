@@ -3,58 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Grid</title>
+  <title>그리드 생성</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Create Grid action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Grid" />
-  <meta name="search-keywords" content="Create Grid" />
+  <meta name="topic-comment" content="그리드 생성 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 그리드 생성" />
+  <meta name="search-keywords" content="그리드 생성" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Grid Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Grid.png" /> Create Grid</h1>
-  <p>This action will create a new <b>grid</b> data-structure and return the index value so you can later access the grid through the other Data Structure actions. The grid index will be returned to the Target Variable that you supply, which can have been
-    created earlier using either <a href="../Common/Assign_Variable.htm">Assign Variable</a> or <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, or you can flag the &quot;Temp&quot; checkbox to name and create a temporary local variable
-    to store the value until the end of the script or event. Note that unlike other data structures, grids are <i>not</i> created &quot;empty&quot;, and each cell of a newly created grid will have the value 0. It&#39;s up to you to change the cell data
-    or clear the grid yourself to another value using the action <a href="Clear_Grid.htm">Clear Grid</a>. Note that you can create additional DS grids by clicking the plus icon<span> <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span></span>
-    beside the action, and selecting another variable to hold the grid ID and and giving the width and height values again.<b></b></p>
-  <p class="note"><b>IMPORTANT!</b> Creating any data structure uses up memory on the target platform, and as such all data structures should be free when no longer needed using the action <a href="Free_Data_Structure.htm">Free Data Structure</a> otherwise you get a
-    memory leak which can impair your games performance or even cause it to crash. This is particularly relevant when using temporary local variables to store data structure indices, as these variables are removed at the end of the code or event, but
-    that does not mean the data structure is removed too! The data structure will still exist, only you will have no way to reference it, so either use an instance variable and free the structure at a later time, or free the structure before the end of
-    the event or function if its index is stored in a temporary variable.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Grid Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Grid.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to store the grid index in</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Grid Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Grid.png" />The above action block code creates two temporary variables to hold the number of 32px cells
-    along the width and height of the room, and then creates a new global scope variable to hold the index of a newly created grid data structure. The grid is then cleared using the keyword <span class="inline">noone</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Create_Stack.htm">Create Stack</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Grid Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Grid.png" /> 그리드 생성</h1><p> 이 작업은 새 <b>그리드</b> 데이터 구조를 만들고 인덱스 값을 반환하므로 나중에 다른 데이터 구조 작업을 통해 그리드에 액세스할 수 있습니다. 그리드 인덱스는 사용자가 제공한 대상 변수로 반환되며, 이는 <a href="../Common/Assign_Variable.htm">Assign Variable</a> 또는 <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a> 를 사용하여 이전에 생성할 수 있습니다. 또는 &quot;Temp&quot; 확인란에 플래그를 지정하여 이름을 지정하고 값을 저장할 임시 로컬 변수를 생성 스크립트 또는 이벤트의 끝. 다른 데이터 구조와 달리 그리드는 &quot;빈&quot;으로 생성 <i>되지 않으며</i> 새로 생성된 그리드의 각 셀 값은 0입니다. <a href="Clear_Grid.htm">지우기</a> 작업을 사용하여 셀 데이터를 변경하거나 그리드를 다른 값으로 직접 지우는 것은 사용자에게 달려 있습니다. <a href="Clear_Grid.htm">그리드</a>. 더하기 아이콘을 클릭하여 추가 DS 그리드를 생성할 수 있습니다.<span><span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span></span> 액션 옆에 그리드 ID를 저장할 다른 변수를 선택하고 너비와 높이 값을 다시 지정합니다.<b></b></p><p class="note"> <b>중요한!</b> 데이터 구조를 만들면 대상 플랫폼의 메모리가 소모되므로 <a href="Free_Data_Structure.htm">Free Data Structure</a> 작업을 사용하여 더 이상 필요하지 않을 때 모든 데이터 구조를 해제해야 합니다. 그렇지 않으면 게임 성능을 손상시키거나 충돌을 일으킬 수 있는 메모리 누수가 발생합니다. 데이터 구조 인덱스를 저장하기 위해 임시 로컬 변수를 사용할 때 특히 관련이 있습니다. 이러한 변수는 코드나 이벤트의 끝에서 제거되기 때문입니다. 그러나 그렇다고 데이터 구조도 제거되는 것은 아닙니다! 데이터 구조는 여전히 존재하지만 참조할 수 있는 방법이 없으므로 인스턴스 변수를 사용하고 나중에 구조를 해제하거나 인덱스가 다음에 저장된 경우 이벤트 또는 함수가 끝나기 전에 구조를 해제하십시오. 임시 변수.</p><p></p><h4> 동작 구문:</h4><p><img alt="Create Grid Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Grid.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Target</span></td><td> 그리드 인덱스를 저장할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Create Grid Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Grid.png" /> 위의 액션 블록 코드는 방의 너비와 높이를 따라 32px 셀의 수를 유지하기 위해 두 개의 임시 변수를 생성한 다음 새로 생성된 그리드 데이터 구조의 인덱스를 저장할 새로운 전역 범위 변수를 생성합니다. 그런 다음 키워드를 사용하여 그리드를 지웁니다. <span class="inline">noone</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Structure_Actions.htm">데이터 구조 작업</a></div><div style="float:right"> 다음: <a href="Create_Stack.htm">스택 생성</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Grid

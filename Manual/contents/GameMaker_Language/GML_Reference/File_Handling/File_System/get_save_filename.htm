@@ -6,60 +6,18 @@
   <title>get_save_filename</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for get_save_filename" />
+  <meta name="topic-comment" content="get_save_filename에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="get_save_filename" />
   <meta name="search-keywords" content="get_save_filename" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_save_filename</h1>
-  <p>This function opens a dialogue and asks the player for a filename to save to with the given filter. The filter has the form &quot;<i>name1|mask1|name2|mask2|...</i>&quot;, where the mask may contain the different options with a semicolon between them and you can also use a &quot;*&quot; to mean any string. For example: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, would ask the user to select the name of a bitmap file from the system, but only those that have the two specified extensions (<span class="inline">bmp</span> and <span class="inline">png</span>). this function does <b>not</b> save the file itself! It only returns a string with the full name and path of the file. If the user presses &quot;<b>Cancel</b>&quot; an empty string &quot;&quot; is returned.</p>
-  <p>An important thing to note when using this function is that it grants you certain permissions for that file, for the duration of your game. So, once you get the file path from the user, you can access it again and again without having to ask, and the permission applies to reading <i>and</i> writing equally.</p>
-  <p class="note"><b>NOTE</b>: This function is only valid on the Windows and macOS targets.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">get_save_filename(filter, fname);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>filter</td><td><span data-keyref="Type_String"></span></td>
-        <td>The file type filter and/or name.</td>
-     </tr>
-      <tr>
-        <td>fname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The suggested filename to use.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var file;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_save_filename</h1><p> 이 기능은 대화 상자를 열고 플레이어에게 주어진 필터로 저장할 파일 이름을 묻습니다. 필터의 형식은 &quot; <i>name1|mask1|name2|mask2|...</i> &quot;입니다. 여기서 마스크에는 세미콜론이 있는 다양한 옵션이 포함될 수 있으며 &quot;*&quot;를 사용하여 모든 문자열을 의미할 수도 있습니다. 예: &quot; <i>bitmaps|*.bmp;*.wmf</i> &quot;는 사용자에게 시스템에서 비트맵 파일의 이름을 선택하도록 요청하지만 두 개의 지정된 확장자가 있는 파일만 선택합니다(<span class="inline">bmp</span> 그리고 <span class="inline">png</span> ). 이 기능은 파일 자체를 저장하지 <b>않습니다</b>! 파일의 전체 이름과 경로가 포함된 문자열만 반환합니다. 사용자가 &quot; <b>취소</b> &quot;를 누르면 빈 문자열 &quot;&quot;이 반환됩니다.</p><p> 이 기능을 사용할 때 주의해야 할 중요한 점은 게임이 진행되는 동안 해당 파일에 대한 특정 권한을 부여한다는 것입니다. 따라서 사용자로부터 파일 경로를 받으면 묻지 않고 계속해서 액세스할 수 있으며 권한은 읽기 <i>와</i> 쓰기에 동일하게 적용됩니다.</p><p class="note"> <b>참고</b>: 이 기능은 Windows 및 macOS 대상에서만 유효합니다.</p><p></p><h4> 통사론:</h4><p class="code">get_save_filename(filter, fname);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filter</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The file type filter and/or name.</span></td></tr><tr><td> <span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The suggested filename to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">var file;<br />
     file = get_save_filename(&quot;screenshot|*.png&quot;, &quot;&quot;);<br />
     if file != &quot;&quot;<br />
     {<br />
         screen_save(file);<br />
-    }</p>
-  <p>The above code will ask the user to select an image file name file for saving then check the returned file name and path, and if it is not an empty string it takes a screen shot and saves it using the given name.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="get_save_filename_ext.htm">get_save_filename_ext</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 사용자에게 저장할 이미지 파일 이름 파일을 선택하고 반환된 파일 이름과 경로를 확인하도록 요청하고, 빈 문자열이 아니면 스크린샷을 찍어 주어진 이름으로 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_System.htm">파일 시스템</a></div><div style="float:right"> 다음: <a href="get_save_filename_ext.htm"><span class="notranslate">get_save_filename_ext</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 get_save_filename

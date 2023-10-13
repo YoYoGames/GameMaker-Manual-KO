@@ -3,63 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Execute Script</title>
+  <title>스크립트 실행</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section detailing Execute Script" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Execute Script" />
-  <meta name="search-keywords" content="Execute Script" />
+  <meta name="topic-comment" content="스크립트 실행을 자세히 설명하는 섹션" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 스크립트 실행" />
+  <meta name="search-keywords" content="스크립트 실행" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Execute Script Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Script.png" /> Execute Script</h1>
-  <p>This action can be used to call a script function or <a href="Declare_A_New_Function.htm">user-defined function</a>. In general, this action would only be used for legacy support and shouldn&#39;t really be used in current or new projects. To use the
-    action, you give the script asset to call - or the user-defined function variable name to call - and then supply any <i>arguments</i> that it requires, ie: any values (strings, integers, resource indices, etc...) that you wish to input into the script
-    or function so that it can use them. You can add additional arguments as required by clicking the plus icon <span><img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span>beside the action.</p>
-  <p>Some scripts and user-defined functions can also return a value for later use in the action block list, and so you can specify the <b>target variable</b> that should store this return value. This can have been created previously or can be a new temporary
-    local one (if you check the &quot;<strong>Temp</strong>&quot; check-box). Both the target and the argument fields can be left blank if they are not required.</p>
-  <p>Note that you are generally better off using the action <a href="Function_Call.htm">Function Call</a> to call user-defined functions, and shouldn&#39;t generally need to use this action, or call a script asset directly in code.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Execute Script Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Execute_Script.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Script</td>
-        <td>The name of the script or user-defined function to call.</td>
-      </tr>
-      <tr>
-        <td>Argument0 ... Argument3</td>
-        <td>The different arguments (values) that are to be passed to the script or function (unused arguments can be left blank)</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The name of the variable that is to be targeted for any returned values (can be left blank)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Execute Script Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Execute_Script.png" />The above action block code calls a user-defined function, passing in two arguments for a
-    random position within the room. It does not return anything.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="New.htm">New</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Execute Script Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Script.png" /> 스크립트 실행</h1><p> 이 작업은 스크립트 함수 또는 <a href="Declare_A_New_Function.htm">사용자 정의 함수</a> 를 호출하는 데 사용할 수 있습니다. 일반적으로 이 작업은 레거시 지원에만 사용되며 현재 또는 새 프로젝트에서는 실제로 사용해서는 안 됩니다. 작업을 사용하려면 호출할 스크립트 자산 또는 호출할 사용자 정의 함수 변수 이름을 제공한 다음 필요한 <i>인수</i>, 즉 모든 값(문자열, 정수, 리소스 인덱스 등...)을 제공합니다. 스크립트나 함수에 입력하여 사용할 수 있도록 합니다. 더하기 아이콘을 클릭하여 필요에 따라 추가 인수를 추가할 수 있습니다.<span><img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span> 행동 옆에.</p><p> 일부 스크립트 및 사용자 정의 함수는 나중에 작업 차단 목록에서 사용하기 위해 값을 반환할 수도 있으므로 이 반환 값을 저장해야 하는 <b>대상 변수</b> 를 지정할 수 있습니다. 이것은 이전에 생성되었거나 새로운 임시 로컬일 수 있습니다(&quot; <strong>Temp</strong> &quot; 체크박스를 선택한 경우). 필요하지 않은 경우 대상 및 인수 필드를 모두 공백으로 둘 수 있습니다.</p><p> 일반적으로 <a href="Function_Call.htm">함수 호출</a> 을 사용하여 사용자 정의 함수를 호출하는 것이 더 나으며 일반적으로 이 작업을 사용하거나 코드에서 직접 스크립트 자산을 호출할 필요가 없습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Execute Script Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Execute_Script.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Script</span></td><td> 호출할 스크립트 또는 사용자 정의 함수의 이름입니다.</td></tr><tr><td> <span class="notranslate">Argument0... Argument3</span></td><td> 스크립트 또는 함수에 전달할 다른 인수(값)(사용하지 않는 인수는 비워둘 수 있음)</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 값의 대상이 될 변수의 이름(비워둘 수 있음)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Execute Script Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Execute_Script.png" /> 위의 작업 블록 코드는 사용자 정의 함수를 호출하여 방 내 임의의 위치에 대해 두 개의 인수를 전달합니다. 아무 것도 반환하지 않습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Common_Actions_Library.htm">일반적인 작업</a></div><div style="float:right"> 다음: <a href="New.htm">새로운</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Execute Script

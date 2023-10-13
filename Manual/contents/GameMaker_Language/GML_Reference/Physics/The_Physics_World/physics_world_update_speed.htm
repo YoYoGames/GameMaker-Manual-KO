@@ -6,51 +6,13 @@
   <title>physics_world_update_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_world_update_speed" />
+  <meta name="topic-comment" content="physical_world_update_speed에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_world_update_speed" />
   <meta name="search-keywords" content="physics_world_update_speed" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">physics_world_update_speed</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> updates things based on the <a href="../../General_Game_Control/game_get_speed.htm">game speed</a>, so that if you <a href="../../General_Game_Control/game_set_speed.htm">set</a> it to ,say, 30, <span data-keyref="GameMaker Name">GameMaker</span> will run 30 steps in the course of a second. However, for the physics functions that may not be enough and you may want things to be updated at a slightly faster speed to increase stability or precision. To that end we use the function <span class="inline3_func"><span data-field="title" data-format="default">physics_world_update_speed</span></span> which sets the update speed for the physics system <i>independently</i> of the game speed. This means that you could have a game speed of 30, but set the physics to 60, effectively doubling the speed at which the physics system updates and performs its calculations compared to the speed at which the step are updated.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> you cannot currently set this to any less than room speed, but future updates may change this.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_world_update_speed</span>(speed)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>speed</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of times per second that the physics system updates</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_world_update_speed</span>(game_get_speed(gamespeed_fps) * 2);</p>
-  <p>The code above sets the physics system update speed to be twice that of the game speed.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="The_Physics_World.htm">The Physics World</a></div>
-        <div style="float:right">Next: <a href="physics_world_draw_debug.htm">physics_world_draw_debug</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_world_update_speed</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 는 실내 속도를 기반으로 업데이트하므로 이를 30으로 설정하면 <span data-keyref="GameMaker Name">GameMaker</span> 는 1초 동안 30단계를 실행합니다. 그러나 물리 기능이 충분하지 않고 안정성이나 정밀도를 높이기 위해 약간 더 빠른 속도로 업데이트되기를 원할 수 있습니다. 이를 위해 우리는 함수를 사용합니다 <span class="inline">physics_world_update_speed()</span> 이는 실내 속도와 <i>독립적</i> 으로 물리 시스템의 업데이트 속도를 설정합니다. 즉, 실내 속도를 30으로 설정할 수 있지만 물리를 60으로 설정하면 단계가 업데이트되는 속도와 비교하여 물리 시스템이 업데이트하고 계산을 수행하는 속도를 효과적으로 두 배로 늘릴 수 있습니다.</p><p class="note"> <b>참고</b>: 현재는 이 속도를 실내 속도보다 낮게 설정할 수 없지만 향후 업데이트에서는 이를 변경할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_world_update_speed(speed)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">speed</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The number of times per second that the physics system updates</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">physics_world_update_speed(room_speed * 2);</p><p> 위의 코드는 물리 시스템 업데이트 속도를 실내 속도의 2배로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="The_Physics_World.htm">물리 세계</a></div><div style="float:right"> 다음: <a href="physics_world_draw_debug.htm"><span class="notranslate">physics_world_draw_debug</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_update_speed

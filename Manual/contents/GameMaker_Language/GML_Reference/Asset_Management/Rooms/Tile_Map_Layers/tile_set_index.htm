@@ -6,63 +6,20 @@
   <title>tile_set_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function tile_set_index" />
+  <meta name="topic-comment" content="tile_set_index 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="tile_set_index" />
   <meta name="search-keywords" content="tile_set_index" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tile_set_index</h1>
-  <p>This function can be used to set the tile index (the position of the tile within the tile set image) for a set of tile-data. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and then the integer value that represents the position of the tile (its index) within the tile set. The function will return a modified tile-data set which can then be applied using the <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">tile_set_index(tiledata, index)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>the tile-data to set</td>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The integer index value of the tile to use</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real_Tile_Data">Tile Data</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tile_set_index</h1><p> 이 함수는 타일 데이터 세트에 대한 타일 인덱스(타일 세트 이미지 내 타일의 위치)를 설정하는 데 사용할 수 있습니다. 함수를 사용하여 검색할 수 있는 타일 데이터를 제공합니다.<a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, 그리고 타일 세트 내에서 타일의 위치(인덱스)를 나타내는 정수 값입니다. 이 함수는 수정된 타일 데이터 세트를 반환하고 다음을 사용하여 적용할 수 있습니다.<a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> 함수.</p><p></p><h4> 통사론:</h4><p class="code">tile_set_index(tiledata, index)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tiledata</span></td><td> <span data-keyref="Type_Real_Tile_Data">타일 데이터</span></td><td> <span class="notranslate">the tile-data to set</span></td></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The integer index value of the tile to use</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real_Tile_Data">Tile Data</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
     var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y);<br />
     var data = tilemap_get(map_id, mx, my);<br />
     var ind = tile_get_index(data);<br />
     data = tile_set_index(data, irandom(23));<br />
-    tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then uses that to get the tile-data for the cell under the mouse position. This data is then used to set the tile index to a random number.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tile_set_flip.htm">tile_set_flip</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    tilemap_set(map_id, data, mx, my);</p><p> 위의 코드는 주어진 레이어에서 타일 맵 ID를 가져온 다음 이를 사용하여 마우스 위치 아래의 셀에 대한 타일 데이터를 가져옵니다. 그런 다음 이 데이터를 사용하여 타일 인덱스를 임의의 숫자로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Tile_Map_Layers.htm">타일 맵 레이어</a></div><div style="float:right"> 다음: <a href="tile_set_flip.htm"><span class="notranslate">tile_set_flip</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tile_set_index

@@ -6,59 +6,14 @@
   <title>make_colour_hsv</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section the function make_colour_hsv" />
+  <meta name="topic-comment" content="make_colour_hsv 함수 참조 섹션" />
   <meta name="rh-index-keywords" content="make_colour_hsv,make_color_hsv" />
   <meta name="search-keywords" content="make_colour_hsv,make_color_hsv" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>make_colour_hsv</h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> provides this function (as well as others) to permit the user to make their own colours. This particular function takes three component parts, the <i>hue</i>, the <i>saturation</i> and the <i>value</i> (also know as &quot;luminosity&quot;) to create the colour desired. These values are taken as being between 0 and 255 so you can make 16,777,216 (256*256*256) colours with this! Below you can see an image of how these components look when separated:</p>
-  <p><img alt="Make HSV colour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/HSV.png" />The image on the left is a break-down of the individual components of the function, and then on the right is an illustration of how changing these components affects the end colour. As you can see, even without changing the hue (it stays at 0, red), we can dramatically change the colour with the other two settings, with saturation making the colour tone go from grey (0) to a pure tone (255), and with the value making it go from darker (0) to lighter (255).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">make_colour_hsv(hue, sat, val);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>hue</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The hue of the colour</td>
-     </tr>
-      <tr>
-        <td>sat</td><td><span data-keyref="Type_Real"></span></td>
-        <td>How saturated the colour is</td>
-     </tr>
-      <tr>
-        <td>val</td><td><span data-keyref="Type_Real"></span></td>
-        <td>How dark the colour is</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Constant_Colour">Colour Constant</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">col = make_colour_hsv(100, 145, 255);</p>
-  <p>The above code uses the function to create a colour and store its value in the variable &quot;col&quot; for later use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Colour_And_Alpha.htm">Colour And Alpha</a></div>
-        <div style="float:right">Next: <a href="make_colour_rgb.htm">make_colour_rgb</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>make_colour_hsv</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 는 사용자가 자신의 색상을 만들 수 있도록 이 기능(및 다른 기능)을 제공합니다. 이 특정 기능은 원하는 색상을 생성하기 위해 <i>색조</i>, <i>채도</i> 및 <i>값</i> (&quot;광도&quot;라고도 함)의 세 가지 구성 요소를 사용합니다. 이 값은 0에서 255 사이로 간주되므로 16,777,216(256*256*256) 색상을 만들 수 있습니다! 아래에서 이러한 구성 요소가 분리될 때 어떻게 보이는지 이미지를 볼 수 있습니다.</p><p><img alt="Make HSV colour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/HSV.png" /> 왼쪽의 이미지는 기능의 개별 구성 요소에 대한 분석이고 오른쪽은 이러한 구성 요소를 변경하면 최종 색상에 어떤 영향을 미치는지 보여줍니다. 보시다시피 색조를 변경하지 않고도(0, 빨간색으로 유지) 다른 두 설정으로 색상을 극적으로 변경할 수 있습니다. 채도는 색조를 회색(0)에서 순수한 톤(255)으로 변경합니다., 값을 사용하여 더 어둡게(0)에서 더 밝게(255)로 이동합니다.</p><p></p><h4> 통사론:</h4><p class="code">make_colour_hsv(hue, sat, val);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">hue</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The hue of the colour</span></td></tr><tr><td> <span class="notranslate">sat</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">How saturated the colour is</span></td></tr><tr><td> <span class="notranslate">val</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">How dark the colour is</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Constant_Colour">Colour Constant</span></p><p></p><h4> 예시:</h4><p class="code">col = make_colour_hsv(100, 145, 255);</p><p> 위의 코드는 함수를 사용하여 색상을 만들고 나중에 사용할 수 있도록 &quot;col&quot; 변수에 값을 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Colour_And_Alpha.htm">색깔과 알파</a></div><div style="float:right"> 다음: <a href="make_colour_rgb.htm"><span class="notranslate">make_colour_rgb</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 make_colour_hsv

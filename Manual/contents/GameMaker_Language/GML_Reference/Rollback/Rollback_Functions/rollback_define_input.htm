@@ -4,67 +4,23 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>rollback_define_input</title>
+  <title>롤백_정의_입력</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for rollback_define_input" />
+  <meta name="topic-comment" content="rollback_define_input에 대한 참조 페이지" />
   <meta name="condition-tags" content="Export:Beta" />
-  <meta name="rh-index-keywords" content="rollback_define_input" />
-  <meta name="search-keywords" content="rollback_define_input" />
+  <meta name="rh-index-keywords" content="롤백_정의_입력" />
+  <meta name="search-keywords" content="롤백_정의_입력" />
 </head>
-<body>
-  <h1>rollback_define_input</h1>
-  <p>This function is used to define custom inputs for all players. It takes a struct which should contain all inputs with their assigned input constants.</p>
-  <p>To know how to assign custom inputs, see <a data-xref="{text}" href="../Defining_Inputs.htm#h">Custom Controls</a>.</p>
-  <p>If used, this function must run before the <a href="rollback_join_game.htm">join</a>/<a href="rollback_create_game.htm">create</a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">rollback_define_input(input_struct);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>input_struct</td>
-        <td><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
-        <td>A struct containing input names as variables, and their assigned inputs as values.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">rollback_define_input({<br />
+<body><h1>rollback_define_input</h1><p> 이 기능은 모든 플레이어에 대한 사용자 정의 입력을 정의하는 데 사용됩니다. 할당된 입력 상수와 함께 모든 입력을 포함해야 하는 구조체가 필요합니다.</p><p> 사용자 지정 입력을 할당하는 방법을 알아보려면 <a data-xref="{text}" href="../Defining_Inputs.htm#h">사용자 지정 컨트롤</a> 을 참조하십시오.</p><p> 이 함수를 사용하는 경우 <a href="rollback_join_game.htm">조인</a> / <a href="rollback_create_game.htm">생성</a> 함수보다 먼저 실행해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">rollback_define_input(input_struct);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">input_struct</span></td><td> <span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">구조체</a></span></td><td> <span class="notranslate">A struct containing input names as variables, and their assigned inputs as values.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">rollback_define_input({<br />
         fire: mb_left,<br />
         interact: vk_space,<br />
         left: [ord(&quot;A&quot;), vk_left],<br />
         right: [ord(&quot;D&quot;), vk_right]<br />
-    });</p>
-  <p>The code above defines custom inputs for all players. The last two inputs use multiple controls, by listing them in an array.</p>
-  <p>For an extended example, see <a data-xref="{title}" href="../Defining_Inputs.htm">Defining Inputs</a>.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_define_input_frame_delay.htm">rollback_define_input_frame_delay</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    });</p><p> 위의 코드는 모든 플레이어에 대한 사용자 지정 입력을 정의합니다. 마지막 두 입력은 배열에 나열하여 여러 컨트롤을 사용합니다.</p><p> 확장된 예는 <a data-xref="{title}" href="../Defining_Inputs.htm">입력 정의</a> 를 참조하십시오.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Functions.htm">롤백 기능</a></div><div> 다음: <a data-xref="{title}" href="rollback_define_input_frame_delay.htm">rollback_define_input_frame_delay</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_define_input

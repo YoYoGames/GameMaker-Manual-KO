@@ -6,54 +6,31 @@
   <title>argument</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the argument variable" />
-  <meta name="rh-index-keywords" content="argument[n],argument0 - argument15" />
+  <meta name="topic-comment" content="인수 변수를 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="argument[n],인수0 - 인수15" />
   <meta name="search-keywords" content="argument" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>argument</h1>
-  <p>This variable holds an <a href="../../Arrays.htm">array</a> that is used along with the read-only variable <a href="argument_count.htm">argument_count</a> in <a href="../../Script_Functions.htm">script functions</a> or <a href="../../Method_Variables.htm">methods</a>. Each array position holds an input value for the function and is specifically for use with <em>variable </em>argument functions.</p>
-  <p>Note that there are also a series of independent global scope variables that can also be used in user-defined functions to reference the different input arguments: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, etc... up to <span><span class="inline">argument15</span>.</span></p>
-  <p>An argument that hasn&#39;t been passed in will be <span class="inline">undefined</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">argument[<em>n</em>]<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>argument</h1><p> 이 변수는 <a href="../../Script_Functions.htm">스크립트 함수</a> 또는 <a href="../../Method_Variables.htm">메소드</a> 에서 읽기 전용 변수인 <a href="argument_count.htm"><span class="notranslate">argument_count</span></a> 와 함께 사용되는 <a href="../../Arrays.htm">배열</a> 을 보유합니다. 각 배열 위치는 함수에 대한 입력 값을 보유하며 특히 <em>가변</em> 인수 함수와 함께 사용하기 위한 것입니다.</p><p> 다른 입력 인수를 참조하기 위해 사용자 정의 함수에서도 사용할 수 있는 일련의 독립적인 전역 범위 변수가 있습니다. <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, 등... 까지 <span><span class="inline">argument15</span>.</span></p><p class="note"> <strong>참고</strong>: 이것은 더 이상 엄격하게 요구되지 않으며 무엇보다 레거시 지원을 위해 제공됩니다. 모든 사용자 정의 함수는 변수 인수를 허용하며 명명된 입력의 일부가 아닌 함수에 전달된 모든 인수는 기본적으로 <span class="inline">argument_countstyle="font-size: 14px">undefined</span> 로 초기화되며 <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a> 함수를 사용하여 확인할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">argument[<em>n</em>]<br />
     argument1<br />
     argument2<br />
     ...<br />
-    argument15</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span> (can be of any data type supplied to the function)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">function print(){<br />
-        var _str = &quot;&quot;;<br />
-        for (var i = 0; i &lt; argument_count; i ++)<br />
-        {<br />
-            _str += string(argument[i]);<br />
-        }<br />
-        show_debug_message(_str);<br />
-    }<br />
-    <br />
-    // In an object<br />
-    print(&quot;Player : &quot;, current_time, &quot; : &quot;, id, &quot; : fired&quot;);
-  </p>
-  <p>The above function joins all the arguments passed into the function as one string, and then prints that string to the output log.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a href="argument_count.htm">argument_count</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    argument15</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Any">Variable</span> (can be of any data type supplied to the function)</p><p></p><h4> 예시:</h4><p class="code">function my_array()<br />
+    {<br />
+        var i, arg;<br />
+        for (i = 0; i &lt; 5; i += 1;)<br />
+        {<br />
+            if argument_count &gt; i<br />
+            {<br />
+                arg[i] = argument[i]<br />
+            }<br />
+            else<br />
+            {<br />
+                arg[i] = -1;<br />
+            }<br />
+        }<br />
+    }</p><p> 위의 코드는 <span class="inline">argument</span> 변수와 함께<span class="inline"></span> 변수를 초기화하기 위한 배열이며 사용자 정의 함수가 가변 개수의 인수를 허용하도록 허용하는 방법의 예입니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Global_Variables.htm">전역 변수</a></div><div style="float:right"> 다음: <a href="argument_count.htm"><span class="notranslate">argument_count</span></a> _카운트</div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 argument

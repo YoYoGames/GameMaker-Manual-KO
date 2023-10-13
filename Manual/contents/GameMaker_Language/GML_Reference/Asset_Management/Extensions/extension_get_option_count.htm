@@ -6,40 +6,13 @@
   <title>extension_get_option_count</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the function extension_get_option_count" />
+  <meta name="topic-comment" content="extension_get_option_count 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="extension_get_option_count" />
   <meta name="search-keywords" content="extension_get_option_count" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>extension_get_option_count</h1>
-  <p>This function returns the total number of <a href="../../../../The_Asset_Editors/Extension_Creation/Creating_An_Extension.htm#h1">options</a> that exist in the extension with the given name.</p>
-  <p>The function will return <span class="inline2">undefined</span> if the provided extension name is invalid.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">extension_get_option_count(extension_name);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>extension_name</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of your extension asset as a string</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _names = extension_get_option_names(&quot;MyExtension&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> extension_get_option_count</h1><p> 이 함수는 주어진 이름을 가진 확장에 존재하는 총 <a href="../../../../The_Asset_Editors/Extension_Creation/Creating_An_Extension.htm#h1">옵션</a> 수를 반환합니다.</p><p> 제공된 확장 이름이 유효하지 <span class="inline2">않은</span> 경우 함수는 정의되지 않음을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">extension_get_option_count(extension_name);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">extension_name</span></td><td> <span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The name of your extension asset as a string</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p><p></p><h4> 예시:</h4><p class="code">var _names = extension_get_option_names(&quot;MyExtension&quot;);<br />
     var _count = extension_get_option_count(&quot;MyExtension&quot;);<br />
     <br />
     for (var i = 0; i &lt; _count; i ++)<br />
@@ -49,19 +22,7 @@
         show_debug_message(_option_name + &quot;: &quot;);<br />
         show_debug_message(extension_get_option_value(&quot;MyExtension&quot;, _option_name));<br />
     }
-  </p>
-  <p>This code gets the names of all options, and the number of options in the extension <span class="inline2">MyExtension</span>.</p>
-  <p>It loops through all option names, and prints each option&#39;s name and value to the Output Log.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Extensions.htm">Extensions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="extension_exists.htm">extension_exists</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 이 코드는 모든 옵션의 이름과 확장 <span class="inline2">MyExtension</span> 의 옵션 수를 가져옵니다.</p><p> 모든 옵션 이름을 반복하고 각 옵션의 이름과 값을 출력 로그에 인쇄합니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Extensions.htm">확장</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="extension_exists.htm">extension_exists</a><a href="extension_exists.htm"></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 extension_get_option_count

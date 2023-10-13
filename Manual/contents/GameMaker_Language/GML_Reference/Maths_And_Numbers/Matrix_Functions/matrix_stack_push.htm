@@ -6,58 +6,20 @@
   <title>matrix_stack_push</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for matrix_stack_push" />
+  <meta name="topic-comment" content="matrix_stack_push에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="matrix_stack_push" />
   <meta name="search-keywords" content="matrix_stack_push" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_stack_push</h1>
-  <p>This function is used to push a new matrix to the top of the current matrix stack. It will first multiply the given matrix with the matrix currently at the top of the stack, and then push the resulting matrix to the stack.</p>
-  <p>This function is useful for applying multiple matrix transformations to your visuals without having to manually multiply various matrices together.</p>
-  <p>For example, you can have a base matrix pushed onto the stack that draws graphics into a certain rectangular area (say, a window). After drawing some graphics using that matrix, you can push another matrix onto the stack for drawing graphics inside a sub-area (like a button in the window). After drawing something in that sub-area, you can call <span class="inline"><a href="matrix_stack_pop.htm">matrix_stack_pop()</a></span> to remove its matrix from the stack and continue drawing visuals into the main window area.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">matrix_stack_push(matrix);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>matrix</td><td><span data-keyref="Type_Array_Matrix"></span></td>
-        <td>The matrix to push to the stack</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var m1 = matrix_build(66, 145, 0, 0, 0, 0, 1, 1, 1);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_stack_push</h1><p> 이 함수는 새 행렬을 현재 행렬 스택의 맨 위로 푸시하는 데 사용됩니다. 먼저 주어진 행렬에 현재 스택의 맨 위에 있는 행렬을 곱한 다음 결과 행렬을 스택으로 푸시합니다.</p><p> 이 함수는 다양한 행렬을 수동으로 곱할 필요 없이 시각적 개체에 여러 행렬 변환을 적용하는 데 유용합니다.</p><p> 예를 들어, 특정 직사각형 영역(예: 창)에 그래픽을 그리는 스택에 기본 매트릭스를 푸시할 수 있습니다. 해당 매트릭스를 사용하여 일부 그래픽을 그린 후 하위 영역(예: 창의 버튼) 내부에 그래픽을 그리기 위해 스택에 다른 매트릭스를 푸시할 수 있습니다. 해당 하위 영역에 무언가를 그린 후 다음을 호출할 수 있습니다. <span class="inline"><a href="matrix_stack_pop.htm">matrix_stack_pop()</a></span> 스택에서 매트릭스를 제거하고 기본 창 영역에 시각적 개체를 계속 그립니다.</p><p></p><h4> 통사론:</h4><p class="code">matrix_stack_push(matrix);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">matrix</span></td><td><span data-keyref="Type_Array_Matrix"></span></td><td> <span class="notranslate">The matrix to push to the stack</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">var m1 = matrix_build(66, 145, 0, 0, 0, 0, 1, 1, 1);<br />
     var m2 = matrix_build(0, 0, 0, 0, 0, image_angle * 6, 1, 1, 1) ;<br />
     matrix_stack_push(m1);<br />
     matrix_stack_push(m2);<br />
     matrix_set(matrix_world, matrix_stack_top());<br />
     draw_sprite(spr_tyre, 0, 0, 0);<br />
     matrix_stack_pop();<br />
-    matrix_stack_pop();</p>
-  <p>The above code will build two new matrices and then push them onto the matrix stack. The world matrix is then set to the top of the stack, a sprite is drawn and the transforms are then popped from the stack.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_stack_pop.htm">matrix_stack_pop</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    matrix_stack_pop();</p><p> 위의 코드는 두 개의 새로운 행렬을 만든 다음 행렬 스택에 푸시합니다. 그런 다음 월드 매트릭스가 스택의 맨 위에 설정되고 스프라이트가 그려지고 스택에서 변환이 팝됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Matrix_Functions.htm">행렬 함수</a></div><div style="float:right"> 다음: <a href="matrix_stack_pop.htm"><span class="notranslate">matrix_stack_pop</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_stack_push

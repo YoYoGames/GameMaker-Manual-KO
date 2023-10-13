@@ -6,58 +6,14 @@
   <title>gamepad_set_axis_deadzone</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gamepad_set_axis_deadzone" />
+  <meta name="topic-comment" content="gamepad_set_axis_deadzone에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_set_axis_deadzone" />
   <meta name="search-keywords" content="gamepad_set_axis_deadzone" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_axis_deadzone</h1>
-  <p>This function can be used to set the &quot;dead zone&quot; of the joystick axis. You specify the device slot to set, and then set a value from 0 to 1 and if the input amount is lower than the given value, the joystick axis is considered to be at 0.
-    Note that this is a global setting that will affect <i>all</i> axis of all joysticks connected to the device slot specified. </p>
-  <p>Using this function does not mean that the axis value will start from the deadzone value, as the function <a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> will <em>always</em> return a normalised value between -1
-    and 0 or 0 and 1. For example, setting the deadzone to 0.2 will mean that pushing the stick right will only start returning a value from 0 - 1 when the <em>raw</em> axis value is over 0.2 - so when the raw value is 0.2, the return value will be 0,
-    when the raw value is at 0.5, the return value will be 0.375, or if the raw value is 0.9, then the return value would be 0.875.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gamepad_set_axis_deadzone(device, deadzone);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
-     </tr>
-      <tr>
-        <td>deadzone</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The dead zone value from 0 to 1.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);<br/> if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br/> if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br/> if gamepad_is_connected(3) gamepad_set_axis_deadzone(3,
-    0.05);</p>
-  <p>The above code will set the dead zone of the joystick axis on any of 4 connected devices to 0.05.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_set_vibration.htm"> gamepad_set_vibration </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_axis_deadzone</h1><p> 이 기능은 조이스틱 축의 &quot;데드존&quot;을 설정하는 데 사용할 수 있습니다. 설정할 디바이스 슬롯을 지정하고 0~1 사이의 값을 설정하고 입력량이 주어진 값보다 작을 경우 조이스틱 축은 0으로 간주 <i>됩니다</i>. 지정된 장치 슬롯에 연결된 모든 조이스틱의 축.</p><p> 이 기능을 사용한다고 해서 축 값이 데드존 값에서 시작되는 것은 아닙니다.<a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> <em>항상</em> -1과 0 또는 0과 1 사이의 정규화된 값을 반환합니다. 예를 들어 데드존을 0.2로 설정하면 스틱을 오른쪽으로 밀면 <em>원시</em> 축 값이 0.2를 초과할 때만 0 - 1의 값을 반환하기 시작한다는 의미입니다. 따라서 원시 값이 0.2이면 반환 값은 0이 되고, 원시 값이 0.5이면 반환 값은 0.375가 되고, 원시 값이 0.9이면 반환 값은 0.875가 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">gamepad_set_axis_deadzone(device, deadzone);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td></tr><tr><td> <span class="notranslate">deadzone</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The dead zone value from 0 to 1.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);<br/> if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br/> if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br/> if gamepad_is_connected(3) gamepad_set_axis_deadzone(3,
+    0.05);</p><p> 위의 코드는 4개의 연결된 장치 중 하나에서 조이스틱 축의 사각 지대를 0.05로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Input.htm">게임패드 입력</a></div><div style="float:right"> 다음: <a href="gamepad_set_vibration.htm">gamepad_set_vibration</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_axis_deadzone

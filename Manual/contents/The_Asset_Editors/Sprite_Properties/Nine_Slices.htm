@@ -3,39 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Nine Slice</title>
+  <title>나인 슬라이스</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
-  <meta name="topic-comment" content="Page detailing how the Nine Slice technique works" />
-  <meta name="rh-index-keywords" content="Sprite Editor" />
-  <meta name="search-keywords" content="nine slice,nineslice,9slice,9-slice,9 slice" />
+  <meta name="topic-comment" content="Nine Slice 기술의 작동 방식을 자세히 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="스프라이트 편집기" />
+  <meta name="search-keywords" content="나인 슬라이스,나인슬라이스,9슬라이스,9-슬라이스,9 슬라이스" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Nine Slice</h1>
-  <p><span data-keyref="Nine Slicing">Nine Slicing</span> (also known as 9-slicing) is a technique used to scale rectangular images for preserving details, making them retain their original form after scaling.</p>
-  <p>This is achieved by dividing the image into nine separate parts or &quot;slices&quot;. The corner slices are moved during scaling and drawn at the same scale, then the edge and centre slices are stretched or repeated (depending on your setting) to fill the space.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_0_Preview.png" />Four <strong>guides </strong>are placed on a sprite to divide the image into nine slices. The following visual demonstrates how the guides stay in place after the sprite is scaled using Nine Slice:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_1_Guides.png" />The <strong>Tile Mode</strong> of a slice determines how that slice is displayed when the sprite is scaled. It can only be set for the edge and centre slices (as corner slices are not scaled).</p>
-  <p>The following visual demonstrates each Tile Mode when applied to the centre slice:<img class="center" height="746" src="../../assets/Images/Asset_Editors/Nine_Slice_3_TileModes.png" width="1258" />If <strong>Nine Slicing</strong> is enabled for a sprite, it will be used for resizing the sprite wherever it appears, and will work in any existing places where the sprite was used without any other changes being required.</p>
-  <p class="note"><strong>NOTE</strong>: Nine Slicing will not work with functions that draw only a part of the sprite or distort it, such as <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a> </span>or <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a></span>.</p>
-  <p>In conjunction with <a href="../Sequences.htm">Sequences</a>, this feature can be used to build user interfaces, and can be used, for example, to create rectangular walls in a game level. Texture memory can also be saved using <strong><span data-keyref="Nine Slicing">Nine Slicing</span></strong>, as a smaller image can be used to cover a larger area on-screen.</p>
-  <p><span data-keyref="Nine Slicing">Nine Slicing</span> can be enabled on Sprites in the IDE. For more information, see <a href="../Sprites.htm">The Sprite Editor</a>.</p>
-  <p>For information on the <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a> functions available for <span data-keyref="Nine Slicing">Nine Slicing</span>, see the following page:</p>
-  <ul class="colour">
-    <li><a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Nine_Slice_Functions.htm" title="Nine Slice Functions">Nine Slice Functions</a></li>
-  </ul>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Sprites.htm">The Sprite Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Sprite_Strips.htm">Sprite Strips</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 나인 슬라이스</h1><p> <span data-keyref="Nine Slicing">나인 슬라이싱</span> (9-슬라이싱이라고도 함)은 세부 사항을 보존하기 위해 직사각형 이미지의 크기를 조정하는 데 사용되는 기술로 크기 조정 후에도 원래 형태를 유지합니다.</p><p> 이는 이미지를 9개의 개별 부분 또는 &quot;슬라이스&quot;로 분할하여 수행됩니다. 배율 조정 중에 모서리 슬라이스가 이동되고 동일한 배율로 그려진 다음 (설정에 따라) 가장자리 및 중앙 슬라이스가 늘어나거나 반복되어 공간을 채웁니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_0_Preview.png" /> 4개의 <strong>안내선</strong> 이 스프라이트에 배치되어 이미지를 9개의 조각으로 나눕니다. 다음 시각적 개체는 Nine Slice를 사용하여 스프라이트의 크기를 조정한 후 가이드가 제자리에 유지되는 방법을 보여줍니다.</p><p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_1_Guides.png" /> 슬라이스의 <strong>타일 모드</strong> 는 스프라이트의 크기가 조정될 때 해당 슬라이스가 표시되는 방식을 결정합니다. 모서리 조각은 크기가 조정되지 않으므로 가장자리 및 중앙 조각에만 설정할 수 있습니다.</p><p> 다음 비주얼은 중앙 슬라이스에 적용된 각 타일 모드를 보여줍니다.<img class="center" height="746" src="../../assets/Images/Asset_Editors/Nine_Slice_3_TileModes.png" width="1258" /> 스프라이트에 대해 <strong>나인 슬라이싱</strong> 이 활성화된 경우 스프라이트가 나타나는 곳마다 크기를 조정하는 데 사용되며 다른 변경 사항 없이 스프라이트가 사용된 기존 위치에서 작동합니다.</p><p class="note"> <strong>참고</strong>: 나인 슬라이싱은 다음과 같이 스프라이트의 일부만 그리거나 왜곡하는 기능에서는 작동하지 않습니다.<span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a> </span> 또는<span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a></span>.</p><p> <a href="../Sequences.htm">Sequences</a> 와 함께 이 기능은 사용자 인터페이스를 구축하는 데 사용할 수 있으며 예를 들어 게임 수준에서 직사각형 벽을 만드는 데 사용할 수 있습니다. <strong><span data-keyref="Nine Slicing">Nine Slicing</span></strong> 을 사용하여 텍스처 메모리를 저장할 수도 있습니다. 더 작은 이미지를 사용하여 화면의 더 넓은 영역을 덮을 수 있기 때문입니다.</p><p> IDE의 스프라이트에서 <span data-keyref="Nine Slicing">나인 슬라이싱</span> 을 활성화할 수 있습니다. 자세한 내용 <a href="../Sprites.htm">은 스프라이트 편집기</a> 를 참조하십시오.</p><p> <span data-keyref="Nine Slicing">Nine Slicing</span> 에 사용할 수 있는 <a class="glossterm" data-glossterm="실행 시간" href="#">런타임</a> 기능에 대한 정보는 다음 페이지를 참조하십시오.</p><ul class="colour"><li> <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Nine_Slice_Functions.htm" title="9개의 슬라이스 기능">9개의 슬라이스 기능</a> </li></ul><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Sprites.htm">스프라이트 편집기</a></div><div style="float:right"> 다음: <a href="../Tile_Sets.htm">타일 세트</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Nine Slice

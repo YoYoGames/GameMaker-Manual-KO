@@ -4,40 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Player Preferences</title>
+  <title>플레이어 기본 설정</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
 </head>
-<body>
-  <h1>Rollback Preferences</h1>
-  <p>You might want to allow each player to select a character, or customise its properties. Such properties can be set up as &quot;player preferences&quot;.</p>
-  <h2>How To Use Preferences</h2>
-  <p>First, enable preferences by calling <a href="Rollback_Functions/rollback_use_player_prefs.htm"><span class="inline">rollback_use_player_prefs()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Use_Player_Prefs.htm">Use Player Prefs (Rollback)</a>. With this function you can optionally set the default preferences for all players.</p>
-  <p>Once you call that function, &quot;auto-start&quot; is disabled, meaning the game won&#39;t start even when all players have joined, and you&#39;ll have to start it manually with <a href="Rollback_Functions/rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Start_Game.htm">Start Rollback Game</a>.</p>
-  <p>Before the game has started, you can set the preferences for a player by calling <a href="Rollback_Functions/rollback_set_player_prefs.htm"><span class="inline">rollback_set_player_prefs()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Set_Player_Prefs.htm">Set Player Prefs (Rollback)</a> on that player&#39;s client. These can later be read through <a href="Rollback_Functions/rollback_get_player_prefs.htm"><span class="inline">rollback_get_player_prefs()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Get_Player_Prefs.htm">Get Player Prefs (Rollback)</a>, or the <span class="inline">player_prefs</span> variable in a player instance.</p>
-  <h2>Rollback Event</h2>
-  <p>When a player changes its preferences, everyone in the game receives a <span class="inline2">rollback_player_prefs</span> <a data-xref="{text}" href="Rollback_Events.htm#h1">Rollback Event</a>. The player must be completely connected for the event to be sent.</p>
-  <p>If preferences were set before connecting, then on completing the connection, the last preferences set before connecting are sent to all players.</p>
-  <h2>Start Condition</h2>
-  <p>If you&#39;ve enabled preferences, and there are no default preferences set, then the game <strong>will not</strong> start unless the preferences for all players have been set.</p>
-  <p>In such a case, you can either call <a href="Rollback_Functions/rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a> repeatedly in an alarm to try starting the game, or call it whenever the <span class="inline2">rollback_player_prefs</span> <a data-xref="{text}" href="Rollback_Events.htm#h1">Rollback Event</a> is received.</p>
-  <h2>Data Types and Limit</h2>
-  <p>A preference can be of any type, e.g. a number, string, array, etc., but it&#39;s recommended to use a <a href="../../GML_Overview/Structs.htm">struct</a>, which is the easiest way to store a collection of variables.</p>
-  <p>The maximum size of a preference payload is 800 bytes, meaning the data you can send as a preference must be 800 bytes or less. If you&#39;re sending a struct, you can <a href="../File_Handling/Encoding_And_Hashing/json_stringify.htm">convert it to a JSON string</a> and <a href="../Strings/string_byte_length.htm">get its byte size</a> to get an idea of its size. However, in most cases, structs sent directly (i.e. without being converted into JSON) will have a smaller size than their JSON equivalent, due to the way they are encoded internally.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Multiplayer.htm">Rollback Multiplayer</a></div>
-        <div>Next: <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">Rollback Functions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><h1>롤백 기본 설정</h1><p> 각 플레이어가 캐릭터를 선택하거나 속성을 사용자 정의하도록 허용할 수 있습니다. 이러한 속성은 &quot;플레이어 기본 설정&quot;으로 설정할 수 있습니다.</p><h2> 환경 설정을 사용하는 방법?</h2><p> 먼저 전화를 걸어 기본 설정을 활성화하십시오.<a href="Rollback_Functions/rollback_use_player_prefs.htm"><span class="inline">rollback_use_player_prefs()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Use_Player_Prefs.htm">플레이어 기본 설정 사용</a>. 이 기능을 사용하면 모든 플레이어에 대한 기본 기본 설정을 선택적으로 지정할 수 있습니다.</p><p> 해당 기능을 호출하면 &quot;자동 시작&quot;이 비활성화됩니다. 즉, 모든 플레이어가 참가하더라도 게임이 시작되지 않으며 다음을 사용하여 수동으로 시작해야 합니다.<a href="Rollback_Functions/rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Start_Game.htm">게임 시작</a>.</p><p> 게임이 시작되기 전에 다음을 호출하여 플레이어의 기본 설정을 지정할 수 있습니다.<a href="Rollback_Functions/rollback_set_player_prefs.htm"><span class="inline">rollback_set_player_prefs()</span></a> / 해당 플레이어의 클라이언트에서 <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Set_Player_Prefs.htm">플레이어 기본 설정</a> 을 설정합니다. 이것들은 나중에 읽을 수 있습니다<a href="Rollback_Functions/rollback_get_player_prefs.htm"><span class="inline">rollback_get_player_prefs()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Get_Player_Prefs.htm">플레이어 기본 설정 가져오기</a> 또는 <span class="inline">player_prefs</span> 플레이어 인스턴스의 변수.</p><h2> 롤백 이벤트</h2><p> 플레이어가 기본 설정을 변경하면 게임의 모든 사람이 <span class="inline">rollback_start_game()>rollback_player_prefs</span> <a data-xref="{text}" href="Rollback_Events.htm#h1">롤백 이벤트</a> 를 받습니다. 이벤트를 보내려면 플레이어가 완전히 연결되어 있어야 합니다.</p><p> 연결하기 전에 기본 설정을 설정한 경우 연결 완료 시 연결하기 전에 마지막으로 설정한 기본 설정이 모든 플레이어에게 전송됩니다.</p><h2> 시작 조건</h2><p> 환경 설정을 활성화했는데 기본 환경 설정이 설정되지 않은 경우 모든 플레이어에 대한 환경 설정이 지정되지 않으면 게임이 시작되지 <strong>않습니다</strong>.</p><p> 이러한 경우 다음 중 하나를 호출할 수 있습니다.<a href="Rollback_Functions/rollback_start_game.htm"><span class="inline"></span></a> 알람에서 반복적으로 실행하여 게임 시작을 시도하거나 <span class="inline2">rollback_player_prefs</span> <a data-xref="{text}" href="Rollback_Events.htm#h1">롤백 이벤트</a> 가 수신될 때마다 호출합니다.</p><h2> 어떤 유형을 사용할 수 있습니까?</h2><p> 기본 설정은 숫자, 문자열, 배열 등과 같은 모든 유형이 될 수 있지만 변수 모음을 저장하는 가장 쉬운 방법인 <a href="../../GML_Overview/Structs.htm">구조체</a> 를 사용하는 것이 좋습니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Multiplayer.htm">멀티플레이어 롤백</a></div><div> 다음: <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">롤백 기능</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
 </body>
 </html>

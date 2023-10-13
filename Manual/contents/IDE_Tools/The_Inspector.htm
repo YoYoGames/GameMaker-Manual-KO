@@ -3,101 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Inspector</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>인스펙터</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section that covers the Inspector window" />
-  <meta name="rh-index-keywords" content="Inspector" />
-  <meta name="search-keywords" content="inspector" />
+  <meta name="topic-comment" content="인스펙터 창을 덮는 섹션" />
+  <meta name="rh-index-keywords" content="조사관" />
+  <meta name="search-keywords" content="조사관" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Inspector</span></h1>
-  <p>The <strong>Inspector </strong>window shows all the properties associated with the selected elements in the IDE.</p>
-  <p>You can select one or multiple elements in any editor, and view or change its various properties:</p>
-  <div class="image_columns">
-    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector.png" style="cursor: nwse-resize;" />
-      <figcaption>Inspecting Sequence Track</figcaption>
-    </figure>
-    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Sound.png" style="cursor: nwse-resize;" />
-      <figcaption>Inspecting Sound Asset</figcaption>
-    </figure>
-  </div>
-  <p>By default, an Inspector window appears on the left side of the IDE.</p>
-  <p>You can open more Inspector windows from <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The Windows Menu</a> at the top of the <span data-keyref="GameMaker Name">GameMaker</span> window:</p>
-  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Opening_Windows.png" />After opening an Inspector window, you can dock it anywhere in the IDE, or use it as a floating window:</p>
-  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Docking.gif" /></p>
-  <h2>Using the Inspector</h2>
-  <p>The Inspector allows you to view and edit assets without having to rely solely on <a data-xref="{title}" href="../Introduction/Workspaces.htm">Workspaces</a>.</p>
-  <p>For example, you may usually edit your event code in fullscreen, and frequently navigate back into a Workspace to edit that object&#39;s properties.</p>
-  <p>With the Inspector, you can view an object&#39;s details while remaining in fullscreen view:</p>
-  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Object_Editing.png" />This makes it possible to modify an object&#39;s properties and delete/change events while editing its code in fullscreen, and also set up Parenting, Variable Definitions, and more.</p>
-  <p>While this particular example only covers objects, the Inspector can do much more and allow you to edit many different kinds of assets (e.g. Sprites, Fonts, Animation Curves, etc.).</p>
-  <h2>Editor Elements</h2>
-  <p>In addition to assets, you can also inspect elements in an editor, such as layers in a room, tracks in a Sequence, etc.</p>
-  <p>The Inspector allows you to apply a filter or effect to a room layer, which you can&#39;t do through the Room Editor itself:</p>
-  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Room_Layers.png" style="cursor: nwse-resize;" /></p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> When you apply a filter/effect to a non-FX layer using the Inspector, it will always be applied as a &quot;single layer&quot; effect, i.e. its effect will only be applied on that particular layer and not on other layers below it.</p>
-  <h2>The &quot;Open Editor&quot; Button</h2>
-  <p>If you have an asset selected, you can click on &quot;Open Editor&quot; in the Inspector to open its asset editor.</p>
-  <p>For example, doing this with an object will open the Object Editor, where you can modify its properties, add events, etc.</p>
-  <p>However, when editing anything inside a room, such as an instance or a layer, the Inspector will only focus on editors inside the Room Editor.</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Edit_Instance.png" />
-    <figcaption>Selecting &quot;Open Editor&quot; for an instance will open the instance editor, instead of the object editor</figcaption>
-  </figure>
-  <p>As shown above, selecting an instance in a room and clicking on &quot;Open Editor&quot; in the inspector will open its instance editor.</p>
-  <p>Similarly, selecting a Path layer and clicking &quot;Open Editor&quot; will move focus to the Layers panel where you can edit the layer&#39;s properties, instead of opening the Path asset editor.</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Edit_Path_Layer.png" />
-    <figcaption>Selecting &quot;Open Editor&quot; for a Path Layer will focus on the editor for that layer</figcaption>
-  </figure>
-  <p>Finally, when <span data-field="title" data-format="default">The Inspector</span> shows an <a href="../Settings/Included_Files.htm">Included File</a>, clicking &quot;Open Editor&quot; will execute the action set under <strong>Default option for opening included files</strong>, in the Paths preferences under <a data-xref="{text}" href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Paths.htm#external_editors">External Editors</a>.</p>
-  <h2 id="h">Multi-Select</h2>
-  <p>The Inspector allows you to view and edit properties for multiple assets and elements (such as room layers and sequence tracks) at the same time.</p>
-  <p>Select your desired assets or elements by holding <strong>CTRL</strong> / <strong>CMD</strong> and clicking with the left mouse button. Your selected items will show in a &quot;multi-select&quot; list in the Inspector:</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Multi_Select.png" />
-    <figcaption>Three Sprite tracks selected in a Sequence.</figcaption>
-  </figure>
-  <p>Press the <strong>X</strong> next to an item to remove it from your selection.</p>
-  <h3>Editing Values</h3>
-  <p>If your selected items share the same value for a property, that shared value will appear in that field.</p>
-  <p>However if the items have different values for a property, the editor will simply show <span class="inline2">-</span> in place of that value.</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Shared_Values.png" />
-    <figcaption>Values displayed for multiple tracks in a Sequence.</figcaption>
-  </figure>
-  <p>You can change any of these fields. Changing a value will apply it to all of your selected items.</p>
-  <h3>Selection Within The List</h3>
-  <p>You can select any one item within your multi-select list to view and edit its properties, without having to reset your selection.</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Select_Within_Multi_Select.gif" />
-    <figcaption>View any one item within the multi-select list</figcaption>
-  </figure>
-  <p>Click on the empty area in the list to return to the multi-select view.</p>
-  <p>Note that you can&#39;t select multiple items within this list.</p>
-  <h3>Selection Highlight</h3>
-  <p>When you have an item selected within the multi-select list, it will appear in the editor with a red outline:</p>
-  <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Select_Within_Multi_Select_Outline.png" />
-    <figcaption>The <strong>spr_player</strong> track, selected in the multi-select list, appears with a red outline in the Sequence editor</figcaption>
-  </figure>
-  <p>You can change the colour of this outline in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">Room Preferences</a> and <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">Sequence Preferences</a>.</p>
-  <h2>Multiple Inspectors</h2>
-  <p>You can open multiple Inspector windows at any time, and each one can be linked to a specific element in the IDE.</p>
-  <p>To ensure that each time you click an element all open inspectors don&#39;t change to show the new selection, you must first <strong>lock </strong>each inspector window one-by-one.</p>
-  <p>To do this, you would open an inspector, select an IDE element to inspect, and then click the <img class="icon" src="../assets/Images/Icons/Icon_Padlock.png" /> lock button on the inspector to lock it on the element (shown in the image below). Once you have locked an inspector, you can open another one and then repeat the process.</p>
-  <p><img alt="Locking The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Lock.png" />Note that a locked inspector window does not lock the editing of any values for the element being inspected. It simply locks the inspector to the selected element and you can continue to edit it at any time, even when the original element is not the main focus of the IDE.</p>
-  <p>Using the lock feature you can open multiple inspectors at the same time with each one being locked to a specific asset, as shown in the example below:</p>
-  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Multiple.png" /></p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../IDE_Navigation/IDE_Input.htm">IDE Input And Navigation</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../IDE_Navigation/Keyboard_Shortcuts.htm">Keyboard Shortcuts</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 인스펙터</h1><p> <strong>Inspector</strong> 창에는 IDE에서 선택한 요소와 관련된 모든 속성이 표시됩니다.</p><p> 편집기에서 하나 이상의 요소를 선택하고 다양한 속성을 보거나 변경할 수 있습니다.</p><div class="image_columns"><figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector.png" style="cursor: nwse-resize;" /><figcaption> 시퀀스 트랙 검사</figcaption></figure><figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Sound.png" style="cursor: nwse-resize;" /><figcaption> 사운드 자산 검사</figcaption></figure></div><p> Inspector는 GameMaker 창 상단의 <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows 메뉴</a> 에서 열 수 있습니다.</p><p><img class="center" src="../assets/Images/IDE Tools/Inspector_Opening_Windows.png" /> 새 Inspector 창을 열려면 이 옵션을 선택하십시오. 동시에 둘 이상의 창을 열 수 있습니다.</p><p> Inspector 창을 연 후 IDE의 아무 곳에나 고정하거나 부동 창으로 사용할 수 있습니다.</p><p><img class="center" src="../assets/Images/IDE Tools/Inspector_Docking.gif" /></p><h2> 인스펙터 사용</h2><p> Inspector를 사용하면 <a data-xref="{title}" href="../Introduction/Workspaces.htm">Workspaces</a> 에만 의존하지 않고도 자산을 보고 편집할 수 있습니다.</p><p> 예를 들어, 일반적으로 전체 화면에서 이벤트 코드를 편집하고 자주 작업 공간으로 돌아가 해당 개체의 속성을 편집할 수 있습니다.</p><p> Inspector를 사용하면 전체 화면 보기를 유지하면서 개체의 세부 정보를 볼 수 있습니다.</p><p><img class="center" src="../assets/Images/IDE Tools/Inspector_Object_Editing.png" /> 이를 통해 전체 화면에서 코드를 편집하는 동안 개체의 속성을 수정하고 이벤트를 삭제/변경할 수 있으며 양육, 변수 정의 등을 설정할 수 있습니다.</p><p> 이 특정 예제는 개체만 다루지만 Inspector는 훨씬 더 많은 작업을 수행할 수 있으며 다양한 종류의 자산(예: Sprite, 글꼴, 애니메이션 곡선 등)을 편집할 수 있습니다.</p><h2> 편집기 요소</h2><p> 자산 외에도 방의 레이어, 시퀀스의 트랙 등과 같은 편집기의 요소를 검사할 수도 있습니다.</p><p> Inspector를 사용하면 룸 레이어에 필터 또는 효과를 적용할 수 있습니다. 이는 룸 편집기 자체에서는 수행할 수 없습니다.</p><p><img class="center" src="../assets/Images/IDE Tools/Inspector_Room_Layers.png" style="cursor: nwse-resize;" /></p><p class="note"> <span class="note">참고</span> Inspector를 사용하여 비FX 레이어에 필터/효과를 적용하면 항상 &quot;단일 레이어&quot; 효과로 적용됩니다. 즉, 그 효과는 특정 레이어에만 적용되고 그 아래의 다른 레이어에는 적용되지 않습니다.</p><h2> &quot;편집기 열기&quot; 버튼</h2><p> 자산을 선택한 경우 인스펙터에서 &quot;편집기 열기&quot;를 클릭하여 자산 편집기를 열 수 있습니다.</p><p> 예를 들어 개체로 이 작업을 수행하면 개체 편집기가 열리고 여기에서 개체의 속성을 수정하고 이벤트를 추가하는 등의 작업을 수행할 수 있습니다.</p><p> 그러나 인스턴스나 레이어와 같은 방 내부의 모든 것을 편집할 때 Inspector는 Room Editor 내부의 편집자에게만 초점을 맞춥니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Edit_Instance.png" /><figcaption> 인스턴스에 대해 &quot;편집기 열기&quot;를 선택하면 개체 편집기 대신 인스턴스 편집기가 열립니다.</figcaption></figure><p> 위와 같이 방에서 인스턴스를 선택하고 인스펙터에서 &quot;에디터 열기&quot;를 클릭하면 인스턴스 편집기가 열립니다.</p><p> 마찬가지로 경로 레이어를 선택하고 &quot;편집기 열기&quot;를 클릭하면 경로 자산 편집기를 여는 대신 레이어 속성을 편집할 수 있는 레이어 패널로 포커스가 이동합니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Edit_Path_Layer.png" /><figcaption> 경로 레이어에 대해 &quot;편집기 열기&quot;를 선택하면 해당 레이어의 편집기에 초점이 맞춰집니다.</figcaption></figure><h2 id="h"> 다중 선택</h2><p> Inspector를 사용하면 여러 자산 및 요소(예: 룸 레이어 및 시퀀스 트랙)에 대한 속성을 동시에 보고 편집할 수 있습니다.</p><p> <strong>CTRL</strong> / <strong>CMD</strong> 를 누른 상태에서 마우스 왼쪽 버튼을 클릭하여 원하는 자산 또는 요소를 선택하십시오. 선택한 항목은 Inspector의 &quot;다중 선택&quot; 목록에 표시됩니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Multi_Select.png" /><figcaption> 시퀀스에서 선택된 세 개의 스프라이트 트랙.</figcaption></figure><p> 항목 옆에 있는 <strong>X</strong> 를 눌러 선택 항목에서 제거합니다.</p><h3> 값 편집</h3><p> 선택한 항목이 속성에 대해 동일한 값을 공유하는 경우 해당 공유 값이 해당 필드에 나타납니다.</p><p> 그러나 항목의 속성 값이 다른 경우 편집기 <span class="inline2">는</span> 해당 값 대신 단순히 표시합니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Shared_Values.png" /><figcaption> 시퀀스의 여러 트랙에 대해 표시되는 값입니다.</figcaption></figure><p> 이러한 필드를 변경할 수 있습니다. 값을 변경하면 선택한 모든 항목에 적용됩니다.</p><h3> 목록 내 선택</h3><p> 다중 선택 목록에서 하나의 항목을 선택하면 선택 항목을 재설정하지 않고도 해당 속성을 보고 편집할 수 있습니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Select_Within_Multi_Select.gif" /><figcaption> 다중 선택 목록 내에서 하나의 항목 보기</figcaption></figure><p> 다중 선택 보기로 돌아가려면 목록의 빈 영역을 클릭하십시오.</p><p> 이 목록 내에서 여러 항목을 선택할 수 없습니다.</p><h3> 선택 하이라이트</h3><p> 다중 선택 목록에서 항목을 선택하면 편집기에 빨간색 윤곽선과 함께 나타납니다.</p><figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Select_Within_Multi_Select_Outline.png" /><figcaption> 다중 선택 목록에서 선택한 <strong>spr_player</strong> 트랙은 시퀀스 편집기에 빨간색 윤곽선으로 나타납니다.</figcaption></figure><p> <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">룸 기본 설정</a> 및 <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">시퀀스 기본</a> 설정 에서 이 윤곽선의 색상을 변경할 수 있습니다.</p><h2> 여러 검사관</h2><p> 언제든지 여러 Inspector 창을 열 수 있으며 각 창은 IDE의 특정 요소에 연결할 수 있습니다.</p><p> 요소를 클릭할 때마다 열려 있는 모든 속성이 새 선택 항목을 표시하도록 변경되지 않도록 하려면 먼저 각 속성 창을 하나씩 <strong>잠</strong> 가야 합니다.</p><p> 이렇게 하려면 검사기를 열고 검사할 IDE 요소를 선택한 다음<img class="icon" src="../assets/Images/Icons/Icon_Padlock.png" /> 인스펙터의 잠금 버튼을 눌러 요소를 잠급니다(아래 이미지 참조). 인스펙터를 잠그면 다른 인스펙터를 열고 프로세스를 반복할 수 있습니다.</p><p><img alt="Locking The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Lock.png" /> 잠긴 검사기 창은 검사 중인 요소의 값 편집을 잠그지 않습니다. 단순히 인스펙터를 선택한 요소로 잠그고 원래 요소가 IDE의 주요 초점이 아닌 경우에도 언제든지 계속 편집할 수 있습니다.</p><p> 잠금 기능을 사용하면 아래 예와 같이 여러 검사자를 동시에 열 수 있으며 각 검사자는 특정 자산에 잠겨 있습니다. </p><p><img class="center" src="../assets/Images/IDE Tools/Inspector_Multiple.png" /></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="../IDE_Navigation/IDE_Input.htm">IDE 입력 및 탐색</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="../IDE_Navigation/Menus.htm">메뉴</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Micro Web Server

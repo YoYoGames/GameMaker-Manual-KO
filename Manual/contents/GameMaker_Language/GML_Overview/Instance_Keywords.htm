@@ -1,204 +1,114 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Instance Keywords</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different instance &quot;keywords&quot;" />
-  <meta name="rh-index-keywords" content="Instance Keywords,noone,self,other,all" />
-  <meta name="search-keywords" content="self,all,noone,other,instance keywords" />
-</head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Instance Keywords</h1>
-  <p>To make certain things easier in <span data-keyref="GameMaker Name">GameMaker</span>, you can use one of several <b>instance keywords</b> in your code (whether GML or GML Visual). These keywords are used primarily to identify instances - and in some cases structs - under different situations, and each one is explained in the text below.</p>
-  <p>Note that all the given keywords are represented by <strong>negative integer values</strong> internally, so care must be taken when assigning or checking variable values against or with these keywords, as you may get unexpected results later as <span data-keyref="GameMaker Name">GameMaker</span> interprets the value you have used as something else. You should also note that using the integer values directly instead of the keywords in your code is <b>not recommended at all</b> and could cause issues later on.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#self"><span class="inline">self</span></a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <table>
-      <tbody>
-        <tr>
-          <th>Keyword</th>
-          <th>Description</th>
-          <th>value</th>
-        </tr>
-        <tr>
-          <td><span class="inline">self</span></td>
-          <td>The instance/struct which is executing the current block of code.</td>
-          <td>   -1</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="dropspot"><span class="inline">self</span> can be used to identify the current struct or instance that is in scope in the current block of code. For example:</p>
-    <p class="code">var val = 100;<br />
-      with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Fire))<br />
-      {<br />
-          self.val = val;<br />
-      }</p>
-    <p class="dropspot">In this example you can see that we have a <i>local</i> variable called <span class="inline">val</span> and we want it to set the <i>instance</i> variable with the same name in the newly created object instance. To identify the instance variable correctly and tell <span data-keyref="GameMaker Name">GameMaker</span> to set it in the instance calling the code block, we use the <span class="inline">self</span> keyword. In most cases you can also use the <span class="inline">id</span> built-in instance variable instead of <span class="inline">self</span>, but <span class="inline">self</span> offers certain benefits. To start with, it is faster for the compiler to identify the instance (or struct) using <span class="inline">self</span> rather than <span class="inline">id</span>, as the <span class="inline">id</span> value goes through the instance lookup table while <span class="inline">self</span> does not. Secondly, for those people making extensions, it is very useful to ensure the correct scoping of variables, since it is possible that a project which uses an extension may have a global scope variable or something with the same name as a variable in the extension.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> The <span class="inline">self</span> keyword is <strong>not </strong>a shortcut for the actual ID value of an instance or struct and should only be used in the context explained above. If you require the ID <strong>value </strong>for an instance then you need to use <span class="inline">self.id</span>, eg:</p>
-    <p class="code">var myID = id;<br />
-      with (all)<br />
-      {<br />
-          if self.id == myID<br />
-          {<br />
-              // do something<br />
-          }<br />
-      }</p>
-    <p class="dropspot"><span class="inline">self</span> can also be used within <a href="Structs.htm">structs</a> - except under some specific circumstances - to reference member variables for the struct. It can also be used within constructor functions to reference the struct being generated from the constructor.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span class="inline">other</span></a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <table>
-      <tbody>
-        <tr>
-          <th>Keyword</th>
-          <th>Description</th>
-          <th>value</th>
-        </tr>
-        <tr>
-          <td><span class="inline">other</span></td>
-          <td>The other instance involved in a collision event, in a <span class="inline">with</span> function or in a function.</td>
-          <td>   -2</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="dropspot">The special keyword <span class="inline">other</span> has multiple ways that it can be used to reference a specific instance (and in some cases, a struct): it can be used in a <span class="inline">with</span> statement (explained <a href="Language_Features/with.htm">here</a>), in a <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">collision event</a>, or in a function. This section is going to explain the last two use cases.</p>
-    <p class="dropspot">Do note that in events other than the collision event, when outside of any function calls and <span class="inline">with()</span> blocks, <span class="inline">other</span> simply returns the struct for the current instance.</p>
-    <h2 class="dropspot">Collision Event</h2>
-    <p class="dropspot">A collision event can only happen between <strong>two </strong>instances. You <i>can</i> have multiple collisions between multiple instances, but they are all resolved by <span data-keyref="GameMaker Name">GameMaker</span> on a 1-on-1 basis, with the &quot;self&quot; instance that has the collision event and the &quot;other&quot; instance that is colliding with it.</p>
-    <p class="dropspot">Imagine you have a player instance, multiple enemy instances and multiple bullet instances that the enemy can fire at you. You can assign each enemy a single bullet instance but with a different damage variable randomly assigned to it when created, for example:</p>
-    <p class="code">var bullet;<br />
-      bullet = instance_create_layer(x, y, &quot;Bullets&quot;, obj_Bullet);<br />
-      bullet.damage = 5 + irandom(5);<br />
-      bullet.speed = 8;<br />
-      bullet.direction = point_direction(x, y, obj_Player.x, obj_Player.y);</p>
-    <p class="dropspot">You can see how we set its variables using the dot notation as outlined in the section on <a href="Addressing_Variables_In_Other_Instances.htm">Addressing Variables In Other Instances</a>. This will give each bullet instance a different damage value, but how will the player detect the damage that it has to take when it&#39;s hit by a bullet?</p>
-    <p class="dropspot">For this, the player will need to have a collision event with <span class="inline">obj_Bullet</span>, and within that event use <span class="inline">other</span> to read variables from the colliding bullet instance:</p>
-    <p class="code">hp -= other.damage;<br />
-      if hp &lt;= 0 instance_destroy();</p>
-    <p class="dropspot">The above code will deduct the amount stored in the <i>other</i> instance&#39;s &quot;damage&quot; variable from the player&#39;s &quot;hp&quot; variable, then it will check to see if the &quot;hp&quot; is lower than or equal to 0. If it is then it will destroy the player instance. Please note that the other instance must have the variable being checked or else an error will be thrown.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> The Collision event is the only event that has a special meaning for the <span class="inline">other</span> keyword. In all other events and scripts, the behaviour of <span class="inline">other</span> will be defined by the context it is being used in (such as a <span class="inline">with() </span>block, a function, struct declaration, etc.).</p>
-    <p class="dropspot">You can assign values to variables, or even create new ones, using <span class="inline">other</span> in the collision event, like this:</p>
-    <p class="code">// add ten to the other instance &quot;mana&quot; variable<br />
-      other.mana += 10;<br />
-      // set the other instance variable &quot;hit&quot; to true, creating the variable if it doesn&#39;t already exist<br />
-      other.hit = true;</p>
-    <h2 class="dropspot">Struct Declaration</h2>
-    <p class="dropspot">When used inside a struct declaration, <span class="inline">other</span> refers to the instance that is initialising the struct:</p>
-    <p class="code">var _struct =<br />
-      {<br />
-          parent_instance : other<br />
-      }<br />
-      <br />
-      show_debug_message(_struct.parent_instance == self);<br />
-      // This prints &#39;1&#39; (true) meaning that both sides refer to the same instance
-    </p>
-    <p class="dropspot">However, you do not need to use <span class="inline">other</span> to read variables from the instance as any variables you reference directly will be read from that instance&#39;s scope, as described <a href="Structs.htm#inst_in_struct">in this section</a> of the manual. You would only need to use this if you wanted to store a reference to that instance&#39;s struct.</p>
-    <h2 class="dropspot">Instance Method</h2>
-    <p class="dropspot">Using <span class="inline">other</span> within another instance&#39;s <a href="Method_Variables.htm">method</a> refers to the instance that called that method.</p>
-    <p class="dropspot">For example, let&#39;s say <span class="inline">Object2</span> has a method that references <span class="inline">self</span> and <span class="inline">other</span>. This method is then called in <span class="inline">Object1</span>. Since the method was created in <span class="inline">Object2</span>, it is <strong>bound</strong> to it and will always use the <span class="inline">Object2</span> instance as the &quot;self&quot;, no matter which instance calls it. In such a case, the calling instance becomes <span class="inline">other</span>.</p>
-    <p class="code">// In Object2<br />
-      my_method = function()<br />
-      {<br />
-          show_debug_message(object_get_name(self.object_index));<br />
-          show_debug_message(object_get_name(other.object_index));<br />
-      }<br />
-      <br />
-      // In Object1<br />
-      Object2.my_method();
-    </p>
-    <p class="dropspot">This would cause the instance to first print its own object name (&quot;Object2&quot;) and then the object name of the calling instance (&quot;Object1&quot;).</p>
-    <p class="dropspot">The same will apply to a method that is bound to a struct.</p>
-    <h2 class="dropspot">Constructor Function</h2>
-    <p class="dropspot">When used within a constructor function, <span class="inline">other</span> will reference the instance that is calling that function, however this is not recommended for general use as any external data that a constructor needs to use should be passed in as arguments.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span class="inline">all</span></a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <table>
-      <tbody>
-        <tr>
-          <th>Keyword</th>
-          <th>Description</th>
-          <th>value</th>
-        </tr>
-        <tr>
-          <td><span class="inline">all</span></td>
-          <td>All instances currently active in the room.</td>
-          <td>   -3</td>
-        </tr>
-      </tbody>
-    </table>
-    <p> </p>
-    <p class="dropspot">This keyword is used to tell <span data-keyref="GameMaker Name">GameMaker</span> that a function is to be applied, or to check, all active instances within a room (deactivated instances will not be checked or accessed). You <b>cannot</b> use <span class="inline">all</span> to access or set variables in other instances using the point method (see <a href="Addressing_Variables_In_Other_Instances.htm">here</a>), but you <strong>can </strong>use it when calling <a href="Language_Features/with.htm"><span class="inline">with()</span></a>, for example:</p>
-    <p class="code">with (all)<br />
-      {<br />
-          speed = 0;<br />
-      }</p>
-    <p class="dropspot">The above code will set the speed of all instances in the room to 0. You can also use <span class="inline">all</span> within functions to target or check all instances in the room for example:</p>
-    <p class="code">// Check a point for any active instance in the room<br />
-      inst = instance_position(mouse_x, mouse_y, all);<br />
-      <br />
-      // Check all instances for a collision along a line<br />
-      if collision_line(x, y, mouse_x, mouse_y, all, false, true) {}<br />
-      <br />
-      // Add all instances in the room into a motion planning grid<br />
-      mp_grid_add_instances(grid, all, false);
-    </p>
-    <p class="dropspot"><span class="inline">all</span> is a very useful keyword and can be used in numerous situations within your code and actions, often cutting down on the amount of code you need to write to achieve a desired effect.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span class="inline">noone</span></a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <table>
-      <tbody>
-        <tr>
-          <th>Keyword</th>
-          <th>Description</th>
-          <th>value</th>
-        </tr>
-        <tr>
-          <td><span class="inline">noone</span></td>
-          <td>No instance at all.</td>
-          <td>   -4</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="dropspot">It may seem odd, but many times while programming your games will you find the need to check if there are no instances found at a location, or in a collision etc... In those cases you would use this keyword to check for nothing, something like this:</p>
-    <p class="code">if instance_nearest(x, y, obj_enemy) != noone<br />
-      {<br />
-          //do something as there is an enemy instance near<br />
-      }</p>
-    <p class="dropspot">In this example, the function <span class="inline">instance_nearest()</span> will return either <span class="inline">noone</span> or the unique ID of the nearest found instance. Basically, any time that you need to check for an instance, you can expect to get either <span class="inline">noone</span> or a unique instance ID returned.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Evaluation_Order.htm">Evaluation Order</a></div>
-      </div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>인스턴스 키워드</title>
+    <meta name="generator" content="Adobe RoboHelp 2020"/>
+    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+    <script src="../../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander"/>
+    <meta name="topic-comment" content="다른 인스턴스 &quot;키워드&quot;를 설명하는 페이지"/>
+    <meta name="rh-index-keywords" content="인스턴스 키워드,noone,self,other,all"/>
+    <meta name="search-keywords" content="self,all,noone,other,인스턴스 키워드"/>
+  </head>
+  <body><!--<div class="body-scroll" style="top: 150px;">--><h1> 인스턴스 키워드</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 에서 특정 작업을 더 쉽게 하기 위해 코드에서 여러 <b>인스턴스 키워드</b> 중 하나를 사용할 수 있습니다(GML 또는 GML Visual 여부). 이러한 키워드는 주로 다양한 상황에서 인스턴스(어떤 경우에는 구조체)를 식별하는 데 사용되며 각각은 아래 텍스트에 설명되어 있습니다.</p><p> 주어진 모든 키워드는 내부적으로 <strong>음의 정수 값</strong> 으로 표시되므로 <span data-keyref="GameMaker Name">GameMaker</span> 가 사용자가 사용한 값을 다른 것으로 해석할 때 나중에 예기치 않은 결과를 얻을 수 있으므로 이러한 키워드에 대해 변수 값을 할당하거나 확인할 때는 주의해야 합니다. 또한 코드에서 키워드 대신 정수 값을 직접 사용하는 것은 <b>전혀 권장되지 않으며</b> 나중에 문제가 발생할 수 있습니다.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span class="inline">self</span></a> </p><div class="droptext" data-targetname="drop-down"><table class=" cke_show_border"><tbody><tr><th> 예어</th><th> 설명</th><th> 값</th></tr><tr><td><span class="notranslate"><span class="inline">self</span></span></td><td> 현재 코드 블록을 실행하는 인스턴스/구조체.</td><td> <span class="notranslate">-1</span></td></tr></tbody></table><p class="dropspot"><span class="inline">self</span> 현재 코드 블록의 범위에 있는 현재 구조체 또는 인스턴스를 식별하는 데 사용할 수 있습니다. 예를 들어:</p><p class="code">var val = 100;
+        <br/>
+        with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Fire))
+        <br/>
+        {
+        <br/>
+        self.val = val;
+        <br/>
+        }</p><p class="dropspot"> 이 예에서 라는 <i>지역</i> 변수가 있음을 알 수 있습니다. <span class="inline">val</span> 그리고 새로 생성된 개체 인스턴스에서 동일한 이름으로 <i>인스턴스</i> 변수를 설정하기를 원합니다. 인스턴스 변수를 올바르게 식별하고 <span data-keyref="GameMaker Name">GameMaker</span> 에 코드 블록을 호출하는 인스턴스에서 설정하도록 지시하기 위해 <span class="inline">self</span> 예어. 대부분의 경우 다음을 사용할 수도 있습니다. <span class="inline">id</span> 대신 내장 인스턴스 변수 <span class="inline">self</span>, 하지만 <span class="inline">self</span> 특정 혜택을 제공합니다. 우선 컴파일러가 다음을 사용하여 인스턴스(또는 구조체)를 식별하는 것이 더 빠릅니다. <span class="inline">self</span> 보다는 <span class="inline">id</span>, <span class="inline">id</span> 값은 인스턴스 조회 테이블을 통과하는 동안 <span class="inline">self</span> 하지 않습니다. 둘째, 확장을 만드는 사람들의 경우 변수의 올바른 범위를 확인하는 것이 매우 유용합니다. 확장을 사용하는 프로젝트에 전역 범위 변수나 확장의 변수와 이름이 같은 변수가 있을 수 있기 때문입니다.</p><p class="note"> <strong>참고</strong>:<span class="inline">self</span> 키워드는 인스턴스나 구조체의 실제 ID 값에 대한 바로 가기가 <strong>아니며</strong> 위에서 설명한 컨텍스트에서만 사용해야 합니다. 인스턴스에 대한 ID <strong>값</strong> 이 필요한 경우 다음을 사용해야 합니다.<span class="inline">self.id</span>, 예:</p><p class="code">var myID = id;
+        <br/>
+        with (all)
+        <br/>
+        {
+        <br/>
+        if self.id == myID
+        <br/>
+        {
+        <br/>
+        // do something
+        <br/>
+        }
+        <br/>
+        }</p><p class="dropspot"> 또한 주목할 가치가 있습니다. <span class="inline">self</span> 매우 특정한 상황에서 <a href="Structs.htm">구조체</a> 내에서 구조체의 멤버 변수를 참조하는 데 사용할 수도 있습니다.</p><p class="dropspot"></p></div><p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span class="inline">other</span></a> </p><div class="droptext" data-targetname="drop-down1"><table class=" cke_show_border"><tbody><tr><th> 예어</th><th> 설명</th><th> 값</th></tr><tr><td><span class="notranslate"><span class="inline">other</span></span></td><td> 충돌 이벤트와 관련된 다른 인스턴스, <span class="inline">with</span> 함수 또는 함수에서.</td><td> <span class="notranslate">-2</span></td></tr></tbody></table><p class="dropspot"> 특별한 키워드 <span class="inline">other</span> 특정 인스턴스(어떤 경우에는 구조체)를 참조하는 데 사용할 수 있는 여러 가지 방법이 있습니다. <span class="inline">with</span> 문( <a href="Language_Features/with.htm">여기</a> 에 설명됨), <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">충돌 이벤트</a> 또는 함수에서. 이 섹션에서는 마지막 두 가지 사용 사례를 설명합니다.</p><p class="dropspot"> 충돌 이벤트 이외의 이벤트에서 함수 호출 및 <span class="inline">with()</span> 블록, <span class="inline">other</span> 단순히 현재 인스턴스에 대한 구조체를 반환합니다.</p><h2 class="dropspot"> 충돌 이벤트</h2><p class="dropspot"> 충돌 이벤트는 <strong>두</strong> 인스턴스 사이에서만 발생할 수 있습니다. 여러 인스턴스 간에 여러 충돌이 있을 <i>수</i> 있지만 충돌 이벤트가 있는 &quot;self&quot; 인스턴스와 충돌 이벤트가 있는 &quot;other&quot; 인스턴스를 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에서 모두 1:1로 해결합니다.</p><p class="dropspot"> 플레이어 인스턴스, 여러 적 인스턴스 및 적이 당신에게 발사할 수 있는 여러 총알 인스턴스가 있다고 상상해 보십시오. 각 적에게 하나의 총알 인스턴스를 할당할 수 있지만 생성 시 다른 손상 변수가 무작위로 할당됩니다. 예를 들면 다음과 같습니다.</p><p class="code">var bullet;
+        <br/>
+        bullet = instance_create_layer(x, y, &quot;Bullets&quot;, obj_Bullet);
+        <br/>
+        bullet.damage = 5 + irandom(5);
+        <br/>
+        bullet.speed = 8;
+        <br/>
+        bullet.direction = point_direction(x, y, obj_Player.x, obj_Player.y);</p><p class="dropspot"> <a href="Addressing_Variables_In_Other_Instances.htm">다른 인스턴스의 변수 주소 지정</a> 섹션에 설명된 대로 점 표기법을 사용하여 변수를 설정하는 방법을 볼 수 있습니다. 이렇게 하면 각 총알 인스턴스에 다른 피해 값이 제공되지만 플레이어는 총알에 맞았을 때 입어야 하는 피해를 어떻게 감지할까요?</p><p class="dropspot"> 이를 위해 플레이어는 충돌 이벤트가 있어야 합니다. <span class="inline">obj_Bullet</span>, 해당 이벤트 내에서 사용 <span class="inline">other</span> 충돌하는 총알 인스턴스에서 변수를 읽으려면:</p><p class="code">hp -= other.damage;
+        <br/>
+        if hp &lt;= 0 instance_destroy();</p><p class="dropspot"> 위의 코드는 플레이어의 &quot;hp&quot; 변수에서 <i>다른</i> 인스턴스의 &quot;damage&quot; 변수에 저장된 양을 뺀 다음 &quot;hp&quot;가 0보다 작거나 같은지 확인합니다. 그렇다면 파괴됩니다. 플레이어 인스턴스. 다른 인스턴스에는 검사 중인 변수가 있어야 하며 그렇지 않으면 오류가 발생합니다.</p><p class="note"> <strong>참고</strong>: 충돌 이벤트는 특별한 의미가 있는 유일한 이벤트입니다. <span class="inline">other</span> 예어. 다른 모든 이벤트 및 스크립트에서 <span class="inline">other</span> 사용되는 컨텍스트에 의해 정의됩니다(예: <span class="inline">with() </span> 블록, 함수, 구조체 선언 등).</p><p class="dropspot"> 다음을 사용하여 변수에 값을 할당하거나 새 값을 생성할 수도 있습니다. <span class="inline">other</span> 충돌 이벤트에서 다음과 같이</p><p class="code">// add ten to the other instance &quot;mana&quot; variable
+        <br/>
+        other.mana += 10;
+        <br/>
+        // set the other instance variable &quot;hit&quot; to true, creating the variable if it doesn&#39;t already exist
+        <br/>
+        other.hit = true;</p><h2 class="dropspot"> 구조체 선언</h2><p class="dropspot"> 구조체 선언 내에서 사용될 때, <span class="inline">other</span> 구조체를 초기화하는 인스턴스를 나타냅니다.</p><p class="code">var _struct =
+        <br/>
+        {
+        <br/>
+        parent_instance : other
+        <br/>
+        }
+        <br/>
+        <br/>
+        show_debug_message(_struct.parent_instance == self);
+        <br/>
+        // This prints &#39;1&#39; (true) meaning that both sides refer to the same instance </p><p class="dropspot"> 그러나, 당신은 사용할 필요가 없습니다 <span class="inline">other</span> 직접 참조하는 변수로 인스턴스에서 변수를 읽으려면 매뉴얼의 <a href="Structs.htm#inst_in_struct">이 섹션에 설명된</a> 대로 해당 인스턴스의 범위에서 읽습니다. 해당 인스턴스의 구조체에 대한 참조를 저장하려는 경우에만 이것을 사용해야 합니다.</p><h2 class="dropspot"> 인스턴스 메소드</h2><p class="dropspot"> 사용 <span class="inline">other</span> 다른 인스턴스의 <a href="Method_Variables.htm"><span class="notranslate">method</span></a> 내에서 해당 메서드를 호출한 인스턴스를 참조합니다.</p><p class="dropspot"> 예를 들어 <span class="inline">Object2</span> 참조하는 메소드가 있습니다 <span class="inline">self</span> 그리고 <span class="inline">other</span>. 이 메서드는 다음에서 호출됩니다. <span class="inline">Object1</span>. 메소드가 생성된 이후 <span class="inline">Object2</span>, 그것에 <strong>바인딩</strong> 되어 항상 사용할 것입니다 <span class="inline">Object2</span> 어떤 인스턴스가 호출하든 상관없이 인스턴스를 &quot;자체&quot;로 사용합니다. 이러한 경우 호출 인스턴스는<span class="inline">other</span>.</p><p class="code">// In Object2
+        <br/>
+        my_method = function()
+        <br/>
+        {
+        <br/>
+        show_debug_message(object_get_name(self.object_index));
+        <br/>
+        show_debug_message(object_get_name(other.object_index));
+        <br/>
+        }
+        <br/>
+        <br/>
+        // In Object1
+        <br/>
+        Object2.my_method(); </p><p class="dropspot"> 이렇게 하면 인스턴스가 먼저 자체 개체 이름(&quot;Object2&quot;)을 인쇄한 다음 호출하는 인스턴스의 개체 이름(&quot;Object1&quot;)을 인쇄합니다.</p><p class="dropspot"> 구조체에 바인딩된 메서드에도 동일하게 적용됩니다.</p><h2 class="dropspot"> 생성자 함수</h2><p class="dropspot"> 생성자 함수 내에서 사용될 때, <span class="inline">other</span> 해당 함수를 호출하는 인스턴스를 참조하지만 생성자가 사용해야 하는 외부 데이터를 인수로 전달해야 하므로 일반적인 사용에는 권장되지 않습니다.</p><p class="dropspot"></p></div><p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span class="inline">all</span></a> </p><div class="droptext" data-targetname="drop-down2"><table class=" cke_show_border"><tbody><tr><th> 예어</th><th> 설명</th><th> 값</th></tr><tr><td><span class="notranslate"><span class="inline">all</span></span></td><td> 현재 방에서 활성화된 모든 인스턴스입니다.</td><td> <span class="notranslate">-3</span></td></tr></tbody></table><p></p><p class="dropspot"> 이 키워드는 <span data-keyref="GameMaker Name">GameMaker</span> 에 기능이 적용되어야 함을 알리거나 방 내의 모든 활성 인스턴스를 확인하는 데 사용됩니다(비활성화된 인스턴스는 확인 또는 액세스되지 않음). 당신은 사용할 <b>수 없습니다</b> <span class="inline">all</span> point 메서드를 사용하여 다른 인스턴스에서 변수에 액세스하거나 변수를 설정하려면( <a href="Addressing_Variables_In_Other_Instances.htm">여기</a> 참조), 호출할 때 사용할 <strong>수</strong> 있습니다.<a href="Language_Features/with.htm"><span class="inline">with()</span></a>, 예를 들어:</p><p class="code">with (all)
+        <br/>
+        {
+        <br/>
+        speed = 0;
+        <br/>
+        }</p><p class="dropspot"> 위의 코드는 방에 있는 모든 인스턴스의 속도를 0으로 설정합니다. 다음을 사용할 수도 있습니다. <span class="inline">all</span> 기능 내에서 방의 모든 인스턴스를 대상으로 지정하거나 확인합니다. 예를 들면 다음과 같습니다.</p><p class="code">// Check a point for any active instance in the room
+        <br/>
+        inst = instance_position(mouse_x, mouse_y, all);
+        <br/>
+        <br/>
+        // Check all instances for a collision along a line
+        <br/>
+        if collision_line(x, y, mouse_x, mouse_y, all, false, true) {}
+        <br/>
+        <br/>
+        // Add all instances in the room into a motion planning grid
+        <br/>
+        mp_grid_add_instances(grid, all, false); </p><p class="dropspot"><span class="inline">all</span> 는 매우 유용한 키워드이며 코드 및 작업 내에서 다양한 상황에서 사용할 수 있으며 원하는 효과를 얻기 위해 작성해야 하는 코드의 양을 줄이는 경우가 많습니다.</p><p class="dropspot"></p></div><p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span class="inline">noone</span></a> </p><div class="droptext" data-targetname="drop-down3"><table class=" cke_show_border"><tbody><tr><th> 예어</th><th> 설명</th><th> 값</th></tr><tr><td><span class="notranslate"><span class="inline">noone</span></span></td><td> 사례가 전혀 없습니다.</td><td> <span class="notranslate">-4</span></td></tr></tbody></table><p class="dropspot"> 이상하게 보일 수 있지만 게임을 프로그래밍하는 동안 여러 번 위치나 충돌 등에서 인스턴스가 없는지 확인해야 할 필요가 있음을 알게 될 것입니다. 이러한 경우에는 이 키워드를 사용하여 아무것도 확인하지 않을 것입니다. 이 같은:</p><p class="code">if instance_nearest(x, y, obj_enemy) != noone
+        <br/>
+        {
+        <br/>
+        //do something as there is an enemy instance near
+        <br/>
+        }</p><p class="dropspot"> 이 예에서 함수 <span class="inline">instance_nearest()</span> 둘 중 하나를 반환합니다 <span class="inline">noone</span> 또는 가장 가까운 발견된 인스턴스의 고유 ID입니다. 기본적으로 인스턴스를 확인해야 할 때마다 다음 중 하나를 얻을 수 있습니다. <span class="inline">noone</span> 또는 고유한 인스턴스 ID가 반환됩니다. </p><p class="dropspot"></p></div><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GML_Overview.htm">GML 개요</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="Evaluation_Order.htm">평가 순서</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
-  </div>
-  <!-- KEYWORDS
+    <!-- KEYWORDS
 Instance Keywords
 self
 all
 noone
 other
--->
-  <!-- TAGS
+--><!-- TAGS
 instance_keywords
--->
-</body>
+--></body>
 </html>
