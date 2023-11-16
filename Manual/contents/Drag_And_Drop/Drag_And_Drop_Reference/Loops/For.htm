@@ -3,69 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>For</title>
+  <title>을위한</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the For action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - For" />
-  <meta name="search-keywords" content="For" />
+  <meta name="topic-comment" content="For 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - For" />
+  <meta name="search-keywords" content="을위한" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="For Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_For.png" /> For</h1>
-  <p>The <b>For</b> action is used to perform loops that only terminate when a value reaches the given condition. You give an initial value as a variable (which can be flagged as a temporary local variable - this is usually what you want), then you give
-    the condition to check the variable against (for example if it is less than a certain value), and then finally the amount to increment the variable by each iteration of the loop. So, the general flow is as follows:</p>
-  <ul class="colour">
-    <li>You initialise a variable to a value</li>
-    <li>You set the condition to check this variable against</li>
-    <li>You set how much the variable should be incremented by each iteration of the loop</li>
-    <li>You then add actions into the loop, and these will be run for each iteration until the condition returns <span class="inline">false</span> or a Break action is encountered.</li>
-  </ul>
-  <p>When adding actions to be performed within the loop, these are added much as you would add an action to an &quot;if&quot;, ie: dropping it to the side of the action rather than under it:</p>
-  <p><img alt="For drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/For_Drop.png" />All actions added to the side will be included in the For and will be performed before the event or script continues
-    with the actions added under. Note that you can end any loop prematurely if you call the <a href="Break.htm">Break</a> action, and when using For loops you don&#39;t <i>have</i> to increment and you can make it decrement too, as long as the condition
-    you use is appropriate. For example, set the initial variable to 10, set the condition to check for less than 0 and then set the increment value to -1 and the loop will iterate 10 times, counting backwards from 10 to 0.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="For Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_For.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Initialise</td>
-        <td>Initialise the variable that will be used for counting to a value (can be flagged as a temporary local variable)</td>
-      </tr>
-      <tr>
-        <td>Condition</td>
-        <td>The condition to check to break the loop</td>
-      </tr>
-      <tr>
-        <td>Increment</td>
-        <td>The amount to increment (or decrement) the initial count variable by each iteration of the loop</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="For Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_For.png" />The above action block code runs a <span class="inline">for</span> loop to check and see if a gamepad is connected to any of the 12 available
-    &quot;slots&quot;. If a gamepad is discovered, a global variable is set to the current slot number and the loop is broken.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Loop_Actions.htm">Loop Actions</a></div>
-        <div style="float:right">Next: <a href="Break.htm">Break</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="For Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_For.png" /> 을위한</h1><p> <b>For</b> 액션은 값이 주어진 조건에 도달할 때만 종료되는 루프를 수행하는 데 사용됩니다. 초기 값을 변수로 제공하고(임시 로컬 변수로 플래그가 지정될 수 있음 - 일반적으로 원하는 것입니다), 변수를 검사할 조건을 제공합니다(예: 특정 값보다 작은 경우). 그런 다음 마지막으로 루프를 반복할 때마다 변수를 증가시킬 양입니다. 따라서 일반적인 흐름은 다음과 같습니다.</p><ul class="colour"><li> 변수를 값으로 초기화합니다.</li><li> 이 변수를 확인하는 조건을 설정합니다.</li><li> 루프를 반복할 때마다 변수를 얼마나 증가시켜야 하는지 설정합니다.</li><li> 그런 다음 루프에 작업을 추가하면 조건이 반환될 때까지 각 반복마다 실행됩니다. <span class="inline">false</span> 또는 중단 조치가 발생했습니다.</li></ul><p> 루프 내에서 수행할 작업을 추가할 때 &quot;if&quot;에 작업을 추가하는 것처럼 추가됩니다.</p><p><img alt="For drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/For_Drop.png" /> 측면에 추가된 모든 작업은 For에 포함되며 이벤트 또는 스크립트가 아래에 추가된 작업으로 계속되기 전에 수행됩니다. <a href="Break.htm">Break</a> 액션을 호출하면 루프를 조기에 종료할 수 있으며 For 루프를 사용할 때 사용하는 조건이 적절하다면 증가할 <i>필요</i> 가 없고 감소시킬 수도 있습니다. 예를 들어, 초기 변수를 10으로 설정하고 0보다 작은지 확인하도록 조건을 설정한 다음 증가 값을 -1로 설정하면 루프가 10번 반복되어 10에서 0까지 역으로 계산됩니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="For Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_For.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Initialise</span></td><td> 값을 계산하는 데 사용할 변수를 초기화합니다(임시 로컬 변수로 플래그 지정 가능).</td></tr><tr><td> <span class="notranslate">Condition</span></td><td> 루프를 끊기 위해 확인할 조건</td></tr><tr><td> <span class="notranslate">Increment</span></td><td> 루프의 각 반복에 의해 초기 카운트 변수를 증가(또는 감소)시킬 양</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="For Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_For.png" /> 위의 작업 블록 코드는 다음을 실행합니다. <span class="inline">for</span> 루프를 사용하여 게임패드가 사용 가능한 12개의 &quot;슬롯&quot; 중 하나에 연결되어 있는지 확인합니다. 게임패드가 발견되면 전역 변수가 현재 슬롯 번호로 설정되고 루프가 끊어집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Loop_Actions.htm">루프 동작</a></div><div style="float:right"> 다음: <a href="Break.htm">휴식</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - For

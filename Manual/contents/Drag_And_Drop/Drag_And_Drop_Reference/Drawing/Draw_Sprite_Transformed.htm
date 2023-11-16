@@ -3,80 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Sprite Transformed</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>변신된 스프라이트 그리기</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Draw Sprite Transformed action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Draw Sprite Transformed" />
-  <meta name="search-keywords" content="Draw Sprite Transformed" />
+  <meta name="topic-comment" content="Draw Sprite Transformed 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 그리기 스프라이트 변환" />
+  <meta name="search-keywords" content="변신된 스프라이트 그리기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /> Draw Sprite Transformed</h1>
-  <p>This function will draw the given sprite similar to the action <a href="Draw_Sprite.htm">Draw Sprite</a> but with additional options to change the scale, blending, rotation and frame of the sprite being drawn. Changing these values does <i>not</i> modify the resource in any way (only how it is drawn), and you can use any of the available <a href="../Instance/Set_Instance_Variable.htm">sprite property variables</a> instead of direct values for all the arguments in the function. The image below illustrates how different values affect the drawing of the sprite:</p>
-  <p><img alt="Transformed Sprite Examples" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/spr_ext.png" /></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set the font cache size to try and limit this should it be necessary using the function <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></span></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Sprite Transformed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite_Transformed.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
-      </tr>
-      <tr>
-        <td>Frame</td>
-        <td>The sprite frame to draw (use the built in variable <span class="inline">image_index</span> for the current frame)</td>
-      </tr>
-      <tr>
-        <td>X</td>
-        <td>The x position to draw at within the room</td>
-      </tr>
-      <tr>
-        <td>Y</td>
-        <td>The y position to draw at within the room</td>
-      </tr>
-      <tr>
-        <td>Scale X</td>
-        <td>The scale factor for the X axis (use the built in variable <span class="inline">image_xscale</span> for the current X scale)</td>
-      </tr>
-      <tr>
-        <td>Scale Y</td>
-        <td>The scale factor for the Y axis (use the built in variable <span class="inline">image_yscale</span> for the current Y scale)</td>
-      </tr>
-      <tr>
-        <td>Rotation</td>
-        <td>The draw angle for the sprite (from 0 to 360, rotating anticlockwise where 0 is to the right - use the built in variable <span class="inline">image_angle</span> for the current rotation)</td>
-      </tr>
-      <tr>
-        <td>Colour</td>
-        <td>The colour to blend with the sprite (default is white, and you can use the built in variable <span class="inline">image_blend</span> for the current colour)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Sprite Transformed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Sprite_Transformed.png" />The above action block code checks a variable and if it is set to <span class="inline">true</span> then the sprite is drawn with random scaling along the x and y axis and blended with the colour red, otherwise the sprite is drawn using the default transforms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Stacked_Sprites.htm">Draw Stacked Sprites</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /> 변신된 스프라이트 그리기</h1><p> 이 함수는 <a href="Draw_Sprite.htm">Draw Sprite</a> 작업과 유사하게 주어진 스프라이트를 그립니다. 그러나 그려지는 스프라이트의 크기, 혼합, 회전 및 프레임을 변경하는 추가 옵션이 있습니다. 이 값을 변경해도 리소스는 어떤 식으로든 수정되지 <i>않으며</i> (그리는 방법만) 함수의 모든 인수에 대한 직접 값 대신 사용 가능한 <a href="../Instance/Set_Instance_Variable.htm">스프라이트 속성 변수</a> 를 사용할 수 있습니다. 아래 이미지는 다양한 값이 스프라이트 그리기에 어떤 영향을 미치는지 보여줍니다.</p><p><img alt="Transformed Sprite Examples" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/spr_ext.png" /></p><p class="note"> <b><span class="note">참고</span></b> 색상 혼합은 WebGL이 활성화된 경우에만 HTML5 대상에 권장되지만 활성화되지 않은 경우 혼합 색상을 설정할 수 있으며 스프라이트가 정상적으로 혼합됩니다. 그러나 이러한 방식으로 모든 블렌딩은 중복 스프라이트를 생성한 다음 캐시에 저장하고 필요할 때 사용합니다. 이것은 최적이 아니며 여러 색상 변경을 사용하는 경우 WebGL을 활성화하지 않는 한 게임 성능이 느려집니다. WebGL을 사용하지 않으려면 글꼴 캐시 크기를 설정하여 기능을 사용하여 필요한 경우 이를 제한할 수 있습니다. <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></p><p class="note"> <b>참고</b>: 이 작업은 다양한 <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">그리기 이벤트</a> 에서만 사용되며 다른 곳에서 사용되는 경우 아무 것도 그리지 않습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Draw Sprite Transformed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite_Transformed.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Sprite</span></td><td> 그릴 스프라이트</td></tr><tr><td> <span class="notranslate">Frame</span></td><td> 그릴 스프라이트 프레임(내장 변수 사용 <span class="inline">image_index</span> 현재 프레임에 대해)</td></tr><tr><td> <span class="notranslate">X</span></td><td> 방 내에서 그릴 x 위치</td></tr><tr><td> <span class="notranslate">Y</span></td><td> 방 내에서 그릴 y 위치</td></tr><tr><td> <span class="notranslate">Scale X</span></td><td> X축에 대한 스케일 팩터(내장 변수 사용 <span class="inline">image_xscale</span> 현재 X 스케일의 경우)</td></tr><tr><td> <span class="notranslate">Scale Y</span></td><td> Y축에 대한 배율 인수(내장 변수 사용 <span class="inline">image_yscale</span> 현재 Y 스케일의 경우)</td></tr><tr><td> <span class="notranslate">Rotation</span></td><td> 스프라이트의 그리기 각도(0에서 360까지, 0이 오른쪽인 곳에서 시계 반대 방향으로 회전 - 내장 변수 사용 <span class="inline">image_angle</span> 현재 회전에 대해)</td></tr><tr><td> <span class="notranslate">Colour</span></td><td> 스프라이트와 혼합할 색상(기본값은 흰색이며 내장 변수를 사용할 수 있습니다. <span class="inline">image_blend</span> 현재 색상)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Draw Sprite Transformed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Sprite_Transformed.png" /> 위의 작업 블록 코드는 변수를 확인하고 다음으로 설정되어 있는지 확인합니다. <span class="inline">true</span> 그런 다음 스프라이트는 x 및 y 축을 따라 임의 크기로 그려지고 빨간색과 혼합됩니다. 그렇지 않으면 스프라이트는 기본 변환을 사용하여 그려집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Drawing_Actions.htm">그리기 작업</a></div><div style="float:right"> 다음: <a href="Draw_Stacked_Sprites.htm">누적 스프라이트 그리기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Sprite Transformed

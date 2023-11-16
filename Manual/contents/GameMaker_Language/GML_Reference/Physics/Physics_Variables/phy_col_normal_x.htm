@@ -6,43 +6,19 @@
   <title>phy_col_normal_x</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for phy_col_normal_x" />
+  <meta name="topic-comment" content="phy_col_normal_x에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="phy_col_normal_x" />
   <meta name="search-keywords" content="phy_col_normal_x" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">phy_col_normal_x</span></h1>
-  <p>This <b>read-only</b> variable returns the x component of the collision normal corresponding to the <span class="inline2"><a data-xref="{title}" href="phy_collision_x.htm">phy_collision_x</a></span> array value. For each contact point there is an associated contact normal (which is usually the same normal for all points of contact in the collision). This contact normal is a unit vector that points from one instance in the collision to another, and can be used, for example, to calculate the correct &quot;push&quot; direction to resolve collisions.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> This variable is only available in the collision event of a physics enabled instance.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">phy_col_normal_x</span></p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value, or <span class="inline">undefined</span> if the instance is not physics enabled)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">repeat(5 + irandom(5))<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_col_normal_x</h1><p> 이 <b>읽기 전용</b> 변수는 다음에 해당하는 충돌 법선의 x 구성 요소를 반환합니다.<a href="phy_collision_x.htm"><span class="inline">phy_collision_x</span></a> 배열 값. 각 접점에 대해 연관된 접점 법선이 있습니다(일반적으로 충돌의 모든 접점에 대해 동일한 법선). 이 접촉 법선은 충돌의 한 인스턴스에서 다른 인스턴스를 가리키는 단위 벡터이며, 예를 들어 충돌을 해결하기 위해 올바른 &quot;밀기&quot; 방향을 계산하는 데 사용할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 변수는 물리 활성화 인스턴스의 충돌 이벤트에서만 사용할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">phy_col_normal_x;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value, or <span class="inline">undefined</span> if the instance is not physics enabled)</p><p></p><h4> 예시:</h4><p class="code">repeat(5 + irandom(5))<br />
     {<br />
-        with (instance_create_layer(x, y, &quot;Effects&quot;, obj_Debris))<br />
+        with (instance_create_layer(x, y, &quot;Effects&quot;, obj_Debris)<br />
         {<br />
-            physics_apply_local_impulse(0, 0, other.<span data-field="title" data-format="default">phy_col_normal_x</span>[0], other.phy_col_normal_y[0]);<br />
+            physics_apply_local_impulse(0, 0, other.phy_col_normal_x[0], other.phy_col_normal_y[0]);<br />
         }<br />
-    }</p>
-  <p>The above code uses the contact normal to set the direction of movement for an instance created in the collision event between two physics enabled instances.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Physics_Variables.htm">Physics Variables</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="phy_col_normal_y.htm">phy_col_normal_y</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 접촉 법선을 사용하여 두 물리 활성화 인스턴스 간의 충돌 이벤트에서 생성된 인스턴스의 이동 방향을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Physics_Variables.htm">물리학 변수</a></div><div style="float:right"> 다음: <a href="phy_col_normal_y.htm"><span class="notranslate">phy_col_normal_y</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 phy_col_normal_x

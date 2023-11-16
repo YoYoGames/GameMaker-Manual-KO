@@ -4,59 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_set_precision</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for ds_set_precision" />
+  <meta name="topic-comment" content="ds_set_precision에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="ds_set_precision" />
   <meta name="search-keywords" content="ds_set_precision" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_set_precision</h1>
-  <p>When comparing values, for example when searching in a map or sorting a list, <span data-keyref="GameMaker Name">GameMaker</span> must decide when two values are equal. For strings and integer values this is clear but for real numbers, due to floating point round-off errors, seemingly equal numbers can easily become unequal. For example, it&#39;s possible that <b>(5 / 3) * 3</b> will <i>not</i> be equal to 5! To help avoid this, a precision value is used on all real number functions, and when the <i>difference between two numbers is smaller</i> than this precision they are considered equal. The default a precision of 0.0000001 is used for all data structure functions unless changed by this function.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This precision is used in all data structures but not in other comparisons in GML!</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">ds_set_precision(prec);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The precision value (default 0.0000001)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">ds_set_precision(0.0001);</p>
-  <p>The above code will change the default precision setting for all data structure functions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="ds_exists.htm">ds_exists</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_set_precision</h1><p> 예를 들어 지도에서 검색하거나 목록을 정렬할 때 값을 비교할 때 <span data-keyref="GameMaker Name">GameMaker</span> 는 두 값이 같은 경우를 결정해야 합니다. 문자열과 정수 값의 경우 이는 분명하지만 실수의 경우 부동 소수점 반올림 오류로 인해 같아 보이는 숫자가 쉽게 같지 않을 수 있습니다. 예를 들어, <b>(5 / 3) * 3</b> 은 5와 같지 <i>않을</i> 수 있습니다! 이를 방지하기 위해 모든 실수 함수에 정밀도 값이 사용 <i>되며 두 숫자의 차이가 이 정밀도보다 작</i> 으면 동일한 것으로 간주됩니다. 이 함수에 의해 변경되지 않는 한 기본 정밀도 0.0000001은 모든 데이터 구조 함수에 사용됩니다.</p><p class="note"> <b>참고</b>: 이 정밀도는 모든 데이터 구조에서 사용되지만 GML의 다른 비교에서는 사용되지 않습니다!</p><p></p><h4> 통사론:</h4><p class="code">ds_set_precision(prec);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">prec</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The precision value (default 0.0000001)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">ds_set_precision(0.0001);</p><p> 위의 코드는 모든 데이터 구조 함수에 대한 기본 정밀도 설정을 변경합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Structures.htm">데이터 구조</a></div><div style="float:right"> 다음: ds_exists</div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_set_precision

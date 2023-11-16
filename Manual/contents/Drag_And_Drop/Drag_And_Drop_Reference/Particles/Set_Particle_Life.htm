@@ -3,62 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Particle Life</title>
+  <title>입자 수명 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Particle Life action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Life" />
-  <meta name="search-keywords" content="Set Particle Life" />
+  <meta name="topic-comment" content="입자 수명 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 입자 수명 설정" />
+  <meta name="search-keywords" content="입자 수명 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Particle Life Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Life.png" /> Set Particle Life</h1>
-  <p>This action will set the lifespan of the given particle type. You first specify the particle type ID value (which is the value returned when you created the particle using the <a href="Create_Particle_Type.htm">Create Particle Type</a> action) and then
-    you can set the minimum and maximum lifespan of the particle in game frames. For example, if your game has a frames per second of 60, then setting both the lifespan values here to 60 will mean that the particles will last 1 second on screen before
-    disappearing. If you use two different values then each particle spawned will have a random lifespan set within the given minimum and maximum. Note that all values should be positive integers.</p>
-  <p class="note"><b>IMPORTANT!</b> Setting very long lifespans and then emitting hundreds of particles, can cause issues on less powerful machines and on mobile devices. Take care when setting particle lifespan to maximise the visual effect but minimise the performance
-    cost, and only use very long lifespan particles sparingly.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Particle Life Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Life.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The ID value for the global type to set the lifespan of</td>
-      </tr>
-      <tr>
-        <td>Min Life</td>
-        <td>The minimum lifespan for a particle (in game frames)</td>
-      </tr>
-      <tr>
-        <td>Max Life</td>
-        <td>The maximum lifespan for a particle (in game frames)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique
-    ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Particle_Speed.htm">Set Particle Speed</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Particle Life Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Life.png" /> 입자 수명 설정</h1><p> 이 작업은 주어진 입자 유형의 수명을 설정합니다. 먼저 입자 유형 ID 값( <a href="Create_Particle_Type.htm">입자 유형 만들기</a> 작업을 사용하여 입자를 만들 때 반환된 값)을 지정한 다음 게임 프레임에서 입자의 최소 및 최대 수명을 설정할 수 있습니다. 예를 들어 게임에 초당 프레임 수가 60인 경우 여기에서 두 수명 값을 모두 60으로 설정하면 입자가 화면에서 1초 동안 지속되어 사라지게 됩니다. 두 개의 다른 값을 사용하면 생성된 각 입자의 수명이 지정된 최소값과 최대값 내에서 무작위로 설정됩니다. 모든 값은 양의 정수여야 합니다.</p><p class="note"> <b>중요한!</b> 매우 긴 수명을 설정한 다음 수백 개의 입자를 방출하면 덜 강력한 시스템과 모바일 장치에서 문제가 발생할 수 있습니다. 시각적 효과를 최대화하지만 성능 비용을 최소화하기 위해 입자 수명을 설정할 때 주의하고 수명이 매우 긴 입자만 아껴서 사용하십시오.</p><p></p><h4> 동작 구문:</h4><p><img alt="Set Particle Life Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Life.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 수명을 설정할 전역 유형의 ID 값</td></tr><tr><td> <span class="notranslate">Min Life</span></td><td> 파티클의 최소 수명(게임 프레임 내)</td></tr><tr><td> <span class="notranslate">Max Life</span></td><td> 파티클의 최대 수명(게임 프레임 내)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" /> 위의 작업 블록 코드는 새 입자 유형을 만들고 고유 ID 값을 전역 변수에 할당합니다. 그런 다음 입자 유형에 대한 모든 속성을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Set_Particle_Speed.htm">입자 속도 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Life

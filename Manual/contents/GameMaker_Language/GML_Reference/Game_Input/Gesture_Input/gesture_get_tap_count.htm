@@ -6,41 +6,17 @@
   <title>gesture_get_tap_count</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gesture_get_tap_count" />
+  <meta name="topic-comment" content="제스처_get_tap_count에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gesture_get_tap_count" />
   <meta name="search-keywords" content="gesture_get_tap_count" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gesture_get_tap_count</h1>
-  <p>This function is used to check whether tap counting is enabled or disabled. The function will return <span class="inline">true</span> if it is enabled, and <span class="inline">false</span> otherwise and you can enable or disable tap counting using the function <a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>. When enabled, each tap event will have an additional &quot;tapcount&quot; DS map entry which will have registered the number of taps, and when enabled it means that <i>all</i> tap events will be triggered, ie: two taps will trigger both the single tap event and the double tap event, with the single tap event tap count being 1 and the double tap event tap count being 2. The tap count value will be reset to 0 after the time set for a double-tap detection has passed (see the function <a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). If tap counting is disabled, then the initial tap won&#39;t be registered until the double-tap time has passed and no second tap has been detected. Note that this is <b>enabled</b> by default.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code">gesture_get_tap_count();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if !gesture_get_tap_count()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gesture_get_tap_count</h1><p> 이 기능은 탭 카운팅의 활성화 여부를 확인하는 데 사용됩니다. 함수가 반환됩니다 <span class="inline">true</span> 활성화된 경우 <span class="inline">false</span> 그렇지 않으면 기능을 사용하여 탭 계산을 활성화하거나 비활성화할 수 있습니다.<a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>. 활성화되면 각 탭 이벤트에는 탭 수를 등록하는 추가 &quot;탭 수&quot; DS 맵 항목이 있으며 활성화되면 <i>모든</i> 탭 이벤트가 트리거됩니다. 즉, 두 번의 탭은 단일 탭 이벤트와 더블 탭 이벤트, 싱글 탭 이벤트 탭 카운트 1, 더블 탭 이벤트 탭 카운트 2. 더블 탭 감지에 설정된 시간이 지나면 탭 카운트 값이 0으로 재설정됩니다(기능 참조<a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a> ). 탭 카운팅이 비활성화된 경우 더블 탭 시간이 지나고 두 번째 탭이 감지되지 않을 때까지 초기 탭이 등록되지 않습니다. 이것은 기본적으로 <b>활성화</b> 되어 있습니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">gesture_get_tap_count();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if !gesture_get_tap_count()<br />
     {<br />
         getsure_tap_count(true);<br />
-    }</p>
-  <p>The above code checks to see if tap counting is enabled and if it is not then it is switched on.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gesture_Input.htm">Gesture Input</a></div>
-        <div style="float:right">Next: <a href="gesture_get_pinch_distance.htm">gesture_get_pinch_distance</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 탭 카운팅이 활성화되었는지 확인하고 활성화되지 않은 경우 켜져 있는지 확인합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gesture_Input.htm">제스처 입력</a></div><div style="float:right"> 다음: <a href="gesture_get_pinch_distance.htm"><span class="notranslate">gesture_get_pinch_distance</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gesture_get_tap_count

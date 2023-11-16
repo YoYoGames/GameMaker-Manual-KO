@@ -6,34 +6,19 @@
   <title>file_find_close</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for file_find_close" />
+  <meta name="topic-comment" content="file_find_close에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="file_find_close" />
   <meta name="search-keywords" content="file_find_close" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_find_close</h1>
-  <p>This function must be called after handling files opened using <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a> and <a href="file_find_next.htm"><span class="inline">file_find_next()</span></a> functions to free memory. The file find functions open handles into the file directory and these take up a minimal amount of memory, which (over time) adds up. Therefore you should always call this function after you have found the files you require to &quot;close&quot; these handles.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">file_find_close();</p>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if directory_exists(&quot;\User Content&quot;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_find_close</h1><p> 이 함수는 다음을 사용하여 열린 파일을 처리한 후에 호출해야 합니다.<a href="file_find_first.htm"><span class="inline">file_find_first()</span></a> 그리고<a href="file_find_next.htm"><span class="inline">file_find_next()</span></a> 메모리를 해제하는 기능. 파일 찾기 기능은 파일 디렉토리에 대한 핸들을 열고 이것은 (시간이 지남에 따라) 합산되는 최소한의 메모리를 차지합니다. 따라서 이러한 핸들을 &quot;닫는&quot; 데 필요한 파일을 찾은 후에는 항상 이 함수를 호출해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">file_find_close();</p><p></p><h4> 보고</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if directory_exists(&quot;\User Content&quot;)<br />
     {<br />
         fileA = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
         fileB = file_find_next();<br />
         fileC = file_find_next();<br />
         file_find_close();<br />
-    }</p>
-  <p>This code checks if the specified directory exists and if it does, goes there and returns the first &quot;read only&quot; <span class="inline">.doc</span> file found. It then looks for two more files and closes the file finder.</p>
-  <p>You can look for any number of files using a <a href="../../../GML_Overview/Language_Features/while.htm">while</a> loop:</p>
-  <p class="code">var files = [];<br />
+    }</p><p> 이 코드는 지정된 디렉토리가 존재하는지 확인하고 존재하는 경우 그곳으로 이동하여 첫 번째 &quot;읽기 전용&quot;을 반환합니다. <span class="inline">.doc</span> 파일을 찾았습니다. 그런 다음 두 개의 파일을 더 찾고 파일 찾기를 닫습니다.</p><p> <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a> 루프를 사용하여 원하는 수의 파일을 찾을 수 있습니다.</p><p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
     while (file_name != &quot;&quot;)<br />
@@ -44,19 +29,7 @@
     }<br />
     <br />
     file_find_close();
-  </p>
-  <p>The above code creates an empty array to store all the file names that were found, and starts looking for read only <span class="inline">.doc</span> files. If that file name is not an empty string, it pushes it into the <span class="inline">files</span> array, and then attempts to find the next file. The loop will keep repeating until an empty string is found (meaning there are no more matching files), which is when it ends the loop and closes the file finder at the end.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="file_attributes.htm">file_attributes</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 찾은 모든 파일 이름을 저장할 빈 배열을 만들고 읽기 전용 찾기를 시작합니다. <span class="inline">.doc</span> 파일. 해당 파일 이름이 빈 문자열이 아닌 경우 파일 이름으로 푸시합니다. <span class="inline">files</span> 배열을 찾은 다음 다음 파일을 찾으려고 시도합니다. 루프는 빈 문자열이 발견될 때까지(즉, 일치하는 파일이 더 이상 없을 때까지) 루프를 종료하고 끝에서 파일 찾기를 닫을 때까지 계속 반복됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_System.htm">파일 시스템</a></div><div style="float:right"> 다음: <a href="file_attributes.htm"><span class="notranslate">file_attributes</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_close

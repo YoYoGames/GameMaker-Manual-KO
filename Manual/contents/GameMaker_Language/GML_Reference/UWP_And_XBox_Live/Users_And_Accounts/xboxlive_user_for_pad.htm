@@ -6,37 +6,13 @@
   <title>xboxlive_user_for_pad</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for xboxlive_user_for_pad" />
+  <meta name="topic-comment" content="xboxlive_user_for_pad에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="xboxlive_user_for_pad" />
   <meta name="search-keywords" content="xboxlive_user_for_pad" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_user_for_pad</h1>
-  <p>This function will return the User ID pointer associated with the given gamepad index value, or <span class="inline">pointer_null</span> if no user is associated with it. Note that this function should only be used with gamepad indices, and <b>not</b> with <a href="xboxlive_get_user_count.htm"><span class="inline">xboxlive_get_user_count()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">xboxlive_user_for_pad(pad_index);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>pad_index</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The index (an integer) of the gamepad slot to check</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span> or <span data-keyref="Type_Pointer_Null">pointer_null</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">for(var i = 0; i &lt; 11; ++i;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_user_for_pad</h1><p> 이 함수는 주어진 게임패드 인덱스 값과 관련된 사용자 ID 포인터를 반환하거나, <span class="inline">pointer_null</span> 연결된 사용자가 없는 경우. 이 기능은 게임패드 인덱스 <b>에만</b> 사용해야 하며,<a href="xboxlive_get_user_count.htm"><span class="inline">xboxlive_get_user_count()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">xboxlive_user_for_pad(pad_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">pad_index</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The index (an integer) of the gamepad slot to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span> or <span data-keyref="Type_Pointer_Null">pointer_null</span></p><p></p><h4> 예시:</h4><p class="code">for(var i = 0; i &lt; 11; ++i;)<br />
     {<br />
         var u_id = xboxlive_user_for_pad(i);<br />
         if u_id != pointer_null<br />
@@ -47,19 +23,7 @@
         {<br />
             pad_name[i] = &quot;Press Play&quot;;<br />
         }<br />
-    }</p>
-  <p>The above code loops through all available pad slots and checks to see if there is a user ID pointer associated with it. If there is, an array is set with the user display name, otherwise the array is set to some default text.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Users_And_Accounts.htm">Users And Accounts</a></div>
-        <div style="float:right">Next: <a href="xboxlive_pad_for_user.htm">xboxlive_pad_for_user</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 사용 가능한 모든 패드 슬롯을 반복하고 이와 연결된 사용자 ID 포인터가 있는지 확인합니다. 있는 경우 배열이 사용자 표시 이름으로 설정되고, 그렇지 않으면 배열이 일부 기본 텍스트로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Users_And_Accounts.htm">사용자 및 계정</a></div><div style="float:right"> 다음: <a href="xboxlive_pad_for_user.htm"><span class="notranslate">xboxlive_pad_for_user</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_user_for_pad

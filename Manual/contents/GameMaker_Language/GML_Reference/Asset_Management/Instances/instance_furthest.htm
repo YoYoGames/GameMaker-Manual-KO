@@ -6,63 +6,19 @@
   <title>instance_furthest</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function instance_furthest" />
+  <meta name="topic-comment" content="instance_furthest 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="instance_furthest" />
   <meta name="search-keywords" content="instance_furthest" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_furthest</h1>
-  <p>This function will check all the instances of the given object to see which is furthest from the given x/y point. All checks will be from the given x/y position to the <i>origin</i> (the x/y position) of instances of the object specified. If no instances of the object exist, the function will return the keyword <a href="../../../GML_Overview/Instance_Keywords.htm">noone</a>, but if there are instances then it will return the <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> of the instance found. Please note that if the instance running the code has the same object index as the object being checked, then it will be included in the check (this includes checks for parent objects if the calling instance is also a child of the parent).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">instance_furthest(x, y, obj);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x position to check for instances far from.</td>
-     </tr>
-      <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y position to check for instances far from.</td>
-     </tr>
-      <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The object to check for instances of.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var inst;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_furthest</h1><p> 이 함수는 주어진 개체의 모든 인스턴스를 검사하여 주어진 x/y 지점에서 가장 멀리 있는 개체를 확인합니다. 모든 검사는 지정된 x/y 위치에서 지정된 개체 인스턴스의 <i>원점</i> (x/y 위치)까지 수행됩니다. 객체의 인스턴스가 없으면 함수는 키워드 <a href="../../../GML_Overview/Instance_Keywords.htm"><span class="notranslate">noone</span></a> 을 반환하지만 인스턴스가 있으면 반환합니다.<a href="Instance_Variables/id.htm"><span class="inline">id</span></a> 발견된 인스턴스의 코드를 실행하는 인스턴스에 검사 중인 객체와 동일한 객체 인덱스가 있는 경우 검사에 포함됩니다(호출 인스턴스가 부모의 자식인 경우 부모 객체에 대한 검사도 포함됨).</p><p></p><h4> 통사론:</h4><p class="code">instance_furthest(x, y, obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x position to check for instances far from.</span></td></tr><tr><td> <span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y position to check for instances far from.</span></td></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The object to check for instances of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p><p></p><h4> 예시:</h4><p class="code">var inst;<br />
     inst = instance_furthest(x, y, object_index);<br />
     if inst != id<br />
     {<br />
         draw_line(x, y, inst.x, inst.y);<br />
-    }</p>
-  <p>The above code will find the furthest instance that shares the same object index as the instance running the code and store the id in a variable. This variable is then checked to see if it is the same as the id of the calling instance and, if it is not, a line is drawn between the two instances.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="instance_nearest.htm">instance_nearest</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 코드를 실행하는 인스턴스와 동일한 객체 인덱스를 공유하는 가장 먼 인스턴스를 찾고 id를 변수에 저장합니다. 그런 다음 이 변수를 검사하여 호출 인스턴스의 ID와 동일한지 확인하고, 그렇지 않은 경우 두 인스턴스 사이에 선을 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instances.htm">인스턴스</a></div><div style="float:right"> 다음: <a href="instance_nearest.htm"><span class="notranslate">instance_nearest</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_furthest

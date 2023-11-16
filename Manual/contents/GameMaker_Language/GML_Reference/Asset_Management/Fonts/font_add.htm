@@ -4,85 +4,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>font_add</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function font_add" />
+  <meta name="topic-comment" content="font_add 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="font_add" />
   <meta name="search-keywords" content="font_add" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">font_add</span></h1>
-  <p>This function can be used to add a font to your game from a font file present in the <a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">Included Files</a>. You can define the size of the font (in points), as well as whether the font should be <b>bold</b> or <i>italic</i>, and you can also define the range of characters to include. The function returns an <i>index</i> value that should be stored in a variable as this will be needed in all further code that refer to this font, or it will return <span class="inline">-1</span> if the function fails for any reason.</p>
-  <p>Note that the font file must be either a <span class="inline2">*.ttf</span> or <span class="inline2">*.otf</span> file, which can also be useful for adding non-standard fonts like Asian or Arabic fonts.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"> </span> </b>If you include such a font in the Included Files, it <b>must be licensed</b> for distribution with the game.</p>
-  <p>On Windows, this function can also load fonts installed on the system, e.g. <span class="inline2">&quot;Arial&quot;</span>. However it is not recommended to rely on system fonts, as another machine running your game may not have the same fonts installed.</p>
-  <p>On HTML5, this function can only be used to add <b>Web Fonts</b>, and will only work if WebGL is <b>not</b> enabled - if WebGL is enabled then you must use a general font resource (i.e.: using <a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a> along with a font from the Asset Browser) or bitmap fonts (see <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>).</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_warning.hts"> </span> When targeting HTML5, italics and bold text is only supported if the font asset or web font itself has these characters included. They will not be synthesised from the base font.</p>
-  <p>When loading a font from a file the <i>size</i> of the font is in <b>pixels</b> and the <i>first</i> and <i>last</i> values are ignored, meaning all glyphs in the font will be added. Fonts added in this way are assigned to their own texture page, so care should be taken when using this function as it will increment the number of texture swaps when drawing. It is also worth noting that fonts may appear slightly larger when drawn, since glyphs may have parts that are drawn outside of the bounding box defined for the font. You should be aware too that there is a limitation of around 200 glyphs that can be rendered in a single frame for a particular font.</p>
-  <p>By default, added fonts will have anti-aliasing enabled. However you can check the state of AA at any time using the function <span class="inline3_func"><a data-xref="{title}" href="font_add_get_enable_aa.htm">font_add_get_enable_aa</a></span> and you can enable/disable AA using the function <span class="inline3_func"><a data-xref="{title}" href="font_add_enable_aa.htm">font_add_enable_aa</a></span>.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> When you load a font into <span data-keyref="GameMaker Name">GameMaker</span> you must remember to remove it again (with <span class="inline3_func"><a data-xref="{title}" href="font_delete.htm">font_delete</a></span>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">font_add</span>(name, size, bold, italic, first, last);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The path of the font file in the Included Files (*.<span class="inline">ttf</span> or <span class="inline">*.otf</span>).</td>
-      </tr>
-      <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The size of the font - points for Web Fonts, pixels for file fonts.</td>
-      </tr>
-      <tr>
-        <td>bold</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the font is bold (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
-      </tr>
-      <tr>
-        <td>italic</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the font is italic (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
-      </tr>
-      <tr>
-        <td>first</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The first character to include (if you&#39;re unsure, go for 32).</td>
-      </tr>
-      <tr>
-        <td>last</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The last character to include (if you&#39;re unsure, go for 128).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset_Font"><a href="../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">new_font = <span data-field="title" data-format="default">font_add</span>(&quot;gamefont.ttf&quot;, 24, true, true, 32, 128);</p>
-  <p>This will load the <span class="inline2">gamefont.ttf</span> file present in the game&#39;s Included Files with a 24pt size. The font will be bold and italic, and the font range will include capital and lower case letters, numbers and all common punctuation. After the font is loaded, its ID will be stored in the <span class="inline2">new_font</span> variable.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="font_add_sprite.htm">font_add_sprite</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_add</h1><p> 이 기능은 <a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">Included Files</a> 에 있는 글꼴 파일에서 게임에 글꼴을 추가하는 데 사용할 수 있습니다. 글꼴 크기(포인트)와 글꼴을 <b>굵게</b> 또는 <i>기울임꼴</i> 로 정의할 수 있으며 포함할 문자 범위도 정의할 수 있습니다. 이 함수는 이 글꼴을 참조하는 모든 추가 코드에 필요하므로 변수에 저장해야 하는 <i>인덱스</i> 값을 반환합니다. 그렇지 않으면 <span class="inline">-1</span> 어떤 이유로든 기능이 실패하는 경우.</p><p> 글꼴 파일은 다음 중 하나여야 합니다. <span class="inline">*.ttf</span> 또는<span class="inline">*.otf</span> 아시아 또는 아랍어 글꼴과 같은 비표준 글꼴을 추가하는 데 유용할 수도 있습니다.</p><p class="note"> <b>경고!:</b> 포함된 파일에 이러한 글꼴을 포함하는 경우 게임과 함께 배포 <b>할 수 있도록 라이선스를 받아야 합니다</b>.</p><p> HTML5 대상 모듈의 경우 이 기능은 <b>웹 글꼴</b> 을 추가하는 데만 사용할 수 있으며 WebGL이 활성화 <b>되지 않은</b> 경우에만 작동합니다. WebGL이 활성화된 경우 일반 글꼴 리소스를 사용해야 합니다(예:<a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a> 자산 브라우저의 글꼴과 함께) 또는 비트맵 글꼴(참조<a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a> ).</p><p class="note"> <b>중요한!</b> HTML5를 대상으로 할 때 기울임꼴 및 굵은 텍스트는 글꼴 자산 또는 웹 글꼴 자체에 이러한 문자가 포함된 경우에만 지원됩니다. 기본 글꼴에서 합성되지 않습니다.</p><p> 파일에서 글꼴을 로드할 때 글꼴 <i>크기</i> 는 <b>픽셀 단위</b> 이며 <i>첫 번째</i> 및 <i>마지막</i> 값은 무시됩니다. 즉, 글꼴의 모든 글리프가 추가됩니다. 이런 식으로 추가된 글꼴은 고유한 텍스처 페이지에 할당되므로 이 기능을 사용할 때 그림을 그릴 때 텍스처 스왑 횟수가 증가하므로 주의해야 합니다. 글리프에는 글꼴에 대해 정의된 경계 상자 외부에 그려지는 부분이 있을 수 있으므로 글꼴을 그릴 때 글꼴이 약간 더 크게 나타날 수도 있습니다. 특정 글꼴에 대해 단일 프레임에 렌더링할 수 있는 글리프가 약 200개로 제한되어 있다는 점도 알고 있어야 합니다.</p><p> 기본적으로 추가된 글꼴에는 앤티앨리어싱이 활성화됩니다. 그러나 기능을 사용하여 언제든지 AA의 상태를 확인할 수 있습니다.<a href="font_add_get_enable_aa.htm"><span class="inline">font_add_get_enable_aa()</span></a> 기능을 사용하여 AA를 활성화/비활성화할 수 있습니다.<a href="font_add_enable_aa.htm"><span class="inline">font_add_enable_aa()</span></a>.</p><p class="note"> <b><span class="note">참고</span></b> <span data-keyref="GameMaker Name">GameMaker</span> 에 글꼴을 로드할 때 글꼴을 다시 제거해야 합니다(<span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span> ) 더 이상 필요하지 않을 때 메모리 누수의 위험이 있어 속도가 느려지고 결국 게임이 중단됩니다.</p><p></p><h4> 통사론:</h4><p class="code">font_add(name, size, bold, italic, first, last);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">name</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The path of the font file in the Included Files (*.<span class="inline">ttf</span> or <span class="inline">*.otf</span> ).</span></td></tr><tr><td> <span class="notranslate">size</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The size of the font - points for Web Fonts, pixels for file fonts.</span></td></tr><tr><td> <span class="notranslate">bold</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the font is bold (<span class="inline">true</span> ) or not (<span class="inline">false</span> ).</span></td></tr><tr><td> <span class="notranslate">italic</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the font is italic (<span class="inline">true</span> ) or not (<span class="inline">false</span> ).</span></td></tr><tr><td> <span class="notranslate">first</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The first character to include (if you&#39;re unsure, go for 32).</span></td></tr><tr><td> <span class="notranslate">last</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The last character to include (if you&#39;re unsure, go for 128).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Font">Font Asset</span></p><p></p><h4> 예시:</h4><p class="code">new_font = font_add(&quot;gamefont.ttf&quot;, 24, true, true, 32, 128);</p><p> 로드됩니다 <span class="inline">&quot;</span><span class="inline">gamefont.ttf</span><span class="inline">&quot;</span> 24pt 크기의 게임 포함 파일에 있는 파일입니다. 글꼴은 굵게 기울임꼴로 표시되며 글꼴 범위에는 대문자와 소문자, 숫자 및 모든 일반적인 구두점이 포함됩니다. 글꼴이 로드된 후 해당 ID는 <span class="inline">new_font</span> 변하기 쉬운. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Fonts.htm">글꼴</a></div><div style="float:right"> 다음: <a href="font_add_sprite.htm"><span class="notranslate">font_add_sprite</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_add

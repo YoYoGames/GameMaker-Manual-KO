@@ -3,54 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Buffer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>버퍼 생성</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Create Buffer action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Buffer" />
-  <meta name="search-keywords" content="Create Buffer" />
+  <meta name="topic-comment" content="버퍼 생성 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 버퍼 생성" />
+  <meta name="search-keywords" content="버퍼 생성" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /> Create Buffer</h1>
-  <p>This action can be used to allocate a portion of memory as a buffer in your game, with the function returning the unique <i>buffer id</i> value that should be stored in a variable and used for all further function calls to the buffer. You can supply a global variable, an instance variable or have the action create a temporary local variable for storing the buffer ID. Note that you can create additional buffers by clicking the plus icon <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> </span>beside the action, and selecting another variable to hold the buffer ID.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="Delete_Buffer.htm">Delete Buffer</a> action (in the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Other - Clean Up</a> event, for example). This is especially important to remember when using a temporary local variable, as if you do not remove the buffer again before the end of the event or action script then you will no longer be able access it and can have issues later.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Create_Buffer.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The value to add into the list</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Create_Buffer.png" />The above action block code creates a global variable and then a buffer, assigning the unique buffer ID to the variable. This buffer than has two pieces of data written to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Copy_Buffer.htm">Copy Buffer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /> 버퍼 생성</h1><p> 이 작업은 메모리의 일부를 게임에서 버퍼로 할당하는 데 사용할 수 있으며, 이 함수는 변수에 저장되어야 하고 버퍼에 대한 모든 추가 함수 호출에 사용되어야 하는 고유한 <i>버퍼 ID</i> 값을 반환합니다. 전역 변수, 인스턴스 변수를 제공하거나 작업이 버퍼 ID를 저장하기 위한 임시 지역 변수를 생성하도록 할 수 있습니다. 더하기 아이콘을 클릭하여 추가 버퍼를 생성할 수 있습니다.<span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span> 작업 옆에 있는 버퍼 ID를 보유할 다른 변수를 선택합니다.</p><p class="note"> <b>참고</b>: 메모리 누수를 방지하기 위해 더 이상 필요하지 않을 때 이와 같이 동적으로 생성된 리소스를 메모리에서 제거하는 것이 중요합니다. 따라서 생성한 버퍼로 작업을 마치면 버퍼 <a href="Delete_Buffer.htm">삭제</a> 작업(에서 <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">기타 - 정리</a> 이벤트 등). 이는 이벤트 또는 작업 스크립트가 끝나기 전에 버퍼를 다시 제거하지 않으면 더 이상 액세스할 수 없고 나중에 문제가 발생할 수 있으므로 임시 로컬 변수를 사용할 때 기억하는 것이 특히 중요합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Create Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Create_Buffer.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Buffer</span></td><td> 버퍼 인덱스(변수에 저장됨)</td></tr><tr><td> <span class="notranslate">Value</span></td><td> 목록에 추가할 값</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Create Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Create_Buffer.png" /> 위의 액션 블록 코드는 전역 변수를 생성한 다음 버퍼를 생성하여 변수에 고유한 버퍼 ID를 할당합니다. 이 버퍼에는 두 개의 데이터가 기록되어 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffer_Actions.htm">버퍼 작업</a></div><div style="float:right"> 다음: <a href="Copy_Buffer.htm">버퍼 복사</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Buffer

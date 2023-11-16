@@ -6,56 +6,17 @@
   <title>keyboard_check_pressed</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for keyboard_check_pressed" />
+  <meta name="topic-comment" content="keyboard_check_pressed에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="keyboard_check_pressed" />
   <meta name="search-keywords" content="keyboard_check_pressed" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">keyboard_check_pressed</span></h1>
-  <p>With this function you can check to see if a key has been pressed or not.</p>
-  <p>Unlike the <span class="inline3_func"><a data-xref="{title}" href="keyboard_check.htm">keyboard_check</a></span> function, this function will only return <span class="inline2">true</span> in the step the key is pressed down, i.e. when it switches from not held down in the previous step to held down in the current step. So for it to return <span class="inline2">true</span> again, the key must be first released and then pressed again. In all other steps, the function returns <span class="inline2">false</span>.</p>
-  <p>The function will take a keycode value as returned by the function <span class="inline3_func"><a data-xref="{title}" href="../../Strings/ord.htm">ord</a></span> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main <a data-xref="{title}" href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code"><span data-field="title" data-format="default">keyboard_check_pressed</span>(key);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>key</td>
-        <td><span data-keyref="Type_Constant_VK"><a href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm" target="_blank">Virtual Key Constant (vk_*)</a></span></td>
-        <td>The key to check the pressed state of.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4><b>Returns:</b></h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
-  <p class="code">if <span data-field="title" data-format="default">keyboard_check_pressed</span>(vk_anykey)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_check_pressed</h1><p> 이 기능을 사용하면 키를 눌렀는지 여부를 확인할 수 있습니다. 달리<a href="keyboard_check.htm"><span class="inline">keyboard_check()</span></a> 기능에서 이 기능은 키를 누를 때마다 한 번만 실행되므로 다시 트리거하려면 먼저 키를 놓았다가 다시 눌러야 합니다. 함수는 함수에서 반환된 키 코드 값을 사용합니다.<a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (AZ의 <i>대문자</i> 또는 0-9의 숫자만), 또는 <span class="inline">vk_*</span> 기본 <a href="Keyboard_Input.htm">키보드 입력</a> 페이지에 나열된 상수.</p><p></p><h4> <b>통사론:</b></h4><p class="code">keyboard_check_pressed(key);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">key</span></td><td> <span data-keyref="Type_Constant_VK">가상 키 상수(vk_*)</span></td><td> <span class="notranslate">The key to check the pressed state of.</span></td></tr></tbody></table><p></p><h4> <b>보고:</b></h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> <b>예시:</b></h4><p class="code">if keyboard_check_pressed(vk_anykey)<br />
     {<br />
         room_goto_next();<br />
-    }</p>
-  <p>The above code will advance to the next room if the player presses any of the keyboard&#39;s keys (working like a &quot;Press Any Key to Continue&quot; prompt).</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Keyboard_Input.htm">Keyboard Input</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="keyboard_check_released.htm">keyboard_check_released</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 플레이어가 키보드의 키 중 하나를 누르면 다음 방으로 진행됩니다(&quot;계속하려면 아무 키나 누르십시오&quot; 프롬프트처럼 작동). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Keyboard_Input.htm">키보드 입력</a></div><div style="float:right"> 다음: <a href="keyboard_check_released.htm"><span class="notranslate">keyboard_check_released</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_check_pressed

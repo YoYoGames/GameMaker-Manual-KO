@@ -7,40 +7,18 @@
   <title>rollback_game_running</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
   <meta name="rh-index-keywords" content="rollback_game_running" />
   <meta name="search-keywords" content="rollback_game_running" />
 </head>
-<body>
-  <h1>rollback_game_running</h1>
-  <p>This global variable indicates whether the rollback game is currently running. If this is <span class="inline2">true</span>, it means the rollback game has started and is currently running. At all other times, it will be <span class="inline2">false</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">rollback_game_running</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (!rollback_game_running) return;<br />
+<body><h1>롤백_게임_실행 중</h1><p> 이 전역 변수는 롤백 게임이 현재 실행 중인지 여부를 나타냅니다. 이것이 <span class="inline2">true 이면</span> 롤백 게임이 시작되어 현재 실행 중임을 의미합니다. 다른 모든 경우에는 <span class="inline2">false</span> 가 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">rollback_game_running</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if (!rollback_game_running) return;<br />
     <br />
     x += move_x;<br />
     y += move_y;
-  </p>
-  <p>The above code would run in the Step event of a player object. When the rollback game is not running, it would exit the event, so the player can&#39;t be controlled until the rollback game has started.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Variables.htm">Rollback Variables</a></div>
-        <div>Next: <a data-xref="{title}" href="player_avatar_s.htm">player_avatar_sprite</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 플레이어 개체의 Step 이벤트에서 실행됩니다. 롤백 게임이 실행되고 있지 않으면 이벤트를 종료하므로 롤백 게임이 시작될 때까지 플레이어를 제어할 수 없습니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Variables.htm">변수 롤백</a></div><div> 다음: <a data-xref="{title}" href="player_avatar_s.htm">player_avatar_sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_game_running

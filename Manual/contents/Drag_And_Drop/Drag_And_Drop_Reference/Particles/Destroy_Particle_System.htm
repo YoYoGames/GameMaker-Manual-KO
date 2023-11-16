@@ -3,53 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Destroy Particle System</title>
+  <title>파티클 시스템 파괴</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Destroy Particle System action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Destroy Particle System" />
-  <meta name="search-keywords" content="Destroy Particle System" />
+  <meta name="topic-comment" content="Destroy Particle System 액션을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 파티클 시스템 파괴" />
+  <meta name="search-keywords" content="파티클 시스템 파괴" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Destroy Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_System.png" width="32" /> Destroy Particle System</h1>
-  <p>This action will &quot;destroy&quot; the given particle system (ie: free up the memory used by the particle system). You supply the unique ID value for the system to destroy, as returned when you created the system with the action <a href="Create_Particle_System.htm">Create Particle System</a>.
-    This action should be called whenever you no longer need a particle system in your game, or whenever you wish to re-create the particle system (for example, just before calling a <a href="../Game/Restart_Game.htm">Restart Game</a>). Note that if the
-    particle system has <i>not</i> been flagged as <b>Persistent</b> then you do not need to call this action, as the particle system (and any emitters associated with it) will be automatically cleaned up on room end.</p>
-  <p class="note"><b>IMPORTANT!</b> This function will also destroy and remove any emitters that may have been created and associated with the system being destroyed (see <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a> for more information).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Destroy Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Destroy_Particle_System.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td>The unique ID value for the system to be destroyed</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Destroy Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Destroy_Particle_System.png" />The above action block code will check for the &quot;Space&quot; key
-    being pressed and if it is detected then it removes the particle system and different particle types defined in the given global variables and then restarts the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Clear_Particle_System.htm">Clear Particle System</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Destroy Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_System.png" width="32" /> 파티클 시스템 파괴</h1><p> 이 작업은 주어진 입자 시스템을 &quot;파괴&quot;합니다(즉, 입자 시스템에서 사용하는 메모리를 해제합니다). <a href="Create_Particle_System.htm">Create Particle System</a> 작업으로 시스템을 생성할 때 반환된 파괴할 시스템의 고유 ID 값을 제공합니다. 이 작업은 게임에 더 이상 파티클 시스템이 필요하지 않거나 파티클 시스템을 다시 생성하려는 경우(예: <a href="../Game/Restart_Game.htm">Restart Game</a> 을 호출하기 직전) 호출해야 합니다. 파티클 시스템이 <b>Persistent</b> 로 플래그가 지정 <i>되지</i> 않은 경우 이 작업을 호출할 필요가 없습니다. 파티클 시스템(및 관련 이미터)이 룸 끝에서 자동으로 정리되기 때문입니다.</p><p class="note"> <b>중요한!</b> 이 함수는 또한 생성되고 파괴되는 시스템과 연관되었을 수 있는 모든 이미터를 파괴하고 제거합니다(자세한 내용은 <a href="Create_Particle_Emitter.htm">파티클 이미터 생성</a> 참조).</p><p></p><h4> 동작 구문:</h4><p><img alt="Destroy Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Destroy_Particle_System.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">System</span></td><td> 파기할 시스템의 고유 ID 값</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Destroy Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Destroy_Particle_System.png" /> 위의 액션 블록 코드는 &quot;Space&quot; 키가 눌렸는지 확인하고 감지되면 파티클 시스템과 주어진 전역 변수에 정의된 다른 파티클 유형을 제거한 다음 게임을 다시 시작합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Clear_Particle_System.htm">입자 시스템 지우기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Destroy Particle System

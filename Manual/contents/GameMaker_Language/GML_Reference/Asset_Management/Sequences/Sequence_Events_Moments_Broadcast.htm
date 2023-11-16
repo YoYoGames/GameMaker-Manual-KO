@@ -3,47 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Sequence Events, Moments and Broadcast Messages</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>시퀀스 이벤트, 순간 및 브로드캐스트 메시지</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Sequence Events, Moments and Broadcast Messages" />
+  <meta name="topic-comment" content="시퀀스 이벤트, 순간 및 브로드캐스트 메시지와 관련된 다양한 기능 및 변수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Sequence Events,Sequence Momements,Sequence Messages,broadcast messages,event_create,event_destroy,event_clean_up,event_step,event_step_begin,event_step_end,event_async_system,event_broadcast_message" />
+  <meta name="search-keywords" content="시퀀스 이벤트,시퀀스 모멘트,시퀀스 메시지,방송 메시지,event_create,event_destroy,event_clean_up,event_step,event_step_begin,event_step_end,event_async_system,event_broadcast_message" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Events, Moments and Broadcast Messages</h1>
-  <p>Apart from all the properties listed <a href="Sequences.htm">here</a> for a sequence struct, you also have the possibility of adding in special &quot;action&quot; properties to a sequence. There are three different types of these &quot;action&quot; properties that can be added to a sequence object - <b>Events</b>. <b>Moments</b> and <b>Broadcast Messages</b> - and each of these is explained in more detail in the sections below.</p>
-  <h2>Sequence Events</h2>
-  <p>Sequence objects can have <b>events</b> added to them, and these events are analogous to the events used by object assets. The events you assign to a sequence object will occur in a specific order, either once at a defined moment in the sequence life-cycle, or every frame that the sequence is running. In this section, we discuss how these events are handled using code, but they can also be added using the <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence Editor</a>. Note that that the order of events listed here is not influenced by the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> direction, and even if the sequence is playing backwards, the events will still be run in the order given below.</p>
-  <p>The available events are:<b></b></p>
-  <ul class="colour">
-    <li><b>Create</b>: this is triggered when a sequence instance is created on a layer.</li>
-    <li><b>Destroy</b>: this is triggered when a sequence instance on a layer is destroyed.</li>
-    <li><b>Clean-up</b>: this is triggered when a sequence instance is garbage collected.</li>
-    <li><b>Step</b>: triggered just before the usual object step event. <b>Important!</b> If the sequence is paused then this event will not be triggered until the next step after the sequence starts playing again.</li>
-    <li><b>Begin Step</b>: triggered just before the object begin-step event. <b>Important!</b> If the sequence is paused then this event will not be triggered until the next step after the sequence starts playing again.</li>
-    <li><b>End Step</b>: triggered just before the object end-step event. <b>Important!</b> If the sequence is paused then this event will not be triggered until the next step after the sequence starts playing again.</li>
-    <li><b>Async System</b>: triggered the same as any object <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">Asynchronous System Event</a> handlers. <em><b>Important!</b> If the sequence is paused then this event will not be triggered.</em></li>
-    <li><b>Broadcast Message</b>: triggered during sequence update as a broadcast message keyframe is encountered.</li>
-  </ul>
-  <p>All events need to be associated with functions that are defined in a script, so to set up an event a <a href="../../../GML_Overview/Method_Variables.htm">method variable</a> must be assigned to a property with the correct name that tells the sequence which event should call the function. The syntax for this is as follows:</p>
-  <p class="code">&lt;sequence_struct&gt;.&lt;event_property&gt; = method(&lt;sequence_struct&gt;, &lt;function_name&gt;);</p>
-  <p>The sequence struct properties for the different events are as follows:<span class="inline"></span></p>
-  <ul class="colour">
-    <li><span class="inline">event_create</span><span class="inline"></span></li>
-    <li><span class="inline">event_destroy</span><span class="inline"></span></li>
-    <li><span class="inline">event_clean_up</span><span class="inline"></span></li>
-    <li><span class="inline">event_step</span><span class="inline"></span></li>
-    <li><span class="inline">event_step_begin</span><span class="inline"></span></li>
-    <li><span class="inline">event_step_end</span></li>
-    <li><span class="inline">event_async_system</span><span class="inline"></span></li>
-    <li><span class="inline">event_broadcast_message</span></li>
-  </ul>
-  <p>To give an example of use, let&#39;s say we want the sequence to reverse direction when a left mouse button click is detected. We would first need to create a script with the function that we want to call, something like this:</p>
-  <p class="code">/// @function seq_reverse();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 이벤트, 순간 및 브로드캐스트 메시지</h1><p> 시퀀스 구조체에 대해 <a href="Sequences.htm">여기</a> 에 나열된 모든 속성 외에도 시퀀스에 특수 &quot;액션&quot; 속성을 추가할 수도 있습니다. 시퀀스 개체에 추가할 수 있는 이러한 &quot;동작&quot; 속성에는 세 가지 유형인 <b>이벤트</b> 가 있습니다. <b>순간</b> 및 <b>브로드캐스트 메시지</b> - 그리고 이들 각각은 아래 섹션에서 더 자세히 설명됩니다.</p><h2> 시퀀스 이벤트</h2><p> 시퀀스 개체에는 <b>이벤트</b> 가 추가될 수 있으며 이러한 이벤트는 개체 자산에서 사용하는 이벤트와 유사합니다. 시퀀스 개체에 할당하는 이벤트는 시퀀스 수명 주기의 정의된 순간에 한 번 또는 시퀀스가 실행 중인 모든 프레임에서 특정 순서로 발생합니다. 이 섹션에서는 이러한 이벤트가 코드를 사용하여 처리되는 방법에 대해 설명하지만 <a href="../../../../The_Asset_Editors/Sequences.htm">시퀀스 편집기</a> 를 사용하여 추가할 수도 있습니다. 여기에 나열된 이벤트의 순서는 <a class="glossterm" data-glossterm="플레이헤드" href="#">재생 헤드</a> 방향의 영향을 받지 않으며 시퀀스가 거꾸로 재생되더라도 이벤트는 여전히 아래 지정된 순서로 실행됩니다.</p><p> 사용 가능한 이벤트는 다음과 같습니다.<b></b></p><ul class="colour"><li> <b>생성</b>: 레이어에 시퀀스 인스턴스가 생성될 때 트리거됩니다.</li><li> <b>Destroy</b>: 레이어의 시퀀스 인스턴스가 파괴될 때 트리거됩니다.</li><li> <b>정리</b>: 시퀀스 인스턴스가 가비지 수집될 때 트리거됩니다.</li><li> <b>단계</b>: 일반적인 개체 단계 이벤트 직전에 트리거됩니다. <b>중요한!</b> 시퀀스가 일시 중지된 경우 시퀀스 재생이 다시 시작된 후 다음 단계까지 이 이벤트가 트리거되지 않습니다.</li><li> <b>단계 시작</b>: 개체 시작 단계 이벤트 직전에 트리거됩니다. <b>중요한!</b> 시퀀스가 일시 중지된 경우 시퀀스 재생이 다시 시작된 후 다음 단계까지 이 이벤트가 트리거되지 않습니다.</li><li> <b>End Step</b>: 객체의 end-step 이벤트 직전에 발생합니다. <b>중요한!</b> 시퀀스가 일시 중지된 경우 시퀀스 재생이 다시 시작된 후 다음 단계까지 이 이벤트가 트리거되지 않습니다.</li><li> <b>Async System</b>: 모든 객체 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">비동기 시스템 이벤트</a> 핸들러와 동일하게 트리거됩니다. <em><b>중요한!</b> 시퀀스가 일시 중지되면 이 이벤트가 트리거되지 않습니다.</em></li><li> <b>브로드캐스트 메시지</b>: 브로드캐스트 메시지 키프레임이 발생하면 시퀀스 업데이트 중에 트리거됩니다.</li></ul><p> 모든 이벤트는 스크립트에 정의된 함수와 연결되어야 하므로 이벤트를 설정하려면 어떤 이벤트가 함수를 호출해야 하는지 순서를 알려주는 올바른 이름을 가진 속성에 <a href="../../../GML_Overview/Method_Variables.htm">메서드 변수</a> 를 할당해야 합니다. 이에 대한 구문은 다음과 같습니다.</p><p class="code">&lt;sequence_struct&gt;.&lt;event_property&gt; = method(&lt;sequence_struct&gt;, &lt;function_name&gt;);</p><p> 다양한 이벤트에 대한 시퀀스 구조체 속성은 다음과 같습니다. <span class="inline"></span></p><ul class="colour"><li><span class="inline">event_create</span><span class="inline"></span></li><li><span class="inline">event_destroy</span><span class="inline"></span></li><li><span class="inline">event_clean_up</span><span class="inline"></span></li><li><span class="inline">event_step</span><span class="inline"></span></li><li><span class="inline">event_step_begin</span><span class="inline"></span></li><li><span class="inline">event_step_end</span></li><li><span class="inline">event_async_system</span><span class="inline"></span></li><li><span class="inline">event_broadcast_message</span></li></ul><p> 사용 예를 들어 왼쪽 마우스 버튼 클릭이 감지될 때 시퀀스가 방향을 반대로 하기를 원한다고 가정해 보겠습니다. 먼저 다음과 같이 호출하려는 함수로 스크립트를 만들어야 합니다.</p><p class="code">/// @function seq_reverse();<br />
     <br />
     function seq_reverse()<br />
     {<br />
@@ -56,24 +25,14 @@
             else self.headDirection = seqdir_right;<br />
         }<br />
     }
-  </p>
-  <p>In this function all we&#39;re doing is listening for a mouse press and then reversing the playback direction of the sequence that the method has been bound to. You&#39;ll notice that currently you are not able to pass any parameters to the functions which are linked to these properties, and in all cases the <a href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">self</span></a> variable within the scope of the function is assigned to be the sequence instance.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span></b> It&#39;s worth noting that in the above script the <span class="inline">self</span> identifier can be omitted and is only used to explicitly show the scope of the method variable being used for this example.</p>
-  <p>To assign this to a sequence you would then do something like this:</p>
-  <p class="code">var _seq = sequence_get(Sequence1);<br />
-    _seq.event_step = method(_seq, seq_reverse);</p>
-  <p>We have now assigned a step event to the sequence <i>object</i> with a function to detect when a mouse is pressed and then change the playhead direction of the sequence <i>instance</i> after it has been created in a room.</p>
-  <h2><label for="2">Moments</label></h2>
-  <p>A sequence <b>moment</b> is a unique code action that is fired on one or more specified frames as the sequence plays. These code moments are - like with events (explained above) - simply predefined <a href="../../../GML_Overview/Method_Variables.htm">method variables</a> that are triggered on the given frame. For example, say you want a sequence to create a &quot;bullet&quot; instance on a specific frame of the animation - first you&#39;d need to create the function that is to be used for this action, something like this:</p>
-  <p class="code">/// @function seq_shoot();<br />
+  </p><p> 이 함수에서 우리가 하는 일은 마우스 누름을 수신한 다음 메서드가 바인딩된 시퀀스의 재생 방향을 바꾸는 것입니다. 현재 이러한 속성에 연결된 함수에 매개변수를 전달할 수 없으며 모든 경우에<a href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">self</span></a> 함수 범위 내의 변수는 시퀀스 인스턴스로 할당됩니다.</p><p class="note"> <b>참고</b>: 위의 스크립트에서 <span class="inline">self</span> 식별자는 생략할 수 있으며 이 예제에 사용되는 메서드 변수의 범위를 명시적으로 표시하는 데만 사용됩니다.</p><p> 이것을 시퀀스에 할당하려면 다음과 같이 하면 됩니다.</p><p class="code">var _seq = sequence_get(Sequence1);<br />
+    _seq.event_step = method(_seq, seq_reverse);</p><p> 이제 마우스를 눌렀을 때 감지하고 방에서 생성된 후 시퀀스 <i>인스턴스</i> 의 재생 헤드 방향을 변경하는 기능을 사용하여 시퀀스 <i>개체</i> 에 단계 이벤트를 할당했습니다.</p><h2> <label for="2">모멘트</label></h2><p> 시퀀스 <b>순간</b> 은 시퀀스가 재생될 때 하나 이상의 지정된 프레임에서 실행되는 고유한 코드 작업입니다. 이러한 코드 순간은 이벤트(위에서 설명)와 마찬가지로 주어진 프레임에서 트리거되는 단순히 미리 정의된 <a href="../../../GML_Overview/Method_Variables.htm">메서드 변수</a> 입니다. 예를 들어 시퀀스가 애니메이션의 특정 프레임에 &quot;글머리 기호&quot; 인스턴스를 생성하기를 원한다고 가정해 보겠습니다. 먼저 다음과 같이 이 작업에 사용할 함수를 생성해야 합니다.</p><p class="code">/// @function seq_shoot();<br />
     <br />
     seq_shoot = function()<br />
     {<br />
         instance_create_layer(sequence.xorigin, sequence.yorigin, &quot;Instances&quot;, obj_Bullet);<br />
     }
-  </p>
-  <p>You would then add this to a frame in the <span class="inline">momentKeyframes</span> property of the sequence struct. This is essentially a &quot;special&quot; track that is only used for this purpose and so can only take keyframe data that is associated with moment actions that you want the sequence to have. This track is created in much the same way as you would create any other track, by creating keyframe structs and filling them with keyframe data, where channel 0 is the only channel that you can use and the track type is <span class="inline">seqtracktype_moment</span>. Below is an example of how this would be created, using the function we defined above to fire on the given moments (frames):</p>
-  <p class="code">var _seq = sequence_get(my_Seq);<br />
+  </p><p> 그런 다음 이것을 프레임에 추가합니다. <span class="inline">momentKeyframes</span> 시퀀스 구조체의 속성입니다. 이것은 본질적으로 이 목적으로만 사용되는 &quot;특수&quot; 트랙이므로 시퀀스에 포함하려는 순간 동작과 연결된 키프레임 데이터만 사용할 수 있습니다. 이 트랙은 키프레임 구조를 만들고 키프레임 데이터로 채우는 방식으로 다른 트랙을 만드는 것과 거의 동일한 방식으로 만들어집니다. 여기서 채널 0은 사용할 수 있는 유일한 채널이고 트랙 유형은 다음과 같습니다. <span class="inline">seqtracktype_moment</span>. 아래는 위에서 정의한 함수를 사용하여 주어진 순간(프레임)을 실행하는 방법의 예입니다.</p><p class="code">var _seq = sequence_get(my_Seq);<br />
     var _k = array_create(3);<br />
     _k[0] = sequence_keyframe_new(seqtracktype_moment);<br />
     _k[0].frame = 60;<br />
@@ -88,12 +47,7 @@
     _k[0].channels = _d;<br />
     _k[1].channels = _d;<br />
     _k[2].channels = _d;<br />
-    _seq.momentKeyframes = _k;</p>
-  <p>The above code will simply set frames 60, 120, and 180 of the &quot;moment&quot; track to call the method <span class="inline">seq_shoot</span>. You&#39;ll notice that currently you are not able to pass any parameters to the functions which are used for each moment, and in all cases the <span class="inline">self</span> variable within the scope of the function is assigned to be the sequence instance (you generally don&#39;t need to use <span class="inline">self</span> but under some special cases it may be useful).</p>
-  <h2><label for="3">Broadcast Messages</label></h2>
-  <p>Sequences can be made to generate <b>broadcast messages</b>, which simple strings that are added to specific frames along the animation timeline, and when that point in the timeline is reached, then the string will be broadcast out to all object instances that listen for it. You can add these messages in the IDE using the <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence editor</a>, but they can also be created and edited using code.</p>
-  <p>To create a broadcast message on a sequence using GML, you need to add them to a frame in the <span class="inline">messageEventKeyframes</span> property of the sequence struct. This is essentially a &quot;special&quot; track that is only used for this purpose and so can only take keyframe data that is associated with the broadcast messages that you want the sequence to have. This track is created in much the same way as you would create any other track, by creating keyframe structs and filling them with keyframe data, where channel 0 is the only channel that you can use and the track type is <span class="inline">seqtracktype_message</span>. Below is an example of how this would be created:</p>
-  <p class="code">var _seq = sequence_get(my_Seq);<br />
+    _seq.momentKeyframes = _k;</p><p> 위의 코드는 단순히 &quot;순간&quot; 트랙의 프레임 60, 120 및 180을 설정하여 메서드를 호출합니다. <span class="inline">seq_shoot</span>. 현재 각 순간에 사용되는 함수에 매개변수를 전달할 수 없으며 모든 경우에 <span class="inline">self</span> 함수 범위 내의 변수는 시퀀스 인스턴스로 할당됩니다(일반적으로 <span class="inline">self</span> 그러나 특별한 경우에는 유용할 수 있습니다).</p><h2> <label for="3">방송 메시지</label></h2><p> 애니메이션 타임라인을 따라 특정 프레임에 추가되는 간단한 문자열인 <b>브로드캐스트 메시지</b> 를 생성하기 위한 시퀀스를 만들 수 있으며, 타임라인의 해당 지점에 도달하면 문자열을 수신하는 모든 개체 인스턴스로 문자열이 브로드캐스트됩니다. <a href="../../../../The_Asset_Editors/Sequences.htm">시퀀스 편집기</a> 를 사용하여 IDE에 이러한 메시지를 추가할 수 있지만 코드를 사용하여 만들고 편집할 수도 있습니다.</p><p> GML을 사용하여 시퀀스에 브로드캐스트 메시지를 생성하려면 해당 메시지를 다음 프레임에 추가해야 합니다. <span class="inline">messageEventKeyframes</span> 시퀀스 구조체의 속성입니다. 이것은 본질적으로 이 목적으로만 사용되는 &quot;특수&quot; 트랙이므로 시퀀스에 포함하려는 브로드캐스트 메시지와 연결된 키프레임 데이터만 사용할 수 있습니다. 이 트랙은 키프레임 구조를 만들고 키프레임 데이터로 채우는 방식으로 다른 트랙을 만드는 것과 거의 동일한 방식으로 만들어집니다. 여기서 채널 0은 사용할 수 있는 유일한 채널이고 트랙 유형은 다음과 같습니다. <span class="inline">seqtracktype_message</span>. 다음은 생성 방법의 예입니다.</p><p class="code">var _seq = sequence_get(my_Seq);<br />
     var _k = array_create(2);<br />
     _k[0] = sequence_keyframe_new(seqtracktype_message);<br />
     _k[0].frame = 60;<br />
@@ -114,19 +68,7 @@
     _d2[0].events = _m2;<br />
     _k[0].channels = _d1;<br />
     _k[1].channels = _d2;<br />
-    _seq.messageEventKeyframes = _k;</p>
-  <p>You&#39;ll notice that the message text is passed to the keyframe data channel as an array. This is because you can broadcast multiple messages on the same frame, and have different object instances listen for them and react differently depending on the message they are actually expecting.</p>
-  <p>Once a broadcast message has been emitted by the sequence, you can parse it using the <i>Other</i> &gt; <i>Broadcast Message</i> event in object instances, which is explained in detail <a href="../../../../The_Asset_Editors/Sequence_Properties/Broadcast_Messages.htm">here</a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    _seq.messageEventKeyframes = _k;</p><p> 메시지 텍스트가 배열로 키프레임 데이터 채널에 전달되었음을 알 수 있습니다. 이는 동일한 프레임에서 여러 메시지를 브로드캐스트할 수 있고 서로 다른 개체 인스턴스가 메시지를 수신하고 실제로 예상하는 메시지에 따라 다르게 반응하도록 할 수 있기 때문입니다.</p><p> 브로드캐스트 메시지가 시퀀스에 의해 내보내지면 <a href="../../../../The_Asset_Editors/Sequence_Properties/Broadcast_Messages.htm">여기</a> 에 자세히 설명되어 있는 개체 인스턴스의 <i>기타</i> &gt; <i>브로드캐스트 메시지</i> 이벤트를 사용하여 이를 구문 분석할 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequences.htm">시퀀스</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequence Events

@@ -6,54 +6,17 @@
   <title>os_powersave_enable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for os_powersave_enable" />
+  <meta name="topic-comment" content="os_powersave_enable에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="os_powersave_enable" />
   <meta name="search-keywords" content="os_powersave_enable" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_powersave_enable</h1>
-  <p>With this function you can turn on or off the power saving features of the device. This is important as certain games (for example those that use the tilt functions) may not generate events that the OS can interpret as being user input and so shut down the screen or exit the game. By setting this function to <span class="inline">false</span> you can disable the power saving features and ensure that the screen (and game) are always functioning.</p>
-  <p class="note"><b>NOTE</b>: This is limited to iOS and Android targets.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">os_powersave_enable(flag)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>flag</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Set to <span class="inline">true</span> or <span class="inline">false</span> to enable or disable powersave functions.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (os_type == os_android) || (os_type == os_ios)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_powersave_enable</h1><p> 이 기능을 사용하여 장치의 절전 기능을 켜거나 끌 수 있습니다. 이것은 특정 게임(예: 기울기 기능을 사용하는 게임)이 OS가 사용자 입력으로 해석할 수 있는 이벤트를 생성하지 않아 화면을 종료하거나 게임을 종료할 수 있기 때문에 중요합니다. 이 기능을 로 설정하면 <span class="inline">false</span> 절전 기능을 비활성화하고 화면(및 게임)이 항상 작동하는지 확인할 수 있습니다.</p><p class="note"> <b>참고</b>: 이것은 iOS 및 Android 대상으로 제한됩니다.</p><p></p><h4> 통사론:</h4><p class="code">os_powersave_enable(flag)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Set to <span class="inline">true</span> or <span class="inline">false</span> to enable or disable powersave functions.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (os_type == os_android) || (os_type == os_ios)<br />
     {<br />
         os_powersave_enable(false);<br />
-    }</p>
-  <p>The above code checks the OS type and if it is either Android or an iOS then power saving features are deactivated.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_lock_orientation.htm">os_lock_orientation</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 OS 유형을 확인하고 Android 또는 iOS이면 절전 기능이 비활성화됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="OS_And_Compiler.htm">OS와 컴파일러</a></div><div style="float:right"> 다음: <a href="os_lock_orientation.htm"><span class="notranslate">os_lock_orientation</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_powersave_enable

@@ -6,62 +6,17 @@
   <title>object_set_persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function object_set_persistent" />
+  <meta name="topic-comment" content="object_set_persistent 함수 개요 페이지" />
   <meta name="rh-index-keywords" content="object_set_persistent" />
   <meta name="search-keywords" content="object_set_persistent" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_persistent</h1>
-  <p>With this function you can set the persistence of a specific object. A persistent object is &quot;carried over&quot; from room to room and maintains its properties at all times (for more information on persistence see the section on the <a href="../../../../The_Asset_Editors/Objects.htm">Object Editor</a>). Setting the persistence of the object means that all instances of this object that are created <i>after the persistence has been changed</i> will be created persistent, while instances that are already in the room may not be affected.</p>
-  <p>When you create an instance with persistence enabled in a room, it will be assigned a layer or a depth (depending on which function you used to create the instance of the object). When the room is changed, and if the following room does <i>not</i> have a layer with the same name or depth as the one assigned, then a new layer will be created for the instance that is persisting across the rooms. If you gave a named layer when the instance was created, then the new layer will also be named the same as original layer, while if you assigned a depth to the instance then the new layer will be named &quot;<span class="inline">_layer_XXX</span>&quot;, where &quot;XXX&quot; is a hex value used to give the layer a unique name. These layers will be removed from the room on Room End. Another thing to note about layers and persistent instances is that if you have assigned the instance a named layer on creation, and there is another layer in the following rooms with the same name, then the persisted instance will be assigned to the layer with the same name <i>regardless of the depth of the layer</i>. Finally, if a persisted instance moves to a room with a layer at the same depth as the instance was created on, it will <i>not</i> be assigned to this layer, but instead a new layer will be created at the same depth (following the naming convention explained previously).</p>
-  <p>Please note that this is not an instance function! You can set the persistent flag of individual instances using the <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a> variable and so have ten instances all flagged as persistent even though the object in question has the flag set to false in the IDE, and even if you change the persistent flag of the object to true using this function, all instances that currently in the room will remain as they were, and only instances created after calling the function will start with persistent flagged as true.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">object_set_persistent(index, pers);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span></td>
-        <td>The index of the object to change.</td>
-      </tr>
-      <tr>
-        <td>pers</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the object should be flagged as persistent (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (room == rm_final)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_set_persistent</h1><p> 이 기능을 사용하여 특정 개체의 지속성을 설정할 수 있습니다. 영속 객체는 방에서 방으로 &quot;이동&quot;되고 항상 속성을 유지합니다(지속성에 대한 자세한 내용은 <a href="../../../../The_Asset_Editors/Objects.htm">개체 편집기</a> 섹션 참조). 객체의 지속성을 설정한다는 것은 <i>지속성이 변경된 후에</i> 생성된 이 객체의 모든 인스턴스가 지속적으로 생성된다는 것을 의미하지만 이미 룸에 있는 인스턴스는 영향을 받지 않을 수 있습니다.</p><p> 방에서 지속성이 활성화된 인스턴스를 생성하면 레이어 또는 깊이가 할당됩니다(객체 인스턴스 생성에 사용한 기능에 따라 다름). 룸이 변경되고 다음 룸에 할당된 것과 동일한 이름이나 깊이를 가진 레이어가 <i>없으면</i> 룸 전체에 지속되는 인스턴스에 대해 새 레이어가 생성됩니다. 인스턴스를 생성할 때 명명된 레이어를 지정했다면 새 레이어의 이름도 원래 레이어와 동일하게 지정되고, 인스턴스에 깊이를 지정했다면 새 레이어의 이름은 &quot;<span class="inline">_layer_XXX</span> &quot;, 여기서 &quot;XXX&quot;는 레이어에 고유한 이름을 지정하는 데 사용되는 16진수 값입니다. 이러한 레이어는 Room End의 룸에서 제거됩니다. 레이어 및 영구 인스턴스에 대해 주의해야 할 또 다른 사항은 인스턴스에 이름을 지정한 경우 생성할 때 레이어가 생성되고 다음 룸에 같은 이름의 다른 레이어가 있는 경우 레이어 <i>의 깊이에 관계없이</i> 동일한 이름의 레이어에 지속 인스턴스가 할당됩니다.마지막으로 지속 인스턴스가 방으로 이동하는 경우 인스턴스가 생성된 것과 동일한 깊이의 레이어가 있는 경우 이 레이어에 할당 <i>되지 않고</i> 대신 동일한 깊이에서 새 레이어가 생성됩니다(이전에 설명한 명명 규칙에 따름).</p><p> 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 다음을 사용하여 개별 인스턴스의 영구 플래그를 설정할 수 있습니다.<a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a> 변수이므로 문제의 객체가 IDE에서 플래그를 false로 설정하더라도 10개의 인스턴스가 모두 영구 플래그가 지정됩니다. 이 함수를 사용하여 객체의 영구 플래그를 true로 변경하더라도 현재 방에 있는 모든 인스턴스는 그대로 유지되며, 함수를 호출한 후에 생성된 인스턴스만 true로 플래그가 지정된 퍼시스턴트로 시작됩니다.</p><p></p><h4> 통사론:</h4><p class="code">object_set_persistent(index, pers);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The index of the object to change.</span></td></tr><tr><td> <span class="notranslate">pers</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the object should be flagged as persistent (<span class="inline">true</span> ) or not (<span class="inline">false</span> ).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (room == rm_final)<br />
     {<br />
         object_set_persistent(obj_Player, false);<br />
     }<br />
-    instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p>
-  <p>The above code checks to see in which room the instance is currently in and if it is in the specified &quot;rm_final&quot; then it sets the persistence of the object &quot;obj_Player&quot; to false and then creates the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_set_solid.htm">object_set_solid</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p><p> 위의 코드는 인스턴스가 현재 어느 방에 있는지 확인하고 지정된 &quot;rm_final&quot;에 있으면 개체 &quot;obj_Player&quot;의 지속성을 false로 설정한 다음 인스턴스를 만듭니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Objects.htm">개체</a></div><div style="float:right"> 다음: <a href="object_set_solid.htm"><span class="notranslate">object_set_solid</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_persistent

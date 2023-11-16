@@ -6,58 +6,15 @@
   <title>xboxlive_fire_event</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for xboxlive_fire_event" />
+  <meta name="topic-comment" content="xboxlive_fire_event에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="xboxlive_fire_event" />
   <meta name="search-keywords" content="xboxlive_fire_event" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_fire_event</h1>
-  <p>This function can be used to fire a stat event. The &quot;event_name&quot; argument is the name of the event to be fired as defined in the XDP console for your game, and the following additional parameters will also depend on what you have a set up for the stat. The function will return 0 if the event was sent (and should be received/processed by the server) or -1 if there was an error (ie: your event was not setup as the event manifest file included in the project says another number).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">xboxlive_fire_event(event_name, [stat_parameters...]);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>event_name</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the event to fire.</td>
-      </tr>
-      <tr>
-        <td>stat_parameters</td>
-        <td><span data-keyref="Type_Any">Variable</span></td>
-        <td><span class="optional">OPTIONAL</span> Additional parameters to add to the event.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _user = xboxlive_get_user(0);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_fire_event</h1><p> 이 함수는 stat 이벤트를 발생시키는 데 사용할 수 있습니다. &quot;event_name&quot; 인수는 게임의 XDP 콘솔에 정의된 대로 실행될 이벤트의 이름이며 다음 추가 매개변수도 통계에 대해 설정한 항목에 따라 다릅니다. 함수는 이벤트가 전송된 경우 0을 반환하고(서버에서 수신/처리해야 함) 오류가 있는 경우 -1을 반환합니다(예: 프로젝트에 포함된 이벤트 매니페스트 파일에 다른 번호가 표시되어 있으므로 이벤트가 설정되지 않았습니다)..</p><p></p><h4> 통사론:</h4><p class="code">xboxlive_fire_event(event_name, [stat_parameters...]);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">event_name</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name of the event to fire.</span></td></tr><tr><td> <span class="notranslate">stat_parameters</span></td><td> <span data-keyref="Type_Any">변하기 쉬운</span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> Additional parameters to add to the event.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">var _user = xboxlive_get_user(0);<br />
     var _uid = xboxlive_user_id_for_user(_user);<br />
-    result = xboxlive_fire_event(&quot;PlayerSessionStart&quot;, _uid, global.guid_str, 0, 42, 42);</p>
-  <p>The above code gets some information about the user then fires off a stat event along with this (and additional) data.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_setup.htm"> xboxlive_stats_setup </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    result = xboxlive_fire_event(&quot;PlayerSessionStart&quot;, _uid, global.guid_str, 0, 42, 42);</p><p> 위의 코드는 사용자에 대한 일부 정보를 얻은 다음 이(및 추가) 데이터와 함께 통계 이벤트를 시작합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Stats_And_Leaderboards.htm">통계 및 순위표</a></div><div style="float:right"> 다음: <a href="xboxlive_stats_setup.htm">xboxlive_stats_setup</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_fire_event

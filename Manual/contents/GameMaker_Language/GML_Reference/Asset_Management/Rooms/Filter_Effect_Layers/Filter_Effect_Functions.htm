@@ -3,81 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Filter and Effect Functions</title>
+  <title>필터 및 효과 기능</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Filter/Effect Layers" />
+  <meta name="topic-comment" content="필터/효과 레이어와 관련된 다양한 기능 및 변수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Filter and Effect Functions" />
+  <meta name="search-keywords" content="필터 및 효과 기능" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Filter and Effect Functions</h1>
-  <h2>Overview</h2>
-  <p>There are various GML functions that can be used to create, modify and remove filters/effects from layers within a room, allowing you to easily manage effects in real-time to create realistic and dynamic filters/effects.</p>
-  <div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"> </div>
-  <p>The latter method (of specifying the filter/effect in your code) only works with string <a class="glossterm" data-glossterm="literal" href="#">literal</a><span class="glossextra">s</span> directly specified in the function argument, which means that if you use a variable or any logic to come up with the filter/effect name string, then the asset compiler will not detect that and the filter/effect will not be loaded.</p>
-  <p>Consider the following examples:</p>
-  <p class="code">// This will work on its own<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 필터 및 효과 기능</h1><h2> 개요</h2><p> 방 내의 레이어에서 필터/효과를 생성, 수정 및 제거하는 데 사용할 수 있는 다양한 GML 기능이 있어 실시간으로 효과를 쉽게 관리하여 사실적이고 동적인 필터/효과를 생성할 수 있습니다.</p><div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"></div><p> 코드에서 필터/효과를 지정하는 후자 <span class="glossextra">의</span> 방법은 함수 인수에 직접 지정된 문자열 <a class="glossterm" data-glossterm="정확한" href="#">리터럴</a> 에서만 작동합니다. 즉, 변수나 논리를 사용하여 필터/효과 이름 문자열을 만들면 자산 컴파일러는 이를 감지하지 못하고 필터/효과가 로드되지 않습니다.</p><p> 다음 예를 고려하십시오.</p><p class="code">// This will work on its own<br />
     var _fxshake = fx_create(&quot;_filter_screenshake&quot;);<br />
     <br />
     // This will NOT work on its own<br />
     var _myfilters = { screenshake: &quot;_screenshake&quot; }<br />
     var _filter_to_use = &quot;_filter&quot; + _myfilters.screenshake;<br />
     var _fxshake = fx_create(_filter_to_use);
-  </p>
-  <p>To ensure that the latter method works, you can simply add the filter to at least one room in your project, or ensure that <span class="inline"><a href="fx_create.htm">fx_create()</a></span> is called anywhere in your project with the filter name as a string constant (and not a variable).</p>
-  <div data-conref="../../../../../assets/snippets/FX_Limitations.hts"> </div>
-  <h2>Function List</h2>
-  <p>The following functions are used to create and manage &quot;FX Structs&quot; containing effect data:</p>
-  <ul class="colour">
-    <li><a href="fx_create.htm">fx_create</a></li>
-    <li><a href="fx_get_parameter.htm">fx_get_parameter</a></li>
-    <li><a href="fx_get_parameters.htm">fx_get_parameters</a></li>
-    <li><a href="fx_get_name.htm">fx_get_name</a></li>
-    <li><a href="fx_get_parameter_names.htm">fx_get_parameter_names</a></li>
-    <li><a data-xref="{title}" href="fx_get_single_layer.htm">fx_get_single_layer</a></li>
-    <li><a href="fx_set_parameter.htm">fx_set_parameter</a></li>
-    <li><a href="fx_set_parameters.htm">fx_set_parameters</a></li>
-    <li><a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a></li>
-  </ul>
-  <p>The following functions are used for modifying layers that may contain Filters/Effects by making use of FX Structs:</p>
-  <ul class="colour">
-    <li><a href="layer_set_fx.htm">layer_set_fx</a></li>
-    <li><a href="layer_get_fx.htm">layer_get_fx</a></li>
-    <li><a href="layer_clear_fx.htm">layer_clear_fx</a></li>
-    <li><a data-xref="{title}" href="layer_enable_fx.htm">layer_enable_fx</a></li>
-    <li><a data-xref="{title}" href="layer_fx_is_enabled.htm">layer_fx_is_enabled</a></li>
-  </ul>
-  <h2>Modify FX At Runtime</h2>
-  <p>You can modify filters/effects at runtime by doing the following:</p>
-  <ul class="colour">
-    <li><strong>Retrieve the FX struct</strong> from the layer you want to modify by calling <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>
-      <ul>
-        <li><em>Or, create a new FX struct by calling <span class="inline"><a href="fx_create.htm">fx_create()</a></span> and apply it to a layer using <span class="inline"><a href="layer_set_fx.htm">layer_set_fx()</a></span></em></li>
-      </ul>
-    </li>
-    <li><strong>Retrieve its parameter struct</strong> by calling <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span><span class="inline"></span></li>
-    <li><strong>Modify the parameters</strong> as required by assigning values to the struct variables
-      <ul>
-        <li><em>Get the parameter names from here: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX Types &amp; Parameters</a></em></li>
-      </ul>
-    </li>
-    <li><strong>Apply the modified struct</strong> back to the FX struct by calling <span class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span>
-      <ul>
-        <li><em>You do not need to call <a href="layer_set_fx.htm"><span class="inline">layer_set_fx()</span></a> here as modifying the FX struct directly affects the layer it is already assigned to</em></li>
-      </ul>
-    </li>
-  </ul>
-  <p>Here is example code for the workflow mentioned above:</p>
-  <p class="code_heading">Create Event</p>
-  <p class="code">// Store the FX struct, and its parameters struct, in variables<br />
+  </p><p> 후자의 방법이 제대로 작동하도록 하려면 프로젝트의 최소한 하나의 방에 필터를 추가하거나 <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 필터 이름을 변수가 아닌 문자열 상수로 사용하여 프로젝트의 모든 위치에서 호출됩니다.</p><h2> 기능 목록</h2><p> 다음 기능은 효과 데이터가 포함된 &quot;FX 구조체&quot;를 만들고 관리하는 데 사용됩니다.</p><ul class="colour"><li> <a href="fx_create.htm">fx_create</a></li><li> <a href="fx_get_parameter.htm">fx_get_parameter</a></li><li> <a href="fx_get_parameters.htm">fx_get_parameters</a></li><li> <a href="fx_get_name.htm">fx_get_name</a></li><li> <a href="fx_get_parameter_names.htm">fx_get_parameter_names</a></li><li> <a data-xref="{title}" href="fx_get_single_layer.htm">fx_get_single_layer</a></li><li> <a href="fx_set_parameter.htm">fx_set_parameter</a></li><li> <a href="fx_set_parameters.htm">fx_set_parameters</a></li><li> <a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a></li></ul><p> 다음 함수는 FX 구조체를 사용하여 필터/효과를 포함할 수 있는 레이어를 수정하는 데 사용됩니다.</p><ul class="colour"><li> <a href="layer_set_fx.htm">layer_set_fx</a></li><li> <a href="layer_get_fx.htm">layer_get_fx</a></li><li> <a href="layer_clear_fx.htm">layer_clear_fx</a></li><li> <a data-xref="{title}" href="layer_enable_fx.htm">layer_enable_fx</a></li><li> <a data-xref="{title}" href="layer_fx_is_enabled.htm">layer_fx_is_enabled</a></li></ul><h2> 런타임 시 FX 수정</h2><p> 다음을 수행하여 런타임에 필터/효과를 수정할 수 있습니다.</p><ul class="colour"><li> 를 호출하여 수정하려는 레이어에서 <strong>FX 구조체를 검색합니다.</strong> <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span><ul><li> <em>또는 다음을 호출하여 새 FX 구조체를 만듭니다. <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 다음을 사용하여 레이어에 적용합니다. <span class="inline"><a href="layer_set_fx.htm">layer_set_fx()</a></span></em></li></ul></li><li> 호출 <strong>하여 매개변수 구조체를 검색합니다.</strong> <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span><span class="inline"></span></li><li> 구조체 변수에 값을 할당하여 필요에 <strong>따라 매개변수를 수정합니다.</strong><ul><li> <em>여기에서 매개변수 이름을 가져옵니다: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX 유형 및 매개변수</a></em></li></ul></li><li> 다음을 호출 <strong>하여 수정된 구조체를 FX 구조체에 다시 적용합니다.</strong> <span class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span><ul><li> <em>당신은 전화 할 필요가 없습니다<a href="layer_set_fx.htm"><span class="inline">layer_set_fx()</span></a> 여기서 FX 구조체를 수정하면 이미 할당된 레이어에 직접 영향을 미치기 때문에</em></li></ul></li></ul><p> 다음은 위에서 언급한 워크플로에 대한 예제 코드입니다.</p><p class="code_heading"> 이벤트 생성</p><p class="code">// Store the FX struct, and its parameters struct, in variables<br />
     pixelate_fx = layer_get_fx(&quot;Effect_1&quot;);<br />
-    pixelate_fx_params = fx_get_parameters(pixelate_fx);</p>
-  <p class="code_heading">Step Event</p>
-  <p class="code">// Change param as variable<br />
+    pixelate_fx_params = fx_get_parameters(pixelate_fx);</p><p class="code_heading"> 단계 이벤트</p><p class="code">// Change param as variable<br />
     pixelate_fx_params.g_CellSize = round((mouse_x / room_width) * 64);<br />
     <br />
     // Or, change param as string<br />
@@ -85,41 +29,7 @@
     <br />
     // Apply updated parameters struct to the FX struct<br />
     fx_set_parameters(pixelate_fx, pixelate_fx_params);
-  </p>
-  <h2>FX Runtime Parameters</h2>
-  <p>The <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX Types &amp; Parameters</a> page lists all Filters/Effects along with their <strong>Runtime Parameters</strong>.</p>
-  <p>You can use the Runtime parameter names in the following three ways (using the parameter <span class="inline2">&quot;g_CellSize&quot;</span> as an example):</p>
-  <ul class="colour">
-    <li>Modify a parameter in an FX struct by calling <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter()</a></span>: <span class="inline2">fx_set_parameter(fx_struct, <strong>&quot;g_CellSize&quot;</strong>, 8);</span></li>
-    <li>Modify a variable in a parameter struct: <span class="inline2">params_struct.<strong>g_CellSize</strong> = 8;</span>
-      <ul>
-        <li><span class="note">NOTE</span> <em>Make sure to get the parameter struct first by calling <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span>.</em></li>
-      </ul>
-    </li>
-    <li>Modify a variable in a parameter struct using the <span class="inline2">$</span> accessor and a string: <span class="inline2">params_struct[$ <strong>&quot;g_CellSize&quot;</strong>] = 8;</span></li>
-  </ul>
-  <h2>Single Layer Mode</h2>
-  <p>By default, a filter/effect is applied to the layer that it is <a href="layer_set_fx.htm">assigned to</a> and all layers below that layer, however you can use <a href="fx_set_single_layer.htm"><span class="inline">fx_set_single_layer()</span></a> to enable <strong>Single Layer</strong> mode for a filter/effect to make sure that it&#39;s only applied to the layer that it is assigned to.</p>
-  <p>The following visual shows a filter being applied to multiple layers (which is the default behaviour for all FX layers), and then the same filter with Single Layer mode enabled and applied to a non-FX layer:</p>
-  <div class="image_columns">
-    <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png" title="Fire Jump man is woozy with the universe" />
-      <figcaption>Single Layer Mode OFF</figcaption>
-    </figure>
-    <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png" style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
-      <figcaption>Single Layer Mode ON</figcaption>
-    </figure>
-  </div>
-  <p>You can also make use of Single-Layer effects in the Room Editor by using the <a href="../../../../../IDE_Tools/The_Inspector.htm">Inspector</a>.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="../General_Layer_Functions/General_Layer_Functions.htm">General Layer Functions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><h2> FX 런타임 매개변수</h2><p> <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX 유형 및 매개변수</a> 페이지는 <strong>런타임 매개변수</strong> 와 함께 모든 필터/효과를 나열합니다.</p><p> 다음 세 가지 방법으로 런타임 매개변수 이름을 사용할 수 있습니다(예: <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter()</a>>&quot;g_CellSize&quot;</span> 매개변수 사용).</p><ul class="colour"><li> 를 호출하여 FX 구조체의 매개변수 수정 <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span>: <span class="inline">fx_set_single_layer()>fx_set_parameter(fx_struct, <strong>&quot;g_CellSize&quot;</strong>, 8);</span></li><li> 매개변수 구조체 <span class="inline2">params_struct에서 변수를 수정합니다. <strong>g_CellSize</strong> = 8;</span><ul><li> <span class="note">참고</span> <em>먼저 다음을 호출하여 매개변수 구조체를 가져와야 합니다.<span class="inline"></span>.</em></li></ul></li><li> <span class="inline2">$</span> 접근자와 문자열을 사용하여 매개변수 구조체의 변수를 수정합니다. <span class="inline2">params_struct[$ <strong>&quot;g_CellSize&quot;</strong> ] = 8;</span></li></ul><h2> 단일 레이어 모드</h2><p> 기본적으로 필터/효과는 <a href="layer_set_fx.htm">할당된</a> 레이어와 해당 레이어 아래의 모든 레이어에 적용되지만 다음을 사용할 수 있습니다.<a href="fx_set_single_layer.htm"><span class="inline"></span></a> 필터/효과에 대해 <strong>단일 레이어</strong> 모드를 활성화하여 할당된 레이어에만 적용되도록 합니다.</p><p> 다음 시각적 개체는 여러 레이어에 적용된 필터(모든 FX 레이어의 기본 동작)를 보여주고 단일 레이어 모드가 활성화되어 비FX 레이어에 적용된 동일한 필터를 보여줍니다.</p><div class="image_columns"><figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png" title="Fire Jump man is woozy with the universe" /><figcaption> 단일 레이어 모드 끄기</figcaption></figure><figure><img alt="Fire Jump man is woozy... alone" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png" style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" /><figcaption> 단일 레이어 모드 켜짐</figcaption></figure></div><p> <a href="../../../../../IDE_Tools/The_Inspector.htm">Inspector</a> 를 사용하여 Room Editor에서 단일 레이어 효과를 사용할 수도 있습니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Rooms.htm">객실</a></div><div style="float:right"> 다음: <a href="../General_Layer_Functions/General_Layer_Functions.htm">일반 계층 기능</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Filter and Effect Functions

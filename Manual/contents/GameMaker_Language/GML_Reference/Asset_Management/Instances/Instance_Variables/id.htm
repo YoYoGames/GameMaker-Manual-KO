@@ -6,45 +6,19 @@
   <title>id</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the variable id" />
+  <meta name="topic-comment" content="변수 id를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="id" />
   <meta name="search-keywords" content="id" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>id</h1>
-  <p>This <b>read-only</b> variable holds the unique identifying number for the instance. Every instance that you create - whether through code or by adding them to a room in the Room Editor - is given a number that is used internally to identify this instance and the variable <span class="inline">id</span> is what you can use to reference it. The <span class="inline">id</span> is also returned (and can be stored in a variable) when an instance is created using <span class="inline"><a href="../instance_create_layer.htm">instance_create_layer()</a></span> or <span class="inline"><a href="../instance_create_depth.htm">instance_create_depth()</a></span>, as well as other instance functions.</p>
-  <p><span data-condition="Export:Beta">This variable is now a reference to an instance, instead of simply being a real number. You can get the instance ID number by calling <a href="../../../Strings/real.htm"><span class="inline">real()</span></a> or <a href="../../../Variable_Functions/int64.htm"><span class="inline">int64()</span></a> on this variable.</span></p>
-  <p class="note"><span class="note">NOTE</span> The value of this variable is <i>not</i> the same as the identifier that the instance is given in the room editor and is also different to the <span style="font-size:1px;"><a href="../instance_id.htm" style="font-size: 14px"><span class="inline">instance_id</span></a></span> array which contains all the ids of all the currently active instances.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">id;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">for (var i = 0; i &lt; instance_count; i++;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>id</h1><p> 이 <b>읽기 전용</b> 변수는 인스턴스의 고유 식별 번호를 보유합니다. 코드를 통해 생성하거나 Room Editor에서 Room에 추가하여 생성하는 모든 인스턴스에는 이 인스턴스와 변수를 식별하는 데 내부적으로 사용되는 번호가 지정됩니다. <span class="inline">id</span> 참조하는 데 사용할 수 있습니다. 그만큼 <span class="inline">id</span> 다음을 사용하여 인스턴스를 생성할 때도 반환됩니다(변수에 저장할 수 있음). <span class="inline"><a href="../instance_create_layer.htm">instance_create_layer()</a></span> 또는 <span class="inline"><a href="../instance_create_depth.htm">instance_create_depth()</a></span>, 뿐만 아니라 다른 인스턴스 기능.</p><p> <span data-condition="Export:Beta">이 변수는 이제 단순히 실수가 아닌 인스턴스에 대한 참조입니다. 다음을 호출하여 인스턴스 ID 번호를 얻을 수 있습니다.<a href="../../../Strings/real.htm"><span class="inline">real()</span></a> 또는<a href="../../../Variable_Functions/int64.htm"><span class="inline">int64()</span></a> 이 변수에.</span></p><p class="note"> <span class="note">참고</span> 이 변수의 값은 인스턴스가 룸 편집기에서 제공되는 식별자와 동일 <i>하지 않으며</i> <span style="font-size:1px;"><a href="../instance_id.htm" style="font-size: 14px"><span class="inline">instance_id</span></a></span> 현재 활성화된 모든 인스턴스의 모든 ID를 포함하는 배열입니다.</p><p></p><h4> 통사론:</h4><p class="code">id;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></p><p></p><h4> 예시:</h4><p class="code">for (var i = 0; i &lt; instance_count; i++;)<br />
     {<br />
         if instance_id[i] != id<br />
         {<br />
             instance_id[i].scr += 5;<br />
         }<br />
-    }</p>
-  <p>The above code adds 5 to the &quot;scr&quot; variable for every active instance in the room except the one running the code. It does this by looping through ALL the active instances (using the &quot;instance_id&quot; array to return each active instances ID) and comparing them against the built in &quot;id&quot; variable, which is the ID of the original instance running the code.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="visible.htm">visible</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 코드를 실행하는 인스턴스를 제외한 방의 모든 활성 인스턴스에 대해 &quot;scr&quot; 변수에 5를 추가합니다. 모든 활성 인스턴스를 반복하고(각 활성 인스턴스 ID를 반환하기 위해 &quot;instance_id&quot; 배열을 사용) 이를 코드를 실행하는 원래 인스턴스의 ID인 기본 제공 &quot;id&quot; 변수와 비교하여 이를 수행합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Variables.htm">인스턴스 변수</a></div><div style="float:right"> 다음: <a href="visible.htm"><span class="notranslate">visible</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 id

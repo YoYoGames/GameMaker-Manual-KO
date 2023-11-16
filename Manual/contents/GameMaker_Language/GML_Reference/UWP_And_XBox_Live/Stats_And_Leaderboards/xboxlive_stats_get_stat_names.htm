@@ -6,53 +6,17 @@
   <title>xboxlive_stats_get_stat_names</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for xboxlive_stats_get_stat_names" />
+  <meta name="topic-comment" content="xboxlive_stats_get_stat_names에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="xboxlive_stats_get_stat_names" />
   <meta name="search-keywords" content="xboxlive_stats_get_stat_names" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_stats_get_stat_names</h1>
-  <p>This function can be used to retrieve all the defined stats from the stat manager for a given user. You supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, and the function will return an array of strings containing the statistics for the user. If an error occurs or the user has no stats the array will still be returned but will have an element count of 0.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">xboxlive_stats_get_stat_names(user_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>user_id</td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
-        <td>The user ID pointer to get the stat names of</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _stat_str = xboxlive_stats_get_stat_names(user_id);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_get_stat_names</h1><p> 이 함수는 주어진 사용자에 대해 통계 관리자에서 정의된 모든 통계를 검색하는 데 사용할 수 있습니다. (예를 들어) 함수에서 반환된 대로 사용자 ID를 제공합니다.<a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, 그리고 함수는 사용자에 대한 통계를 포함하는 문자열 배열을 반환합니다. 오류가 발생하거나 사용자에게 통계가 없는 경우 배열은 여전히 반환되지만 요소 수는 0입니다.</p><p></p><h4> 통사론:</h4><p class="code">xboxlive_stats_get_stat_names(user_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td><td> <span class="notranslate">The user ID pointer to get the stat names of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"></span></p><p></p><h4> 예시:</h4><p class="code">var _stat_str = xboxlive_stats_get_stat_names(user_id);<br />
     for (var i = 0; i &lt; array_length(_stat_str); ++i;)<br />
     {<br />
         xboxlive_stats_delete_stat(user_id, _stat_str[i]);<br />
-    }</p>
-  <p>The above code retrieves all the defined stats for the user ID pointer stored in the given variable, and then loops through the array and deletes the specified stat from the stat manager.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_get_stat.htm">xboxlive_stats_get_stat</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 주어진 변수에 저장된 사용자 ID 포인터에 대해 정의된 모든 통계를 검색한 다음 배열을 반복하고 통계 관리자에서 지정된 통계를 삭제합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Stats_And_Leaderboards.htm">통계 및 순위표</a></div><div style="float:right"> 다음: <a href="xboxlive_stats_get_stat.htm"><span class="notranslate">xboxlive_stats_get_stat</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_stat_names

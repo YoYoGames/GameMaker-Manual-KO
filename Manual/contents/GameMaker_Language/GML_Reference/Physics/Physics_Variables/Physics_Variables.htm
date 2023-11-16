@@ -3,69 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Physics Variables</title>
+  <title>물리 변수</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for Physics Variables" />
+  <meta name="topic-comment" content="물리 변수에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Physics Variables" />
+  <meta name="search-keywords" content="물리 변수" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Physics Variables</h1>
-  <p>As with the &quot;traditional&quot; collisions and movement system, the physics system also has a series of <a href="../../Asset_Management/Instances/Instance_Variables/Instance_Variables.htm">instance variables</a> assigned to each instance of an object when it is created. Some of these properties can be defined by the user in GML, but many are read-only and still more are only applicable in the <strong>collision</strong> event.</p>
-  <p>The following variables exists in <i>all</i> physics enabled objects and they can be read from and written to (ie: changed) using code from instances and script functions:</p>
-  <ul class="colour">
-    <li><a href="phy_active.htm">phy_active</a></li>
-    <li><a href="phy_angular_velocity.htm">phy_angular_velocity</a></li>
-    <li><a href="phy_angular_damping.htm">phy_angular_damping</a></li>
-    <li><a href="phy_linear_velocity_x.htm">phy_linear_velocity_x</a></li>
-    <li><a href="phy_linear_velocity_y.htm">phy_linear_velocity_y</a></li>
-    <li><a href="phy_linear_damping.htm">phy_linear_damping</a></li>
-    <li><a href="phy_speed_x.htm">phy_speed_x</a></li>
-    <li><a href="phy_speed_y.htm">phy_speed_y</a></li>
-    <li><a href="phy_position_x.htm">phy_position_x</a></li>
-    <li><a href="phy_position_y.htm">phy_position_y</a></li>
-    <li><a href="phy_position_xprevious.htm">phy_position_xprevious</a></li>
-    <li><a href="phy_position_yprevious.htm">phy_position_yprevious</a></li>
-    <li><a href="phy_rotation.htm">phy_rotation</a></li>
-    <li><a href="phy_fixed_rotation.htm">phy_fixed_rotation</a></li>
-    <li><a href="phy_bullet.htm">phy_bullet</a></li>
-  </ul>
-  <p> </p>
-  <p>Certain variables are <b>read-only</b> variables, which means that the information they contain cannot be changed through instance code or script funcions (but it <i>can</i> be changed internally by <span data-keyref="GameMaker Name">GameMaker</span> which is why these are variables and not <b>constants</b>). The following list shows the <b>read-only</b> variables that exist in <i>all</i> physics enabled objects:</p>
-  <ul class="colour">
-    <li><a href="phy_speed.htm">phy_speed</a></li>
-    <li><a href="phy_com_x.htm">phy_com_x</a></li>
-    <li><a href="phy_com_y.htm">phy_com_y</a></li>
-    <li><a href="phy_dynamic.htm">phy_dynamic</a></li>
-    <li><a href="phy_kinematic.htm">phy_kinematic</a></li>
-    <li><a href="phy_inertia.htm">phy_inertia</a></li>
-    <li><a href="phy_mass.htm">phy_mass</a></li>
-    <li><a href="phy_sleeping.htm">phy_sleeping</a></li>
-  </ul>
-  <p> </p>
-  <p>Finally, there are a number of temporary variables that exist in physics enabled objects and are created <i>only in the collision event</i>. These variables are like those listed above and are <b>read-only</b>:</p>
-  <ul class="colour">
-    <li><a href="phy_collision_points.htm">phy_collision_points</a></li>
-    <li><a href="phy_collision_x.htm">phy_collision_x</a></li>
-    <li><a href="phy_collision_y.htm">phy_collision_y</a></li>
-    <li><a href="phy_col_normal_x.htm">phy_col_normal_x</a></li>
-    <li><a href="phy_col_normal_y.htm">phy_col_normal_y</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Physics.htm">Physics</a></div>
-        <div style="float:right">Next: <a href="../The_Physics_World/The_Physics_World.htm">The Physics World</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 물리 변수</h1><p> &quot;전통적인&quot; 충돌 및 이동 시스템과 마찬가지로 물리 시스템에는 생성될 때 개체의 각 인스턴스에 할당된 일련의 <a href="../../Asset_Management/Instances/Instance_Variables/Instance_Variables.htm">인스턴스 변수</a> 가 있습니다. 이러한 속성 중 일부는 GML에서 사용자가 정의할 수 있지만 대부분은 읽기 전용이며 여전히 <strong>충돌</strong> 이벤트에만 적용할 수 있습니다.</p><p> 다음 변수는 <i>모든</i> 물리 가능 개체에 존재하며 인스턴스 및 스크립트 함수의 코드를 사용하여 읽기 및 쓰기(예: 변경)할 수 있습니다.</p><ul class="colour"><li> <a href="phy_active.htm"><span class="notranslate">phy_active</span></a></li><li> <a href="phy_angular_velocity.htm"><span class="notranslate">phy_angular_velocity</span></a></li><li> <a href="phy_angular_damping.htm"><span class="notranslate">phy_angular_damping</span></a></li><li> <a href="phy_linear_velocity_x.htm"><span class="notranslate">phy_linear_velocity_x</span></a></li><li> <a href="phy_linear_velocity_y.htm"><span class="notranslate">phy_linear_velocity_y</span></a></li><li> <a href="phy_linear_damping.htm"><span class="notranslate">phy_linear_damping</span></a></li><li> <a href="phy_speed_x.htm"><span class="notranslate">phy_speed_x</span></a></li><li> <a href="phy_speed_y.htm"><span class="notranslate">phy_speed_y</span></a></li><li> <a href="phy_position_x.htm"><span class="notranslate">phy_position_x</span></a></li><li> <a href="phy_position_y.htm"><span class="notranslate">phy_position_y</span></a></li><li> <a href="phy_position_xprevious.htm"><span class="notranslate">phy_position_xprevious</span></a></li><li> <a href="phy_position_yprevious.htm"><span class="notranslate">phy_position_yprevious</span></a></li><li> <a href="phy_rotation.htm"><span class="notranslate">phy_rotation</span></a></li><li> <a href="phy_fixed_rotation.htm"><span class="notranslate">phy_fixed_rotation</span></a></li><li> <a href="phy_bullet.htm"><span class="notranslate">phy_bullet</span></a></li></ul><p></p><p> 특정 변수는 <b>읽기 전용</b> 변수입니다. 즉, 해당 변수에 포함된 정보는 인스턴스 코드나 스크립트 기능을 통해 변경할 수 없습니다(그러나 <span data-keyref="GameMaker Name">GameMaker</span> 에서 내부적으로 변경할 <i>수</i> 있으므로 <b>상수</b> 가 아닌 변수임). 다음 목록은 <i>모든</i> 물리 활성화 개체에 존재하는 <b>읽기 전용</b> 변수를 보여줍니다.</p><ul class="colour"><li> <a href="phy_speed.htm"><span class="notranslate">phy_speed</span></a></li><li> <a href="phy_com_x.htm"><span class="notranslate">phy_com_x</span></a></li><li> <a href="phy_com_y.htm"><span class="notranslate">phy_com_y</span></a></li><li> <a href="phy_dynamic.htm"><span class="notranslate">phy_dynamic</span></a></li><li> <a href="phy_kinematic.htm"><span class="notranslate">phy_kinematic</span></a></li><li> <a href="phy_inertia.htm"><span class="notranslate">phy_inertia</span></a></li><li> <a href="phy_mass.htm"><span class="notranslate">phy_mass</span></a></li><li> <a href="phy_sleeping.htm"><span class="notranslate">phy_sleeping</span></a></li></ul><p></p><p> 마지막으로 물리 가능 객체에 존재 <i>하고 충돌 이벤트에서만</i> 생성되는 임시 변수가 많이 있습니다. 이러한 변수는 위에 나열된 것과 같으며 <b>읽기 전용입니다</b>.</p><ul class="colour"><li> <a href="phy_collision_points.htm"><span class="notranslate">phy_collision_points</span></a></li><li> <a href="phy_collision_x.htm"><span class="notranslate">phy_collision_x</span></a></li><li> <a href="phy_collision_y.htm"><span class="notranslate">phy_collision_y</span></a></li><li> <a href="phy_col_normal_x.htm"><span class="notranslate">phy_col_normal_x</span></a></li><li> <a href="phy_col_normal_y.htm"><span class="notranslate">phy_col_normal_y</span></a></li> </ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Physics.htm">물리학</a></div><div style="float:right"> 다음: <a href="../The_Physics_World/The_Physics_World.htm">물리 세계</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Physics Variables

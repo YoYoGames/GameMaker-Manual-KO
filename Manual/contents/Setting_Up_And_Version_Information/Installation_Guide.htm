@@ -3,52 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Installation Guide</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>설치 설명서</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Instructions on how to install GameMaker." />
-  <meta name="rh-index-keywords" content="Installing" />
-  <meta name="search-keywords" content="installing,minimum specs,specifications,stable,beta" />
+  <meta name="topic-comment" content="GameMaker 설치 방법에 대한 지침입니다." />
+  <meta name="rh-index-keywords" content="설치 중" />
+  <meta name="search-keywords" content="설치,최소 사양,명세서,안정적인,베타" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Installation Guide</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> is designed for use on <strong>macOS </strong>and <strong>Windows </strong>desktop computers.</p>
-  <p>You can download the <span data-keyref="GameMaker Name">GameMaker</span> installer on the <a href="https://gamemaker.io/en/download">GameMaker Website</a> and install it. Once installed, the first time you run <span data-keyref="GameMaker Name">GameMaker</span> you may be prompted to update before being able to use the product. You will be shown the <a href="#h">Runtime Modules Dialog</a> which allows you to select the runtime modules that you&#39;d like to install.</p>
-  <p>After any updates have been installed, you will be able to use the IDE, and optionally <a href="Licencing_Information.htm">log in</a> (required for creating executables).</p>
-  <p>It is worth noting that - depending on the licence type that you have - you may be required to install additional components or follow additional steps to set up and use <span data-keyref="GameMaker Name">GameMaker</span> for specific platforms. For full information on what each platform requires, please see this article on the GameMaker Helpdesk: <a href="https://help.yoyogames.com/hc/en-us/articles/227860547-GMS2-Required-SDKs">Required SDKs</a>.</p>
-  <h2>Stable, Beta and LTS</h2>
-  <p>The version you download from the <a href="https://gamemaker.io/en/download">Download page</a> should be the current <strong>Stable </strong>version of <span data-keyref="GameMaker Name">GameMaker</span>. The page also has a &quot;<strong>Beta</strong>&quot; version available which is used to showcase or test new functionality before it goes into a final stable build, as well as an &quot;<strong>LTS</strong>&quot; version that gets only bug fixes.</p>
-  <p>The full version details are as follows:</p>
-  <ul class="colour">
-    <li><strong>Stable</strong>: This version is the one you would be using for general development and is recommended for use with any commercial product. It may lack certain features available in the Beta versions, but this is because they haven&#39;t been fully tested or require additional work.</li>
-    <li><strong>Beta</strong>: The Beta version of <span data-keyref="GameMaker Name">GameMaker</span> is for those that wish to try out new features before they get added to the Stable build, or for those that require a coming fix for an issue. It is not recommended that you use the Beta build for final game production unless it contains an important fix for a bug that is holding up your project. You can get a Beta build of <span data-keyref="GameMaker Name">GameMaker</span> from the <a href="https://gamemaker.io/en/download">GameMaker Website</a>, and it can be installed and run side-by-side with the Stable build. Please note that if you are running <span data-keyref="GameMaker Name">GameMaker</span> through <strong>Steam </strong>then you will not have access to the Beta build of the product using Steam itself, although you can still download and use the desktop version.</li>
-    <li><strong>LTS</strong>: Long-Term Support gives you a fixed version of GameMaker that only receives bug fixes and no feature updates. This is useful for long-term commercial projects that want to avoid the changes that come with major feature additions, and only require fixes to engine bugs.</li>
-  </ul>
-  <h2 id="h">Runtime Modules Dialog</h2>
-  <p>Every runtime in <span data-keyref="GameMaker Name">GameMaker</span> consists of a set of modules. As you might not need all of them on your system you can select which ones to download and install, for those cases where you e.g. are working on a machine with a limited amount of disk space or have a slow internet connection.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> This dialog will always be shown to you the first time you install any version of <span data-keyref="GameMaker Name">GameMaker</span> starting with 2022.11. The default setting is to remember your choices and not show the dialog again in the future, but you can set the <b data-stringify-type="bold"></b><a data-xref="{text}" href="IDE_Preferences/Runtime_Feed_Preferences.htm#h">Remember last selection of modules</a> option in the <a data-xref="{title}" href="IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a> to &quot;Show Message&quot; to make the dialog show again each time.</p>
-  <p>Before installing a new runtime you will then be shown this dialog: </p>
-  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Default_Windows.png" /></p>
-  <p>Checking the &quot;Remember Selection&quot; checkbox in this dialog will ensure you don&#39;t see it again. The selection of modules you choose here will then also be used when installing new runtimes and the <a data-xref="{text}" href="IDE_Preferences/Runtime_Feed_Preferences.htm#h">Remember last selection of modules</a> option will be set to &quot;OK&quot;.</p>
-  <p>The above is the default selection of modules on Windows. The <i>base</i> module and the module <i>for the OS that you&#39;re currently developing on</i> are <i>always</i> included. They are the minimum <i>required</i> modules for <span data-keyref="GameMaker Name">GameMaker</span> to be able to build your game. All other modules are <i>optional</i>.</p>
-  <p>You can quickly change this by clicking the <i>Required only</i> button: </p>
-  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Required_Only_Windows.png" />If you want to download and install the full list of modules that is available then you can click &quot;Select All&quot; instead: </p>
-  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_All_Windows.png" /></p>
-  <p>Note that, depending on the selected modules, downloading and installing a runtime can take a few minutes, but you can see a progress bar for the download at the top right of the IDE:</p>
-  <p><img alt="Installing a Runtime" class="center" src="../assets/Images/Setup_And_Version/Getting_Started_Installing_Runtimes.png" /></p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back:  <a href="GMS2_Version_Information.htm"><span data-keyref="GameMaker Name">GameMaker</span> Setup And Versions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Licencing_Information.htm">Licencing &amp; Logging In</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 설치 설명서</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 는 <a href="http://www.yoyogames.com/get#sysreq">여기에</a> 언급된 최소 사양의 <strong>macOS</strong> 및 <strong>Windows</strong> 데스크탑 컴퓨터에서 사용하도록 설계되었습니다.</p><p> <a href="https://accounts.yoyogames.com/login">YoYo 게임 웹사이트</a> 의 YoYo 계정 페이지에서 <span data-keyref="GameMaker Name">GameMaker</span> 설치 프로그램을 다운로드할 수 있습니다. 일단 설치되면 <span data-keyref="GameMaker Name">GameMaker</span> 를 처음 실행할 때 제품을 사용하기 전에 업데이트하라는 메시지가 표시될 수 있습니다. 업데이트를 설치한 후 제품을 사용하려면 먼저 YoYo 게임 계정에 대한 라이선스 세부 정보를 제공해야 합니다(자세한 내용은 <a href="Licencing_Information.htm">여기</a> 참조). 즉, <span data-keyref="GameMaker Name">GameMaker</span> <strong>를 처음 사용할 때는 인터넷에 연결되어 있어야 합니다.</strong>. 최초 로그인 후에는 제품을 오프라인으로 사용할 수 있어야 하지만 주기적으로 로그인 계정을 확인하기 위해 연결해야 합니다.</p><p> 보유하고 있는 라이선스 유형에 따라 특정 플랫폼용으로 <span data-keyref="GameMaker Name">GameMaker</span> 를 설정 및 사용하기 위해 추가 구성 요소를 설치하거나 추가 단계를 따라야 할 수 있습니다. 각 플랫폼에 필요한 사항에 대한 전체 정보는 YoYo Games Helpdesk: <a href="https://help.yoyogames.com/hc/en-us/articles/227860547-GMS2-Required-SDKs"><span data-keyref="GameMaker Name">GameMaker</span> Required SDK</a> 문서를 참조하십시오.</p><p></p><p></p><h1> 안정 및 베타 버전</h1><p> YoYo 게임 웹 페이지에서 다운로드하는 버전은 현재 <strong>안정</strong> 버전의 <span data-keyref="GameMaker Name">GameMaker여야</span> 하지만 최종 안정 빌드에 들어가기 전에 새로운 기능을 보여주거나 테스트하는 데 사용되는 다른 &quot; <strong>베타</strong> &quot; 버전도 있을 수 있습니다. 전체 버전 세부 정보는 다음과 같습니다.</p><ul class="colour"><li> <strong>Stable</strong>: 이 버전은 일반적인 개발에 사용할 버전이며 모든 상용 제품과 함께 사용하는 것이 좋습니다. 베타 버전에서 사용할 수 있는 특정 기능이 부족할 수 있지만 이는 완전히 테스트되지 않았거나 추가 작업이 필요하기 때문입니다.</li><li> <strong>베타</strong>: <span data-keyref="GameMaker Name">GameMaker</span> 의 베타 버전은 안정적인 빌드에 추가되기 전에 새로운 기능을 시험해보고 싶거나 문제에 대한 수정이 필요한 사람들을 위한 것입니다. 프로젝트를 방해하는 버그에 대한 중요한 수정 사항이 포함되어 있지 않은 한 최종 게임 제작에 베타 빌드를 사용하지 않는 것이 좋습니다. YoYo 계정 &quot;다운로드&quot; 페이지에서 <span data-keyref="GameMaker Name">GameMaker</span> 베타 빌드를 다운로드할 수 있으며 Stable 빌드와 함께 설치 및 실행할 수 있습니다. <strong>Steam</strong> 을 통해 <span data-keyref="GameMaker Name">GameMaker</span> 를 실행하는 경우 데스크톱 버전을 다운로드하여 사용할 수는 있지만 Steam 자체를 사용하여 제품의 베타 빌드에 액세스할 수 없습니다. </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GMS2_Version_Information.htm"><span data-keyref="GameMaker Name">GameMaker</span> 설정 및 버전</a></div><div style="float:right"> 다음: <a href="Licencing_Information.htm">라이선스 정보</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Installing

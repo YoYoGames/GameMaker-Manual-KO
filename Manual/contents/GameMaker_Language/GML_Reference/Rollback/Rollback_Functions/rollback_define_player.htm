@@ -7,71 +7,22 @@
   <title>rollback_define_player</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for rollback_define_player" />
+  <meta name="topic-comment" content="rollback_define_player에 대한 참조 페이지" />
   <meta name="condition-tags" content="Export:Beta" />
   <meta name="rh-index-keywords" content="rollback_define_player" />
   <meta name="search-keywords" content="rollback_define_player" />
 </head>
-<body>
-  <h1>rollback_define_player</h1>
-  <p>This function defines the object that should be used for players in multiplayer. This is optional, and when used, the system will automatically create instances for players that connect, and destroy instances for players that disconnect.</p>
-  <p>By default, this creates player instances in the <span class="inline2">&quot;Instances&quot;</span> layer, which must exist in your game room. If you wish to use another layer, pass its name as the second argument.</p>
-  <p>For information on creating a game with or without this function, see <a data-xref="{text}" href="../Rollback_System.htm#h1">Defining A Player Object</a>. If used, this function must run before the <a href="rollback_join_game.htm">join</a>/<a href="rollback_create_game.htm">create</a> function.</p>
-  <p>Each instance created with this function gets the <a href="../Rollback_Variables/Rollback_Variables.htm">instance variables listed on this page</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">rollback_define_player(object, [layer_name]);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>object</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object that will be used for creating player instances.</td>
-      </tr>
-      <tr>
-        <td>layer_name</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The name of the layer where the player instances will be created. <span class="inline2">&quot;Instances&quot;</span> by default.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">rollback_define_player(obj_player);<br />
+<body><h1>rollback_define_player</h1><p> 이 함수는 멀티플레이어에서 플레이어에게 사용해야 하는 개체를 정의합니다. 이것은 선택 사항이며 사용 시 시스템은 연결하는 플레이어에 대한 인스턴스를 자동으로 생성하고 연결이 끊긴 플레이어에 대한 인스턴스를 파괴합니다.</p><p> 기본적으로 게임 룸에 있어야 하는 <span class="inline2">&quot;인스턴스&quot;</span> 레이어에 플레이어 인스턴스가 생성됩니다. 다른 레이어를 사용하려면 해당 이름을 두 번째 인수로 전달하십시오.</p><p> 이 기능을 사용하거나 사용하지 않고 게임을 만드는 방법에 대한 자세한 내용은 <a data-xref="{text}" href="../Rollback_System.htm#h1">플레이어 개체 정의</a> 를 참조하십시오. 이 함수를 사용하는 경우 <a href="rollback_join_game.htm">조인</a> / <a href="rollback_create_game.htm">생성</a> 함수보다 먼저 실행해야 합니다.</p><p> 이 함수로 생성된 각 인스턴스 <a href="../Rollback_Variables/Rollback_Variables.htm">는 이 페이지에 나열된 인스턴스 변수를</a> 가져옵니다.</p><p></p><h4> 통사론:</h4><p class="code">rollback_define_player(object, [layer_name]);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">object</span></td><td> <span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">개체 자산</a></span></td><td> <span class="notranslate">The object that will be used for creating player instances.</span></td></tr><tr><td> <span class="notranslate">layer_name</span></td><td> <span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> The name of the layer where the player instances will be created. <span class="inline2">&quot;Instances&quot;</span> by default.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">rollback_define_player(obj_player);<br />
     var _joined = rollback_join_game();<br />
     <br />
     if (!_joined)<br />
     {<br />
         rollback_start_game(2, false);<br />
     }
-  </p>
-  <p>The above code defines a player object, and then attempts to join a game. If it was not joined, it starts a new game instead, with a maximum of 2 players and Sync Test disabled.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_display_events.htm">rollback_display_events</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 플레이어 개체를 정의한 다음 게임 참여를 시도합니다. 참여하지 않은 경우 최대 2명의 플레이어와 동기화 테스트가 비활성화된 상태에서 대신 새 게임을 시작합니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Functions.htm">롤백 기능</a></div><div> 다음: <a data-xref="{title}" href="rollback_display_events.htm">rollback_display_events</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_define_player

@@ -4,59 +4,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>random_range</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for random_range" />
+  <meta name="topic-comment" content="random_range에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="random_range" />
   <meta name="search-keywords" content="random_range" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">random_range</span></h1>
-  <p>This function returns a random floating-point (decimal) number between the specified lower limit (inclusive) and the specified upper limit (inclusive).</p>
-  <p>For example, <span class="inline">random_range(20,50)</span> will return a random number from 20.00 to 50.00, but the value may be a real number like 38.65265. Real numbers can also be used as input arguments.</p>
-  <div data-conref="../../../../assets/snippets/Note_randomise.hts"> </div>
-  <h4>Syntax:</h4>
-  <p class="code">random_range(n1, n2);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>n1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The low end of the range from which the random number will be selected.</td>
-      </tr>
-      <tr>
-        <td>n2</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The high end of the range from which the random number will be selected.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">score += random_range(500, 600);</p>
-  <p>This will add anywhere between 500 and 600, to the total score.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Number_Functions.htm">Number Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="irandom.htm">irandom</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>random_range</h1><p> 이 함수는 지정된 범위 사이의 난수를 반환하며 이 반환 값은 정수일 필요가 없습니다. 예를 들어, <span class="inline">random_range(20,50)</span> 20에서 50 사이의 난수를 반환하지만 값은 38.65265와 같은 실수일 수 있습니다. 실수도 입력 인수로 사용할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 함수는 <span data-keyref="GameMaker Name">GameMaker</span> 가 디버깅 코드를 훨씬 더 쉬운 작업으로 만들기 위해 매번 동일한 초기 무작위 시드를 생성한다는 사실 때문에 게임이 새로 실행될 때마다 동일한 값을 반환합니다. 이 동작을 방지하려면 다음을 사용하십시오.<span
+      style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span> 게임 시작 시.</p><p></p><h4> 통사론:</h4><p class="code">random_range(n1, n2);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">n1</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The low end of the range from which the random number will be selected.</span></td></tr><tr><td> <span class="notranslate">n2</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The high end of the range from which the random number will be selected.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">score += random_range(500, 600);</p><p> 이렇게 하면 총 점수에 500에서 600 사이의 값이 추가됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Number_Functions.htm">숫자 기능</a></div><div style="float:right"> 다음: <a href="irandom.htm"><span class="notranslate">irandom</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 random_range

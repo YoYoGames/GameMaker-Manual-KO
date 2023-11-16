@@ -6,66 +6,17 @@
   <title>matrix_build_projection_ortho</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for matrix_build_projection_ortho" />
+  <meta name="topic-comment" content="matrix_build_projection_ortho에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="matrix_build_projection_ortho" />
   <meta name="search-keywords" content="matrix_build_projection_ortho" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_projection_ortho</h1>
-  <p>This function builds an orthographic projection matrix based on the specified parameters listed below (this is the default projection method used when you create a room in <span data-keyref="GameMaker Name">GameMaker</span> without changing anything). Sometimes you need to switch from a perspective projection to an orthographic projection which is what this function is for. It is typically used to draw an overlay, for example, to show the score or other aspects as this gives a &quot;flat&quot; view of the elements drawn (ie: no perspective) in a 3D game. See the image below to get an idea of the difference between orthographic and perspective views.</p>
-  <p class="note"><b>NOTE</b>: You may also need to temporarily switch off hidden surface removal if you want the information to be drawn regardless of the current depth value.</p>
-  <p><img alt="Ortho prjection matrix  example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/ortho_persp_image.png" /></p>
-  <h4>Syntax:</h4>
-  <p class="code">matrix_build_projection_ortho(width, height, znear, zfar);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>w</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The width of the projection.</td>
-     </tr>
-      <tr>
-        <td>h</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The height of the projection.</td>
-     </tr>
-      <tr>
-        <td>znear</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The near clipping plane.</td>
-     </tr>
-      <tr>
-        <td>zfar</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The far clipping plane.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_build_projection_ortho</h1><p> 이 함수는 아래 나열된 지정된 매개변수를 기반으로 직교 투영 행렬을 구축합니다(이는 아무 것도 변경하지 않고 <span data-keyref="GameMaker Name">GameMaker</span> 에서 방을 생성할 때 사용되는 기본 투영 방법입니다). 때로는 이 기능의 목적인 원근 투영에서 직교 투영으로 전환해야 합니다. 일반적으로 오버레이를 그리는 데 사용됩니다. 예를 들어 점수 또는 기타 측면을 표시하기 위해 3D 게임에서 그려진 요소의 &quot;평면&quot; 보기(즉, 원근 없음)를 제공하기 때문입니다. 직교 뷰와 투시 뷰의 차이점에 대한 아이디어를 얻으려면 아래 이미지를 참조하십시오.</p><p class="note"> <b>참고</b>: 현재 깊이 값에 관계없이 정보를 그리려면 숨겨진 표면 제거를 일시적으로 꺼야 할 수도 있습니다.</p><p><img alt="Ortho prjection matrix  example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/ortho_persp_image.png" /></p><h4> 통사론:</h4><p class="code">matrix_build_projection_ortho(width, height, znear, zfar);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The width of the projection.</span></td></tr><tr><td> <span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The height of the projection.</span></td></tr><tr><td> <span class="notranslate">znear</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The near clipping plane.</span></td></tr><tr><td> <span class="notranslate">zfar</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The far clipping plane.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p><p></p><h4> 예시:</h4><p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br />
     projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br />
     camera_set_view_mat(view_camera[0], viewmat);<br />
-    camera_set_proj_mat(view_camera[0], projmat);</p>
-  <p>The above code creates a new look-at matrix and orthographic matrix, stores their IDs in local variables and then uses them to set the view and projection matrices for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_build_projection_perspective.htm">matrix_build_projection_perspective</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    camera_set_proj_mat(view_camera[0], projmat);</p><p> 위의 코드는 새로운 보기 행렬과 직교 행렬을 만들고 해당 ID를 로컬 변수에 저장한 다음 이를 사용하여 보기 포트[0]에 할당된 카메라의 보기 및 투영 행렬을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Matrix_Functions.htm">행렬 함수</a></div><div style="float:right"> 다음: <a href="matrix_build_projection_perspective.htm"><span class="notranslate">matrix_build_projection_perspective</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build_projection_ortho

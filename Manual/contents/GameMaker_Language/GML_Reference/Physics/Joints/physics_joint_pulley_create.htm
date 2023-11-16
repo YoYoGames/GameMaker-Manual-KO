@@ -6,97 +6,14 @@
   <title>physics_joint_pulley_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_joint_pulley_create" />
+  <meta name="topic-comment" content="physical_joint_pulley_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_joint_pulley_create" />
   <meta name="search-keywords" content="physics_joint_pulley_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_pulley_create</h1>
-  <p>The pulley joint is used to connect two instances within the physics world in such a way that moving one will directly influence the movement of the other. These joints are first anchored in the world space at two points, each one connected to an instance at its center of mass. This can be changed by setting the local anchor x/y coordinates relative to the origin of the instance, meaning that the actual connection from the instance to the physics world anchor point can be offset somewhere other than its origin. The following image illustrates this:</p>
-  <p><img alt="Pulley joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/pulley_joint_image.png" />If you look at inst2 you can see that its local anchor point has been offset 20 pixels to the &quot;left&quot; of its origin (Remember! The world anchor points are defined using the room coordinates, while the local anchor points are defined relative to the origin of the instance). You can also specify a ratio for the pulley joint, which tells one side or the other to move faster, with a value below 1 making the first instance move faster (E.G. 0.5 will make it move twice as fast) and a value above 1 making the second instance move faster (E.G. 2 will make it move twice as fast).</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>w_anchor1_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the first part of joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor1_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the first part of the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor2_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the second part of the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor2_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the second part of the joint is anchored, within the game world</td>
-      </tr>
-      <tr>
-        <td>l_anchor1_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local x coordinate where joint 1 is anchored to the first instance</td>
-      </tr>
-      <tr>
-        <td>l_anchor1_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local y coordinate where joint 1 is anchored to the first instance</td>
-      </tr>
-      <tr>
-        <td>l_anchor2_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local x coordinate where joint 2 is anchored to the second instance</td>
-      </tr>
-      <tr>
-        <td>l_anchor2_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local y coordinate where joint 2 is anchored to the second instance</td>
-      </tr>
-      <tr>
-        <td>ratio</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Set the velocity ratio between two instances</td>
-      </tr>
-      <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var t_fix, inst1, inst2;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_pulley_create</h1><p> 도르래 조인트는 하나를 움직이면 다른 하나의 움직임에 직접적인 영향을 주는 방식으로 물리 세계 내에서 두 인스턴스를 연결하는 데 사용됩니다. 이러한 관절은 먼저 두 지점에서 표준 공간에 고정되며 각 지점은 질량 중심의 인스턴스에 연결됩니다. 이것은 인스턴스의 원점에 상대적인 로컬 앵커 x/y 좌표를 설정하여 변경할 수 있습니다. 즉, 인스턴스에서 물리적 세계 앵커 포인트까지의 실제 연결은 원점이 아닌 다른 곳에서 오프셋될 수 있습니다. 다음 이미지는 이를 보여줍니다.</p><p><img alt="Pulley joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/pulley_joint_image.png" /> inst2를 보면 로컬 앵커 포인트가 원점의 &quot;왼쪽&quot;으로 20픽셀 오프셋되었음을 알 수 있습니다(기억하십시오! 월드 앵커 포인트는 공간 좌표를 사용하여 정의되는 반면 로컬 앵커 포인트는 인스턴스의 출처). 또한 도르래 조인트에 대한 비율을 지정할 수 있습니다. 이 비율은 한쪽 또는 다른 쪽이 더 빠르게 움직이도록 지정합니다. 값이 1 미만이면 첫 번째 인스턴스가 더 빠르게 이동하고(EG 0.5는 두 배 빠르게 이동) 1보다 큰 값은 두 번째 인스턴스가 더 빠르게 이동합니다(EG 2는 두 배 빠르게 이동합니다).</p><p> 모든 관절과 마찬가지로 &quot;col&quot; 값을 다음으로 설정하면 <span class="inline">true</span> 두 인스턴스는 서로 상호 작용하고 충돌할 수 있지만 충돌 이벤트가 있는 경우 <i>에만</i> 가능합니다. <span class="inline">false</span>, 그들은 무슨 일이 있어도 충돌하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The first instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">inst2</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The second instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">w_anchor1_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x coordinate where the first part of joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor1_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y coordinate where the first part of the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor2_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x coordinate where the second part of the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor2_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y coordinate where the second part of the joint is anchored, within the game world</span></td></tr><tr><td> <span class="notranslate">l_anchor1_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The local x coordinate where joint 1 is anchored to the first instance</span></td></tr><tr><td> <span class="notranslate">l_anchor1_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The local y coordinate where joint 1 is anchored to the first instance</span></td></tr><tr><td> <span class="notranslate">l_anchor2_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The local x coordinate where joint 2 is anchored to the second instance</span></td></tr><tr><td> <span class="notranslate">l_anchor2_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The local y coordinate where joint 2 is anchored to the second instance</span></td></tr><tr><td> <span class="notranslate">ratio</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Set the velocity ratio between two instances</span></td></tr><tr><td> <span class="notranslate">col</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p><p></p><h4> 예시:</h4><p class="code">var t_fix, inst1, inst2;<br />
     t_fix = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(t_fix, 20);<br />
     inst1 = instance_create_layer(150, room_height - 90, &quot;Instances&quot;, obj_Block);<br />
@@ -104,19 +21,7 @@
     physics_fixture_bind(t_fix, inst1);<br />
     physics_fixture_bind(t_fix, inst2);<br />
     physics_joint_pulley_create(inst1, inst2, 150, room_height - 140, 300, room_height - 140, 0, 0, 0, 0, 2, 0);<br />
-    physics_fixture_delete(t_fix);</p>
-  <p>The above code creates and defines a new fixture, creates two instances of &quot;obj_Block&quot;, and then binds this fixture two them. It then goes on to define a pulley joint between these instance, with no offset for the joints, a ratio of 2:1 (meaning that inst2 will move faster). No collisions occur between the two instances in the pulley.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_gear_create.htm">physics_joint_gear_create</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    physics_fixture_delete(t_fix);</p><p> 위의 코드는 새로운 픽스처를 생성 및 정의하고 &quot;obj_Block&quot;의 인스턴스 2개를 생성한 다음 이 픽스처를 바인딩합니다. 그런 다음 관절에 대한 오프셋 없이 2:1의 비율(inst2가 더 빠르게 이동함을 의미) 사이에 이러한 인스턴스 사이의 풀리 관절을 정의합니다. 도르래의 두 인스턴스 간에 충돌이 발생하지 않습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_gear_create.htm"><span class="notranslate">physics_joint_gear_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_pulley_create

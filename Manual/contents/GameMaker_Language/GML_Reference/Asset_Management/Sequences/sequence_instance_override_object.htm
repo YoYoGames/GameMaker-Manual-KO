@@ -6,74 +6,16 @@
   <title>sequence_instance_override_object</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining function sequence_instance_override_object" />
+  <meta name="topic-comment" content="페이지 개요 기능 sequence_instance_override_object" />
   <meta name="rh-index-keywords" content="sequence_instance_override_object" />
   <meta name="search-keywords" content="sequence_instance_override_object" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">sequence_instance_override_object</span></h1>
-  <p>With this function you can override (replace) all instances of an object used in a sequence with another one or override a single instance of an object with an existing instance.</p>
-  <p>You supply the sequence instance struct ID (as returned when the sequence instance was created in the room or by using one of the room layer functions - see <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">here</a>), as well as the object index (as defined in the asset browser) for the object that you want to override. Finally you give an object index or an instance ID to use as the object that is going to override the sequence (supplying an instance ID will simply use the object that the instance was created from as the override). Note that this can only be done on sequence instances (not sequence objects) and must be done before the sequence starts to play, otherwise it won&#39;t work.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> If you use this function with a sequence instance that has multiple object tracks of the same object asset and you provide an instance ID as the second argument then only the first instance is replaced with the given instance. The other object tracks will not get an instance.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> If you provide an existing instance ID the instance will stay on the layer it is already on. The instance isn&#39;t moved to the layer that the sequence instance/element is on. This is different from creating a sequence instance on a layer using <a data-xref="{title}" href="../Rooms/Sequence_Layers/layer_sequence_create.htm">layer_sequence_create</a>, where all instances are added to the layer with the sequence element.</p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">sequence_instance_override_object</span>(sequence_instance_struct, object_id, instance_or_object_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>sequence_instance_struct</td>
-        <td><span data-keyref="Type_Struct_Sequence_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Sequence Instance Struct</a></span></td>
-        <td>The sequence instance struct to modify.</td>
-      </tr>
-      <tr>
-        <td>object_id</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object index of the object within the sequence to override.</td>
-      </tr>
-      <tr>
-        <td>instance_or_object_id</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span> or <span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></td>
-        <td>The object index or instance ID to use to override the sequence objects.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example 1: Replace an object ID with another object ID</h4>
-  <p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sequence_instance_override_object</h1><p> 이 기능을 사용하면 시퀀스에 사용된 개체의 모든 인스턴스를 다른 인스턴스로 재정의(교체)할 수 있습니다. 시퀀스 인스턴스 구조 ID(시퀀스 인스턴스가 룸에서 생성되거나 룸 레이어 기능 중 하나를 사용하여 반환됨 - <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">여기</a> 참조) 및 개체에 대한 개체 인덱스(자산 브라우저에 정의됨)를 제공합니다. 재정의하려는 것입니다. 마지막으로 시퀀스를 재정의할 개체로 사용할 개체 인덱스 또는 인스턴스 ID를 지정합니다(인스턴스 ID를 제공하면 단순히 인스턴스가 생성된 개체를 재정의로 사용합니다). 이것은 시퀀스 인스턴스(시퀀스 개체가 아님)에서만 수행할 수 있으며 시퀀스 재생이 시작되기 전에 수행해야 합니다. 그렇지 않으면 작동하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">sequence_instance_override_object(sequence_instance_struct, object_id, instance_or_object_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_instance_struct</span></td><td> <span data-keyref="Type_Struct_Sequence_Instance">시퀀스 인스턴스 구조체</span></td><td> <span class="notranslate">The sequence instance struct to modify.</span></td></tr><tr><td> <span class="notranslate">object_id</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The object index of the object within the sequence to override.</span></td></tr><tr><td> <span class="notranslate">instance_or_object_id</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span> 또는 <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The object index or instance ID to use to override the sequence objects.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br />
     var _seq_inst = layer_sequence_get_instance(_seq);<br />
-    <span data-field="title" data-format="default">sequence_instance_override_object</span>(_seq_inst, obj_Trees_Winter, obj_Trees_Summer);
-  </p>
-  <p>The above code creates a new sequence instance on the given layer and then modifies it so that all instances of the object &quot;obj_Trees_Winter&quot; are replaced by instances of the object &quot;obj_Trees_Summer&quot;.</p>
-  <h4>Example 2: Replace the first instance of an object ID with an instance ID</h4>
-  <p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br />
-    var _seq_inst = layer_sequence_get_instance(_seq);<br />
-    var _inst = instance_find(obj_Tree_Christmas, 0);<br />
-    if (_inst != noone)<br />
-    {<br />
-        <span data-field="title" data-format="default">sequence_instance_override_object</span>(_seq_inst, obj_Trees_Winter, _inst);<br />
-    }</p>
-  <p>The above code creates a new sequence instance on the &quot;Background&quot; layer. It then tries to find an instance of &quot;obj_Tree_Christmas&quot; using <span class="inline2">instance_find</span>. If an instance of this object is found it then replaces the first instance of object &quot;obj_Trees_Winter&quot; in the sequence by this instance using <span class="inline2">sequence_instance_override_object</span>. All other object tracks with &quot;obj_Trees_Winter&quot; as the object will <i>not</i> have an instance.</p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="in_sequence.htm">in_sequence</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    sequence_instance_override_object(_seq_inst, obj_Trees_Winter, obj_Trees_Summer);</p><p> 위의 코드는 주어진 레이어에 새로운 시퀀스 인스턴스를 생성한 다음 &quot;obj_Trees_Winter&quot; 개체의 모든 인스턴스가 &quot;obj_Trees_Summer&quot; 개체의 인스턴스로 대체되도록 수정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequences.htm">시퀀스</a></div><div style="float:right"> 다음: <a href="in_sequence.htm"><span class="notranslate">in_sequence</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_instance_override_object

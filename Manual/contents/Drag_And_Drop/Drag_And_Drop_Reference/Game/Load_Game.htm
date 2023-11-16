@@ -3,50 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Load Game</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>게임 로드</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Load Game action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Load Game" />
-  <meta name="search-keywords" content="Load Game" />
+  <meta name="topic-comment" content="게임 로드 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 게임 로드" />
+  <meta name="search-keywords" content="게임 로드" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Load Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Load_Game.png" style="cursor: nwse-resize;" /> <span data-field="title" data-format="default">Load Game</span> <span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span></h1>
-  <p>This action will load a game that has previously been saved using the <a data-xref="{title}" href="Save_Game.htm">Save Game</a> action.</p>
-  <p>You give the filename of the file to load (as a string, and including the extension) and the game will be loaded and continue running from the saved point. Note that this is not designed as a universal save/load system, and trying to load a game saved from a previous run of the project may give errors (especially if you have used things like <a href="../Data_Structures/Data_Structure_Actions.htm">Data Structures</a> or <a href="../Particles/Particle_Actions.htm">Particles</a>), and as such you should only try and load games that have been saved in the progress of a single game play-through (for things like checkpoints). Also note that the file will <i>not</i> be loaded until the end of the current event or script, so any actions after the load action is called will still be performed.</p>
-  <div data-conref="../../../assets/snippets/Note_Load_Save_Game_Legacy.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Load Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Load_Game.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Timeline</td>
-        <td>The timeline resource to assign to an instance</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><span><img alt="Load Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Load_Game.png" /></span>The above action block code will check a global variable and if it is less than or equal to 0 it will load a previously saved game.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Game_Actions.htm">Game Actions</a></div>
-        <div style="float:right">Next: <a href="Restart_Game.htm">Restart Game</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Load Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Load_Game.png" style="cursor: nwse-resize;" /> 게임 로드</h1><p> 이 작업은 이전에 게임 저장 작업을 사용하여 <a href="Save_Game.htm">저장</a> 한 게임을 로드합니다. 로드할 파일의 파일 이름을 지정하면(확장자를 포함한 문자열로) 게임이 로드되고 저장된 지점에서 계속 실행됩니다. 이것은 범용 저장/로드 시스템으로 설계되지 않았으며 프로젝트의 이전 실행에서 저장한 게임을 로드하려고 하면 오류가 발생할 수 있습니다(특히 <a href="../Data_Structures/Data_Structure_Actions.htm">데이터 구조</a> 또는 <a href="../Particles/Particle_Actions.htm">입자</a> 와 같은 것을 사용한 경우). 따라서 다음을 수행해야 합니다. 단일 게임 플레이 스루 진행 중에 저장된 게임만 시도하고 로드하십시오(체크포인트와 같은 경우). 또한 파일은 현재 이벤트 또는 스크립트가 끝날 때까지 로드 <i>되지 않으므로</i> 로드 작업이 호출된 후의 모든 작업은 계속 수행됩니다. 저장된 게임 데이터를 로드하는 보다 포괄적인 접근 방식은 <a href="../Files/File_Actions.htm">파일 작업</a> 을 참조하십시오.</p><p></p><h4> 동작 구문:</h4><p><img alt="Load Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Load_Game.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Timeline</span></td><td> 인스턴스에 할당할 타임라인 리소스</td></tr></tbody></table><p></p><h4> 예시:</h4><p><span><img alt="Load Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Load_Game.png"/></span> 위의 액션 블록 코드는 전역 변수를 확인하고 0보다 작거나 같으면 이전에 저장된 게임을 로드합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Game_Actions.htm">게임 액션</a></div><div style="float:right"> 다음: <a href="Restart_Game.htm">게임 다시 시작</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Game

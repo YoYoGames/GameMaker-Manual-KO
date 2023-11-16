@@ -1,101 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Physics Objects</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing object physics" />
-  <meta name="rh-index-keywords" content="Objects - Physics" />
-  <meta name="search-keywords" content="Object Physics,Physics,fixtures,binding,physics shape editor,shape editor,physics properties" />
-  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>물리 개체</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="객체 물리학을 자세히 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="개체 - 물리학"/>
+  <meta name="search-keywords" content="물체 물리학,물리학,비품,제본,물리학 모양 편집기,모양 편집기,물리적 특성"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+  <script src="../../assets/scripts/main_script.js"></script>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Physics Objects</span></h1>
-  <p>When you first create a new object resource, there is a check-box marked <strong>Uses Physics</strong>, which is <em>not </em>checked by default. Selecting this option will radically change the behaviour of your object when an instance of it is placed in a room, as this switches on the object&#39;s physical properties and means that its &quot;traditional&quot; movement and collision functions are no longer valid (but only when the room it is placed on is also marked as being a physics room. See the section on the <a href="../Room_Properties/Room_Properties.htm">Room Editor Properties</a>). When you check this, the object resource window opens a new chained window for the physics editor:</p>
-  <p><img alt="Object Editor Physics" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Physics.png" />Before you start to edit the values for the physics behaviours it&#39;s a good idea to first set the <strong>collision shape</strong>. With the &quot;normal&quot; collision system your collisions are based off of the mask of the sprite assigned to the object, but with physics enabled <strong>this is no longer the case</strong>. We need to assign a <strong>collision shape</strong> to the object ourselves (this is properly called a <strong>fixture</strong>, see <a href="../../GameMaker_Language/GML_Reference/Physics/Physics.htm">The Physics Functions</a> for more information), which can either be a circle, a rectangle or a polygon shape that you yourself define. Clicking on the <strong>Modify Collision Shape</strong> button will open the following chained window to edit the shape:</p>
-  <p><img alt="Object Editor Physics Shape Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_PhysicsShape.png" />This looks similar to the <a href="../Paths.htm">Path Editor</a>, and functions in much the same way. However, depending on the mask you have chosen, it can be rather more restrictive:</p>
-  <ul class="colour">
-    <li>If you have a <strong>circular </strong>mask, then you can only pull any of the path points to make the circle diameter larger or smaller</li>
-    <li>If you have <strong>rectangular </strong>mask, then you can move any of the four corners, but the corresponding ones will adjust position automatically to always maintain a rectangle</li>
-    <li>If you have a <strong>custom </strong>(polygon) mask, it must have a minimum of 3 and a maximum of 8 points to it, and it must be convex (see image below).</li>
-  </ul>
-  <p><img alt="Object Editor Physics Shape Type" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_PhysicsShape.png" />Once you have set up your shape, you then need to define the basic physical properties that your object is to have. These are configured by changing the following parameters:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Density</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The density of something is defined as its mass per unit volume, which basically means how much mass is crammed into the space it takes up in the world. So, a balloon would have a low density as it has little mass that occupies a large space, while
-      a lead bar would have a high density as it has a great mass, yet occupies little space. In the <span data-keyref="GameMaker Name">GameMaker</span> 2D physics world, mass is calculated automatically for you from the values you input for the density and by the surface area of the
-      shape you define for the fixture. This will have a direct impact on how much inertia a fixture has as well as how it reacts to collisions and forces, so if you make a small shape with a high density it will have a very large mass (like a bar of
-      lead), but if you define a large shape with a low density it will have a much smaller mass (like a balloon).</p>
-    <p class="dropspot">Note that setting the density to 0 will create a &quot;static&quot; fixture that is essentially infinmitely dense and will not be affected by external forces or collisions, except in special cases where the instance has been created as <strong>kinematic</strong> (see
-      below for more details).</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Restitution</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">In physics, restitution is defined as &quot;the return of an object or system to its original state after elastic deformation&quot;, but as the fixtures in the <span data-keyref="GameMaker Name">GameMaker</span> are really rigid bodies and cannot be deformed, restitution is really a way of saying how &quot;bouncy&quot; the fixture is. This setting will affect how much an object &quot;bounces&quot; when it collides with other objects and is codependent on other forces that act on the instance like gravity and friction.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Collision Group</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The default collision group for all physics objects is 1, a <em>positive</em> collision group. Instances of objects that are in the same <em>positive </em>collision group (i.e. three objects are all in group 1) <em>always </em>collide with each other, even if they don&#39;t have a collision event. Physics objects with a collision group of 0 will interact as normal, which means they <strong>must have a collision event to interact</strong> (a simple comment will do to trigger the collision), otherwise no collision will be registered. Instances of objects with a <em>negative </em>collision group (i.e. four objects assigned -1) <em>never </em>collide, and any collision events between them will be ignored.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Using collision groups dramatically increases the processing required by the physics system and should be used only when absolutely necessary, and you should have as few groups as possible.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Linear Damping</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Damping is used to reduce the physics world velocity of an instance as it moves through the room. In principle this is like friction against a surface in the &quot;real&quot; world, but in the <span data-keyref="GameMaker Name">GameMaker</span> physics system, friction is actually only applied when two instances with collision shapes (fixtures) are in contact. So, you can consider linear damping as more like &quot;air friction&quot; that gradually slows any moving physics instance over time, without the need for contact with any other physics instance.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Angular Damping</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">If you think about any rotating object in the &quot;real world&quot;, unless it has a motor or is in space, its rotation will slow down over time due to the influence of external forces (like mechanical friction or friction against the air or water surrounding it). We can use the angular damping option to simulate this effect and reduce the velocity of rotation of instances in the physics world, as without it, any rotating instance would continue to rotate infinitely.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Friction</a></p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">Friction is the force that resists the relative motion of material elements sliding against each other, which in the <span data-keyref="GameMaker Name">GameMaker</span> physics world, translates as the loss of momentum caused by the collision of two instances with physics fixtures. So, when two instances collide, their motion is affected by this value, with a high friction causing a larger loss of momentum than a lower value.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p>Finally there are three extra options that can be flagged as on or off for your fixture, <strong>Sensor</strong>, <strong>Start Awake</strong> and <strong>Kinematic</strong>. Each of these flags will change the behaviour of your fixture in the following ways:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Sensor</a></p>
-  <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">By checking this box, you are telling <span data-keyref="GameMaker Name">GameMaker</span> to basically &quot;ignore&quot; the physical properties of the object, but still return a collision event with the objects around it. In this way you can have an instance with no physical presence in the room, but which can react to the collision of another instance, like the player, and do something in turn, like open a door, or trigger some sort of action in another place in the room.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> A sensor fixture will fire off the collision event when the collision <strong>first occurs only</strong>, meaning you don&#39;t get a stream of collision events as the two bodies continue to overlap (which is what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Start Awake</a></p>
-  <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">This is checked by default and represents the initial &quot;state&quot; of the fixture at the start of the room it has been placed in. Normally you want it to be awake (ie: participating in the physics world) right from the start, but sometimes this can lead to certain instabilities and unwanted effects due to the abrupt start of the physics simulation. To avoid these effects, you can un-check this flag and the instance will be created with the fixture asleep, and it will not participate in the physics simulation unless something acts upon it.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Physics instances will be flagged as &quot;asleep&quot; when they are no longer under any movement or having interaction with any other physics instance, and an &quot;asleep&quot; instance is simply one that is not currently being fully processed by the physics simulation (which saves on <a class="glossterm" data-glossterm="CPU overhead" href="#">CPU overhead</a>).</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Kinematic</a></p>
-  <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">There will be certain instances in a physics based game which you want to move around but do not wish to be acted on by forces such as gravity, nor forces incurred by collisions with dynamic objects (think of moving platforms in a platform game, for
-      example). For such objects simply setting the density of the fixture to 0 will mean that the physics will assume that the object is intended to be <strong>static </strong>and it will not react at all to anything. However, checking this box will
-      make a static object <strong>kinematic </strong>and although it will still be unaffected by collisions and forces like gravity, it can now be moved around or rotated using the appropriate variables (see <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_x.htm"><span class="inline">phy_position_x</span></a> and
-      <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_y.htm"><span class="inline">phy_position_y</span></a>, for example).
-    </p>
-    <p> </p>
-  </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Objects.htm">The Object Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Object_Variables.htm">Object Variables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 물리 개체</h1><p> 새 개체 리소스를 처음 만들 때 기본적으로 선택되어 <em>있지 않은</em> <strong>Uses Physics</strong> 라는 확인란이 있습니다. 이 옵션을 선택하면 개체의 인스턴스가 방에 배치될 때 개체의 동작이 근본적으로 변경됩니다. 이렇게 하면 개체의 물리적 속성이 전환되고 개체의 &quot;전통적인&quot; 이동 및 충돌 기능이 더 이상 유효하지 않기 때문입니다(단, 그것이 배치된 방은 또한 물리 방으로 표시됩니다. <a href="../Room_Properties/Room_Properties.htm">방 편집기 속성</a> 섹션을 참조하십시오. 이것을 선택하면 개체 리소스 창에서 물리 편집기를 위한 새로운 연결 창을 엽니다.</p><p><img alt="Object Editor Physics" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Physics.png"/> 물리 동작의 값을 편집하기 시작하기 전에 먼저 <strong>충돌 모양</strong> 을 설정하는 것이 좋습니다. &quot;일반&quot; 충돌 시스템을 사용하면 충돌이 개체에 할당된 스프라이트 마스크를 기반으로 하지만 물리가 활성화 <strong>되면 더 이상 그렇지 않습니다</strong>. <strong>충돌 모양</strong> 을 직접 개체에 할당해야 합니다(이를 <strong>고정 장치</strong> 라고 합니다. 자세한 내용 <a href="../../GameMaker_Language/GML_Reference/Physics/Physics.htm">은 물리 함수</a> 참조). 이 개체는 사용자가 정의한 원, 직사각형 또는 다각형이 될 수 있습니다. <strong>충돌 모양 수정</strong> 버튼을 클릭하면 모양을 편집하기 위해 다음과 같은 체인 창이 열립니다.</p><p><img alt="Object Editor Physics Shape Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_PhysicsShape.png"/> 이것은 <a href="../Paths.htm">경로 편집기</a> 와 유사하게 보이며 거의 동일한 방식으로 작동합니다. 그러나 선택한 마스크에 따라 다소 제한적일 수 있습니다.</p><ul class="colour"><li> <strong>원형</strong> 마스크가 있는 경우 경로 점만 당겨서 원 직경을 더 크거나 작게 만들 수 있습니다.</li><li> <strong>직사각형</strong> 마스크가 있는 경우 네 모서리 중 아무 곳이나 이동할 수 있지만 해당 모서리는 항상 직사각형을 유지하도록 자동으로 위치를 조정합니다.</li><li> <strong>사용자 정의</strong> (다각형) 마스크가 있는 경우 최소 3개, 최대 8개의 점이 있어야 하며 볼록해야 합니다(아래 이미지 참조).</li></ul><p><img alt="Object Editor Physics Shape Type" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_PhysicsShape.png"/> 모양을 설정했으면 개체가 가질 기본 물리적 속성을 정의해야 합니다. 이들은 다음 매개변수를 변경하여 구성됩니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">밀도</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> 어떤 것의 밀도는 단위 부피당 질량으로 정의되며, 이는 기본적으로 세계에서 차지하는 공간에 얼마나 많은 질량이 채워져 있는지를 의미합니다. 따라서 풍선은 질량이 작아서 큰 공간을 차지하므로 밀도가 낮고, 리드바는 질량은 크지만 공간을 적게 차지하므로 밀도가 높습니다. <span data-keyref="GameMaker Name">GameMaker</span> 2D 물리 세계에서 밀도에 대해 입력한 값과 고정 장치에 대해 정의한 모양의 표면적에 따라 질량이 자동으로 계산됩니다. 이것은 고정물의 관성 정도와 충돌 및 힘에 반응하는 방식에 직접적인 영향을 미치므로 고밀도로 작은 모양을 만들면 매우 큰 질량(예: 납 막대)을 갖게 됩니다. 그러나 밀도가 낮은 큰 모양을 정의하면 질량이 훨씬 작아집니다(풍선처럼).</p><p class="dropspot"> 밀도를 0으로 설정하면 인스턴스가 <strong>운동학적</strong> 으로 생성된 특별한 경우를 제외하고 본질적으로 무한히 조밀하고 외부 힘이나 충돌의 영향을 받지 않는 &quot;정적&quot; 고정물이 생성됩니다(자세한 내용은 아래 참조).</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">반환</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> 물리학에서 복원은 &quot;탄성 변형 후 개체 또는 시스템을 원래 상태로 되돌리는 것&quot;으로 정의되지만 <span data-keyref="GameMaker Name">GameMaker</span> 의 고정물은 실제로는 강체이며 변형될 수 없기 때문에 복원은 실제로 &quot;탄력 있는 &quot; 고정이다. 이 설정은 다른 개체와 충돌할 때 개체가 &quot;바운스&quot;되는 정도에 영향을 미치며 중력 및 마찰과 같이 인스턴스에 작용하는 다른 힘에 상호 의존적입니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">충돌 그룹</a></p><div class="droptext" data-targetname="drop-down2"><p class="dropspot"> 기본적으로 모든 물리 개체에 대한 충돌 그룹은 0이며, 이는 그들이 정상적으로 상호 작용할 것임을 의미하며, 이는 차례로 <strong>상호 작용하기 위해 충돌 이벤트가 있어야</strong> 함을 의미합니다(간단한 설명은 충돌을 트리거하기 위해 수행함) 그렇지 않으면 충돌이 발생하지 않습니다 등록됩니다. 그러나 개체가 번호가 지정된 특정 <strong>충돌 그룹</strong> 에 속하도록 지정할 수도 있습니다. 개체를 <em>포지티브</em> 충돌 그룹에 할당하면(즉, 세 개체가 모두 그룹 &quot; <strong>2</strong> &quot;에 있음) 충돌 이벤트에 아무것도 없는 경우에도 이러한 개체의 인스턴스가 <em>항상</em> 충돌해야 한다고 <span data-keyref="GameMaker Name">GameMaker</span> 에 알립니다. 역으로 <em>네거티브</em> 충돌 그룹이 있는 개체가 있는 경우(예: &quot; <strong>-1</strong> &quot;이 할당된 4개의 개체), <span data-keyref="GameMaker Name">GameMaker</span> 에 이러한 개체가 충돌 <em>해서는</em> 안 되며 개체 간의 충돌 이벤트가 무시된다.</p><p class="note"> <strong>참고</strong>: 충돌 그룹을 사용하면 물리 시스템에 필요한 처리가 크게 증가하고 절대적으로 필요한 경우에만 사용해야 하며 가능한 한 적은 수의 그룹을 가져야 합니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">선형 댐핑</a></p><div class="droptext" data-targetname="drop-down3"><p class="dropspot"> 댐핑은 인스턴스가 방을 이동할 때 물리적 세계 속도를 줄이는 데 사용됩니다. 원칙적으로 이것은 &quot;실제&quot; 세계의 표면에 대한 마찰과 <span data-keyref="GameMaker Name">같지만 GameMaker</span> 물리 시스템에서 마찰은 실제로 충돌 모양(고정 장치)이 있는 두 인스턴스가 접촉할 때만 적용됩니다. 따라서 선형 댐핑은 다른 물리적 인스턴스와 접촉할 필요 없이 시간이 지남에 따라 움직이는 물리적 인스턴스를 점진적으로 느리게 하는 &quot;공기 마찰&quot;과 비슷하다고 생각할 수 있습니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">각도 감쇠</a></p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"> &quot;현실 세계&quot;에서 회전하는 물체에 대해 생각한다면 모터가 있거나 우주에 있지 않는 한 외부 힘(기계적 마찰 또는 주변 공기 또는 물에 대한 마찰 등)의 영향으로 인해 시간이 지남에 따라 회전 속도가 느려집니다. 그것). 각도 댐핑 옵션을 사용하여 이 효과를 시뮬레이션하고 물리 세계에서 인스턴스의 회전 속도를 줄일 수 있습니다. 이 옵션이 없으면 회전하는 인스턴스가 계속 무한히 회전할 것이기 때문입니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">마찰</a></p><div class="droptext" data-targetname="drop-down5"><p class="dropspot"> 마찰은 서로에 대해 미끄러지는 재료 요소의 상대적인 움직임에 저항하는 힘이며 <span data-keyref="GameMaker Name">GameMaker</span> 물리 세계에서 두 인스턴스가 물리 고정 장치와 충돌하여 발생하는 운동량 손실로 해석됩니다. 따라서 두 인스턴스가 충돌하면 모션이 이 값의 영향을 받으며 마찰이 높으면 낮은 값보다 더 큰 운동량 손실이 발생합니다.</p><p class="dropspot"></p></div><p></p><p> 마지막으로 픽스쳐에 대해 켜짐 또는 꺼짐 플래그를 지정할 수 있는 세 가지 추가 옵션이 있습니다. <strong>Sensor</strong>, <strong>Start Awake</strong> 및 <strong>Kinematic</strong>. 이 플래그 각각은 다음과 같은 방식으로 조명기의 동작을 변경합니다:</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">감지기</a></p><div class="droptext" data-targetname="drop-down6"><p class="dropspot"> 이 상자를 선택하면 <span data-keyref="GameMaker Name">GameMaker</span> 에 기본적으로 개체의 물리적 속성을 &quot;무시&quot;하지만 여전히 주변 개체와의 충돌 이벤트를 반환하도록 지시합니다. 이런 식으로 방에 물리적 존재가 없는 인스턴스를 가질 수 있지만 플레이어와 같은 다른 인스턴스의 충돌에 반응할 수 있고 차례로 문을 열거나 다른 인스턴스에서 일종의 동작을 트리거하는 등의 작업을 수행할 수 있습니다. 방에 두십시오.</p><p class="note"> <strong>참고</strong>: 센서 고정 장치는 충돌 <strong>이 처음 발생할 때만</strong> 충돌 이벤트를 발생시킵니다. 즉, 두 개의 본체가 계속 겹치기 때문에 충돌 이벤트 스트림을 얻지 못합니다(전통적으로 발생함). 겹치는 것을 멈추고 나중에 겹치면 또 다른 충돌 이벤트가 트리거됩니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">깨어 시작</a></p><div class="droptext" data-targetname="drop-down7"><p class="dropspot"> 이것은 기본적으로 체크되어 있고 그것이 배치된 방의 시작에서 조명기의 초기 &quot;상태&quot;를 나타냅니다. 일반적으로 여러분은 시작부터 바로 깨어 있기를 원하지만(예: 물리 세계에 참여), 때로는 이것은 물리학 시뮬레이션의 갑작스러운 시작으로 인해 특정 불안정성과 원치 않는 효과로 이어질 수 있습니다. 이러한 효과를 피하기 위해 이 플래그를 선택 해제하면 고정 장치가 잠자기 상태로 인스턴스가 생성되고 무언가가 작동하지 않는 한 물리 시뮬레이션에 참여하지 않습니다.</p><p class="dropspot"> 물리 인스턴스는 더 이상 움직이지 않거나 다른 물리 인스턴스와 상호 작용하지 않을 때 &quot;잠자기&quot; 플래그가 지정되며 &quot;잠자기&quot; 인스턴스는 단순히 현재 물리 시뮬레이션에서 완전히 처리되지 않는 것입니다(이는 <a class="glossterm" data-glossterm="CPU 오버헤드" href="#">CPU 오버헤드</a> 를 절약합니다).</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">운동학</a></p><div class="droptext" data-targetname="drop-down8"><p class="dropspot"> 물리 기반 게임에는 움직이고 싶지만 중력과 같은 힘이나 동적 물체와의 충돌로 인해 발생하는 힘을 원하지 않는 특정 인스턴스가 있을 것입니다(예를 들어 플랫폼 게임에서 움직이는 플랫폼을 생각해 보십시오. ). 이러한 객체의 경우 단순히 조명기의 밀도를 0으로 설정하는 것은 물리학에서 객체가 <strong>정적</strong> 인 것으로 가정하고 아무 반응도 하지 않는다는 것을 의미합니다. 그러나 이 상자를 선택하면 정적 개체가 <strong>운동학적</strong> 으로 만들어지고 충돌 및 중력과 같은 힘의 영향을 받지 않지만 이제 적절한 변수를 사용하여 주변을 이동하거나 회전할 수 있습니다(참조 <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_x.htm"><span class="inline">phy_position_x</span></a> 그리고 <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_y.htm"><span class="inline">phy_position_y</span></a>, 예를 들어). </p><p></p></div><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Objects.htm">개체 편집기</a></div><div style="float:right"> 다음: <a href="Object_Variables.htm">객체 변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Physics Objects
@@ -103,5 +19,5 @@ Physics Objects
   <!-- TAGS
 objects_physics
 -->
-</body>
-</html>
+
+</body></html>

@@ -6,45 +6,19 @@
   <title>async_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the async_load variable" />
+  <meta name="topic-comment" content="async_load 변수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="async_load" />
   <meta name="search-keywords" content="async_load" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>async_load</h1>
-  <p>This variable is <b>global</b> in scope and is used to hold a <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> when used in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>, and -1 at all other times. The actual contents of the DS map will depend on the type of asynchronous event <a class="glossterm" data-glossterm="callback" href="#">callback</a>, as well as the function that was used to trigger the event, so refer to the individual pages for those events for full details of all the possible DS map contents.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">async_load;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p class="code">sprite =  sprite_add(&quot;site.com/path/image.png&quot;, 16, true, true, 0, 0);</p>
-  <p>The above code would be called in an event to load a sprite from an external URL. This would then trigger the <strong>Image Loaded</strong> Asynchronous Event, where you would parse the <span class="inline">async_load</span> map:</p>
-  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == sprite<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>async_load</h1><p> 이 변수는 범위가 <b>전역적</b> 이며 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">비동기 이벤트</a> 에서 사용될 때 <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 을 유지하는 데 사용되며 다른 모든 경우에는 -1입니다. DS 맵의 실제 콘텐츠는 이벤트를 트리거하는 데 사용된 함수뿐만 아니라 비동기 이벤트 <a class="glossterm" data-glossterm="콜백" href="#">콜백</a> 의 유형에 따라 달라지므로 가능한 모든 DS 맵 콘텐츠에 대한 자세한 내용은 해당 이벤트의 개별 페이지를 참조하세요.</p><p></p><h4> 통사론:</h4><p class="code">async_load;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span></p><p></p><h4> 확장된 예:</h4><p class="code">sprite =  sprite_add(&quot;site.com/path/image.png&quot;, 16, true, true, 0, 0);</p><p> 위의 코드는 외부 URL에서 스프라이트를 로드하는 이벤트에서 호출됩니다. 그러면 <strong>Image Loaded</strong> Asynchronous Event가 트리거되어 <span class="inline">async_load</span> 지도:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == sprite<br />
     {<br />
         if (ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0)<br />
         {<br />
             sprite_index = sprite;<br />
         }<br />
-    }</p>
-  <p>The above code will first check the ID of the <span class="inline">async_load</span> map, then check the status of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will then be used to set the sprite index of the instance to the newly loaded image.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 먼저 ID를 확인합니다. <span class="inline">async_load</span> map으로 이동한 다음 콜백 상태를 확인합니다. 값이 0보다 크거나 같으면(성공 신호) 콜백의 결과가 인스턴스의 스프라이트 인덱스를 새로 로드된 이미지로 설정하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Global_Variables.htm">전역 변수</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 async_load

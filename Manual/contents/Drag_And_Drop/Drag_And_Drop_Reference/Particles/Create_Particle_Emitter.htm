@@ -3,61 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Particle Emitter</title>
+  <title>파티클 이미터 만들기</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Create Particle Emitter action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Particle Emitter" />
-  <meta name="search-keywords" content="Create Particle Emitter" />
+  <meta name="topic-comment" content="파티클 이미터 생성 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 파티클 이미터 생성" />
+  <meta name="search-keywords" content="파티클 이미터 만들기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Particle Emitter Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Emitter.png" /> Create Particle Emitter</h1>
-  <p>To be able to see your particles you need to have first created a <a href="Create_Particle_System.htm">Particle System</a>, then have defined some <a href="Create_Particle_Type.htm">particle types</a> and then finally created a <b>particle emitter</b>    using this action. To create the emitter, you call this action and assign the emitter to a particle system that you have previously created (see <a href="Create_Particle_System.htm">Particle System</a>) and then give a target variable to store it&#39;s
-    unique ID value for use in further actions. You can choose to flag this variable as being a temporary local variable, but that will mean that it is discarded at the end of the action script or event, meaning that the emitter will still exist but leave
-    you without any means to access it, so care must be taken when using this (in general emitters will never need to be stored in a temporary local variable, but for certain things, like drawing particles to a surface, it may be required).</p>
-  <p class="note"><b>IMPORTANT!</b> If your particle system is <b>persistent</b> then you must either destroy all emitters at the end of each room using <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a> and re-create them again in the next room as required,
-    or store their ID values in <b>global</b> variables so that they can be accessed anytime in any room, or have them created by a persistent object, so that the object will persist and be able to access them through instance variables. Also note that
-    if you call the <a href="../Game/Restart_Game.htm">Restart Game</a> action you should destroy the particle system beforehand so that the system and the emitters assigned are removed from memory before starting again. Failure to properly remove emitters
-    from system memory as outlined above will lead to a <b>memory leak</b>. This happens when a resource is added to memory and then &quot;de-referenced&quot;, meaning that <span data-keyref="GameMaker Name">GameMaker</span> has no way to interact with that resource any more. This leads
-    to the memory being clogged by inaccessible resources which in turn can cause issues with your game.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Particle Emitter Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_Emitter.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td>The ID value for the global emitter to create</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the emitter ID</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Particle Emitter Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Emitter.png" />The above action block code will create a particle emitter, set it&#39;s
-    region, and then set it to emit a stream of particles.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Particle Emitter Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Emitter.png" /> 파티클 이미터 만들기</h1><p> 파티클을 보려면 먼저 <a href="Create_Particle_System.htm">파티클 시스템</a> 을 만든 다음 일부 <a href="Create_Particle_Type.htm">파티클 유형</a> 을 정의한 다음 마지막으로 이 작업을 사용하여 <b>파티클 이미터</b> 를 생성해야 합니다. 이미터를 만들려면 이 작업을 호출하고 이미터를 이전에 만든 입자 시스템에 할당한 다음( <a href="Create_Particle_System.htm">파티클 시스템</a> 참조) 대상 변수에 추가 작업에 사용할 고유 ID 값을 저장할 수 있습니다. 이 변수를 임시 로컬 변수로 플래그 지정하도록 선택할 수 있지만 이는 작업 스크립트 또는 이벤트가 끝날 때 삭제됨을 의미합니다. 즉, 이미터는 여전히 존재하지만 액세스할 수단이 없습니다. 이것을 사용할 때 주의를 기울여야 합니다(일반적으로 이미터는 임시 로컬 변수에 저장할 필요가 없지만 표면에 입자를 그리는 것과 같은 특정 항목의 경우 필요할 수 있습니다).</p><p class="note"> <b>중요한!</b> 파티클 시스템이 <b>영구적인</b> 경우 <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a> 를 사용하여 각 방의 끝에서 모든 이미터를 파괴하고 필요에 따라 다음 방에서 다시 생성하거나 액세스할 수 있도록 해당 ID 값을 <b>전역</b> 변수에 저장해야 합니다. 어떤 방에서든 언제든지, 또는 영구 객체에 의해 생성되도록 하여 객체가 지속되고 인스턴스 변수를 통해 액세스할 수 있도록 합니다. 또한 <a href="../Game/Restart_Game.htm">Restart Game</a> 액션을 호출하는 경우 파티클 시스템을 미리 파괴하여 할당된 시스템과 이미터가 다시 시작하기 전에 메모리에서 제거되도록 해야 합니다. 위에서 설명한 대로 시스템 메모리에서 이미터를 제대로 제거하지 못하면 <b>메모리 누수</b> 가 발생합니다. 이것은 리소스가 메모리에 추가된 다음 &quot;역참조&quot;될 때 발생합니다. 즉, <span data-keyref="GameMaker Name">GameMaker</span> 는 더 이상 해당 리소스와 상호 작용할 수 없습니다. 이로 인해 액세스할 수 없는 리소스로 인해 메모리가 막혀 게임에 문제가 발생할 수 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Create Particle Emitter Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_Emitter.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">System</span></td><td> 생성할 전역 이미터의 ID 값</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 이미터 ID를 저장할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Create Particle Emitter Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Emitter.png" /> 위의 액션 블록 코드는 파티클 이미터를 만들고 영역을 설정한 다음 파티클 스트림을 방출하도록 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Destroy_Particle_Emitter.htm">파티클 이미터 파괴</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Particle Emitter

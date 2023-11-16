@@ -3,67 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>General Game Control</title>
+  <title>일반 게임 제어</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for General Game Control functions" />
-  <meta name="rh-index-keywords" content="General Game Control" />
-  <meta name="search-keywords" content="General Game Control,Game Functions" />
+  <meta name="topic-comment" content="일반 게임 제어 기능에 대한 참조 섹션" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="일반 게임 제어,게임 기능" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">General Game Control</span></h1>
-  <p>This page lists all functions and variables that are related to game specific functionality, like loading/saving, restarting and so on.</p>
-  <h2 id="var_ref">Variable Reference</h2>
-  <p>The following <a href="../../GML_Overview/Variables/Global_Variables.htm">global scope</a> <strong>built-in</strong> variables are useful for debugging your game - they can be used as the output to a log file in the case of issues, for example - as well as for showing the current build ID, etc. to the user: </p>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="game_id.htm">game_id</a> <span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span></li>
-    <li><a data-xref="{title}" href="game_save_id.htm">game_save_id</a></li>
-    <li><a data-xref="{title}" href="game_display_name.htm">game_display_name</a></li>
-    <li><a data-xref="{title}" href="game_project_name.htm">game_project_name</a></li>
-  </ul>
-  <h2 id="func_ref">Function Reference</h2>
-  <h3 id="func_ref_general">General Game Control</h3>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="game_end.htm">game_end</a></li>
-    <li><a data-xref="{title}" href="game_restart.htm">game_restart</a></li>
-    <li><a data-xref="{title}" href="game_change.htm">game_change</a></li>
-    <li><a data-xref="{title}" href="game_load.htm">game_load</a></li>
-    <li><a data-xref="{title}" href="game_load_buffer.htm">game_load_buffer</a></li>
-    <li><a data-xref="{title}" href="game_save.htm">game_save</a></li>
-    <li><a data-xref="{title}" href="game_save_buffer.htm">game_save_buffer</a></li>
-    <li><a data-xref="{title}" href="game_set_speed.htm">game_set_speed</a></li>
-    <li><a data-xref="{title}" href="game_get_speed.htm">game_get_speed</a></li>
-  </ul>
-  <h3 id="func_ref_highscores">Highscores</h3>
-  <p>To help you create and maintain highscores for your games, <span data-keyref="GameMaker Name">GameMaker</span> creates a global high score <a href="../../GML_Overview/Arrays.htm">array</a> of 10 places which you can access, add to, and change to create your own custom high score lists without too much fuss. This functionality is local to the game and works on all platforms, so you can easily store and maintain a basic high score table using these functions along with the <a href="../File_Handling/File_Handling.htm">File Handling Functions</a>.</p>
-  <p>The following functions exist that deal with the internal high score list.</p>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="highscore_add.htm">highscore_add</a></li>
-    <li><a data-xref="{title}" href="highscore_name.htm">highscore_name</a></li>
-    <li><a data-xref="{title}" href="highscore_value.htm">highscore_value</a></li>
-    <li><a data-xref="{title}" href="highscore_clear.htm">highscore_clear</a></li>
-  </ul>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> also includes a very basic function for drawing the highscores out on the screen as a list. This is meant for debugging more than anything else as making your own high score table is easy and will give you far more control over how it is displayed:</p>
-  <ul class="colour">
-    <li><a data-xref="{title}" href="../Drawing/Text/draw_highscore.htm">draw_highscore</a></li>
-  </ul>
-  <h3 id="func_ref_cursor">Cursor</h3>
-  <ul class="colour">
-    <li><a href="cursor_sprite.htm">cursor_sprite</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Movement_And_Collisions/Movement_And_Collisions.htm">Movement And Collisions</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 일반 게임 제어</h1><p> 이러한 기능과 변수는 모두 로드/저장, 다시 시작 등과 같은 게임 특정 기능과 관련이 있습니다.</p><p> 다음 <a href="../../GML_Overview/Variables/Global_Variables.htm">전역 범위</a> <strong>내장</strong> 변수는 게임을 디버깅하는 데 유용합니다. 예를 들어 문제가 발생한 경우 로그 파일에 대한 출력으로 사용할 수 있을 뿐만 아니라 현재 빌드 ID 등을 표시하는 데에도 사용할 수 있습니다. 사용자:</p><ul class="colour"><li> <a href="game_id.htm"><span class="notranslate">game_id</span></a></li><li> <a href="game_save_id.htm"><span class="notranslate">game_save_id</span></a></li><li> <a href="game_display_name.htm"><span class="notranslate">game_display_name</span></a></li><li> <a href="game_project_name.htm"><span class="notranslate">game_project_name</span></a></li></ul><p></p><p> 일반적인 게임 제어에 사용되는 기능은 다음과 같습니다.</p><ul class="colour"><li> <a href="game_end.htm"><span class="notranslate">game_end</span></a></li><li> <a href="game_restart.htm"><span class="notranslate">game_restart</span></a></li><li> <a href="game_load.htm"><span class="notranslate">game_load</span></a></li><li> <a href="game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a></li><li> <a href="game_save.htm"><span class="notranslate">game_save</span></a></li><li> <a href="game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></li><li> <a href="game_get_speed.htm"><span class="notranslate">game_get_speed</span></a></li><li> <a href="game_set_speed.htm"><span class="notranslate">game_set_speed</span></a></li></ul><p></p><p> 게임의 최고 점수를 생성하고 유지하는 데 도움이 <span data-keyref="GameMaker Name">되도록 GameMaker</span> 는 액세스하고 추가하고 변경할 수 있는 10개 장소의 글로벌 최고 점수 <a href="../../GML_Overview/Arrays.htm">배열</a> 을 생성하여 큰 소란 없이 자신만의 맞춤형 최고 점수 목록을 생성할 수 있습니다. 이 기능은 게임에 로컬이며 모든 플랫폼에서 작동하므로 <a href="../File_Handling/File_Handling.htm">파일 처리 기능</a> 과 함께 이러한 기능을 사용하여 기본 최고 점수 테이블을 쉽게 저장하고 유지할 수 있습니다.</p><p> 내부 최고 점수 목록을 처리하는 다음과 같은 기능이 있습니다.</p><ul class="colour"><li> <a href="highscore_add.htm"><span class="notranslate">highscore_add</span></a></li><li> <a href="highscore_name.htm"><span class="notranslate">highscore_name</span></a></li><li> <a href="highscore_value.htm"><span class="notranslate">highscore_value</span></a></li><li> <a href="highscore_clear.htm"><span class="notranslate">highscore_clear</span></a></li></ul><p></p><p> <span data-keyref="GameMaker Name">GameMaker</span> 에는 최고 점수를 목록으로 화면에 그리는 기능도 포함되어 있지만 매우 기본적이며 자신의 최고 점수 테이블을 만드는 것이 쉽고 많은 것을 얻을 수 있으므로 무엇보다 디버깅에 이것을 사용하는 것이 좋습니다. 표시 방법에 대한 더 많은 제어:</p><ul class="colour"><li> <a href="../Drawing/Text/draw_highscore.htm"><span class="notranslate">draw_highscore</span></a></li></ul><p></p><p> 마지막으로 마우스 커서에 스프라이트를 할당할 수 있는 기능이 있습니다.</p><ul class="colour"><li> <a href="cursor_sprite.htm"><span class="notranslate">cursor_sprite</span></a></li> </ul><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../GML_Reference.htm">GML 참조</a></div><div style="float:right"> 다음: <a href="../Movement_And_Collisions/Movement_And_Collisions.htm">이동 및 충돌</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 General Game Control

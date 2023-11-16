@@ -4,30 +4,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>player_id</title>
+  <title>플레이어 아이디</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
-  <meta name="rh-index-keywords" content="player_id" />
-  <meta name="search-keywords" content="player_id" />
+  <meta name="rh-index-keywords" content="플레이어 아이디" />
+  <meta name="search-keywords" content="플레이어 아이디" />
 </head>
-<body>
-  <h1>player_id</h1>
-  <p>When you use <a href="../Rollback_Functions/rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> to define a player object, the system automatically creates an instance of that object for each player. Each instance of that object gets the <span class="inline">player_id</span> variable, which stores the ID of that player.</p>
-  <p>This ID starts at 0, which initially is the host itself. Any players from 1 and up are &quot;peers&quot; that have joined the game.</p>
-  <p>If you do not use <span class="inline">rollback_define_player()</span>, then this variable will not be created for any objects. In that case, player instances and their IDs must be managed manually, as explained in <a data-xref="{text}" href="../Rollback_System.htm#h1">Defining A Player Object</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">player_id;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">// Create event<br />
+<body><h1>플레이어 아이디</h1><p> 사용할 때<a href="../Rollback_Functions/rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> 플레이어 개체를 정의하기 위해 시스템은 각 플레이어에 대해 해당 개체의 인스턴스를 자동으로 만듭니다. 해당 객체의 각 인스턴스는 <span class="inline">player_id</span> 해당 플레이어의 ID를 저장하는 변수입니다.</p><p> 이 ID는 처음에 호스트 자체인 0에서 시작합니다. 1 이상의 플레이어는 게임에 참가한 &quot;동료&quot;입니다.</p><p> 사용하지 않는 경우 <span class="inline">rollback_define_player()</span>, 이 변수는 개체에 대해 생성되지 않습니다. 이 경우 <a data-xref="{text}" href="../Rollback_System.htm#h1">플레이어 개체 정의 에</a> 설명된 대로 플레이어 인스턴스와 해당 ID를 수동으로 관리해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">player_id;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p><p></p><h4> 예시:</h4><p class="code">// Create event<br />
     if (player_id == 0)<br />
     {<br />
         x = 300;<br />
@@ -35,10 +22,7 @@
     else if (player_id == 1)<br />
     {<br />
         x = 500;<br />
-    }</p>
-  <p>The code above changes the X position of the player instance based on its ID.</p>
-  <p>You can also use this ID as an array index, for example, to store scores for all players:</p>
-  <p class="code">// Step event<br />
+    }</p><p> 위의 코드는 ID를 기반으로 플레이어 인스턴스의 X 위치를 변경합니다.</p><p> 예를 들어 모든 플레이어의 점수를 저장하기 위해 이 ID를 배열 인덱스로 사용할 수도 있습니다.</p><p class="code">// Step event<br />
     var _coin = instance_place(x, y, obj_coin);<br />
     if (_coin != noone)<br />
     {<br />
@@ -49,19 +33,7 @@
     // Draw event<br />
     var _my_score = obj_game.scores[player_id];<br />
     draw_text(x, y, _my_score);
-  </p>
-  <p>The Step event code above increases the score of the player in an array in <span class="inline2">obj_game</span> when it collides with a coin. That coin instance is then destroyed.</p>
-  <p>The Draw event code above retrieves the player&#39;s score from the same array, and draws its value.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Variables.htm">Rollback Variables</a></div>
-        <div>Next: <a data-xref="{title}" href="player_local.htm">player_local</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 단계 이벤트 코드는 <span class="inline2">obj_game</span> 의 배열에 있는 플레이어가 동전과 충돌할 때 점수를 높입니다. 그러면 해당 코인 인스턴스가 파괴됩니다.</p><p> 위의 Draw 이벤트 코드는 동일한 배열에서 플레이어의 점수를 검색하고 해당 값을 그립니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Variables.htm">변수 롤백</a></div><div> 다음: <a data-xref="{title}" href="player_local.htm">player_local</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 player_id

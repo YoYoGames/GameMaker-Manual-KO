@@ -6,60 +6,14 @@
   <title>sprite_get_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function sprite_get_speed" />
+  <meta name="topic-comment" content="sprite_get_speed 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="sprite_get_speed" />
   <meta name="search-keywords" content="sprite_get_speed" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_get_speed</h1>
-  <p>This function can be used to retrieve the sprite speed as defined for the sprite resource in the <a href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Editor</a>. The value returned can then be used, for example, to calculate how
-    many frames may be drawn for different <a href="../Sprite_Instance_Variables/image_speed.htm"><span class="inline">image_speed</span></a>. Note that the return value will be very different depending on the <i>type</i> of speed
-    that was applied in the Sprite Editor, either <i>Frames Per Second</i>, or <i>Frames Per Game Frame</i>. The following two examples illustrate this:</p>
-  <ul class="colour">
-    <li>If you have a sprite that draws 1 frame per <i>second</i> and set the image speed to 0.5 it will draw at 0.5 frames per second. If your game frame rate is 60 frames per second then the sprite will draw 1 frame for every 120
-      game frames.</li>
-    <li>If you have a sprite that draws 1 frame per <i>game frame</i> and set the image speed to 0.5 it will draw 0.5 frames per game frame. If your game frame rate is 60 frames per second then the sprite will draw 30 frames for
-      every 60 game frames.</li>
-  </ul>
-  <p>You can find out what the type of animation speed was used when defining the sprite using the function <a href="sprite_get_speed_type.htm"><span class="inline">sprite_get_speed_type()</span></a>, and you can set the animation speed <i>and</i> type
-    using the function <a href="../Sprite_Manipulation/sprite_set_speed.htm"><span class="inline">sprite_set_speed()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">sprite_get_speed(index)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to get the speed of</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">s_speed = sprite_get_speed(sprite_index);<br/> s_type = sprite_get_speed_type(sprite_index);</p>
-  <p>The above code gets the sprite speed and the sprite animation type and stores them in instance variables for future use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Information.htm">Sprite Information</a></div>
-        <div style="float:right">Next: <a href="sprite_get_speed_type.htm">sprite_get_speed_type</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_get_speed</h1><p> 이 함수는 <a href="../../../../../The_Asset_Editors/Sprites.htm">스프라이트 편집기</a> 에서 스프라이트 리소스에 대해 정의된 스프라이트 속도를 검색하는 데 사용할 수 있습니다. 그런 다음 반환된 값을 사용하여 예를 들어 여러 프레임에 대해 그릴 수 있는 프레임 수를 계산할 수 있습니다.<a href="../Sprite_Instance_Variables/image_speed.htm"><span class="inline">image_speed</span></a>. 반환 값은 스프라이트 편집기에 적용된 속도 <i>유형</i> ( <i>초당</i> 프레임 수 또는 <i>게임 프레임당 프레임</i> 수)에 따라 매우 다릅니다. 다음 두 가지 예가 이를 보여줍니다.</p><ul class="colour"><li> <i>초당</i> 1프레임을 그리는 스프라이트가 있고 이미지 속도를 0.5로 설정하면 초당 0.5프레임으로 그려집니다. 게임 프레임 속도가 초당 60프레임이면 스프라이트는 120게임 프레임마다 1프레임을 그립니다.</li><li> <i>게임</i> 프레임당 1프레임을 그리는 스프라이트가 있고 이미지 속도를 0.5로 설정하면 게임 프레임당 0.5프레임을 그립니다. 게임 프레임 속도가 초당 60프레임이면 스프라이트는 60게임 프레임마다 30프레임을 그립니다.</li></ul><p> 함수를 사용하여 스프라이트를 정의할 때 사용된 애니메이션 속도 유형을 알 수 있습니다.<a href="sprite_get_speed_type.htm"><span class="inline">sprite_get_speed_type()</span></a>, 그리고 당신은 기능을 사용하여 애니메이션 속도 <i>와</i> 유형을 설정할 수 있습니다<a href="../Sprite_Manipulation/sprite_set_speed.htm"><span class="inline">sprite_set_speed()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">sprite_get_speed(index)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td><td> <span class="notranslate">The index of the sprite to get the speed of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">s_speed = sprite_get_speed(sprite_index);<br/> s_type = sprite_get_speed_type(sprite_index);</p><p> 위의 코드는 스프라이트 속도와 스프라이트 애니메이션 유형을 가져와 나중에 사용할 수 있도록 인스턴스 변수에 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sprite_Information.htm">스프라이트 정보</a></div><div style="float:right"> 다음: <a href="sprite_get_speed_type.htm"><span class="notranslate">sprite_get_speed_type</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_speed

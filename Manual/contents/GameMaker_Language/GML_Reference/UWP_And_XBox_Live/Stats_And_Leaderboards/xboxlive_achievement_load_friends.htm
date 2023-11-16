@@ -6,34 +6,25 @@
   <title>xboxlive_achievement_load_friends</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-    <meta name = "rh-authors" content = "Mark Alexander" />
-      <meta name = "topic-comment" content = "Reference page for achievement_load_friends" />
-      <meta name = "rh-index-keywords" content = "achievement_load_friends" />
-      <meta name = "search-keywords" content = "achievement_load_friends,achievement_friends_info" />
-  <meta name="topic-comment" content="Page outlining the function xboxlive_achievement_load_friends." />
+  <script src="../../../../assets/scripts/main_script.js">
+    //<![CDATA[
+    <
+    meta name = "rh-authors"
+    content = "Mark Alexander" / >
+      <
+      meta name = "topic-comment"
+    content = "Reference page for achievement_load_friends" / >
+      <
+      meta name = "rh-index-keywords"
+    content = "achievement_load_friends" / >
+      <
+      meta name = "search-keywords"
+    content = "achievement_load_friends,achievement_friends_info" / >
+    //]]>
+  </script>
+  <meta name="topic-comment" content="xboxlive_achievement_load_friends 기능을 설명하는 페이지입니다." />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_achievement_load_friends</h1>
-  <p>This function will send a request to the server for information on all the logged in users friends and will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map populated with the relevant key/value pairs. The <i>id</i> key of this <span class="inline">DS Map</span> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <span class="inline">xboxlive_achievement_friends_info</span> as well as a number of other key/value pairs for each friend. The exact contents of the map are shown below:</p>
-  <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - For this function it should be <span class="inline">xboxlive_achievement_friends_info</span></li>
-    <li>&quot;<b>FriendN</b>&quot; - The name of the friend, where &quot;N&quot; is an integer value corresponding to their position within the friends list.</li>
-    <li>&quot;<b>FriendidN</b>&quot; - The unique user id of the friend, &quot;N&quot;.</li>
-  </ul>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code">xboxlive_achievement_load_friends();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following code would probably be called after the player has logged into their game account to get a list of all that users friends:</p>
-  <p class="code">xboxlive_achievement_load_friends();</p>
-  <p>This will send off a request for the information on the users friends and generate an asynchronous callback with the special <span class="inline">async_load</span> DS map containing the following data:</p>
-  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> xboxlive_achievement_load_friends</h1><p> 이 함수는 로그인한 모든 사용자 친구에 대한 정보를 서버에 요청하고 다음을 포함하는 콜백 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">소셜 비동기 이벤트</a> 를 트리거합니다. <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> 관련 키/값 쌍으로 채워진 맵. 이것의 <i>아이디</i> 키는 <span class="inline">DS Map</span> 올바른 콜백을 식별하는 데 사용되며(주어진 비동기 이벤트에 대해 둘 이상의 트리거 함수가 있을 수 있음) <b>상수</b> 와 쌍을 이룹니다.<span class="inline">xboxlive_achievement_friends_info</span> 뿐만 아니라 각 친구에 대한 다른 여러 키/값 쌍. 지도의 정확한 내용은 다음과 같습니다.</p><ul class="colour"><li> &quot; <b>id</b> &quot; - 이 함수의 경우 다음과 같아야 합니다. <span class="inline">xboxlive_achievement_friends_info</span></li><li> &quot; <b>FriendN</b> &quot; - 친구의 이름입니다. 여기서 &quot;N&quot;은 친구 목록 내 위치에 해당하는 정수 값입니다.</li><li> &quot; <b>FriendidN</b> &quot; - 친구 &quot;N&quot;의 고유 사용자 ID입니다.</li></ul><p></p><h4> <b>통사론:</b></h4><p class="code">xboxlive_achievement_load_friends();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 확장된 예:</h4><p> 다음 코드는 플레이어가 게임 계정에 로그인하여 해당 사용자의 친구 목록을 모두 가져온 후에 호출될 것입니다.</p><p class="code">xboxlive_achievement_load_friends();</p><p> 이것은 사용자 친구에 대한 정보 요청을 보내고 특별한 <span class="inline">async_load</span> 다음 데이터가 포함된 DS 맵:</p><p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if ident == xboxlive_achievement_friends_info<br />
     {<br />
         var numfriends = ds_map_find_value(async_load, &quot;numfriends&quot;);<br />
@@ -43,19 +34,7 @@
             global.friendname[i] = ds_map_find_value(async_load, &quot;Friend&quot; + string(i));<br />
             global.friendid[i] = ds_map_find_value(async_load, &quot;Friendid&quot; + string(i));<br />
         }<br />
-    }</p>
-  <p>The above code checks the returned <span class="inline">DS Map</span> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then loops through the map storing all the different values in a number of arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 반환된 내용을 확인합니다. <span class="inline">DS Map</span> <b>Social Asynchronous Event</b> 에서 &quot;id&quot;가 확인 중인 상수와 일치하면 여러 배열에 다른 모든 값을 저장하는 맵을 반복합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">통계 및 순위표</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 achievement_load_friends

@@ -3,107 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Script Functions And Variables</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>스크립트 함수 및 변수</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the use of scripts to create functions and global variables and macros" />
-  <meta name="rh-index-keywords" content="Script Functions And Variables" />
-  <meta name="search-keywords" content="user defined functions,script functions,gmcallback_,gmcallback" />
+  <meta name="topic-comment" content="스크립트를 사용하여 함수와 전역 변수 및 매크로를 만드는 방법을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="스크립트 함수 및 변수" />
+  <meta name="search-keywords" content="사용자 정의 함수,스크립트 기능,지엠콜백_,지엠콜백" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Script Functions And Variables</h1>
-  <p>Script assets are essentially a collection of one or more user defined functions or variables that you write yourself as snippets of code in the <a href="../../The_Asset_Editors/Scripts.htm">Script Editor</a>. The functions you define in a script can resolve expressions, return values or do anything else that the GameMaker Language permits, just like the built in <a href="Runtime_Functions.htm">runtime functions</a>.</p>
-  <p>Script functions should generally be used if you have a block of code that you use in more than one place or object, or when you want a block of code to be used across multiple objects in a modular fashion. Using scripts to define functions means that you can change the function just once when required and the change will be &quot;picked up&quot; by every object that has a call to the function.</p>
-  <p>Scripts can also be very handy from an organisational point of view, as they permit you to create groups of functions that belong to a certain category - for example, you might have several functions all related to collisions between instances in your game, so you would create a &quot;<span class="inline">Collision_Functions</span>&quot; script and store all these functions together in it.</p>
-  <p>Also see: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></p>
-  <h2>Creating Functions</h2>
-  <p>When creating a script with functions in it, the functions must be created using the following formats:</p>
-  <p class="code"><span>function name( parameter1, parameter2, ... )<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 스크립트 함수 및 변수</h1><p> 스크립트 자산은 본질적으로 <a href="../../The_Asset_Editors/Scripts.htm">스크립트 편집기</a> 에서 코드 조각으로 직접 작성하는 하나 이상의 사용자 정의 함수 또는 변수의 모음입니다. 스크립트에서 정의한 함수는 표현식을 해석하거나 값을 반환하거나 내장 <a href="Runtime_Functions.htm">런타임 함수</a> 와 마찬가지로 GameMaker Language에서 허용하는 모든 작업을 수행할 수 있습니다.</p><p> 스크립트 함수는 일반적으로 둘 이상의 장소 또는 개체에서 사용하는 코드 블록이 있거나 모듈 방식으로 여러 개체에 걸쳐 코드 블록을 사용하려는 경우에 사용해야 합니다. 스크립트를 사용하여 함수를 정의한다는 것은 필요할 때 한 번만 함수를 변경할 수 있고 해당 함수를 호출하는 모든 객체가 변경 사항을 &quot;선택&quot;한다는 것을 의미합니다.</p><p> 스크립트는 또한 특정 범주에 속하는 기능 그룹을 생성할 수 있게 해주기 때문에 조직적 관점에서 매우 편리할 수 있습니다. 예를 들어 게임의 인스턴스 간 충돌과 관련된 여러 기능이 있을 수 있으므로 &quot;를 생성<span class="inline">Collision_Functions</span> &quot; 스크립트를 작성하고 이 모든 기능을 함께 저장합니다.</p><p> 참조: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">스크립트 함수와 메서드</a></p><h2> 함수 생성</h2><p> 함수가 포함된 스크립트를 생성할 때 함수는 다음 형식을 사용하여 생성해야 합니다.</p><p class="code"><span>function name( parameter1, parameter2, ... )<br />
       {</span><br />
     <span>    statement1;</span><br />
     <span>    statement2;</span><br />
     <span>    ...</span><br />
     <span>}</span>
-  </p>
-  <p>or:</p>
-  <p class="code"><span><span>name = </span>function( parameter1, parameter2, ... )</span><br />
+  </p><p> 또는:</p><p class="code"><span><span>name = </span>function( parameter1, parameter2, ... )</span><br />
     <span>{</span><br />
     <span>    statement1;</span><br />
     <span>    statement2;</span><br />
     <span>    ...</span><br />
     <span>}</span>
-  </p>
-  <p class="note">To create a function in GML Visual, use <a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>. Enable its &quot;Temp&quot; option to create a method variable (second syntax shown above).</p>
-  <p>In general, however, you would use the <em>first </em>form for script functions as it will define the function as specifically being a script function, meaning that it will be <strong>global </strong>in <a href="Variables_And_Variable_Scope.htm">scope</a>, be assigned a <strong>script index</strong>, and not require the <span class="inline">global</span> prefix to identify it since the compiler will recognise it as a script function.</p>
-  <p>Using the second form will instead be generating a global scope <a href="Method_Variables.htm">method variable</a>, and as such it will <em>not </em>be recognised as a script function by the IDE and will require the use of the <span class="inline">global</span> prefix when being referenced in your code.</p>
-  <p class="note"><span class="note">NOTE</span> You can check this by using both forms in a script and then calling the runtime function <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> on each of them. One will be classed as a &quot;number&quot; - since it returns a script index ID - and the other will be classed as a &quot;method&quot;.</p>
-  <h2>Parameters/Arguments</h2>
-  <p>You can define your own parameters/arguments for a function, which will be available to the function as local variables and can be used for any purpose within that function:</p>
-  <p class="code">function move(<strong>spd, dir</strong>)<br />
+  </p><p class="note"> GML Visual에서 함수를 생성하려면 <a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a> 을 사용하십시오. &quot;Temp&quot; 옵션을 활성화하여 메서드 변수를 생성합니다(위에 표시된 두 번째 구문).</p><p> 그러나 일반적으로 스크립트 함수에 대한 <em>첫 번째</em> 형식을 사용합니다. 이 형식은 함수를 구체적으로 스크립트 함수로 정의하므로 <a href="Variables_And_Variable_Scope.htm">범위</a> 가 <strong>전역</strong> 이고 <strong>스크립트 인덱스</strong> 가 할당되며 필요하지 않습니다. <span class="inline">global</span> 컴파일러가 스크립트 함수로 인식하기 때문에 접두사를 사용하여 식별합니다.</p><p> 두 번째 형식을 사용하면 대신 전역 범위 <a href="Method_Variables.htm">메서드 변수</a> 가 생성되므로 IDE에서 스크립트 기능으로 인식 <em>하지 않으며</em> <span class="inline">global</span> 코드에서 참조될 때 접두사.</p><p class="note"> <span class="note">참고</span> 스크립트에서 두 양식을 모두 사용한 다음 각 양식에서 런타임 함수 <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> 를 호출하여 이를 확인할 수 있습니다. 하나는 스크립트 인덱스 ID를 반환하기 때문에 &quot;숫자&quot;로 분류되고 다른 하나는 &quot;메서드&quot;로 분류됩니다.</p><h2> 매개변수/인수</h2><p> 함수에 대해 고유한 매개변수/인수를 정의할 수 있습니다. 이 매개변수는 해당 함수에서 지역 변수로 사용할 수 있으며 해당 함수 내에서 어떤 목적으로든 사용할 수 있습니다.</p><p class="code">function move(<strong>spd, dir</strong>)<br />
     {<br />
         speed = <strong>spd</strong>;<br />
         direction = <strong>dir</strong>;<br />
-    }</p>
-  <p>This function takes two arguments and applies their values to the instance&#39;s <span class="inline">speed</span> and <span class="inline">direction</span> variables. It can now be called like any runtime function and arguments can be passed into it:</p>
-  <p class="code">var _mouse_dir = point_direction(x, y, mouse_x, mouse_y);<br />
+    }</p><p> 이 함수는 두 개의 인수를 취하고 해당 값을 인스턴스의 <span class="inline">speed</span> 그리고 <span class="inline">direction</span> 변수. 이제 런타임 함수처럼 호출할 수 있으며 인수를 전달할 수 있습니다.</p><p class="code">var _mouse_dir = point_direction(x, y, mouse_x, mouse_y);<br />
     <br />
     <strong>move(4, _mouse_dir);</strong>
-  </p>
-  <h2>Index-Based Arguments</h2>
-  <p>Arguments passed into a function can also be accessed through the <span class="inline">argumentN</span> variables (<em>argument0, argument1, etc.</em>) or the <a href="Variables/Builtin_Global_Variables/argument.htm"><span class="inline">argument[]</span></a> array (<em>argument[0], argument[1], etc.</em>).</p>
-  <p>You can get the number of arguments passed into the function using <a href="Variables/Builtin_Global_Variables/argument_count.htm"><span class="inline">argument_count</span></a>, thus allowing a variable number of arguments to be passed in.</p>
-  <p class="code">function print(){<br />
-        var _str = &quot;&quot;;<br />
-    <br />
-        for (var i = 0; i &lt; argument_count; i ++)<br />
-        {<br />
-            _str += string(argument[i]);<br />
-        }<br />
-    <br />
-        show_debug_message(_str);<br />
-    }<br />
-    <br />
-    // In an object<br />
-    print(&quot;Player : &quot;, current_time, &quot; : &quot;, id, &quot; : fired&quot;);
-  </p>
-  <p>This <span class="inline2">print()</span> function loops through all the passed arguments, and adds them to a string variable. That string is then printed to the output log.</p>
-  <p>You can now call this function with as many strings as you like, which will all be joined together.</p>
-  <h2>Optional Arguments</h2>
-  <p>If an argument is not given to a function, its value will be <span class="inline">undefined</span>. You can use this to define <em>optional</em> arguments, and check whether an argument is passed in or not by checking if it is equal to <span class="inline">undefined</span>. However, you can also explicitly define a default value for an argument which will be used instead of <span class="inline">undefined</span> when it is not passed in.</p>
-  <p>You can assign such a default value to a parameter using the equal (<span class="inline">=</span>) sign, making it an optional variable:</p>
-  <p class="code">function move(spd, <strong>dir = 90</strong>)<br />
+  </p><h2> 선택적 인수</h2><p> 함수에 인수가 주어지지 않으면 그 값은<span class="inline">undefined</span>. 이것을 사용하여 <em>선택적</em> 인수를 정의하고 인수가 다음과 같은지 확인하여 인수가 전달되었는지 여부를 확인할 수 있습니다. <span class="inline">undefined</span>. 그러나 대신 사용할 인수의 기본값을 명시적으로 정의할 수도 있습니다. <span class="inline">undefined</span> 전달되지 않을 때.</p><p> 등호(<span class="inline">=</span> ) 기호를 사용하여 선택적 변수로 만듭니다.</p><p class="code">function move(spd, <strong>dir = 90</strong>)<br />
     {<br />
         speed = spd;<br />
         direction = dir;<br />
-    }</p>
-  <p>If the <span class="inline">dir</span> argument is not passed in when calling the above function, then its value will default to <span class="inline">90</span>, moving the instance in an upward direction.</p>
-  <p class="note"><span class="tip">TIP</span> You can omit arguments from function calls and they will default to <span class="inline">undefined</span> (or the default value for that argument as defined by the function).<br />
-    <br />
-    For example, writing <span class="inline">my_func(0,,,1)</span> is the same as writing <span class="inline">my_func(0, undefined, undefined, 1)</span>.
-  </p>
-  <hr />
-  <p>The default value of an optional variable can be an expression, so for example, you can use variables and call functions while defining an optional variable. Note that such an expression will only be executed if its optional argument is not provided in the function call. See the following example of a logging function:</p>
-  <p class="code">function log(text = &quot;Log&quot;, object = object_index, time = date_datetime_string(date_current_datetime()))<br />
+    }</p><p> 만약 <span class="inline">dir</span> 위의 함수를 호출할 때 인수가 전달되지 않으면 해당 값은 기본적으로 <span class="inline">90</span>, 인스턴스를 위쪽으로 이동합니다.</p><p class="note"> <span class="tip">팁</span> 함수 호출에서 인수를 생략할 수 있으며 기본값은 <span class="inline">undefined</span> (또는 함수에서 정의한 해당 인수의 기본값).<br /><br /> 예를 들어, 쓰기<span class="inline">my_func(0,,,1)</span> 쓰는 것과 같다<span class="inline">my_func(0, undefined, undefined, 1)</span>.</p><hr /><p> 선택적 변수의 기본값은 표현식이 될 수 있으므로 예를 들어 선택적 변수를 정의하면서 변수를 사용하고 함수를 호출할 수 있습니다. 이러한 표현식은 선택적 인수가 함수 호출에 제공되지 않은 경우에만 실행됩니다. 로깅 기능의 다음 예를 참조하십시오.</p><p class="code">function log(text = &quot;Log&quot;, object = object_index, time = date_datetime_string(date_current_datetime()))<br />
     {<br />
         var _string = &quot;[&quot; + string(time) + &quot;] &quot;;<br />
         _string += object_get_name(object) + &quot;: &quot;;<br />
         _string += text;<br />
         <br />
         show_debug_message(_string);<br />
-    }</p>
-  <p>This function takes three arguments, where the first argument defaults to a string constant, the second argument defaults to an instance variable (in the scope of the calling instance) and the third argument defaults to an expression calling a function to retrieve the current date and time. This function can now be called with up to three arguments, as seen in the following example:</p>
-  <p class="code">log();<br />
+    }</p><p> 이 함수는 세 개의 인수를 취합니다. 여기서 첫 번째 인수는 기본적으로 문자열 상수로 설정되고 두 번째 인수는 기본적으로 인스턴스 변수(호출 인스턴스 범위 내)로 설정되며 세 번째 인수는 기본적으로 현재 날짜를 검색하는 함수를 호출하는 표현식으로 설정됩니다. 시각. 이제 이 함수는 다음 예제와 같이 최대 3개의 인수를 사용하여 호출할 수 있습니다.</p><p class="code">log();<br />
     // Prints: [09-Jun-21 12:34:37 PM] Object1: Log<br />
     <br />
     log(&quot;Player Shot&quot;, obj_player, 10);<br />
     // Prints: [10] obj_player: Player Shot
-  </p>
-  <h2>JSDoc</h2>
-  <p>We also recommend that you add comments to define the properties of the function (see the section on <a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDoc Comments</a> for more details), such that a simple script would look like this:</p>
-  <p class="code">/// @function                 log(message);<br />
+  </p><h2> JSDoc</h2><p> 또한 간단한 스크립트가 다음과 같이 보이도록 주석을 추가하여 함수의 속성을 정의하는 것이 좋습니다(자세한 내용은 <a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDoc 주석</a> 섹션 참조).</p><p class="code">/// @function                 log(message);<br />
     /// @param {string}  message  The message to show<br />
     /// @description              Show a message whenever the function is called.<br />
     <br />
@@ -111,14 +55,7 @@
     {<br />
         show_debug_message(message);<br />
     }
-  </p>
-  <p>Additional functions for the script can be added using the same format as shown above, one after the other within the script asset.</p>
-  <p><img alt="Multiple Functions In One Script" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Multiple_Functions_Scripts.png" /></p>
-  <h2>Return Value</h2>
-  <p>Functions in scripts can also return a value, just as runtime functions can, and as such they can be used in expressions. For this you would use the <a href="Language_Features/return.htm"><span class="inline">return</span></a> statement:</p>
-  <p class="code">return &lt;expression&gt;</p>
-  <p>It should be noted that the <strong><i>execution of the function ends at the return statement</i></strong>, meaning that any code which comes after <strong>return </strong>has been called <i>will not be run</i>. Here is a short example function from a function called &quot;<span class="inline">sqr_calc</span>&quot; which calculates the square of whatever value is passed to it, and in case the given value is not a real number, it uses <strong>return</strong> to end the function early so the actual calculation never runs:</p>
-  <p class="code">/// @function           sqr_calc(val);<br />
+  </p><p> 스크립트에 대한 추가 기능은 위에 표시된 것과 동일한 형식을 사용하여 스크립트 자산 내에서 차례로 추가할 수 있습니다.</p><p><img alt="Multiple Functions In One Script" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Multiple_Functions_Scripts.png" /></p><h2> 반환 값</h2><p> 스크립트의 함수는 런타임 함수와 마찬가지로 값을 반환할 수도 있으므로 표현식에서 사용할 수 있습니다. 이것을 위해 당신은 사용할 것입니다<a href="Language_Features/return.htm"><span class="inline">return</span></a> 성명:</p><p class="code">return &lt;expression&gt;</p><p> <strong><i>함수의 실행은 return 문에서 끝난다는</i></strong> 점에 유의해야 합니다. 즉, <strong>return</strong> 이후에 나오는 코드 <i>는 실행되지 않습니다</i>. 다음은 &quot;라는 함수의 짧은 예제 함수입니다.<span class="inline">sqr_calc</span> &quot;는 전달된 값의 제곱을 계산하고 주어진 값이 실수가 아닌 경우 <strong>return</strong> 을 사용하여 함수를 일찍 종료하므로 실제 계산이 실행되지 않습니다.</p><p class="code">/// @function           sqr_calc(val);<br />
     /// @param {real}  val  The value to calculate the square of<br />
     /// @description        Calculate the square of the given value<br />
     <br />
@@ -131,25 +68,16 @@
     <br />
         return (val * val);<br />
     }
-  </p>
-  <p>Note that if you create a script function with <em>no</em> return value then in your code check for one, you will get the value <span class="inline">undefined</span> by default.</p>
-  <p>To call a script function from within a piece of code, just use it the same way as when calling any runtime function - that is, write the function name with the parameter values in parentheses. So, the above script would be called like this:</p>
-  <p class="code">if keyboard_check_pressed(vk_enter)<br />
+  </p><p> 반환 값이 <em>없는</em> 스크립트 함수를 생성하면 코드 검사에서 반환 값을 얻게 됩니다. <span class="inline">undefined</span> 기본적으로.</p><p> 코드 조각 내에서 스크립트 함수를 호출하려면 런타임 함수를 호출할 때와 동일한 방식으로 사용하십시오. 즉, 괄호 안에 매개변수 값을 사용하여 함수 이름을 작성하십시오. 따라서 위의 스크립트는 다음과 같이 호출됩니다.</p><p class="code">if keyboard_check_pressed(vk_enter)<br />
     {<br />
         val = scr_sqr(amount);<br />
-    }</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> When using your own functions from scripts in the code editor, you can press<span> <img alt="F1 Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_f1.png" width="55" /></span> or click the middle mouse button <span><img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png" /> </span>on the function name to open the script that contains it for editing directly.</p>
-  <h2>Script Names vs. Function Names</h2>
-  <p>It is important to understand that script <i>names</i> are <b>independent of the functions that they contain</b>, so you can name your scripts in a more &quot;common sense&quot; way, ie: all your AI functions could go in a script &quot;<span class="inline">Enemy_AI</span>&quot; (following the standard asset naming conventions of alpha-numeric characters and the under-bar &quot;_&quot; only). However, you can still call scripts in your game - and you can name scripts the same as a function that you define in them - which can give rise to a issues due to the way that <span data-keyref="GameMaker Name">GameMaker</span> stores asset references. To give an example consider this code, called from an instance:</p>
-  <p class="code">function indirectCall(func, arg)<br />
+    }</p><p class="note"> <strong>참고</strong>: 코드 편집기의 스크립트에서 고유한 기능을 사용할 때 다음을 누를 수 있습니다.<span><img alt="F1 Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_f1.png" width="55" /></span> 또는 마우스 가운데 버튼을 클릭하십시오<span><img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png" /></span> 직접 편집을 위해 포함된 스크립트를 열려면 함수 이름에서</p><h2> 스크립트 이름 대 함수 이름</h2><p> 스크립트 <i>이름</i> 은 스크립트 <b>에 포함된 기능과 독립적</b> 이라는 점을 이해하는 것이 중요합니다. 따라서 스크립트의 이름을 보다 &quot;상식적인&quot; 방식으로 지정할 수 있습니다. 즉, 모든 AI 기능은 스크립트에 들어갈 수 있습니다.<span class="inline">Enemy_AI</span> &quot;(영숫자 및 밑줄 &quot;_&quot;의 표준 자산 명명 규칙을 따름). 그러나 게임에서 여전히 스크립트를 호출할 수 있으며 스크립트에 정의한 함수와 동일한 이름을 지정할 수 있습니다. - <span data-keyref="GameMaker Name">GameMaker</span> 가 자산 참조를 저장하는 방식으로 인해 문제가 발생할 수 있습니다. 예제를 제공하려면 인스턴스에서 호출되는 다음 코드를 고려하십시오.</p><p class="code">function indirectCall(func, arg)<br />
     {<br />
         func(arg);<br />
     }<br />
     <br />
     indirectCall(myscript, arg);
-  </p>
-  <p>The above code is attempting to call a script called &quot;myscript&quot; within a method, which in this case will fail. This is because the in-line function is actually using the <em>index</em> for the script asset and <strong>not </strong>actually calling the script function - eg: if the script index resolves to &quot;4&quot;, essentially the function is calling <span class="inline">4(arg);</span>, which makes no sense. The code should instead be structured in one of the following two ways:</p>
-  <p class="code">function indirectCall(func, arg)<br />
+  </p><p> 위의 코드는 메서드 내에서 &quot;myscript&quot;라는 스크립트를 호출하려고 하며 이 경우 실패합니다. 이는 인라인 함수가 실제로 스크립트 자산에 대한 <em>인덱스</em> 를 사용하고 실제로 스크립트 함수를 호출 <strong>하지 않기 때문</strong> 입니다. 예: 스크립트 인덱스가 &quot;4&quot;로 확인되면 본질적으로 함수가 호출하는 것입니다. <span class="inline">4(arg);</span>, 의미가 없습니다. 대신 다음 두 가지 방법 중 하나로 코드를 구성해야 합니다.</p><p class="code">function indirectCall(func, arg)<br />
     {<br />
         func(arg);<br />
     }<br />
@@ -164,12 +92,7 @@
     }<br />
     <br />
     indirectCall(myscript, arg);
-  </p>
-  <p>This is important to note, especially when working with legacy projects where scripts contain one single function, and the function is named the same as the script. However, you really should <em>never</em> do this, and your scripts should be named independently of the functions they contain.</p>
-  <div data-conref="../../assets/snippets/Script_empty_reference_error.hts"> </div>
-  <h2>Script Scope</h2>
-  <p>This leads us to the final and most important thing to know about scripts and the functions they contain: scripts are parsed on a <b>global</b> level and will be <strong>compiled at the very start of the game</strong>. This means that <em>technically</em> all functions in a script are &quot;unbound&quot; <a href="Method_Variables.htm">method variables</a>, and any variables declared outside of a function in the script will be considered <a href="Variables/Global_Variables.htm">global variables</a>. For example, consider this script:</p>
-  <p class="code">function Foo()<br />
+  </p><p> 이것은 특히 스크립트에 하나의 단일 기능이 포함되어 있고 기능 이름이 스크립트와 동일한 레거시 프로젝트로 작업할 때 주의해야 합니다. 그러나 실제로는 이렇게 <em>해서는 안</em> 되며 스크립트는 포함된 기능과 독립적으로 이름을 지정해야 합니다.</p><div data-conref="../../assets/snippets/Script_empty_reference_error.hts"></div><h2> 스크립트 범위</h2><p> 이것은 스크립트와 스크립트에 포함된 기능에 대해 알아야 할 마지막이자 가장 중요한 사실로 이끕니다. 스크립트는 <b>전역</b> 수준에서 구문 분석되며 <strong>게임이 시작될 때 컴파일됩니다</strong>. 이것은 <em>기술적</em> 으로 스크립트의 모든 함수가 &quot;바인딩되지 않은&quot; <a href="Method_Variables.htm">메서드 변수</a> 이고 스크립트의 함수 외부에서 선언된 모든 변수는 <a href="Variables/Global_Variables.htm">전역 변수</a> 로 간주된다는 것을 의미합니다. 예를 들어 다음 스크립트를 고려하십시오.</p><p class="code">function Foo()<br />
     {<br />
         // Do something<br />
     }<br />
@@ -177,11 +100,7 @@
     function Bar()<br />
     {<br />
         // Do something else<br />
-    }</p>
-  <p>In the above case, not only have we defined the functions <span class="inline">Foo</span> and <span class="inline">Bar</span> but also the variable <span class="inline">blah</span> and all of them are considered to have been created in the <b>global</b> scope. The functions don&#39;t need the <span class="inline">global</span> keyword to be recognized as the compiler understands that these functions are part of the script, but if you wanted to access <span class="inline">blah</span> then you would need to do:</p>
-  <p class="code">val = global.blah;</p>
-  <p>That said, we recommend that you <b>always explicitly type global variables</b> when creating them in scripts to prevent any issues later. Scripts are also an ideal place to define any <strong>Macros</strong> or <strong>Enums</strong> (<a href="Variables/Constants.htm">constants</a>), as adding them to a script outside of a function also means that they will be created for use before the game code actually starts running. Below is an example of a script that is creating different global scope values for a game:</p>
-  <p class="code">/// Initialise All Global Scope Values And Constants<br />
+    }</p><p> 위의 경우 함수를 정의했을 뿐만 아니라 <span class="inline">Foo</span> 그리고 <span class="inline">Bar</span> 뿐만 아니라 변수 <span class="inline">blah</span> 그리고 그들 모두는 <b>글로벌</b> 범위에서 생성된 것으로 간주됩니다. 기능은 필요하지 않습니다 <span class="inline">global</span> 컴파일러로 인식되는 키워드는 이러한 함수가 스크립트의 일부임을 이해하지만 액세스하려는 경우 <span class="inline">blah</span> 다음을 수행해야 합니다.</p><p class="code">val = global.blah;</p><p> 즉, 나중에 문제가 발생하지 않도록 스크립트에서 <b>전역 변수를 생성할 때 항상 명시적으로 입력</b> 하는 것이 좋습니다. 스크립트는 또한 <strong>매크로</strong> 또는 <strong>열거형</strong> ( <a href="Variables/Constants.htm">상수</a> )을 정의하는 이상적인 장소입니다. 함수 외부의 스크립트에 추가하는 것은 게임 코드가 실제로 실행되기 전에 사용하기 위해 생성된다는 의미이기도 합니다. 다음은 게임에 대해 다양한 전역 범위 값을 생성하는 스크립트의 예입니다.</p><p class="code">/// Initialise All Global Scope Values And Constants<br />
     global.player_score = 0;<br />
     global.player_hp = 100;<br />
     global.pause = false;<br />
@@ -203,9 +122,7 @@
     #macro weapon_gun 0<br />
     #macro weapon_bomb 1<br />
     #macro weapon_knife 2
-  </p>
-  <p>Note how all these constants are set up outside of any function call, meaning they will be initialised before everything else and at a <em>global </em>scope. This means that if you want to use a script to initialise variables on an <em>instance </em>scope then you must wrap them in a function, for example:</p>
-  <p class="code">/// @function                init_enemy();<br />
+  </p><p> 이러한 모든 상수가 함수 호출 외부에서 설정되는 방식에 유의하십시오. 즉, 다른 모든 것보다 먼저 <em>전역</em> 범위에서 초기화됩니다. 즉, 스크립트를 사용하여 <em>인스턴스</em> 범위에서 변수를 초기화하려면 이를 함수로 래핑해야 합니다. 예를 들면 다음과 같습니다.</p><p class="code">/// @function                init_enemy();<br />
     /// @description             Initialise enemy instance vars<br />
     <br />
     function init_enemy()<br />
@@ -214,23 +131,7 @@
         dmg = 5;<br />
         mana = 50;<br />
     }
-  </p>
-  <p>So, scripts can be used to generate macros, enums and global variables before the game starts so they are ready for use at any time, and they can also be used to create &quot;unbound&quot; methods (user-defined functions) that can be used in your game like GML runtime functions.</p>
-  <p>One final thing to note about script functions is that if you are developing for <strong>Web </strong>(ie: targeting <strong>HTML5</strong>), then there is an additional function protocol that you can use when adding functions to scripts, which is to prefix a function name with <span class="inline">gmcallback_</span>, for example:</p>
-  <p class="code">gmcallback_create_button</p>
-  <p>Using the above function name would mean that the function <span class="inline">gmcallback_create_button()</span> will not be obfuscated and so can be used in JavaScript extensions and other areas of your game, for example, when using the <a href="../GML_Reference/Web_And_HTML5/Web_And_HTML5.htm"><span class="inline">clickable_*</span></a> functions.</p>
-  <h2>Static Variables</h2>
-  <p>Functions can also make use of static variables, which maintain their values throughout every function call. Please <a href="Functions/Static_Variables.htm">read this page</a> for more information.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Method_Variables.htm">Method Variables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 따라서 스크립트는 게임이 시작되기 전에 매크로, 열거형 및 전역 변수를 생성하는 데 사용할 수 있으므로 언제든지 사용할 수 있습니다. GML 런타임 기능과 같은 게임에서.</p><p> 스크립트 함수에 대해 마지막으로 주의해야 할 사항은 <strong>웹용</strong> 으로 개발하는 경우(예: <strong>HTML5</strong> 대상) 스크립트에 함수를 추가할 때 사용할 수 있는 추가 함수 프로토콜이 있다는 것입니다. <span class="inline">gmcallback_</span>, 예를 들어:</p><p class="code">gmcallback_create_button</p><p> 위의 함수 이름을 사용하면 함수가 <span class="inline">gmcallback_create_button()</span> 난독화되지 않으므로 JavaScript 확장 및 게임의 다른 영역에서 사용할 수 있습니다(예:<a href="../GML_Reference/Web_And_HTML5/Web_And_HTML5.htm"><span class="inline">clickable_*</span></a> 기능.</p><h2> 정적 변수</h2><p> 함수는 또한 모든 함수 호출 동안 값을 유지하는 정적 변수를 사용할 수 있습니다. 자세한 <a href="Functions/Static_Variables.htm">내용은 이 페이지를 읽으십시오</a>. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GML_Overview.htm">GML 개요</a></div><div style="float:right"> 다음: <a href="Method_Variables.htm">메서드 변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions

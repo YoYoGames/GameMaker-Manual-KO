@@ -3,80 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Command Line Parameters</title>
+  <title>명령줄 매개변수</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains how to use Command Line Parameters when running your game" />
-  <meta name="rh-index-keywords" content="Command Line Parameters" />
-  <meta name="search-keywords" content="command line,AB testing,command line parameters" />
+  <meta name="topic-comment" content="게임을 실행할 때 명령줄 매개변수를 사용하는 방법을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="명령줄 매개변수" />
+  <meta name="search-keywords" content="명령줄,AB 테스트,명령줄 매개변수" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Command Line Parameters</h1>
-  <p>When creating games it is important that you play test the executable file to make sure that the final compile is correct and has no unforeseen errors or differences. However creating an executable means that, since you have no access to the debug console nor to the compiler window, it can be difficult to pin down and debug any problems that you may find. However there is a fix for this, and that is to use <strong>command line parameters</strong> to set certain properties when the executable version of the game is run, in turn permitting you to create output log files and test other special situations.</p>
-  <p class="note"><span class="note"><strong>NOTE</strong></span> This is available on the standard <strong>Windows </strong>target module <strong>only</strong>.</p>
-  <p>To get this working you must first create a Windows executable of your game and have it installed on your test machine. Once you have that done, you need to create a <em>Shortcut </em>to the game on the desktop. This is where we will add in the parameters to be passed to the <span class="inline">*.exe</span> (to create a shortcut, right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> the game executable and then select <em>Send to</em> &gt; <em>Desktop (create shortcut)</em>) .</p>
-  <p>Once you have made your shortcut you can then use any of the following parameters in the target path:</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-noaudio</span>: This switches off all audio in your game.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-inawindow</span>: Forces the game to start in a window, even when set to run in fullscreen mode.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-output &lt;<em>filename</em>&gt;</span>: Sends console output to the filename, including any debug messages that you have in your code base.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-debugoutput &lt;<em>filename</em>&gt;</span>: Sends console output to the filename, excluding any custom debug messages, but including extra information from the runner for bug reporting.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-software</span>: Will force the game to use Software Vertex Processing instead of hardware for rendering the game graphics. This is especially useful for those PCs that are using an on-board Intel GFX chipset or show display issues on older machines.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-intel</span>: This will switch on a fix for bad Intel drivers, no matter what GPU is being used. This work around for those bad drivers will slow things down, giving a noticeable performance hit for your game, so if you do not need the fix do not use it.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-vanillaGFX</span>: Using this switches off any check for driver manufacturer, and can be very useful for testing your game &quot;as is&quot;.</p>
-  <p>It&#39;s worth noting that the <span class="inline">&lt;<em>filename</em>&gt;</span> in <span class="inline">-output</span> and <span class="inline">-debugoutput</span> can be the same one if desired, as the file is opened and closed on each write.</p>
-  <p>You should now go to where you created the shortcut to the game executable, and then right click on it and select Properties.</p>
-  <p><img alt="Command Line Shortcut" class="center" src="../assets/Images/Settings/CommandLine_Shortcut.png" />This will open a window similar to the one above. Here you can add into the <strong>Target</strong> path your command line. Simply scroll along to the end of the given path, add a space, and then the parameter string. So, for example, to create a debug file output you would have something like:</p>
-  <p class="code">D:\Users\Me\GameMaker\CustomLoadBar-Default-1.0.0.0\CustomLoadBar.exe -debugoutput debug.txt</p>
-  <p>This will now create a file called &quot;<span class="inline">debug.txt</span>&quot; in the same location as the executable (not the shortcut location, but where the game is installed) with debug and compiler information from your finished game. Click on &quot;OK&quot; and then use the shortcut to run your game to have it use these parameters and help with your debugging.</p>
-  <p>For further information on how to debug your game, please see the section of the manual on <a href="../Introduction/Debugging.htm">Debugging</a>.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">A/B Testing Using The Command Line</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The YoYo runner also benefits from a special command line parameter:</p>
-    <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: loads the given game file
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 명령줄 매개변수</h1><p> 게임을 만들 때 실행 파일을 테스트하여 최종 컴파일이 정확하고 예상치 못한 오류나 차이가 없는지 확인하는 것이 중요합니다. 그러나 실행 파일을 생성한다는 것은 디버그 콘솔이나 컴파일러 창에 액세스할 수 없기 때문에 발견할 수 있는 문제를 파악하고 디버그하는 것이 어려울 수 있음을 의미합니다. 그러나 이에 대한 수정 사항이 있습니다. 즉, 게임의 실행 가능한 버전이 실행될 때 <strong>명령줄 매개변수</strong> 를 사용하여 특정 속성을 설정하여 출력 로그 파일을 생성하고 다른 특별한 상황을 테스트할 수 있도록 하는 것입니다.</p><p class="note"> <span class="note"><strong>참고</strong></span> 이것은 표준 <strong>Windows</strong> 대상 모듈 <strong>에서만</strong> 사용할 수 있습니다.</p><p> 이 작업을 수행하려면 먼저 게임의 Windows 실행 파일을 만들고 테스트 시스템에 설치해야 합니다. 완료되면 바탕 화면에 게임에 대한 <em>바로 가기</em> 를 만들어야 합니다. 여기에 전달할 매개변수를 추가합니다. <span class="inline">*.exe</span> (바로가기를 만들려면 오른쪽 클릭<img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> 게임 실행 파일을 선택한 다음 <em>보내기</em> &gt; <em>바탕 화면(바로 가기 만들기)</em> 을 선택합니다.</p><p> 바로 가기를 만든 후에는 대상 경로에서 다음 매개변수 중 하나를 사용할 수 있습니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-noaudio</span>: 게임의 모든 오디오를 끕니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-inawindow</span>: 전체 화면 모드로 실행되도록 설정된 경우에도 게임을 창에서 강제로 시작합니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-output &lt;<em>filename</em>&gt;</span>: 코드 베이스에 있는 디버그 메시지를 포함하여 콘솔 출력을 파일 이름으로 보냅니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-debugoutput &lt;<em>filename</em>&gt;</span>: 사용자 정의 디버그 메시지를 제외하고 버그 보고를 위한 러너의 추가 정보를 포함하여 콘솔 출력을 파일 이름으로 보냅니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-software</span>: 게임 그래픽을 렌더링하기 위해 하드웨어 대신 소프트웨어 정점 처리를 사용하도록 게임을 강제합니다. 이것은 온보드 Intel GFX 칩셋을 사용하거나 구형 시스템에서 디스플레이 문제를 표시하는 PC에 특히 유용합니다. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-intel</span>: 사용 중인 GPU에 상관없이 잘못된 Intel 드라이버에 대한 수정을 켭니다. 이러한 불량 드라이버에 대한 이 해결 방법은 속도를 늦추고 게임에 눈에 띄는 성능 저하를 제공하므로 수정이 필요하지 않은 경우 사용하지 마십시오. </p><p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-vanillaGFX</span>: 이 옵션을 사용하면 드라이버 제조업체에 대한 모든 검사가 꺼지고 게임을 &quot;있는 그대로&quot; 테스트하는 데 매우 유용할 수 있습니다.</p><p> 주목할 가치가 있습니다. <span class="inline">&lt;<em>filename</em>&gt;</span> 안에 <span class="inline">-output</span> 그리고 <span class="inline">-debugoutput</span> 파일이 각 쓰기에서 열리고 닫히므로 원하는 경우 동일한 파일일 수 있습니다.</p><p> 이제 게임 실행 파일에 대한 바로 가기를 만든 곳으로 이동한 다음 마우스 오른쪽 버튼을 클릭하고 속성을 선택해야 합니다.</p><p><img alt="Command Line Shortcut" class="center" src="../assets/Images/Settings/CommandLine_Shortcut.png" /> 그러면 위와 같은 창이 열립니다. 여기에서 명령줄을 <strong>대상</strong> 경로에 추가할 수 있습니다. 주어진 경로의 끝으로 스크롤하고 공백을 추가한 다음 매개변수 문자열을 추가하기만 하면 됩니다. 예를 들어 디버그 파일 출력을 생성하려면 다음과 같이 됩니다.</p><p class="code">D:\Users\Me\GameMaker\CustomLoadBar-Default-1.0.0.0\CustomLoadBar.exe -debugoutput debug.txt</p><p> 이제 &quot;라는 파일이 생성됩니다.<span class="inline">debug.txt</span> &quot; 실행 파일과 같은 위치(바로 가기 위치가 아니라 게임이 설치된 위치)에 완성된 게임의 디버그 및 컴파일러 정보가 있습니다. &quot;확인&quot;을 클릭한 다음 바로 가기를 사용하여 게임을 실행하여 이러한 항목을 사용하도록 합니다. 매개변수 및 디버깅에 도움이 됩니다.</p><p> 게임을 디버그하는 방법에 대한 추가 정보는 매뉴얼의 <a href="../Introduction/Debugging.htm">디버깅</a> 섹션을 참조하십시오.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">명령줄을 사용한 A/B 테스트</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> 또한 YoYo 러너는 다음과 같은 특수 명령줄 매개변수의 이점을 누릴 수 있습니다. </p><p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: 주어진 게임 파일을 로드합니다.<br /></p><p class="dropspot"> 왜 이것을 사용할까요? 글쎄, 일반적으로 그렇게 하지 않을 것이지만, 한 번에 둘 이상의 게임 버전을 실행하고 싶다면 이것을 사용하여 A/B 비교 테스트를 훨씬 쉽게 만들 수 있습니다. 이 방법을 사용하면 다른 사람과 테스트에 집중하거나 디자이너로서 나란히 테스트를 수행하여 사물에 대해 더 나은 느낌을 얻을 수 있습니다.</p><p class="dropspot"> 이를 설정하려면 사전에 몇 가지 사항을 알아야 합니다. 시작하려면 Runner 자체에 대한 경로가 필요합니다. 이것은 Windows OS의 <strong>Program Data</strong> 폴더에서 찾을 수 있습니다(기본적으로 숨겨져 있을 수 있으므로 보기 속성을 변경해야 볼 수 있음). 일반적인 형식은 다음과 같습니다.<br /><br /></p><p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
       <br />
-    </p>
-    <p class="dropspot">Why would you use this? Well, normally you wouldn&#39;t, but if you wish to have more than one version of your game running at a time it can be done using this, making A/B comparative tests far easier. With this method you could focus test with someone else or, as the designer, get a better feel for things by doing side-by-side tests.</p>
-    <p class="dropspot">To set this up, you will need to know a couple of things beforehand. To start with you will need the path to the Runner itself. This can be found in the <strong>Program Data</strong> folder of your Windows OS (this may be hidden by default so you will need to change the viewing properties to see it), with a typical format like this:
+    </p><p class="dropspot"> runtime_version 폴더는 현재 설치한 런타임에 따라 다릅니다. 당신은 또한 경로가 필요합니다 <span class="inline">&lt;<em>yourgame</em>&gt;.win</span> 이것이 우리가 주자를 가리킬 것이기 때문입니다. 이것을 찾는 가장 쉬운 방법은 <strong>Temp</strong> 폴더(일반적으로 <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span> )를 검색하고 <span class="inline">*.win</span>, 사용 가능한 모든 항목이 표시되며 전체 경로를 가져오는 데 필요한 항목을 간단히 선택할 수 있습니다.</p><p class="dropspot"> 이제 실행 파일에 대해 수행한 것처럼 러너에 대한 바로 가기를 만든 다음 필요에 따라 매개변수를 변경할 수 있습니다. -측면 테스트. 대신 우리는 이것을 처리하기 위해 몇 개의 작은 &quot;배치&quot; 파일을 만들 것입니다.</p><p class="dropspot"> 이렇게 하려면 먼저 바탕 화면에 새 텍스트 문서를 만들고 메모장(또는 다른 텍스트 편집기)에서 엽니다. 다음을 추가합니다.<br /><br /></p><p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
       <br />
+    </p><p class="dropspot"> 게임을 가리키도록 임시 경로를 설정해야 합니다. <span class="inline">*.win</span> 파일을 만든 다음 &quot;<span class="inline">GM_Test_1.bat</span> &quot;를 바탕 화면에 저장합니다(메모장은 자동으로 <span class="inline">*.txt</span> 저장 대화 상자 옵션에서 &quot;모든 파일&quot;을 선택하지 않는 한 파일). 최종 명령이 어떻게 표시되어야 하는지에 대한 예는 다음과 같습니다.<br /></p><p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
       <br />
-    </p>
-    <p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
-      <br />
-    </p>
-    <p class="dropspot">Note that the runtime_version folder will depend on the runtimes you have installed currently. You will also need the path to the <span class="inline">&lt;<em>yourgame</em>&gt;.win</span> file, as this is what we are going to point the runner to. The easiest way to find this is to go to the <strong>Temp </strong>folder (typically located at <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span>) and just search for <span class="inline">*.win</span>, as that will show you all those available and you can simply pick that which you need to get the full path from.</p>
-    <p class="dropspot">Now, we could create a shortcut to the runner like we did for the executable, and then change the parameters as necessary, but that means having to open and edit it between tests, which defeats the purpose of our using this functionality for side-by-side testing. Instead we are going to create a couple of tiny &quot;batch&quot; files to handle this.</p>
-    <p class="dropspot">To do this, first create a new text document on your desktop and open it in Notepad (or any other text editor). Add the following:
-      <br />
-      <br />
-    </p>
-    <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
-      <br />
-    </p>
-    <p class="dropspot">You need to to set the temp path to point to your game <span class="inline">*.win</span> file, and then save this as &quot;<span class="inline">GM_Test_1.bat</span>&quot; to your desktop (be aware that Notepad will save automatically as a <span class="inline">*.txt</span> file unless you choose &quot;all files&quot; from the save dialogue options). An example of how your final command should look would be:
-      <br />
-    </p>
-    <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
-      <br />
-    </p>
-    <p class="dropspot">Now, create another text file and add the same line, only this time you point it to the path for the second version of the game that you want to do side-by-side testing with, and you would save this as &quot;<span class="inline">GM_Test_2.bat</span>&quot;. You can double click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> either of them to bring up the different versions of your game, and having them as batch files means that you can easily open them again to edit them and change the game being tested.</p>
-    <p class="dropspot">
-      <br />
-    </p>
-    <p class="dropspot"></p>
-  </div>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
-        <div style="float:right">Next: <a href="YoYo_Compiler.htm">YoYo Compiler</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    </p><p class="dropspot"> 이제 다른 텍스트 파일을 만들고 같은 줄을 추가합니다. 이번에는 나란히 테스트하려는 게임의 두 번째 버전 경로를 가리키고 이것을 &quot;<span class="inline">GM_Test_2.bat</span> &quot;. 두 번 클릭할 수 있습니다.<img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> 둘 중 하나를 사용하여 게임의 다른 버전을 불러오고 배치 파일로 저장하면 쉽게 다시 열어 테스트 중인 게임을 편집하고 변경할 수 있습니다. </p><p class="dropspot"><br /></p><p class="dropspot"></p></div><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Runner_Details/Runner_Details.htm">러너 및 컴파일러</a></div><div style="float:right"> 다음: <a href="YoYo_Compiler.htm">YoYo 컴파일러</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Command Line Pararmeters

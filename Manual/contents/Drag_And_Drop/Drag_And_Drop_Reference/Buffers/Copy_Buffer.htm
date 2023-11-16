@@ -3,54 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Copy Buffer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>버퍼 복사</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Copy Buffer action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Copy Buffer" />
-  <meta name="search-keywords" content="Copy Buffer" />
+  <meta name="topic-comment" content="버퍼 복사 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 버퍼 복사" />
+  <meta name="search-keywords" content="버퍼 복사" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Copy Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Copy_Buffer.png" /> Copy Buffer</h1>
-  <p>This action can be used to copy all of the data stored in one buffer to another. When using two buffers and copying from one to the other, both buffers must have previously been created using the <a href="Create_Buffer.htm">Create Buffer</a> action, and you supply the unique buffer ID returned as the from/to arguments.<b></b></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> You cannot copy to the same buffer.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><span><img alt="Copy Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Copy_Buffer.png" /></span></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable) to copy <i>from</i></td>
-      </tr>
-      <tr>
-        <td>Copy To</td>
-        <td>The buffer index (stored in a variable) to copy <i>to</i></td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Copy Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Copy_Buffer.png" />The above action block code will create a new buffer and store its ID in a temporary variable. It then checks to see if the buffer indexed in the given global variable exists, and if it does then it is copied to the temporary buffer and the read/write position reset back to the start, and if it doesn&#39;t exists then it is created.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Delete_Buffer.htm">Delete Buffer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Copy Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Copy_Buffer.png" /> 버퍼 복사</h1><p> 이 작업은 한 버퍼에 저장된 모든 데이터를 다른 버퍼로 복사하는 데 사용할 수 있습니다. 두 개의 버퍼를 사용하고 한 버퍼에서 다른 버퍼로 복사할 때 두 버퍼는 모두 이전에 <a href="Create_Buffer.htm">버퍼 생성 작업을 사용하여 생성</a> 되어야 하며 시작/끝 인수로 반환된 고유 버퍼 ID를 제공해야 합니다.<b></b></p><p class="note"> <b>참고</b>: 동일한 버퍼에 복사할 수 없습니다.</p><p></p><h4> 동작 구문:</h4><p><span><img alt="Copy Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Copy_Buffer.png"/></span></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Buffer</span></td><td> 복사 <i>할</i> 버퍼 인덱스(변수에 저장됨)</td></tr><tr><td> <span class="notranslate">Copy To</span></td><td> 복사 <i>할</i> 버퍼 인덱스(변수에 저장됨)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Copy Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Copy_Buffer.png" /> 위의 작업 블록 코드는 새 버퍼를 만들고 해당 ID를 임시 변수에 저장합니다. 그런 다음 주어진 전역 변수에 인덱스된 버퍼가 존재하는지 확인하고 존재하면 임시 버퍼에 복사하고 읽기/쓰기 위치를 다시 시작으로 재설정하고 존재하지 않으면 존재합니다. 만들어진. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffer_Actions.htm">버퍼 작업</a></div><div style="float:right"> 다음: <a href="Delete_Buffer.htm">버퍼 삭제</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Copy Buffer

@@ -6,67 +6,23 @@
   <title>array_get</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function array_get" />
+  <meta name="topic-comment" content="array_get 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="array_get" />
   <meta name="search-keywords" content="array_get" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>array_get</h1>
-  <p>With this function you can retrieve the value from an index in an array. The function requires you to provide a variable that holds the array and the index to get the value from within that array. Note that if the array index given is out of bounds then the game will crash with an error. This function can also be used for multi-dimension arrays, as long as you specify which dimension you want to get when you supply the array index, following this pattern:</p>
-  <p class="code">// 1D array<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>array_get</h1><p> 이 함수를 사용하면 배열의 인덱스에서 값을 검색할 수 있습니다. 이 함수를 사용하려면 배열을 보유하는 변수와 해당 배열 내에서 값을 가져오기 위한 인덱스를 제공해야 합니다. 주어진 배열 인덱스가 범위를 벗어나면 게임이 오류와 함께 충돌합니다. 이 함수는 다음 패턴에 따라 배열 인덱스를 제공할 때 얻을 차원을 지정하는 한 다차원 배열에도 사용할 수 있습니다.</p><p class="code">// 1D array<br />
     array_get(my_array, 0);<br />
     // 2D array<br />
     array_get(my_array[0], 0);<br />
     // 3D array<br />
     array_get(my_array[0][0], 0);<br />
-    // etc...</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">array_get(variable, index);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>variable</td>
-        <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></td>
-        <td>The variable that holds the array.</td>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The index of the array element to get the value from.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span> (Any valid data type that an array can hold)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">for (var i = 0; i &lt; 10; ++i;)<br />
+    // etc...</p><p></p><h4> 통사론:</h4><p class="code">array_get(variable, index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">variable</span></td><td> <span data-keyref="Type_Array">정렬</span></td><td> <span class="notranslate">The variable that holds the array.</span></td></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The index of the array element to get the value from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Any">Variable</span> (Any valid data type that an array can hold)</p><p></p><h4> 예시:</h4><p class="code">for (var i = 0; i &lt; 10; ++i;)<br />
     {<br />
         show_debug_message(array_get(my_array, i));<br />
-    }</p>
-  <p>The above code will output the first 10 items of the given to the console.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Array_Functions.htm">Array Functions</a></div>
-        <div style="float:right">Next: <a href="array_set.htm">array_set</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 콘솔에 주어진 항목의 처음 10개 항목을 출력합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="array_set.htm"><span class="notranslate">array_set</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 array_get

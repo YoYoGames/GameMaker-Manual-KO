@@ -6,58 +6,18 @@
   <title>layer_get_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function layer_get_depth" />
+  <meta name="topic-comment" content="layer_get_depth 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_get_depth" />
   <meta name="search-keywords" content="layer_get_depth" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_depth</h1>
-  <p>You can use this function to get the <i>depth</i> value associated with a given layer. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and the function will return that layers depth as a real number. Note that depth is defined as being higher the &quot;further away&quot; from the camera and lower the &quot;closer&quot; to the camera, so if you have three layers with depths -100, 0, 100, the layers will draw in the order 100, 0, -100, so that the &quot;top&quot; layer (ie, the closest to the camera view and so drawn over everything else) will be the layer with the -100 depth.</p>
-  <p>The following image shows a schematic of how depth works for layers:</p>
-  <p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" />Note that if you supply an invalid layer ID value you will get an error.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">layer_get_depth(layer_id)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String">String</span> or <span data-keyref="Type_ID_Layer">Layer ID</span></td>
-        <td>The unique ID value of the layer to get the depth of (or the layer name as a string)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if layer_get_depth(global.temp_layer) != -100<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_depth</h1><p> 이 함수를 사용하여 주어진 레이어와 관련된 <i>깊이</i> 값을 얻을 수 있습니다. 레이어 ID를 제공합니다(다음을 사용하여 레이어를 생성할 때 얻는<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 레이어 이름(문자열로 - 성능에 영향을 미침)을 입력하고 함수는 해당 레이어 깊이를 실수로 반환합니다. 깊이는 카메라에서 &quot;멀리&quot; 높을수록, 카메라에 &quot;가까울수록&quot; 낮게 정의되므로 깊이가 -100, 0, 100인 3개의 레이어가 있는 경우 레이어는 100, 0, -100, &quot;상단&quot; 레이어(즉, 카메라 뷰에 가장 가깝고 다른 모든 것 위에 그려짐)는 -100 깊이의 레이어가 됩니다.</p><p> 다음 이미지는 레이어에서 깊이가 작동하는 방식에 대한 도식을 보여줍니다.</p><p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" /> 잘못된 레이어 ID 값을 제공하면 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_depth(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to get the depth of (or the layer name as a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">if layer_get_depth(global.temp_layer) != -100<br />
     {<br />
         layer_destroy(global.temp_layer);<br />
         global.temp_layer = layer_create(-100);<br />
-    }</p>
-  <p>The above code checks the depth of a layer ID stored in a global variable and if it is not -100 it destroys the layer and re-creates it at the depth of -100.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_id_at_depth.htm">layer_get_id_at_depth</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 전역 변수에 저장된 레이어 ID의 깊이를 확인하고 -100이 아니면 레이어를 파괴하고 -100의 깊이에서 다시 생성합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="General_Layer_Functions.htm">일반 레이어 기능</a></div><div style="float:right"> 다음: <a href="layer_get_id_at_depth.htm"><span class="notranslate">layer_get_id_at_depth</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_depth

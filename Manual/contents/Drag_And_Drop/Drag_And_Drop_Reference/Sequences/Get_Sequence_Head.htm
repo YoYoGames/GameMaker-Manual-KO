@@ -2,55 +2,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Get Sequence Head</title>
+  <title>시퀀스 헤드 가져오기</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo"/>
-  <meta name="topic-comment" content="Page that explains the Get Sequence Head action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Get Sequence Head"/>
-  <meta name="search-keywords" content="Get Sequence Head"/>
+  <meta name="topic-comment" content="시퀀스 헤드 가져오기 작업을 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 시퀀스 헤드 가져오기"/>
+  <meta name="search-keywords" content="시퀀스 헤드 가져오기"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_get_head.png"/> Get Sequence Head</h1>
-  <p>With this action you can retrieve the current <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> position of the given sequence element in the room. You supply the sequence element ID (as returned by the action <a href="Create_Sequence_Element.htm">Create Sequence</a>),
-    and this action will return the current frame that the sequence playhead is on, in the target variable. For information on the playhead, see <a href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a>.</p>
-  <p>Note that the target variable can be flagged as temporary (local), which will be created for the action and can be used in all subsequent actions for the event the action is in.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_get_head.png"/></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Variable</td>
-        <td>The ID of the sequence element to get the head position of.</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the head position.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_head.png" style="cursor: nwse-resize;"/>The above action block retrieves the current head position of the sequence element ID stored in
-    the variable &quot;<span class="inline">seq_id</span>&quot;. That value is then used to set the head position of the same sequence element, advancing it by 4 frames.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Actions_Library.htm">Sequence Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Sequence_Head.htm">Set Sequence Head</a> </div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_get_head.png"/> 시퀀스 헤드 가져오기</h1><p> 이 작업으로 방에서 주어진 시퀀스 요소의 현재 <a class="glossterm" data-glossterm="플레이헤드" href="#">재생 헤드</a> 위치를 검색할 수 있습니다. 시퀀스 요소 ID( <a href="Create_Sequence_Element.htm">Create Sequence</a> 작업에서 반환됨)를 제공하면 이 작업은 대상 변수에서 시퀀스 재생 헤드가 있는 현재 프레임을 반환합니다. 재생 헤드에 대한 자세한 내용 <a href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">은 도프 시트 사용</a> 을 참조하십시오.</p><p> 대상 변수는 임시(로컬)로 플래그가 지정될 수 있으며, 이는 작업에 대해 생성되고 작업이 있는 이벤트에 대한 모든 후속 작업에서 사용할 수 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_get_head.png"/></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Variable</span></td><td> 헤드 위치를 가져올 시퀀스 요소의 ID입니다.</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 머리 위치를 유지할 대상 변수입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_head.png" style="cursor: nwse-resize;"/> 위의 액션 블록은 &quot;변수에 저장된 시퀀스 요소 ID의 현재 헤드 위치를 검색합니다.<span class="inline">seq_id</span> &quot;. 그런 다음 해당 값을 사용하여 동일한 시퀀스 요소의 헤드 위치를 설정하여 4프레임씩 전진시킵니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequence_Actions_Library.htm">시퀀스 작업</a></div><div style="float:right"> 다음: <a href="Set_Sequence_Head.htm">시퀀스 헤드 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Sequence Head

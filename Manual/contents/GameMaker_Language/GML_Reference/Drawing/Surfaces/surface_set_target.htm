@@ -4,63 +4,29 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>surface_set_target</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for surface_set_target" />
+  <meta name="topic-comment" content="surface_set_target에 대한 참조" />
   <meta name="rh-index-keywords" content="surface_set_target" />
   <meta name="search-keywords" content="surface_set_target" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h"><span data-field="title" data-format="default">surface_set_target</span></h1>
-  <p>With this function you set all further drawing to the target surface rather than the screen and in this way you can tell <span data-keyref="GameMaker Name">GameMaker</span> to only draw specific things to the specified surface.</p>
-  <p>Please note that if you do not call <span class="inline3_func"><a data-xref="{text}" href="surface_reset_target.htm#h">surface_reset_target</a></span> after you have finished, nothing will be drawn on the screen as all further drawing (even in other instances) will be done on the surface. You should also realise that nothing will be seen if the surface itself is not drawn on the screen in the draw event of an instance. You can check the return value of this function too as a debug tool to check whether the surface target was set or not, with a return value of 0 being a failure to set the target and any other positive value being a success.</p>
-  <p>One thing that should be noted is that surfaces are <i>stacked</i> so you cannot jump from target to target and then reset to the normal draw target at the end, but rather you must open and close rendering targets. For example, this will <b>not</b> work correctly:</p>
-  <p class="code">surface_set_target(surf1);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_set_target</h1><p> 이 기능을 사용하면 모든 추가 그리기를 화면이 아닌 대상 표면으로 설정하고 이러한 방식으로 <span data-keyref="GameMaker Name">GameMaker</span> 가 지정된 표면에 특정 항목만 그리도록 지시할 수 있습니다. 전화를 하지 않으시면 참고하세요<a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> 작업을 마친 후에는 모든 추가 그리기(심지어 다른 경우에도)가 표면에서 수행되므로 화면에 아무 것도 그려지지 않습니다. 또한 인스턴스의 그리기 이벤트에서 표면 자체가 화면에 그려지지 않으면 아무 것도 표시되지 않음을 알아야 합니다. 이 함수의 반환 값을 디버그 도구로 확인하여 표면 대상이 설정되었는지 여부를 확인할 수도 있습니다. 반환 값 0은 대상 설정 실패이고 다른 양수 값은 성공입니다.</p><p> 한 가지 주목해야 할 점은 표면이 <i>스택</i> 되어 대상에서 대상으로 점프한 다음 끝에 일반 그리기 대상으로 재설정할 수 없다는 것입니다. 대신 렌더링 대상을 열고 닫아야 합니다. 예를 들어 다음은 올바르게 작동 <b>하지 않습니다</b>.</p><p class="code">surface_set_target(surf1);<br />
     draw_text(32, 32, &quot;surface1&quot;);<br />
     surface_set_target(surf2);<br />
     draw_text(32, 64, &quot;surface2&quot;);<br />
-    surface_reset_target();</p>
-  <p>Instead, you must reset the target for each of the surfaces that you set, much like you must use opening and closing brackets {} for code blocks. So the above should be written as either this:</p>
-  <p class="code">surface_set_target(surf1);<br />
+    surface_reset_target();</p><p> 대신, 코드 블록에 여는 대괄호 {}를 사용해야 하는 것처럼 설정한 각 표면에 대한 대상을 재설정해야 합니다. 따라서 위의 내용은 다음과 같이 작성되어야 합니다.</p><p class="code">surface_set_target(surf1);<br />
     draw_text(32, 32, &quot;surface1&quot;);<br />
     surface_reset_target();<br />
     surface_set_target(surf2);<br />
     draw_text(32, 64, &quot;surface2&quot;);<br />
-    surface_reset_target();</p>
-  <p>or as this:</p>
-  <p class="code">surface_set_target(surf1);<br />
+    surface_reset_target();</p><p> 또는 다음과 같이:</p><p class="code">surface_set_target(surf1);<br />
     draw_text(32, 32, &quot;surface1&quot;);<br />
     surface_set_target(surf2);<br />
     draw_text(32, 64, &quot;surface2&quot;);<br />
     surface_reset_target();<br />
-    surface_reset_target();</p>
-  <div data-conref="../../../../assets/snippets/Note_Surface_Check_That_It_Exists.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">surface_set_target</span>(surface_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>surface_id</td>
-        <td><span data-keyref="Type_ID_Surface"><a href="GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_create.htm" target="_blank">Surface ID</a></span></td>
-        <td>The ID of the surface to set as the drawing target.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span> Whether the render target was set successfully</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if view_current = 0<br />
+    surface_reset_target();</p><p class="note"> <b>참고</b>: 표면으로 작업할 때 표면이 텍스처 메모리에 저장되어 있기 때문에 언제든지 존재하지 않을 가능성이 있습니다. 다음을 사용하여 표면이 존재하는지 <b>항상</b> 확인해야 합니다.<span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> 직접 참조하기 전에.</p><p></p><h4> 통사론:</h4><p class="code">surface_set_target(surface_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td><td> <span class="notranslate">The ID of the surface to set as the drawing target.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if view_current = 0<br />
     {<br />
         surface_set_target(surf);<br />
         with (obj_Effect)<br />
@@ -72,18 +38,7 @@
     else<br />
     {<br />
         draw_surface(surf, 0, 0);<br />
-    }</p>
-  <p>The above code will check to see which view is currently being drawn, and if it is view[0] it sets the draw target to a surface and draws all instances of the object &quot;obj_Effect&quot; before resetting the draw target again. If the view is not view[0] the surface is drawn to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_set_target_ext.htm">surface_set_target_ext</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 현재 어떤 뷰가 그려지고 있는지 확인하고 그것이 view[0]인 경우 그리기 대상을 표면으로 설정하고 그리기 대상을 다시 재설정하기 전에 &quot;obj_Effect&quot; 개체의 모든 인스턴스를 그립니다. 보기가 보기[0]가 아니면 표면이 화면에 그려집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Surfaces.htm">표면</a></div><div style="float:right"> 다음: <a href="surface_set_target_ext.htm"><span class="notranslate">surface_set_target_ext</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 surface_set_target

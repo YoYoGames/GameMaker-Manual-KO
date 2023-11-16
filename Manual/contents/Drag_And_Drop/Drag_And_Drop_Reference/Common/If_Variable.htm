@@ -3,72 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Variable</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>변수인 경우</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section detailing If Variable" />
-  <meta name="rh-index-keywords" content="GML Visual Action - If Variable" />
+  <meta name="topic-comment" content="변수인 경우를 자세히 설명하는 섹션" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 변수인 경우" />
   <meta name="search-keywords" content="" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_If_Variable.png" /> If Variable</h1>
-  <p>This action is used to check the state of a given variable against a given value using a specific expression. An &quot;if&quot; statement will always return either <span class="inline">true</span> or <span class="inline">false</span> and the expressions for checking can be any one of the following:</p>
-  <ul class="colour">
-    <li><b>Equals to</b> - The variable and the value are both exactly equal<b></b></li>
-    <li><b>Less than</b> - The variable is less than the value<b></b></li>
-    <li><b>Greater than</b> - The variable is greater than the value</li>
-    <li><b>Less than or Equal to</b> - The variable is less than <i>or</i> equal to the value<b></b></li>
-    <li><b>Greater than or Equal to</b> - The variable is greater than <i>or</i> equal to the value</li>
-  </ul>
-  <p>If you flag the &quot;Not&quot; argument, then the above will be negated expressions, for example &quot;equals to&quot; becomes &quot;<i>not</i> equals to&quot;. Also note that neither the variable nor the value arguments are limited to numeric values and can be a string, a pointer, a resource ID or anything else that a function can return or use (see the section on <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">data types</a> for more information), but you cannot compare two different data types without getting an error - for example if the variable holds a string and you try to check if it is equal to a number then you will get a syntax error.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> Due to <a href="http://floating-point-gui.de/formats/fp/" target="·_blank&quot;">floating point precision issues</a>, checking to see if two values are exactly equal may return <span class="inline">false</span>, since one may be exactly 1, while the other may be 1.00000000000001. This can be avoided by using the <a href="../Data_Types/Decimal_To_Integer.htm">Decimal to Integer</a> action before checking or using the &quot;greater than&quot; or &quot;less than&quot; expressions.</p>
-  <p>Note that to add actions into the &quot;if&quot; block, they should be dropped to the side of the action, as shown in the image below:</p>
-  <p><img alt="If Variable drop actions example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_common_if_drop.png" />These actions will now be run if the &quot;if&quot; evaluates to <span class="inline">true</span>, while any actions dropped elsewhere will be performed after the &quot;if&quot; block.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="If Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_common_if_variable.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Variable</td>
-        <td>The name of the variable to check.</td>
-      </tr>
-      <tr>
-        <td>Not</td>
-        <td>Set to check if the expression does <i>not</i> evaluate to true.</td>
-      </tr>
-      <tr>
-        <td>Expression</td>
-        <td>The type of expression to use for the check.</td>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The value to check the variable against.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_common_if_variable.png" />The above action block code checks a variable &quot;dir&quot; to see if it is equal to 10, and if it is it creates an instance of &quot;<span class="inline">obj_Squirrel</span>&quot; and if it isn&#39;t then it destroys the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="If_Expression.htm">If Expression</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_If_Variable.png" /> 변수인 경우</h1><p> 이 작업은 특정 표현식을 사용하여 주어진 값에 대해 주어진 변수의 상태를 확인하는 데 사용됩니다. &quot;if&quot; 문은 항상 다음 중 하나를 반환합니다. <span class="inline">true</span> 또는 <span class="inline">false</span> 확인을 위한 표현식은 다음 중 하나일 수 있습니다.</p><ul class="colour"><li> <b>같음</b> - 변수와 값이 모두 정확히 같습니다.<b></b></li><li> <b>보다 작음</b> - 변수가 값보다 작음<b></b></li><li> <b>보다 큼</b> - 변수가 값보다 큼</li><li> <b>작거나 같음</b> - 변수가 값보다 작 <i>거나</i> 같음<b></b></li><li> <b>크거나 같음</b> - 변수가 값보다 크 <i>거나</i> 같음</li></ul><p> &quot;Not&quot; 인수에 플래그를 지정하면 위의 표현이 부정됩니다. 예를 들어 &quot;같음&quot;은 &quot; <i>같지 않음</i> &quot;이 됩니다. 또한 변수나 값 인수는 숫자 값으로 제한되지 않으며 문자열, 포인터, 리소스 ID 또는 함수가 반환하거나 사용할 수 있는 기타 모든 것이 될 수 있습니다(자세한 내용은 <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">데이터 유형</a> 섹션 참조). 오류가 발생하지 않고는 서로 다른 두 데이터 유형을 비교할 수 없습니다. 예를 들어 변수에 문자열이 포함되어 있고 숫자와 같은지 확인하려고 하면 구문 오류가 발생합니다.</p><p class="note"> <b>중요 참고</b> 사항: <a href="http://floating-point-gui.de/formats/fp/" target="·_blank&quot;">부동 소수점 정밀도 문제</a> 로 인해 두 값이 정확히 같은지 확인하는 것이 반환될 수 있습니다. <span class="inline">false</span>, 하나는 정확히 1일 수 있고 다른 하나는 1.00000000000001일 수 있기 때문입니다. &quot;보다 큼&quot; 또는 &quot;보다 작음&quot; 식을 확인하거나 사용하기 전에 <a href="../Data_Types/Decimal_To_Integer.htm">10진수에서 정수로</a> 작업을 사용하여 이를 방지할 수 있습니다.</p><p> &quot;if&quot; 블록에 작업을 추가하려면 아래 이미지와 같이 작업 옆에 놓아야 합니다.</p><p><img alt="If Variable drop actions example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_common_if_drop.png" /> &quot;if&quot;가 다음과 같이 평가되면 이러한 작업이 이제 실행됩니다. <span class="inline">true</span>, 다른 곳에 드롭된 모든 작업은 &quot;if&quot; 블록 다음에 수행됩니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="If Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_common_if_variable.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Variable</span></td><td> 확인할 변수의 이름입니다.</td></tr><tr><td> <span class="notranslate">Not</span></td><td> 표현식이 true로 평가되지 <i>않는지</i> 확인하도록 설정합니다.</td></tr><tr><td> <span class="notranslate">Expression</span></td><td> 검사에 사용할 표현식 유형입니다.</td></tr><tr><td> <span class="notranslate">Value</span></td><td> 변수를 확인할 값입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="If Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_common_if_variable.png" /> 위의 액션 블록 코드는 변수 &quot;dir&quot;을 확인하여 10과 같은지 확인하고, 같으면 &quot;<span class="inline">obj_Squirrel</span> &quot; 그렇지 않은 경우 인스턴스를 파괴합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Common_Actions_Library.htm">일반적인 작업</a></div><div style="float:right"> 다음: <a href="If_Expression.htm">If 표현식</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Variable

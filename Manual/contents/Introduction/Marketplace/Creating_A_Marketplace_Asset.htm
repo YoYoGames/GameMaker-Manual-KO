@@ -3,57 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Creating A Marketplace Asset</title>
+  <title>마켓플레이스 자산 생성</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining how to make a Marketplace package" />
-  <meta name="rh-index-keywords" content="Marketplace - Creating An Asset" />
-  <meta name="search-keywords" content="Marketplace,upload,package" />
+  <meta name="topic-comment" content="Marketplace 패키지를 만드는 방법을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="마켓플레이스 - 자산 생성" />
+  <meta name="search-keywords" content="시장,업로드,패키지" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating A Marketplace Asset</h1>
-  <p>When you select the <strong>Create Package</strong> option from the IDE <a href="../../IDE_Navigation/Menus/The_Marketplace_Menu.htm">Marketplace Menu</a> you will be taken to the following workspace:<img alt="Marketplace Create Package" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_CreatePackage.png" /> <span style="display: none;"> </span> <span class="droptext" data-targetname="drop_down4"> <span class="dropspot">Here</span></span> you must first select the Publisher identity that you want to publish the asset package as (which you should have set up from your <a href="Creating_A_Publisher_Account.htm">Publisher Dashboard</a>), then give a <strong>Display Name</strong> and a <a class="glossterm" data-glossterm="Version Number" href="#">Version Number</a>. A package ID will then be created for you based on the display name and publisher account used, but you can edit this to be something else if you wish as long as it maintains the reverse URL format. You then need to choose the type of asset package to make:</p>
-  <ul class="colour">
-    <li class="dropspot"><strong>Asset</strong>: This is a collection of assets (sprites, scripts, objects, etc...) that you wish to sell on the Marketplace</li>
-    <li class="dropspot"><strong>Demo</strong>: This is a demo to demonstrate some concept or game idea</li>
-    <li class="dropspot"><strong>Tutorial</strong>: The asset being uploaded is a tutorial, designed to be run from within the <span data-keyref="GameMaker Name">GameMaker</span> IDE (see <a href="Creating_A_Tutorial.htm">this page</a> for more details)</li>
-  </ul>
-  <p>Once you have done that you can then choose which assets from the project you want to add into the Asset Package using the section on the right. You can add all your assets, or only some of them as well as remove any that you may have added by mistake. It is assumed that you have created the asset to be uploaded previously in <span data-keyref="GameMaker Name">GameMaker</span> and that the current project contains all that you require to upload.</p>
-  <p class="note"><strong>REMEMBER!</strong> To be able to create or use asset packages, you must have previously created a user profile certificate. You can do this from the Marketplace Preferences, which is explained <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Marketplace_Preferences.htm">here</a>.</p>
-  <p>When you are happy with the selection of assets and want to upload your package to the Marketplace, simply click the <em>Okay</em> button at the bottom, and the asset package will be created and uploaded to the Marketplace. When the upload is complete, a new workspace will open with a browser view of the asset page for you to edit. For more information on how to set this up, please see the following page:</p>
-  <ul class="colour">
-    <li><a href="Listing_An_Asset.htm">Listing An Asset</a></li>
-  </ul>
-  <p>If you need to update a Marketplace Asset, you do more or less the same as you did when you created the original package, only now you need to specify the package to update from a drop down list of available packages:</p>
-  <p><img alt="Update Asset List Of Assets" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_UpdateAsset.png" />When updating, you won&#39;t be able to change the package ID, and you should be aware that the <a class="glossterm" data-glossterm="Version Number" href="#">Version Number</a> shown will be the <em>current </em>version number and you <strong>should increment this as appropriate</strong> otherwise the update will fail (since you cannot have two asset packages with the same version number). There is also a field where you can add some text for the change log for the asset, and this will be uploaded along with the asset and displayed on the Marketplace page. </p>
-  <p class="note"><strong>IMPORTANT!</strong> Assets made with <span data-keyref="GameMaker Name">GameMaker</span> version 2.3+ will only be available to those users that are using version 2.3 and above. If you are updating an asset from a previous version, that asset will still be available to users who have not updated and will co-exist with the updated 2.3+ version.</p>
-  <p> </p>
-  <h2>Uploading Though The Web Page</h2>
-  <p>You can upload assets through the actual Marketplace web page rather than the IDE, something which may be necessary if the upload through the IDE has failed for whatever reason. To start with, you would create the package and attempt to upload through the IDE as shown above, and if it has failed you wold then go to the <a href="../The_Output_Window.htm">Output Window</a> and check the log for a line that shows where the package you are creating was saved to before attempting the upload. For example:</p>
-  <p>On <strong>Windows</strong>:</p>
-  <p class="code">Created package file:<br />
-    C:\Users\WINDOWSUSERNAME\AppData\Roaming\GameMaker\GM_USERNAME\Marketplace\Packages\com.publishername.assetname.yymp</p>
-  <p>On <strong>macOS</strong>:</p>
-  <p class="code">Created package file:<br />
-    /Users/MACUSERNAME/.config/GameMaker/GM_USERNAME/Marketplace/Packages/com.publishername.assetname.yymp</p>
-  <p>You need to navigate to that file location and copy the <span class="inline">*.YYMP</span> file to a safe location, as this will be the file you will be uploading to the Marketplace.</p>
-  <p>At this point you need to open up the Marketplace in your web browser and navigate to the asset listing for the asset and then go to the <strong>Versions</strong> section, and then click the <strong>Upload Version</strong> button, as shown in the image below:</p>
-  <p><img alt="Upload A New Asset Version" class="center" src="../../assets/Images/Introduction/MP_CreateVersion.png" />This will take you to the upload page for the new version where you can add in information about the version being uploaded if required and also supply the file by clicking the <strong>Choose FIle</strong> button and selecting the previously created <span class="inline">*.YYMP</span> file:</p>
-  <p><img alt="New Version Marketplace Upload Window" class="center" src="../../assets/Images/Introduction/MP_NewVersion.png" />Adding the file will upload the versions and show a &quot;progress&quot; bar, and when the upload is finished and are happy with the details, you can then click on the <strong>Save</strong> button to save the asset to the listing. Note that the asset will be in the <strong>Processing</strong> stage for a few minutes before it can be published.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../The_Marketplace.htm">The Marketplace</a></div>
-        <div style="float:right">Next: <a href="Creating_A_Tutorial.htm">Creating A Marketplace Tutorial</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 마켓플레이스 자산 생성</h1><p> IDE <a href="../../IDE_Navigation/Menus/The_Marketplace_Menu.htm">Marketplace 메뉴</a> 에서 <strong>패키지 만들기</strong> 옵션을 선택하면 다음 작업 공간으로 이동합니다.<img alt="Marketplace Create Package" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_CreatePackage.png" /><span style="display: none;"> </span><span class="droptext" data-targetname="drop_down4"><span class="dropspot">여기</span></span> 에서 먼저 자산 패키지를 게시할 게시자 ID( <a href="Creating_A_Publisher_Account.htm">게시자 대시보드</a> 에서 설정해야 함)를 선택한 다음 <strong>표시 이름</strong> 과 <a class="glossterm" data-glossterm="버전 번호" href="#">버전 번호</a> 를 제공해야 합니다. 그런 다음 사용된 표시 이름과 게시자 계정을 기반으로 패키지 ID가 생성되지만 역 URL 형식을 유지하는 한 원하는 경우 이를 다른 것으로 편집할 수 있습니다. 그런 다음 만들 자산 패키지 유형을 선택해야 합니다.</p><ul class="colour"><li class="dropspot"> <strong>Asset</strong>: 마켓플레이스에서 판매하고자 하는 자산(스프라이트, 스크립트, 개체 등)의 모음입니다.</li><li class="dropspot"> <strong>데모</strong>: 이것은 몇 가지 개념이나 게임 아이디어를 시연하기 위한 데모입니다.</li><li class="dropspot"> <strong>튜토리얼</strong>: 업로드되는 자산은 <span data-keyref="GameMaker Name">GameMaker</span> IDE 내에서 실행되도록 설계된 튜토리얼입니다(자세한 내용은 <a href="Creating_A_Tutorial.htm">이 페이지</a> 참조).</li></ul><p> 완료하면 오른쪽 섹션을 사용하여 자산 패키지에 추가할 프로젝트의 자산을 선택할 수 있습니다. 모든 자산을 추가하거나 일부만 추가할 수 있을 뿐만 아니라 실수로 추가한 자산을 제거할 수도 있습니다. 이전에 <span data-keyref="GameMaker Name">GameMaker</span> 에서 업로드할 자산을 생성했으며 현재 프로젝트에 업로드에 필요한 모든 것이 포함되어 있다고 가정합니다.</p><p class="note"> <strong>기억하다!</strong> 자산 패키지를 생성하거나 사용하려면 이전에 사용자 프로필 인증서를 생성해야 합니다. <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Marketplace_Preferences.htm">여기</a> 에 설명된 Marketplace 기본 설정에서 이 작업을 수행할 수 있습니다.</p><p> 자산 선택에 만족하고 패키지를 마켓플레이스에 업로드하려면 하단의 <em>확인</em> 버튼을 클릭하기만 하면 자산 패키지가 생성되어 마켓플레이스에 업로드됩니다. 업로드가 완료되면 편집할 자산 페이지의 브라우저 보기와 함께 새 작업 공간이 열립니다. 설정 방법에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p><ul class="colour"><li> <a href="Listing_An_Asset.htm">자산 나열</a></li></ul><p> Marketplace 자산을 업데이트해야 하는 경우 원본 패키지를 만들 때와 거의 동일하게 수행합니다. 이제 사용 가능한 패키지의 드롭다운 목록에서 업데이트할 패키지를 지정하기만 하면 됩니다.</p><p><img alt="Update Asset List Of Assets" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_UpdateAsset.png" /> 업데이트할 때 패키지 ID를 변경할 수 없으며 표시된 <a class="glossterm" data-glossterm="버전 번호" href="#">버전 번호</a> 가 <em>현재</em> 버전 번호임을 알고 있어야 <strong>하며 적절하게 이를 증가시켜야 합니다</strong>. 그렇지 않으면 업데이트가 실패합니다(두 개의 자산을 가질 수 없기 때문에 동일한 버전 번호의 패키지). 또한 자산에 대한 변경 로그에 대한 텍스트를 추가할 수 있는 필드가 있으며 이는 자산과 함께 업로드되고 Marketplace 페이지에 표시됩니다.</p><p class="note"> <strong>중요한!</strong> <span data-keyref="GameMaker Name">GameMaker</span> 버전 2.3 이상으로 만든 자산은 버전 2.3 이상을 사용하는 사용자만 사용할 수 있습니다. 이전 버전에서 자산을 업데이트하는 경우 해당 자산은 업데이트되지 않은 사용자가 계속 사용할 수 있으며 업데이트된 2.3+ 버전과 공존합니다.</p><p></p><h2> 웹 페이지를 통한 업로드</h2><p> IDE가 아닌 실제 Marketplace 웹 페이지를 통해 자산을 업로드할 수 있습니다. 이는 IDE를 통한 업로드가 어떤 이유로든 실패한 경우 필요할 수 있습니다. 먼저 패키지를 생성하고 위에 표시된 대로 IDE를 통해 업로드를 시도합니다. 실패하면 <a href="../The_Output_Window.htm">출력 창</a> 으로 이동하여 생성 중인 패키지가 저장된 위치를 보여주는 행에 대한 로그를 확인합니다. 업로드를 시도하기 전에. 예를 들어:</p><p> <strong>Windows</strong>:</p><p class="code">Created package file:<br />
+    C:\Users\WINDOWSUSERNAME\AppData\Roaming\GameMaker\GM_USERNAME\Marketplace\Packages\com.publishername.assetname.yymp</p><p> <strong>macOS</strong>:</p><p class="code">Created package file:<br />
+    /Users/MACUSERNAME/.config/GameMaker/GM_USERNAME/Marketplace/Packages/com.publishername.assetname.yymp</p><p> 해당 파일 위치로 이동하여 복사해야 합니다. <span class="inline">*.YYMP</span> 마켓플레이스에 업로드할 파일이므로 안전한 위치에 파일을 저장합니다.</p><p> 이 시점에서 웹 브라우저에서 마켓플레이스를 열고 자산에 대한 자산 목록으로 이동한 다음 <strong>버전</strong> 섹션으로 이동한 다음 아래 이미지와 같이 <strong>버전 업로드</strong> 버튼을 클릭해야 합니다.</p><p><img alt="Upload A New Asset Version" class="center" src="../../assets/Images/Introduction/MP_CreateVersion.png" /> 그러면 필요한 경우 업로드되는 버전에 대한 정보를 추가할 수 있는 새 버전의 업로드 페이지로 이동하고 파일 <strong>선택</strong> 버튼을 클릭하고 이전에 생성된 파일을 선택하여 파일을 제공할 수도 있습니다. <span class="inline">*.YYMP</span> 파일:</p><p><img alt="New Version Marketplace Upload Window" class="center" src="../../assets/Images/Introduction/MP_NewVersion.png" /> 파일을 추가하면 버전이 업로드되고 &quot;진행률&quot; 표시줄이 표시되며, 업로드가 완료되고 세부 정보에 만족하면 <strong>저장</strong> 버튼을 클릭하여 자산을 목록에 저장할 수 있습니다. 자산은 게시되기 전에 몇 분 동안 <strong>처리</strong> 단계에 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../The_Marketplace.htm">마켓플레이스</a></div><div style="float:right"> 다음: <a href="Creating_A_Tutorial.htm">마켓플레이스 자습서 만들기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Marketplace - Creating An Asset Package

@@ -3,74 +3,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Constants</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>상수</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the different GML constants" />
-  <meta name="rh-index-keywords" content="Constants,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
-  <meta name="search-keywords" content="constants,macros,enums,macro,enum" />
+  <meta name="topic-comment" content="다양한 GML 상수를 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="상수,매크로,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
+  <meta name="search-keywords" content="상수,매크로,열거,매크로,enum" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Constants</span></h1>
-  <p>A constant is a type of variable that is set once at the start of the game and then never changes. In fact, constant values <em>cannot be changed after they have been declared</em>. This makes them ideal for holding values that are used throughout the game to identify special data.</p>
-  <p>In the GameMaker Language there are two types of user-defined constants: <strong>macros</strong> and <strong>enums</strong>, both of which are explained below. Also note that any value that is always the same is classed as a constant, regardless of the <a href="../Data_Types.htm">data type</a>, for example, a string or the number 3.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> The GameMaker Language also has a number of built-in constant values that are used to identify specific things. These are outlined on the appropriate pages for the runtime functions that require them in the <a href="../../GML_Reference/GML_Reference.htm">GML Reference</a> section.</p>
-  <h2 id="h">Macros</h2>
-  <p>While not exactly variables, macros are similar to them in how they are used, i.e.: they are named values that you can use throughout your code to replace <a class="glossterm" data-glossterm="hard-coded" href="#">hard-coded</a> values. Basically, a macro is a named variable that holds an expression. You can define your own macros using the <a href="../Script_Functions.htm">Script Editor</a> and then use them in your code and actions as if they were regular variables, with the one difference being that they <i>can&#39;t be changed in the game</i>.</p>
-  <p>The syntax structure for a macro is as follows:</p>
-  <p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;expression&gt;</i></p>
-  <p>For example, say you define the following macro &quot;<span class="inline">total_weapons</span>&quot;:</p>
-  <p class="code">#macro total_weapons 10</p>
-  <p class="note_heading">Macro syntax...</p>
-  <p class="note">The syntax shown above must be used correctly to define macros. You cannot use an equal sign (like in variables) or put a semicolon at the end (like in a regular statement). Doing so will cause your macro definition to become invalid.<br />
-    <br />
-    For example, this is not the correct way to define a macro:<br />
-    <br />
-    <span class="inline2">#macro total_weapons = 10;</span><br />
-    <br />
-    Removing the equal sign and colon will make it a valid macro definition.
-  </p>
-  <p>You could then use this in your code like this:</p>
-  <p class="code">pos++;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 상수</h1><p> 상수는 게임 시작 시 한 번 설정되고 절대 변경되지 않는 변수 유형입니다. 실제로 상수 값 <em>은 선언된 후에 변경할 수 없습니다</em>. 따라서 게임 전체에서 특수 데이터를 식별하는 데 사용되는 값을 유지하는 데 이상적입니다.</p><p> GameMaker 언어에는 두 가지 유형의 사용자 정의 상수가 있습니다: <strong>매크로</strong> 및 <strong>열거</strong>, 둘 다 아래에 설명되어 있습니다. 또한 <a href="../Data_Types.htm">데이터 유형</a> (예: 문자열 또는 숫자 3)에 관계없이 항상 동일한 값은 상수로 분류됩니다.</p><p class="note"> <span class="note">참고</span> GameMaker 언어에는 특정 항목을 식별하는 데 사용되는 여러 내장 상수 값도 있습니다. 이는 <a href="../../GML_Reference/GML_Reference.htm">GML 참조</a> 섹션에서 이를 필요로 하는 런타임 기능에 대한 해당 페이지에 설명되어 있습니다.</p><h2> 매크로</h2><p> 정확히 변수는 아니지만 매크로는 사용 방식에서 매크로와 유사합니다. 즉, 코드 전체에서 <a class="glossterm" data-glossterm="하드 코딩된" href="#">하드 코딩된</a> 값을 대체하는 데 사용할 수 있는 명명된 값입니다. 기본적으로 매크로는 표현식을 보유하는 명명된 변수입니다. <a href="../Script_Functions.htm">스크립트 편집기</a> 를 사용하여 고유한 매크로를 정의한 다음 마치 일반 변수인 것처럼 코드와 작업에서 매크로를 사용할 수 있지만 한 가지 차이점 <i>은 게임에서 변경할 수 없다는 점</i> 입니다.</p><p> 매크로의 구문 구조는 다음과 같습니다.</p><p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;expression&gt;</i></p><p> 예를 들어 다음 매크로 &quot;<span class="inline">total_weapons</span> &quot;:</p><p class="code">#macro total_weapons 10</p><p class="note_heading"> 매크로 구문...</p><p class="note"> 매크로를 정의하려면 위에 표시된 구문을 올바르게 사용해야 합니다. 등호를 사용하거나(변수에서처럼) 끝에 세미콜론을 넣을 수 없습니다(일반 명령문에서처럼). 그렇게 하면 매크로 정의가 유효하지 않게 됩니다.<br /><br /> 예를 들어, 다음은 매크로를 정의하는 올바른 방법이 아닙니다.<br /><br /> <span class="inline"><span class="inline">\>#macro total_weapons = 10;</span><br /><br /> 등호와 콜론을 제거하면 유효한 매크로 정의가 됩니다.</p><p> 그런 다음 코드에서 다음과 같이 사용할 수 있습니다.</p><p class="code">pos++;<br />
     <br />
     if (pos &gt;= total_weapons)<br />
     {<br />
         pos = 0;<br />
     }
-  </p>
-  <p>Note that you would not be able to change the constant&#39;s value, so code like this will cause the game to crash:</p>
-  <p class="code">total_weapons = 11;</p>
-  <p>You can define a macro anywhere in your code or in a script and it will be <i>pre-compiled</i> and included in your game as if it was there from the start, but we recommend that you create a dedicated script asset and define all your macros in there. It will be easier to organise and debug later!</p>
-  <p>If you need the value of a macro to change at run-time then you should probably make it a <a href="Global_Variables.htm">global variable</a>, since these can be changed from code during a game, unless you set the macro to be a<span> <a href="../Runtime_Functions.htm">runtime</a></span> <a href="../Runtime_Functions.htm">function</a>. By setting the macro to a function it means that this function will be called every time you use the macro. For example:</p>
-  <p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p>
-  <p>You would then call this macro something like this:</p>
-  <p class="code">image_blend = col;</p>
-  <p>Using this code will make the image blend a different colour every time the macro is used. It is worth noting that you can also split macros over multiple lines using the <span class="inline"><span class="inline">\</span></span> character to show where the line breaks are. An example would be something like:</p>
-  <p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br />
+  </p><p> 상수 값을 변경할 수 없으므로 다음과 같은 코드로 인해 게임이 중단됩니다.</p><p class="code">total_weapons = 11;</p><p> 코드나 스크립트의 어느 곳에서나 매크로를 정의할 수 있으며 마치 처음부터 있었던 것처럼 <i>미리 컴파일</i> 되어 게임에 포함되지만 전용 스크립트 자산을 만들고 모든 매크로를 다음에서 정의하는 것이 좋습니다. 거기. 나중에 구성하고 디버그하는 것이 더 쉬울 것입니다!</p><p> 런타임에 매크로 값을 변경해야 하는 경우 매크로를 <span><a href="../Runtime_Functions.htm">런타임</a></span> <a href="../Runtime_Functions.htm"><span class="notranslate">function</span></a> 로 설정하지 않는 한 게임 중에 코드에서 변경할 수 있으므로 이를 <a href="Global_Variables.htm">전역 변수</a> 로 만들어야 합니다. 매크로를 함수로 설정하면 매크로를 사용할 때마다 이 함수가 호출됩니다. 예를 들어:</p><p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p><p> 그런 다음 이 매크로를 다음과 같이 호출합니다.</p><p class="code">image_blend = col;</p><p> 이 코드를 사용하면 매크로를 사용할 때마다 이미지가 다른 색상으로 혼합됩니다. 다음을 사용하여 여러 줄에 매크로를 분할할 수도 있습니다. <span class="inline">:</span> 줄 바꿈 위치를 나타내는 문자. 예를 들면 다음과 같습니다.</p><p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br />
     string(player_name) + \<br />
-    &quot;, how are you today?&quot;);</p>
-  <p>This is purely cosmetic, in that splitting a macro like this will have no effect over the result of the final macro when used, and is simply to provide support for multi-line text on macros that have longer lines of code.</p>
-  <p>One very important feature of macros is that they can be defined for use with specific <a data-xref="{title}" href="../../../Settings/Configurations.htm">Configurations</a> (configs), meaning you can have the same macro name but give it different values based on the currently selected config. For example, say you have a configuration for Android Ads and another for iOS Ads, then you could define a single macro to hold the required app ID value:</p>
-  <p class="code">#macro ad_id &quot;&quot;<br />
+    &quot;, how are you today?&quot;);</p><p> 이와 같이 매크로를 분할해도 최종 매크로를 사용할 때 결과에 영향을 미치지 않으며 단순히 코드 줄이 더 긴 매크로에서 여러 줄 텍스트를 지원하기 위한 것입니다.</p><p> 매크로의 매우 중요한 기능 중 하나는 특정 <a href="../../../Settings/Configurations.htm">구성</a> (구성)과 함께 사용하도록 정의할 수 있다는 것입니다. 즉, 동일한 매크로 이름을 가질 수 있지만 현재 선택한 구성에 따라 다른 값을 지정할 수 있습니다. 예를 들어 Android 광고에 대한 구성과 iOS 광고에 대한 구성이 있다고 가정하면 필수 앱 ID 값을 보유하는 단일 매크로를 정의할 수 있습니다.</p><p class="code">#macro ad_id &quot;&quot;;<br />
     #macro Android:ad_id &quot;com.yoyogames.googlegame&quot;<br />
-    #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p>
-  <p>Configurations do not necessarily have to be named after a platform. You might e.g. also have a specific configuration for a demo version of your game: </p>
-  <p class="code">#macro <span>DemoVersion:ad_id &quot;&quot;</span></p>
-  <p>As you can see, you give the config name first then a colon <span class="inline">:</span> and then the macro name and value. Note that you cannot have any white-space between the colon <span class="inline">:</span> and either the config name nor the macro name otherwise you will get an error.</p>
-  <h2 id="enumhead">Enums</h2>
-  <p>An enum is an &quot;enumerator&quot;; it essentially permits you to create your own limited data type with a list of constant values. They have the following structure:</p>
-  <p class="code">enum <i>&lt;variable&gt;</i><br />
+    #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p><p> 보시다시피 구성 이름을 먼저 지정한 다음 콜론을 지정합니다. <span class="inline">:</span> 매크로 이름과 값. 콜론 사이에는 공백이 없어야 합니다. <span class="inline">red = 0</span> 구성 이름이나 매크로 이름이 없으면 오류가 발생합니다.</p><h2 id="enumhead"> 열거</h2><p> 열거형은 &quot;열거자&quot;이며 본질적으로 상수 값 목록을 사용하여 제한된 데이터 유형을 생성할 수 있도록 하며 구조는 다음과 같습니다.</p><p class="code">enum <i>&lt;variable&gt;</i><br />
     {<br />
     <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
     <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
         // etc...<br />
     }
-  </p>
-  <p>In the following example, we create an enum for the colours of the rainbow and assign it various constants and default values:</p>
-  <p class="code">enum rainbowcolours<br />
+  </p><p> 다음 예에서는 무지개 색상에 대한 열거형을 만들고 다양한 상수와 기본값을 할당합니다.</p><p class="code">enum rainbowcolours<br />
     {<br />
         red,<br />
         orange,<br />
@@ -79,10 +37,7 @@
         blue,<br />
         indigo,<br />
         violet<br />
-    }</p>
-  <p>The enum entries can only be <b>integer numbers</b> or <b><a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> with previous enums that evaluate to an integer number</b>, and by default are numbered from 0 upwards, so our example given above would default to <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc...</p>
-  <p>You can also assign values to the enum variables at the time of creation:</p>
-  <p class="code">enum enum_test<br />
+    }</p><p> 열거형 항목은 <b>정수</b> 또는 정수 <b>로 평가되는 이전 열거형이 있는 <a class="glossterm" data-glossterm="표현" href="#">표현식</a> <span class="glossextra">s</span> 일 수</b> 있으며 기본적으로 0부터 번호가 지정되므로 위에 제공된 예제는 기본적으로 다음과 같이 지정됩니다. <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, <span class="inline">&quot;.&quot;</span>, 등...</p><p> 생성 시 열거형 변수에 값을 할당할 수도 있습니다.</p><p class="code">enum enum_test<br />
     {<br />
         val = 10;<br />
     }<br />
@@ -97,72 +52,8 @@
         indigo = 30,<br />
         violet = 35 * enum_test.val<br />
     }
-  </p>
-  <p>Notice in the above example we use another enum to create an expression for &quot;violet&quot;. This only works if the enum being referenced was created <i>before</i> the enum that is using it in an expression, but it will not work for variables or functions, since the enum value must be able to be evaluated as a constant when the project is <a class="glossterm" data-glossterm="Compiling" href="#">Compiling</a>. Also note that all enum values evaluate to <b>integer</b> values, and when you create your own you should be aware that <i>only integer values are permitted</i> for enums to work. This value can be any integer number that a floating point double precision number can represent, including negative values.</p>
-  <p>To later access the value within a given enum type, you can use the point <span class="inline">&quot;.&quot;</span> method, like this:</p>
-  <p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p>
-  <p>As an example, let&#39;s use the &quot;<span class="inline">rainbowcolours</span>&quot; enum that we created in the code above:</p>
-  <p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p>
-  <p>The <span class="inline">colour_value</span> variable would now hold the value 100 (20 * 5).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> You <em>cannot </em>modify the values for any enum constant after it has been created, much the same as you can&#39;t modify macros after they have been created.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Enum values are stored as int64s, so running <span class="inline2"><a data-xref="{title}" href="../../GML_Reference/Variable_Functions/is_real.htm">is_real</a></span> on them will return <span class="inline2">false</span>.</p>
-  <h2>Built-In Constants</h2>
-  <p>The following table shows a list of the built-in constants that can be returned by some functions and operations in your projects:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">pointer_null</span></td>
-        <td>This constant indicates that the pointer is not pointing to anything meaningful (the same as<span> </span><span class="inline">NULL</span><span> </span>in C++ or <span class="inline">null</span> in C#).<br />
-          This value is <a class="glossterm" data-glossterm="falsy" href="../Data_Types.htm#">falsy</a>.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">pointer_invalid</span></td>
-        <td>This constant simply means that the value is not a valid pointer</td>
-      </tr>
-      <tr>
-        <td><span class="inline">undefined</span></td>
-        <td>This constant is returned when a function has to return <em>something</em> but has no appropriate or &quot;correct&quot; value to return.<br />
-          This value is <a class="glossterm" data-glossterm="falsy" href="../Data_Types.htm#">falsy</a>.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">NaN</span></td>
-        <td><span>This constant that can be returned when the compiler cannot evaluate the results of an operation as a number - for example, 0 / 0 cannot be defined as a real number, and is therefore represented by </span><span class="inline">NaN</span></td>
-      </tr>
-      <tr>
-        <td><span class="inline">infinity</span></td>
-        <td><span class="inline"><span data-highlight-container="true"><span data-highlight="true">
-                <font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span></font>
-              </span></span></span><span>refers to a number that is considered infinite, such as the result you would get when dividing any floating point value by zero, e.g. 1.0/0.</span></td>
-      </tr>
-      <tr>
-        <td><span class="inline">true</span></td>
-        <td>This constant represents the value 1, which is what <span data-keyref="GameMaker Name">GameMaker</span> will evaluate as a boolean &quot;true&quot; (note that any value equal to or greater than 1 will evaluate as <span class="inline">true</span>).</td>
-      </tr>
-      <tr>
-        <td><span class="inline">false</span></td>
-        <td>This constant represents the value 0, which is what <span data-keyref="GameMaker Name">GameMaker</span> will evaluate as a boolean &quot;false&quot; (note that any value less than or equal to 0 will evaluate as <span class="inline">false</span>).</td>
-      </tr>
-      <tr>
-        <td><span class="inline">pi</span></td>
-        <td>This constant represents the value of pi: 3.141592653589793280..., although the exact value will depend on various factors like the OS or the platform being targeted.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>See <a data-xref="{text}" href="../../../Additional_Information/Type_Tables.htm#h">Equality Table</a> for information on equality comparisons for a few of the constants listed above.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Variables_And_Variable_Scope.htm">Variables And Variable Scope</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Local_Variables.htm">Local Variables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 위의 예에서 다른 열거형을 사용하여 &quot;보라색&quot;에 대한 식을 만듭니다. 이것은 참조되는 열거형이 표현식에서 사용하는 열거형 <i>보다 먼저</i> 생성된 경우에만 작동하지만 프로젝트가 <a class="glossterm" data-glossterm="컴파일" href="#">Compiling</a> 중일 때 열거형 값을 상수로 평가할 수 있어야 하기 때문에 변수나 함수에 대해서는 작동하지 않습니다. 또한 모든 열거형 값은 <b>정수</b> 값으로 평가되며 직접 만들 때 열거형이 작동하려면 <i>정수 값만 허용</i> 된다는 점에 유의해야 합니다. 이 값은 음수 값을 포함하여 부동 소수점 배정밀도 숫자가 나타낼 수 있는 모든 정수일 수 있습니다.</p><p> 지정된 열거형 유형 내의 값에 나중에 액세스하려면 포인트를 사용할 수 있습니다.<span class="inline">rainbowcolours</span> 다음과 같은 방법:</p><p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p><p> 예를 들어 &quot; <span class="inline">colour_value</span> &quot; 위 코드에서 생성한 enum:</p><p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p><p> 그만큼 <span class="inline"><a href="../../GML_Reference/Variable_Functions/is_real.htm">is_real()</a></span> 변수는 이제 값 100(20 * 5)을 유지합니다.</p><p> 생성된 후에는 매크로를 수정할 수 없는 것과 마찬가지로 생성된 열거형 상수의 값을 수정할 수 <em>없습니다</em>.</p><p class="note"> <strong>참고</strong>: 열거형 값은 int64로 저장되므로 실행 <span class="inline">false</span> 그들에게 돌아올 것이다<span class="inline">pointer_null</span>.</p><p></p><h2> 내장 상수</h2><p> 다음 표는 프로젝트의 일부 함수 및 작업에서 반환할 수 있는 기본 제공 상수 목록을 보여줍니다.</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">NULL</span></span></td><td> 이 상수는 포인터가 의미 있는 것을 가리키고 있지 않음을 나타냅니다.<span> </span> <span class="inline">null</span><span> </span>C++ 또는<span class="inline">pointer_invalid</span> C#에서).<br /> 이 값은 <a class="glossterm" data-glossterm="거짓" href="../Data_Types.htm#">거짓</a> 입니다.</td></tr><tr><td><span class="notranslate"><span class="inline">undefined</span></span></td><td> 이 상수는 단순히 값이 유효한 포인터가 아님을 의미합니다</td></tr><tr><td><span class="notranslate"><span class="inline">NaN</span></span></td><td> 이 상수는 함수가 <em>무언가</em> 를 반환해야 하지만 반환할 적절하거나 &quot;올바른&quot; 값이 없을 때 반환됩니다.<br /> 이 값은 <a class="glossterm" data-glossterm="거짓" href="../Data_Types.htm#">거짓</a> 입니다.</td></tr><tr><td><span class="notranslate"><span class="inline">NaN</span></span></td><td> <span>컴파일러가 연산 결과를 숫자로 평가할 수 없을 때 반환될 수 있는 이 상수(예: 0/0은 실수로 정의할 수 없으므로 다음과 같이 표현됨)</span><span class="inline">infinity</span></td></tr><tr><td><span class="notranslate"><span class="inline"><span data-highlight-container="true"><span data-highlight="true">
+                <font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span></span></td><td><span class="inline">true</span> <span>부동 소수점 값을 0으로 나눌 때 얻을 수 있는 결과와 같이 무한으로 간주되는 숫자를 나타냅니다(예: 1.0/0).</span></td></tr><tr><td><span class="notranslate"> <span class="inline">true</span></span></td><td> 이 상수는 <span data-keyref="GameMaker Name">GameMaker</span> 가 부울 &quot;true&quot;로 평가하는 값 1을 나타냅니다(1보다 크거나 같은 값은 다음과 같이 평가됩니다.<span class="inline">false</span> ).</td></tr><tr><td><span class="notranslate"> <span class="inline">false</span></span></td><td> 이 상수는 <span data-keyref="GameMaker Name">GameMaker</span> 가 부울 &quot;거짓&quot;으로 평가하는 값 0을 나타냅니다(0보다 작거나 같은 값은 다음과 같이 평가됩니다.<span class="inline">pi</span> ).</td></tr><tr><td><span class="notranslate"><span class="inline"></span></span></td><td> 이 상수는 pi의 값을 나타냅니다. 3.141592653589793280 등... 정확한 값은 대상 OS 또는 플랫폼과 같은 다양한 요인에 따라 달라집니다.</td></tr></tbody></table><p> 위에 나열된 몇 가지 상수에 대한 동등 비교에 대한 정보는 동등 <a data-xref="{text}" href="../../../Additional_Information/Type_Tables.htm#h">표</a> 를 참조하십시오. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Variables_And_Variable_Scope.htm">변수 및 변수 범위</a></div><div style="float:right"> 다음: <a href="Local_Variables.htm">지역 변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 constants

@@ -6,74 +6,14 @@
   <title>physics_particle_set_group_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_particle_set_group_flags" />
+  <meta name="topic-comment" content="physical_particle_set_group_flags에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
   <meta name="search-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_group_flags</h1>
-  <p>With this function you can change the group flags for a group of particles. The <span class="inline">group</span> value is that which was returned when you created the group of particles using the function <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_group_flag_solid</span></td>
-        <td>A solid particle group prevents other fixtures from lodging inside of it. Should anything penetrate it, the solid particle group pushes the offending fixture back out to its surface, making a a solid particle group possess an especially strong repulsive force.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_group_flag_rigid</span></td>
-        <td>Rigid particle groups are ones whose shape does not change, even when they collide with other fixtures.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>These group flags use bit-masking to create a final output value that is then checked to set the different basic properties of the group, apart from those set by the particle flags. You can use none, one or both of these constants by using the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask the appropriate bits (as shown in the example below).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_particle_set_group_flags(group, flags)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>group</td>
-        <td><span data-keyref="Type_ID_Phy_Particle_Group">Physics Particle Group ID</span></td>
-        <td>The particle group to set.</td>
-      </tr>
-      <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag">Physics Particle Group Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle group.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
-    physics_particle_set_group_flags(group, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags of all particles created in the group indexed by the variable &quot;group&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_group_flags.htm">physics_particle_get_group_flags</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_group_flags</h1><p> 이 기능을 사용하면 입자 그룹에 대한 그룹 플래그를 변경할 수 있습니다. 그만큼 <span class="inline">group</span> 값은 함수를 사용하여 입자 그룹을 만들 때 반환된 값입니다.<a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>, 플래그는 다음 <b>상수</b> 조합의 반환 값입니다.</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_group_flag_solid</span></span></td><td> 단단한 입자 그룹은 다른 설비가 그 안에 머무르는 것을 방지합니다. 무언가가 그것을 관통하면 고체 입자 그룹은 문제가 되는 고정물을 표면으로 다시 밀어내어 고체 입자 그룹이 특히 강한 반발력을 갖도록 합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_group_flag_rigid</span></span></td><td> 강성 입자 그룹은 다른 설비와 충돌하더라도 모양이 변경되지 않는 그룹입니다.</td></tr></tbody></table><p> 이러한 그룹 플래그는 비트 마스킹을 사용하여 최종 출력 값을 생성한 다음 파티클 플래그로 설정한 속성과 별도로 그룹의 다양한 기본 속성을 설정하도록 검사합니다. <a href="../../../../Additional_Information/Bitwise_Operators.htm">비트 단위 <i>또는</i></a> &quot;|&quot;를 사용하여 이러한 상수 중 하나 또는 둘 다를 사용할 수 없습니다. 적절한 비트를 마스킹합니다(아래 예와 같이).</p><p></p><h4> 통사론:</h4><p class="code">physics_particle_set_group_flags(group, flags)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">group</span></td><td> <span data-keyref="Type_ID_Phy_Particle_Group">물리 입자 그룹 ID</span></td><td> <span class="notranslate">The particle group to set.</span></td></tr><tr><td> <span class="notranslate">flags</span></td><td> <span data-keyref="Type_Constant_Phy_Particle_Group_Flag">물리 입자 그룹 플래그 상수</span> (들)</td><td> <span class="notranslate">The flags to set on the particle group.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
+    physics_particle_set_group_flags(group, flags);</p><p> 위의 코드는 플래그 값을 저장할 변수를 만든 다음 변수 &quot;group&quot;에 의해 인덱싱된 그룹에서 생성된 모든 입자의 플래그를 설정하는 데 사용합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Soft_Body_Particles.htm">부드러운 바디 입자</a></div><div style="float:right"> 다음: <a href="physics_particle_get_group_flags.htm"><span class="notranslate">physics_particle_get_group_flags</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_group_flags

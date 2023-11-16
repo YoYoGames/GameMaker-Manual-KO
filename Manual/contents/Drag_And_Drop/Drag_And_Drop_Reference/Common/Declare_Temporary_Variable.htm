@@ -1,58 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Declare Temporary Variable</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section detailing Declare Temporary Variable" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Declare Temporary Variable" />
-  <meta name="search-keywords" content="" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>임시 변수 선언</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="임시 변수 선언을 자세히 설명하는 섹션"/>
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 임시 변수 선언"/>
+  <meta name="search-keywords" content=""/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Declare Temporary Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Temp_Var.png" width="32" /> <span data-field="title" data-format="default">Declare Temporary Variable</span></h1>
-  <p>This action is used to declare and give an initial value to a <b>temporary variable </b>(also called a <b>local variable</b>), which is a variable that <i>only exists for the duration of the event or script that it was declared in</i>. Temporary variables are very useful for storing values that are only needed for a single operation and prevent your objects becoming &quot;cluttered&quot; with variables that may only be used once. They are also very useful for breaking down complex operations, or for setting values in other instances when you change the action scope. This is because variables declared as temporary are<i>not</i>scoped to any particular instance, but instead scoped to the event or script itself, so if you create a temporary variable and then change the action scope using the <a href="Apply_To...htm">Apply To...</a> action, you can still check the temporary variable without issues and without changing its action scope.</p>
-  <p>It is worth noting that when we talk about &quot;values&quot;, we don&#39;t just mean numeric values, as a variable can be a string, a pointer, a resource ID or anything else that a function can return or use, even an <a class="glossterm" data-glossterm="expression" href="#">expression</a>. See the section on <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">data types</a> for more information.</p>
-  <p>Note that many action have a &quot;Temp&quot; check-box which enables you to create a new temporary local variable to hold the return value of the action, and this variable can be accessed in the action script or event as you would any other variable thereafter. Also note that temporary local variables are scoped to the script or event in which they are created, and so they can be used by other instances in the same block when using <a href="Apply_To...htm">Apply To</a>.</p>
-  <p>You can also add additional variables in the same action by clicking the plus icon <img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> beside the action, and giving another temporary local variable name and value. For more advanced information on variables please see the section on <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">Variables And Variable Scope</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Declare Temporary Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Temp_Var.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Name</td>
-        <td>The name of the new variable to assign, or the name of an existing variable to change.</td>
-      </tr>
-      <tr>
-        <td>Value</td>
-        <td>The value that the variable should hold.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Declare Temporary Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Temp.png" />The above action block code creates two temporary variables, &quot; <span class="inline">_dir</span>&quot; and &quot;<span class="inline">_spd</span>&quot; and sets them to random values. It then uses these values to set the instance moving in a random direction at a random speed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Global_Variable.htm">Set Global Variable</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Declare Temporary Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Temp_Var.png" width="32"/> 임시 변수 선언</h1><p> 이 작업은 에서 선언 <i>된 이벤트 또는 스크립트 기간 동안에만 존재</i> 하는 변수인 <b>임시 변수</b> ( <b>로컬 변수</b> 라고도 함)를 선언하고 초기 값을 지정하는 데 사용됩니다. 임시 변수는 단일 작업에만 필요한 값을 저장하는 데 매우 유용하며 개체가 한 번만 사용할 수 있는 변수로 &quot;어수선해&quot;지는 것을 방지합니다. 또한 복잡한 작업을 분해하거나 작업 범위를 변경할 때 다른 인스턴스에서 값을 설정하는 데 매우 유용합니다. 이는 임시로 선언된 변수의 범위가 특정 인스턴스로 지정되지 <i>않고</i> 대신 이벤트 또는 스크립트 자체로 범위가 지정되기 때문입니다. 따라서 임시 변수를 만든 다음 <a href="Apply_To...htm">적용 대상...</a> 작업을 사용하여 작업 범위를 변경하면 여전히 문제 없이 작업 범위를 변경하지 않고 임시 변수를 확인합니다.</p><p> &quot;값&quot;에 <a class="glossterm" data-glossterm="표현" href="#">대해</a> 이야기할 때 변수는 문자열, 포인터, 리소스 ID 또는 함수가 반환하거나 사용할 수 있는 기타 모든 것이 될 수 있으므로 숫자 값만 의미하는 것이 아닙니다.. 자세한 내용은 <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">데이터 유형</a> 섹션을 참조하세요.</p><p> 많은 작업에는 작업의 반환 값을 저장할 새 임시 로컬 변수를 생성할 수 있는 &quot;Temp&quot; 확인란이 있으며 이 변수는 이후의 다른 변수와 마찬가지로 작업 스크립트 또는 이벤트에서 액세스할 수 있습니다.. 또한 임시 로컬 변수의 범위는 해당 변수가 생성된 스크립트 또는 이벤트이므로 <a href="Apply_To...htm">적용</a> 대상을 사용할 때 동일한 블록의 다른 인스턴스에서 사용할 수 있습니다.</p><p> 더하기 아이콘을 클릭하여 동일한 작업에 추가 변수를 추가할 수도 있습니다.<img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> 작업 옆에 다른 임시 지역 변수 이름과 값을 제공합니다. 변수에 대한 고급 정보는 <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">변수 및 변수 범위</a> 섹션을 참조하십시오.</p><p></p><h4> 동작 구문:</h4><p><img alt="Declare Temporary Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Temp_Var.png"/></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Name</span></td><td> 할당할 새 변수의 이름 또는 변경할 기존 변수의 이름입니다.</td></tr><tr><td> <span class="notranslate">Value</span></td><td> 변수가 보유해야 하는 값입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Declare Temporary Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Temp.png"/> 위의 액션 블록 코드는 두 개의 임시 변수를 생성합니다. &quot; <span class="inline">_dir</span> &quot; 그리고 &quot;<span class="inline">_spd</span> &quot;하고 임의의 값으로 설정합니다. 그런 다음 이 값을 사용하여 임의의 속도로 임의의 방향으로 이동하는 인스턴스를 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Common_Actions_Library.htm">일반적인 작업</a></div><div style="float:right"> 다음: <a href="Set_Global_Variable.htm">전역 변수 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Assign Variable
@@ -60,5 +19,5 @@ Action - Assign Variable
   <!-- TAGS
 action_variable
 -->
-</body>
-</html>
+
+</body></html>

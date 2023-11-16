@@ -3,70 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Decimal To Integer</title>
+  <title>10진수에서 정수로</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Decimal To Integer action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Decimal To Integer" />
-  <meta name="search-keywords" content="Decimal To Integer" />
+  <meta name="topic-comment" content="10진수에서 정수로 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 10진수에서 정수로" />
+  <meta name="search-keywords" content="10진수에서 정수로" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /> Decimal To Integer</h1>
-  <p>This action will take a decimal number and convert it into an integer. You give the value to convert and then select the type of rounding that should be done to turn it into an integer value. The types of rounding available are:<b></b></p>
-  <ul class="colour">
-    <li><b>Round</b>: This takes a decimal number and rounds it up <i>or</i> down to the nearest integer number. In the special case where the number supplied is exactly half an integer (for example, 1.5, 17.5, -2.5, etc...) the number will be rounded to
-      the nearest <b>even</b> value, for example, 2.5 would be rounded to 2, while 3.5 would be rounded to 4. This type of rounding is called <i>bankers rounding</i> and over large numbers of iterations or when using floating point maths, it gives a statistically
-      better rounding than the more traditional &quot;round up if over .5 and round down otherwise&quot; approach.</li>
-    <li><b>Ceil</b>: This will take a decimal value and round it <i>up</i> to the nearest integer. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.0000001 would still be rounded up to 6. It is worth
-      noting that if you are using the Random action <a href="../Random/Get_Random_Number.htm">Get Random Number</a> to generate a random decimal value and then calling this action to round it up, then you <i>may</i> get unexpected results. The random
-      action could potentially return 0, and using &quot;Ceil&quot; on that will not give 1 but 0, so if you get a random decimal from 0 to 9 and use this function you may expect to get integers from 1 to 10, but in reality you could get integers from
-      0 to 10. This is a remote possibility but should be taken into account when using this action.</li>
-    <li><b>Floor</b>: This will take a decimal value and round it <i>down</i> to the nearest integer value. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.9999999 would still be floored down to
-      5.</li>
-  </ul>
-  <p>Once you have selected the rounding type, you must supply the number to round (this can be a variable), and then give a target variable to return the new integer value to (which can be flagged as a temporary local variable).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Rounding</td>
-        <td>The type of rounding to use to get the integer (see description above)</td>
-      </tr>
-      <tr>
-        <td>Number</td>
-        <td>The decimal number to round to an integer</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to store the returned integer</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png" />The above action block code takes a decimal value and converts it to an integer,
-    storing the returned value in a temporary local variable. This value is then turned into a string and drawn to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Data_Type_Actions.htm">Data Type Actions</a></div>
-        <div style="float:right">Next: <a href="String_To_Number.htm">String To Number</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /> 10진수에서 정수로</h1><p> 이 작업은 10진수를 사용하여 정수로 변환합니다. 변환할 값을 지정한 다음 정수 값으로 변환하기 위해 수행해야 하는 반올림 유형을 선택합니다. 사용 가능한 반올림 유형은 다음과 같습니다.<b></b></p><ul class="colour"><li> <b>Round</b>: 십진수를 가져와 가장 가까운 정수로 반올림 <i>하거나</i> 내림합니다. 제공된 숫자가 정확히 정수의 절반인 특별한 경우(예: 1.5, 17.5, -2.5 등...) 숫자는 가장 가까운 <b>짝수</b> 값으로 반올림됩니다(예: 2.5는 2로 반올림됨). 반면 3.5는 4로 반올림됩니다. 이러한 유형의 반올림을 <i>뱅커 반올림</i> 이라고 하며 많은 수의 반복을 통해 또는 부동 소수점 수학을 사용할 때 &quot;.5를 초과하면 반올림하고 그렇지 않으면 반내림&quot;하는 보다 전통적인 &quot;반올림&quot;보다 통계적으로 더 나은 반올림을 제공합니다. &quot; 접근하다.</li><li> <b>Ceil</b>: 십진수 값을 가져와 가장 가까운 정수로 <i>반올림</i> 합니다. 반올림(위)과 달리 이것은 값의 소수 부분을 고려하지 않으므로 <a href="../Random/Get_Random_Number.htm">5.0000001</a> 과 같은 숫자는 여전히 6으로 반올림됩니다. 10진수 값을 선택한 다음 이 작업을 호출하여 반올림하면 예기치 않은 결과를 얻을 <i>수 있습니다</i>. 임의 작업은 잠재적으로 0을 반환할 수 있으며 이에 대해 &quot;Ceil&quot;을 사용하면 1이 아닌 0이 표시되므로 0에서 9까지의 임의의 소수를 얻고 이 함수를 사용하면 1에서 10까지의 정수를 얻을 것으로 예상할 수 있지만 실제로는 0에서 10까지의 정수를 얻을 수 있습니다. 이것은 먼 가능성이지만 이 작업을 사용할 때 고려해야 합니다.</li><li> <b>바닥</b>: 십진수 값을 취해 가장 가까운 정수 값으로 <i>내림</i> 합니다. 위의 반올림과 달리 이것은 값의 소수 부분을 고려하지 않으므로 5.9999999와 같은 숫자는 여전히 5로 내림됩니다.</li></ul><p> 반올림 유형을 선택했으면 반올림할 숫자(변수일 수 있음)를 제공한 다음 새 정수 값을 반환할 대상 변수(임시 로컬 변수로 플래그 지정 가능)를 제공해야 합니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Rounding</span></td><td> 정수를 얻는 데 사용할 반올림 유형(위 설명 참조)</td></tr><tr><td> <span class="notranslate">Number</span></td><td> 정수로 반올림할 10진수</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 정수를 저장할 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png" /> 위의 액션 블록 코드는 10진수 값을 정수로 변환하여 반환된 값을 임시 로컬 변수에 저장합니다. 이 값은 문자열로 변환되어 화면에 그려집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Data_Type_Actions.htm">데이터 유형 작업</a></div><div style="float:right"> 다음: <a href="String_To_Number.htm">문자열을 숫자로</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Decimal To Integer

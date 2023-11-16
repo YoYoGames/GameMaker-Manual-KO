@@ -6,93 +6,17 @@
   <title>gpu_get_blendmode_src</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for the function gpu_get_blendmode_src" />
+  <meta name="topic-comment" content="함수 gpu_get_blendmode_src에 대한 참조" />
   <meta name="rh-index-keywords" content="gpu_get_blendmode_src,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
   <meta name="search-keywords" content="gpu_get_blendmode_src,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_blendmode_src</h1>
-  <p>This function can be used to retrieve the current <i>source</i> extended blend mode factor being used for drawing. The value returned will be one of the following constants (&quot;s&quot; denotes a value taken from the source while a &quot;d&quot; denotes a value from the destination):</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Constant</th>
-        <th>Blend factor (Red, Green, Blue, Alpha)</th>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_zero</span></td>
-        <td>(0, 0, 0, 0)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_one</span></td>
-        <td>(1, 1, 1, 1)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_src_colour</span></td>
-        <td>(Rs, Gs, Bs, As)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_inv_src_colour</span></td>
-        <td>(1-Rs, 1-Gs, 1-Bs, 1-As)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_src_alpha</span></td>
-        <td>(As, As, As, As)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_inv_src_alpha</span></td>
-        <td>(1-As, 1-As, 1-As, 1-As)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_dest_alpha</span></td>
-        <td>(Ad, Ad, Ad, Ad)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_inv_dest_alpha</span></td>
-        <td>(1-Ad, 1-Ad, 1-Ad, 1-Ad)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_dest_colour</span></td>
-        <td>(Rd, Gd, Bd, Ad)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_inv_dest_colour</span></td>
-        <td>(1-Rd, 1-Gd, 1-Bd, 1-Ad)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">bm_src_alpha_sat</span></td>
-        <td>(f, f, f, 1) where f = min(As, 1-Ad)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_get_blendmode_src();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">Blend Mode Factor Constant</span> (see above table)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var bm;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_blendmode_src</h1><p> 이 함수는 그리기에 사용되는 현재 <i>소스</i> 확장 혼합 모드 요소를 검색하는 데 사용할 수 있습니다. 반환된 값은 다음 상수 중 하나입니다(&quot;s&quot;는 소스에서 가져온 값을 나타내고 &quot;d&quot;는 대상에서 가져온 값을 나타냄).</p><table><tbody><tr><th> 일정한</th><th> 혼합 요소(빨간색, 녹색, 파란색, 알파)</th></tr><tr><td><span class="notranslate"><span class="inline">bm_zero</span></span></td><td> (0, 0, 0, 0)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_one</span></span></td><td> (1, 1, 1, 1)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_src_colour</span></span></td><td> (Rs, Gs, Bs, As)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_inv_src_colour</span></span></td><td> (1-Rs, 1-Gs, 1-Bs, 1-A)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_src_alpha</span></span></td><td> (대로, 그대로, 그대로, 그대로)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_inv_src_alpha</span></span></td><td> (1-As, 1-As, 1-As, 1-As)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_dest_alpha</span></span></td><td> (광고, 광고, 광고, 광고)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_inv_dest_alpha</span></span></td><td> (1-광고, 1-광고, 1-광고, 1-광고)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_dest_colour</span></span></td><td> (Rd, Gd, Bd, Ad)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_inv_dest_colour</span></span></td><td> (1-Rd, 1-Gd, 1-Bd, 1-Ad)</td></tr><tr><td><span class="notranslate"><span class="inline">bm_src_alpha_sat</span></span></td><td> (f, f, f, 1) 여기서 f = min(As, 1-Ad)</td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">gpu_get_blendmode_src();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">Blend Mode Factor Constant</span> (see above table)</p><p></p><h4> 예시:</h4><p class="code">var bm;<br />
     bm[0] = gpu_get_blendmode_src();<br />
     bm[1] = gpu_get_blendmode_dest();<br />
-    gpu_set_blendmode_ext_sepalpha(bm[0], bm[1], bm_inv_src_alpha, bm_inv_dest_colour);</p>
-  <p>The above code creates a local array and gets the current source and destination blending factors. This array is then used to manipulate the alpha component of the blending factors.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_get_blendmode_dest.htm">gpu_get_blendmode_dest</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    gpu_set_blendmode_ext_sepalpha(bm[0], bm[1], bm_inv_src_alpha, bm_inv_dest_colour);</p><p> 위의 코드는 로컬 배열을 만들고 현재 소스 및 대상 혼합 요소를 가져옵니다. 그런 다음 이 배열을 사용하여 혼합 요소의 알파 구성 요소를 조작합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GPU_Control.htm">GPU 제어</a></div><div style="float:right"> 다음: <a href="gpu_get_blendmode_dest.htm"><span class="notranslate">gpu_get_blendmode_dest</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_blendmode_src

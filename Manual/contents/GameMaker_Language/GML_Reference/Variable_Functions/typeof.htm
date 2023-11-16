@@ -4,81 +4,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>typeof</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function typeof" />
+  <meta name="topic-comment" content="함수 typeof를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="typeof" />
   <meta name="search-keywords" content="typeof" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">typeof</span></h1>
-  <p>This function returns the data type of any given variable as a string. The possible return values are listed in the table below:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>String</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;number&quot;</span></td>
-        <td>The variable holds a real (floating point) number - this can include <span class="inline2">NaN</span> and <span class="inline2">infinity</span></td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;string&quot;</span></td>
-        <td>The variable holds a string</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;array&quot;</span></td>
-        <td>The variable references an array</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;bool&quot;</span></td>
-        <td>The variable holds a boolean (<span class="inline2">true</span> / <span class="inline2">false</span>)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;int32&quot;</span></td>
-        <td>The variable holds a 32bit integer</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;int64&quot;</span></td>
-        <td>The variable holds a 64 bit integer</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;ptr&quot;</span></td>
-        <td>The variable holds a pointer</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;undefined&quot;</span></td>
-        <td>The variable is undefined</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;null&quot;</span></td>
-        <td>The variable holds a null value (this should not be seen normally)</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;method&quot;</span></td>
-        <td>The variable holds a function reference</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;struct&quot;</span></td>
-        <td>The variable holds a struct reference</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;ref&quot;</span></td>
-        <td>The variable holds an instance reference</td>
-      </tr>
-      <tr>
-        <td><span class="inline">&quot;unknown&quot;</span></td>
-        <td>Value is unknown. This should <i>never</i> be seen and signifies that something has gone wrong at the most basic level like a memory overwrite</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>Please note that there are cases when this function may not return the correct value for a <strong>method</strong>. Consider the following two function definitions:</p>
-  <p class="code">a = function()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>typeof</h1><p> 이 함수는 주어진 변수의 데이터 유형을 문자열로 반환합니다. 가능한 반환 값은 아래 표에 나열되어 있습니다.</p><table><tbody><tr><th> 끈</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">&quot;number&quot;</span></span></td><td> 변수는 실수(부동 소수점) 숫자를 포함합니다. 여기에는 다음이 포함될 수 있습니다. <span class="inline">NaN</span> 그리고 <span class="inline">infinity</span></td></tr><tr><td><span class="notranslate"><span class="inline">&quot;string&quot;</span></span></td><td> 변수는 문자열을 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;array&quot;</span></span></td><td> 변수가 배열을 참조합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;bool&quot;</span></span></td><td> 변수는 부울(<span class="inline">true</span> / <span class="inline">false</span> )</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;int32&quot;</span></span></td><td> 변수는 32비트 정수를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;int64&quot;</span></span></td><td> 변수는 64비트 정수를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;ptr&quot;</span></span></td><td> 변수에는 포인터가 있습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;undefined&quot;</span></span></td><td> 변수가 정의되지 않았습니다</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;null&quot;</span></span></td><td> 변수가 null 값을 보유합니다(이는 일반적으로 표시되지 않아야 함).</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;vec3&quot;</span></span></td><td> 변수는 3 값 벡터를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;vec4&quot;</span></span></td><td> 변수는 4 값 벡터를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;method&quot;</span></span></td><td> 변수는 함수 참조를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;struct&quot;</span></span></td><td> 변수는 구조체 참조를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;ref&quot;</span></span></td><td> 변수는 인스턴스 참조를 보유합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">&quot;unknown&quot;</span></span></td><td> 값을 알 수 없습니다. 이것은 <i>절대</i> 볼 수 없으며 메모리 덮어쓰기와 같은 가장 기본적인 수준에서 문제가 발생했음을 나타냅니다.</td></tr></tbody></table><p> 이 함수가 <strong>메서드</strong> 에 대한 올바른 값을 반환하지 않을 수 있는 경우가 있습니다. 다음 두 가지 함수 정의를 고려하십시오.</p><p class="code">a = function()<br />
     {<br />
         // something<br />
     }<br />
@@ -87,43 +22,8 @@
     {<br />
         // Something<br />
     }
-  </p>
-  <p>Technically, these are both considered methods as they are binding a function to an instance scope variable, however calling <span class="inline3_func"><a data-xref="{title}" href="typeof.htm">typeof</a></span> on function <span class="inline3_func">b</span> will return &quot;number&quot; and <em>not </em>&quot;method&quot;, while calling it on <span class="inline3_func">a</span> will return &quot;method&quot;. This is due to the fact that methods created like the one for <span class="inline3_func">b</span> are assigned script indices (which are integer values), since this is the way that the compiler recognises script functions, even if the function was not defined in a script.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">typeof</span>(variable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>variable</td>
-        <td><span data-keyref="Type_Any"><a href="GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td>The variable to get the data type of.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> (see table above)</p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
-  <p class="code">var _str = <span data-field="title" data-format="default">typeof</span>(global.ExtensionInput);<br />
-    show_debug_message(&quot; <strong>global.ExtensionInput is a &quot; + _str);</strong></p>
-  <p>The above code gets the data type held by the given global variable and returns the string to a local variable which is then used to output a message to the console.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="method.htm">method</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 엄밀히 말하면 이 둘은 함수를 인스턴스 범위 변수에 바인딩하기 때문에 메서드로 간주되지만 다음을 호출합니다. <span class="inline">typeof()</span> 기능에 <span class="inline">b</span> 호출하는 동안 &quot;메서드&quot;가 <em>아닌</em> &quot;숫자&quot;를 반환합니다. <span class="inline">a</span> &quot;메소드&quot;를 반환합니다. 이것은 메소드가 다음과 같이 생성되었다는 사실 때문입니다. <span class="inline">b</span> 스크립트에 함수가 정의되지 않은 경우에도 컴파일러가 스크립트 함수를 인식하는 방식이므로 스크립트 인덱스(정수 값)가 할당됩니다.</p><p></p><h4> 통사론:</h4><p class="code">typeof(variable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">variable</span></td><td> <span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">어느</a></span></td><td> <span class="notranslate">The variable to get the data type of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> (see table above)</p><p></p><h4> <b>예시:</b></h4><p class="code">var _str = typeof(global.ExtensionInput);<br />
+    show_debug_message(&quot; <strong>global.ExtensionInput is a &quot; + _str);</strong></p><p> 위의 코드는 주어진 전역 변수가 보유한 데이터 유형을 가져오고 문자열을 로컬 변수로 반환한 다음 콘솔에 메시지를 출력하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="bool.htm"><span class="notranslate">bool</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 typeof

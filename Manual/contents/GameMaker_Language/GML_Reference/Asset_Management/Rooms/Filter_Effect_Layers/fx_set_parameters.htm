@@ -6,42 +6,13 @@
   <title>fx_set_parameters</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the function fx_set_parameters" />
+  <meta name="topic-comment" content="fx_set_parameters 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="fx_set_parameters" />
   <meta name="search-keywords" content="fx_set_parameters" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_set_parameters</h1>
-  <p>This function is used to change the parameters of a filter/effect. You specify an FX struct (as returned from <span class="inline"><a href="fx_create.htm">fx_create()</a></span> or <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) and a struct containing its parameters (as returned from <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span>). This will make your changes visible in the layer that the FX struct is assigned to.</p>
-  <p>Your parameter struct is not required to contain every parameter that is applicable to the filter/effect, and only the variables that are present in the given struct will be updated for the filter/effect.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">fx_set_parameters(filter_or_effect, parameter_struct);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>filter_or_effect</td><td><span data-keyref="Type_Struct_FX"></span></td>
-        <td>The FX struct to modify</td>
-     </tr>
-      <tr>
-        <td>parameter_struct</td><td><span data-keyref="Type_Struct"></span></td>
-        <td>A struct containing the parameters for the filter/effect</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _fx_struct = layer_get_fx(&quot;TintEffect&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> fx_set_parameters</h1><p> 이 기능은 필터/이펙트의 매개변수를 변경하는 데 사용됩니다. FX 구조체를 지정합니다( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 또는 <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> ) 및 해당 매개변수를 포함하는 구조체( <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span> ). 이렇게 하면 FX 구조체가 할당된 레이어에서 변경 사항을 볼 수 있습니다.</p><p> 매개변수 구조체는 필터/효과에 적용할 수 있는 모든 매개변수를 포함할 필요가 없으며 주어진 구조체에 있는 변수만 필터/효과에 대해 업데이트됩니다.</p><p></p><h4> 통사론:</h4><p class="code">fx_set_parameters(filter_or_effect, parameter_struct);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td><td> <span class="notranslate">The FX struct to modify</span></td></tr><tr><td> <span class="notranslate">parameter_struct</span></td><td><span data-keyref="Type_Struct"></span></td><td> <span class="notranslate">A struct containing the parameters for the filter/effect</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">var _fx_struct = layer_get_fx(&quot;TintEffect&quot;);<br />
     <br />
     if (_fx_struct != -1)<br />
     {<br />
@@ -51,19 +22,7 @@
     <br />
         fx_set_parameters(_fx_struct, _params);<br />
     }
-  </p>
-  <p>The above code gets the FX struct for a layer that is assumed to have the &quot;Colour Tint&quot; filter applied to it, and retrieves its parameter struct by calling <a href="fx_get_parameters.htm"><span class="inline">fx_get_parameters()</span></a>. After that it creates an oscillating value by using <span class="inline"><a href="../../../Maths_And_Numbers/Angles_And_Distance/sin.htm">sin()</a></span> and <span class="inline"><a href="../../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span>, which is then used for the RGBA values for the tint effect so it keeps animating. The RGBA array is assigned to the <span class="inline">g_TintCol</span> variable in the parameter struct, and the struct is then applied back to the FX struct by calling <span class="inline">fx_set_parameters()</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 &quot;Colour Tint&quot; 필터가 적용된 것으로 간주되는 레이어에 대한 FX 구조체를 가져오고 다음을 호출하여 매개변수 구조체를 검색합니다.<a href="fx_get_parameters.htm"><span class="inline">fx_get_parameters()</span></a>. 그 후 다음을 사용하여 진동 값을 생성합니다. <span class="inline"><a href="../../../Maths_And_Numbers/Angles_And_Distance/sin.htm">sin()</a></span> 그리고 <span class="inline"><a href="../../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span>, 그런 다음 색조 효과에 대한 RGBA 값에 사용되어 애니메이션을 유지합니다. RGBA 배열은 <span class="inline">g_TintCol</span> 매개변수 구조체의 변수이고 구조체는 다음을 호출하여 FX 구조체에 다시 적용됩니다. <span class="inline">fx_set_parameters()</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Filter_Effect_Functions.htm">필터 및 효과 기능</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_set_parameters

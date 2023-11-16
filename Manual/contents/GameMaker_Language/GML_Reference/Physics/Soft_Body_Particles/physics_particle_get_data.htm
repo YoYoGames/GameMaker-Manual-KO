@@ -6,87 +6,14 @@
   <title>physics_particle_get_data</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_particle_get_data" />
+  <meta name="topic-comment" content="physical_particle_get_data에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_particle_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color" />
   <meta name="search-keywords" content="physics_particle_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_get_data</h1>
-  <p>This function returns various pieces of information about each particle in the physics simulation using the given flags checked. The buffer used must have been created previously using the function <a href="../../Buffers/buffer_create.htm"><span class="inline">buffer_create()</span></a>, and should be of the &quot;grow&quot; type, with the size being approximately that of the expected return data. The flags are set using any of the constants given below, and you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to create a single flag value to get the desired information.</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Physics Particle Data Flag Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Data Type</th>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_data_flag_typeflags</span></td>
-        <td>The flags value for the particle.</td>
-        <td>buffer_u32</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_data_flag_position</span></td>
-        <td>The x and y position of the particle.</td>
-        <td>2 x buffer_f32</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_data_flag_velocity</span></td>
-        <td>The horizontal and vertical speed.</td>
-        <td>2 x buffer_f32</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_data_flag_colour</span></td>
-        <td>The colour and alpha value (hexadecimal).</td>
-        <td>buffer_f32</td>
-      </tr>
-      <tr>
-        <td><span class="inline">phy_particle_data_flag_category</span></td>
-        <td>The particle category (as defined when you created the particle or group to which it belongs).</td>
-        <td>buffer_u32</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_particle_get_data(buffer, flags)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Buffer ID</a></span></td>
-        <td>The (previously created) buffer to use to store the data.</td>
-      </tr>
-      <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Physics Particle Data Flag Constant</a></span>(s)</td>
-        <td>The flags to use to extract data about specific particle types.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var count = physics_particle_count();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_get_data</h1><p> 이 함수는 체크된 주어진 플래그를 사용하여 물리 시뮬레이션의 각 입자에 대한 다양한 정보를 반환합니다. 사용된 버퍼는 함수를 사용하여 이전에 생성되어야 합니다.<a href="../../Buffers/buffer_create.htm"><span class="inline">buffer_create()</span></a>, &quot;성장&quot; 유형이어야 하며 크기는 예상되는 반환 데이터의 크기와 비슷해야 합니다. 플래그는 아래 주어진 상수를 사용하여 설정되며 <a href="../../../../Additional_Information/Bitwise_Operators.htm">비트 단위 <i>또는</i></a> &quot;|&quot; 원하는 정보를 얻기 위해 단일 플래그 값을 생성합니다.</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th colspan="3"> <span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">물리 입자 데이터 플래그 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th><th> 데이터 형식</th></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_data_flag_typeflags</span></span></td><td> 입자에 대한 플래그 값입니다.</td><td> <span class="notranslate">buffer_u32</span></td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_data_flag_position</span></span></td><td> 입자의 x 및 y 위치입니다.</td><td> <span class="notranslate">2 x buffer_f32</span></td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_data_flag_velocity</span></span></td><td> 수평 및 수직 속도.</td><td> <span class="notranslate">2 x buffer_f32</span></td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_data_flag_colour</span></span></td><td> 색상 및 알파 값(16진수).</td><td> <span class="notranslate">buffer_f32</span></td></tr><tr><td><span class="notranslate"><span class="inline">phy_particle_data_flag_category</span></span></td><td> 입자 범주(속해 있는 입자 또는 그룹을 만들 때 정의됨).</td><td> <span class="notranslate">buffer_u32</span></td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">physics_particle_get_data(buffer, flags)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> <span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">버퍼 ID</a></span></td><td> <span class="notranslate">The (previously created) buffer to use to store the data.</span></td></tr><tr><td> <span class="notranslate">flags</span></td><td> <span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">물리 입자 데이터 플래그 상수</a></span> (들)</td><td> <span class="notranslate">The flags to use to extract data about specific particle types.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p><p></p><h4> 예시:</h4><p class="code">var count = physics_particle_count();<br />
     var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br />
     if (count &gt; 0)<br />
     {<br />
@@ -101,19 +28,7 @@
             draw_sprite_ext(sprBlob, 0, xx, yy, 1, 1, 0, c_green, alpha);<br />
         }<br />
         buffer_delete(buffer);<br />
-    }</p>
-  <p>The above code gets the number of particles and creates a variable with the data flags to check, then checks to see if there are any particles in the room. If there are, a buffer is created and then filled with the particle data, which is checked and used to draw a sprite at the particle position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_data_particle.htm">physics_particle_get_data_particle</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 파티클의 수를 가져오고 확인할 데이터 플래그가 있는 변수를 만든 다음 방에 파티클이 있는지 확인합니다. 존재하는 경우 버퍼가 생성된 다음 파티클 데이터로 채워지며, 이를 확인하여 파티클 위치에 스프라이트를 그리는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Soft_Body_Particles.htm">소프트 바디 입자</a></div><div style="float:right"> 다음: <a href="physics_particle_get_data_particle.htm"><span class="notranslate">physics_particle_get_data_particle</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_get_data

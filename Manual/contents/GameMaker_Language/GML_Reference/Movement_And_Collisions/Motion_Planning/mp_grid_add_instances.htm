@@ -6,63 +6,14 @@
   <title>mp_grid_add_instances</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="This page outlines the function mp_grid_add_instances" />
+  <meta name="topic-comment" content="이 페이지에서는 mp_grid_add_instances 함수에 대해 설명합니다." />
   <meta name="rh-index-keywords" content="mp_grid_add_instances" />
   <meta name="search-keywords" content="mp_grid_add_instances" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
-  <p>This function uses the instance collision mask (decided by the sprite properties or the mask index of the calling instance) to mark cells as forbidden or not in an MP grid, where forbidden cells cannot be crossed by any of the pathfinding functions. You can specify in the function whether to consider precise collisions or not and the forbidden cells marked will change depending on this setting. This image illustrates this behaviour:</p>
-  <p><img alt="Add instances example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/mp_grid_add_instance_image.png" />The two instances above have been added into the MP grid using the <span class="inline">mp_grid_add_instances()</span> function with precise being set as true. As you can see the, green instance has only marked the grid squares it &quot;touches&quot; as forbidden, due to the fact that its sprite mask is also set to precise. However the second instance has marked other cells too which don&#39;t <i>appear</i> to be touching. This is because the sprite mask is <b>not</b> set to precise, meaning that even if you are using the precise setting in the function, only the bounding box of the sprite will be considered. This is also what would happen if you set the precise argument of the function to false - even instances with a precise sprite mask will be added into the grid based on their bounding boxes.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">mp_grid_add_instances(id, obj, prec);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_MP_Grid">MP Grid ID</span></td>
-        <td>Index of the mp_grid that is to be used</td>
-      </tr>
-      <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span> or <span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>Object index, or instance id, of the instances to be added into the mp_grid</td>
-      </tr>
-      <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">mp_grid_add_instances(grid, obj_Wall, true);</p>
-  <p>The above code will add all instances of &quot;obj_Wall&quot; into the mp_grid indexed in the variable &quot;grid&quot; using the precise collision mask rather than the bounding box.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
-        <div style="float:right">Next: <a href="mp_grid_add_rectangle.htm">mp_grid_add_rectangle</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_add_instances</h1><p> 이 함수는 인스턴스 충돌 마스크(호출 인스턴스의 마스크 인덱스 또는 스프라이트 속성에 의해 결정됨)를 사용하여 금지된 셀을 경로 찾기 기능으로 교차할 수 없는 MP 그리드에서 금지된 셀을 표시하거나 금지합니다. 정확한 충돌을 고려할지 여부를 기능에서 지정할 수 있으며 이 설정에 따라 표시된 금지 셀이 변경됩니다. 이 이미지는 다음 동작을 보여줍니다.</p><p><img alt="Add instances example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/mp_grid_add_instance_image.png" /> 위의 두 인스턴스는 다음을 사용하여 MP 그리드에 추가되었습니다. <span class="inline">mp_grid_add_instances()</span> 정확한 값이 true로 설정되어 있는 함수입니다. 보시다시피, 녹색 인스턴스는 스프라이트 마스크도 정밀하게 설정되어 있기 때문에 &quot;만지는&quot; 그리드 사각형만 금지된 것으로 표시했습니다. 그러나 두 번째 인스턴스는 접촉하지 않는 <i>것으로 보이는</i> 다른 셀도 표시했습니다. 이는 스프라이트 마스크가 정밀하게 설정되어 <b>있지 않기</b> 때문입니다. 즉, 함수에서 정확한 설정을 사용하더라도 스프라이트의 경계 상자만 고려됩니다. 이것은 또한 함수의 정확한 인수를 false로 설정하면 발생합니다. 정확한 스프라이트 마스크가 있는 인스턴스라도 경계 상자를 기반으로 그리드에 추가됩니다.</p><p></p><h4> 통사론:</h4><p class="code">mp_grid_add_instances(id, obj, prec);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_MP_Grid">MP 그리드 ID</span></td><td> <span class="notranslate">Index of the mp_grid that is to be used</span></td></tr><tr><td> <span class="notranslate">obj</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span> 또는 <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">Object index, or instance id, of the instances to be added into the mp_grid</span></td></tr><tr><td> <span class="notranslate">prec</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">mp_grid_add_instances(grid, obj_Wall, true);</p><p> 위의 코드는 경계 상자가 아닌 정확한 충돌 마스크를 사용하여 변수 &quot;grid&quot;에 색인된 mp_grid에 &quot;obj_Wall&quot;의 모든 인스턴스를 추가합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Motion_Planning.htm">모션 플래닝</a></div><div style="float:right"> 다음: <a href="mp_grid_add_rectangle.htm"><span class="notranslate">mp_grid_add_rectangle</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_add_instances

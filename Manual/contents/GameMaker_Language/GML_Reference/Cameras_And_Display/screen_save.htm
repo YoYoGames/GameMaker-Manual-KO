@@ -6,58 +6,16 @@
   <title>screen_save</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for screen_save" />
+  <meta name="topic-comment" content="screen_save에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="screen_save" />
   <meta name="search-keywords" content="screen_save" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>screen_save</h1>
-  <p>With this function you can save a screenshot of the game as it currently appears in the game window.</p>
-  <p>The file will be saved to the working directory of the game, which in windows is located at <span class="inline">&lt;drive&gt;:/Users/YOURUSERNAME/AppData/Local/[Game Name]/</span> and on Mac it would be <span class="inline">~/Library/Application Support/[Game Name]/</span>. The image captured will be the final render of the application surface of the game, or (if the app surface has been disabled) it will be an image of the whole display or window.</p>
-  <p>It is important to note that the function is designed to be called in the <b>Draw GUI End Event</b>, which should give consistent results across all platforms. Using it in any other event may not work as expected, and may give different results across different targets and even devices.</p>
-  <p>Should you need more control over what is being saved, you should use the function <a href="screen_save_part.htm"><span class="inline">screen_save_part()</span></a>.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>This function does not work on the HTML5 target.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">screen_save(fname);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The filename for the screenshot to save</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>screen_save</h1><p> 이 기능을 사용하면 현재 게임 창에 나타나는 게임 스크린샷을 저장할 수 있습니다.</p><p> 파일은 Windows의 다음 위치에 있는 게임의 작업 디렉토리에 저장됩니다. <span class="inline">&lt;drive&gt;:/Users/YOURUSERNAME/AppData/Local/[Game Name]/</span> Mac에서는 <span class="inline">~/Library/Application Support/[Game Name]/</span>. 캡처된 이미지는 게임의 애플리케이션 표면의 최종 렌더링이 되거나(앱 표면이 비활성화된 경우) 전체 디스플레이 또는 창의 이미지가 됩니다.</p><p> 이 함수는 모든 플랫폼에서 일관된 결과를 제공해야 하는 <b>Draw GUI End Event</b> 에서 호출되도록 설계되었다는 점에 유의하는 것이 중요합니다. 다른 이벤트에서 사용하면 예상대로 작동하지 않을 수 있으며 다른 대상 및 장치에 따라 다른 결과를 제공할 수 있습니다.</p><p> 저장 중인 항목을 더 많이 제어해야 하는 경우 이 기능을 사용해야 합니다.<a href="screen_save_part.htm"><span class="inline">screen_save_part()</span></a>.</p><p class="note"> <b><span class="note">참고</span></b> 이 기능은 HTML5 대상에서 작동하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">screen_save(fname);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">fname</span></td><td> <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The filename for the screenshot to save</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
     {<br />
         screen_save(working_directory + &quot;Screens\Screen_&quot; + string(num++) + &quot;.png&quot;)<br />
-    }</p>
-  <p>The above code takes a screenshot of the game when the user presses the &quot;S&quot; key. This screen shot is saved to a specific directory and numbered using a variable which is then incremented.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="screen_save_part.htm">screen_save_part</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 사용자가 &quot;S&quot; 키를 눌렀을 때 게임의 스크린샷을 찍습니다. 이 스크린샷은 특정 디렉토리에 저장되고 증가하는 변수를 사용하여 번호가 매겨집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Cameras_And_Display.htm">사진기와 전시</a></div><div style="float:right"> 다음: <a href="screen_save_part.htm"><span class="notranslate">screen_save_part</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 screen_save

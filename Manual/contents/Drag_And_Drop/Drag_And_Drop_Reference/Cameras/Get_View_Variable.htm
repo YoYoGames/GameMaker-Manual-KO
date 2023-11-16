@@ -3,96 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get View Variable</title>
+  <title>보기 변수 가져오기</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Get View Variable action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Get View Variable" />
-  <meta name="search-keywords" content="Get View Variable" />
+  <meta name="topic-comment" content="보기 변수 가져오기 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 보기 변수 가져오기" />
+  <meta name="search-keywords" content="보기 변수 가져오기" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get View Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Get_View_Variable.png" width="32" /> Get View Variable</h1>
-  <p>This action permits you to get the value of certain built in variables related to a given <b>view port</b>. You select the view port variable to retrieve, then give the view port to target (from 0 to 7) and finally the target variable to hold the returned
-    value (this can be flagged as being a temporary local variable). The view port is the area of the screen that will be used to draw a given camera view (as set up in the room editor), and the different variables that you are able to get in this way
-    are outlined in the table below:</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">Camera</span></td>
-        <td>The value returned will be the unique ID value of the camera to assigned to the port (see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a> for more information).</td>
-      </tr>
-      <tr>
-        <td><span class="inline">Visibility</span></td>
-        <td>This will return a value of <span class="inline">true</span> or <span class="inline">false</span> where <span class="inline">true</span> is that the view port is visible (ie: it being drawn to the screen), and <span class="inline">false</span> meaning that nothing is being drawn.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">View Port X Coordinate</span></td>
-        <td>This is the X position of the view port within the game window.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">View Port Y Coordinate</span></td>
-        <td>This is the Y position of the view port within the game window.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">View Port Width</span></td>
-        <td>This is the width (in pixels) of the view port.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">View Port Height</span></td>
-        <td>This is the height (in pixels) of the view port.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">View Port Surface ID</span></td>
-        <td>This will return the unique ID value for the surface assigned to the view port or -1 if no surface has been assigned.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get View Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/a_Cameras_Get_View_Variable.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Variable</td>
-        <td>The built in view variable to get</td>
-      </tr>
-      <tr>
-        <td>View</td>
-        <td>The view port to target (from 0 - 7)</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned value (can be flagged as a temporary local variable)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><span><img alt="Get View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Get_View_Variable.png"/></span>The above action block code gets the current camera ID assigned to view
-    port [0] and then checks to see if it is the same as the one stored in a global variable. If it is not, the camera is set to the new one.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Camera_Actions.htm">Camera Actions</a></div>
-        <div style="float:right">Next: <a href="Set_View_Variable.htm">Set View Variable</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get View Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Get_View_Variable.png" width="32" /> 보기 변수 가져오기</h1><p> 이 작업을 통해 주어진 <b>뷰 포트</b> 와 관련된 특정 내장 변수의 값을 얻을 수 있습니다. 검색할 뷰 포트 변수를 선택한 다음 대상에 뷰 포트를 제공하고(0에서 7까지) 마지막으로 반환된 값을 보유할 대상 변수(이는 임시 로컬 변수로 플래그 지정될 수 있음)를 제공합니다. 뷰 포트는 주어진 카메라 뷰(룸 편집기에서 설정한 대로)를 그리는 데 사용되는 화면 영역이며 이러한 방식으로 얻을 수 있는 다양한 변수는 아래 표에 요약되어 있습니다.</p><table><tbody><tr><th> 변하기 쉬운</th><th> 설명</th></tr><tr><td><span class="inline">Camera</span></td><td> 반환된 값은 포트에 할당된 카메라의 고유 ID 값입니다(자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">여기</a> 참조).</td></tr><tr><td><span class="inline">Visibility</span></td><td> 다음 값을 반환합니다. <span class="inline">true</span> 또는 <span class="inline">false</span> 어디 <span class="inline">true</span> 뷰 포트가 보이는 것입니다(즉, 화면에 그려지는 것), 그리고 <span class="inline">false</span> 아무것도 그려지지 않는다는 뜻입니다.</td></tr><tr><td><span class="inline">View Port X Coordinate</span></td><td> 이것은 게임 창 내 뷰 포트의 X 위치입니다.</td></tr><tr><td><span class="inline">View Port Y Coordinate</span></td><td> 이것은 게임 창 내 뷰 포트의 Y 위치입니다.</td></tr><tr><td><span class="inline">View Port Width</span></td><td> 이것은 뷰 포트의 너비(픽셀 단위)입니다.</td></tr><tr><td><span class="inline">View Port Height</span></td><td> 이것은 뷰 포트의 높이(픽셀 단위)입니다.</td></tr><tr><td><span class="inline">View Port Surface ID</span></td><td> 이것은 뷰 포트에 할당된 표면에 대한 고유 ID 값을 반환하거나 할당된 표면이 없는 경우 -1을 반환합니다.</td></tr></tbody></table><p></p><h4> 동작 구문:</h4><p><img alt="Get View Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/a_Cameras_Get_View_Variable.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Variable</span></td><td> 얻을 내장 뷰 변수</td></tr><tr><td> <span class="notranslate">View</span></td><td> 대상에 대한 뷰 포트(0 - 7)</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환된 값을 보유할 대상 변수(임시 지역 변수로 플래그 지정 가능)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><span><img alt="Get View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Get_View_Variable.png"/></span> 위의 액션 블록 코드는 뷰 포트 [0]에 할당된 현재 카메라 ID를 가져온 다음 전역 변수에 저장된 것과 동일한지 확인합니다. 그렇지 않은 경우 카메라가 새 카메라로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Camera_Actions.htm">카메라 동작</a></div><div style="float:right"> 다음: <a href="Set_View_Variable.htm">보기 변수 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get View Variable

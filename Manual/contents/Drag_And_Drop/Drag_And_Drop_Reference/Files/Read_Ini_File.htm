@@ -3,76 +3,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Read Ini File</title>
+  <title>Ini 파일 읽기</title>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Read Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Read Ini File"/>
-  <meta name="search-keywords" content="Read Ini File"/>
+  <meta name="topic-comment" content="Read Ini 파일 작업을 설명하는 페이지"/>
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - Ini 파일 읽기"/>
+  <meta name="search-keywords" content="Ini 파일 읽기"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/> Read Ini File</h1>
-  <p>With this action you can read a piece of data from an Ini file. You must previously have opened the Ini file for reading/writing using the action <a href="Open_Ini_File.htm">Open Ini File</a>, and then with this action you give the type of data to read
-    (either a real number or a string enclosed in &quot;&quot;), as well as the section header and the key within that section to get the data from. You can also supply a default value which can be either a real number of a string, and the type should
-    coincide with the &quot;Type&quot; set in the action. This default action will be returned by the action should any of the following occur:</p>
-  <ul class="colour">
-    <li>The Ini file you have opened does not exist</li>
-    <li>The section header you reference does not exist</li>
-    <li>The key you are trying to get data from does not exist</li>
-  </ul>
-  <p>Under any of the above circumstances, you will get the default value returned rather than a value from the Ini file. Whatever value is returned will be stored in the target variable that you specify, which can also be created at that moment if flagged
-    as a temporary local variable.</p>
-  <p class="note"><b>IMPORTANT!</b> trying to read data from an Ini file that has not been opened previously using the <a href="Open_Ini_File.htm">Open Ini File</a> action will cause a serious error and crash your game.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Read Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Read_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The type of data to read, either a <span class="inline">string</span> (enclosed in quotes &quot;&quot;), or a <span class="inline">real number</span></td>
-      </tr>
-      <tr>
-        <td>Section</td>
-        <td>The section of the Ini file to read from (as a string)</td>
-      </tr>
-      <tr>
-        <td>Key</td>
-        <td>The key within the section to read from (as a string)</td>
-      </tr>
-      <tr>
-        <td>Default</td>
-        <td>The default value to return should either the file, section or key not exist</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable for holding the return value from the action</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Read Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Read_Ini_File.png"/>The above action block code will open an Ini file for reading then use data read from it to set
-    3 different global variables before closing the file again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="If_File_Exists.htm">If File Exists</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/> Ini 파일 읽기</h1><p> 이 작업으로 Ini 파일에서 데이터 조각을 읽을 수 있습니다. 이전에 <a href="Open_Ini_File.htm">Open Ini File</a> 작업을 사용하여 읽기/쓰기를 위해 Ini 파일을 연 다음 이 작업으로 읽을 데이터 유형(실수 또는 &quot;&quot;으로 묶인 문자열)과 섹션 헤더 및 해당 섹션 내의 키에서 데이터를 가져옵니다. 문자열의 실수일 수 있는 기본값을 제공할 수도 있으며 유형은 작업에 설정된 &quot;유형&quot;과 일치해야 합니다. 이 기본 작업은 다음 중 하나가 발생하면 작업에서 반환됩니다.</p><ul class="colour"><li> 당신이 연 Ini 파일이 존재하지 않습니다</li><li> 참조하는 섹션 헤더가 존재하지 않습니다</li><li> 데이터를 가져오려는 키가 존재하지 않습니다</li></ul><p> 위의 상황에서 Ini 파일의 값이 아닌 기본값이 반환됩니다. 반환된 값은 무엇이든 지정한 대상 변수에 저장되며, 임시 지역 변수로 플래그가 지정되면 그 순간에 생성될 수도 있습니다.</p><p class="note"> <b>중요한!</b> Ini 파일 <a href="Open_Ini_File.htm">열기</a> 작업을 사용하여 이전에 열지 않은 Ini 파일에서 데이터를 읽으려고 하면 심각한 오류가 발생하고 게임이 중단됩니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Read Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Read_Ini_File.png"/></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 읽을 데이터 유형 <span class="inline">string</span> (따옴표 &quot;&quot;로 묶음) 또는 <span class="inline">real number</span></td></tr><tr><td> <span class="notranslate">Section</span></td><td> 읽을 Ini 파일의 섹션(문자열로)</td></tr><tr><td> <span class="notranslate">Key</span></td><td> 읽을 섹션 내의 키(문자열로)</td></tr><tr><td> <span class="notranslate">Default</span></td><td> 반환할 기본값은 파일, 섹션 또는 키가 존재하지 않아야 합니다.</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 작업의 반환 값을 유지하기 위한 대상 변수</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Read Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Read_Ini_File.png"/> 위의 작업 블록 코드는 읽기용으로 Ini 파일을 연 다음 파일에서 읽은 데이터를 사용하여 파일을 다시 닫기 전에 3개의 다른 전역 변수를 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Actions.htm">파일 작업</a></div><div style="float:right"> 다음: <a href="If_File_Exists.htm">파일이 있는 경우</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Read Ini File

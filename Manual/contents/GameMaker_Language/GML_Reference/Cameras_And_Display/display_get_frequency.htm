@@ -6,26 +6,13 @@
   <title>display_get_frequency</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference section for display_get_frequency" />
+  <meta name="topic-comment" content="display_get_frequency에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="display_get_frequency" />
   <meta name="search-keywords" content="display_get_frequency" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_get_frequency</h1>
-  <p>This function returns the frequency (or refresh rate) of the display that the game is being played on. It will return a real value as frames-per-second, so for example if your monitor is 60hz you will get <span class="inline2">60</span>, if it&#39;s running at 144hz then you will get <span class="inline2">144</span>, and so on.</p>
-  <p class="note"><span class="note">NOTE</span> This function is not supported on HTML5.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">display_get_frequency();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _freq = display_get_frequency();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> display_get_frequency</h1><p> 이 함수는 게임이 재생되고 있는 디스플레이의 빈도(또는 재생 빈도)를 반환합니다. 실제 값을 초당 프레임으로 반환하므로 예를 들어 모니터가 60hz인 경우 <span class="inline"><a href="../General_Game_Control/game_set_speed.htm">game_set_speed()</a>>60</span> 이 표시되고 144hz에서 실행 중인 경우 <span class="inline2">144</span> 가 표시되는 식입니다.</p><p class="note"> <span class="note">참고</span> 이 기능은 HTML5에서 지원되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">display_get_frequency();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var _freq = display_get_frequency();<br />
     <br />
     if (_freq &gt;= 240)<br />
     {<br />
@@ -43,19 +30,7 @@
     {<br />
         game_set_speed(30, gamespeed_fps);<br />
     }
-  </p>
-  <p>The above code gets the frequency of the display, and runs some conditions to set the game running at 240, 120, 60 or 30 fps. This means that if your display is 90hz the game will run at 60 fps, if it&#39;s 144hz then it will run at 120 fps, etc. Of course, you can pass the frequency of the display directly into <span class="inline"><a href="../General_Game_Control/game_set_speed.htm">game_set_speed()</a></span> so it&#39;s used as the game&#39;s frame rate.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="display_mouse_get_x.htm">display_mouse_get_x</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 디스플레이의 주파수를 가져오고 240, 120, 60 또는 30fps에서 실행되는 게임을 설정하는 몇 가지 조건을 실행합니다. 즉, 디스플레이가 90hz이면 게임이 60fps로 실행되고, 144hz이면 120fps로 실행됩니다. 물론 디스플레이 주파수를 직접 전달할 수 있습니다.<span class="inline"></span> 그래서 게임의 프레임 레이트로 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Cameras_And_Display.htm">사진기와 전시</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="display_mouse_get_x.htm">display_mouse_get_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_get_frequency

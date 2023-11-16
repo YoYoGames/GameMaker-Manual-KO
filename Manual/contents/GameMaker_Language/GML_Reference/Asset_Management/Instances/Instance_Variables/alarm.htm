@@ -6,48 +6,21 @@
   <title>alarm</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the variable alarm" />
+  <meta name="topic-comment" content="변수 경보를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="alarm" />
   <meta name="search-keywords" content="alarm" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">alarm</span></h1>
-  <p>This 1-dimensional <a href="../../../../GML_Overview/Arrays.htm">array</a> is used to get the current value for any alarms that the instance may have, or it can be used to set those alarms. There are twelve alarms built into each instance of an object, and each one has its own <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">event</a> that will run when this variable reaches 0.</p>
-  <p>Alarms are counted down at the start of each step, <strong>after</strong> the Begin Step event but <strong>before</strong> the main Step event, and before anything is rendered for the frame. This means that if you set an alarm to <span class="inline2">1</span> in the Begin Step event, its event will run in that same frame (as the alarm will be counted down to 0 after Begin Step has finished), but if you set an alarm to <span class="inline2">1</span> in the Step event, it will run in the next frame.</p>
-  <p>It should be noted that the alarm is not finished when it reaches 0 (although the event has been triggered) as the next step it will go down to -1, so if you need to stop an alarm for any reason you should set its array value to -1 <i>not</i> 0. Alarm times are calculated in <i>game steps</i>, with a value of 30 being 30 steps, 60 being 60 steps, etc.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> An alarm with no actions or code in it will not run. However, even with just a comment and no code, the alarm will count down.</p>
-  <p>You can set the alarm array directly (and retrieve the current alarm value directly by using the array too), but under some circumstances this is not the most appropriate method, so you can also use the function <span class="inline3_func"><a data-xref="{title}" href="../alarm_set.htm">alarm_set</a></span> to set an alarm, and the function <span class="inline3_func"><a data-xref="{title}" href="../alarm_get.htm">alarm_get</a></span> to get the value of an alarm.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">alarm</span>[val];</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (-1 if the alarm isn&#39;t running)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if canshoot<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>alarm</h1><p> 이 1차원 <a href="../../../../GML_Overview/Arrays.htm">배열</a> 은 인스턴스에 있을 수 있는 모든 경보의 현재 값을 가져오거나 해당 경보를 설정하는 데 사용할 수 있습니다. 객체의 각 인스턴스에는 12개의 알람이 내장되어 있으며 각 알람에는 이 변수가 0에 도달할 때 실행되는 자체 <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a> 가 있습니다.</p><p> 경보는 각 단계가 시작될 때, 단계 시작 이벤트 <strong>이후</strong> 에 기본 단계 이벤트 <strong>이전</strong> 에, 그리고 프레임에 대해 무엇이든 렌더링되기 전에 카운트다운됩니다. 즉, 단계 시작 이벤트에서 알람을 <span class="inline"><a href="../alarm_set.htm">alarm_set()</a>>1</span> 로 설정하면 해당 이벤트가 동일한 프레임에서 실행되지만(단계 시작이 완료된 후 알람이 0으로 카운트다운됨 <span class="inline">alarm_get()>)</span> Step 이벤트는 다음 프레임에서 실행됩니다.</p><p> 알람이 0에 도달하면(이벤트가 트리거되었지만) 다음 단계로 -1로 내려갈 때 알람이 종료되지 않는다는 점에 유의해야 합니다. 따라서 어떤 이유로든 알람을 중지해야 하는 경우 해당 배열을 설정해야 합니다 값을 0이 <i>아닌</i> -1로 설정합니다. 알람 시간은 <i>게임 단계</i> 에서 계산되며 값이 30이면 30단계, 60이면 60단계 등...</p><p class="note"> <span class="note">참고</span> 조치나 코드가 없는 알람은 실행되지 않습니다. 하지만 댓글만 있고 코드가 없어도 알람은 카운트다운됩니다.</p><p> 알람 배열을 직접 설정할 수 있지만(배열을 사용하여 현재 알람 값을 직접 검색할 수도 있습니다), 어떤 상황에서는 이것이 가장 적절한 방법이 아니므로 함수를 사용할 수도 있습니다.<span class="inline"></span> 알람을 설정하고 기능을<a href="../alarm_get.htm"><span class="inline"></span></a> 알람 값을 가져옵니다.</p><p></p><h4> 통사론:</h4><p class="code">alarm[val];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (-1 if the alarm isn&#39;t running)</p><p></p><h4> 예시:</h4><p class="code">if canshoot<br />
     {<br />
         if keyboard_check_pressed(vk_space)<br />
         {<br />
             canshoot = false;<br />
-            alarm[0] = game_get_speed(gamespeed_fps);<br />
+            alarm[0] = room_speed;<br />
             instance_create_layer(x, y, &quot;Bullets&quot;, obj_Bullet);<br />
         }<br />
-    }</p>
-  <p>The above code checks a variable and then if it is true, checks for a key press and if that is true it finally sets the variable to false, sets an alarm (where it will be set to true again) and creates an instance.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="direction.htm">direction</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 변수를 검사한 다음 그것이 참이면 키 누름을 검사하고 그것이 참이면 마지막으로 변수를 거짓으로 설정하고 알람을 설정하고(여기서 다시 참으로 설정됨) 인스턴스를 생성합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Variables.htm">인스턴스 변수</a></div><div style="float:right"> 다음: <a href="direction.htm"><span class="notranslate">direction</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 alarm

@@ -3,52 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If End Of Buffer</title>
+  <title>버퍼의 끝인 경우</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the If End Of Buffer action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - If End Of Buffer" />
-  <meta name="search-keywords" content="If End Of Buffer" />
+  <meta name="topic-comment" content="If End Of Buffer 동작을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 버퍼의 끝인 경우" />
+  <meta name="search-keywords" content="버퍼의 끝인 경우" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /> If End Of Buffer</h1>
-  <p>This action can be used to check if the read/write position has reached the end of the buffer. You supply the unique buffer ID value as returned by the action <a href="Create_Buffer.htm">Create Buffer</a> and then the action will return <span class="inline">true</span>    if the read/write position has reached the end of all the available data in the buffer, or <span class="inline">false</span> if it has not. You can flag &quot;not&quot; to make the action check if the read/write position is <i>not</i> at the end of the buffer.</p>
-  <p>Note that to add actions into the &quot;if&quot; block, they should be dropped to the side of the action, as shown in the image below:</p>
-  <p><img alt="End Of Buffer drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/If_End_Drop.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="End Of Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_If_End_Of_Buffer.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="End Of Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_If_End_Of_Buffer.png" />The above action block code creates a DS list in the instance and then loops through the
-    data within the given buffer reading out the data and adding it to the list. This continues until the end of the buffer is reached at which time the loop is broken.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Create_Buffer.htm">Create Buffer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /> 버퍼의 끝인 경우</h1><p> 이 작업은 읽기/쓰기 위치가 버퍼 끝에 도달했는지 확인하는 데 사용할 수 있습니다. 버퍼 <a href="Create_Buffer.htm">생성</a> 작업에서 반환된 고유한 버퍼 ID 값을 제공하면 작업이 반환됩니다. <span class="inline">true</span> 읽기/쓰기 위치가 버퍼에서 사용 가능한 모든 데이터의 끝에 도달한 경우 또는 <span class="inline">false</span> 그렇지 않은 경우. 읽기/쓰기 위치가 버퍼의 끝에 <i>있지 않은</i> 경우 조치를 확인하기 위해 &quot;not&quot;에 플래그를 지정할 수 있습니다.</p><p> &quot;if&quot; 블록에 작업을 추가하려면 아래 이미지와 같이 작업 옆에 놓아야 합니다.</p><p><img alt="End Of Buffer drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/If_End_Drop.png" /></p><p></p><h4> 동작 구문:</h4><p><img alt="End Of Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_If_End_Of_Buffer.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Buffer</span></td><td> 버퍼 인덱스(변수에 저장됨)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="End Of Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_If_End_Of_Buffer.png" /> 위의 작업 블록 코드는 인스턴스에 DS 목록을 만든 다음 지정된 버퍼 내에서 데이터를 반복하여 데이터를 읽고 목록에 추가합니다. 이것은 루프가 끊어지는 버퍼의 끝에 도달할 때까지 계속됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffer_Actions.htm">버퍼 작업</a></div><div style="float:right"> 다음: <a href="Create_Buffer.htm">버퍼 생성</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If End Of Buffer

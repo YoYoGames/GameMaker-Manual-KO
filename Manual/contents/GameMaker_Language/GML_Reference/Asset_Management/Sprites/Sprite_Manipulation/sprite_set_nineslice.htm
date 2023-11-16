@@ -6,45 +6,13 @@
   <title>sprite_set_nineslice</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
-  <meta name="topic-comment" content="Page explaining the function sprite_set_nineslice" />
+  <meta name="topic-comment" content="sprite_set_nineslice 함수를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="sprite_set_nineslice" />
   <meta name="search-keywords" content="sprite_set_nineslice" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_nineslice</h1>
-  <p>This function is used to apply a <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">Nine Slice struct</a> to a sprite. You supply the sprite index and the Nine Slice struct to apply, which can be retrieved using <a href="sprite_nineslice_create.htm" title="sprite_nineslice_create"><span class="inline">sprite_nineslice_create()</span></a> or <a href="../Sprite_Information/sprite_get_nineslice.htm" title="sprite_get_nineslice"><span class="inline">sprite_get_nineslice()</span></a>.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>This function affects the sprite <strong>asset</strong> so any changes you make with this function will affect <strong>all</strong> instances that are using this sprite and all future instances too. </p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">sprite_set_nineslice(ind, nineslice);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
-        <td>The index of the sprite to modify</td>
-      </tr>
-      <tr>
-        <td>nineslice</td>
-        <td><span data-keyref="Type_Struct_NineSlice">Nine Slice Struct</span></td>
-        <td>The Nine Slice struct to apply</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _nineslice = sprite_nineslice_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> sprite_set_nineslice</h1><p> 이 함수는 <a href="../Nine_Slice_Struct.htm" title="나인 슬라이스 구조체">Nine Slice 구조체</a> 를 스프라이트에 적용하는 데 사용됩니다. 다음을 사용하여 검색할 수 있는 적용할 스프라이트 인덱스와 Nine Slice 구조체를 제공합니다. <a href="sprite_nineslice_create.htm" title="sprite_nineslice_create"><span class="inline">sprite_nineslice_create()</span></a> 또는 <a href="../Sprite_Information/sprite_get_nineslice.htm" title="sprite_get_nineslice"><span class="inline">sprite_get_nineslice()</span></a>.</p><p class="note"> <b><span class="note">참고</span></b> 이 함수는 스프라이트 <strong>자산</strong> 에 영향을 미치므로 이 함수로 변경한 사항은 이 스프라이트를 사용하는 <strong>모든</strong> 인스턴스와 이후의 모든 인스턴스에도 영향을 미칩니다.</p><p></p><h4> 통사론:</h4><p class="code">sprite_set_nineslice(ind, nineslice);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_Asset_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The index of the sprite to modify</span></td></tr><tr><td> <span class="notranslate">nineslice</span></td><td> <span data-keyref="Type_Struct_NineSlice">나인 슬라이스 구조체</span></td><td> <span class="notranslate">The Nine Slice struct to apply</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _nineslice = sprite_nineslice_create();<br />
     <br />
     _nineslice.enabled = true;<br />
     _nineslice.left = 10;<br />
@@ -53,18 +21,7 @@
     _nineslice.bottom = 10;<br />
     <br />
     <strong>sprite_set_nineslice</strong>(spr_box_0, _nineslice);
-  </p>
-  <p>The code above creates a new Nine Slice struct, enables it and sets the offsets for the guides. The struct is then applied to a sprite, changing its Nine Slice properties.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_offset.htm">sprite_set_offset</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 새로운 Nine Slice 구조체를 생성하고 활성화하고 가이드의 오프셋을 설정합니다. 그런 다음 구조체가 스프라이트에 적용되어 Nine Slice 속성이 변경됩니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div><div style="float:right"> 다음: <a href="sprite_set_offset.htm"><span class="notranslate">sprite_set_offset</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_nineslice

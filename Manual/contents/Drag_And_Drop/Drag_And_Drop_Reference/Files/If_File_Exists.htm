@@ -3,53 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If File Exists</title>
+  <title>파일이 존재하는 경우</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the If File Exists action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - If File Exists" />
-  <meta name="search-keywords" content="If File Exists" />
+  <meta name="topic-comment" content="파일이 존재하는 경우 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 파일이 존재하는 경우" />
+  <meta name="search-keywords" content="파일이 존재하는 경우" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If File Exists Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png" width="32" /> If File Exists</h1>
-  <p>With this action you can check to see if a file with the given name exists. You select the file to check for (as a sting and including the extension) and the function will return <span class="inline">true</span> if it exists, and <span class="inline">false</span> if it does not. Note that
-    this will return <span class="inline">true</span> if the file exists in the game bundle as an Included File or if the file has been saved out while the game was running (see the section on <a href="../../../Additional_Information/The_File_System.htm">The File System</a>    for more information).</p>
-  <p>Note that to add actions into the &quot;if&quot; block, they should be dropped to the side of the action, as shown in the image below:</p>
-  <p><img alt="If File Exists drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/If_File_Exists_Drop.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="If File Exists Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_If_File_Exists.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The type of data to read, either a <span class="inline">string</span> (enclosed in quotes &quot;&quot;), or a <span class="inline">real number</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If File Exists Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" />The above action block code will create a variable to hold buffer data and then check to see if
-    a buffer save file has been made previously. If the file exists, then it is loaded into the buffer variable that we created, but if it doesn&#39;t exist, it is created, written to and then saved out ready for loading the next time.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Load_Buffer.htm">Load Buffer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If File Exists Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png" width="32" /> 파일이 있는 경우</h1><p> 이 작업으로 주어진 이름의 파일이 존재하는지 확인할 수 있습니다. 확인할 파일을 선택하면(확장자 포함) 함수가 반환됩니다. <span class="inline">true</span> 존재한다면, 그리고 <span class="inline">false</span> 그렇지 않은 경우. 이 반환됩니다 <span class="inline">true</span> 파일이 게임 번들에 포함된 파일로 존재하거나 게임이 실행되는 동안 파일이 저장된 경우(자세한 내용 <a href="../../../Additional_Information/The_File_System.htm">은 파일 시스템</a> 섹션 참조).</p><p> &quot;if&quot; 블록에 작업을 추가하려면 아래 이미지와 같이 작업 옆에 놓아야 합니다.</p><p><img alt="If File Exists drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/If_File_Exists_Drop.png" /></p><p></p><h4> 동작 구문:</h4><p><img alt="If File Exists Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_If_File_Exists.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Type</span></td><td> 읽을 데이터 유형 <span class="inline">string</span> (따옴표 &quot;&quot;로 묶음) 또는 <span class="inline">real number</span></td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="If File Exists Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" /> 위의 액션 블록 코드는 버퍼 데이터를 담을 변수를 생성한 후 버퍼 세이브 파일이 이전에 생성되었는지 확인합니다. 파일이 존재하면 우리가 생성한 버퍼 변수에 로드되지만 존재하지 않으면 파일이 생성되어 다음에 로드될 수 있도록 작성되어 저장됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Actions.htm">파일 작업</a></div><div style="float:right"> 다음: <a href="Load_Buffer.htm">버퍼 로드</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If File Exists

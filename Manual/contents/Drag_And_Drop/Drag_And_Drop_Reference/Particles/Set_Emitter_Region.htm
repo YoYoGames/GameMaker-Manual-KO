@@ -3,87 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Emitter Region</title>
+  <title>방사체 영역 설정</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Set Emitter Region action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Emitter Region" />
-  <meta name="search-keywords" content="Set Emitter Region" />
+  <meta name="topic-comment" content="이미터 영역 설정 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 이미터 영역 설정" />
+  <meta name="search-keywords" content="방사체 영역 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Emitter Region Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" /> Set Emitter Region</h1>
-  <p>This action is used to set the region and shape of an emitter within a particle system. You supply the particle system ID that the emitter belongs to (as returned by the action <a href="Create_Particle_System.htm">Create Particle System</a>) and then
-    the actual emitter ID (as returned by the action <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>), and then give a shape for the emitter to take within the given bounding box values. The possible emitter shapes are:</p>
-  <p><img alt="Emitter Shapes Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Emitter_Shapes.png" />To define your shapes, you give the coordinates for a &quot;bounding box&quot; into which the given
-    shape will be placed (in the case of rectangle, ellipse and diamond shapes) or the first and second coordinates for the start and finish points (in the case of a line). All particles that are burst or streamed from the emitter will be created within
-    the confines of the shape within this bounding box. You can also set the distribution of the particles with the option of:</p>
-  <ul class="colour">
-    <li><b>Linear</b>: Particles will be created anywhere at random within the given shape.</li>
-    <li><b>Gaussian</b>: Particles will be created predominantly in the middle of the shape with fewer along the edges.</li>
-    <li><b>Inverse Gaussian</b>: Particles will be created predominantly along the edges of the shape with fewer in the middle.</li>
-  </ul>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Emitter Region Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Emitter_Region.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td>The unique ID of the system the emitter belongs to</td>
-      </tr>
-      <tr>
-        <td>Emitter</td>
-        <td>The unique ID of the emitter to set the shape of</td>
-      </tr>
-      <tr>
-        <td>Shape</td>
-        <td>The particle shape that is to be used</td>
-      </tr>
-      <tr>
-        <td>Distribution</td>
-        <td>The distribution of particles within the given shape</td>
-      </tr>
-      <tr>
-        <td>Left</td>
-        <td>The position of the left side of the shape bounding box (in pixels)</td>
-      </tr>
-      <tr>
-        <td>Top</td>
-        <td>The position of the top of the shape bounding box (in pixels)</td>
-      </tr>
-      <tr>
-        <td>Right</td>
-        <td>The position of the right side of the shape bounding box (in pixels)</td>
-      </tr>
-      <tr>
-        <td>Bottom</td>
-        <td>The position of the bottom of the shape bounding box (in pixels)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Emitter Region Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Emitter.png" />The above action block code will create a particle emitter, set it&#39;s
-    region, and then set it to emit a stream of particles.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Do_Effect.htm">Do Effect</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Emitter Region Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" /> 방사체 영역 설정</h1><p> 이 액션은 파티클 시스템 내 이미터의 영역과 모양을 설정하는 데 사용됩니다. 이미터가 속한 파티클 시스템 ID( <a href="Create_Particle_System.htm">Create Particle System</a> 작업에서 반환됨)와 실제 이미터 ID( <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a> 작업에서 반환됨)를 제공한 다음, 이미터가 내에서 취할 모양을 지정합니다. 주어진 경계 상자 값. 가능한 방사체 모양은 다음과 같습니다.</p><p><img alt="Emitter Shapes Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Emitter_Shapes.png" /> 모양을 정의하려면 주어진 모양이 배치될 &quot;경계 상자&quot;의 좌표(사각형, 타원 및 다이아몬드 모양의 경우) 또는 시작점과 끝점의 첫 번째 및 두 번째 좌표( 선의 경우). 이미터에서 버스트되거나 스트리밍되는 모든 입자는 이 경계 상자 내의 모양 범위 내에서 생성됩니다. 다음 옵션을 사용하여 입자 분포를 설정할 수도 있습니다.</p><ul class="colour"><li> <b>Linear</b>: 파티클은 주어진 모양 내에서 임의의 위치에 생성됩니다.</li><li> <b>가우시안</b>: 파티클은 가장자리를 따라 더 적은 수로 모양의 중앙에 주로 생성됩니다.</li><li> <b>Inverse Gaussian</b>: 입자는 중앙에서 더 적은 수로 모양의 가장자리를 따라 주로 생성됩니다.</li></ul><p></p><h4> 동작 구문:</h4><p><img alt="Set Emitter Region Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Emitter_Region.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">System</span></td><td> 이미터가 속한 시스템의 고유 ID</td></tr><tr><td> <span class="notranslate">Emitter</span></td><td> 모양을 설정할 이미터의 고유 ID</td></tr><tr><td> <span class="notranslate">Shape</span></td><td> 사용할 입자 모양</td></tr><tr><td> <span class="notranslate">Distribution</span></td><td> 주어진 모양 내 입자의 분포</td></tr><tr><td> <span class="notranslate">Left</span></td><td> 모양 경계 상자의 왼쪽 위치(픽셀 단위)</td></tr><tr><td> <span class="notranslate">Top</span></td><td> 모양 경계 상자의 상단 위치(픽셀)</td></tr><tr><td> <span class="notranslate">Right</span></td><td> 모양 경계 상자의 오른쪽 위치(픽셀)</td></tr><tr><td> <span class="notranslate">Bottom</span></td><td> 모양 경계 상자의 아래쪽 위치(픽셀 단위)</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Set Emitter Region Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Emitter.png" /> 위의 액션 블록 코드는 파티클 이미터를 만들고 영역을 설정한 다음 파티클 스트림을 방출하도록 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Do_Effect.htm">효과 수행</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Emitter Region

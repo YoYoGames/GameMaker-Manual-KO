@@ -6,95 +6,21 @@
   <title>physics_joint_rope_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_joint_rope_create" />
+  <meta name="topic-comment" content="physical_joint_rope_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_joint_rope_create" />
   <meta name="search-keywords" content="physics_joint_rope_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_rope_create</h1>
-  <p>A rope joint is one which is used to join two instances that you want to keep a constant distance apart, no matter what other forces are acting on it. With a distance joint, you can get &quot;joint stretching&quot; where the two fixtures will separate and behave strangely should too much stress be put on the joint, however the rope joint does not do this and will not stretch any further than the maximum defined length. When you create a rope joint the two instances should already be created and have a fixture assigned, then you define the two anchor points in room coordinates. The first anchor point is connected to instance 1, the second anchor point is connected to instance 2 and the distance and the maxlength argument sets the maximum length constraint on the joint. The image below shows how this works:</p>
-  <p><img alt="Rope joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/direction_joint_image.png" />As you can see, the anchor points are specified as room coordinates so care must be taken when defining them, especially if the instances are being created at the same time as the joints rather than being placed in the room through the room editor. You should also realise that the joints are created independently of the size of the sprite of the instances or the fixtures they have attached. So, if you create a rope joint somewhere other than the origin of the instance, it is still valid and will constrain the two instances relative to the position at which it was created. If you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
-      </tr>
-      <tr>
-        <td>w_anchor1_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The first x coordinate for the joint, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor1_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The first y coordinate for the joint, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor2_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The second x coordinate for the joint, within the game world</td>
-      </tr>
-      <tr>
-        <td>w_anchor2_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>the second y coordinate for the joint, within the game world</td>
-      </tr>
-      <tr>
-        <td>maxlength</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum length that the joint can &quot;stretch&quot;</td>
-      </tr>
-      <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var mainFixture, o_id;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_rope_create</h1><p> 로프 조인트는 다른 힘이 작용하더라도 일정한 거리를 유지하려는 두 인스턴스를 연결하는 데 사용되는 조인트입니다. 디스턴스 조인트를 사용하면 조인트에 너무 많은 응력이 가해지면 두 개의 고정구가 분리되어 이상하게 동작하는 &quot;조인트 스트레칭&quot;을 얻을 수 있지만 로프 조인트는 이를 수행하지 않으며 최대 정의 길이보다 더 이상 늘어나지 않습니다.. 로프 조인트를 생성할 때 두 개의 인스턴스가 이미 생성되어 고정 장치가 할당되어 있어야 하며, 룸 좌표에서 두 개의 앵커 포인트를 정의합니다. 첫 번째 앵커 포인트는 인스턴스 1에 연결되고 두 번째 앵커 포인트는 인스턴스 2에 연결되며 distance 및 maxlength 인수는 관절의 최대 길이 제약 조건을 설정합니다. 아래 이미지는 작동 방식을 보여줍니다.</p><p><img alt="Rope joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/direction_joint_image.png" /> 보시다시피 앵커 포인트는 룸 좌표로 지정되므로 정의할 때 특히 주의해야 합니다. 특히 인스턴스가 룸 편집기를 통해 룸에 배치되지 않고 조인트와 동시에 생성되는 경우에는 더욱 그렇습니다. 또한 조인트는 인스턴스의 스프라이트 크기 또는 이들이 연결한 고정 장치와 독립적으로 생성된다는 점을 알아야 합니다. 따라서 인스턴스의 원점이 아닌 다른 위치에서 로프 조인트를 생성하면 여전히 유효하며 생성된 위치를 기준으로 두 인스턴스를 제한합니다. &quot;col&quot; 값을 다음으로 설정하면 <span class="inline">true</span> 두 인스턴스는 서로 상호 작용하고 충돌할 수 있지만 충돌 이벤트가 있는 경우 <i>에만</i> 가능합니다. <span class="inline">false</span>, 그들은 무슨 일이 있어도 충돌하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The first instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">inst2</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span></td><td> <span class="notranslate">The second instance to connect with the joint</span></td></tr><tr><td> <span class="notranslate">w_anchor1_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The first x coordinate for the joint, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor1_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The first y coordinate for the joint, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor2_x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The second x coordinate for the joint, within the game world</span></td></tr><tr><td> <span class="notranslate">w_anchor2_y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">the second y coordinate for the joint, within the game world</span></td></tr><tr><td> <span class="notranslate">maxlength</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The maximum length that the joint can &quot;stretch&quot;</span></td></tr><tr><td> <span class="notranslate">col</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p><p></p><h4> 예시:</h4><p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
     o_id=instance_create_layer(x+300, y, &quot;Instances&quot;, obj_Rudder);<br />
     physics_fixture_bind(mainFixture, id);<br />
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_rope_create(id, o_id, x + 50, y, o_id.x - 50, o_id.y, 300, 0);<br />
-    physics_fixture_delete(mainFixture);</p>
-  <p>The above code creates and defines a new fixture and then creates an instance of &quot;obj_Rudder&quot;. The fixture is then assigned to the instance that is running the code as well as the newly created one and a rope joint is created between them. Finally the fixture is deleted as it is no longer needed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_wheel_create.htm">physics_joint_wheel_create</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    physics_fixture_delete(mainFixture);</p><p> 위의 코드는 새로운 조명기를 만들고 정의한 다음 &quot;obj_Rudder&quot;의 인스턴스를 만듭니다. 그런 다음 Fixture는 코드를 실행하는 인스턴스와 새로 생성된 인스턴스에 할당되고 그들 사이에 로프 조인트가 생성됩니다. 마지막으로 조명기는 더 이상 필요하지 않으므로 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_wheel_create.htm"><span class="notranslate">physics_joint_wheel_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_rope_create

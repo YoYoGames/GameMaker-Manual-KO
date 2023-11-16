@@ -6,83 +6,17 @@
   <title>audio_listener_orientation</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function audio_listener_orientation" />
+  <meta name="topic-comment" content="audio_listener_orientation 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="audio_listener_orientation" />
   <meta name="search-keywords" content="audio_listener_orientation" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_orientation</h1>
-  <p>With this function you can change the orientation of the <i>listener</i> within the 3D audio space. The <b>look at</b> direction and <b>up</b> direction are based on the vectors that are resolved from the given relative x, y and z positions, and default to <span data-keyref="Unit_Vector_Z">(0, 0, 1)</span> for the look at direction and <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span> for the up direction, as shown in the illustration below:</p>
-  <p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png" /></p>
-  <p class="note"><b><span class="note">NOTE</span> </b>if you have multiple listeners you should use the function <a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p>
-  <p>Changing the listener orientation with this function will change how sound created by audio emitters around the game room are perceived by the player of your game. In the example below, sounds created by the emitter when the listener is at the default position would appear to be coming from below and to the right of the listener, but with the new position and orientation of the listener they will now be perceived as coming from <i>above</i> and to the right.</p>
-  <p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png" /></p>
-  <h4>Syntax:</h4>
-  <p class="code">audio_listener_orientation(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>lookat_x</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x look vector (default 0).</td>
-      </tr>
-      <tr>
-        <td>lookat_y</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y look vector (default 0).</td>
-      </tr>
-      <tr>
-        <td>lookat_z</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The z look vector (default 1).</td>
-      </tr>
-      <tr>
-        <td>up_x</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x up vector (default 0).</td>
-      </tr>
-      <tr>
-        <td>up_y</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y up vector (default 1).</td>
-      </tr>
-      <tr>
-        <td>up_z</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The z up vector (default 0).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">dx = dcos(direction);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_listener_orientation</h1><p> 이 기능을 사용하면 3D 오디오 공간 내에서 <i>청취자</i> 의 방향을 변경할 수 있습니다. <b>보는</b> 방향과 <b>위로</b> 향하는 방향은 주어진 상대적 x, y 및 z 위치에서 해석되는 벡터를 기반으로 하며 기본적으로 보는 방향의 <span data-keyref="Unit_Vector_Z">경우 (0, 0, 1)</span>, 다음의 경우 <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span> 입니다. 아래 그림과 같이 위쪽 방향으로</p><p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png" /></p><p class="note"> <b><span class="note">참고</span></b> 리스너가 여러 개인 경우 함수를 사용해야 합니다.<a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p><p> 이 기능으로 청취자 방향을 변경하면 게임 룸 주변의 오디오 이미터에서 생성된 사운드가 게임 플레이어가 인식하는 방식이 변경됩니다. 아래 예에서 리스너가 기본 위치에 있을 때 방사체에 의해 생성된 사운드는 리스너의 오른쪽 아래에서 들리는 것처럼 보이지만 리스너의 새로운 위치와 방향을 사용하면 이제 오는 것으로 인식됩니다. <i>위에서</i> 오른쪽으로.</p><p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png" /></p><h4> 통사론:</h4><p class="code">audio_listener_orientation(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">lookat_x</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The x look vector (default 0).</span></td></tr><tr><td> <span class="notranslate">lookat_y</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The y look vector (default 0).</span></td></tr><tr><td> <span class="notranslate">lookat_z</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The z look vector (default 1).</span></td></tr><tr><td> <span class="notranslate">up_x</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The x up vector (default 0).</span></td></tr><tr><td> <span class="notranslate">up_y</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The y up vector (default 1).</span></td></tr><tr><td> <span class="notranslate">up_z</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The z up vector (default 0).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">dx = dcos(direction);<br />
     dy = - dsin(direction);<br />
     dz = - dsin(zdirection);<br />
     audio_listener_position(x, y, z);<br />
-    audio_listener_orientation(dx, dy, dz, 0, 0, 1);</p>
-  <p>The above code sets the 3D audio listener position to an instance&#39;s x and y <a href="../../Instances/Instance_Variables/Instance_Variables.htm">variables</a> and an extra z variable. It then sets the audio listener&#39;s orientation to three variables calculated from the instance&#39;s <a href="../../Instances/Instance_Variables/direction.htm">direction</a> and an extra zdirection variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_listener_get_data.htm">audio_listener_get_data</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    audio_listener_orientation(dx, dy, dz, 0, 0, 1);</p><p> 위의 코드는 3D 오디오 리스너 위치를 인스턴스의 x 및 y <a href="../../Instances/Instance_Variables/Instance_Variables.htm">변수</a> 와 추가 z 변수로 설정합니다. 그런 다음 오디오 리스너의 방향을 인스턴스의 <a href="../../Instances/Instance_Variables/direction.htm"><span class="notranslate">direction</span></a> 과 추가 zdirection 변수에서 계산된 세 개의 변수로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio_Listeners.htm">오디오 청취자</a></div><div style="float:right"> 다음: <a href="audio_listener_get_data.htm"><span class="notranslate">audio_listener_get_data</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_orientation

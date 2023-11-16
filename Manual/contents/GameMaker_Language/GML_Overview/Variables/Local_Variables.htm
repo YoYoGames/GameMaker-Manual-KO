@@ -3,20 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Local Variables</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>지역 변수</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining local variables" />
-  <meta name="rh-index-keywords" content="var,Local Variables" />
-  <meta name="search-keywords" content="local variables,local,var,local scope" />
+  <meta name="topic-comment" content="지역 변수를 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="var,지역 변수" />
+  <meta name="search-keywords" content="지역 변수,현지의,var,지역 범위" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Local Variables</span></h1>
-  <p>A <strong>local</strong> variable is one that we create for a specific <strong>event</strong> or <strong>function</strong> <i>only</i> and then discard when the event or function has finished. If it is created in a custom function then the local variable is only available to the function and then discarded when the function has finished. Why would we need them? Well, variables take up space in memory and it may be that we are only going to use them for one operation or function in which case we only need to have it in memory for that short time that it&#39;s used. This keeps your code base clean and tidy as well as keeping memory space optimised for the things that really need it. To declare a local variable we use the <span class="inline"><strong><span class="inline">var</span></strong></span> operator like this:</p>
-  <p class="code">var _i, _num, _str;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 지역 변수</h1><p> <strong>지역</strong> 변수는 특정 <strong>이벤트</strong> 나 <strong>함수</strong> 에 <i>대해서만</i> 생성한 다음 이벤트나 함수가 끝나면 버리는 것입니다. 사용자 정의 함수에서 생성된 경우 로컬 변수는 해당 함수에서만 사용할 수 있으며 함수가 완료되면 삭제됩니다. 왜 필요할까요? 글쎄요, 변수는 메모리에서 공간을 차지하며 우리는 그것들이 사용되는 짧은 시간 동안만 메모리에 있어야 하는 경우 하나의 연산이나 기능에 대해서만 변수를 사용할 것입니다. 이렇게 하면 코드 기반을 깨끗하고 깔끔하게 유지할 수 있을 뿐만 아니라 실제로 필요한 것에 최적화된 메모리 공간을 유지할 수 있습니다. 지역 변수를 선언하기 위해 우리는 <span class="inline"><strong><span class="inline">var</span> 다음과 같은 연산자:</p><p class="code">var _i, _num, _str;<br />
     _i = 0;<br />
     _num = 24.5;<br />
     _str = &quot;Hello World&quot;;<br />
@@ -30,45 +26,23 @@
     var _i = 0;<br />
     var _num = 24.5;<br />
     var _str = &quot;Hello World&quot;;
-  </p>
-  <p>All of the variables created in this way will be &quot;forgotten&quot; (ie: removed from memory) at the end of the event (or function) in which they were created. You should be careful that the name you give all <span class="inline">var</span> declared variables does not coincide with another instance variable within the object running the code, and also make sure that you have no intention of using the value stored in that variable outside of the event or function you declare it in (in the examples above, all the <span class="inline">var</span> declared variables have been defined with the underscore &quot;_&quot; preceding the variable name, but this is not required and is done simply to make it more obvious in the code that we are dealing with a local variable). That said, if you find yourself in a situation where you think a local variable <em>should</em> be the same as an instance variable, then you can use the <span class="inline">self</span> <a href="../Instance_Keywords.htm">keyword</a> to identify the instance variable as separate, for example:</p>
-  <p class="code">var hp = 10;<br />
+  </p><p> 이러한 방식으로 생성된 모든 변수는 생성된 이벤트(또는 함수)가 끝날 때 &quot;잊히게&quot;(즉, 메모리에서 제거) 됩니다. 당신은 당신이주는 이름이 모두 <span class="inline">var</span> 선언된 변수는 코드를 실행하는 객체 내의 다른 인스턴스 변수와 일치하지 않으며, 또한 해당 변수에 저장된 값을 선언한 이벤트 또는 함수 외부에서 사용할 의도가 없는지 확인합니다(위의 예에서 모든 그만큼 <span class="inline">var</span> 선언된 변수는 변수 이름 앞에 밑줄 &quot;_&quot;을 사용하여 정의했지만 이것은 필수 사항이 아니며 단순히 지역 변수를 처리하는 코드에서 더 명확하게 하기 위해 수행됩니다. 즉, 지역 변수가 인스턴스 변수와 <em>같아야 한다고</em> 생각하는 상황에 처한 경우 다음을 사용할 수 있습니다. <span class="inline">self</span> 인스턴스 변수를 별도의 것으로 식별하는 <a href="../Instance_Keywords.htm">키워드</a> 는 다음과 같습니다.</p><p class="code">var hp = 10;<br />
     with (obj_Enemy)<br />
     {<br />
         self.hp -= hp;<br />
-    }</p>
-  <p>Local variables are used a lot in programs, especially in loops for counting <a class="glossterm" data-glossterm="iteration" href="#">iteration</a><span class="glossextra">s</span>, or when using a value several times in one operation that is not going to be repeated again. Here are another couple of examples:</p>
-  <p class="code">var _i = 0;<br />
+    }</p><p> 지역 변수는 프로그램, 특히 <a class="glossterm" data-glossterm="반복" href="#">반복 횟수</a> <span class="glossextra">를</span> 세기 위한 루프에서 또는 다시 반복되지 않을 한 작업에서 값을 여러 번 사용할 때 많이 사용됩니다. 다음은 몇 가지 예입니다.</p><p class="code">var _i = 0;<br />
     repeat (10)<br />
     {<br />
         inventory[_i] = 0;<br />
         _i += 1;<br />
-    }</p>
-  <p>The above code creates a local variable called &quot;<span class="inline">_i</span>&quot; and sets it to 0, all in the same line. Note that in previous versions of <i>GameMaker</i> you had to declare your local variables first and <i>then</i> assign them values, but in this version you can declare <i>and</i> assign them a value at the same time. The above code then uses this variable to initialize an <a href="../Arrays.htm">array</a>. As the variable &quot;<span class="inline">_i</span>&quot; is not going to be used for any further functions in the instance other than this, it can be local in scope. Here is one more example:</p>
-  <p class="code">var _x, _y;<br />
+    }</p><p> 위의 코드는 &quot;<span class="inline">_i</span> &quot;로 설정하고 모두 같은 줄에 0으로 설정합니다. 이전 버전의 <i>GameMaker</i> 에서는 먼저 로컬 변수를 선언 <i>한 다음</i> 값을 할당해야 했지만 이 버전에서는 선언 <i>하고</i> 동시에 값을 할당할 수 있습니다.. 위의 코드는 이 변수를 사용하여 <a href="../Arrays.htm">배열</a> 을 초기화합니다. 변수로 &quot;<span class="inline">_i</span> &quot;는 이 이외의 인스턴스에서 더 이상의 기능에는 사용되지 않을 것이며 범위 내에서 로컬일 수 있습니다. 여기에 하나의 예가 더 있습니다.</p><p class="code">var _x, _y;<br />
     _x = x - 32 + irandom(64);<br />
     _y = y - 32 + irandom(64);<br />
-    instance_create_layer(_x, _y, &quot;Effects&quot;, obj_blood);</p>
-  <p>Here we have used the local variables &quot;<span class="inline">_x</span>&quot; and &quot;<span class="inline">_y</span>&quot; to store some random coordinates that we then use to create an instance. In this example you can see that it is not strictly necessary that we use these variables but for the sake of readability and ease of use, we do. It is MUCH clearer and obvious what we are doing there than if we used this code:</p>
-  <p class="code">instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), &quot;Effects&quot;, obj_guts);</p>
-  <p>One other thing about <span class="inline">var</span> declared local variables should be noted... Since they are unique to the event or function that runs them, they can be used in any other instances through code too! This means that we can use these variables to set and change things in other instances using the &quot;<span class="inline">with()</span>&quot; construct (see the section on <a href="../Variables_And_Variable_Scope.htm">variable scope</a> for more information). The actual code itself would look something like this:</p>
-  <p class="code">var num = instance_number(obj_Enemy);<br />
+    instance_create_layer(_x, _y, &quot;Effects&quot;, obj_blood);</p><p> 여기서 우리는 지역 변수를 사용했습니다 &quot;<span class="inline">_x</span> &quot; 그리고 &quot;<span class="inline">_y</span> &quot; 임의의 좌표를 저장하여 인스턴스를 생성하는 데 사용합니다. 이 예에서 이러한 변수를 반드시 사용할 필요는 없지만 가독성과 사용 편의성을 위해 사용한다는 것을 알 수 있습니다. 훨씬 더 명확합니다. 그리고 우리가 이 코드를 사용했을 때보다 우리가 거기서 무엇을 하고 있는지 분명합니다.</p><p class="code">instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), &quot;Effects&quot;, obj_guts);</p><p> 또 다른 한가지 <span class="inline">var</span> 선언된 지역 변수에 주목해야 합니다... 그것들을 실행하는 이벤트나 함수에 고유하기 때문에 코드를 통해 다른 인스턴스에서도 사용할 수 있습니다! 이것은 우리가 이 변수를 사용하여 &quot;<span class="inline">with()</span> &quot; 구성(자세한 내용은 <a href="../Variables_And_Variable_Scope.htm">변수 범위</a> 섹션 참조). 실제 코드 자체는 다음과 같습니다.</p><p class="code">var num = instance_number(obj_Enemy);<br />
     with (obj_Enemy)<br />
     {<br />
         if num&gt;10 instance_destroy();<br />
-    }</p>
-  <p>The above code works because the <span class="inline">var</span> declared variable is local to the <i>event</i> (or function) it is contained in, not the instance, nor the game world, and so can be used in any function in any object as long as it is in the same code block.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Variables_And_Variable_Scope.htm">Variables And Variables Scope</a></div>
-        <div style="float:right">Next: <a href="Instance_Variables.htm">Instance Variables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 작동하기 때문에 <span class="inline">var</span> 선언된 변수는 인스턴스나 게임 세계가 아니라 포함된 <i>이벤트</i> (또는 함수)에 대해 로컬이므로 동일한 코드 블록에 있는 한 모든 개체의 모든 함수에서 사용할 수 있습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Variables_And_Variable_Scope.htm">변수 및 변수 범위</a></div><div style="float:right"> 다음: <a href="Instance_Variables.htm">인스턴스 변수</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 local variables

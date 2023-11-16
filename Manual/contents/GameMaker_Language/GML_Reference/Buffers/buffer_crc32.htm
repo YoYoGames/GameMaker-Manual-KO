@@ -6,59 +6,14 @@
   <title>buffer_crc32</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for buffer_crc32" />
+  <meta name="topic-comment" content="buffer_crc32에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="buffer_crc32" />
   <meta name="search-keywords" content="buffer_crc32" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_crc32</h1>
-  <p>This function will take input data from a buffer and returns a crc32 checksum hash. You specify the buffer ID of the buffer to use, then an offset value (in bytes) for where to begin, and then a size (again in bytes) for the region to be hashed, and
-    the function will return a 32 bit integer value for that region.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">buffer_crc32(buffer, offset, size);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to use.</td>
-     </tr>
-      <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The data offset value.</td>
-     </tr>
-      <tr>
-        <td>size</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The size of the buffer.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">check_val = buffer_crc32(buff, 0, buffer_get_size(buff));</p>
-  <p>The above code will create a crc32 checksum hash value for the full data stored in the buffer indexed by the variable &quot;buff&quot;, and store the returned integer hash value in the variable &quot;check_val&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_base64_encode.htm">buffer_base64_encode</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_crc32</h1><p> 이 함수는 버퍼에서 입력 데이터를 가져와 crc32 체크섬 해시를 반환합니다. 사용할 버퍼의 버퍼 ID를 지정한 다음 시작 위치에 대한 오프셋 값(바이트 단위)을 지정한 다음 해시할 영역의 크기(바이트 단위)를 지정하면 함수가 32비트 정수 값을 반환합니다. 그 지역을 위해.</p><p></p><h4> 통사론:</h4><p class="code">buffer_crc32(buffer, offset, size);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td><td> <span class="notranslate">The index of the buffer to use.</span></td></tr><tr><td> <span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The data offset value.</span></td></tr><tr><td> <span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The size of the buffer.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">check_val = buffer_crc32(buff, 0, buffer_get_size(buff));</p><p> 위의 코드는 &quot;buff&quot; 변수에 의해 인덱싱된 버퍼에 저장된 전체 데이터에 대한 crc32 체크섬 해시 값을 만들고 반환된 정수 해시 값을 변수 &quot;check_val&quot;에 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffers.htm">버퍼</a></div><div style="float:right"> 다음: <a href="buffer_base64_encode.htm"><span class="notranslate">buffer_base64_encode</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_crc32

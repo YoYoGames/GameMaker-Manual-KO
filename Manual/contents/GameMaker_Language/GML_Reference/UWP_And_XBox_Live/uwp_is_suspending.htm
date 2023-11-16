@@ -6,41 +6,17 @@
   <title>uwp_is_suspending</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for uwp_is_suspending" />
+  <meta name="topic-comment" content="uwp_is_suspending에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="uwp_is_suspending" />
   <meta name="search-keywords" content="uwp_is_suspending" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_is_suspending <span data-conref="../../../assets/snippets/Tag_obsolete.hts"> </span></h1>
-  <p>This function will return <span class="inline">true</span> for a single frame (and <span class="inline">false</span> otherwise) in a similar manner to <a href="../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a>. The game then has one second to save the game state before it is potentially terminated by the system. Once the game has finished saving data it should call <a href="uwp_suspend.htm"><span class="inline">uwp_suspend()</span></a> to suspend cleanly. The game should probably also enter a pause state so that if it is resumed by the system (if it hasn&#39;t been fully terminated) the player is not thrown straight back into a gameplay situation.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">uwp_is_suspending();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if uwp_is_suspending()<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_is_suspending</h1><p> 이 함수는 반환됩니다 <span class="inline">true</span> 단일 프레임(및 <span class="inline">false</span> 그렇지 않으면) 와 유사한 방식으로<a href="../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a>. 그런 다음 게임은 시스템에 의해 잠재적으로 종료되기 전에 게임 상태를 저장할 수 있는 1초가 있습니다. 게임이 데이터 저장을 마치면 호출해야 합니다.<a href="uwp_suspend.htm"><span class="inline">uwp_suspend()</span></a> 깔끔하게 중단합니다. 게임은 또한 시스템에 의해 재개되는 경우(완전히 종료되지 않은 경우) 플레이어가 게임플레이 상황으로 곧바로 돌아가지 않도록 일시 중지 상태에 들어가야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">uwp_is_suspending();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if uwp_is_suspending()<br />
     {<br />
         scr_Save_Game_Data();<br />
         uwp_suspend();<br />
-    }</p>
-  <p>The above code checks to see if the app is going into suspension and if it is it calls a script to save the game data before suspending the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_is_constrained.htm">uwp_is_constrained</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 앱이 일시 중지 상태인지 확인하고 게임을 일시 중지하기 전에 게임 데이터를 저장하는 스크립트를 호출합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="UWP_And_XBox_Live.htm">UWP 및 Xbox Live</a></div><div style="float:right"> 다음: <a href="uwp_is_constrained.htm"><span class="notranslate">uwp_is_constrained</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_is_suspending

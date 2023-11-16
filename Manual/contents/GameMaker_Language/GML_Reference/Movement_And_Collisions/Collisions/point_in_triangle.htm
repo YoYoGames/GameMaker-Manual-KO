@@ -6,66 +6,14 @@
   <title>point_in_triangle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that gives an overview of the funtion point_in_triangle" />
+  <meta name="topic-comment" content="point_in_triangle 함수의 개요를 제공하는 페이지" />
   <meta name="rh-index-keywords" content="point_in_triangle" />
   <meta name="search-keywords" content="point_in_triangle" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>point_in_triangle</h1>
-  <p>When using this function, you define a triangular area and <span data-keyref="GameMaker Name">GameMaker</span> will work out whether the given point falls within its bounds or not. If the point falls within the defined triangle the function will return <span class="inline">true</span> otherwise the function will return <span class="inline">false</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3, y3);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>px</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the point to check.</td>
-     </tr>
-      <tr>
-        <td>py</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the point to check.</td>
-     </tr>
-      <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the first corner of the triangle to check.</td>
-     </tr>
-      <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the first corner of the triangle to check.</td>
-     </tr>
-      <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the second corner of the triangle to check.</td>
-     </tr>
-      <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the second corner of the triangle to check.</td>
-     </tr>
-      <tr>
-        <td>x3</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the third corner of the triangle to check.</td>
-     </tr>
-      <tr>
-        <td>y3</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the third corner of the triangle to check.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var inst = instance_nearest(x, y, obj_Player);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>point_in_triangle</h1><p> 이 기능을 사용할 때 삼각형 영역을 정의하면 <span data-keyref="GameMaker Name">GameMaker</span> 는 주어진 점이 경계 내에 있는지 여부를 계산합니다. 점이 정의된 삼각형 내에 있으면 함수는 다음을 반환합니다. <span class="inline">true</span> 그렇지 않으면 함수가 반환됩니다 <span class="inline">false</span>.</p><p></p><h4> 통사론:</h4><p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3, y3);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">px</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the point to check.</span></td></tr><tr><td> <span class="notranslate">py</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the point to check.</span></td></tr><tr><td> <span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the first corner of the triangle to check.</span></td></tr><tr><td> <span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the first corner of the triangle to check.</span></td></tr><tr><td> <span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the second corner of the triangle to check.</span></td></tr><tr><td> <span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the second corner of the triangle to check.</span></td></tr><tr><td> <span class="notranslate">x3</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the third corner of the triangle to check.</span></td></tr><tr><td> <span class="notranslate">y3</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the third corner of the triangle to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">var inst = instance_nearest(x, y, obj_Player);<br />
     if instance_exists(inst)<br />
     {<br />
         var x1 = x + lengthdir_x(100, image_angle - 45);<br />
@@ -76,19 +24,7 @@
         {<br />
             can_see = true;<br />
         }<br />
-    }</p>
-  <p>The above code uses the <span class="inline">point_in_triangle</span> function as a &quot;cone of vision&quot; to check for an instance of &quot;obj_player&quot;, setting a variable to <span class="inline">true</span> should the objects x/y position fall within the defined triangle.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="point_in_circle.htm">point_in_circle</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 <span class="inline">point_in_triangle</span> &quot;obj_player&quot;의 인스턴스를 확인하기 위해 &quot;시각 원뿔&quot;로 기능하고 변수를 다음으로 설정 <span class="inline">true</span> 개체 x/y 위치가 정의된 삼각형 내에 있어야 합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Collisions.htm">충돌</a></div><div style="float:right"> 다음: <a href="point_in_circle.htm"><span class="notranslate">point_in_circle</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 point_in_triangle

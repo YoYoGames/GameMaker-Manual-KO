@@ -6,61 +6,17 @@
   <title>gamepad_axis_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gamepad_axis_value" />
+  <meta name="topic-comment" content="gamepad_axis_value에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_axis_value" />
   <meta name="search-keywords" content="gamepad_axis_value" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_axis_value</h1>
-  <p>You can use this function to get the value of the different axes from a given gamepad slot. You supply the gamepad slot index to check, along with either an axis index constant (as listed <a href="Gamepad_Input.htm">here</a>), or an integer value between <span class="inline">0</span> and <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. The returned value will be between <span class="inline">-1</span> and <span class="inline">1</span> for each of the available horizontal and vertical axes.</p>
-  <p>Note that the returned value is normalised to take into consideration the value set for the axis deadzone (using the function <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), and so will always be between -1 and 0, and 0 and 1. For example, setting the deadzone to 0.2 will mean that pushing the stick right will only start returning a value from 0 - 1 when the <em>raw</em> axis value is over 0.2 - so for example, when the raw value is 0.2, the return value will be 0, when the raw value is at 0.5, the return value will be 0.375, or if the raw value is 0.9, then the return value would be 0.875.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gamepad_axis_value(device, axisIndex);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>device</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
-      </tr>
-      <tr>
-        <td>axisIndex</td>
-        <td><span data-keyref="Type_Constant_Gamepad_Axis">Gamepad Axis Constant</span></td>
-        <td>The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a>).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_axis_value</h1><p> 이 함수를 사용하여 주어진 게임패드 슬롯에서 다른 축의 값을 가져올 수 있습니다. 축 인덱스 상수( <a href="Gamepad_Input.htm">여기</a> 에 나열됨) 또는 다음 사이의 정수 값과 함께 확인할 게임패드 슬롯 인덱스를 제공합니다. <span class="inline">0</span> 그리고 <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. 반환된 값은 다음 사이입니다. <span class="inline">-1</span> 그리고 <span class="inline">1</span> 사용 가능한 가로 및 세로 축 각각에 대해</p><p> 반환된 값은 축 데드존에 대해 설정된 값을 고려하도록 정규화됩니다(함수 사용 <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span> ), 그래서 항상 -1과 0, 그리고 0과 1 사이에 있을 것입니다. 예를 들어 데드존을 0.2로 설정하면 스틱을 오른쪽으로 밀면 <em>원시</em> 축 값이 끝났을 때 0 - 1의 값만 반환하기 시작한다는 의미입니다. 0.2 - 예를 들어 원시 값이 0.2이면 반환 값은 0이 되고, 원시 값이 0.5이면 반환 값은 0.375가 되며, 원시 값이 0.9이면 반환 값은 0.875가 됩니다..</p><p></p><h4> 통사론:</h4><p class="code">gamepad_axis_value(device, axisIndex);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td></tr><tr><td> <span class="notranslate">axisIndex</span></td><td> <span data-keyref="Type_Constant_Gamepad_Axis">게임패드 축 상수</span></td><td> <span class="notranslate">The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a> ).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br />
     var vaxis = gamepad_axis_value(0, gp_axislv);<br />
     direction = point_direction(0, 0, haxis, vaxis);<br />
-    speed = point_distance(0 ,0, haxis, vaxis) * 5;</p>
-  <p>The above code sets the speed and direction of the instance based on the returned values of the left analog controller of the gamepad plugged into device &quot;slot&quot; 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    speed = point_distance(0 ,0, haxis, vaxis) * 5;</p><p> 위의 코드는 장치 &quot;슬롯&quot; 0에 연결된 게임패드의 왼쪽 아날로그 컨트롤러의 반환된 값을 기반으로 인스턴스의 속도와 방향을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Input.htm">게임패드 입력</a></div><div style="float:right"> 다음: <a href="gamepad_button_check.htm">gamepad_button_check</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_axis_value

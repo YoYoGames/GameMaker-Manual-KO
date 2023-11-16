@@ -6,90 +6,19 @@
   <title>draw_light_get</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for draw_light_get" />
-  <meta name="rh-index-keywords" content="draw_light_get,lighttype_dir,lighttype_point" />
-  <meta name="search-keywords" content="draw_light_get,lighttype_dir,lighttype_point" />
+  <meta name="topic-comment" content="draw_light_get에 대한 참조 페이지" />
+  <meta name="rh-index-keywords" content="draw_light_get" />
+  <meta name="search-keywords" content="draw_light_get" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_light_get</h1>
-  <p>This function will get the specified light parameters as an array with the following 6 elements -</p>
-  <ul class="colour">
-    <li>[0] = enabled / disabled (<span class="inline">true</span> / <span class="inline">false</span>)</li>
-    <li>[1] = <span data-keyref="Type_Constant_LightType"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Lighting/draw_light_get.htm" target="_blank">Light Type Constant</a></span> (see table below)</li>
-    <li>[2] = x position</li>
-    <li>[3] = y position</li>
-    <li>[4] = z position</li>
-    <li>[5] = light radius (only for point lights, will be 0 for directional)</li>
-    <li>[6] = light colour (a real)</li>
-  </ul>
-  <p>The light type (element [1]) can be one of the following two constants:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_LightType"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Lighting/draw_light_get.htm" target="_blank">Light Type Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><span class="inline">lighttype_dir</span></td>
-        <td>The light is a directional light</td>
-      </tr>
-      <tr>
-        <td><span class="inline">lighttype_point</span></td>
-        <td>The light is a point light</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">draw_light_get(ind);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The index number of the light (from 0 to 7)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">light_a = draw_light_get(1);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_light_get</h1><p> 이 함수는 지정된 조명 매개변수를 다음 6개 요소가 있는 배열로 가져옵니다.</p><ul class="colour"><li> [0] = 활성화/비활성화(<span class="inline">true</span> / <span class="inline">false</span> )</li><li> [1] = <span data-keyref="Type_Constant_LightType"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Lighting/draw_light_get.htm">조명 유형 상수</a></span> (아래 표 참조)</li><li> [2] = x 위치</li><li> [3] = y 위치</li><li> [4] = z 위치</li><li> [5] = 라이트 반경(포인트 라이트의 경우에만, 방향성의 경우 0이 됨)</li><li> [6] = 밝은 색(실제)</li></ul><p> 조명 유형(요소 [1])은 다음 두 상수 중 하나일 수 있습니다.</p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_LightType"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Lighting/draw_light_get.htm">조명 유형 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">lighttype_dir</span></span></td><td> 빛은 지향성 빛이다.</td></tr><tr><td><span class="notranslate"><span class="inline">lighttype_point</span></span></td><td> 라이트는 포인트 라이트</td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">draw_light_get(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">진짜</a></span></td><td> <span class="notranslate">The index number of the light (from 0 to 7)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p><p></p><h4> 예시:</h4><p class="code">light_a = draw_light_get(1);<br />
     if light_a[5] &lt; 200<br />
     {<br />
         light_a[5] += 5;<br />
         draw_light_define_point(1, 200, 123, 50, light_a[5], c_white);<br />
-    }</p>
-  <p>The above code will get the values used to define the light indexed as &quot;1&quot;, then check the radius and if it is less than 200 it will be increased and the light radius set to the new value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Lighting.htm">Lighting</a></div>
-        <div style="float:right">Next: <a href="draw_get_lighting.htm">draw_get_lighting</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;1&quot;로 인덱싱된 조명을 정의하는 데 사용되는 값을 가져온 다음 반경을 확인하고 200보다 작으면 증가하고 조명 반경을 새 값으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Lighting.htm">조명</a></div><div style="float:right"> 다음: <a href="draw_get_lighting.htm"><span class="notranslate">draw_get_lighting</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_light_get

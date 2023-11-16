@@ -6,53 +6,17 @@
   <title>directory_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for directory_exists" />
+  <meta name="topic-comment" content="directory_exists에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="directory_exists" />
   <meta name="search-keywords" content="directory_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>directory_exists</h1>
-  <p>This function will return <span class="inline">true</span> if the indicated directory exists or <span class="inline">false</span> if it does not. The specified name must include the full path, not a relative path and by default you cannot access any directories from out-with the game bundle as all games are sandboxed (see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">directory_exists(dname)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>dname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the directory to look for.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if directory_exists(working_directory + &quot;Saves/&quot;)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>directory_exists</h1><p> 이 함수는 반환됩니다 <span class="inline">true</span> 표시된 디렉토리가 존재하거나 <span class="inline">false</span> 그렇지 않은 경우. 지정된 이름은 상대 경로가 아닌 전체 경로를 포함해야 하며 기본적으로 모든 게임이 샌드박스 처리되므로 게임 번들 외부에서 디렉터리에 액세스할 수 없습니다(자세한 내용은 <a href="../../../../Additional_Information/The_File_System.htm">파일 시스템</a> 섹션 참조).</p><p></p><h4> 통사론:</h4><p class="code">directory_exists(dname)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">dname</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The name of the directory to look for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if directory_exists(working_directory + &quot;Saves/&quot;)<br />
     {<br />
         file = file_find_first(working_directory + &quot;Saves/*.doc&quot;, fa_readonly);<br />
-    }</p>
-  <p>This will check to see if the specified directory exists then, if it does, go there and return the first &quot;read only&quot; <span class="inline">doc</span> file found.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="File_Directories.htm">File Directories</a></div>
-        <div style="float:right">Next: <a href="directory_create.htm">directory_create</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 이것은 지정된 디렉토리가 존재하는지 확인한 다음 존재하는 경우 그곳으로 이동하여 첫 번째 &quot;읽기 전용&quot;을 반환합니다. <span class="inline">doc</span> 파일을 찾았습니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="File_Directories.htm">파일 디렉토리</a></div><div style="float:right"> 다음: <a href="directory_create.htm"><span class="notranslate">directory_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 directory_exists

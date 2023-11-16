@@ -6,41 +6,14 @@
   <title>tag_get_assets</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function tag_get_assets" />
+  <meta name="topic-comment" content="tag_get_assets 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="tag_get_assets" />
   <meta name="search-keywords" content="tag_get_assets" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tag_get_assets</h1>
-  <p>This function retrieves the names of all assets that have been assigned the given tag or tags.</p>
-  <p>You supply either a single tag string or an <a href="../../../GML_Overview/Arrays.htm">array</a>, where each item in the array is a tag string. The function will return an array where each entry is the name (as a string) of the asset with the given tag. If you need the unique index for the asset, then you can use the function <a href="asset_get_index.htm"><span class="inline">asset_get_index()</span></a> along with the returned name. If there are no assets with the given tag(s), or if there is an error (eg: the given tags do not exist), then an empty array will be returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">tag_get_assets(tags);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>tags</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of Strings</td>
-        <td>A single asset tag string or an array with various asset tags.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">backgrounds = ds_list_create();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tag_get_assets</h1><p> 이 기능을 사용하면 지정된 태그가 할당된 모든 자산의 이름을 검색할 수 있습니다. 단일 태그 문자열 또는 <a href="../../../GML_Overview/Arrays.htm">배열</a> 을 제공합니다. 여기서 배열의 각 항목은 태그 문자열입니다. 이 함수는 각 항목이 주어진 태그가 있는 자산의 이름(문자열)인 배열을 반환합니다. 자산에 대한 고유 인덱스가 필요한 경우 다음 기능을 사용할 수 있습니다.<a href="asset_get_index.htm"><span class="inline">asset_get_index()</span></a> 반환된 이름과 함께. 주어진 태그가 있는 자산이 없거나 오류가 있는 경우(예: 주어진 태그가 존재하지 않음) 빈 배열이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">tag_get_assets(tags);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tags</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 문자열 <span data-keyref="Type_Array">배열</span></td><td> <span class="notranslate">A single asset tag string or an array with various asset tags.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span></p><p></p><h4> 예시:</h4><p class="code">backgrounds = ds_list_create();<br />
     var _assets = tag_get_assets(&quot;background&quot;);<br />
     for (var i = 0; i&lt; array_length(_assets); ++i;)<br />
     {<br />
@@ -48,18 +21,7 @@
         {<br />
             ds_list_add(backgrounds, asset_get_index(_assets[i]));<br />
         }<br />
-    }</p>
-  <p>The above code creates a list, then retrieves the names of all the assets with the tag &quot;background&quot;. It loops through the array of names returned, checking to see if any of them are sprite assets, and if they are then the unique index value for the asset is added to the list for future use.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_get_tags.htm">asset_get_tags</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 목록을 만든 다음 &quot;background&quot; 태그가 있는 모든 자산의 이름을 검색합니다. 반환된 이름 배열을 순환하면서 스프라이트 자산이 있는지 확인하고, 스프라이트 자산이면 자산에 대한 고유 인덱스 값이 나중에 사용할 수 있도록 목록에 추가됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Assets_And_Tags.htm">자산 및 태그</a></div><div style="float:right"> 다음: <a href="asset_get_tags.htm"><span class="notranslate">asset_get_tags</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tag_get_assets

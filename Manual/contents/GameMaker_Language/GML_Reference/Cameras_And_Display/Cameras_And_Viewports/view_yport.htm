@@ -6,40 +6,13 @@
   <title>view_yport</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for view_yport" />
+  <meta name="topic-comment" content="view_yport에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="view_yport" />
   <meta name="search-keywords" content="view_yport" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_yport</h1>
-  <p>With this built in array you can get or set the y position of the given view port. The view port is the area on the screen where the view is drawn, and you can have up to 8 active at any one time (the array is values from 0 to 7 inclusive to give 8
-    ports). Now, the default for <span data-keyref="GameMaker Name">GameMaker</span> is that the game window (or background canvas) is the same size as the room, however when you activate view ports and cameras, this behaviour changes and the <i>total size of the bounding box for all view ports</i>    is used. So, if you have two different view ports at two different positions, the total area that they cover defines the size of the game window. The following image illustrates this:</p>
-  <p><img alt="Canvas with multiple view ports example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png" />If you only have <i>one</i> view port setting the x or y value of the port can
-    have some interesting effects but is not normally practical (see the image below) and so it is better to maintain the x and y position as (0,0).</p>
-  <p><img alt="view_yport example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/view_xyport.png" /></p>
-  <h4>Syntax:</h4>
-  <p class="code">view_yport[0 .. 7];</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">view_xport[0] = 0;<br/> view_yport[0] = 0;</p>
-  <p>The above code resets the position of view port[0] to the (0,0) position (top left hand corner) of the display.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="view_set_wport.htm">view_wport</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_yport</h1><p> 이 내장 배열을 사용하면 주어진 뷰 포트의 y 위치를 얻거나 설정할 수 있습니다. 뷰 포트는 뷰가 그려지는 화면의 영역이며 한 번에 최대 8개까지 활성화할 수 있습니다(배열은 8개의 포트를 제공하기 위해 0에서 7까지의 값입니다). 이제 <span data-keyref="GameMaker Name">GameMaker</span> 의 기본값은 게임 창(또는 배경 캔버스)이 방과 같은 크기이지만 뷰 포트 및 카메라를 활성화하면 이 동작이 변경되고 <i>모든 뷰 포트에 대한 경계 상자의 전체 크기</i> 가 사용됩니다.. 따라서 두 개의 서로 다른 위치에 두 개의 서로 다른 뷰 포트가 있는 경우 해당 뷰 포트가 차지하는 전체 영역이 게임 창의 크기를 정의합니다. 다음 이미지는 이를 보여줍니다.</p><p><img alt="Canvas with multiple view ports example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png" /> 뷰 포트가 <i>하나만</i> 있는 경우 포트의 x 또는 y 값을 설정하면 몇 가지 흥미로운 효과가 있을 수 있지만 일반적으로 실용적이지 않으므로(아래 이미지 참조) x 및 y 위치를 (0,0)으로 유지하는 것이 좋습니다.</p><p><img alt="view_yport example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/view_xyport.png" /></p><h4> 통사론:</h4><p class="code">view_yport[0 .. 7];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">view_xport[0] = 0;<br/> view_yport[0] = 0;</p><p> 위의 코드는 뷰 포트[0]의 위치를 디스플레이의 (0,0) 위치(왼쪽 상단 모서리)로 재설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Cameras_And_View_Ports.htm">카메라 및 뷰 포트</a></div><div style="float:right"> 다음: <a href="view_set_wport.htm"><span class="notranslate">view_wport</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 view_yport

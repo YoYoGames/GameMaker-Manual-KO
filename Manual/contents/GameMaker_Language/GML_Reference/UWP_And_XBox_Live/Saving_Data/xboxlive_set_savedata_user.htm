@@ -6,54 +6,16 @@
   <title>xboxlive_set_savedata_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for xboxlive_set_savedata_user" />
+  <meta name="topic-comment" content="xboxlive_set_savedata_user에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="xboxlive_set_savedata_user" />
   <meta name="search-keywords" content="xboxlive_set_savedata_user" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_set_savedata_user</h1>
-  <p>This function specifies that future file operations which operate in the save game area (i.e. all file writes, and reads from files that aren&#39;t in the bundle area) will be associated with the specified user ID pointer. This can be called as often as necessary to redirect save data to the appropriate user, or you can use the constant <span class="inline">pointer_null</span> to save to the generic machine storage area.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">xboxlive_set_savedata_user(user_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span> or <span data-keyref="Type_Pointer_Null">pointer_null</span></td>
-        <td>The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (xboxlive_get_savedata_user() != user_id[0])<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_set_savedata_user</h1><p> 이 기능은 게임 저장 영역에서 작동하는 향후 파일 작업(즉, 번들 영역에 없는 파일에서 모든 파일 쓰기 및 읽기)이 지정된 사용자 ID 포인터와 연결되도록 지정합니다. 저장 데이터를 적절한 사용자에게 리디렉션하기 위해 필요한 만큼 자주 호출하거나 상수를 사용할 수 있습니다. <span class="inline">pointer_null</span> 일반 기계 저장 영역에 저장합니다.</p><p></p><h4> 통사론:</h4><p class="code">xboxlive_set_savedata_user(user_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> <span data-keyref="Type_ID_Xbox_User">Xbox 사용자 ID</span> 또는 <span data-keyref="Type_Pointer_Null">pointer_null</span></td><td> <span class="notranslate">The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (xboxlive_get_savedata_user() != user_id[0])<br />
     {<br />
         xboxlive_set_savedata_user(user_id[0]);<br />
-    }</p>
-  <p>The above code checks to see if a user is currently assigned as the save target, and if they are not then they are assigned.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Saving_Data.htm">Saving Data</a></div>
-        <div style="float:right">Next: <a href="xboxlive_get_savedata_user.htm">xboxlive_get_savedata_user</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 사용자가 현재 저장 대상으로 지정되어 있는지 확인하고 지정되지 않은 경우 지정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Saving_Data.htm">데이터 저장</a></div><div style="float:right"> 다음: <a href="xboxlive_get_savedata_user.htm"><span class="notranslate">xboxlive_get_savedata_user</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_set_savedata_user

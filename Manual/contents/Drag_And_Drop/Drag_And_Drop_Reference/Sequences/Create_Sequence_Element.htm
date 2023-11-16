@@ -3,65 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Sequence</title>
+  <title>시퀀스 생성</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Create Sequence action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Sequence Element" />
-  <meta name="search-keywords" content="Create Sequence,Create Sequence Element" />
+  <meta name="topic-comment" content="시퀀스 생성 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 시퀀스 요소 생성" />
+  <meta name="search-keywords" content="시퀀스 생성,시퀀스 요소 생성" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Sequence Element Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_create.png" /> Create Sequence</h1>
-  <p>With this action you can create a sequence element of any sequence from the Asset Browser. You give the name of the sequence and an x/y position within the room where it is to be created as well as the layer that it is to be created on (this layer must be an <b>asset layer</b>). You can tick the &quot;relative&quot; flags to position the sequence relative to the instance running the action code blocks. Whenever you create a sequence in the game in this way, it is given a unique <b>element ID</b> value with which you can then identify the sequence in further actions, therefore this action permits you to define a &quot;target&quot; variable to hold this ID value (as shown in the example below). Note that the target can be flagged as a temporary (local) variable, which will be created for the action and can be used in all subsequent actions for the event the action is in.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Sequence Element Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_create.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Sequence</td>
-        <td>The name of the sequence to create an element of.</td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x position in the room to create the sequence (can be relative to the calling instance).</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y position in the room to create the sequence (can be relative to the calling instance).</td>
-      </tr>
-      <tr>
-        <td>layer</td>
-        <td>The name (a string) of the asset layer to create the sequence on.</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The variable to target for the return value.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Sequence Element Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_create.png" />The above action block code creates a new sequence and stores its unique element ID value in a variable. This variable is then used to pause the sequence using the <a href="Pause_Sequence.htm">Pause Sequence</a> action.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Actions_Library.htm">Sequence Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Sequence_Element.htm">Destroy Sequence Element</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Sequence Element Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_create.png" /> 시퀀스 생성</h1><p> 이 작업을 통해 자산 브라우저에서 모든 시퀀스의 시퀀스 요소를 생성할 수 있습니다. 시퀀스의 이름과 시퀀스가 생성될 공간 내의 x/y 위치와 생성될 레이어를 제공합니다(이 레이어는 <b>자산 레이어</b> 여야 함). &quot;상대적&quot; 플래그를 선택하여 작업 코드 블록을 실행하는 인스턴스를 기준으로 시퀀스를 배치할 수 있습니다. 이런 방식으로 게임에서 시퀀스를 생성할 때마다 고유한 <b>요소 ID</b> 값이 제공되며, 이를 통해 이후 작업에서 시퀀스를 식별할 수 있습니다. 따라서 이 작업을 통해 이 ID 값을 보유할 &quot;대상&quot; 변수를 정의할 수 있습니다( 아래 예와 같이). 대상은 임시(로컬) 변수로 플래그가 지정될 수 있습니다. 이 변수는 작업에 대해 생성되고 작업이 있는 이벤트에 대한 모든 후속 작업에서 사용할 수 있습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Create Sequence Element Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_create.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Sequence</span></td><td> 요소를 생성할 시퀀스의 이름입니다.</td></tr><tr><td> <span class="notranslate">x</span></td><td> 시퀀스를 생성하기 위한 방의 x 위치(호출 인스턴스에 상대적일 수 있음).</td></tr><tr><td> <span class="notranslate">y</span></td><td> 시퀀스를 생성하기 위한 룸의 y 위치(호출 인스턴스에 상대적일 수 있음).</td></tr><tr><td> <span class="notranslate">layer</span></td><td> 시퀀스를 생성할 자산 레이어의 이름(문자열).</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환 값을 대상으로 하는 변수입니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Create Sequence Element Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_create.png" /> 위의 액션 블록 코드는 새로운 시퀀스를 생성하고 고유한 요소 ID 값을 변수에 저장합니다. 그런 다음 이 변수는 <a href="Pause_Sequence.htm">Pause Sequence</a> (시퀀스 일시 중지) 작업을 사용하여 시퀀스를 일시 중지하는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sequence_Actions_Library.htm">시퀀스 작업</a></div><div style="float:right"> 다음: <a href="Destroy_Sequence_Element.htm">시퀀스 요소 파괴</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Sequence Element

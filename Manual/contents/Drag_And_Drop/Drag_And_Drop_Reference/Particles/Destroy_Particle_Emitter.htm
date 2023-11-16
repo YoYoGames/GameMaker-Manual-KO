@@ -3,57 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Destroy Particle Emitter</title>
+  <title>파티클 이미터 파괴</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Destroy Particle Emitter action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Destroy Particle Emitter" />
-  <meta name="search-keywords" content="Destroy Particle Emitter" />
+  <meta name="topic-comment" content="Destroy Particle Emitter 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 파티클 이미터 파괴" />
+  <meta name="search-keywords" content="파티클 이미터 파괴" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Destroy Particle Emitter Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png" width="32" /> Destroy Particle Emitter</h1>
-  <p>This action will &quot;destroy&quot; the given particle emitter, ie: free up the memory used by the particle emitter. You supply the particle system ID that the emitter belongs to (as returned by the action <a href="Create_Particle_System.htm">Create Particle System</a>)
-    and then the actual emitter ID (as returned by the action <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>). This action should be called whenever you no longer need a particle emitter in your game, or whenever you wish to re-create
-    the particle emitter (for example, just before calling a <a href="../Game/Restart_Game.htm">Game Restart</a>). Note that if the particle system the emitter has been assigned to has <i>not</i> been flagged as <b>Persistent</b> then you do <i>not need to call this action</i>,
-    as the emitter will be automatically cleaned up on room end along with the particle system.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Destroy Particle Emitter Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Destroy_Particle_Emitter.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td>The ID value of the system that contains the emitter</td>
-      </tr>
-      <tr>
-        <td>Emitter</td>
-        <td>The ID value of the emitter to destroy</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Destroy Particle Emitter Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Destroy_Particle_Emitter.png" />The above action block code will check an instance variable and
-    if it is over 100 it will destroy the emitter assigned to the instance and then go to the next room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Emit_Particles.htm">Emit Particles</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Destroy Particle Emitter Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png" width="32" /> 파티클 이미터 파괴</h1><p> 이 작업은 주어진 파티클 이미터를 &quot;파괴&quot;합니다. 즉, 파티클 이미터가 사용하는 메모리를 해제합니다. 이미터가 속한 입자 시스템 ID( <a href="Create_Particle_System.htm">Create Particle System</a> 작업에서 반환됨)와 실제 이미터 ID( <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a> 작업에서 반환됨)를 제공합니다. 이 작업은 게임에서 파티클 이미터가 더 이상 필요하지 않거나 파티클 이미터를 다시 생성하려는 경우(예: <a href="../Game/Restart_Game.htm">Game Restart</a> 를 호출하기 직전) 호출해야 합니다. 이미터가 할당된 파티클 시스템에 <b>영구</b> 플래그가 지정 <i>되지</i> <i>않은 경우 이 액션을 호출할 필요가 없습니다</i>. 이미터는 파티클 시스템과 함께 룸 끝에서 자동으로 정리되기 때문입니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Destroy Particle Emitter Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Destroy_Particle_Emitter.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">System</span></td><td> 이미터를 포함하는 시스템의 ID 값</td></tr><tr><td> <span class="notranslate">Emitter</span></td><td> 파괴할 이미터의 ID 값</td></tr></tbody></table><p></p><h4> 예시:</h4><p><img alt="Destroy Particle Emitter Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Destroy_Particle_Emitter.png" /> 위의 액션 블록 코드는 인스턴스 변수를 확인하고 100 이상이면 인스턴스에 할당된 이미터를 파괴하고 다음 방으로 이동합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Actions.htm">입자 동작</a></div><div style="float:right"> 다음: <a href="Emit_Particles.htm">입자 방출</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Destroy Particle Emitter

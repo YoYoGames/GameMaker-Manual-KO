@@ -3,74 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Play Audio</title>
+  <title>오디오 재생</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains the Play Audio action" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Play Audio" />
-  <meta name="search-keywords" content="Play Audio" />
+  <meta name="topic-comment" content="오디오 재생 작업을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 오디오 재생" />
+  <meta name="search-keywords" content="오디오 재생" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /> <span data-field="title" data-format="default">Play Audio</span></h1>
-  <p>This action will set the given sound playing. You select the sound from the Asset Explorer and then set whether you would like the sound to be looped or not (a looped sound will play again and again between its loop start and end points until stopped) by setting the &quot;Loop&quot; flag.</p>
-  <p>Additionally you can set the gain, the offset (the track position to start playing from) and the pitch to play the sound with.</p>
-  <p>The final value for gain and pitch for the sound being played is the product of the values for gain and pitch set for the sound asset. The offset value is the value provided in the &quot;Offset&quot; field <strong>or</strong> the offset value of the sound <strong>asset</strong> being played when the field is left empty (see Example 2).</p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Play Audio Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Play_Audio.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Sound</td>
-        <td>The sound asset to play</td>
-      </tr>
-      <tr>
-        <td>Loop</td>
-        <td>Whether to loop the sound or not (off by default)</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>The target variable to store the return value</td>
-      </tr>
-      <tr>
-        <td>Gain</td>
-        <td>Value for the gain multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
-      </tr>
-      <tr>
-        <td>Offset</td>
-        <td>The time (in seconds) to set the start point to (default 0). Values beyond the end of the sound are clamped to its length.<br />
-          The sound asset&#39;s offset (track position) is used when this field if left blank.</td>
-      </tr>
-      <tr>
-        <td>Pitch</td>
-        <td>The pitch multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Example 1:</h4>
-  <p><img alt="Play Audio Example" class="center" height="1087" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio.png" width="698" />The above action block code checks for a mouse button press and if one is detected it then checks a global variable to see if it is not <span class="inline">true</span>. If it is not <span class="inline">true</span>, then a sound is played (and looped) and the global variable set to <span class="inline">true</span>, otherwise the sound is stopped and the global variable is set to <span class="inline">false</span>.<br />
-    The sound is played with default settings: a gain and pitch multiplier of 1 and an offset of 0 (the default offset of the sound asset).</p>
-  <h4>Example 2:</h4>
-  <p><img align="" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio_2.png" />The above action block code first sets the track position of sound asset &quot;snd_MusicBoss&quot; to 20 seconds. It then checks if the instance variable &quot;skip_intro&quot; is set to <span class="inline">true</span>. If it is, it starts playing &quot;snd_MusicBoss&quot; at 20 seconds, the value for track position set earlier (this is because the &quot;Offset&quot; field is left blank so the <strong>asset</strong> offset is used). The first 20 seconds of the audio are skipped.<br />
-    If the instance variable &quot;skip_intro&quot; is set to <span class="inline">false</span>, it also starts playing &quot;snd_MusicBoss&quot; but, because the &quot;Offset&quot; has been set to 0, the sound will start playing from the start. The track position of 20 seconds as defined earlier for the sound <strong>asset</strong> is ignored.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Actions.htm">Audio Actions</a></div>
-        <div style="float:right">Next: <a href="Stop_Audio.htm">Stop Audio</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /> <span data-field="title" data-format="default">오디오 재생</span></h1><p> 이 작업은 주어진 사운드 재생을 설정합니다. 자산 탐색기에서 사운드를 선택한 다음 &quot;Loop&quot; 플래그를 설정하여 사운드를 반복할지 여부를 설정합니다(반복된 사운드는 중지될 때까지 반복해서 재생됨).</p><p> 또한 게인, 오프셋(재생을 시작할 트랙 위치) 및 사운드를 재생할 피치를 설정할 수 있습니다.</p><p> 재생 중인 사운드에 대한 게인 및 피치의 최종 값은 사운드 자산에 대해 설정된 게인 및 피치 값의 곱입니다. 오프셋 값은 &quot;오프셋&quot; 필드에 제공된 값 <strong>또는</strong> 필드가 비어 있을 때 재생되는 사운드 <strong>자산</strong> 의 오프셋 값입니다(예제 2 참조).</p><h4> 동작 구문:</h4><p><img alt="Play Audio Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Play_Audio.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Sound</span></td><td> 재생할 사운드 자산</td></tr><tr><td> <span class="notranslate">Loop</span></td><td> 소리를 반복할지 여부(기본적으로 꺼져 있음)</td></tr><tr><td> <span class="notranslate">Target</span></td><td> 반환 값을 저장할 대상 변수</td></tr><tr><td> <span class="notranslate">Gain</span></td><td> 게인 승수 값(기본값 1). 여기에 설정된 게인 배율은 사운드 자산의 게인 배율과 곱해집니다.</td></tr><tr><td> <span class="notranslate">Offset</span></td><td> 시작 지점을 (기본값 0)으로 설정하는 시간(초)입니다. 주어진 소리의 길이보다 긴 값은 무시됩니다.<br /> 이 필드를 공백으로 두면 사운드 자산의 오프셋(트랙 위치)이 사용됩니다.</td></tr><tr><td> <span class="notranslate">Pitch</span></td><td> 피치 승수(기본값 1). 여기에 설정된 게인 배율은 사운드 자산의 게인 배율과 곱해집니다.</td></tr></tbody></table><p></p><h4> 예 1:</h4><p><img alt="Play Audio Example" class="center" height="1087" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio.png" width="698" /> 위의 동작 블록 코드는 마우스 버튼 누름을 확인하고 감지되면 전역 변수를 확인하여 그렇지 않은지 확인합니다. <span class="inline">true</span>. 그렇지 않은 경우 <span class="inline">true</span>, 사운드가 재생되고 반복되며 전역 변수가 다음으로 설정됩니다. <span class="inline">true</span>, 그렇지 않으면 사운드가 중지되고 전역 변수가 다음으로 설정됩니다. <span class="inline">false</span>.<br /> 사운드는 기본 설정으로 재생됩니다. 게인 및 피치 승수는 1이고 오프셋은 0(사운드 자산의 기본 오프셋)입니다.</p><h4> 예 2:</h4><p><img align="" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio_2.png" /> 위의 액션 블록 코드는 먼저 사운드 자산 &quot;snd_MusicBoss&quot;의 트랙 위치를 20초로 설정합니다. 그런 다음 인스턴스 변수 &quot;skip_intro&quot;가 다음으로 설정되어 있는지 확인합니다. <span class="inline">true</span>. 그렇다면 20초에 &quot;snd_MusicBoss&quot; 재생을 시작합니다. 이 값은 이전에 설정된 트랙 위치 값입니다(&quot;Offset&quot; 필드가 비어 있어 <strong>자산</strong> 오프셋이 사용되기 때문입니다). 오디오의 처음 20초는 건너뜁니다.<br /> 인스턴스 변수 &quot;skip_intro&quot;가 다음으로 설정된 경우 <span class="inline">false</span>, &quot;snd_MusicBoss&quot;도 재생되지만 &quot;Offset&quot;이 0으로 설정되어 있기 때문에 처음부터 사운드가 재생됩니다. 사운드 <strong>자산</strong> 에 대해 앞서 정의된 20초의 트랙 위치는 무시됩니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio_Actions.htm">오디오 작업</a></div><div style="float:right"> 다음: <a href="Stop_Audio.htm">오디오 중지</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Play Audio

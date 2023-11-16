@@ -6,59 +6,21 @@
   <title>tile_get_flip</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the function tile_get_flip" />
+  <meta name="topic-comment" content="tile_get_flip 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="tile_get_flip" />
   <meta name="search-keywords" content="tile_get_flip" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tile_get_flip</h1>
-  <p>This function can be used to check whether in a given set of tile-data the tile has been flipped or not. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and the function will return <span class="inline">true</span> if the tile is flipped, or <span class="inline">false</span> if not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">tile_get_flip(tiledata)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>the tile-data to check</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tile_get_flip</h1><p> 이 함수는 주어진 타일 데이터 세트에서 타일이 뒤집혔는지 여부를 확인하는 데 사용할 수 있습니다. 함수를 사용하여 검색할 수 있는 타일 데이터를 제공합니다.<a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, 함수가 반환됩니다. <span class="inline">true</span> 타일이 뒤집힌 경우 또는 <span class="inline">false</span> 그렇지 않다면.</p><p></p><h4> 통사론:</h4><p class="code">tile_get_flip(tiledata)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tiledata</span></td><td> <span data-keyref="Type_Real_Tile_Data">타일 데이터</span></td><td> <span class="notranslate">the tile-data to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
     var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y);<br />
     var data = tilemap_get(map_id, mx, my);<br />
     var bool = !tile_get_flip(data);<br />
     data = tile_set_flip(data, bool);<br />
-    tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then gets the x and y cell position for the tile under the mouse. This position is then used to get the tile-data which is flipped and then used to set the tile again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tile_get_mirror.htm">tile_get_mirror</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    tilemap_set(map_id, data, mx, my);</p><p> 위의 코드는 주어진 레이어에서 타일 맵 ID를 가져온 다음 마우스 아래 타일의 x 및 y 셀 위치를 가져옵니다. 이 위치는 뒤집힌 다음 타일을 다시 설정하는 데 사용되는 타일 데이터를 가져오는 데 사용됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Tile_Map_Layers.htm">타일 맵 레이어</a></div><div style="float:right"> 다음: <a href="tile_get_mirror.htm"><span class="notranslate">tile_get_mirror</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tile_get_flip

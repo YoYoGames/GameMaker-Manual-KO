@@ -6,46 +6,17 @@
   <title>debug_get_callstack</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for debug_get_callstack" />
+  <meta name="topic-comment" content="debug_get_callstack에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="debug_get_callstack" />
   <meta name="search-keywords" content="debug_get_callstack" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>debug_get_callstack</h1>
-  <p>This function generates an array of strings as the &quot;callstack&quot; where the current script is listed first, and then all the other scripts that were run in order for the current script to be executed. The exact string format will vary depending on the target platform chosen, but it will mostly have the script/event name, then a colon : and the line number, similar to this:</p>
-  <p class="code"><span class="inline">&quot;gml_Script_script2:1&quot;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>debug_get_callstack</h1><p> 이 함수는 현재 스크립트가 먼저 나열된 다음 현재 스크립트를 실행하기 위해 실행된 다른 모든 스크립트가 나열되는 &quot;호출 스택&quot;으로 문자열 배열을 생성합니다. 정확한 문자열 형식은 선택한 대상 플랫폼에 따라 다르지만 대부분 다음과 같이 스크립트/이벤트 이름, 콜론 및 줄 번호가 있습니다.</p><p class="code"><span class="inline">&quot;gml_Script_script2:1&quot;<br />
       &quot;gml_Script_script1:32&quot;<br />
       &quot;gml_Script_script0:64&quot;<br />
-      &quot;gml_Object_object0_Create_0:1&quot;</span></p>
-  <p>The function allows for an optional argument to be passed in, which is the maximum depth of the returned callstack. This value is the number of scripts that are included in the returned array starting from the current script. If this argument is not specified, then the full callstack will be returned.</p>
-  <p>Note that the returned array will always contain 0 in its last position, after listing the callstack scripts.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">debug_get_callstack([maxdepth])</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>[maxdepth]</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The maximum depth of the callstack that is returned</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array">Array</span></p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
-  <p class="code">if debug_mode<br />
+      &quot;gml_Object_object0_Create_0:1&quot;</span></p><p> 이 함수는 반환된 호출 스택의 최대 깊이인 선택적 인수를 전달할 수 있습니다. 이 값은 현재 스크립트에서 시작하여 반환된 배열에 포함된 스크립트의 수입니다. 이 인수를 지정하지 않으면 전체 호출 스택이 반환됩니다.</p><p> 반환된 배열은 호출 스택 스크립트를 나열한 후 항상 마지막 위치에 0을 포함합니다.</p><p></p><h4> 통사론:</h4><p class="code">debug_get_callstack([maxdepth])</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">[maxdepth]</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> The maximum depth of the callstack that is returned</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span></p><p></p><h4> <b>예시:</b></h4><p class="code">if debug_mode<br />
     {<br />
         if keyboard_check(vk_escape)<br />
         {<br />
@@ -55,19 +26,7 @@
                 show_debug_message(_a[i]);<br />
             }<br />
         }<br />
-    }</p>
-  <p>The above code checks to see if debug mode is enabled and if it is, checks to see if a key is being held down. In that case, it outputs the current call stack to the console, with a maximum depth of 4.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="exception_unhandled_handler.htm">exception_unhandled_handler</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 디버그 모드가 활성화되어 있는지 확인하고 활성화되어 있으면 키가 누르고 있는지 확인합니다. 이 경우 최대 깊이가 4인 현재 호출 스택을 콘솔에 출력합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Debugging.htm">디버깅</a></div><div style="float:right"> 다음: <a href="exception_unhandled_handler.htm"><span class="notranslate">exception_unhandled_handler</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 debug_get_callstack

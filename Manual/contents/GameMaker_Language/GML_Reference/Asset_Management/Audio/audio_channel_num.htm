@@ -6,75 +6,34 @@
   <title>audio_channel_num</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function audio_channel_num" />
+  <meta name="topic-comment" content="audio_channel_num 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="audio_channel_num" />
   <meta name="search-keywords" content="audio_channel_num" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">audio_channel_num</span></h1>
-  <p>With this function you can set how many audio channels are available for playing audio in <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>This basically means the number of sounds (or <em>sound instances</em> or <em>voices</em>) that can be played <em>simultaneously</em>. Or, put differently, the number of calls to any of the <span class="inline2">audio_play_sound_</span> functions that you can make before sounds may be lost.</p>
-  <p>If the number exceeds this value, those sounds with a lower <i>priority</i> are stopped to free up a channel for the sounds with a higher <i>priority</i>.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_tip.hts"> </span> You can use this function to optimise your game for devices as the lower the number of channels for audio the better the performance, but bear in mind that this may also cause noticeable cutoff of certain sounds if many are played at once.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_warning.hts"> </span> This function is a configuration function of the audio engine and stops all playing sounds when called (i.e. <span class="inline3_func"><a data-xref="{title}" href="audio_stop_all.htm">audio_stop_all</a></span>). Ideally it should not be called when sounds are already playing, unless you are e.g. using this as an adjustable setting in your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_channel_num</span>(num);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>num</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Number of available audio channels (default is <span data-keyref="Max_Audio_Channels_Default">128</span>)</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">switch (os_browser)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_channel_num</h1><p> 이 기능을 사용하면 <span data-keyref="GameMaker Name">GameMaker</span> 에서 오디오를 재생하는 데 사용할 수 있는 오디오 채널 수를 설정할 수 있습니다. 이것이 기본적으로 의미하는 것은 한 번에 재생할 수 있는 동시 사운드 수를 지정하고 숫자가 양을 초과하면 <i>우선 순위</i> 가 낮은 사운드를 중지하여 <i>우선</i> 순위가 높은 사운드에 대한 채널을 확보한다는 것입니다.. 이 기능을 사용하여 장치에 맞게 게임을 최적화할 수 있습니다. 오디오용 채널 수가 적을수록 성능이 향상되지만 동시에 여러 개를 재생할 경우 특정 사운드가 눈에 띄게 끊길 수도 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_channel_num(num);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">num</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Number of available audio channels (default is 128).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_browser)<br />
     {<br />
         case browser_not_a_browser:<br />
             switch (os_type)<br />
             {<br />
                 case os_windows:<br />
-                case os_macosx:<br />
-                    <span data-field="title" data-format="default">audio_channel_num</span>(200);<br />
+                case os_macos:<br />
+                    audio_channel_num(200);<br />
                 break;<br />
     <br />
                 default:<br />
-                    <span data-field="title" data-format="default">audio_channel_num</span>(64);<br />
+                    audio_channel_num(64);<br />
                 break;<br />
             }<br />
         break;<br />
     <br />
         default:<br />
-            <span data-field="title" data-format="default">audio_channel_num</span>(16);<br />
+            audio_channel_num(16);<br />
         break;<br />
     }
-  </p>
-  <p>The above code checks the platform that the game is running on and changes the number of available sound channels to increase performance.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="audio_falloff_set_model.htm">audio_falloff_set_model</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 게임이 실행되는 플랫폼을 확인하고 사용 가능한 사운드 채널 수를 변경하여 성능을 향상시킵니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio.htm">오디오</a></div><div style="float:right"> 다음: <a href="audio_debug.htm"><span class="notranslate">audio_debug</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 audio_channel_num

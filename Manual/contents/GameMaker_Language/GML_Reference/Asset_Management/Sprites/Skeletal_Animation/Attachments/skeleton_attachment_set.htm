@@ -6,60 +6,16 @@
   <title>skeleton_attachment_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function skeleton_attachment_set" />
+  <meta name="topic-comment" content="skeleton_attachment_set 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="skeleton_attachment_set" />
   <meta name="search-keywords" content="skeleton_attachment_set" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">skeleton_attachment_set</span></h1>
-  <p>A skeletal animation sprite may have other images added as attachments, with these images being added to a named slot (the name is given when you create the attachment slot in your animation program) and they will be drawn along with the animation of the current sprite. With this function you can set an attachment to a given slot, where you are required to give the names (as strings) of the slot and the attachment. These names are defined by the animation program used, or (in the case of the attachment) when you call <a href="skeleton_attachment_create.htm"><span class="inline">skeleton_attachment_create()</span></a>.</p>
-  <p>Note that you can also pass a <span class="inline">sprite_index</span> in as the attachment, and that sprite will be used, or you can use -1 to remove the attachment from the slot. When you pass a sprite index in as an argument, it will create an attachment slot using the name of the sprite as the string to name the slot (so using <span class="inline">spr_sword</span>, for example, will create an attachment slot &quot;spr_sword&quot;), and the slot will use the first image index (0) of the the sprite, as well as its x and y origin offset, with a scale of (1,1) and a rotation of 0.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">skeleton_attachment_set(slot, attachment);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>slot</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The slot name (a string) to get the attachment of.</td>
-      </tr>
-      <tr>
-        <td>attachment</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Asset_Sprite"><a href="../../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The name (as a string or a sprite_index) of the attachment image.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if skeleton_attachment_get(&quot;slot_leftHand&quot;) == &quot;&quot;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_attachment_set</h1><p> 골격 애니메이션 스프라이트에는 다른 이미지가 첨부 파일로 추가될 수 있으며 이러한 이미지는 명명된 슬롯에 추가되며(애니메이션 프로그램에서 첨부 슬롯을 만들 때 이름이 지정됨) 현재 스프라이트의 애니메이션과 함께 그려집니다.. 이 기능을 사용하면 지정된 슬롯에 부착물을 설정할 수 있으며, 여기서 슬롯 및 부착물의 이름(문자열으로)을 제공해야 합니다. 이러한 이름은 사용된 애니메이션 프로그램에 의해 정의되거나(첨부 파일의 경우)<a href="skeleton_attachment_create.htm"><span class="inline">skeleton_attachment_create()</span></a>.</p><p> 합격할 수도 있으니 참고하세요 <span class="inline">sprite_index</span> in을 어태치먼트로 사용하고 해당 스프라이트를 사용하거나 -1을 사용하여 슬롯에서 어태치먼트를 제거할 수 있습니다. 스프라이트 인덱스를 인수로 전달하면 스프라이트 이름을 슬롯 이름을 지정하는 문자열로 사용하여 연결 슬롯이 생성됩니다(따라서 <span class="inline">spr_sword</span> 예를 들어, 첨부 슬롯 &quot;spr_sword&quot;를 생성하고 슬롯은 스프라이트의 첫 번째 이미지 인덱스(0)와 스케일(1,1)의 x 및 y 원점 오프셋을 사용합니다. 그리고 0의 회전.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_attachment_set(slot, attachment);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">slot</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The slot name (a string) to get the attachment of.</span></td></tr><tr><td> <span class="notranslate">attachment</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_Asset_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The name (as a string or a sprite_index) of the attachment image.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String">String</span></p><p></p><h4> 예시:</h4><p class="code">if skeleton_attachment_get(&quot;slot_leftHand&quot;) == &quot;&quot;<br />
     {<br />
         skeleton_attachment_set(&quot;slot_leftHand&quot;, choose(&quot;sword&quot;, &quot;spear&quot;, &quot;knife&quot;));<br />
-    }</p>
-  <p>The above code would check the currently assigned attachment name for the slot named &quot;slot_leftHand&quot; and if an empty string is returned, a new sprite is attached.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Attachments.htm">Attachments</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="skeleton_attachment_exists.htm">skeleton_attachment_exists</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;slot_leftHand&quot;라는 슬롯에 대해 현재 할당된 부착 이름을 확인하고 빈 문자열이 반환되면 새 스프라이트가 부착됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Attachments.htm">첨부 파일</a></div><div style="float:right"> 다음: <a href="skeleton_attachment_create.htm"><span class="notranslate">skeleton_attachment_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_attachment_set

@@ -6,62 +6,16 @@
   <title>display_reset</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for display_reset" />
+  <meta name="topic-comment" content="display_reset에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="display_reset,display_aa" />
   <meta name="search-keywords" content="display_reset,display_aa" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_reset</h1>
-  <p>This function Resets the display settings to the ones that were set when the game was started, but also allows you to change the current level of full screen anti-aliasing being used and whether to use vertical synchronisation. The available anti-aliasing levels are 0,2,4 and 8, with the default startup value being set to 0, and the default v-sync setting is false (off). Switching v-sync on may give a smoother gaming experience but it will also need more processing power and so its impact must be considered careful before use, and the same goes for the anti-aliasing where the higher the number the more processing that is required.</p>
-  <p>Since not all target devices are the same, some may not support 8x or 4x anti-aliasing for example, and so there is a <b>read only</b> variable available for getting the different levels of AA that the device running the game can display:</p>
-  <p class="code">display_aa</p>
-  <p>This variable will return an integer value based on the setting of bits for the different levels. So for only 2xAA, this will report 2, for 2x and 4x availability it will report 6. For 8 and 4 it will report 12. For all 3 levels (2,4 and 8) it will report 14.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">display_reset(aa, vsync);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>aa</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The level of anti-aliasing filtering (0, 2, 4 or 8).</td>
-      </tr>
-      <tr>
-        <td>vsync</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Toggle vertical synchronisation to on (true) or off (false).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (display_aa &gt; 12)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>display_reset</h1><p> 이 기능은 디스플레이 설정을 게임이 시작될 때 설정된 것으로 재설정하지만 사용 중인 전체 화면 앤티 앨리어싱의 현재 수준과 수직 동기화 사용 여부를 변경할 수도 있습니다. 사용 가능한 앤티앨리어싱 수준은 0,2,4 및 8이며 기본 시작 값은 0으로 설정되고 기본 v-sync 설정은 false(꺼짐)입니다. v-sync를 켜면 더 부드러운 게임 경험을 얻을 수 있지만 더 많은 처리 능력이 필요하므로 사용하기 전에 그 영향을 주의 깊게 고려해야 합니다. 숫자가 높을수록 더 많은 처리가 필요한 앤티 앨리어싱도 마찬가지입니다..</p><p> 모든 대상 장치가 동일하지 않기 때문에 일부 장치는 예를 들어 8x 또는 4x 앤티앨리어싱을 지원하지 않을 수 있으므로 게임을 실행하는 장치가 표시할 수 있는 다양한 수준의 AA를 가져오는 데 사용할 수 있는 <b>읽기 전용</b> 변수가 있습니다.</p><p class="code">display_aa</p><p> 이 변수는 다른 레벨에 대한 비트 설정에 따라 정수 값을 반환합니다. 따라서 2xAA의 경우에만 2를 보고하고 2x 및 4x 가용성의 경우 6을 보고합니다. 8 및 4의 경우 12를 보고합니다. 모든 3개 수준(2,4 및 8)에 대해 14를 보고합니다.</p><p></p><h4> 통사론:</h4><p class="code">display_reset(aa, vsync);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">aa</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The level of anti-aliasing filtering (0, 2, 4 or 8).</span></td></tr><tr><td> <span class="notranslate">vsync</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Toggle vertical synchronisation to on (true) or off (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">if (display_aa &gt; 12)<br />
     {<br />
         display_reset(8, true);<br />
-    }</p>
-  <p>The above code will set the anti-aliasing level to 8 if supported and switch v-sync to on.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_get_width.htm">display_get_width</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 지원되는 경우 앤티 앨리어싱 수준을 8로 설정하고 v-sync를 켜기로 전환합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Cameras_And_Display.htm">사진기와 전시</a></div><div style="float:right"> 다음: <a href="display_get_width.htm"><span class="notranslate">display_get_width</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_reset

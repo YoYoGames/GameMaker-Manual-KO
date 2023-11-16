@@ -6,46 +6,14 @@
   <title>physics_joint_get_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_joint_get_value" />
+  <meta name="topic-comment" content="physical_joint_get_value에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_joint_get_value" />
   <meta name="search-keywords" content="physics_joint_get_value" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_get_value</h1>
-  <p>By using a series of predefined constants, you can ask <span data-keyref="GameMaker Name">GameMaker</span> to tell you a number of things about the state of any given joint. This is very useful as it gives you the ability to delete joints or change an instances behaviour depending on whatever your needs are at the time. There are a number of constants that can be used in this function and they can be found here: <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>, but be aware that complex calculations are done when you call these, so they should be used with care and only when necessary and note that <i>many are unique to a specific type of joint</i>.</p>
-  <p>If the property does not exist (if, for example, you check a pulley joint for prismatic translation) then 0 will be the return value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_joint_get_value(joint, value)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>joint</td>
-        <td><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></td>
-        <td>The index of the joint that you wish to test</td>
-      </tr>
-      <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Constant_Phy_Joint">Physics Joint Constant</span></td>
-        <td>The constant for the joint property that you wish to test</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if shipJoint<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_get_value</h1><p> 일련의 사전 정의된 상수를 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에 지정된 관절의 상태에 대한 여러 가지 정보를 알려달라고 요청할 수 있습니다. 이는 당시의 필요에 따라 관절을 삭제하거나 인스턴스 동작을 변경할 수 있는 기능을 제공하므로 매우 유용합니다. 이 함수에 사용할 수 있는 여러 상수가 있으며 여기에서 찾을 수 있습니다. <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>, 그러나 이것을 호출할 때 복잡한 계산이 수행되므로 주의해서 사용해야 하고 필요할 때만 사용해야 합니다. <i>많은 것이 특정 유형의 관절에 고유합니다</i>.</p><p> 속성이 존재하지 않는 경우(예를 들어, 도르래 조인트에서 프리즘 변환을 확인하는 경우) 0이 반환 값이 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_get_value(joint, value)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">joint</span></td><td> <span data-keyref="Type_ID_Physics_Joint">물리 조인트 ID</span></td><td> <span class="notranslate">The index of the joint that you wish to test</span></td></tr><tr><td> <span class="notranslate">value</span></td><td> <span data-keyref="Type_Constant_Phy_Joint">물리학 조인트 상수</span></td><td> <span class="notranslate">The constant for the joint property that you wish to test</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">if shipJoint<br />
     {<br />
         var reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br />
         var reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_y);<br />
@@ -55,19 +23,7 @@
             physics_joint_delete(shipJoint);<br />
             shipJoint = -1;<br />
         }<br />
-    }</p>
-  <p>The above code checks to see if the variable &quot;shipJoint&quot; holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. Finally, if the total force is greater than 2, the joint is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_set_value.htm">physics_joint_set_value</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 &quot;shipJoint&quot; 변수가 관절 인덱스를 보유하고 있는지 확인하고 보유하고 있다면 두 상수를 사용하여 해당 관절에 가해지는 힘을 계산합니다. 마지막으로 전체 힘이 2보다 크면 조인트가 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_set_value.htm"><span class="notranslate">physics_joint_set_value</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_get_value

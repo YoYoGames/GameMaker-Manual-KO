@@ -4,129 +4,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>network_set_config</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for network_set_config" />
-  <meta name="rh-index-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait,network_config_enable_multicast,network_config_disable_multicast " />
-  <meta name="search-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait,network_config_enable_multicast,network_config_disable_multicast " />
+  <meta name="topic-comment" content="network_set_config에 대한 참조 페이지" />
+  <meta name="rh-index-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait" />
+  <meta name="search-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_set_config</h1>
-  <p>With this function you can set different network configurations.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This function will not work when used in a project running on the HTML5 target.</p>
-  <p>These configurations are given as <b>constants</b> and the setting will depend on the constant that you have chosen. The table below lists the available constants and their settings:</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Network_Config"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm" target="_blank">Network Config Constant</a></span></th>
-      </tr>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Setting</th>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_connect_timeout</span></td>
-        <td>Set a connection timeout value</td>
-        <td>A value in milliseconds</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_use_non_blocking_socket</span></td>
-        <td>Tell <span data-keyref="GameMaker Name">GameMaker</span> not to block on connect.</td>
-        <td>0 = block, 1 = don&#39;t block</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_enable_reliable_udp</span></td>
-        <td>Enables the &quot;reliable UDP&quot; protocol for an existing UDP socket</td>
-        <td>The socket ID to target</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_disable_reliable_udp</span></td>
-        <td>Disables the &quot;reliable UDP&quot; protocol for an existing UDP socked.</td>
-        <td>The socket ID to target</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_avoid_time_wait</span></td>
-        <td>Sets the <span class="inline">SO_LINGER</span> timeout value to 0 for an exisiting TCP socket</td>
-        <td>The socket ID to target</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_enable_multicast</span></td>
-        <td>Enables multicast support for UDP</td>
-        <td>The socket ID to target</td>
-      </tr>
-      <tr>
-        <td><span class="inline">network_config_disable_multicast</span></td>
-        <td>Disables multicast support for UDP</td>
-        <td>The socket ID to target</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Timeout</h3>
-  <p>The first option (<span class="inline">network_config_connect_timeout</span>) simply sets the timeout for connecting to a server but doesn&#39;t change connection behaviour apart from the time you have to wait. It is recommended that you don&#39;t set this too low and keep it at about 1000 for a LAN only game or 4000 or so for internet, or the game may fail to connect randomly. If you wish to set a timeout value for sending/receiving packets then use the function <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p>
-  <h3>Non Blocking Sockets</h3>
-  <p>The second option (<span class="inline">network_config_use_non_blocking_socket</span>) means that the <span class="inline">network_connect_*</span> functions (non-async) will all return a <span class="inline">socket_id</span> instantly, <i>but you can&#39;t send or receive on that socket until you&#39;ve received an async network event</i>. The event triggered will have the &quot;type&quot; key set to <span class="inline">network_type_non_blocking_connect</span> (you can find further details from the page on the <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">Networking Asynchronous Event</a>). This is a <b>global</b> setting as <span data-keyref="GameMaker Name">GameMaker</span> does not support a mixture of blocking and non-blocking in one application.</p>
-  <h3>Reliable UDP</h3>
-  <p>The third and fourth options (<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span>) are for enabling or disabling the <span data-keyref="GameMaker Name">GameMaker</span> reliable UDP protocol and as such, should <b>only be used with UDP connections</b>. What &quot;reliable&quot; in this case this means is that, when enabled on <i>both</i> ends of a connection, <span data-keyref="GameMaker Name">GameMaker</span> will attempt to check your packets have arrived correctly and re-send any that don&#39;t arrive (note, we do not guarantee in your packets will arrive in order of transmission). When using a reliable socket type, there will be a 12-byte header added to all udp packets which contains information needed by <span data-keyref="GameMaker Name">GameMaker</span> to check the packet for errors and re-send missing packets. The following points are worth noting when using this option:</p>
-  <ul class="colour">
-    <li>The protocol should be enabled/disabled on both sides before sending your data, and any data sent or received before the option has been enabled/disabled will not be affected.</li>
-    <li>You can enable or disable the protocol for any given socket ID multiple times, as long as this is properly managed on both the server side and client side</li>
-    <li>It is possible to have two separate UDP sockets, one with reliable UDP enabled for one with reliable UDP disabled for the other.</li>
-  </ul>
-  <h3>TCP Timeout</h3>
-  <p>The option <span class="inline">network_config_avoid_time_wait</span> is for <strong>TCP connections only</strong> and can be used to set the <span class="inline">SO_LINGER</span> value to <span class="inline2">0</span> t<span>o avoid large numbers of connections sitting in the <span class="inline">TIME_WAIT</span> </span><span>state, tying up all the available resources on a server.</span> This change is permanent while the socket is alive and cannot be undone.</p>
-  <h3>Multicast</h3>
-  <p>The options <span class="inline">network_config_enable_multicast</span> and <span class="inline">network_config_disable_multicast</span> can be used to enable/disable multicast support on UDP. </p>
-  <p>When multicast is enabled on a UDP socket, it will be joined to the all-hosts (FF02::1) multicast group on each network interface in the system, and calls to <span class="inline3_func"><a data-xref="{title}" href="network_send_broadcast.htm">network_send_broadcast</a></span> will transmit multicast packets on those groups in addition to IPv4 broadcasts.</p>
-  <p>In general, games doing LAN discovery using <span class="inline3_func"><a data-xref="{title}" href="network_send_broadcast.htm">network_send_broadcast</a></span> will want to turn this on, however the game must be written to handle receiving the same packet multiple times from multiple IPs -- i.e. the host&#39;s IPv4 and IPv6 address(es) and disambiguate these from other hosts (e.g. by embedding a unique value in the packet for each sender).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">network_set_config(config_value, setting);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>config_value</td>
-        <td><span data-keyref="Type_Constant_Network_Config"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm" target="_blank">Network Config Constant</a></span></td>
-        <td>The config constant to set (refer to the table at the top of this page).</td>
-      </tr>
-      <tr>
-        <td>setting</td>
-        <td><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td>The setting value of the config.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">network_set_config(network_config_connect_timeout, 1000);<br />
-    network_set_config(network_config_use_non_blocking_socket, 1);</p>
-  <p>The above code will set the timeout for the network connection to 1000ms and tell <span data-keyref="GameMaker Name">GameMaker</span> not to block on connect.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
-        <div style="float:right">Next: <a href="network_set_timeout.htm">network_set_timeout</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>network_set_config</h1><p> 이 기능을 사용하여 다양한 네트워크 구성을 설정할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 기능은 HTML5 대상에서 실행 중인 프로젝트에서 사용할 때 작동하지 않습니다.</p><p> 이러한 구성은 <b>상수</b> 로 제공되며 설정은 선택한 상수에 따라 달라집니다. 아래 표에는 사용 가능한 상수와 해당 설정이 나와 있습니다.</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th colspan="3"> <span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">네트워크 구성 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th><th> 환경</th></tr><tr><td><span class="notranslate"><span class="inline">network_config_connect_timeout</span></span></td><td> 연결 시간 초과 값 설정</td><td> <span class="notranslate">A value in milliseconds</span></td></tr><tr><td><span class="notranslate"><span class="inline">network_config_use_non_blocking_socket</span></span></td><td> <span data-keyref="GameMaker Name">GameMaker</span> 에 연결 시 차단하지 않도록 지시합니다.</td><td> <span class="notranslate">0 = block, 1 = don&#39;t block</span></td></tr><tr><td><span class="notranslate"><span class="inline">network_config_enable_reliable_udp</span></span></td><td> 기존 UDP 소켓에 대해 &quot;신뢰할 수 있는 UDP&quot; 프로토콜을 활성화합니다.</td><td> <span class="notranslate">The socket ID to target</span></td></tr><tr><td><span class="notranslate"><span class="inline">network_config_disable_reliable_udp</span></span></td><td> 기존 UDP 소켓에 대해 &quot;신뢰할 수 있는 UDP&quot; 프로토콜을 비활성화합니다.</td><td> <span class="notranslate">The socket ID to target</span></td></tr><tr><td><span class="notranslate"><span class="inline">network_config_avoid_time_wait</span></span></td><td> 설정<span class="inline">SO_LINGER</span> 기존 TCP 소켓에 대해 시간 초과 값을 0으로 설정</td><td> <span class="notranslate">The socket ID to target</span></td></tr></tbody></table><p><br /> 첫 번째 옵션(<span class="inline">network_config_connect_timeout</span> ) 단순히 서버에 연결하기 위한 시간 초과를 설정하지만 기다려야 하는 시간을 제외하고 연결 동작을 변경하지 않습니다. 이 값을 너무 낮게 설정하지 말고 LAN 전용 게임의 경우 약 1000, 인터넷의 경우 약 4000 정도로 유지하는 것이 좋습니다. 그렇지 않으면 게임이 무작위로 연결되지 않을 수 있습니다. 패킷 송수신에 대한 시간 초과 값을 설정하려면 다음 기능을 사용하십시오.<a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p><p> 두 번째 옵션(<span class="inline">network_config_use_non_blocking_socket</span> )는 다음을 의미합니다. <span class="inline">network_connect_*</span> 함수(비비동기)는 모두 다음을 반환합니다. <span class="inline">socket_id</span> 즉시, <i>그러나 비동기 네트워크 이벤트를 수신할 때까지 해당 소켓에서 보내거나 받을 수 없습니다</i>. 트리거된 이벤트에는 &quot;유형&quot; 키가 다음으로 설정됩니다. <span class="inline">network_type_non_blocking_connect</span> ( <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">네트워킹 비동기 이벤트</a> 페이지에서 더 자세한 정보를 찾을 수 있습니다). <span data-keyref="GameMaker Name">GameMaker</span> 는 하나의 응용 프로그램에서 차단 및 비차단 혼합을 지원하지 않기 때문에 이는 <b>전역</b> 설정입니다.</p><p> 세 번째 및 네 번째 옵션(<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span> ) <span data-keyref="GameMaker Name">GameMaker</span> 신뢰할 수 있는 UDP 프로토콜을 활성화 또는 비활성화하기 위한 것이므로 <b>UDP 연결에서만</b> 사용해야 합니다. 이 경우 &quot;신뢰할 수 있는&quot; 것은 연결의 <i>양쪽</i> 끝에서 활성화된 경우 <span data-keyref="GameMaker Name">GameMaker</span> 가 패킷이 올바르게 도착했는지 확인하고 도착하지 않은 패킷을 다시 보내려고 시도한다는 것입니다(참고: 패킷은 전송 순서대로 도착합니다. 신뢰할 수 있는 소켓 유형을 사용하는 경우 <span data-keyref="GameMaker Name">GameMaker</span> 에서 패킷 오류를 확인하고 누락된 패킷을 다시 보내는 데 필요한 정보가 포함된 12바이트 헤더가 모든 udp 패킷에 추가됩니다. 이 옵션을 사용할 때 다음 사항에 유의해야 합니다.</p><ul class="colour"><li> 데이터를 보내기 전에 양쪽에서 프로토콜을 활성화/비활성화해야 하며 옵션이 활성화/비활성화되기 전에 보내거나 받은 데이터는 영향을 받지 않습니다.</li><li> 서버 측과 클라이언트 측 모두에서 적절하게 관리되는 한 주어진 소켓 ID에 대해 프로토콜을 여러 번 활성화하거나 비활성화할 수 있습니다.</li><li> 두 개의 개별 UDP 소켓을 가질 수 있습니다. 하나는 안정적인 UDP가 활성화되어 있고 다른 하나는 안정적인 UDP가 비활성화되어 있습니다.</li></ul><p> 마지막 옵션,<span class="inline">network_config_avoid_time_wait</span> <strong>TCP 연결 전용</strong> 이며 설정하는 데 사용할 수 있습니다. <span class="inline">SO_LINGER</span> 값을 <span class="inline">TIME_WAIT>0</span> 으로 설정 <span>하여 많은 수의 연결이<span class="inline"></span></span> <span>상태, 서버에서 사용 가능한 모든 리소스를 묶습니다.</span> 이 변경 사항은 소켓이 활성 상태인 동안 영구적이며 취소할 수 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">network_set_config(config_value, setting);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">config_value</span></td><td> <span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">네트워크 구성 상수</a></span></td><td> <span class="notranslate">The config constant to set (refer to the table at the top of this page).</span></td></tr><tr><td> <span class="notranslate">setting</span></td><td> <span data-keyref="Type_Any"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">변하기 쉬운</a></span></td><td> <span class="notranslate">The setting value of the config.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">String</a></span></p><p></p><h4> 예시:</h4><p class="code">network_set_config(network_config_connect_timeout, 1000);<br />
+    network_set_config(network_config_use_non_blocking_socket, 1);</p><p> 위의 코드는 네트워크 연결 시간 초과를 1000ms로 설정하고 <span data-keyref="GameMaker Name">GameMaker</span> 에 연결 시 차단하지 않도록 지시합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Networking.htm">네트워킹</a></div><div style="float:right"> 다음: <a href="network_set_timeout.htm"><span class="notranslate">network_set_timeout</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_set_config
@@ -135,8 +22,6 @@ network_config_use_non_blocking_socket
 network_config_enable_reliable_udp
 network_config_disable_reliable_udp
 network_config_avoid_time_wait 
-network_config_enable_multicast
-network_config_disable_multicast
 -->
   <!-- TAGS
 network_set_config

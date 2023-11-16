@@ -6,37 +6,13 @@
   <title>window_set_fullscreen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for window_set_fullscreen" />
+  <meta name="topic-comment" content="window_set_fullscreen에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="window_set_fullscreen" />
   <meta name="search-keywords" content="window_set_fullscreen" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_set_fullscreen</h1>
-  <p>With this function you can set the game window to be full screen (<span class="inline">true</span>) or not (<span class="inline">false</span>). Please note that for the <b>macOS</b> target, you <i>must</i> have unchecked the &quot;Start In Fullscreen&quot; option and checked the &quot;Allow the player to resize the game window&quot; option in the <a href="../../../../Settings/Game_Options.htm">Game Options</a>, otherwise this function will fail. Also note that this function will <i>not</i> work on HTML5 unless it&#39;s added in as a &quot;clickable&quot; callback (see <a href="../../Web_And_HTML5/clickable_add.htm">here</a> for more details).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">window_set_fullscreen(full);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>full</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Whether to set the screen to fullscreen (true) or not (false).</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if mouse_check_button_pressed(mb_left)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>window_set_fullscreen</h1><p> 이 기능을 사용하면 게임 창을 전체 화면으로 설정할 수 있습니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). <b>macOS</b> 대상의 경우 &quot;전체 화면에서 시작&quot; 옵션 <i>을</i> 선택 취소하고 <a href="../../../../Settings/Game_Options.htm">게임</a> 옵션에서 &quot;플레이어가 게임 창 크기를 조정할 수 있도록 허용&quot; 옵션을 선택해야 합니다. 그렇지 않으면 이 기능이 실패합니다. 또한 이 기능은 &quot;클릭 가능한&quot; 콜백으로 추가되지 않는 한 HTML5에서 작동 <i>하지 않습니다</i> (자세한 내용은 <a href="../../Web_And_HTML5/clickable_add.htm">여기</a> 참조).</p><p></p><h4> 통사론:</h4><p class="code">window_set_fullscreen(full);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">full</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Whether to set the screen to fullscreen (true) or not (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br />
     {<br />
         if window_get_fullscreen()<br />
         {<br />
@@ -46,19 +22,7 @@
         {<br />
             window_set_fullscreen(true);<br />
         }<br />
-    }</p>
-  <p>The above code checks for a mouse button press and then sets the window to fullscreen if it is not already, or sets it to windowed if it is already.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_set_position.htm">window_set_position</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 마우스 버튼 누름을 확인한 다음, 아직 전체 화면이 아닌 경우 창을 전체 화면으로 설정하고, 이미 있는 경우 창으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../The_Game_Window/The_Game_Window.htm">게임 창</a></div><div style="float:right"> 다음: <a href="../The_Game_Window/window_set_position.htm"><span class="notranslate">window_set_position</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 window_set_fullscreen

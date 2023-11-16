@@ -1,84 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Rooms</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Overview of the room editor." />
-  <meta name="rh-index-keywords" content="Quick Start - Rooms" />
-  <meta name="search-keywords" content="rooms,room editor,room" />
-  <meta name="robots" content="NOODP" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>객실</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="방 편집기 개요."/>
+  <meta name="rh-index-keywords" content="빠른 시작 - 회의실"/>
+  <meta name="search-keywords" content="방,룸 에디터,room"/>
+  <meta name="robots" content="NOODP"/>
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Rooms</h1>
-  <p>All games that you make in <span data-keyref="GameMaker Name">GameMaker</span> need at least one room to run (but can have many, many more) , and a room is just a space where you place instances of the objects that make up your game as well as tiles and any other graphical resources. When you first create a room in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> you will be presented with a new <a href="../The_Asset_Editors/Rooms.htm"><strong>Room Editor</strong></a> workspace with which to edit its properties, something like this:</p>
-  <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png" style="cursor: nwse-resize;" /></p>
-  <p>By default the room tools will be placed on the left, with two main sections:</p>
-  <ul class="colour">
-    <li><strong>Layer Editor</strong>: Everything in a room is placed on <em>layers</em>, and there are different layer types that you can choose from (more on this later). Layers are ordered by <em>depth </em>and this depth is what defines the order in which the layer contents will be rendered to the screen when the game runs. Depth ordering is from highest to lowest, so that the lower the depth the nearer the &quot;camera&quot; and the higher the depth the further away. For example, a layer with a depth of -300 will render over a layer with a depth of -100, and a layer with a depth of 1000 will render under everything with a depth less than this. Note that by default, <span data-keyref="GameMaker Name">GameMaker</span> will order layer depths for you according to the position in the Layer Editor, and you can drag around layers using the mouse to re-order them and <span data-keyref="GameMaker Name">GameMaker</span> will re-order the depths to match.</li>
-    <li><a href="../IDE_Tools/The_Inspector.htm"><strong>Inspector</strong></a>: When you open a room its properties such as room size and camera view ports are shown here. You can set them here as well.<br />
-      When you click a layer in the Layer Editor its properties, that depend on the layer type, are shown and can be changed here. This window permits you to change those properties and edit how the layer will be <a class="glossterm" data-glossterm="rendered" href="#">rendered</a>.</li>
-  </ul>
-  <p>We&#39;ve mentioned that there are different layer types, so let&#39;s just go over what they are and how they can be used when building your games:</p>
-  <table class="icons">
-    <tbody>
-      <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png" /></td>
-        <td class="icons"><strong>Background Layer</strong></td>
-        <td class="text">The background layer is a layer that can be filled with a <em>single </em>colour or a <em>single </em>image. It can be moved and positioned within the room, and you can have multiple background layers. Generally this is used, as the name suggests, to generate a constant background for all the other layers in the room. By Default a new room will always contain a background layer, but you can remove it if you don&#39;t need it.</td>
-      </tr>
-      <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png" /></td>
-        <td class="icons"><strong>Instance Layer</strong></td>
-        <td class="text">The instance layer is where you place all the instances of the objects that you require for the game. To add an instance to a layer, simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the object in the asset browser and then drag it into the room editor workspace. When you release the mouse button, an instance of that object will have been added to the room. By Default a new room will always contain an instance layer, but you can remove it if you don&#39;t need it.</td>
-      </tr>
-      <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png" /></td>
-        <td class="icons"><strong>Tile Map Layer</strong></td>
-        <td class="text"><span>After having created a <a class="glossterm" data-glossterm="tile sets" href="#">tile set</a>, you need to add the tiles to your room, which is done by creating a <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> layer. A tile map layer is a layer that permits you to add tiles from any of the tile set assets that you have created and will be set up automatically to use a grid the size of the tile set cells. You can only add a single tile to each grid cell, so if you require multiple tiles to occupy the same space, then you should be using multiple tile map layers.</span></td>
-      </tr>
-      <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png" /></td>
-        <td class="icons"><strong>Path Layer</strong></td>
-        <td class="text"><span>The path layer is the only one that does not actually get rendered when you run your game. This layer is more of a &quot;convenience&quot; layer for helping you to create or edit <strong>Path </strong>assets, since it permits you to add or edit paths within the actual room space.</span></td>
-      </tr>
-      <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Asset.png" /></td>
-        <td class="icons"><strong>Asset Layer</strong></td>
-        <td class="text">Sometimes you want a nice graphical effect but don&#39;t want the overhead of using an instance or don&#39;t need it to do anything other than draw itself. You could use a tile map, but given that tile maps are restricted to using a grid and only a single image per grid cell, they can be a bit restrictive. This is when you would use the asset layer. The asset layer simply takes a sprite resource and draws it using the parameters that you set when you add it into the room. Sprites and sequences can be added to this layer the same way that instances of objects are added to the instance layer, ie: you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the sprite in the asset browser and then drag it into the room editor workspace.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>
-    <!--</div>-->
-  </p>
-  <p>We won&#39;t go into much more details about the room editor here (for that we have <a href="../The_Asset_Editors/Rooms.htm">this section</a> of the manual), but we will briefly explain how to add instances to an Instance Layer, as you&#39;ll need to know that for the next section of the Quick Start Guide.</p>
-  <p>To add an instance to the room editor, you must first select an Instance Layer from the Layer Editor on the left (or create one if none exist). You can then go to the Asset Browser and simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag an object that you want from there and drop it into the room at the position you want, which will add a single instance of that object to your game:</p>
-  <p><img alt="Adding Instances To A room Animation" class="center" src="../assets/Images/QS_Guide/QS_AddingInstances.gif" /></p>
-  <p>If you want to place multiple instances in the room, then you can select an object from the resource tree and then press and hold <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> to preview the resource, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> you can then &quot;paint&quot; it into the room layer.</p>
-  <p><img alt="Painting Instances In A Room Animation" class="center" src="../assets/Images/QS_Guide/QS_PaintingInstances.gif" /></p>
-  <p>Note that assets are given a position when they are added into the room editor based on their X and Y axis positions relative to the room <strong>origin</strong>. The room origin is the (0, 0) position, which in <span data-keyref="GameMaker Name">GameMaker</span> is the top left corner, and to the right is +X and down is +Y, e.g.:</p>
-  <p><img alt="Room Editor Axis Alignment" class="center" src="../assets/Images/QS_Guide/QS_RoomEditorAxis.png" />In the above example the instance is placed in the middle of the room at position (X:512, Y:384). It&#39;s also possible to go outside of the room bounds and have positions that are greater than the room axis lengths, or even less than than the room origin - in which case the X/Y coordinates will be negative values.</p>
-  <p>For more detailed information on the Room Editor, you can see the following section of the manual:</p>
-  <ul class="colour">
-    <li><a href="../The_Asset_Editors/Rooms.htm">Editors: The Room Editor</a></li>
-  </ul>
-  <p>That wraps it up for the Room Editor in this Quick Start Guide, and you should now know enough to actually get started creating sprites and objects and designing rooms for them. The next sections of this guide are going to cover some of the programming fundamentals to help you on your way, starting with actually <strong>Drawing </strong>things to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Drawing.htm">Drawing</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 객실</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 에서 만드는 모든 게임은 실행을 위해 최소한 하나의 방이 필요하며(그러나 더 많이 가질 수 있음) 방은 게임을 구성하는 개체의 인스턴스와 타일 및 기타 모든 요소를 배치하는 공간일 뿐입니다. 그래픽 리소스. <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 처음으로 방을 생성하면 다음과 같이 속성을 편집할 수 있는 새로운 <a href="../The_Asset_Editors/Rooms.htm"><strong>방 편집기</strong></a> 작업 공간이 표시됩니다.</p><p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png"/></p><p> 기본적으로 룸 도구는 세 가지 주요 섹션과 함께 왼쪽에 배치됩니다.</p><ul class="colour"><li> <strong>레이어 편집기</strong>: 방의 모든 것은 <em>레이어</em> 에 배치되며 선택할 수 있는 다양한 레이어 유형이 있습니다(이에 대해서는 나중에 자세히 설명). 레이어는 <em>깊이</em> 에 따라 정렬되며 이 깊이는 게임이 실행될 때 레이어 콘텐츠가 화면에 렌더링되는 순서를 정의합니다. 깊이 순서는 가장 높은 것에서 가장 낮은 것으로, 깊이가 낮을수록 &quot;카메라&quot;에 가까울수록 깊이가 높을수록 멀어집니다. 예를 들어, 깊이가 -300인 레이어는 깊이가 -100인 레이어 위에 렌더링되고, 깊이가 1000인 레이어는 이보다 깊이가 낮은 모든 항목 아래에 렌더링됩니다. 기본적으로 <span data-keyref="GameMaker Name">GameMaker</span> 는 레이어 편집기의 위치에 따라 레이어 깊이를 정렬하며, 마우스를 사용하여 레이어 주위를 드래그하여 레이어를 재정렬할 수 있으며 <span data-keyref="GameMaker Name">GameMaker</span> 는 일치하도록 깊이를 재정렬합니다.</li><li> <strong>레이어 속성</strong>: 방에 추가하는 각 레이어에는 고유한 속성이 있으며 이러한 속성은 레이어 유형에 따라 변경됩니다. 이 창에서는 이러한 속성을 변경하고 레이어가 <a class="glossterm" data-glossterm="렌더링" href="#">렌더링되는</a> 방식을 편집할 수 있습니다.</li><li> <strong>방 속성</strong>: 방에는 여러 속성이 있으며 여기에서 설정할 수 있습니다. 방 크기, 활성화된 카메라 뷰 포트 및 기타 몇 가지 사항을 여기에서 설정할 수 있습니다.</li></ul><p> 다양한 레이어 유형이 있다고 언급했으므로 게임을 빌드할 때 레이어 유형이 무엇이며 어떻게 사용할 수 있는지 살펴보겠습니다.</p><table class="icons"><tbody><tr><td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png"/></td><td class="icons"> <strong>배경 레이어</strong></td><td class="text"> 배경 레이어는 <em>단일</em> 색상 또는 <em>단일</em> 이미지로 채울 수 있는 레이어입니다. 방 내에서 이동 및 배치할 수 있으며 여러 배경 레이어를 가질 수 있습니다. 일반적으로 이것은 이름에서 알 수 있듯이 방의 다른 모든 레이어에 대해 일정한 배경을 생성하는 데 사용됩니다. 기본적으로 새 방에는 항상 배경 레이어가 포함되지만 필요하지 않은 경우 제거할 수 있습니다.</td></tr><tr><td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png"/></td><td class="icons"> <strong>인스턴스 계층</strong></td><td class="text"> 인스턴스 레이어는 게임에 필요한 개체의 모든 인스턴스를 배치하는 곳입니다. 레이어에 인스턴스를 추가하려면<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 자산 브라우저의 개체에서 를 클릭한 다음 룸 편집기 작업 공간으로 끕니다. 마우스 버튼을 놓으면 해당 개체의 인스턴스가 방에 추가됩니다. 기본적으로 새 방에는 항상 인스턴스 레이어가 포함되지만 필요하지 않은 경우 제거할 수 있습니다.</td></tr><tr><td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png"/></td><td class="icons"> <strong>타일 맵 레이어</strong></td><td class="text"> <span><a class="glossterm" data-glossterm="타일 세트" href="#">타일 세트</a> 를 만든 후에는 <a class="glossterm" data-glossterm="타일 맵" href="#">타일 맵</a> 레이어를 만들어 방에 타일을 추가해야 합니다. 타일 맵 레이어는 생성한 타일 세트 자산의 타일을 추가할 수 있도록 하는 레이어이며 타일 세트 셀의 그리드 크기를 사용하도록 자동으로 설정됩니다. 각 그리드 셀에는 단일 타일만 추가할 수 있으므로 동일한 공간을 차지하기 위해 여러 타일이 필요한 경우 여러 타일 맵 레이어를 사용해야 합니다.</span></td></tr><tr><td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png"/></td><td class="icons"> <strong>경로 레이어</strong></td><td class="text"> <span>경로 레이어는 게임을 실행할 때 실제로 렌더링되지 않는 유일한 레이어입니다. 이 레이어는 실제 공간 내에서 경로를 추가하거나 편집할 수 있기 때문에 <strong>경로</strong> 자산을 생성하거나 편집하는 데 도움이 되는 &quot;편의성&quot; 레이어입니다.</span></td></tr><tr><td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Asset.png"/></td><td class="icons"> <strong>자산 계층</strong></td><td class="text"> 때로는 멋진 그래픽 효과를 원하지만 인스턴스를 사용하는 오버헤드를 원하지 않거나 자체적으로 그리는 것 외에 다른 작업을 수행할 필요가 없습니다. 타일 맵을 사용할 수 있지만 타일 맵이 그리드 사용으로 제한되고 그리드 셀당 단일 이미지만 사용된다는 점을 감안하면 약간 제한적일 수 있습니다. 자산 레이어를 사용할 때입니다. 자산 레이어는 단순히 스프라이트 리소스를 가져와 방에 추가할 때 설정한 매개변수를 사용하여 그립니다. 스프라이트와 시퀀스는 개체의 인스턴스가 인스턴스 레이어에 추가되는 것과 같은 방식으로 이 레이어에 추가될 수 있습니다.<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 자산 브라우저의 스프라이트에 있는 다음 룸 편집기 작업 공간으로 드래그합니다. </td></tr></tbody></table><p><!--</div>--></p><p> 룸 편집기에 대한 자세한 내용은 여기에서 다루지 않겠지만(매뉴얼의 <a href="../The_Asset_Editors/Rooms.htm">이 섹션</a> 이 있기 때문에), 인스턴스 레이어에 인스턴스를 추가하는 방법을 간략하게 설명합니다. 빠른 시작 안내서의 다음 섹션.</p><p> 룸 편집기에 인스턴스를 추가하려면 먼저 왼쪽의 레이어 편집기에서 인스턴스 레이어를 선택해야 합니다(또는 존재하지 않는 경우 새로 생성). 그런 다음 자산 브라우저로 이동하여<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> 거기에서 원하는 개체를 끌어 원하는 위치의 방에 놓으면 해당 개체의 단일 인스턴스가 게임에 추가됩니다.</p><p><img alt="Adding Instances To A room Animation" class="center" src="../assets/Images/QS_Guide/QS_AddingInstances.gif"/></p><p> 방에 여러 인스턴스를 배치하려면 리소스 트리에서 개체를 선택한 다음<img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"/> 리소스를 미리보기 위해 추가로 마우스 왼쪽 버튼을 클릭하면<img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> 그런 다음 룸 레이어에 &quot;페인트&quot;할 수 있습니다.</p><p><img alt="Painting Instances In A Room Animation" class="center" src="../assets/Images/QS_Guide/QS_PaintingInstances.gif"/></p><p> 자산은 방 <strong>원점</strong> 에 상대적인 X 및 Y 축 위치를 기반으로 방 편집기에 추가될 때 위치가 지정됩니다. 방의 원점은 (0, 0) 위치로 <span data-keyref="GameMaker Name">GameMaker</span> 에서 위쪽 모서리가 오른쪽에 있고 +X는 아래쪽이 +Y입니다. 예를 들면 다음과 같습니다.</p><p><img alt="Room Editor Axis Alignment" class="center" src="../assets/Images/QS_Guide/QS_RoomEditorAxis.png"/> 위의 예에서 인스턴스는 위치(X:512, Y:384)의 방 중앙에 배치됩니다. 또한 공간 경계를 벗어나 공간 축 길이보다 크거나 공간 원점보다 작은 위치를 가질 수도 있습니다. 이 경우 X/Y 좌표는 음수 값이 됩니다.</p><p> Room Editor에 대한 자세한 내용은 매뉴얼의 다음 섹션을 참조하십시오.</p><ul class="colour"><li> <a href="../The_Asset_Editors/Rooms.htm">편집자: 방 편집자</a></li></ul><p> 이것으로 이 퀵 스타트 가이드의 룸 에디터에 대한 내용을 마치며 이제 실제로 스프라이트와 객체를 만들고 이를 위한 룸 디자인을 시작하기에 충분할 것입니다. 이 가이드의 다음 섹션에서는 실제로 화면에 사물을 <strong>그리는</strong> 것부터 시작하여 진행에 도움이 되는 몇 가지 프로그래밍 기본 사항을 다룰 것입니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Content.htm">인덱스</a></div><div style="float:right"> 다음: <a href="Drawing.htm">그리기</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Rooms
@@ -87,5 +21,5 @@ Quick Start: Rooms
   <!-- TAGS
 qs_rooms
 -->
-</body>
-</html>
+
+</body></html>

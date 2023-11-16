@@ -6,73 +6,20 @@
   <title>sprite_set_bbox</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function sprite_set_bbox" />
+  <meta name="topic-comment" content="sprite_set_bbox 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="sprite_set_bbox" />
   <meta name="search-keywords" content="sprite_set_bbox" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_bbox</h1>
-  <p>This function can be used to set the bounding box values for a sprite. You supply the sprite index to use and then the left, top, right and bottom values for the bounding box positions. The positions are <i>absolute</i> values, where the (0, 0) position corresponds to the top left corner of the sprite, regardless of the offset for the sprite, any &quot;empty&quot; pixels the sprite may have, or where it is being drawn in the room.</p>
-  <p class="note"><span class="note">NOTE</span> This function affects the sprite <b>asset </b>so that all further instances with this sprite will have the same bounding box.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">sprite_set_bbox(ind, left, top, right, bottom);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to set the bounding box on.</td>
-     </tr>
-      <tr>
-        <td>left</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The left side of the bounding box</td>
-     </tr>
-      <tr>
-        <td>top</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The top of the bounding box.</td>
-     </tr>
-      <tr>
-        <td>right</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The right side of the bounding box</td>
-     </tr>
-      <tr>
-        <td>bottom</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The bottom of the bounding box.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if sprite_get_bbox_mode(sprite_index) == 2<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_set_bbox</h1><p> 이 함수는 스프라이트의 경계 상자 값을 설정하는 데 사용할 수 있습니다. 사용할 스프라이트 인덱스를 제공한 다음 경계 상자 위치에 대한 왼쪽, 위쪽, 오른쪽 및 아래쪽 값을 제공합니다. 위치는 <i>절대</i> 값이며, 여기서 (0, 0) 위치는 스프라이트의 오프셋, 스프라이트가 가질 수 있는 &quot;빈&quot; 픽셀 또는 스프라이트가 그려지는 위치에 관계없이 스프라이트의 왼쪽 상단 모서리에 해당합니다. 방.</p><p class="note"> <span class="note">참고</span> 이 함수는 이 스프라이트가 있는 모든 추가 인스턴스가 동일한 경계 상자를 갖도록 스프라이트 <b>자산</b> 에 영향을 줍니다.</p><p></p><h4> 통사론:</h4><p class="code">sprite_set_bbox(ind, left, top, right, bottom);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td><td> <span class="notranslate">The index of the sprite to set the bounding box on.</span></td></tr><tr><td> <span class="notranslate">left</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The left side of the bounding box</span></td></tr><tr><td> <span class="notranslate">top</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The top of the bounding box.</span></td></tr><tr><td> <span class="notranslate">right</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The right side of the bounding box</span></td></tr><tr><td> <span class="notranslate">bottom</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The bottom of the bounding box.</span></td></tr></tbody></table><p></p><h4> 보고</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if sprite_get_bbox_mode(sprite_index) == 2<br />
     {<br />
         left = irandom(sprite_width / 2);<br />
         right = irandom((sprite_width / 2) + irandom(sprite_width / 2));<br />
         top = irandom(sprite_height / 2);<br />
         bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2));<br />
         sprite_set_bbox(sprite_index, left, top, right, bottom);<br />
-    }</p>
-  <p>The above code will check the bounding box mode of the sprite assigned to the <span class="inline">sprite_index</span>, and if it is set to <span class="inline">manual</span> then it will have its bounding box changed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_speed.htm">sprite_set_speed</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 할당된 스프라이트의 경계 상자 모드를 확인합니다. <span class="inline">sprite_index</span> 로 설정되어 있는 경우 <span class="inline">manual</span> 그러면 경계 상자가 변경됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div><div style="float:right"> 다음: <a href="sprite_set_speed.htm"><span class="notranslate">sprite_set_speed</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_bbox

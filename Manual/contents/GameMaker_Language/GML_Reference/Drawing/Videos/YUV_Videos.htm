@@ -4,37 +4,31 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>YUV Videos</title>
+  <title>YUV 비디오</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Information on drawing YUV videos" />
+  <meta name="topic-comment" content="YUV 영상 그리기 정보" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Page.htt" />
-  <meta name="rh-index-keywords" content="yuv videos" />
-  <meta name="search-keywords" content="yuv videos" />
+  <meta name="rh-index-keywords" content="yuv 동영상" />
+  <meta name="search-keywords" content="yuv 동영상" />
   <meta name="condition-tags" content="" />
 </head>
-<body>
-  <h1>YUV Videos</h1>
-  <p>Platforms that use the YUV colour format for videos require extra steps for drawing those videos. This involves using a shader to draw two surfaces on a primitive quad.</p>
-  <p>Read the <span class="inline"><a href="video_draw.htm">video_draw()</a></span> reference page first for information on what data that function returns for YUV videos, and then continue reading below for instructions on using that data to draw the video.</p>
-  <h2>YUV Shader</h2>
-  <p>Create a shader asset in your project, and replace its Fragment Shader (<span class="inline2">.fsh</span>) code with this:</p>
-  <pre>//
-// CUSTOM fragment shader for handling YUV content
+<body><h1>YUV 비디오</h1><p> 비디오에 YUV 색상 형식을 사용하는 플랫폼은 해당 비디오를 그리기 위한 추가 단계가 필요합니다. 여기에는 셰이더를 사용하여 기본 쿼드에 두 개의 표면을 그리는 작업이 포함됩니다.</p><p> 읽기 <span class="inline"><a href="video_draw.htm">video_draw()</a></span> 이 함수가 YUV 비디오에 대해 반환하는 데이터에 대한 정보를 보려면 먼저 참조 페이지를 참조하고 비디오를 그리는 데 해당 데이터를 사용하는 방법에 대한 지침은 아래를 계속 읽으십시오.</p><h2> YUV 셰이더</h2><p> 프로젝트에서 셰이더 자산을 만들고 해당 Fragment Shader( <span class="inline"><a href="video_draw.htm">video_draw()</a>>.fsh</span> ) 코드를 다음으로 바꿉니다.</p><pre> //
+// YUV 콘텐츠를 처리하기 위한 CUSTOM 프래그먼트 셰이더
 //
-varying vec2 v_vTexcoord;
-varying vec4 v_vColour;
-uniform sampler2D v_chroma;
-const float x = 1.164383;
-const float y = 1.138393;
+다양한 vec2 v_vTexcoord;
+다양한 vec4 v_vColor;
+균일한 샘플러2D v_chroma;
+상수 부동 소수점 x = 1.164383;
+상수 부동 소수점 y = 1.138393;
 const float z = 1.138393;
-const vec3 src_bias = vec3(16.0 / 255.0, 128.0 / 255.0, 128.0 / 255.0);
-const mat3 src_xform = mat3(1.00000000 * x,  0.00000000 * y,  1.57480000 * z,
+const vec3 src_bias = vec3(16.0/255.0, 128.0/255.0, 128.0/255.0);
+const mat3 src_xform = mat3(1.00000000 * x, 0.00000000 * y, 1.57480000 * z,
                             1.00000000 * x, -0.18732427 * y, -0.46812427 * z,
-			    1.00000000 * x,  1.85560000 * y,  0.00000000 * z);
-void main()
+			    1.00000000 * x, 1.85560000 * y, 0.00000000 * z);
+무효 메인()
 {
     float yy = texture2D(gm_BaseTexture, vec2(v_vTexcoord.x, v_vTexcoord.y)).r;
     vec2 cbcr = texture2D(v_chroma, vec2(v_vTexcoord.x, v_vTexcoord.y)).rg;
@@ -44,84 +38,48 @@ void main()
     gl_FragColor = vec4(yuv, 1.0);
 }
   
-</pre>
-  <h2>Get Sampler</h2>
-  <p>In the Create event of your object, get the sampler ID of the <span class="inline2">v_chroma</span> shader uniform, only if the video is YUV:</p>
-  <pre>var _format = video_get_format();
+</pre><h2>샘플러 가져오기</h2><p> 비디오가 YUV인 경우에만 개체의 만들기 이벤트에서 <span class="inline"><a href="video_get_format.htm">video_get_format()</a>>v_chroma</span> 셰이더 유니폼의 샘플러 ID를 가져옵니다.</p><pre> var _format = video_get_format();
 if (_format == video_format_yuv)
 {
     videochromasampler = shader_get_sampler_index(shader_YUV, &quot;v_chroma&quot;);
 }
-</pre>
-  <h2 id="h">Draw Video</h2>
-  <p>In the Draw event of your object, call <span class="inline"><a href="video_draw.htm">video_draw()</a></span>, and if its first array position is <strong>0</strong> (meaning the video is playing), draw the video.</p>
-  <p>In the code below, we&#39;re using a switch statement on the <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span> function. If the video is using the RGBA format, then it simply draws the surface in position <span class="inline2">[1]</span> of the array.</p>
-  <p>If the video is using the YUV format, it uses the shader to draw the two surfaces (in positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span>) onto a primitive quad.</p>
-  <pre>var _data = video_draw();
+</pre><h2 id="h">비디오 그리기</h2><p> 개체의 그리기 이벤트에서 <span class="inline"><a href="../Surfaces/surface_exists.htm">surface_exist()</a></span>, 그리고 첫 번째 배열 위치가 <strong>0</strong> (비디오가 재생 중임을 의미)이면 비디오를 그립니다.</p><p> 아래 코드에서는 switch 문을 사용하고 있습니다.<span class="inline"></span> 기능. 비디오가 RGBA 형식을 사용하는 경우 배열의 <span class="inline2">[1]</span> 위치에 표면을 그립니다.</p><p> 비디오가 YUV 형식을 사용하는 경우 셰이더를 사용하여 두 표면(위치 <span class="inline2">[1]</span> 및 <span class="inline2">[2]</span> )을 기본 쿼드에 그립니다.</p><pre> var _data = video_draw();
 if(_data[0] == 0)
 {
-	switch(video_get_format())
+	스위치(video_get_format())
 	{
-		case video_format_rgba:
-			var _surf = _data[1];
+		케이스 video_format_rgba:
+			var _surf = _데이터[1];
 			draw_surface(_surf,0,0);
-		break;
+		부서지다;
 	
-		//  #### YUV PART HERE ####
-		case video_format_yuv:
-			var _surf = _data[1];
-			var _chromasurf = _data[2];
-			if(surface_exists(_surf) and surface_exists(_chromasurf))
+		// #### YUV 부품은 여기에 ####
+		케이스 video_format_yuv:
+			var _surf = _데이터[1];
+			var _크로마서프 = _데이터[2];
+			if(surface_exists(_surf) 및 surface_exists(_chromasurf))
 			{
 				shader_set(shader_YUV);
 			
 				var _tex_id = surface_get_texture(_surf);
 				var _chroma_tex_id = surface_get_texture(_chromasurf);
-				texture_set_stage(videochromasampler, _chroma_tex_id);
-				gpu_set_texfilter(false);
+				texture_set_stage(비디오크로마샘플러, _chroma_tex_id);
+				gpu_set_texfilter(거짓);
 			
 				draw_primitive_begin_texture(pr_trianglestrip, _tex_id);
 			        draw_vertex_texture(0, 0, 0, 0);
-				draw_vertex_texture(surface_get_width(_chromasurf), 0, 1, 0);
+				draw_vertex_texture(표면_get_width(_chromasurf), 0, 1, 0);
 				draw_vertex_texture(0, surface_get_height(_chromasurf), 0, 1);
 				draw_vertex_texture(surface_get_width(_chromasurf), surface_get_height(_chromasurf), 1, 1);
 				draw_primitive_end();
 			
-				gpu_set_texfilter(true);
+				gpu_set_texfilter(참);
 				shader_reset();
 			}
-		break;
+		부서지다;
 	}
 }
-  </pre>
-  <p>The code under <span class="inline2">case video_format_yuv:</span> does the following:</p>
-  <ul class="colour">
-    <li>Gets the video surface (<span class="inline2">_surf</span>) and the chroma surface (<span class="inline2">_chromasurf</span>)</li>
-    <li>Makes sure that they exist, using <span class="inline"><a href="../Surfaces/surface_exists.htm">surface_exist()</a></span>
-      <ul>
-        <li>Sets the shader to <span class="inline2">shader_YUV</span> (which is our newly created YUV shader)</li>
-        <li>Gets the textures of both surfaces</li>
-        <li>Assigns the texture of the chroma surface to the sampler we retrieved in the Create event</li>
-        <li>Disables texture filtering</li>
-        <li>Begins drawing a triangle strip primitive, with the video surface&#39;s texture assigned to it</li>
-        <li>Draws a rectangle to cover the video surface, uses the width and height of the chroma surface for that rectangle</li>
-        <li>Ends the primitive</li>
-        <li>Re-enables texture filtering and resets the shader</li>
-      </ul>
-    </li>
-  </ul>
-  <p>Here the main video surface is being drawn by the primitive, and the chroma surface is being blended on to it by the shader. That is the reason why the texture of the chroma surface was passed into the shader via a sampler.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{text}" href="Videos.htm#h1">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="video_set_volume.htm">video_set_volume</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </pre><p><span class="inline2">video_format_yuv:</span> 아래의 코드는 다음을 수행합니다.</p><ul class="colour"><li> 비디오 표면( <span class="inline2">_surf</span> ) 및 크로마 표면( <span class="inline2">_chromasurf</span> )을 가져옵니다.</li><li> 다음을 사용하여 존재하는지 확인합니다.<span class="inline"></span><ul><li> 셰이더를 <span class="inline2">shader_YUV</span> (새로 만든 YUV 셰이더)로 설정합니다.</li><li> 두 표면의 텍스처를 가져옵니다.</li><li> Create 이벤트에서 검색한 샘플러에 크로마 표면의 텍스처를 할당합니다.</li><li> 텍스처 필터링 비활성화</li><li> 비디오 표면의 텍스처가 할당된 삼각형 스트립 프리미티브 그리기 시작</li><li> 비디오 표면을 덮을 직사각형을 그리고 해당 직사각형에 대한 크로마 표면의 너비와 높이를 사용합니다.</li><li> 프리미티브 종료</li><li> 텍스처 필터링을 다시 활성화하고 셰이더를 재설정합니다.</li></ul></li></ul><p> 여기에서 기본 비디오 표면은 프리미티브에 의해 그려지고 크로마 표면은 셰이더에 의해 그 위에 혼합됩니다. 이것이 크로마 표면의 텍스처가 샘플러를 통해 셰이더로 전달된 이유입니다.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{text}" href="Videos.htm#h1">비디오 재생</a></div><div> 다음: <a data-xref="{title}" href="video_set_volume.htm">video_set_volume</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 YUV	Videos

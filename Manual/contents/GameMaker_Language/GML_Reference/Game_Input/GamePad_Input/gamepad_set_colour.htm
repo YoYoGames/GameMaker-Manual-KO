@@ -6,56 +6,16 @@
   <title>gamepad_set_colour</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for gamepad_set_colour" />
+  <meta name="topic-comment" content="gamepad_set_color 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_set_colour" />
   <meta name="search-keywords" content="gamepad_set_colour,gamepad_set_color" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_colour</h1>
-  <p>This function can be used to set the colour of the LEDs within a PlayStation controller. You specify the device slot to set, and then give a colour, which can be any of the <a href="../../Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">colour constants</a> or a colour value created using the specific colour functions or a HEX value(like $FFFFFFF).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gamepad_set_colour(device, colour);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad device &quot;slot&quot; to set.</td>
-     </tr>
-      <tr>
-        <td>colour</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour to use.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if health &lt; 10<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_colour</h1><p> 이 기능은 PlayStation 컨트롤러 내의 LED 색상을 설정하는 데 사용할 수 있습니다. 설정할 장치 슬롯을 지정한 다음 특정 색상 함수 또는 <span class="notranslate">$FFFFFFF</span> 와 같은 HEX 값을 사용하여 생성된 색상 값 또는 <a href="../../Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">색상 상수</a> 중 하나일 수 있는 색상을 지정합니다.</p><p></p><h4> 통사론:</h4><p class="code">gamepad_set_colour(device, colour);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to set.</span></td></tr><tr><td> <span class="notranslate">colour</span></td><td><span data-keyref="Type_Constant_Colour"></span></td><td> <span class="notranslate">The colour to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if health &lt; 10<br />
     {<br />
         gamepad_set_colour(0, c_red);<br />
-    }</p>
-  <p>The above code will set the PlayStation controller LEDs to red if the <span class="inline">health</span> variable falls below 10.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_set_option.htm"> gamepad_set_option </a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 다음과 같은 경우 PlayStation 컨트롤러 LED를 빨간색으로 설정합니다. <span class="inline">health</span> 변수가 10 아래로 떨어집니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gamepad_Input.htm">게임패드 입력</a></div><div style="float:right"> 다음: <a href="gamepad_set_option.htm">gamepad_set_option</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_colour

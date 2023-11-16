@@ -3,205 +3,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Bitwise Operators</title>
+  <title>비트 연산자</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains how bitwise operators work" />
-  <meta name="rh-index-keywords" content="Bitwise Operators" />
-  <meta name="search-keywords" content="bitwise,bitwise operators" />
+  <meta name="topic-comment" content="비트 연산자의 작동 방식을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="비트 연산자" />
+  <meta name="search-keywords" content="비트 단위로,비트 연산자" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Bitwise Operators And Binary</h1>
-  <p>At the beginning of the computer era, <strong>binary</strong> and <strong>hex</strong> (hexadecimal) were a way of life, probably because high level languages (such as BASIC) were simply too slow to run. For example, multiplying 32 x 32 might have taken various CPU cycles to achieve using BASIC, but with binary it is done as a single operation in a single CPU cycle.</p>
-  <p>These days however, with the power of even a basic PC, you no longer have to worry about this and you can do things the &quot;long way&quot;, since the speed of the machine and its more complex CPU construction will make up for any short comings this approach has. This is great news of course, since it means that you no longer have to optimise every line of code you write, but if this is the case - should you really care about binary at all?</p>
-  <p>The answer is definitely &quot;yes, you should&quot;. While it&#39;s true you can still get some speed ups - and sometimes these can be significant - using binary and hex leads to a better understanding of how the CPU operates and can also lead to writing better code, being able to pack data better, and making some tasks a lot simpler. This page is going to explain a bit about what binary is as well as how it can be used when making your games.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> To write binary literals in GML, prefix them with <span class="inline2">0b</span> (e.g. <span class="inline2">0b0010</span>). See <a data-xref="{title}" href="../GameMaker_Language/GML_Overview/Data_Types.htm">Data Types</a> for more information.</p>
-  <p>Let&#39;s look at the most basic binary theory first - how numbers are created. Take a look at this table:</p>
-  <p class="code">000 = 0<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 비트 연산자와 이진법</h1><p> 컴퓨터 시대가 시작될 때 <strong>2진법</strong> 과 <strong>16진법</strong> (16진법)이 생활 방식이었습니다. 아마도 BASIC과 같은 고급 언어가 실행하기에 너무 느렸기 때문일 것입니다. 예를 들어, 32 x 32를 곱하는 것은 BASIC을 사용하여 달성하기 위해 다양한 CPU 주기가 필요할 수 있지만 바이너리를 사용하면 단일 CPU 주기에서 단일 연산으로 수행됩니다.</p><p> 그러나 요즘에는 기본 PC의 성능으로 더 이상 이것에 대해 걱정할 필요가 없으며 기계의 속도와 더 복잡한 CPU 구성이 짧은 시간을 만회할 것이기 때문에 &quot;원거리&quot; 작업을 수행할 수 있습니다. 이 접근 방식이 있습니다. 이것은 물론 좋은 소식입니다. 더 이상 작성하는 모든 코드 줄을 최적화할 필요가 없기 때문입니다. 그러나 이 경우라면 - 바이너리에 대해 전혀 신경을 써야 합니까?</p><p> 대답은 확실히 &quot;네, 해야 합니다&quot;입니다. 사실이지만 여전히 약간의 속도 향상을 얻을 수 있으며 때로는 이것이 중요할 수 있습니다. 이진 및 16진수를 사용하면 CPU 작동 방식을 더 잘 이해하고 더 나은 코드를 작성하고 데이터를 더 잘 포장할 수 있으며 일부 작업은 훨씬 간단합니다. 이 페이지에서는 바이너리가 무엇인지, 게임을 만들 때 바이너리를 어떻게 사용할 수 있는지에 대해 설명합니다.</p><p> 따라서 가장 기본적인 이진 이론인 숫자가 어떻게 생성되는지 먼저 살펴보겠습니다. 다음 표를 살펴보십시오.</p><p class="code">000 = 0<br />
     001 = 1<br />
     010 = 2<br />
-    100 = 4</p>
-  <p>Each 1 or 0 represents a single <a class="glossterm" data-glossterm="bit" href="#">bit</a> of data, and as you can see this means that in binary, 10 equals 2! Each bit is 2 times the previous value with the first bit being equal to 1. So bit 2 = 2, bit 3 = 4, bit 4 = 8 and so on (as shown below in this <a class="glossterm" data-glossterm="byte" href="#">byte</a> table):</p>
-  <p class="code">00000001 = 1<br />
+    100 = 4</p><p> 각각의 1 또는 0은 데이터의 단일 <a class="glossterm" data-glossterm="조금" href="#">비트</a> 를 나타내며, 보시다시피 이진법에서 10은 2와 같습니다! 각 비트는 이전 값의 2배이며 첫 번째 비트는 1입니다. 따라서 비트 2 = 2, 비트 3 = 4, 비트 4 = 8 등입니다(아래 <a class="glossterm" data-glossterm="바이트" href="#">바이트</a> 테이블 참조).</p><p class="code">00000001 = 1<br />
     00000010 = 2<br />
     00000100 = 4<br />
     00001000 = 8<br />
     00010000 = 16<br />
     00100000 = 32<br />
     01000000 = 64<br />
-    10000000 = 128</p>
-  <p>That&#39;s fine if you want numbers that are a power of 2, but how do we create more complex numbers? Well a single binary number can only store a 0 or 1, and that&#39;s it, so for more complex numbers we need to add bits together. If for example we wanted to make 6, we would add 4 and 2 together like so.</p>
-  <p class="code">00000010 = 2<br />
+    10000000 = 128</p><p> 2의 거듭제곱인 숫자를 원하면 괜찮습니다. 하지만 더 복잡한 숫자를 만드는 방법은 무엇입니까? 단일 이진수는 0 또는 1만 저장할 수 있으며 그게 전부입니다. 따라서 더 복잡한 숫자의 경우 비트를 함께 추가해야 합니다. 예를 들어 6을 만들고 싶다면 이렇게 4와 2를 더할 것입니다.</p><p class="code">00000010 = 2<br />
     00000100 = 4<br />
-    00000110 = 6</p>
-  <p>This is true of <strong>all </strong>binary numbers, and how the computer makes up any number internally. Let&#39;s take a slightly more complicated number as a further example: 23. The number 23 is actually made up of <span class="inline">1+2+4+16</span> or <span class="inline">00010111</span>. How about a much more complex example: 196? Well, that&#39;s made from <span class="inline">128+64+4</span> or <span class="inline">11000100</span>. So actually it&#39;s not that complex really!</p>
-  <p>If we start doing values outside of the range of a byte (which can store numbers from 0 to 255), it does start to get a little harder to track, however. For example, 217,361 is <span class="inline">110101000100010001</span> in binary. Or, <span class="inline">1+16+256+etc...</span> The rules are the same no matter what the value being expressed is - each number is created from adding multiple bits together.</p>
-  <p>Now, how do we perform mathematical operations on these values? Let&#39;s say you want to store <span class="inline">true</span> or <span class="inline">false</span> as a value. Usually compilers will use an <span class="inline">INT</span> (an <span class="inline">INT</span> is usually defined as a signed 32bit number - signed just means it can a positive or negative value, while unsigned means it can only be positive) and then simply assign it to <span class="inline">0</span> or <span class="inline">1</span>. Having only 2 states, a <span class="inline">true</span> / <span class="inline">false</span> value is ideal to store in a bit, and if we did this we could store 32 <span class="inline">true</span> / <span class="inline">false</span> bits for each <span class="inline">INT</span> rather than just one, since an <span class="inline">INT</span> is made up of 32 bits.</p>
-  <p>How would we do this? Well pretty easily it turns out:</p>
-  <p class="code">flags = flags | 1;</p>
-  <p>The &quot;<span class="inline">|</span>&quot; operator is a bitwise <span class="inline">OR</span>, and this means the above instruction <span class="inline">ORs</span> 1 into the value held in the variable <span class="inline">flags</span>. If you remember from earlier, using a 1 will set the first bit. If we wanted to set the second bit, we would do this:</p>
-  <p class="code">flags = flags | 2;</p>
-  <p>We <span class="inline">OR</span> in 2, because the bit pattern <span class="inline">00000010</span> is equal to 2. So what exactly does the binary <span class="inline">OR</span> operator do? Well, it merges all the bits together into a single value, like this:</p>
-  <p class="code">010110100 // Value 1<br />
+    00000110 = 6</p><p> 이것은 <strong>모든</strong> 이진수와 컴퓨터가 내부적으로 숫자를 구성하는 방식에 해당됩니다. 조금 더 복잡한 숫자를 추가 예로 들어 보겠습니다. 23. 숫자 23은 실제로 다음으로 구성됩니다. <span class="inline">1+2+4+16</span> 또는 <span class="inline">00010111</span>. 훨씬 더 복잡한 예: 196은 어떻습니까? 글쎄, 그것은에서 만든 <span class="inline">128+64+4</span> 또는 <span class="inline">11000100</span>. 그래서 실제로는 그렇게 복잡하지 않습니다!</p><p> 그러나 바이트 범위(0에서 255 사이의 숫자를 저장할 수 있음)를 벗어난 값을 수행하기 시작하면 추적하기가 조금 더 어려워지기 시작합니다. 예를 들어 217,361은 <span class="inline">110101000100010001</span> 바이너리로. 또는, <span class="inline">1+16+256+etc...</span> 표현되는 값이 무엇이든 규칙은 동일합니다. 각 숫자는 여러 비트를 더하여 생성됩니다.</p><p> 이제 이 값에 대해 수학 연산을 어떻게 수행합니까? 당신이 저장하고 싶다고 가정 해 봅시다 <span class="inline">true</span> 또는 <span class="inline">false</span> 가치로. 일반적으로 컴파일러는 다음을 사용합니다. <span class="inline">INT</span> (한 <span class="inline">INT</span> 일반적으로 부호 있는 32비트 숫자로 정의됩니다. 부호 있는 것은 양수 또는 음수 값이 될 수 있음을 의미하고 부호 없는 것은 양수만 가능함을 의미합니다) 그런 다음 간단히 할당합니다. <span class="inline">0</span> 또는 <span class="inline">1</span>. 상태가 2개뿐인 경우 <span class="inline">true</span> / <span class="inline">false</span> 값은 조금 저장하는 것이 이상적이며 이렇게 하면 32를 저장할 수 있습니다. <span class="inline">true</span> / <span class="inline">false</span> 각각에 대한 비트 <span class="inline">INT</span> 하나가 아니라 <span class="inline">INT</span> 32비트로 구성된다.</p><p> 어떻게 해야 할까요? 꽤 쉽게 밝혀졌습니다.</p><p class="code">flags = flags | 1;</p><p> &quot;<span class="inline">|</span> &quot; 연산자는 비트 단위입니다. <span class="inline">OR</span>, 그리고 이것은 위의 지시를 의미합니다 <span class="inline">ORs</span> 1을 변수에 보관된 값으로 <span class="inline">flags</span>. 이전에 기억하는 경우 1을 사용하면 첫 번째 비트가 설정됩니다. 두 번째 비트를 설정하려면 다음을 수행합니다.</p><p class="code">flags = flags | 2;</p><p> 우리 <span class="inline">OR</span> 2에서 비트 패턴 때문에 <span class="inline">00000010</span> 는 2와 같습니다. 그래서 바이너리는 정확히 무엇을합니까 <span class="inline">OR</span> 운영자 할? 음, 다음과 같이 모든 비트를 단일 값으로 병합합니다.</p><p class="code">010110100 // Value 1<br />
     110011001 // value 2<br />
-    110111101 // Value 1 OR Value 2</p>
-  <p>Here&#39;s what&#39;s known as a <a class="glossterm" data-glossterm="truth table" href="#">truth table</a> for the OR operator:</p>
-  <p class="code">00 | 00 = 00<br />
+    110111101 // Value 1 OR Value 2</p><p> 다음은 OR 연산자에 대한 <a class="glossterm" data-glossterm="진리표" href="#">진리표</a> 로 알려진 것입니다.</p><p class="code">00 | 00 = 00<br />
     00 | 01 = 01<br />
     01 | 01 = 01<br />
-    01 | 00 = 01</p>
-  <p>So where there is a value with 2 zeros, it&#39;ll stay zero. The advantage of using bits like this as a <span class="inline">true</span>/<span class="inline">false</span> state, is they you can set several bits as &quot;flags&quot; in one operation, something you simply couldn&#39;t do with a normal boolean value. For example, let&#39;s say bit 1 is an &quot;active&quot; flag, and bit 3 is a &quot;visible&quot; flag. We could set both by doing this:</p>
-  <p class="code">flags = flags | 5<span class="inline"></span>;</p>
-  <p>This is because 5 is <span class="inline">00000101</span> in binary, and following the rule above, the variable &quot;flags&quot; will get both these 2 bits merged with its own. So even if bit 1 was already set, the operation still works and bit 3 will now also be set.</p>
-  <p>What about clearing flags? Well this is where the bitwise &quot;<span class="inline">&amp;</span>&quot; <span class="inline">AND</span> operation comes in. When you <span class="inline">AND</span> something, the bits that are set in the mask are kept, while the bits that are clear in the mask, are removed - like this:</p>
-  <p class="code">01110010101 // Value 1<br />
+    01 | 00 = 01</p><p> 따라서 2개의 0이 있는 값이 있는 경우 0으로 유지됩니다. 이와 같은 비트를 <span class="inline">true</span> /<span class="inline">false</span> 상태는 한 번의 작업으로 여러 비트를 &quot;플래그&quot;로 설정할 수 있다는 것입니다. 일반적인 부울 값으로는 할 수 없는 일입니다. 예를 들어 비트 1이 &quot;활성&quot; 플래그이고 비트 3이 &quot;표시&quot; 플래그라고 가정해 보겠습니다. 다음을 수행하여 둘 다 설정할 수 있습니다.</p><p class="code">flags = flags | 5<span class="inline"></span>;</p><p> 5이기 때문이다. <span class="inline">00000101</span> 바이너리로, 그리고 위의 규칙에 따라 &quot;flags&quot; 변수는 이 2비트를 자체적으로 병합합니다. 따라서 비트 1이 이미 설정되어 있어도 작업은 계속 작동하며 이제 비트 3도 설정됩니다.</p><p> 플래그를 지우는 것은 어떻습니까? 글쎄 이것이 비트 단위 &quot;<span class="inline">&amp;</span> &quot;<span class="inline">AND</span> 작업이 들어옵니다. 당신이 <span class="inline">AND</span> 무언가, 마스크에 설정된 비트는 유지되고 마스크에 있는 비트는 제거됩니다. 다음과 같습니다.</p><p class="code">01110010101 // Value 1<br />
     00110000100 // Value 2<br />
-    00110000100 // Value 1 AND value 2</p>
-  <p>As you can see, where there is a 1 in each value, the 1 is kept, and where there is a mix or 0&#39;s and 1&#39;s these are reset to 0. Here&#39;s the truth table for <span class="inline">AND</span>ing:</p>
-  <p class="code">00 &amp; 00 = 00<br />
+    00110000100 // Value 1 AND value 2</p><p> 보시다시피, 각 값에 1이 있는 곳에서는 1이 유지되고, 0과 1이 섞인 곳에서는 0으로 재설정됩니다. 다음은 에 대한 진리표입니다. <span class="inline">AND</span> 잉:</p><p class="code">00 &amp; 00 = 00<br />
     01 &amp; 00 = 00<br />
     00 &amp; 01 = 00<br />
-    01 &amp; 01 = 01</p>
-  <p>So, only when there is a bit in each place will it be kept. What this means, is that just as you are able to set multiple flags at once, you can also clear multiple flags at once. For example, let&#39;s take the case above, but this time clear them. We want to clear bits 1 and 3 (giving us the value 5), but in remembering the truth table above, what we want to do is keep all the other bits, and clear bits 1 and 3. This would be a binary &quot;mask&quot; of 11111111111111111111111111111010 (32bits). This mask keeps all bits currently set, but clears the two bits we actually want cleared. So if had a value of 1000111011 and I wanted to clear bits 1 and 3 using the mask above, it would end up as this...</p>
-  <p class="code">00000000000000000000001000111011 // Value<br />
+    01 &amp; 01 = 01</p><p> 따라서 각 장소에 조금씩 있을 때만 보관됩니다. 이것이 의미하는 바는 한 번에 여러 플래그를 설정할 수 있는 것처럼 한 번에 여러 플래그를 지울 수도 있다는 것입니다. 예를 들어 위의 경우를 가정해 보겠습니다. 하지만 이번에는 이를 지웁니다. 비트 1과 3(값 5 제공)을 지우고 싶지만 위의 진리표를 기억할 때 우리가 원하는 것은 다른 모든 비트를 유지하고 비트 1과 3을 지우는 것입니다. 이것은 이진 &quot;마스크 &quot;의 1111111111111111111111111111010(32비트)입니다. 이 마스크는 현재 설정된 모든 비트를 유지하지만 실제로 지우고 싶은 두 비트를 지웁니다. 따라서 값이 1000111011이고 위의 마스크를 사용하여 비트 1과 3을 지우려면 다음과 같이 됩니다.</p><p class="code">00000000000000000000001000111011 // Value<br />
     11111111111111111111111111111010 // Mask<br />
-    00000000000000000000001000111010 // Value AND Mask</p>
-  <p>This is great, but if we had to work this out every time we needed to clear flags, it would become tiresome. What we need is a way to flip bits easily (and preferably without CPU cost). Fortunately there is an easy way of doing this by using the &quot; <span class="inline">~</span>&quot; <span class="inline">NOT</span> operator.</p>
-  <p>The <span class="inline">NOT</span> operator is just what it says - <em>not</em> those bits. Here&#39;s a truth table for <span class="inline">NOT</span>.</p>
-  <p class="code">~00 = 11<br />
+    00000000000000000000001000111010 // Value AND Mask</p><p> 이것은 훌륭하지만 플래그를 제거해야 할 때마다 이 문제를 해결해야 하면 번거로울 것입니다. 우리에게 필요한 것은 비트를 쉽게 뒤집을 수 있는 방법입니다(가능한 한 CPU 비용 없이). 다행히 &quot; <span class="inline">~</span> &quot; <span class="inline">NOT</span> 운영자.</p><p> 그만큼 <span class="inline">NOT</span> 연산자는 단지 그것이 말하는 것입니다 - 그 비트 <em>가 아닙니다</em>. 다음은 진리표입니다. <span class="inline">NOT</span>.</p><p class="code">~00 = 11<br />
     ~01 = 10<br />
     ~10 = 01<br />
-    ~11 = 00</p>
-  <p>This operator makes removing flags very simple, and better yet, it&#39;s usually a compile time optimisation meaning if you&#39;re using a constant number (i.e. not a variable) then the compiler will flip the bits automatically for you. Take this statement where we want to clear bits 1 and 3 again:</p>
-  <p class="code">a = a &amp; ~5;</p>
-  <p>This will actually compile down to just &quot;<span class="inline">a &amp; 11111111111111111111111111111010</span>&quot;. This makes life pretty simple in terms of clearing flags.</p>
-  <p>The last operator we want to look at is &quot;<span class="inline">^</span>&quot; <span class="inline">EOR</span> (<span class="inline">Exclusive OR</span>, sometimes called <span class="inline">XOR</span>), this operator flips the bits set in both values. Here&#39;s the <span class="inline">EOR</span> truth table:</p>
-  <p class="code">0 ^ 0 = 0<br />
+    ~11 = 00</p><p> 이 연산자는 플래그 제거를 매우 간단하게 만들고 더 나은 점은 일반적으로 상수 숫자(즉, 변수가 아님)를 사용하는 경우 컴파일러가 자동으로 비트를 뒤집는 것을 의미하는 컴파일 시간 최적화입니다. 비트 1과 3을 다시 지우려는 경우 다음 명령문을 사용하십시오.</p><p class="code">a = a &amp; ~5;</p><p> 이것은 실제로 &quot;<span class="inline">a &amp; 11111111111111111111111111111010</span> &quot;. 이것은 플래그를 지우는 측면에서 삶을 매우 간단하게 만듭니다.</p><p> 마지막으로 살펴보고자 하는 연산자는 &quot;<span class="inline">^</span> &quot; <span class="inline">EOR</span> (<span class="inline">Exclusive OR</span>, 때때로 <span class="inline">XOR</span> ), 이 연산자는 두 값에 설정된 비트를 뒤집습니다. 여기 <span class="inline">EOR</span> 진리표:</p><p class="code">0 ^ 0 = 0<br />
     0 ^ 1 = 1<br />
     1 ^ 0 = 1<br />
-    1 ^ 1 = 0</p>
-  <p>This is a curious one, but incredibly useful. For example, let&#39;s say we want a counter that simply counts from 0 to 1 and back to 0 (toggling between 0 and 1), we could add one and do an <span class="inline">IF</span> to see if it&#39;s gotten to 2, and then reset it back to 1. Or...we could add 1 and then <span class="inline">AND</span> it with 1 (since <span class="inline">01+01 = 10</span>, and <span class="inline">10 &amp; 01 = 0</span>) or we can do this:</p>
-  <p class="code">a = a ^ 1;</p>
-  <p>What this does the first time it&#39;s run is <span class="inline">0 ^ 1 = 1</span>, then the second time <span class="inline">1 ^ 1 = 0</span>, thereby toggling things back and forth from 0 to 1.</p>
-  <p>So - <span class="inline">OR</span> (<span class="inline">|</span>), <span class="inline">AND</span>(<span class="inline">&amp;</span>), <span class="inline">NOT</span>(<span class="inline">~</span>) and <span class="inline">EOR</span>(<span class="inline">^</span>) let us manipulate bits with relative ease, allowing us, at the simplest level, to control multiple bits at once. We can obviously use these operations for other things when developing our games, like masking sprites, doing integer <span class="inline">MOD</span> operations (using <span class="inline">AND</span>) or doing nice looping counters.</p>
-  <p>So, we can do simply bitwise operations, but let&#39;s look at the more complex stuff, starting with the question, how does a computer add? Let&#39;s look at a very simple example: <span class="inline">1+1</span>.</p>
-  <p class="code">00000001<br />
+    1 ^ 1 = 0</p><p> 이것은 흥미롭지만 매우 유용합니다. 예를 들어, 단순히 0에서 1로 계산하고 다시 0으로 계산하는 카운터(0과 1 사이에서 전환)를 원한다고 가정해 보겠습니다. <span class="inline">IF</span> 2가 되었는지 확인한 다음 다시 1로 재설정합니다. 또는... 1을 추가한 다음 <span class="inline">AND</span> 그것은 1로 (부터 <span class="inline">01+01 = 10</span>, 그리고 <span class="inline">10 &amp; 01 = 0</span> ) 또는 다음과 같이 할 수 있습니다.</p><p class="code">a = a ^ 1;</p><p> 이것이 처음 실행될 때 수행하는 작업은 <span class="inline">0 ^ 1 = 1</span>, 두 번째로 <span class="inline">1 ^ 1 = 0</span>, 따라서 0에서 1로 앞뒤로 토글합니다.</p><p> 그래서 - <span class="inline">OR</span> (<span class="inline">|</span> ), <span class="inline">AND</span> (<span class="inline">&amp;</span> ), <span class="inline">NOT</span> (<span class="inline">~</span> ) 그리고 <span class="inline">EOR</span> (<span class="inline">^</span> ) 비트를 비교적 쉽게 조작할 수 있으므로 가장 간단한 수준에서 한 번에 여러 비트를 제어할 수 있습니다. 우리는 게임을 개발할 때 마스킹 스프라이트, 정수 처리와 같은 다른 작업을 위해 이러한 작업을 분명히 사용할 수 있습니다. <span class="inline">MOD</span> 작업(사용 <span class="inline">AND</span> ) 또는 멋진 반복 카운터를 수행합니다.</p><p> 따라서 우리는 단순히 비트 연산을 수행할 수 있지만 컴퓨터는 어떻게 추가합니까? 아주 간단한 예를 살펴보겠습니다. <span class="inline">1+1</span>.</p><p class="code">00000001<br />
     00000001<br />
-    00000010</p>
-  <p>Just like normal additions, we add numbers together and then we overflow into the next column, but unlike a normal decimal addition, we can only go from 0 to 1, not 0 to 9. So adding a <span class="inline">1+1</span> means we overflow into <span class="inline">10</span>. So let&#39;s look at a more complex example.</p>
-  <p class="code">01011011 = 91<br />
+    00000010</p><p> 일반적인 덧셈과 마찬가지로 숫자를 더한 다음 다음 열로 오버플로하지만 일반적인 소수 덧셈과 달리 0에서 9가 아니라 0에서 1로만 갈 수 있습니다. <span class="inline">1+1</span> 우리가 흘러 넘친다는 것을 의미합니다 <span class="inline">10</span>. 그럼 좀 더 복잡한 예를 살펴보겠습니다.</p><p class="code">01011011 = 91<br />
     00101101 = 45<br />
-    10001000 = 136</p>
-  <p>It&#39;s obviously harder to see here, but the overflows ripple along until there are no ones in a column. It&#39;s worth noting, that computers can only add (or subtract, multiply or divide) 2 numbers at once. Take <span class="inline">19 + 19 + 19</span>. Being human, we can add all the 9&#39;s together, carry the 2 and then on we go! But computers can&#39;t do that - what they can do is this:<span class="inline"> (19 + 19) + 19</span>. So they&#39;ll do each calculation in blocks of 2.</p>
-  <p>The binary calculations that are of most interest to us as programmers are multiplication and division. Computers only multiply in 2s, and to do more it&#39;ll break a number apart, and then add all the results together. Let&#39;s take some very simple examples first. <span class="inline">4 * 2 = 8</span>. Now to multiply by 2 in binary, we <em>shift </em>all the bits to the LEFT by one. Like this:</p>
-  <p class="code">00000100 * 2 = 00001000 = 8</p>
-  <p>All the bits in this case have moved to the left by one, making it move from the 3rd bit, to the 4th, and changing the value from 4 to 8. How about a larger number?</p>
-  <p class="code">101 = 01100101 * 2 = 11001010 = 202</p>
-  <p>Again, all the bits move on one, and that multiples by 2. So, how about a multiple by 4? Easy, we shift everything left by 2, rather than one. So how about 16, or 128? This would require a left shift of 4 bits, or 7 bits respectively. This is incredibly useful; it means we can do simple multiplications by simply moving bits around. To do this, we use the <strong>left shift</strong> operator <span class="inline">&lt;&lt;</span>. Here are some examples:</p>
-  <p class="code">00000001 &lt;&lt; 1 = 000000010 = 2<br />
+    10001000 = 136</p><p> 분명히 여기에서 보기가 더 어렵지만 열에 항목이 없을 때까지 오버플로가 계속 발생합니다. 컴퓨터는 한 번에 2개의 숫자만 더하기(또는 빼기, 곱하기 또는 나누기)할 수 있다는 점에 주목할 가치가 있습니다. 가져 가다 <span class="inline">19 + 19 + 19</span>. 인간이기 때문에 9를 모두 더하고 2를 옮긴 다음 계속할 수 있습니다! 하지만 컴퓨터는 그렇게 할 수 없습니다. 컴퓨터가 할 수 있는 일은 다음과 같습니다.<span class="inline"> (19 + 19) + 19</span>. 따라서 그들은 2 블록에서 각 계산을 수행합니다.</p><p> 프로그래머로서 우리에게 가장 관심 있는 이진 계산은 곱셈과 나눗셈입니다. 컴퓨터는 2초 만에 곱하며 더 많은 작업을 수행하기 위해 숫자를 나누고 모든 결과를 합산합니다. 먼저 아주 간단한 몇 가지 예를 들어보겠습니다. <span class="inline">4 * 2 = 8</span>. 이제 이진법으로 2를 곱하기 위해 모든 비트를 LEFT로 1 <em>만큼 이동</em> 합니다. 이와 같이:</p><p class="code">00000100 * 2 = 00001000 = 8</p><p> 이 경우 모든 비트가 왼쪽으로 하나씩 이동하여 3번째 비트에서 4번째 비트로 이동하고 값을 4에서 8로 변경합니다. 더 큰 수는 어떻습니까?</p><p class="code">101 = 01100101 * 2 = 11001010 = 202</p><p> 다시 말하지만, 모든 비트는 1로 이동하고 2의 배수입니다. 그렇다면 4의 배수는 어떻습니까? 쉽게, 우리는 모든 것을 1이 아닌 2만큼 왼쪽으로 옮깁니다. 그렇다면 16 또는 128은 어떻습니까? 이것은 각각 4비트 또는 7비트의 왼쪽 시프트가 필요합니다. 이것은 매우 유용합니다. 단순히 비트를 이동하여 간단한 곱셈을 수행할 수 있음을 의미합니다. 이를 위해 <strong>왼쪽 시프트</strong> 연산자를 사용합니다. <span class="inline">&lt;&lt;</span>. 여기 예시들이 있습니다:</p><p class="code">00000001 &lt;&lt; 1 = 000000010 = 2<br />
     00000001 &lt;&lt; 2 = 000000100 = 4<br />
     00000001 &lt;&lt; 3 = 000001000 = 8<br />
     00000001 &lt;&lt; 4 = 000010000 = 16<br />
     00000001 &lt;&lt; 5 = 000100000 = 32<br />
     00000001 &lt;&lt; 6 = 001000000 = 64<br />
     00000001 &lt;&lt; 7 = 010000000 = 128<br />
-    00000001 &lt;&lt; 8 = 100000000 = 256</p>
-  <p>Now, aside from being very useful for fast/simple multiplications, it&#39;s also very useful for setting specific bits, without having to figure out the bit value. Let&#39;s say we wanted to set bit 27, what number is that? (67108864 by the way!), well we can use the syntax above to easily set flags like this:</p>
-  <p class="code">a = a | (1 &lt;&lt; 27)</p>
-  <p>Okay... so actually this would be bit 26 the way we&#39;ve been describing things so far (as bits have been starting at one), but actually... bits start at bit 0, and go upwards, not at bit 1. So while there are 32 bits in an INTEGER, the bits range from 0 to 31, not 1 to 32. This is actually pretty useful, as we can now set up constants for bit numbers.</p>
-  <p>So let&#39;s say Bit 27 is an active flag, and bit 0 is an exploding flag. How can we set both?</p>
-  <p class="code">ACTIVE = 27;<br />
+    00000001 &lt;&lt; 8 = 100000000 = 256</p><p> 이제 빠르고 간단한 곱셈에 매우 유용할 뿐만 아니라 비트 값을 알아낼 필요 없이 특정 비트를 설정하는 데에도 매우 유용합니다. 비트 27을 설정하고 싶다고 가정해 봅시다. 그 숫자는 무엇입니까? (그런데 67108864!), 위의 구문을 사용하여 다음과 같이 플래그를 쉽게 설정할 수 있습니다.</p><p class="code">a = a | (1 &lt;&lt; 27)</p><p> 좋아... 그래서 실제로 이것은 우리가 지금까지 설명한 대로 비트 26이 될 것입니다(비트가 1에서 시작했기 때문에). 그러나 실제로... 비트는 비트 0에서 시작하여 비트 1이 아니라 위쪽으로 이동합니다. 따라서 INTEGER에는 32비트가 있지만 비트 범위는 1에서 32가 아니라 0에서 31입니다. 이제 비트 번호에 대한 상수를 설정할 수 있으므로 이것은 실제로 매우 유용합니다.</p><p> 비트 27이 활성 플래그이고 비트 0이 폭발 플래그라고 가정해 보겠습니다. 어떻게 둘 다 설정할 수 있습니까?</p><p class="code">ACTIVE = 27;<br />
     BOOM = 0;<br />
-    A = A | (1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM);</p>
-  <p>This may look like a lot of code, but if these numbers are constants, the compiler will pre-compile these operations into a single value so that we end up with this as actual code.</p>
-  <p class="code">A = A | 13421772;</p>
-  <p>Clearing these bits (as we saw above) is simply a matter of using the NOT modifier, like this:</p>
-  <p class="code">A = A &amp; ~((1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM));</p>
-  <p>So this happily lets us set and clear any bits we&#39;d like, and it also lets us compress out data structures massively. Compressing data structures is a good thing, because if you use less memory, you get less cache misses, and your code just runs faster. Put it this way, what&#39;s quicker, copying 32Mb or data, or 4Mb? Well, quite clearly 4 is. So if you can pack all yours flags down into a single memory access, this is good!</p>
-  <p>Now, let&#39;s take a quick look at how you do division, and why it&#39;s going to be so useful. Division is done by shifting the bits <em>right</em> using the <strong>right shift</strong> operator <span class="inline">&gt;&gt;</span>. Let&#39;s take a simple number - 64 - and divide it by 32:</p>
-  <p class="code">64 / 32 = 01000000 &gt;&gt; 5 = 00000010</p>
-  <p>So there you shift the single bit down by 5 (which is the number of shifts required for 32 – look above), which gives us 2. But what happens if here are other bits in there? Well let&#39;s take a look:</p>
-  <p class="code">68 / 32 = 01000100 &gt;&gt; 5 = 00000010</p>
-  <p>So there you go…. It&#39;s exactly the same. The bits we shift down are simply lost. This is actually really useful, because when dividing down if we need the remainder, there&#39;s an even easier way to get it, which we&#39;ll get to in a moment. But first, let&#39;s take a practical example. I have an X and Y position, and I want to get the grid cell this falls in, where the grid is 32x32 in size. This method allows is to store objects, collisions, flags – all manner of things, and access them very quickly. So here we go:</p>
-  <p class="code">var X_index = x &gt;&gt; 5;<br />
+    A = A | (1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM);</p><p> 이것은 많은 코드처럼 보일 수 있지만 이러한 숫자가 상수인 경우 컴파일러는 이러한 연산을 단일 값으로 미리 컴파일하여 실제 코드로 끝낼 수 있습니다.</p><p class="code">A = A | 13421772;</p><p> 이 비트를 지우는 것은(위에서 보았듯이) 다음과 같이 NOT 수정자를 사용하는 문제입니다.</p><p class="code">A = A &amp; ~((1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM));</p><p> 따라서 이것은 우리가 원하는 비트를 설정하고 지울 수 있게 해주며 데이터 구조를 대량으로 압축할 수도 있습니다. 데이터 구조를 압축하는 것은 좋은 일입니다. 메모리를 덜 사용하면 캐시 누락이 줄어들고 코드가 더 빨리 실행되기 때문입니다. 이런 식으로 말하면 32Mb 또는 데이터 또는 4Mb를 복사하는 것 중 어느 것이 더 빠릅니까? 글쎄요, 분명히 4입니다. 따라서 모든 플래그를 단일 메모리 액세스로 압축할 수 있다면 이것이 좋습니다!</p><p> 이제 나눗셈을 수행하는 방법과 그것이 왜 그렇게 유용한지 간단히 살펴보겠습니다. 나눗셈은 <strong>오른쪽 시프트</strong> 연산자를 사용하여 비트를 <em>오른쪽</em> 으로 시프트하여 수행됩니다. <span class="inline">&gt;&gt;</span>. 간단한 숫자인 64를 32로 나누겠습니다.</p><p class="code">64 / 32 = 01000000 &gt;&gt; 5 = 00000010</p><p> 그래서 거기에서 단일 비트를 5만큼 아래로 이동합니다(32에 필요한 이동 수입니다. 위 참조). 그러면 2가 됩니다. 하지만 여기에 다른 비트가 있으면 어떻게 될까요? 그럼 살펴보겠습니다:</p><p class="code">68 / 32 = 01000100 &gt;&gt; 5 = 00000010</p><p> 그래서 당신은 간다.... 완전히 똑같습니다. 우리가 아래로 이동하는 비트는 단순히 손실됩니다. 이것은 실제로 매우 유용합니다. 나눌 때 나머지가 필요한 경우 더 쉽게 구할 수 있는 방법이 있기 때문입니다. 하지만 먼저 실용적인 예를 들어보겠습니다. X 및 Y 위치가 있고 그리드 크기가 32x32인 그리드 셀을 가져오고 싶습니다. 이 방법을 사용하면 객체, 충돌, 플래그 등 모든 종류의 사물을 저장하고 매우 빠르게 액세스할 수 있습니다. 그래서 여기 우리가 간다:</p><p class="code">var X_index = x &gt;&gt; 5;<br />
     var Y_index = y &gt;&gt; 5;<br />
-    cell_data = mygrid[# X_index,Y_index];</p>
-  <p>So, what if we wanted the remainder? Perhaps this remainder is used as some kind of order flag or something. Whatever the reason, getting a remainder is as simple as doing an <span class="inline">AND</span>:</p>
-  <p class="code">var remainder = x &amp; 31<br />
-    var X_Index = x &gt;&gt; 5;</p>
-  <p>Now, you might have noticed we&#39;ve used multiple lines of code here (as is so often the case), but this is still only a couple of very fast instructions. But why the 31? Well, as bit 5 is 32, then all the bits below would be 31, and that&#39;s the maximum remainder so that&#39;s what we <span class="inline">AND</span> with (we could also use <span class="inline">(1 &lt;&lt; 5) - 1</span> which would make <span class="inline">32 - 1 = 31</span>). Now, if I were to do this without understanding binary, it would look like this:</p>
-  <p class="code">var r = x mod 32;<br />
-    var X_Index = floor(x / 32);</p>
-  <p>So why is this much worse? Well, in order to divide by 32, we have to execute a floating point divide - which obviously takes time, but in order to do the <span class="inline">mod 32</span>, you actually have to do another one! If we were doing this in assembler, we actually get BOTH values in one divide, but you don&#39;t get this in high level languages (well… not very often), and so you have to do all the work twice. This adds up, especially if you&#39;re doing a tight loop with lots of calculations like this. Integer divides using bit shifting as shown above really help optimising your game.</p>
-  <p>Since this can be quite a complex concept to grasp and then apply to real-world programming situations, you can find below a series of short examples that could be applied to any game made with <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Tile Alignment</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> developers often use the function <span class="inline">place_free()</span>, and then when a collision is found, try to slowly move the object out by either looping around an <span class="inline">x</span> or <span class="inline">y</span> position while continuing to execute that function, or by using the <span class="inline">move_outside_all()</span> function.</p>
-    <p class="dropspot">So, what&#39;s the faster way to do this? Well, if we use proper power-of-2 tiles, then we have a very simple method that&#39;s also lightning fast. If we are moving right, and we&#39;ve moved into a collision block, then as we know everything is aligned to 32, so we need to also align the sprite to a 32 pixel boundary - preferably the one to the left - so the sprite is moved OUT of the collision. This is really easy, knowing the rules we&#39;ve used above to get the remainder, and knowing how to get the inverse of bits, we can simply do this:</p>
-    <p class="code">x = x &amp; ~31;</p>
-    <p class="dropspot">That&#39;s right, that&#39;s ALL that it takes to align to a 32 pixel boundary. By changing the 31 we can align to anything we like – as long as it&#39;s a power of 2. (This is the equivalent of dividing by 32, then multiplying by 32, thereby removing the lower bits.)</p>
-    <p class="dropspot">If we wanted to align to the right, then we&#39;d do the above, but then add 32 to move it into the next tile. Simple. All this makes the whole collision code monumentally faster, and lets you spend the CPU time where you really need it.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Keys And Doors</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Say you have a level with a few doors, and a key for each. How can you easily mark a key for a specific door? Well, normally you&#39;d just assign an ID to the key and the door. So what if you wanted a key to open 2 or 3 doors? Easy. You use a MASK. The door would have a single bit assigned like so:<br />
-       </p>
-    <p class="code">door_id = 1; // 0001</p>
-    <p class="dropspot">The others would be something like:<br />
-       </p>
-    <p class="code">door_id=2; // 0010<br />
+    cell_data = mygrid[# X_index,Y_index];</p><p> 그렇다면 나머지를 원하면 어떻게 될까요? 아마도 이 나머지는 일종의 주문 플래그 또는 무언가로 사용됩니다. 이유가 무엇이든 나머지를 얻는 것은 다음을 수행하는 것처럼 간단합니다. <span class="inline">AND</span>:</p><p class="code">var remainder = x &amp; 31<br />
+    var X_Index = x &gt;&gt; 5;</p><p> 자, 여기에서 여러 줄의 코드를 사용했음을 알아차렸을 수도 있지만(자주 그러하듯이) 이것은 여전히 매우 빠른 몇 가지 지침에 불과합니다. 근데 왜 31이야? 음, 비트 5가 32이므로 아래의 모든 비트는 31이 되고 이것이 최대 나머지이므로 이것이 우리가 <span class="inline">AND</span> (우리는 또한 사용할 수 <span class="inline">(1 &lt;&lt; 5) - 1</span> 만들 것입니다 <span class="inline">32 - 1 = 31</span> ). 이제 바이너리를 이해하지 않고 이 작업을 수행하면 다음과 같이 보일 것입니다.</p><p class="code">var r = x mod 32;<br />
+    var X_Index = floor(x / 32);</p><p> 그렇다면 왜 이것이 훨씬 더 나쁠까요? 음, 32로 나누려면 부동 소수점 나누기를 실행해야 합니다. 이는 분명히 시간이 걸리지만 하기 위해서는 <span class="inline">mod 32</span>, 실제로 다른 작업을 수행해야 합니다! 어셈블러에서 이 작업을 수행하는 경우 실제로 두 값을 모두 한 분할로 얻을 수 있지만 고급 언어에서는 이것을 얻지 못하므로(글쎄요... 자주는 아님) 모든 작업을 두 번 수행해야 합니다. 이것은 특히 이와 같은 계산이 많이 포함된 빡빡한 루프를 수행하는 경우 추가됩니다. 위와 같이 비트 시프팅을 사용하여 정수 나누기는 게임을 최적화하는 데 실제로 도움이 됩니다.</p><p> 이것은 이해하고 실제 프로그래밍 상황에 적용하기에는 상당히 복잡한 개념일 수 있으므로 아래에서 <span data-keyref="GameMaker Name">GameMaker</span> 로 만든 모든 게임에 적용할 수 있는 일련의 짧은 예를 찾을 수 있습니다.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">타일 정렬</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> <span data-keyref="GameMaker Name">GameMaker</span> 개발자는 종종 이 기능을 사용합니다. <span class="inline">place_free()</span>, 그리고 충돌이 발견되면 주변을 순환하여 천천히 물체를 밖으로 이동시키십시오. <span class="inline">x</span> 또는 <span class="inline">y</span> 해당 기능을 계속 실행하는 동안 위치를 지정하거나 <span class="inline">move_outside_all()</span> 함수.</p><p class="dropspot"> 그래서, 이것을 하는 더 빠른 방법은 무엇입니까? 글쎄, 우리가 적절한 2의 거듭제곱 타일을 사용한다면 우리는 번개처럼 빠른 매우 간단한 방법을 갖게 됩니다. 오른쪽으로 이동하고 충돌 블록으로 이동한 경우 모든 것이 32로 정렬되어 있으므로 스프라이트도 32픽셀 경계(바람직하게는 왼쪽에 있는 경계)에 정렬해야 합니다. 충돌에서 OUT으로 이동됩니다. 이것은 정말 쉽습니다. 나머지를 얻기 위해 위에서 사용한 규칙과 비트의 역수를 얻는 방법을 알고 있으면 간단히 다음과 같이 할 수 있습니다.</p><p class="code">x = x &amp; ~31;</p><p class="dropspot"> 맞습니다. 32픽셀 경계에 맞추는 데 필요한 모든 것입니다. 31을 변경하면 2의 거듭제곱인 한 원하는 대로 정렬할 수 있습니다. (이는 32로 나눈 다음 32를 곱하여 하위 비트를 제거하는 것과 같습니다.)</p><p class="dropspot"> 오른쪽에 정렬하려면 위와 같이 하고 32를 추가하여 다음 타일로 이동합니다. 단순한. 이 모든 것이 전체 충돌 코드를 엄청나게 빠르게 만들고 실제로 필요한 곳에 CPU 시간을 보낼 수 있게 해줍니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">열쇠와 문</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> 몇 개의 문이 있는 레벨과 각각의 키가 있다고 가정해 보겠습니다. 특정 문의 키를 어떻게 쉽게 표시할 수 있습니까? 글쎄, 일반적으로 당신은 열쇠와 문에 ID를 할당합니다. 그렇다면 2개 또는 3개의 문을 여는 열쇠가 필요하다면 어떻게 될까요? 쉬운. 마스크를 사용합니다. 문에는 다음과 같이 단일 비트가 할당됩니다.<br /></p><p class="code">door_id = 1; // 0001</p><p class="dropspot"> 다른 것들은 다음과 같을 것입니다:<br /></p><p class="code">door_id=2; // 0010<br />
       door_id=4; // 0100<br />
       door_id=8; // 1000<br />
-      etc...</p>
-    <p class="dropspot">If we wanted the key to open door 1 and 3, then the key would have the MASK value of 5 (which is 101 in binary). If we perform an <span class="inline">AND</span> of this, and it comes out &quot;not zero&quot;, then we know that the key can open the door. You could also have keys that opened nothing by having a MASK of 0. See the code below for the actual check:</p>
-    <p class="code">if ((key_id &amp; door_id) ! = 0)<br />
+      etc...</p><p class="dropspot"> 1번과 3번 문을 여는 키를 원하면 키의 MASK 값이 5(이진수로 101)가 됩니다. 우리가 수행하는 경우 <span class="inline">AND</span> 이 중 &quot;0이 아님&quot;이 나오면 열쇠가 문을 열 수 있다는 것을 압니다. MASK가 0이면 아무 것도 열지 않은 키를 가질 수도 있습니다. 실제 확인은 아래 코드를 참조하십시오.</p><p class="code">if ((key_id &amp; door_id) ! = 0)<br />
       {<br />
           opendoor();<br />
-      }</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Looping Counters</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Let&#39;s say we want a simple animation counter, going from 0 to to 15 (as we have 16 frames of animation). Normally you would do an increment, and then do an <span class="inline">if</span> check to wrap the number, but for this example let&#39;s use the <span class="inline">AND(&amp;)</span> operator:</p>
-    <p class="code">counter = (counter + 1) &amp; 15;</p>
-    <p class="dropspot">Since 16 is a power of 2, we can reduce that number by 1 and use it as a mask, which we can then use to wrap our counter value. If the counter moves up from 15 to 16, we end up with bit pattern <span class="inline">10000</span>, and if we <span class="inline">AND</span> that with 15 (bit pattern <span class="inline">01111</span>) we end up with <span class="inline">00000</span> (simply zero). This means that the above code is useful for wrapping values within the range of a power of 2.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Power Of 2 Check</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">What if you wanted to check to see if something was a power of 2? Well, here&#39;s a neat little trick.. This will return <span class="inline">true</span> if the given value is a power of 2:</p>
-    <p class="code">function is_pow2(_val)<br />
+      }</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">반복 카운터</a></p><div class="droptext" data-targetname="drop-down2"><p class="dropspot"> 0에서 15까지의 간단한 애니메이션 카운터가 필요하다고 가정해 보겠습니다(16개의 애니메이션 프레임이 있으므로). 일반적으로 증분을 수행한 다음 <span class="inline">if</span> 번호를 래핑하려면 확인하지만 이 예에서는 <span class="inline">AND(&amp;)</span> 운영자:</p><p class="code">counter = (counter + 1) &amp; 15;</p><p class="dropspot"> 16은 2의 거듭제곱이므로 해당 숫자를 1로 줄이고 이를 마스크로 사용할 수 있습니다. 그런 다음 카운터 값을 래핑하는 데 사용할 수 있습니다. 카운터가 15에서 16으로 올라가면 비트 패턴으로 끝납니다. <span class="inline">10000</span>, 그리고 만약 우리가 <span class="inline">AND</span> 15(비트 패턴 <span class="inline">01111</span> ) 우리는 결국 <span class="inline">00000</span> (단순히 0). 즉, 위의 코드는 2의 거듭제곱 범위 내에서 값을 래핑하는 데 유용합니다.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">2의 거듭제곱 확인</a></p><div class="droptext" data-targetname="drop-down3"><p class="dropspot"> 어떤 것이 2의 거듭제곱인지 확인하고 싶다면 어떻게 해야 할까요? 글쎄, 여기에 멋진 작은 트릭이 있습니다. 이것은 돌아올 것입니다. <span class="inline">true</span> 주어진 값이 2의 거듭제곱인 경우:</p><p class="code">function is_pow2(_val)<br />
       {<br />
           return _val &amp; (_val - 1)) == 0;<br />
-      }</p>
-    <p class="dropspot">So if we had the number 51 (<span class="inline">110011</span>) what does this do? Well, we get this... <span class="inline">110011 &amp; 110010</span>, which obviously leaves us with <span class="inline">false</span>, as there are lots of bits left after the <span class="inline">AND</span>. If we had 64 (<span class="inline">1000000</span>), then it becomes this... <span class="inline">1000000 &amp; 0111111</span> which <em>does</em> leave us 0, so it&#39;s <span class="inline">true</span>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Index Alignment</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Here&#39;s a quick bit of code to align to power of 2 numbers. (1,2,4,8,16 and so on). This can be very useful for memory allocation, or making sure you write data to proper boundaries. In this example, <span class="inline">_val1</span> needs to be aligned to <span class="inline">_val2</span> bytes, where <span class="inline">_val2</span> is a power of 2 number. This little function rounds UP to the next boundary of the desired number.</p>
-    <p class="code">function align_pow2(_val1, _val2)<br />
+      }</p><p class="dropspot"> 따라서 숫자 51(<span class="inline">110011</span> ) 이것은 무엇을합니까? 글쎄, 우리는 이것을 얻습니다... <span class="inline">110011 &amp; 110010</span>, 분명히 우리를 떠나 <span class="inline">false</span>, 뒤에 비트가 많이 남아 있기 때문에 <span class="inline">AND</span>. 64(<span class="inline">1000000</span> ) 그러면 이렇게 됩니다... <span class="inline">1000000 &amp; 0111111</span> 이것은 우리에게 0 <em>을</em> 남기므로 <span class="inline">true</span>.</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">인덱스 정렬</a></p><div class="droptext" data-targetname="drop-down4"><p class="dropspot"> 다음은 2의 거듭제곱에 맞추는 간단한 코드입니다. (1,2,4,8,16 등). 이것은 메모리 할당이나 적절한 경계에 데이터를 쓰는 데 매우 유용할 수 있습니다. 이 예에서, <span class="inline">_val1</span> 에 맞춰야 합니다 <span class="inline">_val2</span> 바이트, 여기서 <span class="inline">_val2</span> 2의 거듭제곱입니다. 이 작은 함수는 원하는 숫자의 다음 경계로 반올림합니다. </p><p class="code">function align_pow2(_val1, _val2)<br />
       {<br />
           return _val1 + (_val2 - 1)) &amp; ~(_val2 - 1);<br />
-      }</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Type_Tables.htm">Type Tables</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+      }</p><p class="dropspot"></p><p class="dropspot"></p></div><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Additional_Information.htm">추가 정보</a></div><div style="float:right"> 다음: <a href="Type_Tables.htm">유형 테이블</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Bitwise Operators

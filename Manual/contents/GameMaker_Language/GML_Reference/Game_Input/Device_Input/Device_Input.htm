@@ -3,53 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Device Input</title>
+  <title>장치 입력</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for Device Input" />
+  <meta name="topic-comment" content="장치 입력에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Device Input,mb_left,mb_middle,mb_right,mb_none,mb_any" />
+  <meta name="search-keywords" content="장치 입력,mb_left,mb_middle,mb_right,mb_none,mb_any" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Device Input</h1>
-  <p>When your game is being targeted at those platforms that permit multi-touch, you should be using these functions. They work the same way a PC would work if it had multiple mice attached and the constants that are being checked for are the same as those used for the <a href="../Mouse_Input/Mouse_Input.htm">standard mouse functions</a>:</p>
-  <div data-conref="../../../../assets/snippets/Mouse_input_constants.hts"> </div>
-  <p>The functions can all take a &quot;touch&quot; value that corresponds to a touch on the device display, however the maximum number of touches that can be detected will depend very much on the device and the OS being run. For example, some low end Android devices may only be able to detect 2 or 3 touches at the same time, while a Windows device may be able to detect up to 10.</p>
-  <p>On touch screen devices, a double tap is returned as the equivalent of a <b>right mouse button</b> event. So, if you need to detect multiple taps in quick succession, for example, you will need to check for <b>both</b> the <span class="inline">mb_left</span> and <span class="inline">mb_right</span>. This functionality can be toggled on or off using <a href="device_mouse_dbclick_enable.htm"><span class="inline">device_mouse_dbclick_enable()</span></a>.</p>
-  <p>Below you can find a list of all the device specific control functions:</p>
-  <ul class="colour">
-    <li><a href="device_mouse_check_button.htm">device_mouse_check_button</a></li>
-    <li><a href="device_mouse_check_button_pressed.htm">device_mouse_check_button_pressed</a></li>
-    <li><a href="device_mouse_check_button_released.htm">device_mouse_check_button_released</a></li>
-    <li><a href="device_mouse_dbclick_enable.htm">device_mouse_dbclick_enable</a></li>
-    <li><a href="device_mouse_x.htm">device_mouse_x</a></li>
-    <li><a href="device_mouse_y.htm">device_mouse_y</a></li>
-    <li><a href="device_mouse_raw_x.htm">device_mouse_raw_x</a></li>
-    <li><a href="device_mouse_raw_y.htm">device_mouse_raw_y</a></li>
-    <li><a href="device_mouse_x_to_gui.htm">device_mouse_x_to_gui</a></li>
-    <li><a href="device_mouse_y_to_gui.htm">device_mouse_y_to_gui</a></li>
-    <li><a href="device_is_keypad_open.htm">device_is_keypad_open</a></li>
-    <li><a href="device_get_tilt_x.htm">device_get_tilt_x</a></li>
-    <li><a href="device_get_tilt_y.htm">device_get_tilt_y</a></li>
-    <li><a href="device_get_tilt_z.htm">device_get_tilt_z</a></li>
-  </ul>
-  <p> </p>
-  <p>Please note that on mobile devices (Android, iOS and Windows Phone), you can use the back button at any time, as it is mapped to the keyboard <b>backspace</b> which is the <span data-keyref="GameMaker Name">GameMaker</span> <a href="../Keyboard_Input/Keyboard_Input.htm">keyboard constant</a> <span class="inline">vk_backspace</span>, so you can do checks for that key and perform actions on those devices as if the back button had been used.</p>
-  <h3>Note on Mouse Coordinates</h3>
-  <div data-conref="../../../../assets/snippets/Mouse_Coordinates_Update_Frequency.hts"> </div>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Gesture_Input/Gesture_Input.htm">Gesture Input</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 장치 입력</h1><p> 게임이 멀티 터치를 허용하는 플랫폼을 대상으로 하는 경우 이러한 기능을 사용해야 합니다. 여러 개의 마우스가 연결되어 있고 확인 중인 상수가 <a href="../Mouse_Input/Mouse_Input.htm">표준 마우스 기능</a> 에 사용된 상수와 동일한 경우 PC가 작동하는 것과 동일한 방식으로 작동합니다.</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td> <span class="notranslate">mb_left</span></td><td> 마우스 왼쪽 버튼</td></tr><tr><td> <span class="notranslate">mb_middle</span></td><td> 마우스 가운데 버튼(일부 대상 플랫폼에서는 유효하지 않을 수 있음)</td></tr><tr><td> <span class="notranslate">mb_right</span></td><td> 마우스 오른쪽 버튼</td></tr><tr><td> <span class="notranslate">mb_side1*</span></td><td> 마우스 측면 버튼 1</td></tr><tr><td> <span class="notranslate">mb_side2*</span></td><td> 마우스 측면 버튼 2</td></tr><tr><td> <span class="notranslate">mb_any</span></td><td> 모든 마우스 버튼</td></tr><tr><td> <span class="notranslate">mb_none</span></td><td> 마우스 버튼 없음</td></tr></tbody></table><p class="note"> <span class="note"><strong>참고</strong></span> * <strong>mb_side1</strong> 및 <strong>mb_side2</strong> 버튼은 Windows, macOS, Ubuntu 및 HTML5에서만 사용할 수 있습니다.</p><p> 기능은 모두 장치 디스플레이의 터치에 해당하는 &quot;터치&quot; 값을 취할 수 있지만 감지할 수 있는 최대 터치 수는 장치와 실행 중인 OS에 따라 크게 달라집니다. 예를 들어 일부 저가형 Android 기기는 동시에 2~3개의 터치만 감지할 수 있는 반면 UWP 기기는 최대 10개의 터치를 감지할 수 있습니다. 터치 스크린 기기에서는 두 번 탭이 다음과 같이 반환됩니다. <b>마우스 오른쪽 버튼</b> 이벤트와 동일합니다. 따라서 예를 들어 여러 탭을 빠르게 연속으로 감지해야 하는 경우 <b>두 가지 모두</b> 를 확인해야 합니다. <span class="inline">mb_left</span> 그리고 <span class="inline">mb_right</span>. 이 기능은 다음을 사용하여 켜거나 끌 수 있습니다.<a href="device_mouse_dbclick_enable.htm"><span class="inline">device_mouse_dbclick_enable()</span></a>.</p><p> 아래에서 모든 장치별 제어 기능 목록을 찾을 수 있습니다.</p><ul class="colour"><li> <a href="device_mouse_check_button.htm"><span class="notranslate">device_mouse_check_button</span></a></li><li> <a href="device_mouse_check_button_pressed.htm"><span class="notranslate">device_mouse_check_button_pressed</span></a></li><li> <a href="device_mouse_check_button_released.htm"><span class="notranslate">device_mouse_check_button_released</span></a></li><li> <a href="device_mouse_dbclick_enable.htm"><span class="notranslate">device_mouse_dbclick_enable</span></a></li><li> <a href="device_mouse_x.htm"><span class="notranslate">device_mouse_x</span></a></li><li> <a href="device_mouse_y.htm"><span class="notranslate">device_mouse_y</span></a></li><li> <a href="device_mouse_raw_x.htm"><span class="notranslate">device_mouse_raw_x</span></a></li><li> <a href="device_mouse_raw_y.htm"><span class="notranslate">device_mouse_raw_y</span></a></li><li> <a href="device_mouse_x_to_gui.htm"><span class="notranslate">device_mouse_x_to_gui</span></a></li><li> <a href="device_mouse_y_to_gui.htm"><span class="notranslate">device_mouse_y_to_gui</span></a></li><li> <a href="device_is_keypad_open.htm"><span class="notranslate">device_is_keypad_open</span></a></li><li> <a href="device_get_tilt_x.htm"><span class="notranslate">device_get_tilt_x</span></a></li><li> <a href="device_get_tilt_y.htm"><span class="notranslate">device_get_tilt_y</span></a></li><li> <a href="device_get_tilt_z.htm"><span class="notranslate">device_get_tilt_z</span></a></li></ul><p></p><p> 모바일 장치(Android, iOS 및 Windows Phone)에서는 뒤로 버튼이 <span data-keyref="GameMaker Name">GameMaker</span> <a href="../Keyboard_Input/Keyboard_Input.htm">키보드 상수</a> 인 키보드 <b>백스페이스</b> 에 매핑되어 언제든지 사용할 수 있습니다. <span class="inline">vk_backspace</span>, 따라서 해당 키를 확인하고 뒤로 버튼이 사용된 것처럼 해당 장치에서 작업을 수행할 수 있습니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Game_Input.htm">게임 입력</a></div><div style="float:right"> 다음: <a href="../Gesture_Input/Gesture_Input.htm">제스처 입력</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Device Input Functions

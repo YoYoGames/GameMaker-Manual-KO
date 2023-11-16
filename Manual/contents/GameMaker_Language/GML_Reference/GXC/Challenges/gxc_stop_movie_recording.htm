@@ -6,64 +6,16 @@
   <title>gxc_stop_movie_recording</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for gxc_stop_movie_recording" />
+  <meta name="topic-comment" content="gxc_stop_movie_recording 참조 페이지" />
   <meta name="rh-index-keywords" content="gxc_stop_movie_recording" />
   <meta name="search-keywords" content="gxc_stop_movie_recording" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gxc_stop_movie_recording</h1>
-  <p>This function is used to stop a GXC recording that was previously started with <span class="inline"><a href="gxc_start_movie_recording.htm">gxc_start_movie_recording()</a></span>. It also submits the recording to the URL specified in the arguments, however the behaviour is different depending on the kind of string specified:</p>
-  <ul class="colour">
-    <li>If you specify a file name, the recording will be saved with that name in your Downloads folder</li>
-    <li>If you specify a URL, the recording will be uploaded to that URL</li>
-  </ul>
-  <p>The URL method should be used when the recording needs to be uploaded to GXC, and the file should be saved locally only for checking whether the recording was successful.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gxc_stop_movie_recording(filename);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>filename</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The file name or URL where the recording is to be saved or uploaded</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">gxc_submit_challenge_score(_score, function(_status, _result) {<br />
-    var _uploadUrl = _result.data.gameplayVideoUploadUrl;<br />
-    gxc_stop_movie_recording(_uploadUrl);<br />
-    });</p>
-  <p>The above code uses the GXC API Library to upload a score to the currently active challenge, and when a response is received in its callback method, it retrieves the upload URL for the video and uploads the recording to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../GXC_Functions.htm">GX.games Functions</a></div>
-        <div style="float:right">Next: <a href="gxc_pause_movie_recording.htm">gxc_pause_movie_recording</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> gxc_stop_movie_recording</h1><p> 이 기능은 이전에 다음으로 시작된 GXC 녹음을 중지하는 데 사용됩니다.<span class="inline"><a href="gxc_start_movie_recording.htm">gxc_start_movie_recording()</a></span>. 또한 녹음을 인수에 지정된 URL로 제출하지만 지정된 문자열의 종류에 따라 동작이 다릅니다.</p><ul class="colour"><li> 파일 이름을 지정하면 녹음이 다운로드 폴더에 해당 이름으로 저장됩니다.</li><li> URL을 지정하면 녹음이 해당 URL로 업로드됩니다.</li></ul><p> URL 방식은 녹화를 GXC에 업로드해야 할 때 사용해야 하며 파일은 녹화 성공 여부를 확인하기 위해서만 로컬에 저장해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">gxc_stop_movie_recording(filename);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filename</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The file name or URL where the recording is to be saved or uploaded</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">gxc_submit_challenge_score(_score, function(_status, _result) {<br />
+        var _uploadUrl = _result.data.gameplayVideoUploadUrl;<br />
+        gxc_stop_movie_recording(_uploadUrl);<br />
+    });</p><p> 위의 코드는 GXC API 라이브러리를 사용하여 현재 활성화된 챌린지에 점수를 업로드하고, 콜백 메서드에서 응답을 받으면 동영상의 업로드 URL을 검색하고 녹화를 업로드합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="../GXC_Functions.htm">오페라 GX와 GXC</a></div><div style="float:right"> 다음: <a href="gxc_pause_movie_recording.htm">gxc_pause_movie_recording</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gxc_stop_movie_recording

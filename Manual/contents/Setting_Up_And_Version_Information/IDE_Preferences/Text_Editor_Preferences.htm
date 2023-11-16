@@ -3,78 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Text Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>텍스트 편집기 기본 설정</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="The Text Editor Preferences" />
-  <meta name="rh-index-keywords" content="Prefs - Text" />
-  <meta name="search-keywords" content="Text Editor Prefs,Text Editor Preferences" />
+  <meta name="topic-comment" content="텍스트 편집기 기본 설정" />
+  <meta name="rh-index-keywords" content="환경 설정 - 텍스트" />
+  <meta name="search-keywords" content="텍스트 편집기 기본 설정,텍스트 편집기 기본 설정" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Text Editor Preferences</h1>
-  <p><img alt="The Text Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Prefs.png" />The <strong>Text Editors preferences</strong> are used to define how the different code/script editors look and feel. The main page has the following options:</p>
-  <ul class="colour">
-    <li><strong>Syntax checking delay (ms)</strong>: The delay time (in milliseconds) before the syntax checker runs. This default value is 2000ms.</li>
-    <li><strong>Code Completion Delay (ms)</strong>: The delay time (in milliseconds)</li>
-    <li><strong>Open scripts in full screen editor</strong>: Checking this option will make script resources open automatically in a new workspace. If this is un-checked, they will open in a window within the current workspace. This option is unchecked by default.</li>
-    <li><strong>Open shaders in full screen editor</strong>: Checking this option will make shader resources open automatically in a new workspace. If this is un-checked, they will open in a window within the current workspace. This option is unchecked by default.</li>
-    <li><strong>Open object events in full screen editor</strong>: Checking this option will make object event code editors open automatically in a new workspace. If this is un-checked, they will open in a window chained to the object event editor. This option is unchecked by default.</li>
-    <li><strong>Open event scripts as tabs in same window</strong>: When adding code or GML Visual to an event, the code window is chained to the event window, and when this option is checked any further events that are opened for editing will be added to the same window as tabs along the top. Un-checking this option will make each event open as its own unique chained window. This option is checked by default.</li>
-    <li><strong>Open linked scripts as tabs in same window</strong>: When you have multiple linked scripts and open them, by default they will be grouped n the same window as tabs. Un-checking this option will force them to open each in their own window/workspace. This option is checked by default.</li>
-    <li><strong>Pan text editor into view on focus</strong>: When you open a text editor from an object event, selecting this option will automatically pan the workspace to bring the editor to within the bounds. This option is off by default.</li>
-    <li><strong>Default code window width</strong>: Set the default width (in pixels) for the code window to be when opened. Default value is 900.</li>
-    <li><strong>Default code window height</strong>: Set the default height (in pixels) for the code window to be when opened. Default value is 600.</li>
-    <li><strong>Minimum code window width</strong>: Set the minimum width (in pixels) permitted by the code window. Default value is 300.</li>
-    <li><strong>Minimum code window height</strong>: Set the minimum height (in pixels) permitted by the code window. Default value is 200.</li>
-    <li><strong>Disable Right-To-Left Ordering</strong>: This disables right-to-left ordering for text, resulting in a performance boost. This must be unchecked if you wish to use a right-to-left ordered font in your text editor for comments.</li>
-  </ul>
-  <p> </p>
-  <p>Apart from the options above there are two sub-categories, Code Editor and Visual Editor, described below.</p>
-  <h2 id="h">Code Editor</h2>
-  <p><img alt="The Text Editor Colour Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Colour_Prefs.png" /></p>
-  <p>The <strong>Colour preferences</strong> are used to change how the code and script editor display different texts. Each entry has a number of sub-entries to permit you to define exactly how each separate piece of text should look, as shown in the example image above. In general, you can set the colour, font, size and style for each of the different options. Further down you can also set more general styling for things like line selection of code brackets, etc...</p>
-  <p><img alt="The Code Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Code_Prefs.png" /></p>
-  <p>Under the colour preferences you have the different <strong>styling Options</strong>. These preferences are used to set the behaviour of the code/script editor, with the following options available:</p>
-  <ul class="colour">
-    <li><strong>Keep tabs</strong>: If checked, this will keep tab key presses as tab characters - &#39; <span class="inline">\t</span>&#39; - in the editor, while unchecked means that tabs are converted into spaces. Default is off.</li>
-    <li><strong>Tab size</strong>: The number of character spaces that pressing &quot;Tab&quot; should indent the code. Default is 4.</li>
-    <li><strong>Show Whitespace</strong>: Display &quot; <span class="inline">.</span>&quot; to show whitespace (see image below). Default is off.</li>
-    <li><strong>Show line numbers</strong>: Whether to show the line numbers down the left or not. Default is on.</li>
-    <li><strong>Show tab lines</strong>: Display &quot; <span class="inline">....</span>&quot; to show tabbed space. Default is off.</li>
-    <li><strong>Enable colour coding</strong>: Enable or disable colour coding for the editor. If off, the code will not be styled, while when on it will be styled using the formatting given above in the Colour section. Default is on.</li>
-    <li><strong>Document line limit</strong>: Set the maximum number of lines for any given editor document. The default value is 0 (0 or less is essentially infinite) and any other value will limit the lines permitted.</li>
-    <li><strong>Match indent on new lines</strong>: Enable or disable auto-indentation for your code. Default is on, which will maintain any tabs set on a line when a new line is added.</li>
-    <li><strong>Auto indent after brace</strong>: Enable or disable auto-indentation for your code when adding braces <span class="inline">{}</span>. Default is on, which will tab the next line of code when a new brace <span class="inline">{</span> and a new line are added.</li>
-    <li><strong>Enable code completion</strong>: Enable or disable the code completion window. When writing code and this is enabled, you will get a popup window showing possible functions that you can use based on the current input text. Default is on.</li>
-    <li><strong>Auto add function brackets</strong>: Enable or disable the automatic addition of brackets <span class="inline">()</span> when you use the autocomplete. When writing code and this is enabled, the IDE will automatically add the two brackets <span class="inline">()</span> that a function requires, placing the cursor within them if the function takes arguments, or placing the cursor after them if it does not. This feature only works when the function has been selected from the autocomplete. Default is on.</li>
-    <li><strong>Undo / Redo Stack Limit</strong>: Here you can set the Undo/Redo stack limit. Anything under 0 is essentially infinite (limited by the memory available) while positive values will limit the stack to that number, removing any action at the tail of the stack if the limit is reached. Default is -1.</li>
-    <li><strong>Highlight selection matches</strong>: This will lightly highlight any section of code that is duplicated elsewhere. So, if you select a function, for example, all instances of this function in the current code window will be highlighted too. Default is on.</li>
-    <li><strong>Colour coding/code completion for obsolete functions</strong>: This will highlight any section of code that is obsolete. Default is on.</li>
-  </ul>
-  <h2>Visual Editor</h2>
-  <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Visual_Prefs.png" /></p>
-  <p>The Comments preferences control the different colour and formatting options for any comments that have been added to your <span data-keyref="GML_Visual">GML Visual</span> scripts. These options are:</p>
-  <ul class="colour">
-    <li><strong>Colour</strong>: The default colour for the text being written to the window (default <a class="glossterm" data-glossterm="ARGB" href="GML_Visual_Preferences.htm#">ARGB</a> #FF53E270).</li>
-    <li><strong>Font Name</strong>: The name of the font to use (available fonts will depend on those installed on your system).</li>
-    <li><strong>Style</strong>: The font style to use, like <strong>bold </strong>or <em>italics </em>(note that not all windows will permit the same styles and it will also depend on the font used).</li>
-    <li><strong>Size</strong>: The size to set the font to for the given output window.</li>
-    <li><strong>Anti-Aliasing</strong>: Here you can set the <a class="glossterm" data-glossterm="anti-aliasing" href="GML_Visual_Preferences.htm#">anti-aliasing</a> mode for the output windows font rendering. You can choose to let the IDE decide by selecting <em>Use Default</em>, or you can force it <em>On </em>or <em>Off </em>by selecting either of those options.</li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Language_Preferences.htm">Language Preferences</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 텍스트 편집기 기본 설정</h1><p><img alt="The Text Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Prefs.png" /> <strong>텍스트 편집기 기본 설정</strong> 은 다양한 코드/스크립트 편집기의 모양과 느낌을 정의하는 데 사용됩니다. 기본 페이지에는 다음과 같은 옵션이 있습니다.</p><ul class="colour"><li> <strong>구문 검사 지연(ms)</strong>: 구문 검사기가 실행되기 전의 지연 시간(밀리초)입니다. 이 기본값은 2000ms입니다.</li><li> <strong>코드 완성 지연(ms)</strong>: 지연 시간(밀리초)</li><li> <strong>전체 화면 편집기에서 스크립트 열기</strong>: 이 옵션을 선택하면 스크립트 리소스가 새 작업 공간에서 자동으로 열립니다. 선택하지 않으면 현재 작업 공간 내의 창에서 열립니다. 이 옵션은 기본적으로 선택 해제되어 있습니다.</li><li> <strong>전체 화면 편집기에서 셰이더 열기</strong>: 이 옵션을 선택하면 셰이더 리소스가 새 작업 공간에서 자동으로 열립니다. 선택하지 않으면 현재 작업 공간 내의 창에서 열립니다. 이 옵션은 기본적으로 선택 해제되어 있습니다.</li><li> <strong>전체 화면 편집기에서 개체 이벤트 열기</strong>: 이 옵션을 선택하면 개체 이벤트 코드 편집기가 새 작업 공간에서 자동으로 열립니다. 선택하지 않으면 개체 이벤트 편집기에 연결된 창에서 열립니다. 이 옵션은 기본적으로 선택 해제되어 있습니다.</li><li> <strong>동일한 창에서 이벤트 스크립트를 탭으로 열기</strong>: 이벤트에 코드 또는 GML Visual을 추가할 때 코드 창은 이벤트 창에 연결되며 이 옵션을 선택하면 편집을 위해 열려 있는 모든 이벤트가 동일한 창에 추가됩니다. 탭으로 표시됩니다. 이 옵션을 선택 취소하면 각 이벤트가 고유한 연결 창으로 열립니다. 이 옵션은 기본적으로 선택되어 있습니다.</li><li> <strong>링크된 스크립트를 동일한 창에서 탭으로 열기: 링크</strong> 된 스크립트가 여러 개 있고 이를 열면 기본적으로 동일한 창에서 탭으로 그룹화됩니다. 이 옵션의 선택을 취소하면 각자의 창/작업 공간에서 강제로 열리게 됩니다. 이 옵션은 기본적으로 선택되어 있습니다.</li><li> <strong>포커스가 있는 보기로 텍스트 편집기 이동</strong>: 개체 이벤트에서 텍스트 편집기를 열 때 이 옵션을 선택하면 자동으로 작업 공간을 이동하여 편집기를 경계 내로 가져옵니다. 이 옵션은 기본적으로 꺼져 있습니다.</li><li> <strong>기본 코드 창 너비</strong>: 열릴 때 코드 창의 기본 너비(픽셀)를 설정합니다. 기본값은 900입니다.</li><li> <strong>기본 코드 창 높이</strong>: 열릴 때 코드 창의 기본 높이(픽셀)를 설정합니다. 기본값은 600입니다.</li><li> <strong>최소 코드 창 너비</strong>: 코드 창에서 허용하는 최소 너비(픽셀)를 설정합니다. 기본값은 300입니다.</li><li> <strong>최소 코드 창 높이</strong>: 코드 창에서 허용하는 최소 높이(픽셀)를 설정합니다. 기본값은 200입니다.</li></ul><p></p><p> 위의 옵션 외에도 아래에 설명된 코드 편집기와 시각적 편집기의 두 가지 하위 범주가 있습니다.</p><h2> 코드 편집기</h2><p><img alt="The Text Editor Colour Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Colour_Prefs.png" /></p><p> <strong>색상 기본 설정</strong> 은 코드와 스크립트 편집기가 다른 텍스트를 표시하는 방법을 변경하는 데 사용됩니다. 각 항목에는 위의 예제 이미지와 같이 개별 텍스트가 어떻게 표시되어야 하는지 정확하게 정의할 수 있는 여러 하위 항목이 있습니다. 일반적으로 각각의 다른 옵션에 대해 색상, 글꼴, 크기 및 스타일을 설정할 수 있습니다. 더 아래로 코드 대괄호의 줄 선택 등과 같은 것에 대해 보다 일반적인 스타일을 설정할 수도 있습니다.</p><p><img alt="The Code Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Code_Prefs.png" /></p><p> 색상 기본 설정 아래에는 다양한 <strong>스타일 옵션</strong> 이 있습니다. 이러한 기본 설정은 다음 옵션을 사용할 수 있는 코드/스크립트 편집기의 동작을 설정하는 데 사용됩니다.</p><ul class="colour"><li> <strong>탭 유지</strong>: 선택하면 탭 키 누름이 탭 문자로 유지됩니다. - &#39; <span class="inline">\t</span> &#39; - 편집기에서 선택하지 않으면 탭이 공백으로 변환됨을 의미합니다. 기본값은 꺼져 있습니다.</li><li> <strong>탭 크기</strong>: &quot;Tab&quot;을 눌러 코드를 들여써야 하는 문자 공간의 수입니다. 기본값은 4입니다.</li><li> <strong>공백</strong> 표시: &quot;표시&quot; <span class="inline">.</span> &quot; 공백을 표시합니다(아래 이미지 참조). 기본값은 꺼짐입니다.</li><li> <strong>줄 번호 표시</strong>: 줄 번호를 왼쪽 아래로 표시할지 여부입니다. 기본값은 켜짐입니다.</li><li> <strong>탭 줄</strong> 표시: &quot;표시&quot; <span class="inline">....</span> &quot; 탭 공간을 표시합니다. 기본값은 꺼져 있습니다.</li><li> <strong>색상 코딩</strong> 활성화: 편집기의 색상 코딩을 활성화하거나 비활성화합니다. 꺼져 있으면 코드에 스타일이 지정되지 않고 켜져 있으면 위의 색상 섹션에 제공된 서식을 사용하여 스타일이 지정됩니다. 기본값은 켜짐입니다.</li><li> <strong>문서 줄 제한</strong>: 주어진 편집기 문서에 대한 최대 줄 수를 설정합니다. 기본값은 0(0 이하는 본질적으로 무한함)이며 다른 값은 허용되는 라인을 제한합니다.</li><li> <strong>새 줄에 들여쓰기 일치</strong>: 코드에 대한 자동 들여쓰기를 활성화 또는 비활성화합니다. 기본값은 켜져 있으며 새 줄이 추가될 때 줄에 설정된 모든 탭을 유지합니다.</li><li> <strong>중괄호 뒤에 자동 들여쓰기</strong>: 중괄호를 추가할 때 코드에 대한 자동 들여쓰기를 활성화 또는 비활성화합니다. <span class="inline">{}</span>. 기본값은 켜져 있으며 새 중괄호가 표시될 때 다음 코드 줄을 탭합니다. <span class="inline">{</span> 그리고 새로운 라인이 추가됩니다.</li><li> <strong>코드 완성</strong> 활성화: 코드 완성 창을 활성화 또는 비활성화합니다. 코드를 작성하고 이것이 활성화되면 현재 입력 텍스트를 기반으로 사용할 수 있는 기능을 보여주는 팝업 창이 나타납니다. 기본값은 켜짐입니다.</li><li> <strong>자동 추가 기능 대괄호</strong>: 대괄호 자동 추가를 활성화 또는 비활성화합니다. <span class="inline">()</span> 자동 완성을 사용할 때. 코드를 작성하고 이것이 활성화되면 IDE는 자동으로 두 개의 대괄호를 추가합니다. <span class="inline">()</span> 함수가 필요로 하는 것, 함수가 인수를 취하는 경우 그 안에 커서를 배치하거나 인수를 취하지 않는 경우 인수 뒤에 커서를 배치합니다. 이 기능은 자동 완성에서 기능을 선택한 경우에만 작동합니다. 기본값은 켜짐입니다.</li><li> <strong>Undo / Redo Stack Limit</strong>: 여기에서 Undo/Redo 스택 제한을 설정할 수 있습니다. 0 미만의 값은 본질적으로 무한(사용 가능한 메모리에 의해 제한됨)인 반면 양수 값은 스택을 해당 수로 제한하고 제한에 도달하면 스택의 맨 뒤에 있는 모든 작업을 제거합니다. 기본값은 -1입니다.</li><li> <strong>선택 일치 강조 표시</strong>: 다른 곳에서 복제된 코드 섹션을 가볍게 강조 표시합니다. 따라서 예를 들어 함수를 선택하면 현재 코드 창에서 이 함수의 모든 인스턴스도 강조 표시됩니다. 기본값은 켜짐입니다.</li><li> <strong>사용되지 않는 기능에 대한 색상 코딩/코드 완성</strong>: 사용되지 않는 코드 섹션을 강조 표시합니다. 기본값은 켜짐입니다.</li></ul><h2> 비주얼 에디터</h2><p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Text_Editor_Visual_Prefs.png" /></p><p> 주석 기본 설정은 <span data-keyref="GML_Visual">GML Visual</span> 스크립트에 추가된 주석에 대한 다양한 색상 및 서식 옵션을 제어합니다. 이러한 옵션은 다음과 같습니다.</p><ul class="colour"><li> <strong>색상</strong>: 창에 쓰여지는 텍스트의 기본 색상입니다(기본값 <a class="glossterm" data-glossterm="ARGB" href="GML_Visual_Preferences.htm#">ARGB</a> #FF53E270).</li><li> <strong>글꼴 이름</strong>: 사용할 글꼴의 이름(사용 가능한 글꼴은 시스템에 설치된 글꼴에 따라 다름).</li><li> <strong>스타일</strong>: <strong>굵게</strong> 또는 <em>기울임꼴</em> 과 같이 사용할 글꼴 스타일입니다(모든 창에서 동일한 스타일을 허용하는 것은 아니며 사용된 글꼴에 따라 다름).</li><li> <strong>Size</strong>: 주어진 출력 창에 대해 글꼴을 설정할 크기입니다.</li><li> <strong>앤티 앨리어싱</strong>: 여기에서 출력 창 글꼴 렌더링에 대한 <a class="glossterm" data-glossterm="안티 앨리어싱" href="GML_Visual_Preferences.htm#">앤티 앨리어싱</a> 모드를 설정할 수 있습니다. <em>기본값 사용</em> 을 선택하여 IDE가 결정하도록 선택하거나 이러한 옵션 중 하나를 선택하여 강제로 <em>켜</em> 거나 <em>끌</em> 수 있습니다. </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../IDE_Preferences.htm">IDE 기본 설정</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="Language_Preferences.htm">언어 기본 설정</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Text Editors

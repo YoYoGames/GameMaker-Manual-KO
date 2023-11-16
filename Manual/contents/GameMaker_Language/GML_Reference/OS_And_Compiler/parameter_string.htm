@@ -6,46 +6,23 @@
   <title>parameter_string</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for parameter_string" />
+  <meta name="topic-comment" content="parameter_string에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="parameter_string" />
   <meta name="search-keywords" content="parameter_string" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">parameter_string</span></h1>
-  <p>Command-line parameters are those extra commands that you can add to an exe to change how the program is run and with this function you can get the chosen command-line parameter as a string. You can find the number of parameters for the current game using the function <span class="inline3_func"><a data-xref="{title}" href="parameter_count.htm">parameter_count</a></span>, where the first parameter has index 1 and the last one has the index returned by the function (a value of 0 is special on that it is the filename of the game executable, including the path). It should be noted that this function will work for on the HTML5 platform, retrieving the URL parameters.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">parameter_string</span>(n);</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var p_num;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>parameter_string</h1><p> 명령줄 매개변수는 프로그램 실행 방법을 변경하기 위해 exe에 추가할 수 있는 추가 명령이며 이 기능을 사용하면 선택한 명령줄 매개변수를 문자열로 가져올 수 있습니다. 함수를 사용하여 현재 게임에 대한 매개변수의 수를 찾을 수 있습니다.<a href="parameter_count.htm"><span class="inline">parameter_count()</span></a>, 첫 번째 매개변수에는 인덱스 1이 있고 마지막 매개변수에는 함수에서 반환된 인덱스가 있습니다(0의 값은 경로를 포함한 게임 실행 파일의 파일 이름이라는 점에서 특별합니다). 이 함수는 url 매개변수를 검색하는 HTML5 플랫폼에서 작동합니다.</p><p></p><h4> 통사론:</h4><p class="code">parameter_string(n);</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">var p_num;<br />
     p_num = parameter_count();<br />
     if p_num &gt; 0<br />
     {<br />
         var i;<br />
         for (i = 0; i &lt; p_num; i += 1)<br />
         {<br />
-            p_string[i] = <span data-field="title" data-format="default">parameter_string</span>(i + 1);<br />
+            p_string[i] = parameter_string(i + 1);<br />
         }<br />
-    }</p>
-  <p>The above code will get the number of command-line parameters, and if there is 1 or more it will loop through them and store them as strings in an array.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="environment_get_variable.htm">environment_get_variable</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 명령줄 매개변수의 수를 가져오고 1개 이상이면 매개변수를 반복하여 배열에 문자열로 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="OS_And_Compiler.htm">OS와 컴파일러</a></div><div style="float:right"> 다음: <a href="environment_get_variable.htm"><span class="notranslate">environment_get_variable</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 parameter_string

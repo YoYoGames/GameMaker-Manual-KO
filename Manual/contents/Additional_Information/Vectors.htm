@@ -3,42 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Vectors</title>
+  <title>벡터</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page that explains how vectors work" />
-  <meta name="rh-index-keywords" content="Vectors" />
-  <meta name="search-keywords" content="Vectors,vector maths" />
+  <meta name="topic-comment" content="벡터의 작동 방식을 설명하는 페이지" />
+  <meta name="rh-index-keywords" content="벡터" />
+  <meta name="search-keywords" content="벡터,벡터 수학" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Vectors</span></h1>
-  <p>At some point when creating a game of any complexity you will probably have to deal with <strong>vectors</strong>. They are used in physics, in AI, in trigonometry and many other situations, but what is a vector? Well, to put it simply, a vector is a <em>directed quantity</em>. Let&#39;s start by looking at a 1 dimensional vector - which is just the same as a single number - by drawing a numbered line with an arrow starting at zero and ending at 5. This is the vector &quot;a&quot; which is equal to 5 and if we draw another arrow starting at the 5 and ending at the 8 we have vector &quot;b&quot; which is equal to 3:</p>
-  <p><img alt="1D Vector Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_1D.png" />You should realise that it doesn&#39;t matter where a vector starts, all that matters is how long it is and what direction it goes in. So vector &quot;b&quot; starts at 5, is 3 units long and points to the &quot;right&quot;, making it identical to a vector starting at 0 and going to 3. Now, you can also add these vectors together, by putting the two vectors &quot;a&quot; and &quot;b&quot; end to end to get the vector &quot;c&quot; which is equal to 8. What about negative numbers? Well, if, in the above image, a vector that points to the &quot;right&quot; corresponds to a positive number, you can see that a vector pointing to the &quot;left&quot; would correspond to a negative number, making a one-dimensional vector nothing more than a signed (+/-) number. This explains the essential concept of a vector: only <em>length</em> and <em>direction</em> (&quot;left&quot; or &quot;right&quot; in this case) count, not position.</p>
-  <p>So, what about 2 dimensional vectors? Well, we can think of them as consisting not just of &quot;left&quot; and &quot;right, but &quot;up&quot; and &quot;down&quot; too:</p>
-  <p><img alt="Various 2D Vectors" class="center" height="310" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Various.png" width="406" />Now, those are not actually vectors yet as we still have to reduce them down using their start and end coordinates. Looking at vector &quot;a&quot; we can see it has a start coordinate of [2,2] and an end coordinate of [4,3] and so to get the vector from this we need to reduce it down by subtracting the end coordinates from the start coordinates like this:</p>
-  <p class="code">a = [(x2-x1), (y2-y1)] = [(4-2), (3-2)] = [2,1]</p>
-  <p>Let&#39;s do the same for vector b now:</p>
-  <p class="code">b = [(-1.2 -(-3.2)) ,(2.1 - 1.1)] = [2 ,1]</p>
-  <p>Notice something? Those two vectors are the same! This is yet another demonstration that a vector has no position, only direction and length, and we can draw those vectors relative to each other around a local [0,0] axis:</p>
-  <p><img alt="2D Vectors aroun [0, 0]" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_2D.png" />This means that a 2D vector is defined by two values, an &quot;x&quot; and a &quot;y&quot; position relative to the local [0,0] axis. And what about 3D vectors? Well, they have the added dimension of &quot;depth&quot; to contend with and would be calculated as positions &quot;x&quot;, &quot;y&quot; and &quot;z&quot; around a local axis something like this:</p>
-  <p><img alt="3D Vectors" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_3D.png" />A good example of a vector used in <span data-keyref="GameMaker Name">GameMaker</span> is the physics <strong>gravity</strong> property in the room editor. The gravity is calculated as a vector around a [0,0] position. So, if you define gravity as [x0, y10], the gravity would be <em>down</em> with a force of 10.</p>
-  <p>Ordinarily, vectors can be used in many situations but sometimes you want to constrain their value (like when dealing with angles) which is why we <strong>normalise </strong>them. This is essentially a mathematical trick that is used to convert a vector of length <em>n</em> to a vector of length 1, meaning that the vector components get <em>normalised </em>to be between 0 and 1. These vectors are also called <strong>unit vectors</strong>:</p>
-  <p><img alt="Unit Vector example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_1D.png" />To calculate a normalised vector, we must first have the original vector components, then use them to get the length of the vector. We then divide each of the vector components by this length to get the normalised vector components which form the normalised vector in which the <strong>sum of the squares of all coordinates is equal to 1</strong>. Here&#39;s how:</p>
-  <p><img alt="Vector Normalisation" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_1.png" />First we take the coordinates of the vector and get the components:</p>
-  <p class="code">vx = (x2 - x1); // = (7 - 1) = 6<br />
-    vy = (y2 - y1); // = (4 - 1) = 3</p>
-  <p>We then use these values to calculate the length of the vector:</p>
-  <p class="code">len = sqrt(sqr(vx) + sqr(vy)); // = sqrt(36 + 9) = sqrt(45) = 6.708203932499369</p>
-  <p>Now, that gives us the exact length of the vector &quot;a&quot;, so let&#39;s use that to normalise the two vector components <span class="inline">vx</span> and <span class="inline">vy</span>:</p>
-  <p class="code">vx = (vx/len); // = (6 / 6.708203932499369) = 0.8944271909999159<br />
-    vy = (vy/len); // = (3 / 6.708203932499369) = 0.4472135954999579</p>
-  <p>Great! We have now normalised the components of the vector! But of what practical use is that in the context of <span data-keyref="GameMaker Name">GameMaker</span>? Okay, let&#39;s give you a practical example...</p>
-  <p>Say you have a game where the player has to shoot at an enemy and you need to know how much the bullet object has to move along the x and y axis each step to hit it:</p>
-  <p><img alt="Vector Game Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_2.png" />For this you would use the player and enemy coordinates to get the vector components and the length, then you would normalise them to get a value between 0 and 1 which you would finally multiply by the speed you wish the bullet to travel at each step. These final two values you would then store and add onto the starting x and y coordinates each step. Sounds complicated? It&#39;s not, look (values have been rounded to one decimal place for simplicity):</p>
-  <p class="code">px = 100;<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 벡터</h1><p> 복잡한 게임을 만들 때 언젠가는 <strong>벡터</strong> 를 처리해야 할 것입니다. 그들은 물리학, AI, 삼각법 및 기타 여러 상황에서 사용되지만 벡터는 무엇입니까? 간단히 말해서, 벡터는 <em>방향성 수량</em> 입니다. 0에서 시작하여 5에서 끝나는 화살표가 있는 번호가 매겨진 선을 그려서 단일 숫자와 동일한 1차원 벡터를 살펴보는 것으로 시작하겠습니다. 이것은 5와 동일한 벡터 &quot;a&quot;이고 5에서 시작하여 8에서 끝나는 또 다른 화살표를 그립니다. 3과 같은 벡터 &quot;b&quot;가 있습니다.</p><p><img alt="1D Vector Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_1D.png" /> 벡터가 어디에서 시작하는지는 중요하지 않습니다. 중요한 것은 벡터의 길이와 방향입니다. 따라서 벡터 &quot;b&quot;는 5에서 시작하고 길이가 3단위이고 &quot;오른쪽&quot;을 가리킵니다. 0에서 시작하여 3으로 가는 벡터와 동일하게 만듭니다. 이제 두 벡터 &quot;a&quot;와 &quot;b&quot;를 끝에서 끝으로 연결하여 다음과 같은 벡터 &quot;c&quot;를 얻음으로써 이러한 벡터를 함께 추가할 수도 있습니다. 8. 음수는 어떻습니까? 음, 위의 이미지에서 &quot;오른쪽&quot;을 가리키는 벡터가 양수에 해당한다면 &quot;왼쪽&quot;을 가리키는 벡터가 음수에 해당한다는 것을 알 수 있습니다. 부호 있는(+/-) 숫자보다 큽니다. 이것은 벡터의 필수 개념을 설명합니다. 위치가 아닌 <em>길이</em> 와 <em>방향</em> (이 경우 &quot;왼쪽&quot; 또는 &quot;오른쪽&quot;)만 계산합니다.</p><p> 그렇다면 2차원 벡터는 어떨까요? 글쎄, 우리는 그것들을 &quot;왼쪽&quot;과 &quot;오른쪽&quot;뿐만 아니라 &quot;위&quot;와 &quot;아래&quot;로도 구성된 것으로 생각할 수 있습니다.</p><p><img alt="Various 2D Vectors" class="center" height="310" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Various.png" width="406" /> 이제 시작 및 끝 좌표를 사용하여 줄여야 하므로 아직 실제로 벡터가 아닙니다. 벡터 &quot;a&quot;를 보면 시작 좌표가 [2,2]이고 끝 좌표가 [4,3]이고 여기서 벡터를 얻으려면 끝 좌표를 빼서 줄여야 합니다. 시작 좌표는 다음과 같습니다.</p><p class="code">a = [(x2-x1), (y2-y1)] = [(4-2), (3-2)] = [2,1]</p><p> 이제 벡터 b에 대해서도 동일한 작업을 수행해 보겠습니다.</p><p class="code">b = [(-1.2 -(-3.2)) ,(2.1 - 1.1)] = [2 ,1]</p><p> 뭔가 눈치채셨나요? 이 두 벡터는 동일합니다! 이것은 벡터에 위치가 없고 방향과 길이만 있다는 또 다른 데모이며 로컬 [0,0] 축을 중심으로 이러한 벡터를 서로 상대적으로 그릴 수 있습니다.</p><p><img alt="2D Vectors aroun [0, 0]" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_2D.png" /> 이는 2D 벡터가 로컬 [0,0] 축에 상대적인 &quot;x&quot; 및 &quot;y&quot; 위치의 두 값으로 정의됨을 의미합니다. 3D 벡터는 어떻습니까? 글쎄, 그들은 &quot;깊이&quot;의 차원이 추가되어 다음과 같이 로컬 축을 중심으로 &quot;x&quot;, &quot;y&quot; 및 &quot;z&quot; 위치로 계산됩니다.</p><p><img alt="3D Vectors" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_3D.png" /> <span data-keyref="GameMaker Name">GameMaker</span> 에서 사용되는 벡터의 좋은 예는 룸 편집기의 물리 <strong>중력</strong> 속성입니다. 중력은 [0,0] 위치 주변의 벡터로 계산됩니다. 따라서 중력을 [x0, y10]으로 정의하면 중력은 10의 힘으로 <em>아래</em> 로 내려갑니다.</p><p> 일반적으로 벡터는 많은 상황에서 사용될 수 있지만 때때로 벡터의 값을 제한하고 싶을 때가 있습니다(예: 각도를 다룰 때). 이것이 우리가 벡터를 <strong>정규화</strong> 하는 이유입니다. 이것은 본질적으로 길이가 <em>n</em> 인 벡터를 길이가 1인 벡터로 변환하는 데 사용되는 수학적 트릭입니다. 즉, 벡터 구성요소가 0과 1 사이가 되도록 <em>정규화</em> 됩니다. 이러한 벡터는 <strong>단위 벡터</strong> 라고도 합니다.</p><p><img alt="Unit Vector example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_1D.png" /> 정규화된 벡터를 계산하려면 먼저 원래의 벡터 구성요소를 갖고 이를 사용하여 벡터의 길이를 얻어야 합니다. 그런 다음 각 벡터 성분을 이 길이로 나누어 <strong>모든 좌표의 제곱의 합이 1인</strong> 정규화된 벡터를 형성하는 정규화된 벡터 성분을 얻습니다. 방법은 다음과 같습니다.</p><p><img alt="Vector Normalisation" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_1.png" /> 먼저 벡터의 좌표를 취하고 구성 요소를 얻습니다.</p><p class="code">vx = (x2 - x1) = (7 - 1) = 6<br />
+    vy = (y2 - y1) = (4 - 1) = 3</p><p> 그런 다음 이 값을 사용하여 벡터의 길이를 계산합니다.</p><p class="code">len = sqr(vx2 + vy2); // = sqr(36 + 9) = sqr(45) = 6.708203932499369</p><p> 이제 벡터 &quot;a&quot;의 정확한 길이를 제공하므로 이를 사용하여 두 벡터 구성요소를 정규화해 보겠습니다. <span class="inline">vx</span> 그리고 <span class="inline">vy</span>:</p><p class="code">vx = (vx/len); // = (6 / 6.708203932499369) = 0.8944271909999159<br />
+    vy = (vy/len); // = (3 / 6.708203932499369) = 0.4472135954999579</p><p> 엄청난! 이제 벡터의 구성 요소를 정규화했습니다! 그러나 <span data-keyref="GameMaker Name">GameMaker</span> 의 맥락에서 그것이 실제로 어떤 용도로 사용됩니까? 자, 실용적인 예를 들어 보겠습니다...</p><p> 플레이어가 적에게 총을 쏴야 하는 게임이 있고 총알 개체가 각 단계에서 x 및 y축을 따라 이동하여 명중해야 하는 정도를 알아야 하는 게임이 있다고 가정해 보겠습니다.</p><p><img alt="Vector Game Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Vector_Image_Normalised_2.png" /> 이를 위해 플레이어와 적의 좌표를 사용하여 벡터 구성 요소와 길이를 얻은 다음 0과 1 사이의 값을 얻도록 정규화하고 각 단계에서 총알이 이동하기를 원하는 속도를 최종적으로 곱합니다. 이 마지막 두 값은 저장하고 각 단계의 시작 x 및 y 좌표에 추가합니다. 복잡한 소리? 그렇지 않습니다(값은 단순성을 위해 소수점 이하 한 자리로 반올림되었습니다).</p><p class="code">px = 100;<br />
     py = 425;<br />
     ex = 356;<br />
     ey = 83;<br />
@@ -47,25 +23,14 @@
     vx = (ex - px); // = 256<br />
     vy = (ey - py); // = -342<br />
     <br />
-    len = sqrt(sqr(vx) + sqr(vy)); // = sqrt(65536 + 116964) = 427.2<br />
+    len = sqrt(vx2 + vy2); // = sqrt(65536 + 116964) = 427.2<br />
     <br />
     vx = vx / len; // = 0.6<br />
     vy = vy / len; // = 0.8<br />
     <br />
     speed_x = vx * bullet_speed; // = 3<br />
     speed_y = vy * bullet_speed; // = 4
-  </p>
-  <p>So, to hit the target we need to add 3 to the bullets x coordinate and 4 to its y coordinate every step.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Guide_To_Using_Buffers.htm">Guide To Using Buffers</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </p><p> 따라서 목표물을 맞추려면 매 단계마다 총알 x 좌표에 3을 추가하고 y 좌표에 4를 추가해야 합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Additional_Information.htm">추가 정보</a></div><div style="float:right"> 다음: <a href="Guide_To_Using_Buffers.htm">버퍼 사용 안내</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Vectors

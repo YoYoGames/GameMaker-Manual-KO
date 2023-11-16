@@ -6,39 +6,14 @@
   <title>ds_list_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for ds_list_create" />
+  <meta name="topic-comment" content="ds_list_create에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="ds_list_create" />
   <meta name="search-keywords" content="ds_list_create" />
   <meta name="is_pure" content="true" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_create</h1>
-  <p>This function will create a new list data-structure and return the index value. This value should be stored in a variable and used in all further function calls relating to the list. Note that if you try and access a value in the list <i>before</i> it has been populated - i.e. the list is &quot;empty&quot; - then the return value may be 0 since internally the first few entries in the list are set when created to minimize performance issues when initially adding items to the list (although the <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> function will still return 0 on a newly created list). If you wish to ensure that the list is &quot;truly&quot; empty on create, then you should call <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> after creating the list, which will then mean that any values returned for unpopulated list slots will be <span class="inline">undefined</span>.</p>
-  <p class="note"><b>IMPORTANT!</b> When you create a data structure, the index value to identify it is an integer value starting at 0. This means that data structures of different types can have the <b>same</b> index value, so if in doubt you should be using the <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> function before accessing them. Also note that indexes are re-used, so a destroyed data structure index value may be used by a newly created one afterwards.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">ds_list_create();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">list = ds_list_create();</p>
-  <p>This will create a new list and assign its index id to the instance variable &quot;list&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="DS_Lists.htm">DS Lists</a></div>
-        <div style="float:right">Next: <a href="ds_list_destroy.htm">ds_list_destroy</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_list_create</h1><p> 이 함수는 새 목록 데이터 구조를 만들고 인덱스 값을 반환합니다. 이 값은 변수에 저장해야 하며 목록과 관련된 모든 추가 함수 호출에 사용해야 합니다. 목록이 채워 <i>지기 전에</i> 목록의 값에 액세스하려고 하면(예: 목록이 &quot;비어 있음&quot;) 성능 문제를 최소화하기 위해 목록의 처음 몇 항목이 생성될 때 내부적으로 설정되기 때문에 반환 값은 0이 될 수 있습니다. 처음에 목록에 항목을 추가할 때(비록<a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> 함수는 새로 생성된 목록에서 여전히 0을 반환합니다). 생성할 때 목록이 &quot;진정으로&quot; 비어 있는지 확인하려면 다음을 호출해야 합니다.<a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> 목록을 만든 후 채워지지 않은 목록 슬롯에 대해 반환된 모든 값은 <span class="inline">undefined</span>.</p><p class="note"> <b>중요한!</b> 데이터 구조를 생성할 때 식별하는 인덱스 값은 0부터 시작하는 정수 값입니다. 이는 다른 유형의 데이터 구조가 <b>동일한</b> 인덱스 값을 가질 수 있음을 의미하므로 의심스러운 경우 다음을 사용해야 합니다.<span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> 액세스하기 전에 기능. 또한 인덱스는 재사용되기 때문에 파괴된 데이터 구조 인덱스 값은 나중에 새로 생성된 값에서 사용할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_list_create();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span></p><p></p><h4> 예시:</h4><p class="code">list = ds_list_create();</p><p> 이렇게 하면 새 목록이 생성되고 해당 인덱스 ID가 인스턴스 변수 &quot;list&quot;에 할당됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="DS_Lists.htm">DS 목록</a></div><div style="float:right"> 다음: <a href="ds_list_destroy.htm"><span class="notranslate">ds_list_destroy</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_create

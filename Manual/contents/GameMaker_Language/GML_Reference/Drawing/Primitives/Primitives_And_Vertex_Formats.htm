@@ -3,85 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Primitives And Vertex Formats</title>
+  <title>기본체 및 정점 형식</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for the Primitive And Vertex Format functions and variables" />
+  <meta name="topic-comment" content="기본 및 정점 형식 함수 및 변수에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Primitives And Vertex Formats,Primitives,Vertex Buffers,Vertex Formats" />
+  <meta name="search-keywords" content="기본체 및 정점 형식,기초 요소,정점 버퍼,정점 형식" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Primitives And Vertex Formats</span></h1>
-  <p>A primitive is a type of drawing done using points to define what is shown on the screen. They can be made up of single points, lines, or triangles and can be coloured, have alpha blending and even be given a texture, which means that they can be used to create some very exciting effects in a 2D game! For example, you can create a rectangle using multiple triangle primitives, then texture it with a flag sprite and in the draw event of an instance have that flag &quot;wave&quot; in the wind and distort the sprite you used by simply modifying the points that form the primitive.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_warning.hts"> </span> </b>These functions do not work with the HTML5 module unless you have enabled OpenGL in the <a href="../../../../Settings/Game_Options/HTML5.htm">Game Options</a>.</p>
-  <h2 id="func_ref">Function Reference</h2>
-  <h3 id="func_ref_primitives">Primitives</h3>
-  <ul class="colour">
-    <li><a href="draw_primitive_begin.htm">draw_primitive_begin</a></li>
-    <li><a href="draw_primitive_begin_texture.htm">draw_primitive_begin_texture</a></li>
-    <li><a href="draw_primitive_end.htm">draw_primitive_end</a></li>
-    <li><a href="draw_vertex.htm">draw_vertex</a></li>
-    <li><a href="draw_vertex_colour.htm">draw_vertex_colour</a></li>
-    <li><a href="draw_vertex_texture.htm">draw_vertex_texture</a></li>
-    <li><a href="draw_vertex_texture_colour.htm">draw_vertex_texture_colour</a></li>
-  </ul>
-  <h3 id="func_ref_vertex_formats">Vertex Formats</h3>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> permits you to define your own <strong>vertex formats</strong> from which you can create your own custom primitives. This can greatly speed up shader operations or can be used to extend their capabilities and create surprising effects. You can find information on this in the following sections:</p>
-  <ul class="colour">
-    <li><a href="vertex_format_begin.htm">vertex_format_begin</a></li>
-    <li><a href="vertex_format_add_colour.htm">vertex_format_add_colour</a></li>
-    <li><a href="vertex_format_add_position.htm">vertex_format_add_position</a></li>
-    <li><a href="vertex_format_add_position_3d.htm">vertex_format_add_position_3d</a></li>
-    <li><a href="vertex_format_add_texcoord.htm">vertex_format_add_texcoord</a></li>
-    <li><a href="vertex_format_add_normal.htm">vertex_format_add_normal</a></li>
-    <li><a href="vertex_format_add_custom.htm">vertex_format_add_custom</a></li>
-    <li><a href="vertex_format_end.htm">vertex_format_end</a></li>
-    <li><a href="vertex_format_delete.htm">vertex_format_delete</a></li>
-  </ul>
-  <h3 id="func_ref_vertex_buffers">Vertex Buffers</h3>
-  <p>Once you have created your vertex format (see the section above) you can then use it to build the primitives that you want to draw using the following vertex buffer functions:</p>
-  <ul class="colour">
-    <li><a href="vertex_create_buffer.htm">vertex_create_buffer</a></li>
-    <li><a href="vertex_create_buffer_ext.htm">vertex_create_buffer_ext</a></li>
-    <li><a href="vertex_create_buffer_from_buffer.htm">vertex_create_buffer_from_buffer</a></li>
-    <li><a href="vertex_create_buffer_from_buffer_ext.htm">vertex_create_buffer_from_buffer_ext</a></li>
-    <li><a href="vertex_get_buffer_size.htm">vertex_get_buffer_size</a></li>
-    <li><a href="vertex_get_number.htm">vertex_get_number</a></li>
-    <li><a href="vertex_delete_buffer.htm">vertex_delete_buffer</a></li>
-    <li><a href="vertex_begin.htm">vertex_begin</a></li>
-    <li><a href="vertex_colour.htm">vertex_colour</a></li>
-    <li><a href="vertex_normal.htm">vertex_normal</a></li>
-    <li><a href="vertex_position.htm">vertex_position</a></li>
-    <li><a href="vertex_position_3d.htm">vertex_position_3d</a></li>
-    <li><a href="vertex_argb.htm">vertex_argb</a></li>
-    <li><a href="vertex_texcoord.htm">vertex_texcoord</a></li>
-    <li><a href="vertex_float1.htm">vertex_float1</a></li>
-    <li><a href="vertex_float2.htm">vertex_float2</a></li>
-    <li><a href="vertex_float3.htm">vertex_float3</a></li>
-    <li><a href="vertex_float4.htm">vertex_float4</a></li>
-    <li><a href="vertex_ubyte4.htm">vertex_ubyte4</a></li>
-    <li><a href="vertex_end.htm">vertex_end</a></li>
-    <li><a href="vertex_freeze.htm">vertex_freeze</a></li>
-    <li><a href="vertex_submit.htm">vertex_submit</a></li>
-  </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> The primitives that you build should follow the format that you have set using the Vertex Format functions, so if you have defined a vertex format with only positional data, there is no point building your primitive with colour data. You should note that the order in which you add properties to the primitive you are building is defined by the order in which you added these properties when creating the vertex format, so if you have defined the vector format with the order position, colour and texture coordinate, you <i>must</i> add these properties to the primitive being built in the same order otherwise you will get errors.</p>
-  <p>For an overview of how to build primitives using the vertex functions, see:</p>
-  <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide To Primitives And Vertex Building</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Surfaces/Surfaces.htm">Surfaces</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 기본체 및 정점 형식</h1><p> 프리미티브는 화면에 표시되는 내용을 정의하기 위해 점을 사용하여 수행되는 그리기 유형입니다. 단일 점, 선 또는 삼각형으로 구성할 수 있으며 색상을 지정할 수 있고 알파 블렌딩이 가능하며 텍스처를 부여할 수도 있습니다. 즉, 2D 게임에서 매우 흥미로운 효과를 만드는 데 사용할 수 있습니다! 예를 들어, 여러 삼각형 프리미티브를 사용하여 직사각형을 만든 다음 플래그 스프라이트로 텍스처링하고 인스턴스의 그리기 이벤트에서 해당 플래그가 바람에 &quot;파동&quot;하고 형성되는 포인트를 수정하여 사용한 스프라이트를 왜곡할 수 있습니다. 원시인.</p><p class="note"> <b>경고!</b> 이러한 기능은 <a href="../../../../Settings/Game_Options/HTML5.htm">게임 옵션</a> 에서 OpenGL을 활성화하지 않는 한 HTML5 모듈에서 작동하지 않습니다.</p><p> 드로잉 프리미티브에 대한 정보는 다음 페이지에서 찾을 수 있습니다.</p><ul class="colour"><li> <a href="draw_primitive_begin.htm"><span class="notranslate">draw_primitive_begin</span></a></li><li> <a href="draw_primitive_begin_texture.htm"><span class="notranslate">draw_primitive_begin_texture</span></a></li><li> <a href="draw_primitive_end.htm"><span class="notranslate">draw_primitive_end</span></a></li><li> <a href="draw_vertex.htm"><span class="notranslate">draw_vertex</span></a></li><li> <a href="draw_vertex_colour.htm"><span class="notranslate">draw_vertex_colour</span></a></li><li> <a href="draw_vertex_texture.htm"><span class="notranslate">draw_vertex_texture</span></a></li><li> <a href="draw_vertex_texture_colour.htm"><span class="notranslate">draw_vertex_texture_colour</span></a></li></ul><p></p><p> <span data-keyref="GameMaker Name">GameMaker</span> 를 사용하면 고유한 사용자 정의 프리미티브를 생성할 수 있는 고유한 <strong>정점 형식</strong> 을 정의할 수 있습니다. 이것은 셰이더 작업의 속도를 크게 높이거나 기능을 확장하고 놀라운 효과를 만드는 데 사용할 수 있습니다. 다음 섹션에서 이에 대한 정보를 찾을 수 있습니다.</p><ul class="colour"><li> <a href="vertex_format_begin.htm"><span class="notranslate">vertex_format_begin</span></a></li><li> <a href="vertex_format_add_colour.htm"><span class="notranslate">vertex_format_add_colour</span></a></li><li> <a href="vertex_format_add_position.htm"><span class="notranslate">vertex_format_add_position</span></a></li><li> <a href="vertex_format_add_position_3d.htm"><span class="notranslate">vertex_format_add_position_3d</span></a></li><li> <a href="vertex_format_add_texcoord.htm"><span class="notranslate">vertex_format_add_texcoord</span></a></li><li> <a href="vertex_format_add_normal.htm"><span class="notranslate">vertex_format_add_normal</span></a></li><li> <a href="vertex_format_add_custom.htm"><span class="notranslate">vertex_format_add_custom</span></a></li><li> <a href="vertex_format_end.htm"><span class="notranslate">vertex_format_end</span></a></li><li> <a href="vertex_format_delete.htm"><span class="notranslate">vertex_format_delete</span></a></li></ul><p></p><p> 정점 형식을 생성했으면(위 섹션 참조) 다음 vertex 버퍼 함수를 사용하여 그리려는 기본 요소를 빌드하는 데 사용할 수 있습니다.</p><ul class="colour"><li> <a href="vertex_create_buffer.htm"><span class="notranslate">vertex_create_buffer</span></a></li><li> <a href="vertex_create_buffer_ext.htm"><span class="notranslate">vertex_create_buffer_ext</span></a></li><li> <a href="vertex_create_buffer_from_buffer.htm"><span class="notranslate">vertex_create_buffer_from_buffer</span></a></li><li> <a href="vertex_create_buffer_from_buffer_ext.htm"><span class="notranslate">vertex_create_buffer_from_buffer_ext</span></a></li><li> <a href="vertex_get_buffer_size.htm"><span class="notranslate">vertex_get_buffer_size</span></a></li><li> <a href="vertex_get_number.htm"><span class="notranslate">vertex_get_number</span></a></li><li> <a href="vertex_delete_buffer.htm"><span class="notranslate">vertex_delete_buffer</span></a></li><li> <a href="vertex_begin.htm"><span class="notranslate">vertex_begin</span></a></li><li> <a href="vertex_colour.htm"><span class="notranslate">vertex_colour</span></a></li><li> <a href="vertex_normal.htm"><span class="notranslate">vertex_normal</span></a></li><li> <a href="vertex_position.htm"><span class="notranslate">vertex_position</span></a></li><li> <a href="vertex_position_3d.htm"><span class="notranslate">vertex_position_3d</span></a></li><li> <a href="vertex_argb.htm"><span class="notranslate">vertex_argb</span></a></li><li> <a href="vertex_texcoord.htm"><span class="notranslate">vertex_texcoord</span></a></li><li> <a href="vertex_float1.htm"><span class="notranslate">vertex_float1</span></a></li><li> <a href="vertex_float2.htm"><span class="notranslate">vertex_float2</span></a></li><li> <a href="vertex_float3.htm"><span class="notranslate">vertex_float3</span></a></li><li> <a href="vertex_float4.htm"><span class="notranslate">vertex_float4</span></a></li><li> <a href="vertex_ubyte4.htm"><span class="notranslate">vertex_ubyte4</span></a></li><li> <a href="vertex_end.htm"><span class="notranslate">vertex_end</span></a></li><li> <a href="vertex_freeze.htm"><span class="notranslate">vertex_freeze</span></a></li><li> <a href="vertex_submit.htm"><span class="notranslate">vertex_submit</span></a></li></ul><p class="note"> <b>중요한!</b> 빌드하는 프리미티브는 정점 형식 함수를 사용하여 설정한 형식을 따라야 합니다. 따라서 위치 데이터만 있는 정점 형식을 정의한 경우 색상 데이터로 프리미티브를 빌드하는 것은 의미가 없습니다. 빌드 중인 프리미티브에 속성을 추가하는 순서는 정점 형식을 생성할 때 이러한 속성을 추가한 순서에 따라 정의됩니다. 따라서 순서 위치, 색상 및 텍스처를 사용하여 벡터 형식을 정의한 경우 좌표를 지정하려면 동일한 순서로 빌드되는 기본 요소에 이러한 속성을 추가 <i>해야 합니다</i>. 그렇지 않으면 오류가 발생합니다.</p><p> 꼭짓점 함수를 사용하여 기본 요소를 빌드하는 방법에 대한 개요는 다음을 참조하세요.</p><ul class="colour"><li> <a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">프리미티브 및 버텍스 빌딩 가이드</a> </li></ul><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../Drawing.htm">그리기</a></div><div style="float:right"> 다음: <a href="../Surfaces/Surfaces.htm">표면</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Primitives And Vertex Formats

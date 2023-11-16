@@ -3,58 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Rollback Game</title>
+  <title>롤백 게임 만들기</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="" />
-  <meta name="rh-index-keywords" content="GML Visual Action - Create Game" />
-  <meta name="search-keywords" content="Create Game" />
+  <meta name="rh-index-keywords" content="GML 비주얼 액션 - 게임 만들기" />
+  <meta name="search-keywords" content="게임 만들기" />
   <meta name="condition-tags" content="Export:Beta" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/i_create_game.jpg" /> Create Rollback Game</h1>
-  <p>This action hosts a new multiplayer game. It takes the number of players that must be connected for the game to start, and optionally allows you to disable <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_System.htm#h">Sync Test</a>.</p>
-  <p>When called with Sync Test disabled, the system waits for the given amount of players to join before <a href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm">starting</a> the game. Make sure to not create or modify any managed instances until the game starts.</p>
-  <p class="note"><span class="tip">TIP</span> You can optionally force the game to start before all players have joined, by running <a data-xref="{title}" href="Start_Game.htm">Start Game</a>.</p>
-  <p>Currently you can only have up to 4 players in one game.</p>
-  <p class="note"><span class="warning">WARNING</span> It is not recommended to set a default region in this action unless you are allowing the player to select it through a menu.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Random Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Action_Create_Game.png" /></p>
-  <h4>Arguments:</h4>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Count of players</td>
-        <td>The number of players that must be connected for the game to start. If <a data-xref="{title}" href="Define_Player.htm">Define Player</a> is used, this is the number of instances that are automatically created.</td>
-      </tr>
-      <tr>
-        <td>Sync test</td>
-        <td>Specifies whether Sync Test should be enabled, and is enabled by default. When disabled, online functionality is enabled.</td>
-      </tr>
-      <tr>
-        <td>Region</td>
-        <td>Specifies the region where the virtual room will be created. For info on getting regions, see <a href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Functions/rollback_create_game.htm"><span class="inline">rollback_create_game()</span></a>.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Rollback_Actions.htm">Rollback Multiplayer Actions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Join_Game.htm">Join Game</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/i_create_game.jpg" /> 롤백 게임 만들기</h1><p> 이 작업은 새로운 멀티플레이어 게임을 호스팅합니다. 게임을 시작하기 위해 연결해야 하는 플레이어의 수가 필요하며 선택적으로 <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_System.htm#h">동기화 테스트</a> 를 비활성화할 수 있습니다.</p><p> 동기화 테스트가 비활성화된 상태에서 호출되면 시스템은 게임을 <a href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm">시작</a> 하기 전에 지정된 수의 플레이어가 참여할 때까지 기다립니다. 게임이 시작될 때까지 관리되는 인스턴스를 생성하거나 수정하지 마십시오.</p><p class="note"> <span class="tip">팁</span> 선택적으로 게임 <a data-xref="{title}" href="Start_Game.htm">시작</a> 을 실행하여 모든 플레이어가 참가하기 전에 게임을 강제로 시작할 수 있습니다.</p><p> 현재 한 게임에 최대 4명의 플레이어만 있을 수 있습니다.</p><p class="note"> <span class="warning">경고</span> 플레이어가 메뉴를 통해 선택하도록 허용하지 않는 한 이 작업에서 기본 영역을 설정하지 않는 것이 좋습니다.</p><p></p><h4> 동작 구문:</h4><p><img alt="Get Random Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Action_Create_Game.png" /></p><h4> 인수:</h4><table><tbody><tr><th> 논쟁</th><th> 설명</th></tr><tr><td> <span class="notranslate">Count of players</span></td><td> 게임을 시작하기 위해 연결해야 하는 플레이어의 수입니다. <a data-xref="{title}" href="Define_Player.htm">플레이어 정의</a> 를 사용하는 경우 자동으로 생성되는 인스턴스 수입니다.</td></tr><tr><td> <span class="notranslate">Sync test</span></td><td> 동기화 테스트를 활성화해야 하는지 여부를 지정하며 기본적으로 활성화되어 있습니다. 비활성화되면 온라인 기능이 활성화됩니다.</td></tr><tr><td> <span class="notranslate">Region</span></td><td> 가상 방이 생성될 지역을 지정합니다. 지역 가져오기에 대한 정보는 다음을 참조하세요. <a href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Functions/rollback_create_game.htm"><span class="inline">rollback_create_game()</span></a>.</td></tr></tbody></table><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Rollback_Actions.htm">멀티플레이어 액션 롤백</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="Join_Game.htm">게임 참여</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Game

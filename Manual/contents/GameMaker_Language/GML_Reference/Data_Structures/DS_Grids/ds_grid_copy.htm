@@ -6,58 +6,15 @@
   <title>ds_grid_copy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for ds_grid_copy" />
+  <meta name="topic-comment" content="ds_grid_copy에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="ds_grid_copy" />
   <meta name="search-keywords" content="ds_grid_copy" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_grid_copy</h1>
-  <p>With this function you can copy the contents of one grid into another one. Both grids must have been created previously using the <a href="ds_grid_create.htm"><span class="inline">ds_grid_create()</span></a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">ds_grid_copy(destination, source);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>destination</td>
-        <td><span data-keyref="Type_ID_DS_Grid">DS Grid ID</span></td>
-        <td>This index of the grid to copy to.</td>
-      </tr>
-      <tr>
-        <td>source</td>
-        <td><span data-keyref="Type_ID_DS_Grid">DS Grid ID</span></td>
-        <td>This index of the grid to copy from.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">n_grid = ds_grid_create(ds_grid_width(a_grid), ds_grid_height(a_grid));<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_copy</h1><p> 이 기능을 사용하면 한 그리드의 내용을 다른 그리드로 복사할 수 있습니다. 두 그리드 모두 이전에 다음을 사용하여 생성되어야 합니다.<a href="ds_grid_create.htm"><span class="inline">ds_grid_create()</span></a> 함수.</p><p></p><h4> 통사론:</h4><p class="code">ds_grid_copy(destination, source);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">destination</span></td><td> <span data-keyref="Type_ID_DS_Grid">DS 그리드 ID</span></td><td> <span class="notranslate">This index of the grid to copy to.</span></td></tr><tr><td> <span class="notranslate">source</span></td><td> <span data-keyref="Type_ID_DS_Grid">DS 그리드 ID</span></td><td> <span class="notranslate">This index of the grid to copy from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">n_grid = ds_grid_create(ds_grid_width(a_grid), ds_grid_height(a_grid));<br />
     ds_grid_copy(n_grid, a_grid);<br />
-    ds_grid_clear(a_grid, -1)</p>
-  <p>The above code creates a new DS grid, based on the width and height of a previously created grid, then copies the information form the previous grid to the new one. Finally it clears the old grid so that all cells have a value of -1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="DS_Grids.htm">DS Grids</a></div>
-        <div style="float:right">Next: <a href="ds_grid_read.htm">ds_grid_read</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    ds_grid_clear(a_grid, -1)</p><p> 위의 코드는 이전에 만든 그리드의 너비와 높이를 기반으로 새 DS 그리드를 만든 다음 이전 그리드의 정보를 새 그리드로 복사합니다. 마지막으로 모든 셀의 값이 -1이 되도록 이전 그리드를 지웁니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="DS_Grids.htm">DS 그리드</a></div><div style="float:right"> 다음: <a href="ds_grid_read.htm"><span class="notranslate">ds_grid_read</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_copy

@@ -6,57 +6,13 @@
   <title>path_set_closed</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page explaining the function path_set_closed" />
+  <meta name="topic-comment" content="path_set_closed 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="path_set_closed" />
   <meta name="search-keywords" content="path_set_closed" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_set_closed</h1>
-  <p>This function can be used to flag a given path as being open (false) or closed (true). A closed path has its start point connected to its end point, forming a loop, and an open path has a definitive, unconnected start and finish. <strong>This function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game.If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">path_set_closed(index, closed);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to change.</td>
-      </tr>
-      <tr>
-        <td>closed</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the path is closed (true) or not (false).</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">path_set_closed(pth_Patrol, true);</p>
-  <p>This will set the given path to be a closed path.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_set_kind.htm">path_set_kind</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_set_closed</h1><p> 이 함수는 주어진 경로가 열려 있거나(false) 닫혀 있는(true) 플래그를 지정하는 데 사용할 수 있습니다. 닫힌 경로는 시작점이 끝점에 연결되어 루프를 형성하고 열린 경로에는 연결되지 않은 시작과 끝이 있습니다. <strong>이 함수는 실제 경로 자산을 변경</strong> 하므로 함수가 사용되는 순간부터 게임이 끝날 때까지 게임의 모든 인스턴스에서 경로가 사용되는 방식에 영구적으로 영향을 미칩니다. 이것이 필요한 것이 아닌 경우 다음을 사용해야 합니다. 같은 기능 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p></p><p></p><h4> 통사론:</h4><p class="code">path_set_closed(index, closed);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to change.</span></td></tr><tr><td> <span class="notranslate">closed</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the path is closed (true) or not (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">path_set_closed(pth_Patrol, true);</p><p> 이것은 주어진 경로를 닫힌 경로로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Path_Manipulation.htm">경로 조작</a></div><div style="float:right"> 다음: <a href="path_set_kind.htm"><span class="notranslate">path_set_kind</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_set_closed

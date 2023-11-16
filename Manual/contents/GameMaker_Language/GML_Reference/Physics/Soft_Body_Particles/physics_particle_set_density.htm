@@ -6,54 +6,16 @@
   <title>physics_particle_set_density</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference page for physics_particle_set_density" />
+  <meta name="topic-comment" content="physical_particle_set_density에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="physics_particle_set_density" />
   <meta name="search-keywords" content="physics_particle_set_density" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_density</h1>
-  <p>With this function you can set the density of the particles in a physics simulation. Setting the density of the particle will have a direct impact on how much inertia it has as well as how it reacts to collisions, so if you make a small particle with
-    a high density it will have a very large mass, but if you define a large particle with a low density it will have a much smaller mass. This function is <i>global</i> in scope, in that it will change the density not just for new particles created after
-    the change, but also for those already present in the simulation.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">physics_particle_set_density(density)</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
-     </tr>
-      <tr>
-        <td>density</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The density of the particle fixture.</td>
-     </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_density</h1><p> 이 기능을 사용하면 물리 시뮬레이션에서 입자의 밀도를 설정할 수 있습니다. 입자의 밀도를 설정하면 관성이 얼마나 많은지와 충돌에 반응하는 방식에 직접적인 영향을 미치므로 밀도가 높은 작은 입자를 만들면 질량이 매우 커집니다. 밀도가 낮은 큰 입자는 훨씬 더 작은 질량을 갖습니다. 이 기능은 변경 후에 생성된 새 입자뿐만 아니라 시뮬레이션에 이미 있는 입자에 대해서도 밀도를 변경한다는 점에서 범위가 <i>전역적</i> 입니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_particle_set_density(density)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">density</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The density of the particle fixture.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
     <br/> physics_particle_set_damping(1);
     <br/> physics_particle_set_gravity_scale(1);
-  </p>
-  <p>The above code will set the base properties for all particles in the simulation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_set_damping.htm">physics_particle_set_damping</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </p><p> 위의 코드는 시뮬레이션의 모든 입자에 대한 기본 속성을 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Soft_Body_Particles.htm">부드러운 바디 입자</a></div><div style="float:right"> 다음: <a href="physics_particle_set_damping.htm"><span class="notranslate">physics_particle_set_damping</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_density

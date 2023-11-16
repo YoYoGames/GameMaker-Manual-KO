@@ -1,125 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="generator" content="Adobe RoboHelp 2020"/>
-    <title>Rollback System</title>
-    <meta name="topic-status" content="Draft"/>
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
-    <script src="../../../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
-    <meta name="topic-comment" content="Details for Rollback Multiplayer"/>
-    <meta name="template" content="../../../assets/masterpages/Manual_Page.htt"/>
-    <meta name="condition-tags" content="Export:Beta"/>
-  </head>
-  <body>
-    <h1>Rollback System</h1>
-    <p>After following the <a data-xref="{title}" href="Creating_Multiplayer.htm">Create a Multiplayer Game</a> tutorial, you may have some questions about how the Rollback system works. This page aims to expand on it.</p>
-    <h2>What is Rollback?</h2>
-    <p>It&#39;s easy to experience lag when playing online. If you&#39;re playing with someone remotely, it may take a fraction of a second for their input to reach you, but even that can be enough to ruin your game experience.</p>
-    <p>Rollback uses predictions to reduce the effect of lag. Based on previous inputs, it predicts what the other user is going to do next, and shows you the result of that prediction, which is instant.</p>
-    <p>When the prediction is correct, you don&#39;t experience lag, and your game feels much more responsive.</p>
-    <p>However, sometimes the system realises its prediction was wrong. In that case, it <em>rolls back</em> to the last correct state, and continues the game from that point. This is why it&#39;s called &quot;<strong>Rollback multiplayer</strong>&quot;.</p>
-    <h3>Determinism</h3>
-    <p>Rollback is deterministic. It only shares inputs with other players, and expects all of them to run the same logic on the given input, giving the same results on all clients.</p>
-    <p>A different approach to multiplayer is &quot;state replication&quot;, which continually synchronises the state of the game between clients, ensuring they are always doing the same thing.</p>
-    <p>Rollback does not do that -- it only ever sends inputs, but also keeps an eye on the state so it can be rolled back in case of a wrong prediction.</p>
-    <p class="note"><em><strong>What is a client?</strong></em>
-      <br/>
-      <br/>
-      A &quot;client&quot; is a player in your game, and refers to their copy of the game, running on their machine. </p>
-    <h2>How does it work?</h2>
-    <p>As previously mentioned, Rollback <strong>only communicates input</strong> between players.</p>
-    <p>There are two main things that Rollback handles:</p>
-    <ul class="colour">
-      <li><strong>Input</strong>: Each player&#39;s <a href="Rollback_Functions/rollback_define_input.htm">inputs</a> are sent to other players. If Player 0 presses <strong>&quot;fire&quot;</strong> in their own client, Rollback will ensure that other clients also see Player 0 press <strong>&quot;fire&quot;</strong>.
-        <br/>
-        <br/>
-        <strong>Predictions are only run on input.</strong> </li>
-      <li><strong>State</strong>: This includes all managed objects and their variables. These are NOT synchronised between players: changing one variable in one client will not automatically update it in another client.
-        <br/>
-        <br/>
-        <strong>State is only managed for the purpose of being rolled back.</strong> </li>
-    </ul>
-    <h2>So... what&#39;s the difference?</h2>
-    <p><strong>Input</strong> changes <strong>state</strong>, which is the base concept of Rollback multiplayer.</p>
-    <p>Here is an example:</p>
-    <ul class="colour">
-      <li><strong>Input</strong>: Player 0 presses <strong>&quot;fire&quot;</strong>.</li>
-      <li><strong>State</strong>: Because Player 0 pressed fire, a projectile is created. That projectile eventually collides with a rock. This results in Player 0 getting a point.
-        <br/>
-        <br/>
-        This is essentially your whole game, dependent entirely on input. </li>
-    </ul>
-    <p>&quot;<strong>Input</strong>&quot; is what Rollback communicates between all players, not the state.</p>
-    <p>However, because all game clients run the same logic on the received input (which is a requirement), <strong>they all result in the same state</strong>.</p>
-    <p><img class="center" height="521" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/multiplayer_input_sync_explained.png" width="1096"/></p>
-    <h2>What is state, then?</h2>
-    <p>If only input is synchronised, then what is <strong>state</strong> for?</p>
-    <p>Because input affects state, a wrong input prediction can result in a <strong>wrong state</strong>.</p>
-    <p>When rollback finds that a prediction was wrong, it replaces the current state with the correct state, and runs inputs and predictions from that point again. This includes all your managed objects and their variables.</p>
-    <p>This does not mean that Rollback is synchronising objects and variables between clients. Just because <span class="inline2">variable_a</span> is set to <span class="inline2">&quot;Gurpreet&quot;</span> in one client, it won&#39;t mean other clients will also see the same value.</p>
-    <p>They would only see the same value for a variable if it was derived from a player&#39;s input, or some other managed system, such as alarms and random functions.</p>
-    <h2 id="h2">Managed Objects</h2>
-    <p>Objects have a &quot;<strong>Managed</strong>&quot; checkbox, which is enabled for new objects by default:</p>
-    <p><img class="center_shadow" height="113" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_managed_option.png" width="247"/>Objects that are marked as managed have the ability to be rolled back and to have predictions run on them, including all of their variables, creation and destruction.</p>
-    <p>All objects that are part of your gameplay, like the player, manager/controller objects, item pickups, projectiles, etc. must be marked as managed.</p>
-    <p>You can disable this for objects that don&#39;t need to be synchronised between players, such as static world objects, visuals, effects, etc. that don&#39;t affect gameplay in any way.</p>
-    <p>Note that the managed property of a parent is not applied to its children automatically, so each child object needs to have its managed checkbox set manually.</p>
-    <h2 id="h">Sync Test</h2>
-    <p><span class="inline"><a href="Rollback_Functions/rollback_create_game.htm">rollback_create_game()</a></span> takes an argument for Sync Test, which is enabled by default (when the argument is not specified).</p>
-    <p>Sync Test is used to test your game offline. If any synchronisation issues pop up, it lets you know by printing the error to the Output Log. You can use Sync Test on Windows, macOS and GX.games.</p>
-    <p>Sync Test executes all of your game&#39;s code twice in a frame, so it can check for any synchronisation issues. This means you may see some events happening twice when testing offline, which will not happen when your game is running online.</p>
-    <h3>Random and Mock Input</h3>
-    <p>During Sync Test, &quot;remote&quot; player instances are given random input values for their <a href="Defining_Inputs.htm">defined inputs</a>, as a simple form of testing. You can disable this using <span class="inline"><a href="Rollback_Functions/rollback_use_random_input.htm">rollback_use_random_input()</a></span>.</p>
-    <p>
-      <video class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_two_players_synctest.mp4" width="856" height="420" controls="" align="center"></video>
-    </p>
-    <p class="video_subtitle">The second player is getting random input during Sync Test.</p>
-    <p>You can also assign temporary mock input to remote players when in Sync Test. See <a data-xref="{text}" href="Defining_Inputs.htm#h1">Mock Input</a> for details.</p>
-    <h2>Developing Multiplayer Effectively</h2>
-    <p>You must ensure that all game clients run the <strong>same logic</strong> when the <strong>same input</strong> is received. If a particular instance was created or moved only for one client, it will not be reflected on the other clients.</p>
-    <p>This problem usually does not occur if you program your game as shown in <a data-xref="{title}" href="Creating_Multiplayer.htm">Create a Multiplayer Game</a>, with all player logic running the same way for all player instances regardless of whether an instance is <a href="Rollback_Variables/player_local.htm">local or not</a>. However if you implement a condition to only do something for a particular player, and not for others, that will cause a disruption in the game state.</p>
-    <h2 id="h1">Defining A Player Object</h2>
-    <h3>Automatic Creation of Player Instances</h3>
-    <p>As shown in <a data-xref="{title}" href="Creating_Multiplayer.htm">Create a Multiplayer Game</a>, you can define a player object with <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Player.htm">Define Player (Rollback)</a> and the system will automatically create instances of it for each connected player. It will also destroy instances for players that disconnect.</p>
-    <p>Player instances created this way have their IDs assigned automatically, in the <span class="inline"><a data-xref="{title}" href="Rollback_Variables/player_id.htm">player_id</a></span> variable. Within each player instance, you can simply call <a href="Rollback_Functions/rollback_get_input.htm"><span class="inline">rollback_get_input()</span></a> without any arguments and it gives you the inputs for that particular player.</p>
-    <p>This is the standard way of using the Rollback system, however you can also manage player instances and their inputs manually.</p>
-    <h3>Manual Creation of Player Instances</h3>
-    <p>To manage player instances manually, don&#39;t call <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span>. This will cause the game to start without any player instances being created.</p>
-    <p>Then create your own player instances manually, ideally in the <a data-xref="{text}" href="Rollback_Events.htm#h">Rollback Start</a> event, and give them player IDs in a custom variable. To get input for a player, call <a href="Rollback_Functions/rollback_get_input.htm"><span class="inline">rollback_get_input()</span></a> and specify the ID of the player as an argument. Call <a href="Rollback_Functions/rollback_get_info.htm"><span class="inline">rollback_get_info()</span></a> to get those <a href="Rollback_Variables/Rollback_Variables.htm">variables</a> in a struct that would otherwise be assigned to players automatically.</p>
-    <p>This way you can manually manage when and how player instances are created, the IDs assigned to them, and retrieving input for a specific player.</p>
-    <h3>Keep Player Instances Alive</h3>
-    <p>If you&#39;re using <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Player.htm">Define Player (Rollback)</a>, do not destroy the player instances that are created. If you need to show a player as defeated, then change its sprite, or hide it using some other method, but keep the instance alive as it&#39;s managed by GameMaker.</p>
-    <h2>Single Player</h2>
-    <p>The Rollback system can be used when creating a single-player game. Simply specify <strong>1</strong> as the number of players when calling <span class="inline"><a href="Rollback_Functions/rollback_create_game.htm">rollback_create_game()</a></span>.</p>
-    <p>This way the system will never connect to any servers and your game will essentially be offline, with the ability to be expanded into an online multiplayer game whenever you wish.</p>
-    <p>Take this approach when you are making a new project that may make use of multiplayer in the future, as it will be tougher to implement multiplayer into your game once it&#39;s already completed without using the Rollback system.</p>
-    <h2 id="h4">Manual vs. Auto Start</h2>
-    <p>By default, a multiplayer game starts as soon as all players have joined. However you can start it before that point by calling <a href="Rollback_Functions/rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a>.</p>
-    <p>You can completely disable the auto-start behaviour by calling <a href="Rollback_Functions/rollback_use_manual_start.htm"><span class="inline">rollback_use_manual_start()</span></a>. This means the game will wait for you to manually start the game.</p>
-    <p>Auto-start is automatically disabled when player preferences <a href="Rollback_Functions/rollback_use_player_prefs.htm">are enabled</a>.</p>
-    <p><span></span></p>
-    <h2>Further Reading</h2>
-    <p>Read the following pages for more information on the Rollback system:</p>
-    <ul class="colour">
-      <li><a data-xref="{title}" href="Defining_Inputs.htm">Defining Inputs</a></li>
-      <li><a data-xref="{title}" href="Rollback_Constraints.htm">Rollback Constraints</a></li>
-      <li><a data-xref="{title}" href="Rollback_Events.htm">Rollback Events</a></li>
-      <li><a data-xref="{title}" href="Rollback_Preferences.htm">Player Preferences</a></li>
-    </ul>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div>Back: <a data-xref="{title}" href="Rollback_Multiplayer.htm">Rollback Multiplayer</a></div>
-          <div>Next: <a data-xref="{title}" href="Defining_Inputs.htm">Defining Inputs</a></div>
-        </div>
-      </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
-    </div>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>롤백 시스템</title>
+  <meta name="topic-status" content="Draft" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="롤백 멀티플레이어에 대한 세부정보" />
+  <meta name="template" content="../../../assets/masterpages/Manual_Page.htt" />
+  <meta name="condition-tags" content="Export:Beta" />
+</head>
+<body><h1>롤백 시스템</h1><p> <a data-xref="{title}" href="Creating_Multiplayer.htm">멀티플레이어 게임 만들기</a> 자습서를 수행한 후 롤백 시스템이 작동하는 방식에 대해 몇 가지 질문이 있을 수 있습니다. 이 페이지는 이를 확장하는 것을 목표로 합니다.</p><h2> 롤백이란 무엇입니까?</h2><p> 온라인 게임을 할 때 지연을 경험하기 쉽습니다. 원격으로 누군가와 게임을 하는 경우 입력이 도달하는 데 1초 미만이 걸릴 수 있지만 그마저도 게임 경험을 망칠 만큼 충분할 수 있습니다.</p><p> 롤백은 예측을 사용하여 지연 효과를 줄입니다. 이전 입력을 기반으로 다른 사용자가 다음에 무엇을 할 것인지 예측하고 그 예측 결과를 즉각적으로 보여줍니다.</p><p> 예측이 정확하면 지연이 발생하지 않고 게임의 반응성이 훨씬 높아집니다.</p><p> 그러나 때때로 시스템은 자신의 예측이 틀렸음을 깨닫습니다. 이 경우 마지막 올바른 상태로 <em>롤백</em> 하고 그 지점에서 게임을 계속합니다. 이것이 &quot; <strong>롤백 멀티플레이어</strong> &quot;라고 불리는 이유입니다.</p><h3> 결정론</h3><p> 롤백은 결정적입니다. 다른 플레이어와만 입력을 공유하고 모든 플레이어가 주어진 입력에서 동일한 논리를 실행하여 모든 클라이언트에서 동일한 결과를 제공할 것으로 기대합니다.</p><p> 멀티플레이어에 대한 다른 접근 방식은 &quot;상태 복제&quot;로, 클라이언트 간에 게임 상태를 지속적으로 동기화하여 클라이언트가 항상 동일한 작업을 수행하도록 합니다.</p><p> 롤백은 그렇게 하지 않습니다. 입력만 보낼 뿐 아니라 상태를 주시하므로 잘못된 예측이 발생할 경우 롤백할 수 있습니다.</p><p class="note"> <em><strong>클라이언트란 무엇입니까?</strong></em><br /><br /> &quot;클라이언트&quot;는 게임의 플레이어이며 컴퓨터에서 실행되는 게임 복사본을 나타냅니다.</p><h2> 어떻게 작동합니까?</h2><p> 이전에 언급했듯이 롤백은 플레이어 간의 <strong>입력만 전달합니다</strong>.</p><p> 롤백이 처리하는 두 가지 주요 사항이 있습니다.</p><ul class="colour"><li> <strong>입력</strong>: 각 플레이어의 <a href="Rollback_Functions/rollback_define_input.htm">입력</a> 이 다른 플레이어에게 전송됩니다. 플레이어 0이 자신의 클라이언트에서 <strong>&quot;발사&quot;</strong> 를 누르면 롤백은 다른 클라이언트도 플레이어 0이 <strong>&quot;발사&quot;</strong> 를 누르는 것을 볼 수 있도록 합니다.<br /><br /> <strong>예측은 입력 시에만 실행됩니다.</strong></li><li> <strong>상태</strong>: 여기에는 모든 관리 개체와 해당 변수가 포함됩니다. 이것은 플레이어 간에 동기화되지 않습니다. 한 클라이언트에서 한 변수를 변경해도 다른 클라이언트에서 자동으로 업데이트되지 않습니다.<br /><br /> <strong>상태는 롤백할 목적으로만 관리됩니다.</strong></li></ul><h2> 그래서... 차이점은 무엇입니까?</h2><p> <strong>입력</strong> 은 <strong>상태</strong> 를 변경합니다. 이는 롤백 멀티플레이어의 기본 개념입니다.</p><p> 다음은 예입니다.</p><ul class="colour"><li> <strong>입력</strong>: 플레이어 0 <strong>이 &quot;발사&quot;</strong> 를 누릅니다.</li><li> <strong>상태</strong>: 플레이어 0이 발사를 눌렀기 때문에 발사체가 생성됩니다. 그 발사체는 결국 바위와 충돌합니다. 결과적으로 플레이어 0은 점수를 얻습니다.<br /><br /> 이것은 본질적으로 입력에 전적으로 의존하는 전체 게임입니다.</li></ul><p> &quot; <strong>입력</strong> &quot;은 상태가 아니라 롤백이 모든 플레이어 간에 통신하는 것입니다.</p><p> 그러나 모든 게임 클라이언트는 수신된 입력(요구 사항)에 대해 동일한 논리를 실행하기 때문에 모두 <strong>동일한 상태가</strong> 됩니다.</p><p><img class="center" height="521" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/multiplayer_input_sync_explained.png" width="1096" /></p><h2> 그렇다면 국가란 무엇인가?</h2><p> 입력만 동기화된 경우 <strong>상태</strong> 는 무엇입니까?</p><p> 입력은 상태에 영향을 미치기 때문에 잘못된 입력 예측은 <strong>잘못된 상태</strong> 를 초래할 수 있습니다.</p><p> 롤백은 예측이 잘못되었음을 발견하면 현재 상태를 올바른 상태로 바꾸고 해당 지점에서 입력과 예측을 다시 실행합니다. 여기에는 모든 관리 개체와 해당 변수가 포함됩니다.</p><p> 이는 롤백이 클라이언트 간에 개체 및 변수를 동기화한다는 의미가 아닙니다. 한 클라이언트에서 <span class="inline"><a href="Rollback_Functions/rollback_create_game.htm">rollback_create_game()</a>>variable_a</span> 가 <span class="inline"><a href="Rollback_Functions/rollback_use_random_input.htm">rollback_use_random_input()</a>>&quot;Gurpreet&quot;</span> 으로 설정되어 있다고 해서 다른 클라이언트도 동일한 값을 볼 수 있다는 의미는 아닙니다.</p><p> 플레이어의 입력이나 알람 및 임의 기능과 같은 다른 관리되는 시스템에서 파생된 경우에만 변수에 대해 동일한 값을 볼 수 있습니다.</p><h2 id="h2"> 관리 개체</h2><p> 개체에는 기본적으로 새 개체에 대해 활성화된 &quot; <strong>관리</strong> 됨 &quot; 확인란이 있습니다.</p><p><img class="center_shadow" height="113" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_managed_option.png" width="247" /> 관리되는 것으로 표시된 개체에는 모든 변수, 생성 및 소멸을 포함하여 롤백하고 예측을 실행할 수 있는 기능이 있습니다.</p><p> 플레이어, 관리자/컨트롤러 개체, 아이템 픽업, 발사체 등과 같이 게임플레이의 일부인 모든 개체는 관리되는 것으로 표시해야 합니다.</p><p> 어떤 식으로든 게임플레이에 영향을 주지 않는 정적 세계 개체, 시각 효과, 효과 등과 같이 플레이어 간에 동기화할 필요가 없는 개체에 대해 이 기능을 비활성화할 수 있습니다.</p><p> 부모의 관리 속성은 자식에게 자동으로 적용되지 않으므로 각 자식 개체는 관리되는 확인란을 수동으로 설정해야 합니다.</p><h2 id="h"> 동기화 테스트</h2><p> <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span> 기본적으로 활성화된 동기화 테스트에 대한 인수를 사용합니다(인수가 지정되지 않은 경우).</p><p> 동기화 테스트는 게임을 오프라인으로 테스트하는 데 사용됩니다. 동기화 문제가 나타나면 출력 로그에 오류를 인쇄하여 알려줍니다. Windows, macOS 및 Opera GX에서 동기화 테스트를 사용할 수 있습니다.</p><p> 동기화 테스트는 모든 게임 코드를 프레임에서 두 번 실행하므로 동기화 문제가 있는지 확인할 수 있습니다. 즉, 오프라인에서 테스트할 때 두 번 발생하는 일부 이벤트를 볼 수 있지만 게임이 온라인에서 실행 중일 때는 발생하지 않습니다.</p><h3> 무작위 및 모의 입력</h3><p> 동기화 테스트 동안 &quot;원격&quot; 플레이어 인스턴스에는 간단한 테스트 형식으로 <a href="Defining_Inputs.htm">정의된 입력</a> 에 대한 임의의 입력 값이 제공됩니다. 다음을 사용하여 비활성화할 수 있습니다. <span class="inline"><a data-xref="{title}" href="Rollback_Variables/player_id.htm">player_id</a></span>. </p><p><video class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_two_players_synctest.mp4" width="856" height="420" controls="" align="center"></video></p><p class="video_subtitle"> 두 번째 플레이어는 동기화 테스트 중에 무작위 입력을 받습니다.</p><p> 동기화 테스트에 있을 때 원격 플레이어에게 임시 모의 입력을 할당할 수도 있습니다. 자세한 내용은 <a data-xref="{text}" href="Defining_Inputs.htm#h1">모의 입력</a> 을 참조하세요.</p><h2> 효과적인 멀티플레이어 개발</h2><p> <strong>동일한 입력</strong> 이 수신될 때 모든 게임 클라이언트가 <strong>동일한 논리</strong> 를 실행하는지 확인해야 합니다. 특정 인스턴스가 한 클라이언트에 대해서만 생성되거나 이동된 경우 다른 클라이언트에는 반영되지 않습니다.</p><p> 이 문제는 일반적으로 인스턴스가 <a href="Rollback_Variables/player_local.htm">로컬</a> 인지 여부에 관계없이 모든 플레이어 인스턴스에 대해 동일한 방식으로 실행되는 모든 플레이어 논리를 사용 <a data-xref="{title}" href="Creating_Multiplayer.htm">하여 멀티플레이어 게임 만들기에</a> 표시된 대로 게임을 프로그래밍하는 경우에는 발생하지 않습니다. 그러나 특정 플레이어에게만 무언가를 하고 다른 플레이어에게는 하지 않는 조건을 구현하면 게임 상태가 중단됩니다.</p><h2 id="h1"> 플레이어 개체 정의</h2><h3> 플레이어 인스턴스 자동 생성</h3><p> <a data-xref="{title}" href="Creating_Multiplayer.htm">멀티플레이어 게임 만들기 에</a> 표시된 대로 다음을 사용하여 플레이어 개체를 정의할 수 있습니다.<span class="inline">rollback_get_input()</span> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Player.htm">플레이어 정의(롤백)</a> 및 시스템은 연결된 각 플레이어에 대한 인스턴스를 자동으로 생성합니다. 또한 연결이 끊긴 플레이어의 인스턴스도 파괴합니다.</p><p> 이 방법으로 생성된 플레이어 인스턴스에는 ID가 자동으로 할당됩니다. <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span> 변하기 쉬운. 각 플레이어 인스턴스 내에서 간단히 호출할 수 있습니다.<a href="Rollback_Functions/rollback_get_input.htm"><span class="inline">rollback_get_input()</span></a> 인수 없이 해당 특정 플레이어에 대한 입력을 제공합니다.</p><p> 이것은 롤백 시스템을 사용하는 표준 방법이지만 플레이어 인스턴스와 해당 입력을 수동으로 관리할 수도 있습니다.</p><h3> 플레이어 인스턴스 수동 생성</h3><p> 플레이어 인스턴스를 수동으로 관리하려면 호출하지 마십시오.<span class="inline">rollback_get_info()</span>. 그러면 플레이어 인스턴스가 생성되지 않고 게임이 시작됩니다.</p><p> 그런 다음 이상적으로는 <a data-xref="{text}" href="Rollback_Events.htm#h">롤백 시작</a> 이벤트에서 수동으로 고유한 플레이어 인스턴스를 만들고 사용자 정의 변수에 플레이어 ID를 제공합니다. 플레이어에 대한 정보를 얻으려면 다음을 호출하십시오.<a href="Rollback_Functions/rollback_get_input.htm"><span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_player()</a></span></a> 플레이어의 ID를 인수로 지정합니다. 부르다<a href="Rollback_Functions/rollback_get_info.htm"> <span class="inline"><a href="Rollback_Functions/rollback_create_game.htm">rollback_create_game()</a></span></a> 그렇지 않으면 플레이어에게 자동으로 할당될 구조체에서 이러한 <a href="Rollback_Variables/Rollback_Variables.htm">변수</a> 를 가져옵니다.</p><p> 이렇게 하면 플레이어 인스턴스가 생성되는 시기와 방법, 할당된 ID, 특정 플레이어에 대한 입력 검색을 수동으로 관리할 수 있습니다.</p><h3> 플레이어 인스턴스를 활성 상태로 유지</h3><p> 사용하는 경우<span class="inline">rollback_start_game()</span> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Player.htm">플레이어 정의(롤백)</a>, 생성된 플레이어 인스턴스를 파괴하지 마십시오. 플레이어를 패배로 표시해야 하는 경우 해당 스프라이트를 변경하거나 다른 방법을 사용하여 숨길 수 있지만 GameMaker에서 관리하는 인스턴스는 활성 상태로 유지합니다.</p><h2> 싱글 플레이어</h2><p> 롤백 시스템은 싱글 플레이어 게임을 만들 때 사용할 수 있습니다. 호출할 때 플레이어 수로 <strong>1</strong> 을 지정하기만 하면 됩니다.<span class="inline">rollback_use_manual_start()</span>.</p><p> 이렇게 하면 시스템이 서버에 연결되지 않고 게임이 기본적으로 오프라인 상태가 되어 원할 때마다 온라인 멀티플레이어 게임으로 확장할 수 있습니다.</p><p> 롤백 시스템을 사용하지 않고 이미 완료되면 게임에 멀티플레이어를 구현하는 것이 더 어려울 것이기 때문에 미래에 멀티플레이어를 사용할 수 있는 새 프로젝트를 만들 때 이 접근 방식을 사용하십시오.</p><h2 id="h4"> 수동 대 자동 시작</h2><p> 기본적으로 멀티플레이어 게임은 모든 플레이어가 참가하는 즉시 시작됩니다. 그러나 호출하여 해당 지점 이전에 시작할 수 있습니다.<a href="Rollback_Functions/rollback_start_game.htm"><span class="inline"></span></a>.</p><p> 호출하여 자동 시작 동작을 완전히 비활성화할 수 있습니다.<a href="Rollback_Functions/rollback_use_manual_start.htm"><span class="inline"></span></a>. 이것은 게임이 수동으로 게임을 시작할 때까지 대기함을 의미합니다.</p><p> 플레이어 기본 설정 <a href="Rollback_Functions/rollback_use_player_prefs.htm">이 활성화</a> 되면 자동 시작이 자동으로 비활성화됩니다.</p><p><span></span></p><h2> 추가 읽기</h2><p> 롤백 시스템에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p><ul class="colour"><li> <a data-xref="{title}" href="Defining_Inputs.htm">입력 정의</a></li><li> <a data-xref="{title}" href="Rollback_Constraints.htm">롤백 제약</a></li><li> <a data-xref="{title}" href="Rollback_Events.htm">롤백 이벤트</a></li><li> <a data-xref="{title}" href="Rollback_Preferences.htm">플레이어 기본 설정</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div>뒤로: <a data-xref="{title}" href="Rollback_Multiplayer.htm">멀티플레이어 롤백</a></div><div> 다음: <a data-xref="{title}" href="Defining_Inputs.htm">입력 정의</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+</body>
 </html>

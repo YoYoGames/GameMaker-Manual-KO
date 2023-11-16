@@ -7,63 +7,15 @@
   <title>rollback_set_player_prefs</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Reference page for rollback_set_player_prefs" />
+  <meta name="topic-comment" content="rollback_set_player_prefs에 대한 참조 페이지" />
   <meta name="condition-tags" content="Export:Beta" />
   <meta name="rh-index-keywords" content="rollback_set_player_prefs" />
   <meta name="search-keywords" content="rollback_set_player_prefs" />
 </head>
-<body>
-  <h1>rollback_set_player_prefs</h1>
-  <p>After <a href="rollback_set_player_prefs.htm">enabling preferences</a>, this function is used to set the preferences for the local player. This means the function must rely on <a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">local input</a> and not <a href="rollback_get_input.htm">Rollback input</a>.</p>
-  <p>The preferences can be of any type. If default preferences are set, ensure you use the same data type and structure.</p>
-  <p>When any player sets its preferences, everyone in the game receives a <a data-xref="{text}" href="../Rollback_Events.htm#h1">Rollback Event</a>.</p>
-  <p>If used, this function must run before the game <a href="rollback_start_game.htm">starts</a>.</p>
-  <p>Please read: <a data-xref="{title}" href="../Rollback_Preferences.htm">Player Preferences</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">rollback_set_player_prefs(preferences);</p>
-  <table>
-    <colgroup>
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>preferences</td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td>The preferences to set for the local player.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code" id="p">rollback_set_player_prefs({<br />
-        character: obj_customizer.character_selected,<br />
-        color: obj_customizer.color_selected<br />
-    });</p>
-  <p>The above code sets the preferences for the player, reading values from a &quot;customizer&quot; object, which would be unmanaged (local).</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_get_player_prefs.htm">rollback_get_player_prefs</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><h1>rollback_set_player_prefs</h1><p> <a href="rollback_set_player_prefs.htm">기본 설정을 활성화</a> 한 후 이 기능은 로컬 플레이어에 대한 기본 설정을 지정하는 데 사용됩니다. 이것은 함수가 <a href="rollback_get_input.htm">롤백 입력</a> 이 아닌 <a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">로컬 입력</a> 에 의존해야 함을 의미합니다.</p><p> 기본 설정은 모든 유형이 될 수 있습니다. 기본 기본 설정이 설정된 경우 동일한 데이터 유형 및 구조를 사용해야 합니다.</p><p> 플레이어가 기본 설정을 지정하면 게임의 모든 사람이 <a data-xref="{text}" href="../Rollback_Events.htm#h1">롤백 이벤트</a> 를 받습니다.</p><p> 이 함수를 사용하는 경우 <a href="rollback_join_game.htm">조인</a> / <a href="rollback_create_game.htm">생성</a> 함수보다 먼저 실행해야 합니다.</p><p> 읽어주세요: <a data-xref="{title}" href="../Rollback_Preferences.htm">플레이어 기본 설정</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p><p></p><h4>통사론:</h4><p class="code">rollback_set_player_prefs(preferences);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">preferences</span></td><td> <span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">어느</a></span></td><td> <span class="notranslate">The preferences to set for the local player.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code" id="p"> rollback_set_player_prefs({<br /> 캐릭터: obj_customizer.character_selected,<br /> 색상: obj_customizer.color_selected<br /> });</p><p> 위의 코드는 관리되지 않는(로컬) &quot;customizer&quot; 개체에서 값을 읽어 플레이어에 대한 기본 설정을 지정합니다.</p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div> 뒤로: <a data-xref="{title}" href="Rollback_Functions.htm">롤백 기능</a></div><div> 다음: <a data-xref="{title}" href="rollback_get_player_prefs.htm">rollback_get_player_prefs</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_set_player_prefs

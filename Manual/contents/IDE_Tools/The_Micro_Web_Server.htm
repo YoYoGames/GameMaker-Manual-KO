@@ -3,38 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Micro Web Server</title>
+  <title>마이크로 웹 서버</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section that covers the micro web server." />
-  <meta name="rh-index-keywords" content="Micro Web Server" />
-  <meta name="search-keywords" content="Web Server,HTML5,Micro Web Server" />
+  <meta name="topic-comment" content="마이크로 웹 서버를 다루는 섹션입니다." />
+  <meta name="rh-index-keywords" content="마이크로 웹 서버" />
+  <meta name="search-keywords" content="웹 서버,HTML5,마이크로 웹 서버" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Micro Web Server</h1>
-  <p>This small tool&#39;s primary function is to connect to and serve files to some of the available target platforms for <span data-keyref="GameMaker Name">GameMaker</span> (like the HTML5 target). It also serves files for the <span data-keyref="GameMaker Name">GameMaker</span> manual when used offline.</p>
-  <p>When you run a game on a target that requires the Micro Web Server, you will see a new window open as the game is served to the chosen device:</p>
-  <p><img alt="Micro Web Server Window" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server.png" /></p>
-  <p class="note"><span class="note">NOTE</span> The first time you run a game on a target that requires the Micro Web Server, you may get a firewall alert. You should permit the web server to communicate through the firewall if this happens.</p>
-  <p>When the Micro Web Server is running, you can access your game from any local device (and even remotely, if port forwarding is properly set up). Simply access your computer&#39;s local IP address through the port shown in this window, and you will be able to play your game from another device, like a mobile phone, or another computer.</p>
-  <p>For example, let&#39;s say your computer&#39;s local IP address is <span class="inline2">192.168.0.110</span> (<a href="https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108">read this</a> to know how to find it), and the port shown in the Micro Web Server window is <span class="inline2">51264</span>. After running the game on your computer, you would connect to <span class="inline2">192.168.0.110:51264</span> from a browser on your mobile, and play your game.</p>
-  <p>The Web Server will show a certain amount of debug information related to the files that have been served, and has a button to clear this at the bottom. Beside the &quot;Clear&quot; button is the path to the root JS file for the project, while underneath that you have the <strong>Network Speed</strong> option. This is set to &quot;No Limit&quot; by default, but clicking it will open up a list of different network options:</p>
-  <p><img alt="Micro Web Server Window Bandwidths" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server_Bandwidths.png" />Changing this setting will also change the package <strong>Size </strong>option to the right. You can also edit this manually, in which case the Network Speed will be set to &quot;Custom&quot;. Setting it to anything other than the maximum value will effectively throttle the network transfer speed and permit you to test games in a low bandwidth environment.</p>
-  <p>You can also see the list of <strong>Allowed IPs</strong> along with the <strong>Port </strong>number being used, but these cannot be edited in the Micro Web Server. They should be set instead in the <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">Device Manager</a> settings for the given device target, or the <a data-xref="{text}" href="../Setting_Up_And_Version_Information/Platform_Preferences/HTML5.htm#h">HTML5 Preferences</a> when using the &quot;Default&quot; device.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
-        <div style="float:right">Next: <a href="The_Inspector.htm">The Inspector Window</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 마이크로 웹 서버</h1><p> 이 작은 도구의 주요 기능은 <span data-keyref="GameMaker Name">GameMaker</span> 용으로 사용 가능한 일부 대상 플랫폼(예: HTML5 대상)에 연결하고 파일을 제공하는 것입니다. 또한 오프라인에서 사용할 때 <span data-keyref="GameMaker Name">GameMaker</span> 설명서에 대한 파일을 제공합니다.</p><p> Micro Web Server가 필요한 대상에서 게임을 실행하면 선택한 장치에 게임이 제공될 때 새 창이 열리는 것을 볼 수 있습니다.</p><p><img alt="Micro Web Server Window" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server.png" /></p><p class="note"> <span class="note">참고</span> Micro Web Server가 필요한 대상에서 게임을 처음 실행할 때 방화벽 경고를 받을 수 있습니다. 이 경우 웹 서버가 방화벽을 통해 통신하도록 허용해야 합니다.</p><p> Micro Web Server가 실행 중일 때 모든 로컬 장치에서 게임에 액세스할 수 있습니다(포트 포워딩이 올바르게 설정된 경우 원격으로도 가능). 이 창에 표시된 포트를 통해 컴퓨터의 로컬 IP 주소에 액세스하기만 하면 휴대폰이나 다른 컴퓨터와 같은 다른 장치에서 게임을 할 수 있습니다.</p><p> 예를 들어, 컴퓨터의 로컬 IP 주소가 <span class="inline2">192.168.0.110</span> 이고(찾는 방법을 알아보려면 <a href="https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108">이 주소를 읽으</a> 십시오) Micro Web Server 창에 표시된 포트가 <span class="inline2">51264라고 가정해 보겠습니다</span>. 컴퓨터에서 게임을 실행한 후 모바일 브라우저에서 <span class="inline2">192.168.0.110:51264</span> 에 연결하여 게임을 하게 됩니다.</p><p> 웹 서버는 제공된 파일과 관련된 일정량의 디버그 정보를 표시하며 하단에 이를 지우는 버튼이 있습니다. &quot;지우기&quot; 버튼 옆에는 프로젝트의 루트 JS 파일 경로가 있고 그 아래에는 <strong>네트워크 속도</strong> 옵션이 있습니다. 기본적으로 &quot;제한 없음&quot;으로 설정되어 있지만 클릭하면 다양한 네트워크 옵션 목록이 열립니다.</p><p><img alt="Micro Web Server Window Bandwidths" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server_Bandwidths.png" /> 이 설정을 변경하면 패키지 <strong>크기</strong> 옵션도 오른쪽으로 변경됩니다. 네트워크 속도가 &quot;사용자 지정&quot;으로 설정되는 경우 수동으로 편집할 수도 있습니다. 최대값 이외의 값으로 설정하면 네트워크 전송 속도가 효과적으로 조절되고 낮은 대역폭 환경에서 게임을 테스트할 수 있습니다.</p><p> 또한 사용 중인 <strong>포트</strong> 번호와 함께 <strong>허용된 IP</strong> 목록을 볼 수 있지만 마이크로 웹 서버에서 편집할 수 없습니다. 대신 지정된 장치 대상에 대한 <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">장치 관리자</a> 설정에서 설정하거나 &quot;기본&quot; 장치를 사용할 때<a data-xref="{text}" href="../Setting_Up_And_Version_Information/Platform_Preferences/HTML5.htm#h">HTML5 기본 설정</a> 에서 설정해야 합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Additional_IDE_Tools.htm">추가 IDE 도구</a></div><div style="float:right"> 다음: <a href="The_Inspector.htm">인스펙터 창</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Micro Web Server

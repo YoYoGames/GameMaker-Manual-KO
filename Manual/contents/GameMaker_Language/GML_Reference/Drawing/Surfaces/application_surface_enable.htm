@@ -6,42 +6,13 @@
   <title>application_surface_enable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference for application_surface_enable" />
+  <meta name="topic-comment" content="application_surface_enable에 대한 참조" />
   <meta name="rh-index-keywords" content="application_surface_enable" />
   <meta name="search-keywords" content="application_surface_enable" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>application_surface_enable</h1>
-  <p>With this function you can enable or disable the application surface. By default the application surface is enabled and all drawing for the Draw events will be done to that and the surface drawn to the screen. However on some older devices and specific chipsets this may result in poorer performance. In those cases you can switch off drawing to the application surface and all Draw event drawing will then be done directly to the screen buffer.</p>
-  <p>You can use this function to enable or disable the application surface at any time in your game, but you should note that it requires at least one frame (step) for the changes to take effect. Switching it off <i><b>will switch off all aspect ratio correction</b></i>, as set in the <i>Game Options</i> for the target platform. This means that you should have some method in place that scales the game to the required device, window or screen dimensions. If you switch it back on again, then the <i>Game Options</i> will take effect again the next step.</p>
-  <p>It is recommended that you use this function carefully as it will impact on how everything is drawn to the screen. In general you would want to have it as an option in a menu of your game, or call it only once at the start of your game and write your code around whether you have it enabled or disabled.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> Disabling the application surface will disable all <a data-xref="{title}" href="../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters and Effects</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">application_surface_enable(enable);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) the application surface.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(vk_space)<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>application_surface_enable</h1><p> 이 기능을 사용하여 애플리케이션 표면을 활성화하거나 비활성화할 수 있습니다. 기본적으로 응용 프로그램 표면이 활성화되어 있고 그리기 이벤트에 대한 모든 그리기가 해당 표면에 수행되고 표면이 화면에 그려집니다. 그러나 일부 구형 장치 및 특정 칩셋에서는 성능이 저하될 수 있습니다. 이러한 경우 응용 프로그램 표면에 대한 그리기를 끌 수 있으며 모든 그리기 이벤트 그리기는 화면 버퍼에 직접 수행됩니다.</p><p> 이 기능을 사용하여 게임에서 언제든지 애플리케이션 표면을 활성화하거나 비활성화할 수 있지만 변경 사항을 적용하려면 최소한 한 프레임(단계)이 필요합니다. 이 기능을 끄면 대상 플랫폼의 <i>게임 옵션</i> 에 설정된 대로 <i><b>모든 종횡비 보정이 꺼집니다</b></i>. 즉, 게임을 필요한 장치, 창 또는 화면 크기로 확장하는 방법이 있어야 합니다. 다시 켜면 <i>게임 옵션</i> 이 다음 단계에 다시 적용됩니다.</p><p> 이 기능은 모든 것이 화면에 그려지는 방식에 영향을 미치므로 주의해서 사용하는 것이 좋습니다. 일반적으로 게임 메뉴의 옵션으로 사용하거나 게임 시작 시 한 번만 호출하고 활성화 또는 비활성화 여부에 관계없이 코드를 작성하고 싶을 것입니다.</p><p></p><h4> 통사론:</h4><p class="code">application_surface_enable(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Set to enable (<span class="inline">true</span> ) or disable (<span class="inline">false</span> ) the application surface.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(vk_space)<br />
     {<br />
         if application_surface_is_enabled()<br />
         {<br />
@@ -51,19 +22,7 @@
         {<br />
             application_surface_enable(true);<br />
         }<br />
-    }</p>
-  <p>The above code check for a key press and the toggle the application surface on or off depending on its state (like in an options menu).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 키 누름을 확인하고 상태에 따라 애플리케이션 표면을 켜거나 끕니다(예: 옵션 메뉴). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Surfaces.htm">표면</a></div><div style="float:right"> 다음: <a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_enable

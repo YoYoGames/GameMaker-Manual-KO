@@ -3,52 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Data Structures</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>데이터 구조</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for Data Structures" />
+  <meta name="topic-comment" content="데이터 구조에 대한 참조 섹션" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Data Structures" />
+  <meta name="search-keywords" content="데이터 구조" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Data Structures</h1>
-  <p>In games you often need to store information in a precise and ordered way. For example, you may need to store lists of items that a person carries or you may want to store a grid of places that still need to be visited.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> has a number of built-in <b>data structures</b> that can be accessed through specialist functions. There are six different types of data structure available, each one having its own benefits depending on the type of information that you are looking to store and how you wish to manipulate it later: stacks, queues, lists, maps, priority queues, and grids.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It is recommend to use <a href="../../GML_Overview/Arrays.htm">arrays</a> and <a href="../../GML_Overview/Structs.htm">structs</a> over DS lists and maps, as they now have similar functionality, are easier to use and are garbage collected automatically.</p>
-  <p>Essentially, all data structures work in the same way - you create a data structure and store its reference in a variable. You then use this reference to use the data structure in all further function calls that can perform operations on it. Finally, once you are done you destroy the data structure again to remove it from memory. You can use as many of the structures at the same time as you need, and all structures can store any of the available <a href="../../GML_Overview/Data_Types.htm">data types</a>.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p>Information on the different data structures can be found in the following sections:</p>
-  <ul class="colour">
-    <li><a href="DS_Grids/DS_Grids.htm">Grids</a></li>
-    <li><a href="DS_Lists/DS_Lists.htm">Lists</a></li>
-    <li><a href="DS_Maps/DS_Maps.htm">Maps</a></li>
-    <li><a href="DS_Priority_Queues/DS_Priority_Queues.htm">Priority Queues</a></li>
-    <li><a href="DS_Queues/DS_Queues.htm">Queues</a></li>
-    <li><a href="DS_Stacks/DS_Stacks.htm">Stacks</a></li>
-  </ul>
-  <p> </p>
-  <p>Before using data structures in your game, you should also be aware that there are certain moments when, due to rounding errors, you may get a result that is not what you expected. This may be resolved by changing the DS precision using the following function:</p>
-  <ul class="colour">
-    <li><a href="ds_set_precision.htm">ds_set_precision</a></li>
-  </ul>
-  <p> </p>
-  <p>There is also a special function for checking to see whether a data structure of any given type exists:</p>
-  <ul class="colour">
-    <li><a href="ds_exists.htm">ds_exists</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Strings/Strings.htm">Strings</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 데이터 구조</h1><p> 게임에서는 종종 정확하고 질서 있는 방식으로 정보를 저장해야 합니다. 예를 들어, 사람이 가지고 다니는 항목 목록을 저장해야 하거나 여전히 방문해야 하는 장소의 그리드를 저장해야 할 수 있습니다. 이제 이를 위해 배열을 사용할 <i>수</i> 있지만 데이터 정렬이나 특정 항목 검색과 같은 더 복잡한 작업을 수행하려면 실행 속도가 느리고 디버그하기 어려울 수 있는 큰 GML 코드를 작성해야 합니다. 그리고 쓰기 진짜 고통!</p><p> 이를 해결하기 위해 <span data-keyref="GameMaker Name">GameMaker</span> 에는 전문 기능을 통해 액세스할 수 있는 여러 내장 <b>데이터 구조</b> 가 있습니다. 6가지 다른 유형의 데이터 구조를 사용할 수 있으며, 각 유형은 저장하려는 정보 유형과 나중에 조작하려는 방법에 따라 고유한 이점이 있습니다: 스택, 대기열, 목록, 맵, 우선 순위 대기열 및 그리드.</p><p class="note"> <strong>참고</strong>: DS 목록 및 맵보다 <a href="../../GML_Overview/Arrays.htm">배열</a> 및 <a href="../../GML_Overview/Structs.htm">구조체</a> 를 사용하는 것이 좋습니다. 유사한 기능을 갖고 사용하기 쉽고 자동으로 가비지 수집되기 때문입니다.</p><p> 기본적으로 모든 데이터 구조는 동일한 방식으로 작동합니다. 데이터 구조를 만들고 해당 <i>인덱스 값</i> 을 변수에 저장합니다. 그런 다음 이 인덱스를 사용하여 작업을 수행할 수 있는 모든 추가 함수 호출에서 데이터 구조를 참조합니다. 마지막으로 작업이 완료되면 데이터 구조를 다시 파괴하여 메모리에서 제거합니다. 필요한 만큼 구조를 동시에 사용할 수 있으며 모든 구조는 사용 가능한 <a href="../../GML_Overview/Data_Types.htm">데이터 유형</a> 을 저장할 수 있습니다.</p><p class="note"> <b><span class="note">참고</span></b> 모든 동적 리소스와 마찬가지로 데이터 구조는 메모리를 차지하므로 더 이상 필요하지 않을 때 <b>항상</b> 삭제하여 속도를 늦추고 결국 게임을 중단시키는 메모리 누수를 방지해야 합니다.</p><p> 데이터 구조를 생성할 때 이를 식별하는 데 사용되는 인덱스 값은 0부터 시작하는 정수 값입니다. 이는 다른 데이터 구조가 <b>동일한</b> 인덱스 값을 가질 수 있음을 의미하므로 의심스러운 경우 다음을 사용해야 합니다.<span style="font-size:1px;"><span class="inline"><a data-xref="{title}" href="ds_exists.htm">ds_exists</a></span></span> 액세스하기 전에 기능. 또한 인덱스는 재사용되므로 파괴된 데이터 구조 인덱스 값은 나중에 새로 생성된 값에서 사용될 수 있으며 데이터 구조를 파괴한 후 DS 인덱스를 보유하는 변수를 -1로 설정하는 것이 좋습니다.</p><p> 다양한 데이터 구조에 대한 정보는 다음 섹션에서 찾을 수 있습니다.</p><ul class="colour"><li> <a href="DS_Grids/DS_Grids.htm">그리드</a></li><li> <a href="DS_Lists/DS_Lists.htm">기울기</a></li><li> <a href="DS_Maps/DS_Maps.htm">지도</a></li><li> <a href="DS_Priority_Queues/DS_Priority_Queues.htm">우선 순위 대기열</a></li><li> <a href="DS_Queues/DS_Queues.htm">대기열</a></li><li> <a href="DS_Stacks/DS_Stacks.htm">스택</a></li></ul><p></p><p> 게임에서 데이터 구조를 사용하기 전에 반올림 오류로 인해 예상과 다른 결과를 얻을 수 있는 특정 순간이 있다는 것도 알고 있어야 합니다. 이것은 다음 함수를 사용하여 DS 정밀도를 변경하여 해결할 수 있습니다.</p><ul class="colour"><li> <a href="ds_set_precision.htm"><span class="notranslate">ds_set_precision</span></a></li></ul><p></p><p> 주어진 유형의 데이터 구조가 존재하는지 여부를 확인하기 위한 특수 기능도 있습니다.</p><ul class="colour"><li> <a href="ds_exists.htm"><span class="notranslate">ds_exists</span></a></li> </ul><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="../GML_Reference.htm">GML 참조</a></div><div style="float:right"> 다음: <a href="../Strings/Strings.htm">문자열</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS
 Data Structures

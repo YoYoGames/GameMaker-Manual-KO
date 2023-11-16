@@ -4,48 +4,18 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>depth</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the variable depth" />
+  <meta name="topic-comment" content="가변 깊이를 설명하는 페이지" />
   <meta name="rh-index-keywords" content="depth" />
   <meta name="search-keywords" content="depth" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">depth</span></h1>
-  <p>When you create an object you can assign it an initial <i>depth</i> which defines how the instances of that object will be drawn in the room when the game is being played and this variable can be used to get and to change that depth value while the game is running. You would normally not need to use this variable as you should be setting instances to be added to discreet <a href="layer.htm">layers</a>, which in turn are set to a specific depth, but it may be that you want to change the depth of an instance using this value, in which case a &quot;temporary layer&quot; will be created specifically for the instance at the given depth. Note that when no instances are on the same depth then this temporary layer will be removed from memory (unlike regular layers which will remain even if they have nothing on them).</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> When you modify the <span class="inline2"><span data-field="title" data-format="default">depth</span></span>
-    <font face="menlo, consolas, monospace"><b> </b></font>variable and <span data-keyref="GameMaker Name">GameMaker</span> manages the layers, the built in <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> variable will return -1 and not the layer ID, since managed layers cannot be manipulated through code.
-  </p>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> the lower the depth value for an instance, the &quot;closer to the camera&quot; that instance will be drawn, while a higher depth value means that the instance will be drawn &quot;further away from the camera&quot;, i.e: -1000 is drawn on top of -100, which is drawn on top of 0, and so on.</p>
-  <p><img alt="Depth sorting example image" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/depth_image.png" />Note that instances of an object that have the <b>same</b> depth can be drawn <b>above <i>or</i> below each other</b> even when they appear to be placed one on top of the other in <a data-xref="{title}" href="../../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a>. If you want to guarantee that something is drawn over or under everything else, you should always set the depth (or layer) explicitly. Also note that there is a minimum (<span data-keyref="Const_Depth_Min">-16000</span>) and maximum (<span data-keyref="Const_Depth_Max">16000</span>) depth value outside of which instances will not be drawn, although they will still exist and process events.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> You <b>cannot</b> set the depth of an instance in its Draw event (all other events are fine). You can, however, set the depth at which to draw things in the Draw event using <span class="inline3_func"><a data-xref="{title}" href="../../../Drawing/GPU_Control/gpu_set_depth.htm">gpu_set_depth</a></span>.</p>
-  <p>Keep in mind that modifying the depth of an instance may change which <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters &amp; Effects</a> are applied on it, as changing the depth to be lower than an FX layer&#39;s depth will no longer apply its effect on the instance.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">depth</span>;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if y != yprevious<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>depth</h1><p> 개체를 생성할 때 게임이 실행되는 동안 해당 개체의 인스턴스가 방에 그려지는 방식을 정의하는 초기 <i>깊이</i> 를 할당할 수 있으며 이 변수는 게임이 실행되는 동안 해당 깊이 값을 가져오고 변경하는 데 사용할 수 있습니다. 달리기. 일반적으로 특정 깊이로 설정되는 개별 <a href="layer.htm">레이어</a> 에 추가할 인스턴스를 설정해야 하므로 이 변수를 사용할 필요가 없지만 이 값을 사용하여 인스턴스의 깊이를 변경하고 싶을 수도 있습니다. 이 경우 &quot;임시 레이어&quot;가 지정된 깊이의 인스턴스에 대해 특별히 생성됩니다. 동일한 깊이에 인스턴스가 없는 경우 이 임시 레이어는 메모리에서 제거됩니다(아무것도 없는 경우에도 남아 있는 일반 레이어와 달리).</p><p class="note"> <b>중요한!</b> 수정할 때 <span class="inline">depth</span> 변수 및 <span data-keyref="GameMaker Name">GameMaker</span> 는 내장된 레이어를 관리합니다.<span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> 관리되는 레이어는 코드를 통해 조작할 수 없기 때문에 변수는 레이어 ID가 아닌 -1을 반환합니다.</p><p> <span data-keyref="GameMaker Name">GameMaker</span> 에서 인스턴스의 깊이 값이 낮을수록 해당 인스턴스가 &quot;카메라에 더 가깝게&quot; 그려지고 깊이 값이 높을수록 인스턴스가 &quot;카메라에서 더 멀리&quot; 그려집니다. 즉, -1000이 그려집니다. -100 위에, 0 위에 그려지는 식입니다.</p><p><img alt="Depth sorting example image" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/depth_image.png" /> <b>동일한</b> 깊이를 가진 개체의 인스턴스는 룸 편집기에서 다른 개체 위에 배치된 것처럼 보이더라도 <b>서로 위 <i>또는</i> 아래</b> 에 그릴 수 있습니다. 다른 모든 것 위에 또는 아래에 무언가가 그려지도록 하려면 항상 깊이(또는 레이어)를 명시적으로 설정해야 합니다. 또한 최소(-16000) 및 최대(+16000) 깊이 값이 있으며 이 값을 벗어나면 인스턴스가 그려지지 않지만 여전히 존재하고 이벤트를 처리합니다.</p><p class="note"> <b><span class="note">참고</span></b> 그리기 이벤트에서 인스턴스의 깊이를 설정할 <b>수 없습니다</b> (다른 모든 이벤트는 괜찮음).</p><p> 인스턴스의 깊이를 수정하면 적용되는 <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">필터 및 효과</a> 가 변경될 수 있습니다. 깊이를 FX 레이어의 깊이보다 낮게 변경하면 인스턴스에 더 이상 효과가 적용되지 않기 때문입니다.</p><p></p><h4> 통사론:</h4><p class="code">depth;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if y != yprevious<br />
     {<br />
         depth = -y;<br />
-    }</p>
-  <p>The above code will check to see if the y position has changed and if it has then the depth will also be set to correspond to it.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="layer.htm">layer</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 y 위치가 변경되었는지 확인하고 변경되면 깊이도 이에 상응하도록 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instance_Variables.htm">인스턴스 변수</a></div><div style="float:right"> 다음: <a href="layer.htm"><span class="notranslate">layer</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 depth

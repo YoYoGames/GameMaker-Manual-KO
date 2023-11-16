@@ -6,40 +6,13 @@
   <title>layer_get_fx</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the function layer_get_fx" />
+  <meta name="topic-comment" content="layer_get_fx 기능을 설명하는 페이지" />
   <meta name="rh-index-keywords" content="layer_get_fx" />
   <meta name="search-keywords" content="layer_get_fx" />
 </head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_fx</h1>
-  <p>This function is used to retrieve the FX struct for a layer. You specify either the ID or the name of the layer you want to target and the function will return a struct containing information on its applied effect. This struct will be similar to the struct you get from <span class="inline"><a href="fx_create.htm">fx_create()</a></span>, and the functions <a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a>/<a href="fx_get_parameters.htm"><span class="inline">s</span></a> and <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span>/<span class="inline"><a href="fx_set_parameters.htm">s</a></span> can be used on it to read and modify its parameters.</p>
-  <p>If the specified layer has no filters/effects applied to it, the function will return -1.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">layer_get_fx(layer_name_or_id);</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>layer_name_or_id</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_ID_Layer"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span></td>
-        <td>The name or ID of the layer to read</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Struct_FX"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm" target="_blank">FX Struct</a></span> (or -1 if not found)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var layers = layer_get_all();<br />
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> layer_get_fx</h1><p> 이 함수는 레이어에 대한 FX 구조체를 검색하는 데 사용됩니다. 대상으로 지정하려는 레이어의 ID 또는 이름을 지정하면 함수가 적용된 효과에 대한 정보가 포함된 구조체를 반환합니다. 이 구조체는 다음에서 얻은 구조체와 유사합니다. <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 및 기능<a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a> /<a href="fx_get_parameters.htm"><span class="inline">s</span></a> 그리고 <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span> /<span class="inline"><a href="fx_set_parameters.htm">s</a></span> 매개변수를 읽고 수정하는 데 사용할 수 있습니다.</p><p> 지정된 레이어에 적용된 필터/효과가 없으면 함수는 -1을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_fx(layer_name_or_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_name_or_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The name or ID of the layer to read</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Struct_FX">FX Struct</span> (or -1 if not found)</p><p></p><h4> 예시:</h4><p class="code">var layers = layer_get_all();<br />
     for(var i = 0; i &lt; array_length(layers); i ++)<br />
     {    <br />
         var layer_fx = layer_get_fx(layers[i]);<br />
@@ -48,22 +21,10 @@
         {<br />
             if (fx_get_name(layer_fx) == &quot;_filter_tintfilter&quot;)<br />
             {            <br />
-                fx_set_parameter(<span class="misspell-word">layer_fx</span>, &quot;g_TintCol&quot;, [0, 0, 1, 1]);<br />
+                fx_set_parameter(_fx_tint, &quot;g_TintCol&quot;, [0, 0, 1, 1]);<br />
             }<br />
         }<br />
-    }</p>
-  <p>The above code runs a <a href="../../../../GML_Overview/Language_Features/for.htm">for</a> loop through all the layers present in the room, and checks each layer for an FX struct. If a layer has an FX struct, it checks the name of that filter/effect by calling <a href="fx_get_name.htm"><span class="inline">fx_get_name()</span></a> on it; if it&#39;s equal to <span class="inline2">&quot;_filter_tintfilter&quot;</span> meaning that it&#39;s a &quot;Colour Tint&quot; filter, it changes its tint colour to blue.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div style="float:right">Next: <a href="layer_clear_fx.htm">layer_clear_fx</a></div>
-      </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    }</p><p> 위의 코드는 방에 있는 모든 레이어를 통해 <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a> 루프를 실행하고 각 레이어에서 FX 구조체를 확인합니다. 레이어에 FX 구조체가 있으면 다음을 호출하여 해당 필터/효과의 이름을 확인합니다.<a href="fx_get_name.htm"><span class="inline">fx_get_name()</span></a> 그 위에; <span class="inline2">&quot;_filter_tintfilter&quot;</span> 와 같으면 &quot;색상 색조&quot; 필터를 의미하며 색조 색상을 파란색으로 변경합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Filter_Effect_Functions.htm">필터 및 효과 기능</a></div><div style="float:right"> 다음: <a href="layer_clear_fx.htm">layer_clear_fx</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_fx
