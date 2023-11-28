@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>game_set_speed</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,7 +14,7 @@
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_set_speed</h1><p> 이 기능을 사용하여 게임 속도를 설정할 수 있습니다. 다음 두 가지 상수 중 하나를 사용하여 FPS(게임 프레임/초) 또는 MPF(마이크로초)의 두 가지 방법 중 하나로 이를 설정할 수 있습니다.</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">gamespeed_fps</span></span></td><td> 초당 프레임 수를 사용하여 게임 속도를 설정합니다.</td></tr><tr><td><span class="notranslate"><span class="inline">gamespeed_microseconds</span></span></td><td> 프레임당 마이크로초를 사용하여 게임 속도를 설정합니다.</td></tr></tbody></table><p> 예를 들어 초당 30프레임의 게임 속도는 게임 게임 프레임당 33333마이크로초가 되며 이 함수는 다음 중 하나로 표현됩니다.</p><p class="code">game_set_speed(30, gamespeed_fps);</p><p> 또는:</p><p class="code">game_set_speed(33333, gamespeed_microseconds);</p><p></p><h4> 통사론:</h4><p class="code">game_set_speed(speed, type);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">speed</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new game speed (as either FPS or MPF).</span></td></tr><tr><td> <span class="notranslate">type</span></td><td> <span data-keyref="Type_Constant_GameSpeed">게임 속도 상수</span></td><td> <span class="notranslate">The type of method used to set the game speed (see the constants above).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if os_browser == browser_not_a_browser<br />
     {<br />
-        game_set_speed(60, gamespeed_fps);<br />
+        <span data-field="title" data-format="default">game_set_speed</span>(60, gamespeed_fps);<br />
     }<br />
     else<br />
     {<br />
