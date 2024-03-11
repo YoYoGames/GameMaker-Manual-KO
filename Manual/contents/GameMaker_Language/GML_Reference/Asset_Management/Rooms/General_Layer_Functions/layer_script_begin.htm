@@ -15,7 +15,7 @@
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_script_begin</h1><p> 이 함수를 사용하여 레이어에 <a href="../../../../GML_Overview/Script_Functions.htm">스크립트 함수</a> 를 할당할 수 있으며 레이어가 렌더링되기 전에 호출됩니다. 레이어에 기능을 추가할 때 이러한 방식으로 <i>서로 다른 그리기 이벤트 각각이</i> 시작될 때 실행되므로 현재 렌더링 중인 이벤트가 할당된 기능을 확인하고 그에 맞게 코드를 적용할 수 있습니다. 이것은 확인하여 수행 할 수 있습니다<a href="../../Objects/Object_Events/event_type.htm"><span class="inline">event_type</span></a> 및/또는<a href="../../Objects/Object_Events/event_number.htm"><span class="inline">event_number</span></a> (아래의 확장된 예를 참조하십시오). 이 함수는 무승부 이벤트나 단계 이벤트에서 호출되는 것이 <i>아니라</i> <strong>방 생성 코드</strong> 또는 인스턴스의 이벤트 <strong>생성</strong> / <strong>방 시작 이벤트</strong> 에서 방 시작 시에만 호출하면 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_script_begin(layer_id, script);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td></tr><tr><td> <span class="notranslate">script</span></td><td> <span data-keyref="Type_Function_Script">스크립트 기능</span></td><td> <span class="notranslate">The script function index to assign to the layer</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 확장된 예:</h4><p> 이 확장된 예에서 우리는 먼저 주어진 레이어가 그려질 때 이 기능이 실행되고 셰이더가 올바르게 작동하도록 일부 셰이더 균일 데이터를 설정하도록 간단한 스크립트 함수가 구조화되는 방법을 보여줍니다. 예제에서 어떤 이벤트가 호출되고 있는지 확인하여 나머지 함수가 작동해야 하는 특정 이벤트에서만 실행되도록 하는 방법에 주목할 필요가 있습니다. 이 경우에는 기본 그리기 이벤트에서만 실행됩니다.</p><p class="code">/// @function layer_shader_start();<br />
     function layer_shader_start()<br />
     {<br />
-        if event_type == ev_draw<br />
+        if (event_type == ev_draw) <br />
         {<br />
             if event_number == 0<br />
             {<br />
@@ -29,7 +29,7 @@
     }</p><p> 그런 다음 모든 그리기가 완료된 후 셰이더를 재설정하는 컴패니언 기능이 있습니다.</p><p class="code">/// @function layer_shader_end();<br />
     function layer_shader_end()<br />
     {<br />
-        if event_type == ev_draw<br />
+        if (event_type == ev_draw) <br />
         {<br />
             if event_number == 0<br />
             {<br />

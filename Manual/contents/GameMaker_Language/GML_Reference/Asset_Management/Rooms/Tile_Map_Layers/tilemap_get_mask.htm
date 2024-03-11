@@ -17,7 +17,7 @@
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mask = tilemap_get_mask(map_id);<br />
     var new_mask = tile_mirror | tile_flip | tile_rotate | 255;<br />
-    if mask != new_mask<br />
+    if (mask != new_mask) <br />
     {<br />
         tilemap_set_mask(map_id, new_mask);<br />
     }</p><p> 위의 코드는 주어진 레이어에서 타일 맵 ID를 가져온 다음 연결된 마스크 값을 확인합니다. 변수 &quot;new_mask&quot;에 정의된 값과 같지 않으면 해당 값으로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Tile_Map_Layers.htm">타일 맵 레이어</a></div><div style="float:right"> 다음: <a href="tilemap_get_global_mask.htm"><span class="notranslate">tilemap_get_global_mask</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

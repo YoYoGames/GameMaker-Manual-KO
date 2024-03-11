@@ -17,7 +17,7 @@
     post = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str);</p><p> 위의 코드는 주어진 매개변수를 사용하여 지정된 URL로 검색 요청을 보내고 str 변수에 저장된 추가 데이터(URL 인코딩 형식의 플레이어 이름 및 점수)를 보냅니다. 이것은 콜백이 수신되면 정의된 모든 비동기 <b>Http 이벤트</b> 를 트리거하고 변수에 저장된 것과 대조하여 반환된 &quot;id&quot;를 확인할 수 있습니다. <span class="inline">post</span> 올바른 코드를 실행하려면 다양한 <span class="inline">http_post_string()</span> 기능. 다음 예제 코드는 이 작업을 수행하는 방법을 보여줍니다.</p><p class="code">var r_str = &quot;null&quot;;<br />
     if ds_map_find_value(async_load, &quot;id&quot;) == post<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
         {<br />
             r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
         }<br />

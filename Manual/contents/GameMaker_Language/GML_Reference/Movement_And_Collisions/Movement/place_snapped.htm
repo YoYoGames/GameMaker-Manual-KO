@@ -15,7 +15,7 @@
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>place_snapped</h1><p> 이 기능을 사용하면 인스턴스의 원점(x 및 y 위치)이 사용자가 지정한 hsnap 및 vsnap 값으로 그리드에 정렬되어 있는지 확인할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">place_snapped(hsnap, vsnap);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">hsnap</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The horizontal snapping to check.</span></td></tr><tr><td> <span class="notranslate">vsnap</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The vertical snapping to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">with (obj_Pieces)<br />
     {<br />
-        if !place_snapped(32, 32)<br />
+        if (!place_snapped(32, 32)) <br />
         {<br />
             move_snap(32, 32);<br />
         }<br />
