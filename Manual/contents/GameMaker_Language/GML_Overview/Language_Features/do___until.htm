@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>do / until</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -27,9 +27,9 @@
     do<br />
     {<br />
         _id = list[| 0];<br />
-        if (instance_exists(_id)) <br />
+        if (instance_exists(_id))<br />
         {<br />
-            _break;<br />
+            break;<br />
         }<br />
         ds_list_delete(list, 0);<br />
     }<br />
