@@ -17,8 +17,7 @@
     mytracks[0] = sequence_track_new(seqtracktype_graphic);</p><ul class="colour"><li> 각 에셋 트랙에는 시퀀스가 어떻게 보일지 또는 위치 등을 알려주는 데이터가 있어야 하며 이는 <i>키프레임</i> 형식으로 추가됩니다. 자산 트랙의 최상위 수준에서 다양한 항목에 대한 키프레임을 설정할 수 있습니다(아래의 트랙 구조 섹션에 나열됨). 그러나 이들은 자산 트랙 키프레임이므로 보간되지 않고 단순히 변경됩니다. 주어진 프레임에 도달했을 때 참조하는 값입니다. 각 키프레임은 배열에 추가되는 구조체이며 이 배열은 자산 트랙에 할당됩니다. 키프레임 구조체를 생성하기 위해 우리는 함수를 호출할 것입니다<a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a> 필요한 데이터로 키프레임을 채우려면 다음 함수를 사용합니다.<a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li></ul><p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
     graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
-    <br />
-    // Set the graphics keyframe top level data for the keyframe position and length, etc...<br />
+    // Set the graphics keyframe top level data for the keyframe position and length, etc.<br />
     graphickeys[0].frame = 0;<br />
     graphickeys[0].length = 1;<br />
     graphickeys[0].stretch = true;<br />
