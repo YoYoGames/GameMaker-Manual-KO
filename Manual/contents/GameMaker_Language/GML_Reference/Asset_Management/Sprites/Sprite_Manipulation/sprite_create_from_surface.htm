@@ -19,7 +19,7 @@
     draw_sprite(spr_Body, 0, 0, 0);<br />
     draw_sprite(spr_Clothes, 0, 0, 0);<br />
     draw_sprite(spr_Hair, 0, 0, 0);<br />
-    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br />
+    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, false, false, 16, 16);<br />
     surface_reset_target();<br />
     surface_free(surf);</p><p> 위의 코드는 표면을 생성하고 그 인덱스를 지역 변수 &quot;surf&quot;에 저장합니다. 그런 다음 해당 표면을 대상으로 지정하고 지우고 서로 위에 여러 스프라이트를 그립니다. 마지막으로 표면에 그려진 합성 이미지에서 새 스프라이트를 만들고 표면에서 사용하는 메모리를 해제하기 전에 인덱스를 &quot;spr_Custom&quot;에 할당합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div><div style="float:right"> 다음: <a href="sprite_add_from_surface.htm"><span class="notranslate">sprite_add_from_surface</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
