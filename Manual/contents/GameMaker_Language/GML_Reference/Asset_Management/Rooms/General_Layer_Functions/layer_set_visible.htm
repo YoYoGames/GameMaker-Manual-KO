@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_set_visible</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,7 +15,7 @@
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_set_visible</h1><p> 이 기능을 사용하면 레이어의 가시성을 토글할 수 있습니다. 레이어 ID를 제공합니다(다음을 사용하여 레이어를 생성할 때 얻는<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 레이어 이름(문자열로 - 성능에 영향을 미침)과 표시되는 레이어의 토글 값<span class="inline">true</span> 그리고 보이지 않는 것은<span class="inline">false</span>.</p><p> 레이어가 보이지 않을 때 레이어에 할당된 것은 아무 것도 그려지지 않으며, 레이어에 인스턴스가 할당되어 있으면 그리기 이벤트도 실행되지 않습니다(인스턴스 변수를 설정하는 것과 매우 유사합니다. <span class="inline">visible</span> 에게 <span class="inline">false</span> ). 이미 보이지 <i>않는</i> 것으로 플래그가 지정된 모든 인스턴스는 그들이 있는 레이어가 보이는 것으로 설정되어 있으면 두 개의 독립적인 설정이므로 동작은 동일하지만 보이는 것으로 플래그가 지정되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_set_visible(layer_id, visible)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td></tr><tr><td> <span class="notranslate">visible</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether the layer should be visible (<span class="inline">true</span> ) or not (<span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br />
     if layer_get_visible(lay_id)<br />
     {<br />
-        layer_set_visible(lay_id, false);<br />
+    layer_set_visible(lay_id, false);<br />
     }<br />
     else<br />
     {<br />

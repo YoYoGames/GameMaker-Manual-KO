@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_get_visible</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -16,7 +16,7 @@
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_visible</h1><p> 이 기능을 사용하면 레이어가 보이는지 여부를 확인할 수 있습니다. 레이어 ID를 제공합니다(다음을 사용하여 레이어를 생성할 때 얻는<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 레이어 이름(문자열로 - 성능에 영향을 미침) 및 함수는 다음을 반환합니다. <span class="inline">true</span> 그것이 눈에 보이는 경우, 그리고 <span class="inline">false</span> 그렇지 않으면.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_visible(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br />
     if layer_get_visible(lay_id)<br />
     {<br />
-        layer_set_visible(lay_id, false);<br />
+    layer_set_visible(lay_id, false);<br />
     }<br />
     else<br />
     {<br />
