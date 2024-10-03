@@ -23,8 +23,8 @@
     {<br />
         gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0);<br />
         v_vColour = in_BlendWeights;<br />
-         ivec4 t = ivec4(in_BlendIndices);<br />
-         v_mat = gm_Matrices[ t.x ];<br />
+        ivec4 t = ivec4(in_BlendIndices);<br />
+        v_mat = gm_Matrices[ t.x ];<br />
     }
   </p><ul class="colour"><li> 블렌드 가중치는 일반적으로 배열에 저장되고 블렌드 인덱스를 사용하여 액세스되지만 여기에서 정의하는 대신 <span class="inline">in_BlendIndices</span> 로 <span class="inline">ivec4</span> 속성, 그것은 <span class="inline">vec4</span>, 다음으로 캐스트 <span class="inline">ivec4</span> 코드에서. 이것은 다음을 사용하여 생성된 배열을 인덱싱하는 데 사용됩니다. <span class="inline">gm_Matrix</span> (당신은 오직 다음을 사용하여 배열에 접근할 수 있습니다. <span class="inline">INT</span> 값 - 부동 소수점이 아님).</li><br /></ul><h4> 통사론:</h4><p class="code">vertex_format_add_custom(type, usage);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">type</span></td><td> <span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 데이터 유형 상수</a></span></td><td> <span class="notranslate">The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</span></td></tr><tr><td> <span class="notranslate">usage</span></td><td> <span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">정점 사용 유형 상수</a></span></td><td> <span class="notranslate">The use that the data will get(see the <b><i>usage constants</i></b> listed above).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p><p></p><h4> 예시:</h4><p class="code">vertex_format_begin();<br />
     vertex_format_add_textcoord();<br />
