@@ -15,7 +15,7 @@
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1> 이동 및 제어</h1><p> 이 빠른 시작 안내서의 <a href="Drawing.htm">이전 섹션에서는</a> 화면에 물건을 그리는 몇 가지 예를 제공했지만, 물건을 이리저리 움직일 수도 없다면 그림을 그리는 것만으로는 그다지 좋지 않습니다... 그래서 이 섹션에서는 몇 가지를 알려 드리겠습니다. 다양한 유형의 게임에 대한 몇 가지 기본 제어 체계뿐만 아니라 개체에 대한 움직임의 예. 모든 예제는 GML Visual과 GML 코드를 사용하여 제공되므로 더 편한 것을 사용할 수 있습니다. 우리는 당신이 가능한 한 빨리 물건을 만들기 시작하기를 원하기 때문에 여기에서 너무 깊이 설명하지 않을 것입니다. 따라서 진행하면서 링크를 탐색하고 &quot;검색&quot; 기능을 사용하는 것이 좋습니다. 확실하지 않은 항목에 대한 추가 정보를 찾으려면 설명서를 참조하십시오.</p><p> 더 진행하기 전에 <a href="../Introduction/The_Start_Page.htm">시작 페이지</a> 에서 새 프로젝트(GML 또는 GML Visual)를 만들고 몇 가지 스프라이트와 개체를 추가(또는 생성)할 수 있습니다. 이를 사용하여 테스트할 수 있는 코드 - 그리고 프로젝트에 인스턴스를 배치할 공간이 있는지 확인하십시오. 간단한 흰색 사각형도 마찬가지이므로 스프라이트가 어떻게 생겼는지 너무 걱정하지 마십시오. 모든 준비가 완료되었으므로 아래 나열된 예제 작업을 시작할 수 있습니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">마우스를 향해 이동</a></p><div class="droptext" data-targetname="drop_down"><p class="dropspot"> 개체를 이동하고 플레이어와 상호 작용하는 가장 간단한 방법 중 하나는 마우스를 사용하는 것입니다. 이 예에서는 몇 가지 기본 코드를 사용하여 사용자가 왼쪽을 클릭한 곳으로 개체를 이동시키는 방법을 보여줍니다. 마우스 버튼<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />.</p><p class="dropspot"> 시작하려면 개체를 열고 스프라이트를 할당한 다음 <strong>Global Left Mouse Down 이벤트</strong> 를 제공합니다.</p><p class="dropspot"><img alt="Adding The Mouse Left Button Down Event" class="center" src="../assets/Images/QS_Guide/QS_Add_GlobalLMBDownEvent.png" /></p><p class="dropspot"> 일반 마우스 이벤트는 마우스가 인스턴스 <a class="glossterm" data-glossterm="경계 상자" href="#">경계 상자</a> 내에서 실제로 클릭하는 경우에만 클릭을 감지하는 반면 <strong>글로벌</strong> 마우스 이벤트는 방의 아무 곳이나 클릭을 감지하기 때문에 사용합니다. 이 이벤트에서 다음 작업이나 코드를 추가하려고 합니다.</p><p class="dropspot"><img alt="GML VisualTo Move Instance Towards Mouse" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_1.png" /></p><p class="code">move_towards_point(mouse_x, mouse_y, 2);</p><p class="dropspot"> 여기서 우리는 인스턴스에게 화면의 위치로 이동하도록 지시합니다. 이 경우 &quot;<span class="inline">mouse_x</span> &quot; 그리고 &quot;<span class="inline">mouse_y</span> &quot; 위치 (&quot;<span class="inline">mouse_x</span> &quot; 그리고 &quot;<span class="inline">mouse_y</span> &quot;는 항상 현재 마우스 커서 위치 <span class="glossextra">를</span> 유지하는 <strong>내장</strong> <a class="glossterm" data-glossterm="변하기 쉬운" href="#">변수</a> 입니다. GML Visual은 &quot;<span class="inline">direction</span> &quot; 그리고 &quot; <span class="inline">speed</span> &quot; <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/Instance_Variables.htm"><strong>인스턴스 변수</strong></a>, GML 이 함수를 사용하여 이 작업을 수행하는 동안 <a href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Movement/move_towards_point.htm"><span class="inline">move_towards_point()</span></a> (이것은 또한 <span class="inline">speed </span> 그리고 <span class="inline">direction </span> 변수, 사용하기 쉬운 단일 기능).</p><p class="dropspot"> 이 개체의 인스턴스를 방에 배치한 다음 재생 버튼을 누르십시오.<img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /> 을 클릭한 다음<img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> 인스턴스가 마우스 쪽으로 이동하도록 하려면</p><p class="dropspot"><img alt="Animation Of Instance Moving Towards Mouse" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_1_1.gif" /> 엄청난! 이제 개체의 인스턴스가 클릭한 곳으로 이동하고 버튼을 누르고 있으면 인스턴스가 마우스 커서를 계속 따라갑니다. 그런데 문제가 있습니다... 한번 클릭하고 놓으면 인스턴스가 계속 움직이다가 결국 방을 나가게 됩니다! 이 문제를 해결할 수 있는 방법은 여러 가지가 있으며 어떤 방법을 선택하는지는 수행하려는 작업에 따라 다르지만 현재 가장 쉬운 해결 방법은 <strong>Global Mouse Button Released</strong> 이벤트를 추가하는 것이므로 지금 개체에 추가합니다. 다음 코드를 제공하십시오.</p><p class="dropspot"><img alt="GML VisualTo Set The Instance Speed" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_2.png" /></p><p class="code">speed = 0;</p><p class="dropspot"> 이렇게 하면 인스턴스는 마우스 버튼을 누르고 있는 동안에만 마우스 커서를 따라가고 버튼을 놓으면 이동이 멈춥니다. 재생을 누르십시오<img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /> 지금 테스트하십시오.</p><p class="dropspot"> 이 예제를 떠나기 전에 해결해야 하는 마지막 문제가 하나 있습니다. 마우스 버튼을 클릭한 <em>채로</em> 있지만 커서를 움직이지 않으면 인스턴스가 커서 쪽으로 이동한 다음 주변에서 &quot;진동&quot;합니다. 그것. 이는 인스턴스가 한 번에 1픽셀보다 빠르게 움직이기 때문에 위치를 &quot;오버 슛&quot;한 다음 뒤로 이동을 시도한 다음 다시 오버 슛하는 등...(이동 속도를 5 또는 이와 유사한 것으로 설정합니다. 즉시 명확하지 않은 경우 문제를 확인하기 위해).</p><p class="dropspot"><img alt="Animation Showing Instance Vibrating" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_1_2.gif" /> 이 문제를 해결하려면 다음 코드를 사용하여 객체에 <strong>단계 이벤트</strong> 를 추가해야 합니다.</p><p class="dropspot"><img alt="GML VisualActions For The Step Event" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_3.png" /></p><p class="code">var _dist = point_distance(x, y, mouse_x, mouse_y);<br />
       <br />
-      if _dist &lt;= speed<br />
+      if (_dist &lt;= speed) <br />
       {<br />
           speed = 0;<br />
       }
@@ -23,45 +23,45 @@
       {<br />
           x = x - 2;<br />
       }<br />
-      else if keyboard_check(vk_right)<br />
+      else if (keyboard_check(vk_right)) <br />
       {<br />
           x = x + 2;<br />
       }<br />
-      else if keyboard_check(vk_up)<br />
+      else if (keyboard_check(vk_up)) <br />
       {<br />
           y = y - 2;<br />
       }<br />
-      else if keyboard_check(vk_down)<br />
+      else if (keyboard_check(vk_down)) <br />
       {<br />
           y = y + 2;<br />
       }</p><p class="dropspot"> 우리는 &quot; <span class="inline">if... else if... else if...</span> &quot; 인스턴스가 한 번에 한 방향으로만 이동하도록 하는 구조이므로 인스턴스가 위, 아래, 왼쪽 또는 오른쪽으로만 이동할 수 있어야 하지만 대각선으로는 이동할 수 없습니다. 개체의 인스턴스를 방에 놓고 키를 누릅니다. <strong>재생</strong> 버튼<img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /> 지금 테스트하기 위해! 모든 것이 올바르게 진행되면 다음과 같이 표시되어야 합니다.</p><p class="dropspot"><img alt="Animation Showing 4-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_1.gif" /></p><p class="dropspot"> 이 코드를 수정하여 4방향 이동을 8방향 이동으로 쉽게 변환할 수도 있습니다. &quot; <span class="inline">else</span> &quot; 모든 것이 다음과 같이 보이도록 코드 블록의 명령:</p><p class="dropspot"><img alt="GML VisualStep Event Movement Actions" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_2_2.png" /></p><p class="code">if keyboard_check(vk_left)<br />
       {<br />
           x = x - 2;<br />
       }<br />
-      if keyboard_check(vk_right)<br />
+      if (keyboard_check(vk_right)) <br />
       {<br />
           x = x + 2;<br />
       }<br />
-      if keyboard_check(vk_up)<br />
+      if (keyboard_check(vk_up)) <br />
       {<br />
           y = y - 2;<br />
       }<br />
-      if keyboard_check(vk_down)<br />
+      if (keyboard_check(vk_down)) <br />
       {<br />
           y = y + 2;<br />
       }</p><p class="dropspot"> 이제 <strong>재생</strong> 버튼을 누르면<img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /> 다음과 같이 보일 것입니다.</p><p class="dropspot"><img alt="Animation Showing 8-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_2.gif" /></p><p class="dropspot"> GML로 코딩하는 사용자에게 마지막으로 주의해야 할 점은... GML Visual을 사용할 때 드롭다운 목록에서 사용하려는 키보드 키를 선택할 수 있지만 GML에서는 그렇게 간단하지 않습니다. 위의 코드에 표시된 화살표 키 상수와 같이 사용할 수 있는 여러 <a href="../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">키보드 상수</a> 가 있지만 영숫자 키에 대한 상수는 <em>없습니다</em>. 이들은 약간 다르게 처리되며 함수를 사용해야 합니다.<a href="../GameMaker_Language/GML_Reference/Strings/ord.htm"><span class="inline">ord()</span></a>. 아래 코드는 화살표 키 대신 WASD를 사용하여 작동하는 방법을 보여줍니다.</p><p class="code">if keyboard_check(ord(&quot;A&quot;))<br />
       {<br />
           x = x - 2;<br />
       }<br />
-      if keyboard_check(ord(&quot;D&quot;))<br />
+      if (keyboard_check(ord(&quot;D&quot;))) <br />
       {<br />
           x = x + 2;<br />
       }<br />
-      if keyboard_check(ord(&quot;W&quot;))<br />
+      if (keyboard_check(ord(&quot;W&quot;))) <br />
       {<br />
           y = y - 2;<br />
       }<br />
-      if keyboard_check(ord(&quot;S&quot;))<br />
+      if (keyboard_check(ord(&quot;S&quot;))) <br />
       {<br />
           y = y + 2;<br />
       }</p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">게임패드 움직임</a></p><div class="droptext" data-targetname="drop_down2"><p class="dropspot"> 우리는 마우스 움직임과 키보드 움직임을 다루었으므로 이제 <strong>게임패드</strong> 움직임을 다룰 시간입니다. 이제 우리는 d-패드를 다루지 않을 것입니다. 실제로 키보드를 사용하는 것처럼 작동합니다(위의 예에서 키보드 기능을 변경하기만 하면 <a href="../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_button_check.htm"><span class="inline">gamepad_button_check()</span></a> 또는 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/If_Gamepad_Button_Down.htm">게임패드 버튼을 아래로 누른 경우</a> ), 따라서 이 예에서는 아날로그 스틱을 사용하여 이동하는 방법을 살펴보겠습니다.</p><p class="dropspot"> 우선 사용 중인 게임패드를 감지해야 합니다. 게임패드에는 0에서 11 사이의 ID 값이 지정되므로 &quot; <span class="inline">for</span> &quot; 연결된 게임패드의 ID를 감지하고 이 ID 값을 나중에 사용할 수 있도록 변수에 저장하는 루프입니다. 연결된 모든 게임패드가 아니라 첫 번째 게임패드만 설정하기를 원하기 때문에 &quot; <span class="inline">break</span> &quot; 게임패드가 루프를 &quot;중단&quot;하도록 게임패드를 감지한 후 &quot; 명령(예: 연결된 첫 번째 게임패드가 ID 4인 경우 루프는 5회만 실행되어 ID 값 0 - 4를 확인한 다음 게임 패드를 만났을 때 루프) 따라서 개체를 만들고(또는 열어서) 스프라이트를 할당한 다음 다음을 사용하여 <strong>이벤트 만들기</strong> 를 추가합니다.</p><p class="dropspot"><img alt="Getting Gamepad ID Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_1.png" /></p><p class="code">gamepad_id = -1;<br />
@@ -78,8 +78,8 @@
       }
     </p><p class="dropspot"> 위의 코드에서 게임패드의 <strong><a class="glossterm" data-glossterm="데드 존" href="#">데드존</a></strong> 을 설정했습니다. 이는 게임패드 제조사에 따라 아날로그 스틱이 서로 다른 감도를 가질 수 있고 때로는 너무 민감하여 데드존을 설정하지 않으면 게임에서 원치 않는 움직임을 유발할 수 있기 때문입니다. 따라서 데드존을 0.2와 같은 값으로 설정하여 <span data-keyref="GameMaker Name">GameMaker</span> 가 해당 <a class="glossterm" data-glossterm="순수한" href="#">절대</a> 값 아래의 게임패드 스틱 값을 무시하도록 지시합니다.</p><p class="dropspot"> 실제 움직임을 추가하려면 <strong>단계 이벤트</strong> 가 필요하므로 지금 추가하고 다음 GML Visual 또는 GML을 지정합니다.</p><p class="dropspot"><img alt="Get Gamepad Input Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_2.png" /></p><p class="code">if gamepad_id &gt; -1<br />
       {<br />
-          var _h = gamepad_axis_value(gamepad_id, gp_axislh);<br />
-          var _v = gamepad_axis_value(gamepad_id, gp_axislv);<br />
+          var _h = gamepad_axis_value(gamepads[0], gp_axislh);<br />
+          var _v = gamepad_axis_value(gamepads[0], gp_axislv);<br />
           x += _h * 4;<br />
           y += _v * 4;<br />
       }</p><p class="dropspot"> 여기에서 <em>왼쪽</em> 스틱이 수평 또는 수직으로 움직이는지 확인합니다. 축 함수는 -1과 1 사이의 값을 반환하므로 수평 축의 경우 -1은 왼쪽, 0은 이동하지 않고 1은 오른쪽, 수직 축의 경우 -1은 위쪽, 0은 이동하지 않음, 1은 아래쪽입니다.. 값은 -1과 1 <em>사이</em> 에 있으므로 예를 들어 가로 축은 0.5 값을 반환할 수 있습니다. 즉, 스틱이 &quot;휴식&quot; 위치 사이의 중간에 있고 오른쪽으로 완전히 밀리는 것을 의미합니다. 그런 이유로 값에 4를 곱합니다(인스턴스가 이동하려는 속도에 따라 실제로 아무 값이나 곱할 수 있음). 즉, 인스턴스의 속도는 이동의 정도에 따라 달라집니다. 스틱 축에 만들어졌습니다.</p><p class="dropspot"> 이 개체의 인스턴스를 방에 놓고 <strong>재생</strong> 버튼을 누릅니다.<strong><img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /></strong> 을 클릭한 다음 연결된 게임패드의 왼쪽 스틱을 사용하여 이동합니다. 다음과 같이 표시되어야 합니다.</p><p class="dropspot"><img alt="Animation Showing Gamepad Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_3_1.gif" /></p><p class="dropspot"></p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">고급 8방향 무브먼트</a></p><div class="droptext" data-targetname="drop_down3"><p class="dropspot"> 이 마지막 예에서 우리는 8방향 이동 코드를 다시 방문하여 대각선 이동이 실제로 위/아래/왼쪽/오른쪽 이동보다 빠르다는 문제를 해결할 것입니다. 이는 대각선으로 이동할 때 x/y 이동 값에 의해 생성된 직각 삼각형의 빗변을 따라 이동하기 때문입니다.</p><p class="dropspot"><img alt="Image Showing Why Diagonal Movement Is Faster" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_1.png" /></p><p class="dropspot"> 무슨 일이 일어나고 있는지 더 명확하게 하기 위해 모든 텍스트와 스프라이트를 제거하고 수평이 되도록 45° 회전된 동일한 이동 라인을 표시하겠습니다.</p><p class="dropspot"><img alt="Simplified Image SHowing Diaginal Movement Is Faster" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_2.png" /></p><p class="dropspot"> 보시다시피 차이점은 매우 분명하며 인스턴스가 단계당 1 또는 2픽셀 이상 이동하면 대각선 이동이 <em>훨씬</em> 빨라지는 것이 매우 눈에 띄게 됩니다! 그럼 이것을 어떻게 제한할까요? 이에 대해 여러 가지 방법이 있지만 나중에 게임에서 유용할 몇 가지 기능과 개념을 소개하기 때문에 우리는 그 중 한 가지에만 집중할 것입니다.</p><p class="dropspot"> 이를 처리하기 위해 독립적으로 눌려진 키의 입력값을 <a class="glossterm" data-glossterm="변하기 쉬운" href="#">변수</a> <span class="glossextra">s</span> 에 저장한 후 이를 확인하고 누른 키의 조합에 따라 이동해야 한다. 따라서 이를 위해서는 스프라이트가 할당된 개체가 필요하고 다음 작업 또는 코드가 포함된 <strong>단계 이벤트</strong> 를 제공해야 합니다.</p><p class="dropspot"><img alt="GML VisualStep Event Actions To Define Movement Variables" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_4_1.png" /></p><p class="note"> <span class="note">참고</span> 더 쉽게 시각화할 수 있도록 위의 Visual 작업을 두 개의 열로 분할했지만 Visual 편집기에서는 연속적으로 배치됩니다.</p><p class="code">var _left = keyboard_check(vk_left);<br />

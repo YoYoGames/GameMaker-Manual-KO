@@ -39,7 +39,7 @@
       <br />
           reset the countdown variable to 30.<br />
       <br />
-      else:<br />
+      else - meaning the countdown variable is more than zero:<br />
       <br />
           subtract one from the countdown variable.
     </p><p class="dropspot"> 위 코드의 실제 인스턴스 생성 부분에 대해 너무 걱정하지 마십시오. 다음 섹션에서 더 자세히 다룰 것입니다. 여기서 이해해야 할 중요한 점은 무언가가 있는지 확인하는 조건식을 생성할 수 있다는 것입니다. <span class="inline">true </span> 또는 <span class="inline">false </span> 프로그램이 다양한 방식으로 응답하도록 합니다. 이것은 매우 간단해 보일 수 있지만 실제로는 믿을 수 없을 정도로 강력하며 <span data-keyref="GameMaker Name">GameMaker</span> 에서 프로그래밍할 때 수행하는 거의 모든 작업의 기초를 형성합니다.</p></div><p></p><p> 따라서 &quot;프로그래밍이란 무엇입니까?&quot;라는 질문에 답하기 위해 <strong>프로그래밍</strong> 은 <strong><a class="glossterm" data-glossterm="변하기 쉬운" href="#">변수</a></strong> <span class="glossextra">s</span> 를 사용할 수 있는 <strong>명령문</strong> 조합을 사용하고 있다고 말할 수 있습니다.<strong> </strong><strong><a class="glossterm" data-glossterm="표현" href="#">표현식</a></strong> 을 형성하기 위해 <span class="glossextra">s</span>, 작업을 수행하기 위한 <strong>함수</strong> 및 질문하기 위해 <strong><a class="glossterm" data-glossterm="가정 어구" href="#">조건부</a></strong> <span class="glossextra">s</span> - 그런 다음 목표를 달성하기 위해 이러한 명령문을 동시에 실행합니다. 아래에서 GML Visual 및 GML에서 약간 더 복잡한 프로그램을 볼 수 있습니다. 당신은 그것이 무엇을하는지 추측 할 수 있습니까?</p><p><img alt="GML VisualFinal Code Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_FinalCode.png" /></p><p> 또는:</p><p class="code">if mouse_check_button_pressed(mb_left) == true<br />
@@ -55,7 +55,7 @@
     else<br />
     {<br />
     <br />
-        if mouse_check_button_released(mb_left) == true<br />
+        if mouse_check_button_released(mb_left)<br />
         {<br />
     <br />
             image_blend = c_white;<br />

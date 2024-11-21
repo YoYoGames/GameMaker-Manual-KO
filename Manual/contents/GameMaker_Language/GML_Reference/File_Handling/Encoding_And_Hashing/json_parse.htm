@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>json_parse</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,32 +15,32 @@
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>json_parse</h1><p> 이 함수는 JSON 문자열(이전에 <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a> 를 사용하여 생성했거나 유효한 소스에서 생성)을 구문 분석하고 이를 배열 또는 구조체의 컬렉션으로 변환하는 데 사용할 수 있습니다. 여기서 배열은 JSON 배열과 동일하고 구조체는 동등합니다. JSON 개체의. 구문 분석할 문자열을 제공하면 함수가 코드에서 사용할 수 있는 최상위 배열 또는 구조체를 반환합니다. JSON의 내용이 확실하지 않은 경우 다른 <a href="../../Variable_Functions/Variable_Functions.htm">변수 함수</a> (예:<a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> 그리고<a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> 구조체의 경우) 반환된 내용을 확인합니다. 유효하지 않은 값(즉, 문자열이 아님)을 구문 분석하려고 하면 예외 오류가 발생합니다.</p><p> 이 기능을 사용할 때 주의해야 할 몇 가지 중요한 사항이 있습니다.</p><ul class="colour"><li> 제공된 JSON 문자열이 다음을 포함하는 경우 <span class="inline">undefined</span> 모든 속성에 대한 값으로 다음으로 변환됩니다. <span class="inline">pointer_null</span> 구문 분석시.</li><li> 이 기능을 사용하면 최대 중첩 제한이 128인 JSON 파일만 로드할 수 있습니다.</li></ul><p></p><h4> 통사론:</h4><p class="code">json_parse(json)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">json</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The JSON string to parse</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Struct">Struct</span> or <span data-keyref="Type_Array">Array</span></p><p></p><h4> 예시:</h4><p class="code">json = &quot;{\&quot;myObj\&quot;: { \&quot;apples\&quot;:10, \&quot;oranges\&quot;:12, \&quot;potatoes\&quot;:100000, \&quot;avocados\&quot;:0 }, \&quot;myArray\&quot;:[0, 1, 2, 2, 4, 0, 1, 5, 1]}&quot;;<br />
     <br />
-    data = json_parse(json);<br />
+    var data = json_parse(json);<br />
     show_debug_message(data);
   </p><p> 위의 코드는 유효한 JSON 개체를 포함하는 새 문자열을 만든 다음 <span class="inline">json_parse()</span> 해당 문자열을 GML 구조체로 변환합니다. 그런 다음 디버그 로그에 결과를 인쇄합니다.</p><p class="note"> <span class="note">참고</span> JSON 문자열 안에 있는 모든 큰따옴표( <span class="inline2">&quot;</span> ) 앞에 백슬래시( <span class="inline2">\</span> )가 포함되어 있음을 알 수 있습니다.<br /><br /> <span class="inline2">json = &quot;{ <strong>\&quot;</strong> myObj</span><br /><br /> 이는 큰따옴표가 코드의 일부로 읽혀지고 문자열을 조기에 닫는 대신 문자열 내에서 실제 문자로 읽히도록 하기 위한 것입니다. 이런 식으로 백슬래시를 사용하여 큰따옴표를 &quot;이스케이프&quot;합니다.<br /><br /> 그러나 외부 파일에서 JSON을 로드하는 경우 해당 파일의 문자를 이스케이프할 필요가 없으며 그렇게 하면 구문 분석 중에 오류가 발생할 수 있습니다.</p><hr /><p> 위의 JSON 문자열을 구문 분석한 후 해당 구조를 알고 있으면 다양한 <a href="../../Variable_Functions/Variable_Functions.htm">변수 함수</a> 를 사용하여 내용을 확인하고 읽을 수 있습니다.</p><p class="code">data = json_parse(json);<br />
     <br />
     // Check if the struct has myObj variable<br />
-    if variable_struct_exists(data, &quot;myObj&quot;)<br />
+    if (struct_exists(data, &quot;myObj&quot;))<br />
     {<br />
         // Check if it&#39;s a struct<br />
-        if is_struct(data.myObj)<br />
+        if (is_struct(data.myObj))<br />
         {<br />
             // Print all struct members to the log<br />
-            var _names = variable_struct_get_names(data.myObj);<br />
+            var _names = struct_get_names(data.myObj);<br />
             var _str = &quot;&quot;;<br />
             for (var i = 0; i &lt; array_length(_names); i++;)<br />
             {<br />
-                _str = _names[i] + &quot;: &quot; + string(variable_struct_get(data.myObj, _names[i]));<br />
+                _str = _names[i] + &quot;: &quot; + string(struct_get(data.myObj, _names[i]));<br />
                 show_debug_message(_str);<br />
             }<br />
         }<br />
     }<br />
     <br />
     // Check if the struct has myArray variable<br />
-    if variable_struct_exists(data, &quot;myArray&quot;)<br />
+    if (struct_exists(data, &quot;myArray&quot;))<br />
     {<br />
         // Check if it&#39;s an array<br />
-        if is_array(data.myArray)<br />
+        if (is_array(data.myArray))<br />
         {<br />
             show_debug_message(data.myArray);<br />
         }<br />
