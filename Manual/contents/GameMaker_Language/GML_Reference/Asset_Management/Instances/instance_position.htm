@@ -17,7 +17,10 @@
     inst = instance_position(mouse_x, mouse_y, obj_Pause_Button);<br />
     if (inst != noone)<br />
     {<br />
-        with (inst) image_index=1;<br />
+        with (inst)<br />
+        {<br />
+            image_index = 1;<br />
+        }<br />
         instance_create_layer(room_width / 2, 0, &quot;Controllers&quot;, obj_Menu);<br />
     }</p><p> 위의 코드는 마우스 위치에서 &quot;obj_Pause_Button&quot; 인스턴스와의 충돌을 확인하고, 충돌이 있는 경우 반환된 id를 사용하여 &quot;obj_Menu&quot; 개체의 새 인스턴스를 만들기 전에 image_index를 새 값으로 설정합니다. &quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Instances.htm">인스턴스</a></div><div style="float:right"> 다음: <a href="instance_position_list.htm"><span class="notranslate">instance_position_list</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>

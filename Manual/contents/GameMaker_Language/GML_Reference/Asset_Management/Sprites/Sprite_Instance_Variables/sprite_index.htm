@@ -14,7 +14,7 @@
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_index</h1><p> 이 변수는 인스턴스에 대한 현재 스프라이트의 인덱스를 반환하거나, 인스턴스에 연결된 스프라이트가 없는 경우 -1을 반환합니다. 리소스 트리의 스프라이트 이름을 지정하거나 외부에서 로드된 스프라이트가 인덱싱된 변수를 사용하여 인스턴스에 다른 스프라이트를 제공하도록 변경할 수 있습니다. 스프라이트를 변경해도 현재 보이는 프레임의 인덱스는 변경되지 않습니다. 따라서 프레임 번호 3에서 스프라이트를 변경하면 새 스프라이트가 해당 프레임이 보이는 상태로 그려집니다(프레임 수가 동일하다고 가정).</p><p></p><h4> 통사론:</h4><p class="code">sprite_index;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p><p></p><h4> 예시:</h4><p class="code">with (obj_Check)<br />
     {<br />
-        if !collision_line(x, y, other.x, other.y, obj_Wall, false, true)<br />
+        if !collision_line(x, y, other.x, other.y, obj_wall, false, true)<br />
         {<br />
             sprite_index = spr_spotted;<br />
         }<br />
