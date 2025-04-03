@@ -21,11 +21,11 @@
     }</p><p> 이 코드는 지정된 디렉토리가 존재하는지 확인하고 존재하는 경우 그곳으로 이동하여 첫 번째 &quot;읽기 전용&quot;을 반환합니다. <span class="inline">.doc</span> 파일을 찾았습니다. 그런 다음 두 개의 파일을 더 찾고 파일 찾기를 닫습니다.</p><p> <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a> 루프를 사용하여 원하는 수의 파일을 찾을 수 있습니다.</p><p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
-    while (file_name != &quot;&quot;)<br />
+    while (_file_name != &quot;&quot;)<br />
     {<br />
-        array_push(files, file_name);<br />
+        array_push(_files, _file_name);<br />
     <br />
-        file_name = file_find_next();<br />
+        _file_name = file_find_next();<br />
     }<br />
     <br />
     file_find_close();
