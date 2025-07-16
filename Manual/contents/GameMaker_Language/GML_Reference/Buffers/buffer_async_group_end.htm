@@ -19,7 +19,7 @@
     save4 = buffer_save_async(buff4, &quot;Player_Save4.sav&quot;, 0, 16384);<br />
     save_id = buffer_async_group_end();</p><p> 위의 코드는 버퍼 그룹을 시작한 다음 4개의 파일을 비동기적으로 저장하도록 설정합니다. 그런 다음 그룹 정의가 종료되고(이 시점에서 저장이 시작됨) 함수 호출의 ID를 변수 &quot; <i>save_id</i> &quot;에 저장합니다. 저장이 완료되면 비동기 저장/로드 이벤트가 트리거되고 파일을 구문 분석할 수 있습니다. <span class="inline">async_load</span> 다음과 같이 함수의 올바른 ID에 대한 맵:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

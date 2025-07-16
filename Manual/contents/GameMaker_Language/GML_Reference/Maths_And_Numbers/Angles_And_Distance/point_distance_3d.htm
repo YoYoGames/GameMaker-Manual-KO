@@ -2,11 +2,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>point_distance_3d</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -19,12 +17,9 @@
     inst = instance_nearest(x, y, enemy);<br />
     if (instance_exists(inst))<br />
     {<br />
-        ex = inst.x;<br />
-        ey = inst.y;<br />
-        ez = inst.z;<br />
-        if (point_distance_3d(x, y, z, ex, ey, ez) &lt; 200) <br />
+        if (point_distance_3d(x, y, z, _nearest.x, _nearest.y, _nearest.z) &lt; 200)<br />
         {<br />
-            instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile)<br />
+            instance_create_layer(x, y, &quot;Bullets&quot;, obj_missile);<br />
         }<br />
     }</p><p> 위의 코드는 가장 가까운 적의 x, y, z 좌표를 얻은 다음 이를 사용하여 그들이 형성하는 벡터와 플레이어 좌표의 거리(길이)를 확인합니다. 값이 200보다 작으면 플레이어 개체는 &quot;obj_Missile&quot; 인스턴스를 만듭니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Angles_And_Distance.htm">각도와 거리</a></div><div style="float:right"> 다음: <a href="distance_to_object.htm"><span class="notranslate">distance_to_object</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
