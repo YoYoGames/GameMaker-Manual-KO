@@ -10,7 +10,7 @@
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="gamepad_get_axis_deadzone에 대한 참조 페이지" />
   <meta name="rh-index-keywords" content="gamepad_get_axis_deadzone" />
-  <meta name="search-keywords" content="gamepad_get_axis_deadzone" />
+  <meta name="search-keywords" content="gamepad_get_axis_deadzone, deadzone" />
   <meta name="is_pure" content="true" />
 </head>
 <body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_get_axis_deadzone</h1><p> 이 기능은 조이스틱 축의 &quot;데드존&quot; 값을 얻는 데 사용할 수 있습니다. 가져올 장치 슬롯을 지정하면 이 함수는 0에서 1 사이의 값을 반환합니다. 여기서 값은 조이스틱 축이 0으로 간주되는 임계값을 반영합니다.</p><p></p><h4> 통사론:</h4><p class="code">gamepad_get_axis_deadzone(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if gamepad_get_axis_deadzone(global.PadId) != 0.5<br />
