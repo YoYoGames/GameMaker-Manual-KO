@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="device_mouse_raw_y" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_mouse_raw_y</h1><p> 이 함수는 장치에서 터치의 원시 y 위치를 반환합니다. 이것이 의미하는 바는 <span data-keyref="GameMaker Name">GameMaker</span> 가 <i>아닌</i> 터치되는 y 위치의 실제 장치 정의를 반환하므로 보기 위치 및 크기 조정과 같은 것을 무시합니다. 감지할 수 있는 최대 장치 터치 수는 사용 중인 장치와 실행되는 OS에 따라 크게 달라집니다.</p><p class="note"> <b>참고</b>: 이 기능은 장치에 따라 크게 달라지므로 원하는 대상 모듈과 장치를 먼저 실험하여 정확히 무엇을 반환하는지 확인해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">device_mouse_raw_y(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The device (from 0 - <i>n</i> ) that is being checked.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>device_mouse_raw_y</h1>
+  <p> 이 함수는 장치에서 터치의 원시 y 위치를 반환합니다. 이것이 의미하는 바는 <span data-keyref="GameMaker Name">GameMaker</span> 가 <i>아닌</i> 터치되는 y 위치의 실제 장치 정의를 반환하므로 보기 위치 및 크기 조정과 같은 것을 무시합니다. 감지할 수 있는 최대 장치 터치 수는 사용 중인 장치와 실행되는 OS에 따라 크게 달라집니다.</p><p class="note"> <b>참고</b>: 이 기능은 장치에 따라 크게 달라지므로 원하는 대상 모듈과 장치를 먼저 실험하여 정확히 무엇을 반환하는지 확인해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">device_mouse_raw_y(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The device (from 0 - <i>n</i> ) that is being checked.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br />
     {<br />
         x_av = mean(device_mouse_raw_x(0), device_mouse_raw_x(1));<br />
         y_av = mean(device_mouse_raw_y(0), device_mouse_raw_y(1));<br />

@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="audio_emitter_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_emitter_exists</h1><p> 이 함수는 오디오 이미터가 존재하는지 여부를 반환합니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). 검색하는 인덱스가 이전에 초기화되지 않은 경우 이 함수는 존재하지 않는 인덱스를 검색하므로 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_emitter_exists(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_ID_Audio_Emitter">오디오 이미터 ID</span></td><td> <span class="notranslate">The index of the emitter to check the existence of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if audio_emitter_exists(s_emit)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_emitter_exists</h1>
+  <p> 이 함수는 오디오 이미터가 존재하는지 여부를 반환합니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). 검색하는 인덱스가 이전에 초기화되지 않은 경우 이 함수는 존재하지 않는 인덱스를 검색하므로 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_emitter_exists(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_ID_Audio_Emitter">오디오 이미터 ID</span></td><td> <span class="notranslate">The index of the emitter to check the existence of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if audio_emitter_exists(s_emit)<br />
     {<br />
         audio_play_sound_on(s_emit, snd_Explode, false, 1);<br />
     }<br />

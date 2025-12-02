@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="필터 및 효과 기능" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 필터 및 효과 기능</h1><h2> 개요</h2><p> 방 내의 레이어에서 필터/효과를 생성, 수정 및 제거하는 데 사용할 수 있는 다양한 GML 기능이 있어 실시간으로 효과를 쉽게 관리하여 사실적이고 동적인 필터/효과를 생성할 수 있습니다.</p><div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"></div><p> 코드에서 필터/효과를 지정하는 후자 <span class="glossextra">의</span> 방법은 함수 인수에 직접 지정된 문자열 <a class="glossterm" data-glossterm="정확한" href="#">리터럴</a> 에서만 작동합니다. 즉, 변수나 논리를 사용하여 필터/효과 이름 문자열을 만들면 자산 컴파일러는 이를 감지하지 못하고 필터/효과가 로드되지 않습니다.</p><p> 다음 예를 고려하십시오.</p><p class="code">// This will work on its own<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 필터 및 효과 기능</h1>
+  <h2> 개요</h2><p> 방 내의 레이어에서 필터/효과를 생성, 수정 및 제거하는 데 사용할 수 있는 다양한 GML 기능이 있어 실시간으로 효과를 쉽게 관리하여 사실적이고 동적인 필터/효과를 생성할 수 있습니다.</p><div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"></div><p> 코드에서 필터/효과를 지정하는 후자 <span class="glossextra">의</span> 방법은 함수 인수에 직접 지정된 문자열 <a class="glossterm" data-glossterm="정확한" href="#">리터럴</a> 에서만 작동합니다. 즉, 변수나 논리를 사용하여 필터/효과 이름 문자열을 만들면 자산 컴파일러는 이를 감지하지 못하고 필터/효과가 로드되지 않습니다.</p><p> 다음 예를 고려하십시오.</p><p class="code">// This will work on its own<br />
     var _fxshake = fx_create(&quot;_filter_screenshake&quot;);<br />
     <br />
     // This will NOT work on its own<br />

@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="layer_get_name" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_name</h1><p> 이 함수를 사용하여 주어진 레이어의 <i>이름</i> 을 얻을 수 있습니다. 고유한 레이어 ID 값을 제공하고 레이어가 룸 편집기에서 생성된 명명된 레이어 중 하나인 경우 함수는 레이어 이름이 포함된 문자열을 반환합니다. 레이어가 룸 편집기의 레이어가 아닌 경우(예: 다음을 사용하여 생성되었습니다.<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 빈 문자열이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_name(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to get the name of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String">String</span></p><p></p><h4> 예시:</h4><p class="code">var a = layer_get_all();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_get_name</h1>
+  <p> 이 함수를 사용하여 주어진 레이어의 <i>이름</i> 을 얻을 수 있습니다. 고유한 레이어 ID 값을 제공하고 레이어가 룸 편집기에서 생성된 명명된 레이어 중 하나인 경우 함수는 레이어 이름이 포함된 문자열을 반환합니다. 레이어가 룸 편집기의 레이어가 아닌 경우(예: 다음을 사용하여 생성되었습니다.<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 빈 문자열이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_get_name(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to get the name of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String">String</span></p><p></p><h4> 예시:</h4><p class="code">var a = layer_get_all();<br />
     var layer_list = ds_list_create(); for (var i = 0; i Alt; array_length(a); i++;)<br />
     {<br />
         if (layer_get_name(_arr_layers[i]) != &quot;&quot;)<br />

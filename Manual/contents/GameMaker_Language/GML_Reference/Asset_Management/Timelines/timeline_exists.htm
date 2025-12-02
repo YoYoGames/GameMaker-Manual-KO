@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="timeline_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_exists</h1><p> 이 기능을 사용하면 타임라인이 존재하는지 확인할 수 있습니다(반환 <span class="inline">true</span> ) 여부(반환 <span class="inline">false</span> ). 이것은 타임라인을 동적으로 생성할 때 특히 유용합니다.<a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> 함수이지만 초기화되지 않은 변수(그렇지 않으면 타임라인의 인덱스에 할당됨)를 검색하면 오류가 발생한다는 점에 유의해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">timeline_exists(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td><td> <span class="notranslate">The index of the time line to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if timeline_exists(global.tl)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>timeline_exists</h1>
+  <p> 이 기능을 사용하면 타임라인이 존재하는지 확인할 수 있습니다(반환 <span class="inline">true</span> ) 여부(반환 <span class="inline">false</span> ). 이것은 타임라인을 동적으로 생성할 때 특히 유용합니다.<a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> 함수이지만 초기화되지 않은 변수(그렇지 않으면 타임라인의 인덱스에 할당됨)를 검색하면 오류가 발생한다는 점에 유의해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">timeline_exists(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td><td> <span class="notranslate">The index of the time line to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if timeline_exists(global.tl)<br />
     {<br />
         timeline_delete(global.tl);<br />
     }</p><p> 위의 코드는 타임 라인이 존재하고 전역 변수 &quot;tl&quot;에 인덱싱되어 있는지 확인하고 존재한다면 해당 타임 라인을 삭제합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Timelines.htm">타임라인</a></div><div style="float:right"> 다음: <a href="timeline_get_name.htm"><span class="notranslate">timeline_get_name</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>

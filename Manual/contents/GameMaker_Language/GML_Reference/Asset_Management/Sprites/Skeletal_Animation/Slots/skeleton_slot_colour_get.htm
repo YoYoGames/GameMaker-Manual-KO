@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="skeleton_slot_colour_get,skeleton_slot_color_get" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_slot_colour_get</h1><p> 이 기능을 사용하면 부착 슬롯 색상을 얻을 수 있습니다. 슬롯 이름(문자열)을 제공하면 함수가 색상에 대한 정수 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_slot_colour_get(slot);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">slot</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The slot name to check, a string</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">slot_list = ds_list_create();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>skeleton_slot_colour_get</h1>
+  <p> 이 기능을 사용하면 부착 슬롯 색상을 얻을 수 있습니다. 슬롯 이름(문자열)을 제공하면 함수가 색상에 대한 정수 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_slot_colour_get(slot);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">slot</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The slot name to check, a string</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">slot_list = ds_list_create();<br />
     skeleton_find_slot(mouse_x, mouse_y, slot_list);<br />
     if (!ds_list_empty(slot_list)) <br />
     {<br />

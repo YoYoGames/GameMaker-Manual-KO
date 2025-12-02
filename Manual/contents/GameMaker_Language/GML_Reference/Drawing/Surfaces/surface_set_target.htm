@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="surface_set_target" />
   <meta name="search-keywords" content="surface_set_target" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_set_target</h1><p> 이 기능을 사용하면 모든 추가 그리기를 화면이 아닌 대상 표면으로 설정하고 이러한 방식으로 <span data-keyref="GameMaker Name">GameMaker</span> 가 지정된 표면에 특정 항목만 그리도록 지시할 수 있습니다. 전화를 하지 않으시면 참고하세요<a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> 작업을 마친 후에는 모든 추가 그리기(심지어 다른 경우에도)가 표면에서 수행되므로 화면에 아무 것도 그려지지 않습니다. 또한 인스턴스의 그리기 이벤트에서 표면 자체가 화면에 그려지지 않으면 아무 것도 표시되지 않음을 알아야 합니다. 이 함수의 반환 값을 디버그 도구로 확인하여 표면 대상이 설정되었는지 여부를 확인할 수도 있습니다. 반환 값 0은 대상 설정 실패이고 다른 양수 값은 성공입니다.</p><p> 한 가지 주목해야 할 점은 표면이 <i>스택</i> 되어 대상에서 대상으로 점프한 다음 끝에 일반 그리기 대상으로 재설정할 수 없다는 것입니다. 대신 렌더링 대상을 열고 닫아야 합니다. 예를 들어 다음은 올바르게 작동 <b>하지 않습니다</b>.</p><p class="code">surface_set_target(surf1);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_set_target</h1>
+  <p> 이 기능을 사용하면 모든 추가 그리기를 화면이 아닌 대상 표면으로 설정하고 이러한 방식으로 <span data-keyref="GameMaker Name">GameMaker</span> 가 지정된 표면에 특정 항목만 그리도록 지시할 수 있습니다. 전화를 하지 않으시면 참고하세요<a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> 작업을 마친 후에는 모든 추가 그리기(심지어 다른 경우에도)가 표면에서 수행되므로 화면에 아무 것도 그려지지 않습니다. 또한 인스턴스의 그리기 이벤트에서 표면 자체가 화면에 그려지지 않으면 아무 것도 표시되지 않음을 알아야 합니다. 이 함수의 반환 값을 디버그 도구로 확인하여 표면 대상이 설정되었는지 여부를 확인할 수도 있습니다. 반환 값 0은 대상 설정 실패이고 다른 양수 값은 성공입니다.</p><p> 한 가지 주목해야 할 점은 표면이 <i>스택</i> 되어 대상에서 대상으로 점프한 다음 끝에 일반 그리기 대상으로 재설정할 수 없다는 것입니다. 대신 렌더링 대상을 열고 닫아야 합니다. 예를 들어 다음은 올바르게 작동 <b>하지 않습니다</b>.</p><p class="code">surface_set_target(surf1);<br />
     draw_text(32, 32, &quot;surface1&quot;);<br />
     surface_set_target(surf2);<br />
     draw_text(32, 64, &quot;surface2&quot;);<br />

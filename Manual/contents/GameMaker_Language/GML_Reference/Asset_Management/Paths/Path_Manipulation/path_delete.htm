@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="path_delete" />
   <meta name="search-keywords" content="path_delete" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_delete</h1><p> 이 코드를 사용하여 메모리에서 경로를 제거할 수 있습니다. 이 경로가 다음을 사용하여 동적으로 생성된 경우<a href="path_add.htm"><span class="inline">path_add()</span></a>, 경로 인덱스를 보유하는 변수는 더 이상 존재하지 않으므로 경로에 액세스하는 데 더 이상 유효하지 않으며 경로가 <a href="../../../../../The_Asset_Editors/Paths.htm">경로 편집기</a> 를 사용하여 생성된 경우 경로를 영구적으로 삭제하므로 <i>전체 게임</i> 에서 해당 경로에 더 이상 액세스할 수 없습니다..</p><p></p><h4> 통사론:</h4><p class="code">path_delete(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to delete.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p></p><p class="code">var t_path = path_add();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>path_delete</h1>
+  <p> 이 코드를 사용하여 메모리에서 경로를 제거할 수 있습니다. 이 경로가 다음을 사용하여 동적으로 생성된 경우<a href="path_add.htm"><span class="inline">path_add()</span></a>, 경로 인덱스를 보유하는 변수는 더 이상 존재하지 않으므로 경로에 액세스하는 데 더 이상 유효하지 않으며 경로가 <a href="../../../../../The_Asset_Editors/Paths.htm">경로 편집기</a> 를 사용하여 생성된 경우 경로를 영구적으로 삭제하므로 <i>전체 게임</i> 에서 해당 경로에 더 이상 액세스할 수 없습니다..</p><p></p><h4> 통사론:</h4><p class="code">path_delete(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to delete.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p></p><p class="code">var t_path = path_add();<br />
     if mp_grid_path(grid, t_path, x, y, obj_Player.x, obj_Player.y, 1)<br />
     {<br />
         path_assign(mypath, t_path);<br />

@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="highscore_name" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>highscore_name</h1><p> 이 기능을 사용하면 주어진 위치의 최고 점수 목록에 저장된 이름 문자열을 검색할 수 있습니다. 이름이 입력되지 않은 경우 &quot;알 수 없음&quot; 문자열이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">highscore_name(place);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">place</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The place on the table (1-10).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">var i = 9;<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>highscore_name</h1>
+  <p> 이 기능을 사용하면 주어진 위치의 최고 점수 목록에 저장된 이름 문자열을 검색할 수 있습니다. 이름이 입력되지 않은 경우 &quot;알 수 없음&quot; 문자열이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">highscore_name(place);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">place</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The place on the table (1-10).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">var i = 9;<br />
     repeat(10)<br />
     {<br />
         name[i] = highscore_name(i + 1);<br />

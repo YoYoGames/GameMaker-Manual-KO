@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="instance_exists" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_exists</h1><p> 이 기능은 확인하고자 하는 내용에 따라 2가지 방법으로 사용할 수 있습니다. 확인할 object_index를 지정할 수 있습니다. 이 경우 이 함수는 다음을 반환합니다. <span class="inline">true</span> 지정된 개체의 활성 인스턴스가 현재 방에 존재하거나 인스턴스 ID를 제공할 수도 있습니다. 이 경우 이 함수는 다음을 반환합니다. <span class="inline">true</span> 해당 특정 인스턴스가 존재하고 현재 룸에서 활성 상태인지 여부.</p><p> 이 기능은 <a href="Deactivating_Instances/Deactivating_Instances.htm">인스턴스 비활성화</a> 기능을 사용하여 비활성화된 인스턴스를 고려하지 <i>않습니다</i>.</p><p></p><h4> 통사론:</h4><p class="code">instance_exists(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span> 또는 <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The object or instance to check for the existence of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if !instance_exists(obj_Enemy)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_exists</h1>
+  <p> 이 기능은 확인하고자 하는 내용에 따라 2가지 방법으로 사용할 수 있습니다. 확인할 object_index를 지정할 수 있습니다. 이 경우 이 함수는 다음을 반환합니다. <span class="inline">true</span> 지정된 개체의 활성 인스턴스가 현재 방에 존재하거나 인스턴스 ID를 제공할 수도 있습니다. 이 경우 이 함수는 다음을 반환합니다. <span class="inline">true</span> 해당 특정 인스턴스가 존재하고 현재 룸에서 활성 상태인지 여부.</p><p> 이 기능은 <a href="Deactivating_Instances/Deactivating_Instances.htm">인스턴스 비활성화</a> 기능을 사용하여 비활성화된 인스턴스를 고려하지 <i>않습니다</i>.</p><p></p><h4> 통사론:</h4><p class="code">instance_exists(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td> <span data-keyref="Type_ID_Instance">인스턴스 ID</span> 또는 <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The object or instance to check for the existence of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if !instance_exists(obj_Enemy)<br />
     {<br />
         score += 200;<br />
         room_goto(rm_hiscores);<br />

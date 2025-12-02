@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="gc_get_target_frame_time" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> gc_get_target_frame_time</h1><p> 이 함수를 사용하면 가비지 수집기에 대한 현재 대상 프레임 값을 검색할 수 있습니다. 반환된 값은 마이크로초 <span><span>(여기서 1,000,000마이크로초는 1초임)이며 기본 대상 프레임 시간은 100마이크로초입니다. 이 값을 변경하려면 함수를 사용해야 합니다.<span class="inline"><a href="gc_target_frame_time.htm">gc_target_frame_time()</a></span>.</span></span></p><p></p><h4> 통사론:</h4><p class="code">gc_get_target_frame_time(time);</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (gc_get_target_frame_time() != 50)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> gc_get_target_frame_time</h1>
+  <p> 이 함수를 사용하면 가비지 수집기에 대한 현재 대상 프레임 값을 검색할 수 있습니다. 반환된 값은 마이크로초 <span><span>(여기서 1,000,000마이크로초는 1초임)이며 기본 대상 프레임 시간은 100마이크로초입니다. 이 값을 변경하려면 함수를 사용해야 합니다.<span class="inline"><a href="gc_target_frame_time.htm">gc_target_frame_time()</a></span>.</span></span></p><p></p><h4> 통사론:</h4><p class="code">gc_get_target_frame_time(time);</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (gc_get_target_frame_time() != 50)<br />
     {<br />
         gc_target_frame_time(50);<br />
     }</p><p> 위의 코드는 가비지 수집기의 현재 프레임 시간 목표를 확인하고 50마이크로초가 아니면 이 값으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Garbage_Collection.htm">쓰레기 수거</a></div><div style="float:right"> 다음: <a href="gc_get_stats.htm"><span class="notranslate">gc_get_stats</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

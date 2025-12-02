@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="ds_priority_clear" />
   <meta name="search-keywords" content="ds_priority_clear" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_priority_clear</h1><p> 이 기능을 사용하면 주어진 우선순위 큐 데이터 구조에서 모든 데이터를 지울 수 있습니다. 이것은 데이터 구조를 파괴하지 <i>않습니다</i>.<a href="ds_priority_destroy.htm"><span class="inline">ds_priority_destroy()</span></a> ) 모든 데이터만 지우고 빈 우선 순위 대기열을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_priority_clear(id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Priority"></span></td><td> <span class="notranslate">The id of the data structure to clear.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (count = 15) &amp;&amp; (!ds_priority_empty(command_queue))<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_priority_clear</h1>
+  <p> 이 기능을 사용하면 주어진 우선순위 큐 데이터 구조에서 모든 데이터를 지울 수 있습니다. 이것은 데이터 구조를 파괴하지 <i>않습니다</i>.<a href="ds_priority_destroy.htm"><span class="inline">ds_priority_destroy()</span></a> ) 모든 데이터만 지우고 빈 우선 순위 대기열을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_priority_clear(id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Priority"></span></td><td> <span class="notranslate">The id of the data structure to clear.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (count = 15) &amp;&amp; (!ds_priority_empty(command_queue))<br />
     {<br />
         ds_priority_clear(command_queue);<br />
         alarm[0] = room_speed;<br />

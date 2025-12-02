@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="array_copy" />
   <meta name="search-keywords" content="array_copy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>array_copy</h1><p> 이 기능을 사용하면 배열의 전체 또는 일부를 임의의 위치에 있는 다른 배열로 복사할 수 있습니다. 원본 및 대상 배열(둘 다 이전에 생성되어야 함)과 복사할 원본 배열 내의 위치와 복사할 대상 배열 내의 위치를 모두 제공해야 합니다. 마지막으로 복사할 배열의 길이(또는 원하는 부분의 길이)를 지정해야 합니다. 복사 중인 데이터가 대상 배열의 길이를 초과하면 배열이 데이터를 허용하도록 확장됩니다.</p><p> 이 함수는 다음 패턴에 따라 배열 인덱스를 제공할 때 복사할 차원을 지정하는 한 다차원 배열에도 사용할 수 있습니다.</p><p class="code">// Copy to the first dimension of an array<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>array_copy</h1>
+  <p> 이 기능을 사용하면 배열의 전체 또는 일부를 임의의 위치에 있는 다른 배열로 복사할 수 있습니다. 원본 및 대상 배열(둘 다 이전에 생성되어야 함)과 복사할 원본 배열 내의 위치와 복사할 대상 배열 내의 위치를 모두 제공해야 합니다. 마지막으로 복사할 배열의 길이(또는 원하는 부분의 길이)를 지정해야 합니다. 복사 중인 데이터가 대상 배열의 길이를 초과하면 배열이 데이터를 허용하도록 확장됩니다.</p><p> 이 함수는 다음 패턴에 따라 배열 인덱스를 제공할 때 복사할 차원을 지정하는 한 다차원 배열에도 사용할 수 있습니다.</p><p class="code">// Copy to the first dimension of an array<br />
     // from the second dimension of an array<br />
     array_copy(item_array, 0, inventory_array[0], 0, len);<br />
     <br />

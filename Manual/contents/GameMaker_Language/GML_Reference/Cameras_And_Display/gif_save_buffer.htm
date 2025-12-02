@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="gif_save_buffer" />
   <meta name="search-keywords" content="gif_save_buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gif_save_buffer</h1><p> 이 기능을 사용하면 GIF 애니메이션을 저장할 수 있습니다. 함수에서 반환된 GIF 인덱스를 제공합니다.<a href="gif_open.htm"><span class="inline">gif_open()</span></a> ) 함수는 GIF 데이터와 함께 1바이트로 정렬된 성장 버퍼를 반환합니다. 최종 GIF 데이터는 Universal 884 팔레트를 사용하여 팔레타이징됩니다(자세한 내용은 <a href="https://en.wikipedia.org/wiki/List_of_software_palettes#8-8-4_levels_RGB" target="_blank">여기</a> 참조).</p><p></p><h4> 통사론:</h4><p class="code">gif_save_buffer(gif_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">gif_index</span></td><td><span data-keyref="Type_ID_GIF"></span></td><td> <span class="notranslate">The ID of gif to save</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p><p></p><h4> 예시:</h4><p class="code">if save_gif == true<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gif_save_buffer</h1>
+  <p> 이 기능을 사용하면 GIF 애니메이션을 저장할 수 있습니다. 함수에서 반환된 GIF 인덱스를 제공합니다.<a href="gif_open.htm"><span class="inline">gif_open()</span></a> ) 함수는 GIF 데이터와 함께 1바이트로 정렬된 성장 버퍼를 반환합니다. 최종 GIF 데이터는 Universal 884 팔레트를 사용하여 팔레타이징됩니다(자세한 내용은 <a href="https://en.wikipedia.org/wiki/List_of_software_palettes#8-8-4_levels_RGB" target="_blank">여기</a> 참조).</p><p></p><h4> 통사론:</h4><p class="code">gif_save_buffer(gif_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">gif_index</span></td><td><span data-keyref="Type_ID_GIF"></span></td><td> <span class="notranslate">The ID of gif to save</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p><p></p><h4> 예시:</h4><p class="code">if save_gif == true<br />
     {<br />
         if (count == 0)<br />
         {<br />

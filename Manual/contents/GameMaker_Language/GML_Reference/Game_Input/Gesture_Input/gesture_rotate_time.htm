@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="gesture_rotate_time" />
   <meta name="search-keywords" content="gesture_rotate_time" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gesture_rotate_time</h1><p> 이 기능은 <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">회전 시작 제스처</a> 가 트리거되기 위해 한 쌍의 터치가 일관된 방향으로 회전해야 하는 시간을 설정하는 데 사용됩니다. 시간은 초 단위로 측정되며 기본값은 0.16초입니다.</p><p class="note"> <b>중요한!</b> 현재 60fps 게임의 경우 최대 1초로만 설정할 수 있습니다. 그렇지 않으면 회전이 감지되지 않습니다. 예를 들어 30fps 게임의 최대 시간은 2초일 수 있습니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">gesture_rotate_time();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (inches)</p><p></p><h4> 예시:</h4><p class="code">if gesture_get_rotate_time() != 0.1<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gesture_rotate_time</h1>
+  <p> 이 기능은 <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">회전 시작 제스처</a> 가 트리거되기 위해 한 쌍의 터치가 일관된 방향으로 회전해야 하는 시간을 설정하는 데 사용됩니다. 시간은 초 단위로 측정되며 기본값은 0.16초입니다.</p><p class="note"> <b>중요한!</b> 현재 60fps 게임의 경우 최대 1초로만 설정할 수 있습니다. 그렇지 않으면 회전이 감지되지 않습니다. 예를 들어 30fps 게임의 최대 시간은 2초일 수 있습니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">gesture_rotate_time();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (inches)</p><p></p><h4> 예시:</h4><p class="code">if gesture_get_rotate_time() != 0.1<br />
     {<br />
         gesture_rotate_time(0.1);<br />
     }</p><p> 위의 코드는 제스처의 회전 시간이 0.1초로 설정되어 있는지 확인하고 그렇지 않은 경우 해당 값으로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Gesture_Input.htm">제스처 입력</a></div><div style="float:right"> 다음: <a href="gesture_rotate_angle.htm"><span class="notranslate">gesture_rotate_angle</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>

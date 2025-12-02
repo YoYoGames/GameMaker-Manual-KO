@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="phy_col_normal_x" />
   <meta name="search-keywords" content="phy_col_normal_x" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_col_normal_x</h1><p> 이 <b>읽기 전용</b> 변수는 다음에 해당하는 충돌 법선의 x 구성 요소를 반환합니다.<a href="phy_collision_x.htm"><span class="inline">phy_collision_x</span></a> 배열 값. 각 접점에 대해 연관된 접점 법선이 있습니다(일반적으로 충돌의 모든 접점에 대해 동일한 법선). 이 접촉 법선은 충돌의 한 인스턴스에서 다른 인스턴스를 가리키는 단위 벡터이며, 예를 들어 충돌을 해결하기 위해 올바른 &quot;밀기&quot; 방향을 계산하는 데 사용할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 변수는 물리 활성화 인스턴스의 충돌 이벤트에서만 사용할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">phy_col_normal_x;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value, or <span class="inline">undefined</span> if the instance is not physics enabled)</p><p></p><h4> 예시:</h4><p class="code">repeat(5 + irandom(5))<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_col_normal_x</h1>
+  <p> 이 <b>읽기 전용</b> 변수는 다음에 해당하는 충돌 법선의 x 구성 요소를 반환합니다.<a href="phy_collision_x.htm"><span class="inline">phy_collision_x</span></a> 배열 값. 각 접점에 대해 연관된 접점 법선이 있습니다(일반적으로 충돌의 모든 접점에 대해 동일한 법선). 이 접촉 법선은 충돌의 한 인스턴스에서 다른 인스턴스를 가리키는 단위 벡터이며, 예를 들어 충돌을 해결하기 위해 올바른 &quot;밀기&quot; 방향을 계산하는 데 사용할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 변수는 물리 활성화 인스턴스의 충돌 이벤트에서만 사용할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">phy_col_normal_x;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value, or <span class="inline">undefined</span> if the instance is not physics enabled)</p><p></p><h4> 예시:</h4><p class="code">repeat(5 + irandom(5))<br />
     {<br />
         with (instance_create_layer(x, y, &quot;Effects&quot;, obj_Debris)<br />
         {<br />

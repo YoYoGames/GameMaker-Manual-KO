@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="show_question" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>show_question</h1><p> 이 기능은 &quot;예&quot; 및 &quot;아니오&quot;에 대한 두 개의 버튼이 있는 팝업 메시지 상자를 생성합니다. 그것은 반환 <span class="inline">true</span> 또는 <span class="inline">false</span> 두 버튼 중 사용자가 누르는 버튼에 따라 다릅니다.</p><p class="note"> <b><span class="note">참고</span></b> 이 함수는 Windows 대상 <b>에서만 디버그용</b> 으로 사용되지만 다른 모든 대상에서는 <b>더 이상 사용되지 않습니다</b>.</p><p></p><h4> 통사론:</h4><p class="code">show_question(str);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">str</span></td><td> <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The string to show in the pop-up question.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if (score &gt; 500) &amp;&amp; debug_mode<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>show_question</h1>
+  <p> 이 기능은 &quot;예&quot; 및 &quot;아니오&quot;에 대한 두 개의 버튼이 있는 팝업 메시지 상자를 생성합니다. 그것은 반환 <span class="inline">true</span> 또는 <span class="inline">false</span> 두 버튼 중 사용자가 누르는 버튼에 따라 다릅니다.</p><p class="note"> <b><span class="note">참고</span></b> 이 함수는 Windows 대상 <b>에서만 디버그용</b> 으로 사용되지만 다른 모든 대상에서는 <b>더 이상 사용되지 않습니다</b>.</p><p></p><h4> 통사론:</h4><p class="code">show_question(str);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">str</span></td><td> <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The string to show in the pop-up question.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if (score &gt; 500) &amp;&amp; debug_mode<br />
     {<br />
         if show_question(&quot;Continue to next room?&quot;)<br />
         {<br />

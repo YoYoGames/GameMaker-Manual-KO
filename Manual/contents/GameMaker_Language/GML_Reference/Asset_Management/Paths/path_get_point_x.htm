@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="path_get_point_x" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_get_point_x</h1><p> 이 함수는 인덱싱하는 경로에 대해 입력한 점의 x 위치(실 좌표)를 반환합니다. 점이 경로 범위 밖에 있는 경우(예: 경로에 점이 8개 있고 점 10의 x 위치를 묻는 경우) 값 0이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_point_x(index, n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The point number to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p></p><p class="code">if (path_position == 1)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>path_get_point_x</h1>
+  <p> 이 함수는 인덱싱하는 경로에 대해 입력한 점의 x 위치(실 좌표)를 반환합니다. 점이 경로 범위 밖에 있는 경우(예: 경로에 점이 8개 있고 점 10의 x 위치를 묻는 경우) 값 0이 반환됩니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_point_x(index, n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The point number to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p></p><p class="code">if (path_position == 1)<br />
     {<br />
         var _num = path_get_number(pth_Patrol);<br />
         var _pos = floor(random(_num));<br />

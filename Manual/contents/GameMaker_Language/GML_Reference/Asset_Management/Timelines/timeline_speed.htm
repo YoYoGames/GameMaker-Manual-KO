@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="timeline_speed" />
   <meta name="search-keywords" content="timeline_speed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_speed</h1><p> 일반적으로 각 단계에서 시간 표시줄의 위치는 1씩 증가하지만 이 변수를 다른 값으로 설정하여 이 양을 변경할 수 있습니다. 실수(예: 0.5 또는 2.4)를 사용할 수 있으며 값이 1보다 크면 동일한 시간 단계 내에서 여러 순간이 발생할 수 있습니다(모두 시간 표시줄에 대해 정의된 것과 동일한 순서로 수행되므로 어떤 작업도 건너뛰지 않습니다).</p><p></p><h4> 통사론:</h4><p class="code">timeline_speed;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if !timeline_running<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>timeline_speed</h1>
+  <p> 일반적으로 각 단계에서 시간 표시줄의 위치는 1씩 증가하지만 이 변수를 다른 값으로 설정하여 이 양을 변경할 수 있습니다. 실수(예: 0.5 또는 2.4)를 사용할 수 있으며 값이 1보다 크면 동일한 시간 단계 내에서 여러 순간이 발생할 수 있습니다(모두 시간 표시줄에 대해 정의된 것과 동일한 순서로 수행되므로 어떤 작업도 건너뛰지 않습니다).</p><p></p><h4> 통사론:</h4><p class="code">timeline_speed;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if !timeline_running<br />
     {<br />
         timeline_running = true;<br />
         timeline_speed = 0.5;<br />

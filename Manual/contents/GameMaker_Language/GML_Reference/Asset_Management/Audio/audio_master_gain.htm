@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="audio_master_gain" />
   <meta name="search-keywords" content="audio_master_gain" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_master_gain</h1><p> 이 기능을 사용하면 모든 사운드와 음악의 전체 볼륨에 대한 절대값을 설정할 수 있습니다. 일반적으로 최대 볼륨을 1로 간주하지만 0(무음)에서 0보다 큰 값까지의 선형 스케일을 기반으로 합니다., 사운드를 재생할 때 왜곡이나 클리핑이 발생할 수 있습니다. 이 기능은 게임 내에서 재생되는 모든 소리와 음악의 상대적 볼륨에 영향을 미칩니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_master_gain(gain);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">gain</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Value for the global volume (0 to 1).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check(vk_up)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_master_gain</h1>
+  <p> 이 기능을 사용하면 모든 사운드와 음악의 전체 볼륨에 대한 절대값을 설정할 수 있습니다. 일반적으로 최대 볼륨을 1로 간주하지만 0(무음)에서 0보다 큰 값까지의 선형 스케일을 기반으로 합니다., 사운드를 재생할 때 왜곡이나 클리핑이 발생할 수 있습니다. 이 기능은 게임 내에서 재생되는 모든 소리와 음악의 상대적 볼륨에 영향을 미칩니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_master_gain(gain);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">gain</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Value for the global volume (0 to 1).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check(vk_up)<br />
     {<br />
         if vol &lt; 1 vol += 0.05;<br />
         audio_master_gain(vol);<br />

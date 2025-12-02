@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="http_set_request_crossorigin" />
   <meta name="search-keywords" content="http_set_request_crossorigin" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>http_set_request_crossorigin</h1><p> 이 기능을 사용하면 파일에서 이미지를 로드할 때 사용할 교차 원점 유형을 설정할 수 있습니다. 이 기능은 HTML5 플랫폼 전용이며 다음을 사용하여 파일에서 스프라이트를 로드할 때만 유용합니다. <span class="inline"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span> 함수. &quot;use-credentials&quot;로 설정하면 더 이상 로드되는 스프라이트에 절대 경로를 제공할 필요가 없지만 대신 <i>상대</i> 경로를 제공합니다(아래 예 참조). 기본적으로 교차 출처 유형은 &quot;익명&quot;으로 설정됩니다.</p><p></p><h4> 통사론:</h4><p class="code">http_set_request_crossorigin(origin_type);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">origin_type</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The cross origin type to use (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if string_lower(http_get_request_crossorigin()) != &quot;use-credentials&quot;<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>http_set_request_crossorigin</h1>
+  <p> 이 기능을 사용하면 파일에서 이미지를 로드할 때 사용할 교차 원점 유형을 설정할 수 있습니다. 이 기능은 HTML5 플랫폼 전용이며 다음을 사용하여 파일에서 스프라이트를 로드할 때만 유용합니다. <span class="inline"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span> 함수. &quot;use-credentials&quot;로 설정하면 더 이상 로드되는 스프라이트에 절대 경로를 제공할 필요가 없지만 대신 <i>상대</i> 경로를 제공합니다(아래 예 참조). 기본적으로 교차 출처 유형은 &quot;익명&quot;으로 설정됩니다.</p><p></p><h4> 통사론:</h4><p class="code">http_set_request_crossorigin(origin_type);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">origin_type</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The cross origin type to use (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if string_lower(http_get_request_crossorigin()) != &quot;use-credentials&quot;<br />
     {<br />
         http_set_request_crossorigin(&quot;use-credentials&quot;);<br />
     }<br />

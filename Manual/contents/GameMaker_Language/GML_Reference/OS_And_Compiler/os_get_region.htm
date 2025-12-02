@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="os_get_region" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_get_region</h1><p> 이 함수는 <a href="http://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">ISO3166-1</a> 표준에 따라 게임을 실행하는 OS에 대한 두 글자 또는 세 글자의 지역 코드가 포함된 문자열을 반환합니다. 정보를 사용할 수 없는 경우 단순히 빈 문자열 &quot;&quot;을 보유합니다.</p><p class="note"> <b>참고</b>: 이것은 반환되는 위치 지역 코드가 아니라 OS의 지역 언어 코드입니다.</p><p></p><h4> 통사론:</h4><p class="code">os_get_region()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_get_language())<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_get_region</h1>
+  <p> 이 함수는 <a href="http://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">ISO3166-1</a> 표준에 따라 게임을 실행하는 OS에 대한 두 글자 또는 세 글자의 지역 코드가 포함된 문자열을 반환합니다. 정보를 사용할 수 없는 경우 단순히 빈 문자열 &quot;&quot;을 보유합니다.</p><p class="note"> <b>참고</b>: 이것은 반환되는 위치 지역 코드가 아니라 OS의 지역 언어 코드입니다.</p><p></p><h4> 통사론:</h4><p class="code">os_get_region()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_get_language())<br />
     {<br />
         case &quot;zh&quot;:<br />
             var _region = os_get_region();<br />

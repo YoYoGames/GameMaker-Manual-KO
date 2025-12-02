@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="texture_prefetch" />
   <meta name="search-keywords" content="texture_prefetch" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texture_prefetch</h1><p> 이 기능은 텍스처 페이지 또는 텍스처 페이지 그룹을 &quot;프리페치&quot;하는 데 사용할 수 있습니다. 즉, 필요할 때 VRAM에 로드합니다. 고유한 <b>텍스처 페이지 ID</b> 를 제공합니다( <span class="inline">texturegroup_*</span> 함수)를 사용하여 단일 페이지를 프리페치하거나 <b>텍스처 그룹 이름</b> ( <a href="../../../../Settings/Texture_Groups.htm">텍스처 그룹 편집기</a> 에 정의됨)을 제공하여 그룹의 모든 텍스처 페이지를 프리페치할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">texture_prefetch(tex_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tex_id</span></td><td> <span data-keyref="Type_Pointer_Texture">텍스처 포인터</span> 또는 <span data-keyref="Type_String">문자열</span></td><td> <span class="notranslate">The texture page pointer <i>or</i> a texture group name (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>texture_prefetch</h1>
+  <p> 이 기능은 텍스처 페이지 또는 텍스처 페이지 그룹을 &quot;프리페치&quot;하는 데 사용할 수 있습니다. 즉, 필요할 때 VRAM에 로드합니다. 고유한 <b>텍스처 페이지 ID</b> 를 제공합니다( <span class="inline">texturegroup_*</span> 함수)를 사용하여 단일 페이지를 프리페치하거나 <b>텍스처 그룹 이름</b> ( <a href="../../../../Settings/Texture_Groups.htm">텍스처 그룹 편집기</a> 에 정의됨)을 제공하여 그룹의 모든 텍스처 페이지를 프리페치할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">texture_prefetch(tex_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tex_id</span></td><td> <span data-keyref="Type_Pointer_Texture">텍스처 포인터</span> 또는 <span data-keyref="Type_String">문자열</span></td><td> <span class="notranslate">The texture page pointer <i>or</i> a texture group name (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br />
     for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br />
     {<br />
         texture_prefetch(_tex_array[i]);<br />

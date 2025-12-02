@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="window_set_fullscreen" />
   <meta name="search-keywords" content="window_set_fullscreen" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>window_set_fullscreen</h1><p> 이 기능을 사용하면 게임 창을 전체 화면으로 설정할 수 있습니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). <b>macOS</b> 대상의 경우 &quot;전체 화면에서 시작&quot; 옵션 <i>을</i> 선택 취소하고 <a href="../../../../Settings/Game_Options.htm">게임</a> 옵션에서 &quot;플레이어가 게임 창 크기를 조정할 수 있도록 허용&quot; 옵션을 선택해야 합니다. 그렇지 않으면 이 기능이 실패합니다. 또한 이 기능은 &quot;클릭 가능한&quot; 콜백으로 추가되지 않는 한 HTML5에서 작동 <i>하지 않습니다</i> (자세한 내용은 <a href="../../Web_And_HTML5/clickable_add.htm">여기</a> 참조).</p><p></p><h4> 통사론:</h4><p class="code">window_set_fullscreen(full);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">full</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Whether to set the screen to fullscreen (true) or not (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>window_set_fullscreen</h1>
+  <p> 이 기능을 사용하면 게임 창을 전체 화면으로 설정할 수 있습니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). <b>macOS</b> 대상의 경우 &quot;전체 화면에서 시작&quot; 옵션 <i>을</i> 선택 취소하고 <a href="../../../../Settings/Game_Options.htm">게임</a> 옵션에서 &quot;플레이어가 게임 창 크기를 조정할 수 있도록 허용&quot; 옵션을 선택해야 합니다. 그렇지 않으면 이 기능이 실패합니다. 또한 이 기능은 &quot;클릭 가능한&quot; 콜백으로 추가되지 않는 한 HTML5에서 작동 <i>하지 않습니다</i> (자세한 내용은 <a href="../../Web_And_HTML5/clickable_add.htm">여기</a> 참조).</p><p></p><h4> 통사론:</h4><p class="code">window_set_fullscreen(full);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">full</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Whether to set the screen to fullscreen (true) or not (false).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br />
     {<br />
         if window_get_fullscreen()<br />
         {<br />

@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="view_camera" />
   <meta name="search-keywords" content="view_camera" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_camera</h1><p> 이 배열은 지정된 뷰 포트에 할당된 고유한 카메라 ID를 보유하며 새 카메라로 설정하거나 현재 카메라를 가져오기 위해 읽을 수 있으며 카메라가 할당되지 않은 경우 -1을 반환합니다. 방에서 최대 8개의 뷰 포트를 활성화할 수 있으며(배열 값 0에서 7), 이 변수를 카메라 ID 값(함수에서 반환된<a href="camera_create.htm"><span class="inline">camera_create()</span></a> 또는<a href="camera_create_view.htm"><span class="inline">camera_create_view()</span></a> ). Room Editor를 통해 카메라를 뷰 포트로 설정한 경우 이 변수는 해당 포트의 카메라 ID를 유지합니다.</p><p></p><h4> 통사론:</h4><p class="code">view_camera[0 ... 7];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span> or -1 (if no camera is assigned)</p><p></p><h4> 예시:</h4><p class="code">if view_camera[0] == -1<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>view_camera</h1>
+  <p> 이 배열은 지정된 뷰 포트에 할당된 고유한 카메라 ID를 보유하며 새 카메라로 설정하거나 현재 카메라를 가져오기 위해 읽을 수 있으며 카메라가 할당되지 않은 경우 -1을 반환합니다. 방에서 최대 8개의 뷰 포트를 활성화할 수 있으며(배열 값 0에서 7), 이 변수를 카메라 ID 값(함수에서 반환된<a href="camera_create.htm"><span class="inline">camera_create()</span></a> 또는<a href="camera_create_view.htm"><span class="inline">camera_create_view()</span></a> ). Room Editor를 통해 카메라를 뷰 포트로 설정한 경우 이 변수는 해당 포트의 카메라 ID를 유지합니다.</p><p></p><h4> 통사론:</h4><p class="code">view_camera[0 ... 7];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span> or -1 (if no camera is assigned)</p><p></p><h4> 예시:</h4><p class="code">if view_camera[0] == -1<br />
     {<br />
         view_camera[0] = camera_create_view(0, 0, room_width, room_height);<br />
     }</p><p> 위의 코드는 뷰 포트 [0]에 카메라가 부착되어 있는지 확인하고, 카메라가 없으면 카메라가 생성되어 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Cameras_And_View_Ports.htm">카메라 및 뷰 포트</a></div><div style="float:right"> 다음: <a href="view_current.htm"><span class="notranslate">view_current</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

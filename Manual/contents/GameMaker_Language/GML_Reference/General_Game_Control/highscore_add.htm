@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="highscore_add" />
   <meta name="search-keywords" content="highscore_add" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>highscore_add</h1><p> 이 기능을 사용하여 내부 글로벌 최고 점수 목록에 이름과 점수를 추가할 수 있습니다. <span data-keyref="GameMaker Name">GameMaker</span> 는 저장된 10번째 위치보다 큰 값만 저장하므로 점수 목록에 입력하기에 충분히 높은지 확인하기 위해 값을 확인할 필요가 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">highscore_add(str, numb);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">str</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The string (name) to attribute the score to.</span></td></tr><tr><td> <span class="notranslate">numb</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The number (score) to add.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (lives == 0)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>highscore_add</h1>
+  <p> 이 기능을 사용하여 내부 글로벌 최고 점수 목록에 이름과 점수를 추가할 수 있습니다. <span data-keyref="GameMaker Name">GameMaker</span> 는 저장된 10번째 위치보다 큰 값만 저장하므로 점수 목록에 입력하기에 충분히 높은지 확인하기 위해 값을 확인할 필요가 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">highscore_add(str, numb);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">str</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The string (name) to attribute the score to.</span></td></tr><tr><td> <span class="notranslate">numb</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The number (score) to add.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (lives == 0)<br />
     {<br />
         highscore_add(global.Name, score);<br />
         score = 0;<br />
