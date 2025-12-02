@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="접근자" />
   <meta name="search-keywords" content="접근자,@,[| ],[@ ],[# ],[? ],그리드 접근자,목록 접근자,지도 접근자,배열 접근자" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 접근자</h1><p> GameMaker Language(GML)는 또한 접근자 라고 하는 논리 표현식을 사용하여 특정 <a href="../GML_Reference/Data_Structures/Data_Structures.htm">데이터 구조</a> 및 <a href="Arrays.htm">배열</a> 에 <b>접근</b> 할 수 있도록 합니다. 이것은 일반적으로 배열로 작업할 때와 유사한 방식으로 구성되어 있습니다. 첫 번째 인수 앞에 <em>식별자 기호</em> 만 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에 (이전에 생성된) 데이터 구조 또는 배열 리터럴에서 작업 중임을 알립니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS 목록 [| ]</a></p><div class="droptext" data-targetname="drop-down10"><p class="dropspot"> <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS 목록</a> 의 구문은 다음과 같습니다.</p><p class="code">list_index[| index]</p><p class="dropspot"> 그래서 당신이 사용했을 때<span class="inline">ds_list_create()</span> 목록을 만들려면 목록 인덱스(변수에 저장한)를 사용하여 참조하고 &quot;색인&quot; 값은 설정하거나 추가할 목록의 위치입니다. 예를 들어 다음 코드는 목록을 만든 다음 10개의 항목을 추가하여 각 항목을 0에서 9 사이의 임의의 숫자로 설정합니다.</p><p class="code">ds = ds_list_create();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 접근자</h1>
+  <p> GameMaker Language(GML)는 또한 접근자 라고 하는 논리 표현식을 사용하여 특정 <a href="../GML_Reference/Data_Structures/Data_Structures.htm">데이터 구조</a> 및 <a href="Arrays.htm">배열</a> 에 <b>접근</b> 할 수 있도록 합니다. 이것은 일반적으로 배열로 작업할 때와 유사한 방식으로 구성되어 있습니다. 첫 번째 인수 앞에 <em>식별자 기호</em> 만 사용하여 <span data-keyref="GameMaker Name">GameMaker</span> 에 (이전에 생성된) 데이터 구조 또는 배열 리터럴에서 작업 중임을 알립니다.</p><p></p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS 목록 [| ]</a></p><div class="droptext" data-targetname="drop-down10"><p class="dropspot"> <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS 목록</a> 의 구문은 다음과 같습니다.</p><p class="code">list_index[| index]</p><p class="dropspot"> 그래서 당신이 사용했을 때<span class="inline">ds_list_create()</span> 목록을 만들려면 목록 인덱스(변수에 저장한)를 사용하여 참조하고 &quot;색인&quot; 값은 설정하거나 추가할 목록의 위치입니다. 예를 들어 다음 코드는 목록을 만든 다음 10개의 항목을 추가하여 각 항목을 0에서 9 사이의 임의의 숫자로 설정합니다.</p><p class="code">ds = ds_list_create();<br />
       var index = 0;<br />
       repeat(10)<br />
       {<br />
