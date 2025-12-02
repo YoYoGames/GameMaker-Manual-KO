@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendenable</span></h1>
   <p> 이 기능을 사용하여 알파 블렌딩을 켜고 끌 수 있습니다. 기본적으로 이렇게 설정하면 <span class="inline">false</span>, 그려지는 모든 이미지는 100% 불투명하게 그려집니다. 즉, 스프라이트 또는 배경의 투명 또는 반투명 영역이 단색으로 표시됩니다. 가능하면 알파 블렌딩 <i>을 끄는</i> 것이 좋습니다(특히 모바일 장치용으로 개발할 때). 이렇게 하면 그리기 속도가 크게 증가하기 때문입니다.</p><p><img alt="Alpha blend example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Alphablend_Image.png" /></p><h4> 통사론:</h4><p class="code">gpu_set_blendenable(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable alpha blending value (<span class="inline">true</span> or <span class="inline">false</span> ).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">gpu_set_blendenable(false);<br/> draw_sprite(spr_Background, 0, 0, 0);<br/> gpu_set_blendenable(true);
   </p><p> 위의 코드는 알파 블렌딩을 끄고 배경 스프라이트를 그린 다음 다시 켜서 계속 그리도록 합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="GPU_Control.htm">GPU 제어</a></div><div style="float:right"> 다음: <a href="gpu_set_ztestenable.htm"><span class="notranslate">gpu_set_ztestenable</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_free_play_queue</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p> 이 함수는 주어진 오디오 대기열과 관련된 메모리를 해제하는 데 사용됩니다. 큐 인덱스는 함수를 사용하여 큐를 생성할 때 반환된 값입니다.<a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>, 그리고 이 함수는 메모리 누수를 방지하기 위해 큐가 더 이상 필요하지 않을 때 호출되어야 합니다. 대기열을 해제하면 재생 중인 모든 사운드가 중지되고 할당된 대기열이 해제될 때까지 사운드가 스트리밍되는 버퍼를 삭제할 수 없습니다. 이 함수는 <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">오디오 재생 비동기 이벤트</a> 를 트리거하고 이 이벤트에서 변수에 특수 <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 이 생성됩니다. <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> 다음 키/값 쌍으로:</p><ul class="colour"><li> &quot; <strong>queue_id</strong> &quot; - 데이터 재생이 완료된 큐</li><li> &quot; <strong>buffer_id</strong> &quot; - 더 이상 재생되지 않는 버퍼</li><li> &quot; <strong>queue_shutdown</strong> &quot; - 이 기능으로 대기열을 해제했기 때문에 정상 재생 중에는 0으로 설정되고 이벤트가 수신되면 1로 설정됩니다. 이 값이 1로 설정되면 더 이상 데이터를 대기열에 추가하고 싶지 않습니다.</li></ul><p></p><h4> 통사론:</h4><p class="code">audio_free_play_queue(queueIndex);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">queueIndex</span></td><td> <span data-keyref="Type_ID_Audio_Queue">오디오 대기열 ID</span></td><td> <span class="notranslate">The index of the queue to free.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var q_id = async_load[? &quot;queue_id&quot;];<br />
     if (q_id == audio_queue)<br />
     {<br />

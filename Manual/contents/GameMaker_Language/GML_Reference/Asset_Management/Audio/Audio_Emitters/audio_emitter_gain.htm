@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_gain</span></h1>
   <p> 이 기능은 사운드의 최대 게인(볼륨)을 설정합니다. 사운드에 대해 인지되는 볼륨은 감쇠 <a href="audio_emitter_falloff.htm">값</a> 과 <i>청취자</i> 에 대한 상대적 위치에 따라 달라질 수 있지만 이 기능으로 게인을 설정하면 전체 볼륨이 지정된 게인 값을 초과하지 않습니다. 아래 이미지는 감쇠가 0보다 클 때 게인이 이미터의 볼륨에 미치는 영향을 보여줍니다.</p><p><img alt="Audio Gain Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Gain.png" /> 이 기능은 주어진 이미터를 통해 재생되는 모든 후속 사운드뿐만 아니라 재생되는 동안 사운드의 볼륨을 변경합니다. 일부 플랫폼에서는 게인이 1보다 클 수 있지만 값이 1이면 &quot;전체 볼륨&quot;으로 간주되고 그보다 크면 오디오 클리핑이나 왜곡이 발생할 수 있습니다.</p><p class="note"> <b><span class="note">참고</span></b> 최종 볼륨은 기능에 의해 설정된 전역 오디오 게인의 영향도 받습니다. <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p><p></p><h4> 통사론:</h4><p class="code">audio_emitter_gain(emitter, gain);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">emitter</span></td><td> <span data-keyref="Type_ID_Audio_Emitter">오디오 이미터 ID</span></td><td> <span class="notranslate">The index of the emitter to change.</span></td></tr><tr><td> <span class="notranslate">gain</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The maximum gain (default 1).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if up<br />
     {<br />
         gain += 0.05;<br />

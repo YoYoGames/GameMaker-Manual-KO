@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_load_buffer</h1>
+  <h1><span data-field="title" data-format="default">game_load_buffer</span></h1>
   <p> 이 기능을 사용하면 이전에 저장한 게임 상태를 로드할 수 있습니다. 게임은 이전에 생성된 &quot;성장&quot; 버퍼( <a href="../Buffers/Buffers.htm">Buffers</a> 참조)에서 로드되며 버퍼에는 다음을 사용하여 게임 상태가 저장되어 있어야 합니다.<a href="game_save_buffer.htm"><span class="inline">game_save_buffer()</span></a> 함수.</p><p></p><h4> 통사론:</h4><p class="code">game_load_buffer(buffer);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td><td> <span class="notranslate">The buffer id to load from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(ord(&quot;L&quot;))<br />
     {<br />
         if global.Checkpoint game_load_buffer(save_buff);<br />

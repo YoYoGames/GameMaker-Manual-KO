@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_id</h1>
+  <h1><span data-field="title" data-format="default">instance_id</span></h1>
   <p> 이 <b>읽기 전용</b> <a href="../../../GML_Overview/Arrays.htm">어레이</a> 는 모든<a href="Instance_Variables/id.htm"><span class="inline">id</span></a> 룸 내의 모든 <em>활성</em> 인스턴스 <a href="Instance_Variables/id.htm">의 s</a>. 즉, <a href="Deactivating_Instances/Deactivating_Instances.htm">인스턴스 비활성화</a> 기능 중 하나를 사용한 경우 비활성화된 인스턴스는 이 배열에 포함되지 않습니다(이전에 이 배열의 값을 사용한 경우 이제 키워드 <a href="../../../GML_Overview/Instance_Keywords.htm"><span class="notranslate">noone</span></a> 을 반환함).</p><p></p><h4> 통사론:</h4><p class="code">instance_id[num];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span></p><p></p><h4> 예시:</h4><p class="code">for (var i = 0; i &lt; instance_count; i ++;)<br />
     {<br />
         with (instance_id[i]) speed += 0.1;<br />

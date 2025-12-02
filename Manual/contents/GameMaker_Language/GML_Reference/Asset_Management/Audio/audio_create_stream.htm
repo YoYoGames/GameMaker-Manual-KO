@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_stream</h1>
+  <h1><span data-field="title" data-format="default">audio_create_stream</span></h1>
   <p> 이 기능을 사용하면 일반 오디오 기능에서 사용할 수 있는 새 사운드 인덱스를 생성하여 외부 OGG 파일 소스에서 직접 오디오를 스트리밍할 수 있습니다. 이 함수에는 파일 이름(예: 포함된 파일일 수 있음)이 필요하며 사용할 새 사운드 인덱스를 반환합니다. 소리가 더 이상 필요하지 않으면 함수를 호출해야 합니다.<a href="audio_destroy_stream.htm"><span class="inline">audio_destroy_stream()</span></a> 사운드 인덱스를 사용하여 메모리에서 제거하지 않으면 메모리 누수가 발생하여 속도가 느려지고 결국 게임이 중단될 수 있습니다.</p><p class="note"> <b>참고</b>: 이 기능은 HTML5 대상 플랫폼에서 사용할 수 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_create_stream(filename);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filename</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">Path to the file (OGG only) to stream the audio from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Sound">Sound Asset</span></p><p></p><h4> 예시:</h4><p class="code">snd = audio_create_stream(&quot;Music/Track1.ogg&quot;);<br />
     audio_play_sound(snd, 0, true);</p><p> 위의 코드는 주어진 파일에서 변수 &quot;snd&quot;에 새로운 사운드 인덱스를 생성한 다음 이 사운드를 재생합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Audio.htm">오디오</a></div><div style="float:right"> 다음: <a href="audio_destroy_stream.htm"><span class="notranslate">audio_destroy_stream</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>

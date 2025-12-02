@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_current</h1>
+  <h1><span data-field="title" data-format="default">shader_current</span></h1>
   <p> 이 함수는 현재 렌더링에 사용 중인 셰이더의 인덱스 ID 값을 반환하거나 사용 중인 셰이더가 없으면 -1을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">shader_current();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Shader">Shader Asset</span> or -1 (if no shader is assigned)</p><p></p><h4> 예시:</h4><p class="code">if (shader_current() == -1)<br />
     {<br />
         shader_set(sh_warp)<br />

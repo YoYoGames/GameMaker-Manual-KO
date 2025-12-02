@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tileset_get_texture</h1>
+  <h1><span data-field="title" data-format="default">tileset_get_texture</span></h1>
   <p> 이 함수는 타일 세트 텍스처 페이지에 대한 특수 <i>포인터</i> 를 반환합니다. 이 값은 다른 그리기 기능, 특히 <a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">2D 기본</a> 기능과 <a href="../Shaders/Shaders.htm">셰이더</a> 기능에서 사용할 수 있습니다. 다음을 사용하여 반환된 텍스처 페이지에 대한 자세한 정보를 얻을 수 있습니다. <span class="inline">texture_</span> <a href="../../Drawing/Textures/Textures.htm">여기</a> 에서 찾을 수 있는 기능.</p><div data-conref="../../../../assets/snippets/Texture_Data_Is_Struct_On_HTML5.hts"></div><p></p><h4>통사론:</h4><p class="code">tileset_get_texture(tileset);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tileset</span></td><td> <span data-keyref="Type_Asset_Tile_Set"><a href="../../../../../The_Asset_Editors/Tile_Sets.htm" target="_blank">타일 세트 자산</a></span></td><td> <span class="notranslate">The index of the tile set to use.</span></td></tr></tbody></table><p></p><h4> 보고</h4><p class="code"><span data-keyref="Type_Pointer_Texture"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm" target="_blank">Texture</a></span></p><p></p><h4> 예시:</h4><p class="code">var tex;<br />
     tex = tileset_get_texture(spr_Wall, 0);<br />
     draw_primitive_begin_texture(pr_trianglestrip, tex);<br />

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_copy</h1>
+  <h1><span data-field="title" data-format="default">file_copy</span></h1>
   <p> 이 함수는 지정된 파일을 복사하여 선택한 새 이름을 지정합니다.</p><p> <b>포함된 파일</b> 영역(APK 내부에 있음) 내에서 Android의 파일을 복사하는 경우 먼저 메모리에 복사되므로 APK에서 매우 큰 파일을 복사하면 기기의 메모리가 부족해질 수 있습니다. HTML5 대상에서 클라이언트 측 저장을 위해 HTML5 <b>Local Storage API</b> 를 사용하고 함수는 바이너리 파일 작업을 지원하지 않으므로 텍스트 파일을 복사한다고 가정합니다.</p><p> <span class="inline2">newname</span> 파일이 이미 존재하는 경우 함수가 실패합니다.</p><p class="note"> <b>경고!</b> 이 기능은 <span data-keyref="GameMaker Name">GameMaker</span> 가 샌드박싱되어 있기 때문에 예상대로 작동하지 않을 수 있습니다! 자세한 내용은 <a href="../../../../Additional_Information/The_File_System.htm">파일 시스템 제한</a> 섹션을 참조하십시오.</p><p></p><h4> 통사론:</h4><p class="code">file_copy(fname, newname);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The name of the file to copy.</span></td></tr><tr><td> <span class="notranslate">newname</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The name of the new, copied file.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if file_exists(&quot;level1.txt&quot;)<br />
     {<br />
         file_copy(&quot;level1.txt&quot;, &quot;level2.txt&quot;);<br />

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_system_is_available</h1>
+  <h1><span data-field="title" data-format="default">audio_system_is_available</span></h1>
   <p> 이 기능은 오디오 시스템이 초기화되었는지 또는 오디오 컨텍스트가 실행 중인지 확인하는 데 사용할 수 있습니다. 모든 플랫폼에서 이 함수는 <i><b>HTML5</b> 대상을 제외하고</i> 오디오 엔진이 초기화될 때 게임 시작 직후에 true를 반환합니다. HTML5에서 오디오 컨텍스트 상태는 사용자 입력, 사용 중인 브라우저, 버전에 따라 언제든지 변경될 수 있으므로 이 기능을 사용하여 오디오 재생 가능 여부를 확인할 수 있습니다. 함수가 반환되는 경우 <span class="inline">false</span> (예: 오디오 컨텍스트 상태가 실행 중이 아님), 스트리밍되지 않은 사운드만 재생 <i>될 수</i> 있습니다(그러나 보장되지는 않으며 오디오를 재생할 수 없다고 가정해야 함). <span class="inline">true</span> 그러면 모든 오디오가 재생됩니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_system_is_available();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if audio_system_is_available()<br />
     {<br />
         if audio_is_paused(global.Music)<br />

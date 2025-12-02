@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_last</h1>
+  <h1><span data-field="title" data-format="default">room_last</span></h1>
   <p> 이 <b>읽기 전용</b> 변수는 게임에서 가장 마지막 방의 인덱스를 반환합니다(방이 생성된 순서가 <i>아니라</i> <a href="../../../../Settings/The_Room_Manager.htm">방 관리자</a> 에 방이 나타나는 순서로 정의됨). 이 변수는 다음을 사용하여 동적으로 추가된 회의실을 인식하거나 고려하지 않습니다.<span class="inline"><a href="room_add.htm">room_add()</a></span> 또는<span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p><p></p><h4> 통사론:</h4><p class="code">room_last;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(ord(&quot;Q&quot;))<br />
     {<br />
         room_goto(room_last);<br />

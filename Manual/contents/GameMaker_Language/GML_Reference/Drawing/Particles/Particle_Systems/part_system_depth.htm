@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_depth</h1>
+  <h1><span data-field="title" data-format="default">part_system_depth</span></h1>
   <p> 이 기능을 사용하면 파티클 시스템에 대한 그리기 깊이를 설정할 수 있습니다. 이는 방 내의 다른 레이어의 <i>렌더링 깊이</i> 를 설정할 수 있는 것과 매우 유사합니다. 깊이, 그리고 더 낮은 그리기 깊이로 모든 것 아래에 배치하는 높은 그리기 깊이.</p><p></p><h4> 통사론:</h4><p class="code">part_system_depth( ind, depth );</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to change.</span></td></tr><tr><td> <span class="notranslate">depth</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The depth at which to set the particle system.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">global.Sname = part_system_create();<br />
     part_system_depth(global.Sname, -1000 );</p><p> 위의 코드는 파티클 시스템을 만들고 해당 인덱스를 전역 변수 &quot;Sname&quot;에 저장합니다. 그런 다음 이 시스템에는 -1000의 낮은 깊이가 지정되며, 이는 더 높은 그리기 깊이로 모든 것 위에 표시됨을 의미합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Particle_Systems.htm">파티클 시스템</a></div><div style="float:right"> 다음: <a href="part_system_position.htm"><span class="notranslate">part_system_position</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>

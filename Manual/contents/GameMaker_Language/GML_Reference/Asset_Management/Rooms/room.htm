@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room</h1>
+  <h1><span data-field="title" data-format="default">room</span></h1>
   <p> 이 변수는 게임이 실행 중인 현재 방의 방 인덱스를 보유합니다. 이것은 읽기 전용 변수가 <i>아니지만</i> 이것을 변경해도 현재 방의 인덱스 값이 변경되지 않고 변수를 설정한 인덱스와 일치하도록 방이 변경됩니다. 변수를 변경하는 인덱스가 유효하지 않은 것처럼 이 작업을 수행할 때 주의해야 합니다. 게임에서 오류가 발생하고 종료됩니다. 일반적으로 다음을 사용하는 것이 훨씬 더 좋습니다.<a href="room_goto.htm"><span class="inline">room_goto()</span></a> 방을 바꾸는 것.</p><p class="note"> <strong>참고</strong>: 방 ID는 자산 브라우저 또는 방 관리자의 순서를 기반으로 하지 않으므로 숫자 값을 직접 제공하지 않아야 합니다. 대신 참조하려는 자산(단순히 이름)에 대해 방 <a class="glossterm" data-glossterm="일정한" href="room_goto.htm#">상수</a> 를 사용하거나 함수를 통해 검색하세요.</p><h4> 통사론:</h4><p class="code">room;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p><p></p><h4> 예시:</h4><p class="code">if (room == rm_level1)<br />
     {<br />
         audio_play_sound(snd_level1, 1, 1);<br />

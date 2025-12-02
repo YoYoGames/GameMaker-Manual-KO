@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_pause</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_pause</span></h1>
   <p> 이 기능을 사용하면 주어진 시퀀스의 재생을 일시 중지할 수 있습니다. 다음에서 반환된 시퀀스 요소 ID를 제공합니다.<a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> 또는 <a href="../General_Layer_Functions/General_Layer_Functions.htm">레이어 요소 기능</a> 중 하나를 사용하면 해당 기능을 사용하여 다시 재생을 시작할 때까지 해당 기능이 시퀀스를 일시 중지합니다.<a href="layer_sequence_play.htm"><span class="inline">layer_sequence_play()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">layer_sequence_pause(sequence_element_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> <span data-keyref="Type_ID_Element_Sequence">시퀀스 요소 ID</span></td><td> <span class="notranslate">The unique ID value of the sequence element to target</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br />
     if global.Pause<br />
     {<br />

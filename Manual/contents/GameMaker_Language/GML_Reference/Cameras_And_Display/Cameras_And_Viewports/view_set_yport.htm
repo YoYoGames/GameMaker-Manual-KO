@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_set_yport</h1>
+  <h1><span data-field="title" data-format="default">view_set_yport</span></h1>
   <p> 이 함수는 주어진 뷰 포트의 y 위치를 설정하는 데 사용할 수 있습니다. 뷰 포트 인덱스(0에서 7까지)와 그것을 배치할 새 위치를 제공합니다.</p><p></p><h4> 통사론:</h4><p class="code">view_set_yport(view_port, y)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">view_port</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The view port to target (0 - 7)</span></td></tr><tr><td> <span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new y position</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if view_get_yport(0) != (display_get_height() / 2) - (view_hport[0] / 2)<br />
     {<br />
         view_set_yport(0, (display_get_height() / 2) - (view_hport[0] / 2));<br />

@@ -16,7 +16,7 @@
 
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>random_get_seed</h1>
+  <h1><span data-field="title" data-format="default">random_get_seed</span></h1>
   <p> 난수를 생성하기 위해 <span data-keyref="GameMaker Name">GameMaker</span> 는 난수 <i>시드</i> 번호로 시작합니다. 이 기능을 사용하면 해당 시드를 검색한 다음 특정 일련의 무작위 이벤트를 재현하기 위해 저장할 수 있습니다. 예를 들어 절차적으로 생성된 게임이 있지만 플레이어가 이전에 발견한 영역으로 돌아갈 수 있기를 원한다고 가정해 보겠습니다. 음, 각 영역의 시작 부분에 이 기능을 사용하여 임의의 시드를 저장할 수 있으므로 다시 돌아가야 할 때마다 다음을 사용할 수 있습니다.<a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a> 시드를 이전으로 설정하여 <span data-keyref="GameMaker Name">GameMaker</span> 가 이전에 사용한 것과 동일한 &quot;무작위&quot; 기능 세트를 재현하도록 합니다.</p><p></p><h4> 통사론:</h4><p class="code">random_get_seed();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">ini_open(&quot;Save.ini&quot;)<br/> ini_write_real(&quot;Levels&quot;, string(level), random_get_seed());<br/> ini_close();
   </p><p> 위의 코드는 임의의 시드를 가져와 ini 파일에 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Number_Functions.htm">숫자 기능</a></div><div style="float:right"> 다음: <a href="randomise.htm"><span class="notranslate">randomise</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>

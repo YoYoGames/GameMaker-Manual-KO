@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_goto_previous</h1>
+  <h1><span data-field="title" data-format="default">room_goto_previous</span></h1>
   <p> 이 기능을 사용하면 게임을 컴파일할 때 <a href="../../../../Settings/The_Room_Manager.htm">룸 관리자</a> 에 나열된 대로 게임을 이전 게임으로 이동할 수 있습니다. 이 방이 없으면 오류가 발생하고 게임이 강제 종료됩니다. 방은 함수가 호출된 이벤트가 끝날 때까지 변경되지 않으므로 이 함수가 호출된 후의 코드는 동일한 이벤트에 있는 경우 계속 실행됩니다. 이 기능은 또한 <b>Room End</b> 이벤트를 트리거합니다. </p><div data-conref="../../../../assets/snippets/changing_room_stops_instance_creation.hts"></div><p></p><h4> 통사론:</h4><p class="code">room_goto_previous();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if room_exists(room_previous(room))<br />
     {<br />
         room_goto_previous();<br />

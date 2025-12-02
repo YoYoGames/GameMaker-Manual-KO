@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add_enable_aa</h1>
+  <h1><span data-field="title" data-format="default">font_add_enable_aa</span></h1>
   <p> 이 기능은<a href="font_add.htm"><span class="inline">font_add()</span></a>. 이 함수는 글꼴을 추가하고 다음으로 설정 <i>하기 전에</i> 호출해야 합니다. <span class="inline">true</span> AA를 활성화하고 다음으로 설정합니다. <span class="inline">false</span> 비활성화합니다. 기본적으로 AA는 활성화되어 있습니다. 이것은 함수가 호출되기 전에 추가된 글꼴에는 영향을 미치지 않으며 글꼴이 사용되는 모든 그리기/단계가 아니라 글꼴이 추가될 때 함수를 한 번만 호출하면 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">font_add_enable_aa(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Whether to enable (<span class="inline">true</span> ) or disable (<span class="inline">false</span> ) AA for added fonts.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if !font_add_get_enable_aa()<br />
     {<br />
         font_add_enable_aa(true);<br />

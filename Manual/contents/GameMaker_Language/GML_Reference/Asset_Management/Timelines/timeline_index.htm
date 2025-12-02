@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>timeline_index</h1>
+  <h1><span data-field="title" data-format="default">timeline_index</span></h1>
   <p> 이 변수는 현재 인스턴스와 연결된 타임라인의 인덱스를 보유합니다. 이것을 특정 타임 라인으로 설정하여 해당 타임 라인을 사용하거나 -1로 설정하여 인스턴스에 대한 타임 라인 사용을 중지할 수 있습니다(인스턴스에 대해 타임 라인이 정의되지 않은 경우 -1도 반환됨). 이것은 타임 라인을 시작하지 <i>않는다는</i> 점에 유의하십시오. 변수를 사용하십시오.<a href="timeline_running.htm"><span class="inline">timeline_running</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">timeline_index;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Timeline">Timeline Asset</span></p><p></p><h4> 예시:</h4><p class="code">if timeline_exists(global.tl)<br />
     {<br />
         timeline_index = global.tl;<br />

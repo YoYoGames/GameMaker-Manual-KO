@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_struct_get_names</title>
+  <title>struct_get_names</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_get_names</h1>
+  <h1><span data-field="title" data-format="default">struct_get_names</span></h1>
   <p> 이 함수를 사용하면 구조체에서 변수 이름으로 채워진 배열을 검색할 수 있습니다. 확인하기 위해 구조체 참조를 전달하면 배열의 각 항목은 구조체에 포함된 변수 이름의 <b>문자열</b> 이 됩니다.</p><p></p><h4> 통사론:</h4><p class="code">variable_struct_get_names(struct);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">struct</span></td><td><span data-keyref="Type_Struct"></span></td><td> <span class="notranslate">The struct reference to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"></span> (each entry is a string)</p><p></p><h4> 예시:</h4><p class="code">var str = &quot;&quot;;<br />
     var array = variable_struct_get_names(mystruct);<br />
     show_debug_message(&quot;Variables for struct: &quot; + string(array));<br />

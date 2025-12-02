@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_count</h1>
+  <h1><span data-field="title" data-format="default">instance_count</span></h1>
   <p> 이 <b>읽기 전용</b> 변수를 사용하면 회의실에 있는 모든 활성 인스턴스의 수를 얻을 수 있습니다. 여기에는 코드를 실행하는 인스턴스가 포함되지만 <a href="Deactivating_Instances/Deactivating_Instances.htm">인스턴스 비활성화</a> 기능을 사용하여 비활성화된 인스턴스는 포함되지 <i>않습니다</i>. 이 변수는 단계 <i>시작</i> 시에만 인스턴스 수를 제공하므로 단계가 시작된 후 방의 인스턴스에 대한 변경 사항은 고려되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">instance_count;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (instance_count &lt; 100)<br />
     {<br />
         var dif = 100 - instance_count;<br />

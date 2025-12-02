@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>date_set_timezone</h1>
+  <h1><span data-field="title" data-format="default">date_set_timezone</span></h1>
   <p> 나머지 모든 날짜 및 시간 기능에 사용할 기준 시간대를 설정합니다. 이 시간대는 <i>로컬</i> (시스템에서 설정한 대로) 또는 <i>UTC</i> 일 수 있으며 다음 상수 중 하나를 사용하여 사용 중인 것을 정의합니다(기본적으로 현지 시간).</p><table><tbody><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">timezone_local</span></span></td><td> 시스템에서 설정한 현지 시간대 사용</td></tr><tr><td><span class="notranslate"><span class="inline">timezone_utc</span></span></td><td> 협정 세계시 사용</td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">date_set_timezone(timezone);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">timezone</span></td><td> <span data-keyref="Type_Constant_TimeZone">시간대 상수</span></td><td> <span class="notranslate">The time zone to use for the base time.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (date_get_timezone() != timezone_utc)<br />
     {<br />
         date_set_timezone(timezone_utc);<br />

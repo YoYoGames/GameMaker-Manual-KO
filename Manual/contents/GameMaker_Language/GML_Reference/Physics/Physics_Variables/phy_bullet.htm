@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>phy_bullet</h1>
+  <h1><span data-field="title" data-format="default">phy_bullet</span></h1>
   <p> 이 변수는 인스턴스가 매우 빠르게 움직이는지 여부를 정의합니다(예: 총알). 기본값은 <span class="inline">false</span> 하지만 로 설정하면 <span class="inline">true</span> 이것은 인스턴스가 감지되지 않은 상태로 다른 인스턴스를 통과하지 않도록 하기 위해 더 비싼 충돌 감지가 필요할 정도로 빠른 속도로 인스턴스가 이동할 <span data-keyref="GameMaker Name">것임을 GameMaker</span> 에 알려줍니다.</p><p></p><h4> 통사론:</h4><p class="code">phy_bullet;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span> (or <span class="inline">undefined</span> if the instance is not physics enabled)</p><p></p><h4> 예시:</h4><p class="code">with (instance_create_layer(x, y, &quot;Bullets&quot;, obj_Shoot))<br />
     {<br />
         phy_bullet = true;<br />

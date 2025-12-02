@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_light_enable</h1>
+  <h1><span data-field="title" data-format="default">draw_light_enable</span></h1>
   <p> 이 기능은 정의된 조명을 활성화하는 데 사용됩니다. 위치 조명이나 방향 조명을 정의할 때 인덱스 번호를 할당해야 하며 이 번호는 조명을 켜거나 끄기 위해 이 기능에서 사용합니다. 기본값은 비활성화되어 있습니다(<span class="inline">false</span> ).</p><p class="note"> <b>참고</b>: 하드웨어 조명은 8개만 사용할 수 있으므로 정의된 조명은 한 번에 8개만 활성화할 수 있습니다(더 많은 것을 정의할 수 있음).</p><p></p><h4> 통사론:</h4><p class="code">draw_light_enable(ind, enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The index number of the light (from 0 to 7)</span></td></tr><tr><td> <span class="notranslate">enable</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Enable or disable all lighting (<span class="inline">true</span> or <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">draw_set_lighting(true);<br />
     draw_light_define_direction(1, 0, 1, 0, c_white);<br />
     draw_light_enable(1, true);</p><p> 위의 코드는 전체 장면에 대한 조명을 활성화한 다음 방 공간에 흰색 방향 조명을 정의한 다음 마지막으로 해당 조명을 켭니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Lighting.htm">조명</a></div><div style="float:right"> 다음: <a href="draw_set_lighting.htm"><span class="notranslate">draw_set_lighting</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

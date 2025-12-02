@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_destroy</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_destroy</span></h1>
   <p> 이 함수를 사용하여 표시된 mp_grid를 파괴할 수 있습니다(함수에 의해 정의됨<a href="mp_grid_create.htm"><span class="inline">mp_grid_create()</span></a> ) 할당된 메모리를 해제합니다. MP 그리드가 끝날 때마다 이것을 호출하는 것이 <i>중요</i> 합니다. 그렇지 않으면 잠재적으로 메모리 누수가 발생할 수 있습니다. 즉, 시간이 지남에 따라 게임이 느려지고 결국에는 충돌합니다.</p><p class="note"> <b>참고</b>: 사용 <span class="inline">mp_grid_*</span> 그리드의 함수는 파괴된 후 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">mp_grid_destroy(id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_MP_Grid">MP 그리드 ID</span></td><td> <span class="notranslate">Index of the mp_grid that is to be destroyed</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if timer = 0<br />
     {<br />
         mp_grid_destroy(grid);<br />

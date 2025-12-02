@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_goto</h1>
+  <h1><span data-field="title" data-format="default">room_goto</span></h1>
   <p> 이 기능을 사용하면 코드를 사용하여 생성하든 자산 브라우저에서 생성하든 게임 프로젝트의 모든 방으로 이동할 수 있습니다. 방 인덱스(방 이름에 대한 변수에 저장되거나 함수에서 반환된 변수로 저장됨)를 제공합니다.<a href="room_add.htm"><span class="inline">room_add()</span></a> ). 방은 함수가 호출된 이벤트가 끝날 때까지 변경되지 않으므로 이 함수가 호출된 후의 코드는 동일한 이벤트에 있는 경우 계속 실행됩니다. 이 기능은 또한 <b>Room End</b> 이벤트를 트리거합니다. </p><div data-conref="../../../../assets/snippets/changing_room_stops_instance_creation.hts"></div><p class="note"> <span class="note">참고</span> 방 ID는 자산 브라우저 또는 방 관리자의 순서를 기반으로 하지 않으므로 숫자 값을 직접 제공하지 않아야 합니다. 대신 참조하려는 자산(단순히 이름)에 대해 방 <a class="glossterm" data-glossterm="일정한" href="#">상수</a> 를 사용하거나 함수를 통해 검색하세요.</p><h4> 통사론:</h4><p class="code">room_goto(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Room"></span></td><td> <span class="notranslate">The index of the room to go to.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">switch (global.level)<br />
     {<br />
         case 0: room_goto(rm_level1); break;<br />

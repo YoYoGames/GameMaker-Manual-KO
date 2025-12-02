@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_delete</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_delete</span></h1>
   <p> 물리적 표현이 있는 두 개의 인스턴스가 관절로 바인딩되면 언제든지 다시 삭제할 수 있습니다. 일반적으로 이것은 두 인스턴스 중 하나가 파괴되거나 방이 종료될 때 자동으로 발생하지만 수동으로 수행하려는 경우가 있습니다. 이러한 경우 이 기능을 사용합니다.</p><p> 또한 <a href="physics_joint_gear_create.htm">기어 조인트</a> 의 일부인 인스턴스가 파괴될 때마다 기어 형성과 관련된 인스턴스 <i>보다 먼저</i> 이 기능을 사용하여 기어 조인트를 삭제해야 합니다(나머지 조인트는 자동으로 삭제됨). 인스턴스의 파괴 이벤트의 예.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_delete(joint)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">joint</span></td><td> <span data-keyref="Type_ID_Physics_Joint">물리 조인트 ID</span></td><td> <span class="notranslate">The index of the joint that you wish to delete</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var reactionForceX, reactionForceY, reactionForce;<br />
     if shipJoint<br />
     {<br />

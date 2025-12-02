@@ -16,7 +16,7 @@
 
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>date_compare_time</h1>
+  <h1><span data-field="title" data-format="default">date_compare_time</span></h1>
   <p> 이 기능을 사용하면 두 날짜와 시간을 확인하여 어느 것이 다른 것보다 빠르거나 늦은 시간 구성 요소를 가지고 있는지 확인할 수 있습니다. 이 함수는 datetime1이 더 빠르면 -1을 반환하고 datetime1이 나중이면 1을 반환하고 같으면 0을 반환하고 날짜를 무시하므로 문자 그대로 주어진 날짜에서 더 먼 시간이 표시됩니다.</p><p></p><h4> 통사론:</h4><p class="code">date_compare_time(datetime1, datetime2);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">datetime1</span></td><td><span data-keyref="Type_Real_Datetime"></span></td><td> <span class="notranslate">The first datetime.</span></td></tr><tr><td> <span class="notranslate">datetime2</span></td><td><span data-keyref="Type_Real_Datetime"></span></td><td> <span class="notranslate">The datetime to compare the first one to.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">d = date_compare_time(date_create_datetime( 2011, 9, 15, 11, 4, 0 ), date_current_datetime());</p><p> 이것은 &quot;d&quot;를 가장 빠른 시간에 따라 해당 값으로 설정합니다. 기본적으로 현재 시간이 오전 11시 4분 이후이면 1을 반환하고, 이전이면 -1을 반환합니다. 시간이 11:04이면 0을 반환합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Date_And_Time.htm">날짜 및 시간</a></div><div style="float:right"> 다음: <a href="date_valid_datetime.htm"><span class="notranslate">date_valid_datetime</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS

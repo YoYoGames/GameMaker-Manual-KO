@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_particles_clear</h1>
+  <h1><span data-field="title" data-format="default">part_particles_clear</span></h1>
   <p> 이 기능을 사용하면 시스템에서 현재 생성된 모든 입자를 방에서 지울 수 있습니다. 입자 유형 자체를 재설정하거나 제거하지 <i>않고</i> 시각적 표현만 제거합니다. 이미터에서 입자를 스트리밍하는 개체가 있는 경우 이러한 입자는 사라지지만 이 코드를 호출한 후 다음 단계에서 다시 나타나기 시작합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_particles_clear(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (lives &lt;= 0)<br />
     {<br />
         part_particles_clear(global.Sname);<br />

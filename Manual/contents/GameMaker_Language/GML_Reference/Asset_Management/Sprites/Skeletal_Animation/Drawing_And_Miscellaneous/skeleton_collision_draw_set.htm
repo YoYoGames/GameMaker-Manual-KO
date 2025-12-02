@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_collision_draw_set</h1>
+  <h1><span data-field="title" data-format="default">skeleton_collision_draw_set</span></h1>
   <p> 이 기능을 사용하면 (<span class="inline">true</span> ) 또는 끄기(<span class="inline">false</span> ) 인스턴스에서 사용 중인 현재 스켈레탈 애니메이션 스프라이트에 대한 충돌 데이터를 그립니다. 이것이 켜져 있으면 경계 상자와 정확한 충돌 마스크가 스프라이트 주변의 윤곽선으로 그려집니다.</p><p> 이 기능은 스켈레탈 스프라이트 그리기가 객체에 의해 처리될 때만 작동합니다. 스켈레탈 스프라이트를 수동으로 그릴 때 충돌 경계 상자를 그리려면 다음을 사용하십시오. <span class="inline"><a href="draw_skeleton_collision.htm">draw_skeleton_collision()</a></span>. </p><div data-conref="../../../../../../assets/snippets/Spine_bounding_box_note.hts"></div><p></p><h4> 통사론:</h4><p class="code">skeleton_collision_draw_set(flag);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">flag</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Set to <span class="inline">true</span> to turn on drawing, and <span class="inline">false</span> to turn it off.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if debug_mode == true<br />
     {<br />
         skeleton_collision_draw_set(true);<br />

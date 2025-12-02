@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_sort</h1>
+  <h1><span data-field="title" data-format="default">ds_list_sort</span></h1>
   <p> 이 기능을 사용하면 목록 내의 모든 값을 오름차순 또는 내림차순으로 정렬할 수 있습니다. 목록에 문자열이 포함된 경우 영어 26자 알파벳을 기준으로 알파벳순으로 정렬됩니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_list_sort(id, ascend);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td><td> <span class="notranslate">The id of the list to sort.</span></td></tr><tr><td> <span class="notranslate">ascend</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Whether the values should be ascending (<span class="inline">true</span> ) or descending (<span class="inline">false</span> ) order.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if newgame<br />
     {<br />
         ds_list_sort(name_list, true);<br />

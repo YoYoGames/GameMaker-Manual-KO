@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ini_key_exists</h1>
+  <h1><span data-field="title" data-format="default">ini_key_exists</span></h1>
   <p> 이 함수는 현재 열려 있는 ini에 키가 있는지 확인하고 다음을 반환합니다. <span class="inline">true</span> 그것이 하는 경우 또는 <span class="inline">false</span> 그렇지 않으면. 키가 존재하지 않는 경우 존재하지 않는 키를 읽으면 기본값이 반환되므로 오류를 방지하기 위해 필요한 검사는 아닙니다. 그러나 ini 파일에 특정 데이터와 기타 몇 가지 사항이 저장되어 있는지 확인하는 것이 유용할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">ini_key_exists(section, key);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">section</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The section in the open.ini file to check a key in.</span></td></tr><tr><td> <span class="notranslate">key</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The key to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">ini_open(&quot;savedata.ini&quot;);<br />
     if !ini_key_exists(&quot;save1&quot;, &quot;name&quot;)<br />
     {<br />

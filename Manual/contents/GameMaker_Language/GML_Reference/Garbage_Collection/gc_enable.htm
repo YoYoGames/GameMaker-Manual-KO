@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gc_enable</h1>
+  <h1><span data-field="title" data-format="default">gc_enable</span></h1>
   <p> 이 기능을 사용하여 가비지 수집기를 활성화하거나 비활성화할 수 있습니다. 다음을 사용하여 함수 호출 <span class="inline">true</span> 인수가 그것을 가능하게하고 사용하기 때문에 <span class="inline">false</span> 비활성화합니다(권장하지 않음). 기본적으로 활성화되어 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">gc_enable(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">enable (<span class="inline">true</span> ) or disable (<span class="inline">false</span> ) the garbage collector.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (global.debug == true)<br />
     {<br />
         gc_enable(false);<br />

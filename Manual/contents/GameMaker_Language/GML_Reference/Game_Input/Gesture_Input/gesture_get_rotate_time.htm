@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gesture_get_rotate_time</h1>
+  <h1><span data-field="title" data-format="default">gesture_get_rotate_time</span></h1>
   <p> 이 함수는 <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">회전 시작 제스처</a> 가 트리거되기 위해 한 쌍의 터치가 일관된 방향으로 회전해야 하는 시간을 가져오는 데 사용됩니다. 시간은 초 단위로 측정되며 기본값은 0.16초입니다.</p><p class="note"> <b>중요한!</b> 현재 60fps 게임의 경우 최대 1초로만 설정할 수 있습니다. 그렇지 않으면 회전이 감지되지 않습니다. 예를 들어 30fps 게임의 최대 시간은 2초일 수 있습니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">gesture_get_rotate_time();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (inches)</p><p></p><h4> 예시:</h4><p class="code">if gesture_get_rotate_time() != 0.1<br />
     {<br />
         gesture_rotate_time(0.1);<br />

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gravity</h1>
+  <h1><span data-field="title" data-format="default">gravity</span></h1>
   <p><span class="inline">gravity</span> 모든 인스턴스가 가지고 있는 &quot;내장된&quot; 변수 중 하나이며, 설정되면 일정한 힘을 적용합니다.<a href="gravity_direction.htm"><span class="inline">gravity_direction</span></a> 두 인스턴스 모두에 영향을 미치는 인스턴스의 <span class="inline"><a href="speed.htm">speed</a> </span> 그리고 <span class="inline"><a href="direction.htm">direction</a></span>. 중력은 누적된 힘이며 최종 속도를 제한하지 않기로 선택하면 물체를 가속할 것이며 일반적으로 이 변수를 0.01과 같은 작은 소수 값으로 설정합니다. 설정하면 <span class="inline">gravity</span> 0으로 설정하면 인스턴스에 중력이 적용되지 않습니다(기본값).</p><p></p><h4> 통사론:</h4><p class="code">gravity;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if !place_meeting(x, y + 1, obj_Ground)<br />
     {<br />
         gravity = 0.01;<br />

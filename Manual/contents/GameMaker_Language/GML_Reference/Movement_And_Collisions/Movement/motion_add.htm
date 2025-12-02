@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>motion_add</h1>
+  <h1><span data-field="title" data-format="default">motion_add</span></h1>
   <p> 이 기능은 현재 <span class="inline"><a href="../../Asset_Management/Instances/Instance_Variables/direction.htm">direction</a></span> 그리고 <span class="inline"><a href="../../Asset_Management/Instances/Instance_Variables/speed.htm">speed</a></span> 코드를 실행하는 인스턴스의 현재 값에 새 값을 추가합니다. 단순히 이 값을 변경하려면 함수를 사용해야 합니다. <span class="inline"><a href="motion_set.htm">motion_set()</a></span>.</p><p></p><h4> 통사론:</h4><p class="code">motion_add(dir, speed);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">dir</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The added direction.</span></td></tr><tr><td> <span class="notranslate">speed</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The added speed.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var pdir;<br />
     pdir = point_direction(other.x, other.y, x, y);<br />
     motion_add(pdir, other.speed);<br />

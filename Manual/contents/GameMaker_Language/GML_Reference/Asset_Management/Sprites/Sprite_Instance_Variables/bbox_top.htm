@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bbox_top</h1>
+  <h1><span data-field="title" data-format="default">bbox_top</span></h1>
   <p> 이 <b>읽기 전용</b> 변수는 인스턴스에 대한 경계 상자 상단의 공간 내(y축을 따라) 위치를 반환합니다. 여기서 경계 상자는 인스턴스에 대한 마스크의 최대 너비와 높이로 정의됩니다( 그만큼<span class="inline"><a href="sprite_index.htm">sprite_index</a></span> 또는 <span class="inline"><a href="mask_index.htm">mask_index</a></span> ). 스프라이트가 정확한 충돌 마스크를 가지고 있는 경우에도 경계 상자가 존재하고 특정 항목에 사용되므로 이 변수를 사용하여 찾을 수 있습니다. 인스턴스에 할당된 스프라이트가 없는 경우 반환된 값은 인스턴스 Y 위치와 동일합니다.</p><p></p><h4> 통사론:</h4><p class="code">bbox_top;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (integer)</p><p></p><h4> 예시:</h4><p class="code">if bbox_top &lt; 0<br />
     {<br />
         y = sprite_yoffset;<br />

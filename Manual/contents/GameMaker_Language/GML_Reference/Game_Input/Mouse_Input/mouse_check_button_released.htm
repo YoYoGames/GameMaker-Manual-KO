@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mouse_check_button_released</h1>
+  <h1><span data-field="title" data-format="default">mouse_check_button_released</span></h1>
   <p> 이 함수는 반환됩니다 <span class="inline">true</span> 확인 중인 마우스 버튼이 해제된 경우 또는 <span class="inline">false</span> 그렇지 않은 경우. 이 기능은 마우스 버튼을 놓았을 때 <i>한 번만</i> 트리거되며 다시 트리거하려면 버튼을 다시 눌렀다 떼야 합니다. 다음 상수 중 하나에서 확인할 마우스 버튼을 제공합니다.</p><div data-conref="../../../../assets/snippets/Mouse_input_constants.hts"></div><h4> 통사론:</h4><p class="code">mouse_check_button_released(numb);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">numb</span></td><td> <span data-keyref="Type_Constant_Mouse_Button">마우스 버튼 상수</span></td><td> <span class="notranslate">Which mouse button constant to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_released(mb_right)<br />
     {<br />
         speed = point_distance(x, y, mouse_x, mouse_y) / 10;<br />

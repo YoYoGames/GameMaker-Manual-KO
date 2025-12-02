@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texfilter_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texfilter_ext</span></h1>
   <p> 이 기능은 <span data-keyref="GameMaker Name">GameMaker</span> 에서 <a href="../../Asset_Management/Shaders/Shaders.htm">셰이더</a> 를 사용할 때 단일 샘플러 &quot;슬롯&quot;에 대한 선형 보간을 설정하는 데 사용할 수 있습니다. 이것이 활성화되면(<span class="inline">true</span> ) 샘플러 텍스처가 부드러워지고 이것이 비활성화된 경우(<span class="inline">false</span> ) 그러면 가장 가까운 픽셀을 기준으로 이미지가 그려집니다. 기본값은 게임의 <b>전역 게임 옵션</b> 에서 설정하거나 함수를 사용하여 설정하는 것입니다.<a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>.</p><p class="note"> <b>참고</b>: 이 설정은 함수를 호출할 때 설정된 값으로 무시됩니다.<a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>.</p><p class="note"> <b>참고</b>: HTML5 대상에서 이 기능은 WebGL이 활성화된 상태에서만 작동합니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_texfilter_ext(sampler_id, enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sampler_id</span></td><td><span data-keyref="Type_Handle_Shader_Sampler"></span></td><td> <span class="notranslate">The sampler id from the shader.</span></td></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">var s_tex = shader_get_sampler_index(shader_glass, &quot;s_NoiseSampler&quot;);<br />
     if gpu_get_texfilter_ext(s_tex)<br />
     {<br />

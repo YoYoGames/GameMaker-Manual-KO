@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>move_contact_solid</h1>
+  <h1><span data-field="title" data-format="default">move_contact_solid</span></h1>
   <p> 이 함수는 true로 플래그가 지정된 <a href="../../Asset_Management/Instances/Instance_Variables/solid.htm"><b>솔리드</b></a> 가 있는 인스턴스를 만날 때까지 지정된 방향으로 지정된 픽셀 수만큼 코드를 실행하는 인스턴스를 이동합니다. maxdist가 기본 1000픽셀인 경우 -1 또는 0을 사용할 수 있습니다. 즉, <span data-keyref="GameMaker Name">GameMaker</span> 는 충돌에서 벗어날 때까지 인스턴스를 계속해서 1000픽셀 위로 이동합니다.</p><p></p><h4> 통사론:</h4><p class="code">move_contact_solid( dir, maxdist );</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">dir</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The direction to move in.</span></td></tr><tr><td> <span class="notranslate">maxdist</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The maximum distance the object can travel (-1 or 0 a default value of 1000 pixels).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if !place_meeting(x, y + 1, obj_Floor)<br />
     {<br />
         move_contact_solid(270, -1);<br />

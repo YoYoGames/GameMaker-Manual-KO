@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_save_strip</h1>
+  <h1><span data-field="title" data-format="default">sprite_save_strip</span></h1>
   <p> 이 기능은 스프라이트의 모든 하위 이미지에서 스트립 이미지를 만들어 지정된 파일 이름으로 디스크에 저장합니다. 스프라이트는 런타임에 <a href="sprite_add.htm">추가</a> 되어야 하며(IDE를 통해 추가된 스프라이트는 저장할 수 없음) 파일은 <span class="inline">*.png</span> 확대.</p><p class="note"> <b>참고</b>: 선택한 대상 플랫폼에 따라 파일을 저장하고 로드할 수 있는 위치가 제한됩니다. 자세한 내용은 <a href="../../../../../Additional_Information/The_File_System.htm">파일 처리</a> 를 참조하십시오.</p><p></p><h4> 통사론:</h4><p class="code">sprite_save_strip(ind, filename);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_Asset_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The index of the sprite to save.</span></td></tr><tr><td> <span class="notranslate">filename</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The filename for the saved sprite strip.</span></td></tr></tbody></table><p></p><h4> 보고</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var spr, i;<br />
     spr = sprite_create_from_surface(0, 0, 32, 32, true, true, 16, 16);<br />
     <br />

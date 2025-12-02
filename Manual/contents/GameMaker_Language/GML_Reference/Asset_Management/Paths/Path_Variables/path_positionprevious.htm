@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_positionprevious</h1>
+  <h1><span data-field="title" data-format="default">path_positionprevious</span></h1>
   <p> 이 변수는 이전 단계에서 현재 경로를 따라 인스턴스의 위치를 가져오거나 설정하는 데 사용할 수 있으며 0과 1 사이의 정규화된 값입니다. 즉, 0은 경로의 시작 위치이고 1은 끝 위치입니다.. 와 비슷하다<a href="../../Instances/Instance_Variables/xprevious.htm"><span class="inline">xprevious</span></a> 그리고<a href="../../Instances/Instance_Variables/yprevious.htm"><span class="inline">yprevious</span></a> 작동 방식의 변수이며 경로에만 해당됩니다. 방해가 되는 경우 경로 추적기를 일시적으로 중지하는 것과 같은 작업에 유용할 수 있습니다(아래 예제 코드 참조).</p><p></p><h4> 통사론:</h4><p class="code">path_positionprevious;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var _x = x + lengthdir_x(16, direction);<br />
     var _y = y + lengthdir_y(16, direction);<br />
     if (collision_circle(_x, _y, 16, obj_player, false, true))<br />

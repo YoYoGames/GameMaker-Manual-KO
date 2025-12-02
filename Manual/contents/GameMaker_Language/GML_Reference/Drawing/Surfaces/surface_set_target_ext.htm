@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_set_target_ext</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target_ext</span></h1>
   <p> 이 기능은 <a href="../../Asset_Management/Shaders/Shaders.htm">셰이더 기능</a> 과 함께 사용하기 위한 것으로 기본 수준 셰이더(DX9, DX11, OpenGL)에 대한 MRT(0 - 3)를 설정합니다.</p><p class="note"> <b>참고</b>: 표면으로 작업할 때 표면이 텍스처 메모리에 저장되어 있기 때문에 언제든지 존재하지 않을 가능성이 있습니다. 다음을 사용하여 표면이 존재하는지 <b>항상</b> 확인해야 합니다.<span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> 직접 참조하기 전에.</p><p></p><h4> 통사론:</h4><p class="code">surface_set_target_ext(index, surface_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The render target index to use (from 0 to 3).</span></td></tr><tr><td> <span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td><td> <span class="notranslate">The ID of the surface to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">surface_set_target_ext(0, surf);</p><p> 위의 코드는 렌더 타겟 0을 변수 &quot;surf&quot;에 색인된 표면 ID로 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="Surfaces.htm">표면</a></div><div style="float:right"> 다음: <a href="surface_get_target.htm"><span class="notranslate">surface_get_target</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS

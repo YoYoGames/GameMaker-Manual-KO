@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_min_mip_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_get_tex_min_mip_ext</span></h1>
   <p> 이 함수를 사용하면 주어진 셰이더 샘플러에 현재 사용되는 최소 밉맵 수준을 얻을 수 있습니다. 셰이더 샘플러에 대한 인덱스 값을 제공합니다(함수에서 반환된 <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>, 그리고 함수는 전체 해상도에 대해 0, 첫 번째 밉맵에 대해 1, 두 번째에 대해 2 등의 값을 반환합니다...</p><p></p><h4> 통사론:</h4><p class="code">gpu_get_tex_min_mip_ext(sampler_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sampler_index</span></td><td><span data-keyref="Type_Handle_Shader_Sampler"></span></td><td> <span class="notranslate">The index of the shader sampler to get</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (default: 0)</p><p></p><h4> 예시:</h4><p class="code">var _sampleIndex = shader_get_sampler_index(shd_Glass, &quot;s_Background&quot;);<br />
     var _spriteTex = sprite_get_texture(sprite_index, 0);<br />
     shader_set(shd_Glass);<br />

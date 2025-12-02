@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_set</h1>
+  <h1><span data-field="title" data-format="default">ds_list_set</span></h1>
   <p> 이 기능은 이전에 추가된 목록 항목을 설정하는 데 사용할 수 있습니다. 목록 ID(목록을 생성할 때 반환됨)와 목록 내에서 설정할 위치 및 설정할 값을 제공합니다. 설정 중인 항목이 목록의 범위를 벗어나면(즉, 목록 항목을 20으로 설정했지만 현재 목록에 10개의 항목만 포함된 경우) 목록은 지정된 위치로 채워지고 각 항목은 0으로 설정됩니다. 이 기능은 <a href="../../../GML_Overview/Accessors.htm">DS 목록 접근자를</a> 사용하는 것과 동일합니다.</p><p></p><p></p><h4> 통사론:</h4><p class="code">ds_list_set(id, pos, val);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td> <span data-keyref="Type_ID_DS_List">DS 목록 ID</span></td><td> <span class="notranslate">The id of the list to add to.</span></td></tr><tr><td> <span class="notranslate">pos</span></td><td> <span data-keyref="Type_Any">변하기 쉬운</span></td><td> <span class="notranslate">The position within the list to set.</span></td></tr><tr><td> <span class="notranslate">[val2,... max_val]</span></td><td> <span data-keyref="Type_Any">변하기 쉬운</span></td><td> <span class="notranslate">The value to set in the list.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">for (var i = 0; i &lt; ds_list_size(list); i++;)<br />
     {<br />
         ds_list_set(list, i, -1);<br />

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_endaction</h1>
+  <h1><span data-field="title" data-format="default">path_endaction</span></h1>
   <p> 이 변수는 현재 경로의 끝에 도달했을 때 인스턴스의 반응을 가져오거나 변경하는 데 사용할 수 있습니다. 일반적으로 다음을 사용하여 경로를 시작할 때 설정합니다.<a href="../path_start.htm"><span class="inline">path_start()</span></a> 그러나 게임의 이벤트 수에 따라 이 동작을 변경할 수 있습니다. 사용 가능한 값은 다음 상수를 사용하여 표현됩니다.</p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_Path_End_Action"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Paths/Path_Variables/path_endaction.htm">경로 종료 동작 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">path_action_stop</span></span></td><td> 경로를 중지</td></tr><tr><td><span class="notranslate"><span class="inline">path_action_restart</span></span></td><td> 시작 위치에서 계속 진행, 경로가 닫히지 않은 경우 시작 지점으로 점프</td></tr><tr><td><span class="notranslate"><span class="inline">path_action_continue</span></span></td><td> 현재 위치에서 다시 경로 시작</td></tr><tr><td><span class="notranslate"><span class="inline">path_action_reverse</span></span></td><td> 경로의 속도를 반대로 합니다(경로를 반대로 실행).</td></tr></tbody></table><p></p><h4> 통사론:</h4><p class="code">path_endaction;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Constant_Path_End_Action"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Paths/Path_Variables/path_endaction.htm">Path End Action Constant</a></span></p><p></p><h4> 예시:</h4><p class="code">if (path_endaction == path_action_stop)<br />
     {<br />
         path_endaction = path_action_reverse;<br />

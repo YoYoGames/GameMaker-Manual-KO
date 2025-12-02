@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_reset_target</h1>
+  <h1><span data-field="title" data-format="default">surface_reset_target</span></h1>
   <p> 이 기능을 사용하면 대상 표면에서 화면으로 다시 모든 드로잉을 재설정합니다. 표면에 그리기를 시작하려면 먼저 함수를 호출해야 합니다.<a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a> 그리고 완료한 후 이것은 <i>설정한 각 표면 대상에 대해</i> 다른 모든 경우에도 표면에서 수행되므로 화면에 아무 것도 그려지지 않습니다. 또한 인스턴스의 그리기 이벤트에서 표면 자체가 화면에 그려지지 않으면 아무 것도 표시되지 않는다는 것을 알아야 합니다.</p><p class="note"> <b>참고</b>: 이전에 함수로 렌더 대상을 설정하지 않은 경우 <span style="font-size:1px;"><a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a></span>, 이 함수를 사용하면 이벤트에 대한 모든 추가 코드 실행이 자동으로(즉, 오류 메시지 없이) 종료됩니다.</p><p></p><h4> 통사론:</h4><p class="code">surface_reset_target();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if view_current = 0<br />
     {<br />
         surface_set_target(surf);<br />

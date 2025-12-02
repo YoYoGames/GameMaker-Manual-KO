@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_pause_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_pause_sync_group</span></h1>
   <p> 그의 함수는 재생 중인 경우 주어진 동기화 그룹을 일시 중지합니다. 그룹 인덱스는 함수를 사용하여 그룹을 생성할 때 반환된 값입니다.<a href="audio_create_sync_group.htm"><span class="inline">audio_create_sync_group()</span></a>. 이것은 소리를 멈추지 않고 호출합니다.<a href="audio_resume_sync_group.htm"><span class="inline">audio_resume_sync_group()</span></a>, 일시 중지된 위치에서 다시 재생을 시작합니다.</p><p class="note"> <b>참고</b>: 이 기능은 HTML5 대상 플랫폼에서 사용할 수 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_pause_sync_group(group_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">group_index</span></td><td> <span data-keyref="Type_ID_Audio_Sync_Group">오디오 동기화 그룹 ID</span></td><td> <span class="notranslate">The group index to pause.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (keyboard_check_pressed((ord)&quot;P&quot;))<br />
     {<br />
         global.Pause = !global.Pause<br />

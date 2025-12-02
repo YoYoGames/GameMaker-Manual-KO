@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_hat_value</h1>
+  <h1><span data-field="title" data-format="default">gamepad_hat_value</span></h1>
   <p> 이 기능을 사용하면 게임패드 &quot;모자&quot;의 현재 값을 얻을 수 있습니다. 각 모자 값은 다음과 같은 다른 방향에 대한 비트 마스크입니다.</p><ul class="colour"><li> 위로 = 1</li><li> 오른쪽 = 2</li><li> 아래로 = 4</li><li> 왼쪽 = 8</li></ul><p> 이것들은 결합될 수 있지만(예를 들어, 3의 모자 인덱스를 제공하는 것은 확인 및 오른쪽일 것입니다. 또는 <span class="inline2">|</span> 연산자를 사용하여 다양한 값을 결합할 수 있음) 한 번에 최대 2비트만 누를 수 있습니다. 이 함수는 0과 1 사이의 실제 값을 반환합니다. 여기서 0은 누르지 않고 1은 완전히 누릅니다(게임패드가 모자에 대한 아날로그 입력을 지원하는지 여부에 따라 그 사이에 값이 있을 수 있음).</p><p></p><h4> 통사론:</h4><p class="code">gamepad_hat_value(device, hatindex);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td></tr><tr><td> <span class="notranslate">hatindex</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">Which gamepad hat (or hats) to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">var _dir = gamepad_hat_value(global.PadIndex, 0);<br />
     switch (_dir)<br />
     {<br />

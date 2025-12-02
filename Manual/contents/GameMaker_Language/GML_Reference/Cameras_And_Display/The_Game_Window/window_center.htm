@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_center</h1>
+  <h1><span data-field="title" data-format="default">window_center</span></h1>
   <p> 이 기능을 사용하면 대상 모듈이 Windows, Ubuntu(Linux) 또는 macOS인 경우 디스플레이의 중앙에 게임 창을 표시하거나 대상 모듈이 HTML5인 경우 브라우저의 중앙에 배치할 수 있습니다. 이 기능은 다른 장치에는 영향을 미치지 않습니다.</p><p class="note"> <span class="note"><b>참고</b></span> 현재 단계에서 게임 창의 크기를 조정한 경우(예: 전체 화면에서 창으로 전환하거나 <span class="inline"><a href="window_set_size.htm">window_set_size()</a></span> ), 새 창을 가운데에 맞추려면 이 함수를 적어도 한 단계 후에 호출해야 합니다(예: <a href="../../Asset_Management/Instances/Instance_Variables/alarm.htm"><span class="notranslate">alarm</span></a> 사용). 그렇지 않으면 올바르게 작동하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">window_center();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if !window_get_fullscreen()<br />
     {<br />
         window_center();<br />

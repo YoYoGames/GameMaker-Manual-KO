@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_get_address</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_address</span></h1>
   <p> 이 함수를 사용하면 <i>정렬된</i> 원시 버퍼 주소에 대한 <i>포인터</i> 를 얻을 수 있습니다. 이 값을 확장에 전달하여 버퍼 데이터에 액세스할 수 있도록 하기 때문에 이것은 주로 확장과 함께 사용하기 위한 것입니다. 확장 프로그램에서 액세스할 때 버퍼로 할 수 없는 몇 가지 사항이 있습니다.</p><ul class="colour"><li> 메모리를 해제할 수 없습니다.</li><li> 메모리 크기를 조정할 수 없습니다.</li><li> 버퍼 주소에 버퍼 크기를 더한 값을 초과하여 쓸 수 없습니다.<a href="buffer_get_size.htm"><span class="inline">buffer_get_size()</span></a> 기능) 또는 범위를 벗어난 오류가 발생합니다.</li></ul><p></p><h4> 통사론:</h4><p class="code">buffer_get_address(buffer);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td><td> <span class="notranslate">The index of the buffer to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Pointer"></span></p><p></p><h4> 예시:</h4><p class="code">var b_address = buffer_get_address(buff_model);<br/> var b_end_address = b_address + buffer_get_size(buff_model);</p><p> 위의 코드는 &quot;buff_model&quot; 변수에 색인된 버퍼의 메모리 주소를 가져온 다음 다음을 사용하여 버퍼 끝의 메모리 주소를 가져옵니다. <span class="inline">buffer_get_size()</span> 추가 사용을 위해 두 값을 모두 지역 변수에 저장합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Buffers.htm">버퍼</a></div><div style="float:right"> 다음: <a href="buffer_get_size.htm"><span class="notranslate">buffer_get_size</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS

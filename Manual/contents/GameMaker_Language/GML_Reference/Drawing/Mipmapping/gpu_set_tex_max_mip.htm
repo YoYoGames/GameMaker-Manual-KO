@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_tex_max_mip</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_tex_max_mip</span></h1>
   <p> 이 기능을 사용하면 현재 설정된 최대 밉맵 수준을 설정할 수 있습니다. 여기서 값 0은 가장 높은 해상도, 1은 첫 번째 밉맵, 2는 두 번째 등... 텍스처를 렌더링할 때 블리딩 아티팩트를 피하는 데 유용합니다. 예를 들어 텍스처 페이지 테두리를 8px로 설정한 다음 최대 밉맵 수준을 3으로 설정하면 더 먼 렌더링 거리에서 블리딩 문제가 발생하지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_tex_max_mip(maxmip);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">maxmip</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The maximum mipmap level (default: 16)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if gpu_get_tex_max_mip() != 4<br />
     {<br />
         gpu_set_tex_max_mip(4);<br />

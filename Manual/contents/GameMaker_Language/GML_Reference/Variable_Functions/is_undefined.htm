@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>is_undefined</h1>
+  <h1><span data-field="title" data-format="default">is_undefined</span></h1>
   <p> 이 함수는 주어진 변수가 정의되었는지 여부를 반환합니다. 어떤 경우에는 <span data-keyref="GameMaker Name">GameMaker</span> 에서 변수가 보유하는 데이터 유형을 확인하고 확인하고 싶을 때 이 기능을 사용합니다. 그것은 반환 <span class="inline">true</span> 또는 <span class="inline">false</span> 값이 정의되었는지 여부에 따라 다릅니다.<b></b></p><p class="note"> <b>참고</b>: 이 함수는 변수의 존재를 확인하는 데 사용할 <b>수 없습니다</b>. 사용<span style="font-size:1px;"><a href="variable_instance_exists.htm"><span class="inline">variable_instance_exists()</span></a></span> 또는 <span style="font-size:1px;"><a href="variable_global_exists.htm"><span class="inline">variable_global_exists()</span></a></span> 대신에.</p><p></p><h4> 통사론:</h4><p class="code">is_undefined(n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Any">변하기 쉬운</span></td><td> <span class="notranslate">The argument to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> <b>예시:</b></h4><p class="code">var val = ds_map_find_value(map, 13);<br />
     if is_undefined(val)<br />
     {<br />

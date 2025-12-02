@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_particles_create</h1>
+  <h1><span data-field="title" data-format="default">part_particles_create</span></h1>
   <p> 이 기능은 <a href="../Particle_Emitters/Particle_Emitters.htm">입자 이미터</a> 가 제공하는 기능이 필요하지 않은 효과에 이상적입니다(예: 미사일에서 연기 생성 또는 간단한 폭발 효과). 게임룸. 이 기능을 사용하려면 이전에 입자 시스템과 입자 유형을 생성해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_particles_create(ind, x, y, parttype, number);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system.</span></td></tr><tr><td> <span class="notranslate">x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The x coordinate of where to create the particles.</span></td></tr><tr><td> <span class="notranslate">y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The y coordinate of where to create the particles.</span></td></tr><tr><td> <span class="notranslate">parttype</span></td><td> <span data-keyref="Type_ID_PartType">입자 유형 ID</span></td><td> <span class="notranslate">The index (type) of the particles to be created.</span></td></tr><tr><td> <span class="notranslate">number</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The number of particles to create.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button(mb_left)<br />
     {<br />
         part_particles_create(sname, mouse_x, mouse_y, p_CursorEffect, 5);<br />

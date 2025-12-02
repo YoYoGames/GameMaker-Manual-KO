@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_view_angle</h1>
+  <h1><span data-field="title" data-format="default">camera_set_view_angle</span></h1>
   <p> 이 기능을 사용하여 방 내 뷰 카메라의 각도를 업데이트할 수 있습니다. 고유한 카메라 ID 값을 제공합니다(다른<a href="camera_create.htm"><span class="inline">camera_create()</span></a> 기능)을 선택한 다음 카메라 보기를 설정하려는 각도를 지정합니다. 기본값은 0°이고 양수 값은 카메라 <b>를 시계 반대 방향으로</b> 회전합니다. 즉, 값을 90으로 설정하면 카메라가 왼쪽으로 90° 회전합니다.</p><p></p><h4> 통사론:</h4><p class="code">camera_set_view_angle(camera_id, angle)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td><span data-keyref="Type_ID_Camera"></span></td><td> <span class="notranslate">The unique camera ID value returned when you created the camera</span></td></tr><tr><td> <span class="notranslate">angle</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new angle to set the camera view to</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">camera_set_view_angle(view_camera[0], point_direction(x, y, mouse_x, mouse_y));</p><p> 위의 코드는 뷰 포트[0]에 할당된 카메라의 뷰 카메라 각도를 설정합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Cameras_And_View_Ports.htm">카메라 및 뷰 포트</a></div><div style="float:right"> 다음: <a href="camera_set_view_target.htm"><span class="notranslate">camera_set_view_target</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_force_draw_depth</h1>
+  <h1><span data-field="title" data-format="default">layer_force_draw_depth</span></h1>
   <p> 이 함수는 <i>모든</i> 레이어가 지정된 z 깊이로 그려지도록 합니다. 이것은 <b>레이어가 렌더링되는 순서를 변경하지 않으며</b> 여전히 깊이 순서로 그려지며 사용되는 z 값만 변경합니다. 일반적으로 이것에 대해 걱정할 필요가 없지만 법적 범위(-16000 ~ 16000)를 벗어난 깊이가 있는 레이어가 있는 경우 렌더링되지 않으므로 Z 깊이를 합리적인 값으로 강제할 수 있습니다. - 예를 들어 0 - 모두 잘 렌더링됩니다. 이것은 일반적으로 허용된 레이어 범위보다 높거나 낮은 그리기 깊이를 가질 수 있는 이전 버전의 <i>GameMaker</i> 에서 레거시 프로젝트와 함께 사용하기 위한 것입니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_force_draw_depth(force, depth)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">force</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether to enable (set to <span class="inline">true</span> or disable (set to <span class="inline">false</span> ) Z depth forcing</span></td></tr><tr><td> <span class="notranslate">depth</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new Z depth</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if !layer_is_draw_depth_forced()<br />
     {<br />
         layer_force_draw_depth(true, 0);<br />

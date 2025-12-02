@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_is_playable</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_is_playable</span></h1>
   <p> 이 기능은 주어진 사운드 인덱스를 현재 재생할 수 있는지 확인하는 데 사용할 수 있습니다. 이는 스트리밍 및 스트리밍되지 않은 사운드 재생이 <b>HTML5</b> 대상 플랫폼에서 처리되는 방식이 다르기 때문에 필요하며 반환됩니다. <span class="inline">true</span> 소리를 재생할 수 있는 경우 <span class="inline">false</span> 할 수 없다면. HTML5 이외의 다른 모든 플랫폼에서 함수는 항상 다음을 반환합니다. <span class="inline">true</span>.</p><p></p><h4> 통사론:</h4><p class="code">audio_sound_is_playable(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm" target="_blank">사운드 자산</a></span></td><td> <span class="notranslate">The index of the sound to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">if audio_sound_is_playable(snd_Shot)<br />
     {<br />
         audio_play_sound(snd_Shot, 10, false);<br />

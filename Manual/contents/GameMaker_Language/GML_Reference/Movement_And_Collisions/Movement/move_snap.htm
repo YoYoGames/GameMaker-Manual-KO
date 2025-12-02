@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>move_snap</h1>
+  <h1><span data-field="title" data-format="default">move_snap</span></h1>
   <p> 이 함수는 인스턴스를 주어진 크기의 그리드에 &quot;맞추기&quot;하는 데 사용됩니다. hsnap 및 vsnap 값이 정의하는 &quot;보이지 않는&quot; 그리드에서 가장 가까운 해당 위치로 스냅됩니다.</p><p></p><h4> 통사론:</h4><p class="code">move_snap(hsnap, vsnap);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">hsnap</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The horizontal snapping (the size in pixels between &#39;cells&#39;).</span></td></tr><tr><td> <span class="notranslate">vsnap</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The vertical snapping (the size in pixels between &#39;cells&#39;).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">with (obj_Pieces)<br />
     {<br />
         if (!place_snapped(32, 32)) <br />

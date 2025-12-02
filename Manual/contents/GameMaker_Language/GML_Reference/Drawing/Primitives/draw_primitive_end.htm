@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_primitive_end</h1>
+  <h1><span data-field="title" data-format="default">draw_primitive_end</span></h1>
   <p> 이 함수는 프리미티브의 포인트 정의를 마쳤을 때 호출되어야 합니다. 이 함수를 호출하지 않으면 <span data-keyref="GameMaker Name">GameMaker</span> 에 사용자가 완료했으며 이제 정의된 프리미티브를 그릴 수 있음을 효과적으로 알려주므로 <i>아무 것도 그려</i> 지지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">draw_primitive_end()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">draw_set_colour(c_white);<br/> var tex = sprite_get_texture(spr_Background, 0);<br/> draw_primitive_begin_texture(pr_trianglestrip, tex);<br/> draw_vertex_texture(0, 0, 0, 0);<br/> draw_vertex_texture(640, 0, 1, 0);<br/> draw_vertex_texture(0, 480,
     0, 1);<br/> draw_vertex_texture(640, 480, 1, 1);<br/> draw_primitive_end();
   </p><p> 위의 코드는 &quot;tex&quot; 변수에 있는 텍스처로 텍스처링된 4개의 꼭짓점 삼각형 스트립을 그립니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Primitives_And_Vertex_Formats.htm">기본체 및 정점 형식</a></div><div style="float:right"> 다음: <a href="draw_vertex.htm"><span class="notranslate">draw_vertex</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>

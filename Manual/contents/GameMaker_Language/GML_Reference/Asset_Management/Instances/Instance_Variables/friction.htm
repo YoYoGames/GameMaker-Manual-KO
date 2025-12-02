@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>friction</h1>
+  <h1><span data-field="title" data-format="default">friction</span></h1>
   <p><span class="inline">Friction</span> 인스턴스가 가질 수 있고 시간이 지남에 따라 인스턴스 속도를 늦추는 데 사용할 수 있는 &quot;내장된&quot; 속성 중 하나입니다.<a href="speed.htm"><span class="inline">speed</span></a> 는 0이 아닙니다. 객체의 속도가 0이 될 때까지 매 단계마다 속도에서 양을 빼면 간단히 작동하므로 마찰이 예를 들어 0.1로 설정되고 인스턴스의 속도가 1(단계당 1픽셀)이면 속도를 줄이고 10보를 지나면 정지합니다. 마찰은 양의 속도와 음의 속도에 동일하게 적용되며 최종 결과는 항상 주어진 시간 후에 물체의 속도가 0입니다.</p><p></p><h4> 통사론:</h4><p class="code">friction;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p><p></p><h4> 예시:</h4><p class="code">if abs(speed) &gt; 0<br />
     {<br />
         friction = 0.05;<br />

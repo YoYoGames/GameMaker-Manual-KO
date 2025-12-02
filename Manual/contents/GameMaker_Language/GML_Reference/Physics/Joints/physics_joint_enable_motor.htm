@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_enable_motor</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_enable_motor</span></h1>
   <p> 모터가 있는 관절( <a href="physics_joint_prismatic_create.htm">각기둥</a> 또는 <a href="physics_joint_revolute_create.htm">회전식</a> )이 있는 경우 게임 내의 변수 및 조건에 따라 모터를 켜거나 끌 수 있기를 원할 수 있습니다. 이를 위해 이전에 변수에 관절의 인덱스를 저장해야 하고 이 함수를 사용하고 &quot;motor&quot; 인수를 다음으로 설정하여 모터를 켜거나 끌 수 있습니다. <span class="inline">true</span> 또는 <span class="inline">false</span>.</p><p></p><h4> 통사론:</h4><p class="code">physics_joint_enable_motor(joint, motor)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">joint</span></td><td> <span data-keyref="Type_ID_Physics_Joint">물리 조인트 ID</span></td><td> <span class="notranslate">The joint that you wish to enable or disable the motor on</span></td></tr><tr><td> <span class="notranslate">motor</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Whether you wish to turn the motor on (true) or off (false)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var t_fix = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(t_fix, sprite_get_width(sprite_index) / 2);<br />
     <br />

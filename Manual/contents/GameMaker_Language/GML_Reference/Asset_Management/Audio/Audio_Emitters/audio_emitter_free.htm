@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_free</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_free</span></h1>
   <p> 이 기능을 사용하면 메모리에서 주어진 이미터를 제거할 수 있습니다. 이것은 이미터가 <a href="../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">방</a> 이나 게임에서 더 이상 사용되지 않을 때마다 항상 수행 <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">되어야</a> 합니다. 다운되어 결국 게임이 중단됩니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_emitter_free(emitter);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">emitter</span></td><td> <span data-keyref="Type_ID_Audio_Emitter">오디오 이미터 ID</span></td><td> <span class="notranslate">The index of the emitter to free.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if lives = 0<br />
     {<br />
         audio_emitter_free(s_emit);<br />

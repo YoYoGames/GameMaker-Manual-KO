@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_previous</h1>
+  <h1><span data-field="title" data-format="default">room_previous</span></h1>
   <p> 이 함수를 사용하면 함수에 방이 입력 <i>되기 전에</i> 방의 인덱스를 검색할 수 있습니다. 예를 들어 변수를 사용할 수 있습니다<a href="room.htm"><span class="inline">room</span></a> 현재 방의 인덱스를 가져온 다음 이 기능을 사용하여 <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a> 에 나열된 대로 그 앞에 오는 방을 찾습니다. 입력한 공간 이전에 공간이 없으면 -1이 반환됩니다. 이 기능은 다음을 사용하여 동적으로 추가된 회의실을 인식하거나 고려하지 않습니다.<span class="inline"><a href="room_add.htm">room_add()</a></span> 또는<span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p><p></p><h4> 통사론:</h4><p class="code">room_previous(numb);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">numb</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The index of the room to get the one before from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p><p></p><h4> 예시:</h4><p class="code">if room_previous(room) != -1<br />
     {<br />
         room_goto_previous();<br />

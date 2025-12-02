@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_destroy</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_destroy</span></h1>
   <p> 이 기능을 사용하면 시퀀스 요소를 제거(방에서 제거)할 수 있습니다. 다음에서 반환된 시퀀스 요소 ID를 제공합니다.<a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> 또는 <a href="../General_Layer_Functions/General_Layer_Functions.htm">레이어 요소 기능</a> 중 하나에 의해 시퀀스가 파괴됩니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_sequence_destroy(sequence_element_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td><span data-keyref="Type_ID_Element_Sequence"></span></td><td> <span class="notranslate">The unique ID value of the sequence element to target</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">var a = layer_get_all_elements(layer);<br />
     for (var i = 0; i &lt; array_length(a); i++;)<br />
     {<br />

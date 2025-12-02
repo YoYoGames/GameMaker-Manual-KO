@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_tex_mip_bias</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_tex_mip_bias</span></h1>
   <p> 이 기능을 사용하면 밉맵 바이어스 값을 설정할 수 있습니다. 여기서 값 0은 바이어스 없음, 1은 첫 번째 밉맵, 2는 두 번째 밉맵 등... 이것은 밉맵이 바뀌는 속도를 제어하며 일반적으로 렌더링된 텍스처는 값이 높을수록 더 흐릿해지고 표시되는 &quot;거리&quot;가 더 커집니다. 이 함수는 음수 값도 취할 수 있으며, 이 경우 렌더링된 텍스처는 값이 낮을수록 더 먼 거리에서 더 선명해집니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_tex_mip_bias(bias);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">bias</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The mipmap bias value to use (default: 0)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if gpu_get_tex_mip_bias() != 0<br />
     {<br />
         gpu_set_tex_mip_bias(0);<br />

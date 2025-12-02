@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>string_last_pos</h1>
+  <h1><span data-field="title" data-format="default">string_last_pos</span></h1>
   <p> 이 함수는 문자열 내에서 하위 문자열 인스턴스의 문자 위치를 반환하고 문자열의 끝에서 시작까지 검색합니다(따라서 역순<a href="string_pos.htm"><span class="inline">string_pos()</span></a>. 이 함수는 검색 문자열이 없으면 0을 반환하고 검색 문자열이 있는 경우 검색 문자열의 첫 번째 문자 위치를 반환합니다. 레거시 지원 문자열의 경우 1부터 인덱싱되므로 예상한 대로 0이 아니라 1이 문자열의 첫 번째 위치에 있다는 점을 염두에 두십시오.</p><p></p><h4> 통사론:</h4><p class="code">string_last_pos(substr, str);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">substr</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The substring to look for in the string.</span></td></tr><tr><td> <span class="notranslate">str</span></td><td><span data-keyref="Type_String"></span></td><td> <span class="notranslate">The string.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (string_last_pos(&quot;,&quot;, text) != 0)<br />
     {<br />
         string_insert(name, text, string_last_pos(&quot;,&quot;, text));<br />

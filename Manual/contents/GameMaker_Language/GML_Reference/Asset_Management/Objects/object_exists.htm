@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_exists</h1>
+  <h1><span data-field="title" data-format="default">object_exists</span></h1>
   <p> 이 함수는 지정된 값이 객체 자산인지 여부를 반환합니다(<span class="inline">true</span> ) 여부(<span class="inline">false</span> ). 이것은 개체가 실제로 게임룸이 아니라 자산 브라우저에 있는지 확인합니다. 그것을 위해 당신은 기능을 사용해야합니다<a href="../Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a>.</p><p></p><h4> 통사론:</h4><p class="code">object_exists(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">var object_id = buffer_read(net_buffer, buffer_u16);<br />
     var pos_x = buffer_read(net_buffer, buffer_u16);<br />
     var pos_y = buffer_read(net_buffer, buffer_u16);<br />

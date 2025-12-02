@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_get_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_get_track_position</span></h1>
   <p> 이 기능은 사운드가 재생될 사운드 파일 내의 위치(초)를 가져옵니다. 사운드는 사운드의 단일 인스턴스일 수 있습니다(재생되는 개별 사운드에 대한 인덱스는<a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> 또는<a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a> 기능).</p><p></p><h4> 통사론:</h4><p class="code">audio_sound_get_track_position(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_ID_Sound_Instance">사운드 인스턴스 ID</span></td><td> <span class="notranslate">The index of the sound to get the play position of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">if audio_sound_get_track_position(global.Music) != 0<br />
     {<br />
         audio_sound_set_track_position(global.Music, 0);<br />

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>device_get_tilt_y</h1>
+  <h1><span data-field="title" data-format="default">device_get_tilt_y</span></h1>
   <p> 이 함수는 장치의 &quot;기울기&quot; 각도에 따라 -1에서 1 사이의 값을 반환합니다. 기울기와 반환된 값 사이의 실제 상관 관계는 사용하는 장치 및 OS에 따라 다르지만 일반적으로 값 1 또는 -1은 +/-90°와 동일합니다. 아래 이미지는 사용 가능한 기능이 장치와 관련된 경우 각각을 보여줍니다.</p><p><img alt="Tilt X/Y/Z on mobile devices" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/Tilt_Image.png" /></p><h4> 통사론:</h4><p class="code">device_get_tilt_y()</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if display_get_orientation() = display_landscape<br />
     {<br />
         x += sign(device_get_tilt_y());<br />

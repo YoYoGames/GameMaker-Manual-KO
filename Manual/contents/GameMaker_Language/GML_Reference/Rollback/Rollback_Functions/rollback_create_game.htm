@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>롤백_만들기_게임</title>
+  <title>rollback_create_game</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
   <meta name="rh-index-keywords" content="롤백_만들기_게임" />
   <meta name="search-keywords" content="롤백_만들기_게임" />
 </head>
-<body><h1>롤백_만들기_게임</h1><p> 이 기능은 새로운 멀티플레이어 게임을 호스팅합니다. 게임을 시작하기 위해 연결해야 하는 플레이어의 수가 필요하며 선택적으로 <a data-xref="{text}" href="../Rollback_System.htm#h">동기화 테스트</a> 를 비활성화할 수 있습니다.</p><p> 동기화 테스트가 비활성화된 상태에서 호출되면 시스템은 게임을 <a href="../Rollback_Events.htm">시작</a> 하기 전에 <span class="inline">rollback_start_game()>num_players</span> 명의 플레이어가 참여할 때까지 기다립니다. 게임이 시작될 때까지 관리되는 인스턴스를 생성하거나 수정하지 마십시오.</p><p class="note"> <span class="tip">팁</span> 선택적으로 모든 플레이어가 참여하기 전에 게임을 강제로 시작하도록 할 수 있습니다.<a href="rollback_start_game.htm"><span class="inline">rollback_define_player()</span></a>.</p><p> 현재 한 게임에 최대 4명의 플레이어만 있을 수 있습니다.</p><p class="note"> <span class="warning">경고</span> 플레이어가 메뉴를 통해 선택하도록 허용하지 않는 한 이 기능에서 기본 영역을 설정하지 않는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">rollback_create_game(num_players, [enable_sync_test, region]);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">num_players</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The number of players that must be connected for the game to start. If<a href="rollback_define_player.htm"><span class="inline"></span></a> is used, this is the number of instances that are automatically created.</span></td></tr><tr><td> <span class="notranslate">enable_sync_test</span></td><td> <span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">부울</a></span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> Specifies whether Sync Test should be enabled, and is <span class="inline2">true</span> by default. When set to <span class="inline2">false</span>, online functionality is enabled.</span></td></tr><tr><td> <span class="notranslate">region</span></td><td> <span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> Specifies the default region where the virtual room will be created. See example at the bottom.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">rollback_define_player(obj_player);<br />
+<h1><span data-field="title" data-format="default">rollback_create_game</span></h1>
     var _joined = rollback_join_game();<br />
     <br />
     if (!_joined)<br />

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_skin_get</h1>
+  <h1><span data-field="title" data-format="default">skeleton_skin_get</span></h1>
   <p> 스켈레탈 애니메이션 스프라이트를 사용하면 애니메이션에 별도의 텍스처(&quot;스킨&quot;이라고 함)를 할당할 수 있으므로 하나의 애니메이션을 여러 가지에 사용할 수 있습니다. 이 함수는 인스턴스가 사용 중인 스켈레탈 애니메이션 스프라이트에 현재 할당된 스킨 이름(문자열으로)을 반환합니다. 반환된 이름은 애니메이션 프로그램에서 스프라이트를 만들 때 설정한 이름입니다.</p><p></p><h4> 통사론:</h4><p class="code">skeleton_skin_get();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> 예시:</h4><p class="code">if skeleton_skin_get() == &quot;skin_Enemy1&quot;<br />
     {<br />
         skeleton_skin_set(choose(&quot;skin_Enemy1&quot;, &quot;skin_Enemy2&quot;, &quot;skin_Enemy3&quot;);<br />

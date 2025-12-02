@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_exists</h1>
+  <h1><span data-field="title" data-format="default">part_system_exists</span></h1>
   <p> 이 기능을 사용하면 인덱싱된 주어진 입자 시스템이 게임에 존재하는지 여부를 확인할 수 있습니다. 검사 중인 변수가 초기화되지 않은 변수(파티클 시스템에 인덱스가 할당되지 않은 경우)인 경우 오류가 발생합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_system_exists(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to check for.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">if !part_system_exists(global.Sname)<br />
     {<br />
         global.Sname = part_system_create();<br />

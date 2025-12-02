@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_delete_point</h1>
+  <h1><span data-field="title" data-format="default">path_delete_point</span></h1>
   <p> 이 기능을 사용하면 지정된 경로에서 점을 제거할 수 있습니다. 경로 점은 0부터 번호가 지정되므로 첫 번째 점은 항상 0번째 점이고 마지막 경로 점은<a href="../path_get_number.htm"><span class="inline">path_get_number()</span></a> - 1. 경로 자산에서 이 함수를 호출 <strong>하면 점 제거가 영구적으로 유지</strong> 되고 향후 경로에 할당된 모든 인스턴스는 제거된 점이 누락됩니다. 이것이 필요한 것이 아닌 경우 다음과 같은 기능을 사용해야 합니다. <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> 경로의 복사본을 먼저 생성한 다음 복제된 자산에서 이 함수를 호출합니다. <span class="inline"><a href="path_delete.htm">path_delete()</a></span> 자산이 더 이상 필요하지 않을 때).</p><p></p><h4> 통사론:</h4><p class="code">path_delete_point(ind, n);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Path">경로 자산</span></td><td> <span class="notranslate">The index of the path to delete a point from.</span></td></tr><tr><td> <span class="notranslate">n</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The defining point to delete.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var _col = true;<br />
     while (_col)<br />
     {<br />

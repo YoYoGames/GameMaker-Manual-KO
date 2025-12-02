@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_set_numlock</h1>
+  <h1><span data-field="title" data-format="default">keyboard_set_numlock</span></h1>
   <p> 이 기능을 사용하여 키패드 번호 잠금을 켜거나 끌 수 있습니다(켜짐의 <b>경우 true</b> 로 설정하고 꺼짐의 경우 <b>false</b> 로 설정).</p><p class="note"> <b><span class="note">참고</span></b> 이 기능은 Windows 대상 빌드에서만 사용할 수 있으며 다른 장치에서는 작동하지 않습니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">keyboard_set_numlock(value);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">value</span></td><td> <span data-keyref="Type_Bool">부울</span></td><td> <span class="notranslate">Set this to true for &quot;on&quot; and false for &quot;off&quot;</span></td></tr></tbody></table><p></p><h4> <b>보고:</b></h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> <b>예시:</b></h4><p class="code">if keyboard_get_numlock()<br />
     {<br />
         keyboard_set_numlock(false);<br />

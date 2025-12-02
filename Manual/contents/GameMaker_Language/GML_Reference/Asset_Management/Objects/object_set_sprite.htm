@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_sprite</h1>
+  <h1><span data-field="title" data-format="default">object_set_sprite</span></h1>
   <p> 이 기능을 사용하여 특정 개체의 스프라이트 인덱스를 설정할 수 있습니다. 즉 <i>, sprite_index가 변경된 후에</i> 생성된 이 객체의 모든 인스턴스는 이 새로운 sprite_index로 생성되지만 이미 룸에 있는 인스턴스는 영향을 받지 않을 수 있습니다.</p><p> 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 다음을 사용하여 개별 인스턴스의 스프라이트 인덱스를 설정할 수 있습니다.<a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> 변수는 10개의 인스턴스가 모두 생성된 오브젝트에 대해 서로 다른 스프라이트를 가지고 있으며, 이 함수를 사용하여 오브젝트의 스프라이트 인덱스를 변경하더라도 현재 방에 있는 모든 인스턴스는 그대로 유지되며, 함수를 호출한 후 생성된 인스턴스는 새 스프라이트로 시작됩니다.</p><p></p><h4> 통사론:</h4><p class="code">object_set_sprite( index, spr );</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Object">개체 자산</span></td><td> <span class="notranslate">The index of the object to change.</span></td></tr><tr><td> <span class="notranslate">spr</span></td><td> <span data-keyref="Type_Asset_Sprite">스프라이트 자산</span></td><td> <span class="notranslate">The sprite to assign to the object.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">switch (room)<br />
     {<br />
         case rm_start: object_set_sprite(obj_Player, spr_uniform); break;<br />

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_alphatestenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_alphatestenable</span></h1>
   <p> 이 기능은 게임에 대한 알파 테스트를 활성화 또는 비활성화합니다(기본적으로 비활성화되어 있음). 알파 테스트를 켜면 컴패니언 기능을 사용할 수 있습니다.<a href="gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> 모든 알파 값이 0으로 설정되는 &quot;컷오프&quot; 값을 설정합니다. 아래 이미지는 알파 테스트를 켜거나 끌 때 볼 수 있는 차이를 보여줍니다.</p><p><img alt="Alpha test example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/alpha_test_on_off.png" /></p><p class="note"> <b>참고</b>: 이 기능은 iOS 및 Android 장치의 성능에 부정적인 영향을 미칠 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">gpu_set_alphatestenable(enable);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">Enable or disable alpha testing (<span class="inline">true</span> / <span class="inline">false</span> )</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if !gpu_get_alphatestenable()<br />
     {<br />
         gpu_set_alphatestenable(true);<br />

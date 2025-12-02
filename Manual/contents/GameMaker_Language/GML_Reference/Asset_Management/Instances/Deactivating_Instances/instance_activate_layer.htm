@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_activate_layer</h1>
+  <h1><span data-field="title" data-format="default">instance_activate_layer</span></h1>
   <p> 이 기능을 사용하면 이전에 비활성화된 레이어를 활성화할 수 있습니다. <b>레이어 ID</b> 를 제공해야 합니다. 이 ID는 코드 편집기에 작성된 레이어 이름(문자열) 또는<a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> 해당 레이어의 비활성화된 모든 인스턴스가 다시 활성화됩니다. 영구 인스턴스가 있는 계층을 비활성화한 경우 방을 변경하기 전에 이 기능을 사용하여 계층을 다시 활성화해야 합니다. 그렇지 않으면 지속 인스턴스가 이월 <i>되지 않고</i> 폐기됩니다. 활성화는 즉각적이지 않으며 이러한 방식으로 활성화된 인스턴스는 함수가 호출된 이벤트가 끝날 때까지 활성화된 것으로 간주되지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">instance_activate_layer(layer_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_ID_Layer">레이어 ID</span> 또는 <span data-keyref="Type_String">문자열</span></td><td> <span class="notranslate">The layer name string (or ID value) to be used</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">instance_activate_all();<br />
     var _vx = camera_get_view_x(view_camera[0]);<br />
     var _vy = camera_get_view_y(view_camera[0]);<br />

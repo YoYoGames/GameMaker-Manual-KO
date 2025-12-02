@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_position</h1>
+  <h1><span data-field="title" data-format="default">part_system_position</span></h1>
   <p> 이 기능을 사용하면 방의 (0,0) 위치를 기준으로 파티클 시스템의 기본 위치를 설정할 수 있습니다. 즉, 이 시스템과 관련된 모든 추가 파티클 함수는 이제 새 위치를 기준으로 그려집니다. 기본적으로 이 위치는 항상 (0,0)이지만 일부 매우 특별한 상황에서는 이것을 다른 것으로 변경할 수 있습니다.</p><p class="note"> <b>참고</b>: 이 기능은 파티클 시스템 내의 <b>모든 것을</b> 변경하므로 위치 (100,100)에 이미터가 있고 파티클 시스템 위치를 (0,100)으로 설정하면 이미터는 이제 (100,200)에서 그려집니다. 시스템을 이동한 다음 이미터를 생성하는 경우에도 마찬가지입니다. (100,100)에서 생성하더라도 (100,200)에서 그려질 것입니다.</p><p></p><h4> 통사론:</h4><p class="code">part_system_position(ind, x, y);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to change.</span></td></tr><tr><td> <span class="notranslate">x</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new x coordinate of the particle system.</span></td></tr><tr><td> <span class="notranslate">y</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new y coordinate of the particle system.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br />
     {<br />
         part_system_position(global.Sname, mouse_x, mouse_y);<br />

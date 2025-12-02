@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_visible</h1>
+  <h1><span data-field="title" data-format="default">view_visible</span></h1>
   <p> 이 변수는 특정 뷰 포트가 현재 표시되는지 여부를 확인하는 데 사용할 수 있습니다. 값을 <span class="inline">true</span> (보이는) 또는 <span class="inline">false</span> (보이지 않는). 보기 포트를 표시로 설정했더라도 보기 포트가 활성화되지 않은 경우(내장 변수 사용<a href="view_enabled.htm"><span class="inline">view_enabled</span></a> 또는 Room Editor에서 활성화하면) 화면에 그려지지 않습니다.</p><p></p><h4> 통사론:</h4><p class="code">view_visible[0 ... 7];</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span> (<span class="inline">true</span>: enabled, <span class="inline">false</span>: disabled)</p><p></p><h4> 예시:</h4><p class="code">if !view_visible[0]<br />
     {<br />
         view_visible[0] = true;<br />

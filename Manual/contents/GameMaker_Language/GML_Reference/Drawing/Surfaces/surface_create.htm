@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_create</h1>
+  <h1><span data-field="title" data-format="default">surface_create</span></h1>
   <p> 이 함수는 표면을 생성하는 데 사용되며 향후 함수 호출을 위해 변수에 저장해야 하는 표면의 인덱스를 반환합니다. 표면이 처음 생성될 때 기본적으로 목적을 위해 따로 보관된 메모리 영역이기 때문에 &quot;노이즈&quot;가 포함될 수 있으므로(그 메모리에는 여전히 정보가 포함될 수 있음) 같은 기능<a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p><p> 모든 표면은 2의 거듭제곱인 크기(예: 16, 128, 512 또는 1024픽셀)로 만드는 것이 좋습니다. 이것은 특정 플랫폼(Windows 및 MacOS와 같은)에서 꼭 필요한 것은 아니지만 해당 대상에서 호환성을 확실히 증가시키는 반면 HTML5 및 장치의 경우 필수적이며 이것을 기억하지 않으면 나중에 문제가 발생할 수 있다는 점을 매우 중요합니다.</p><p></p><h4> 통사론:</h4><p class="code">surface_create(w, h);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The width of the surface to be created.</span></td></tr><tr><td> <span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The height of the surface to be created.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_ID_Surface">Surface ID</span></p><p></p><h4> 예시:</h4><p class="code">if !surface_exists(surf)<br />
     {<br />
         surf = surface_create(1024, 1024);<br />

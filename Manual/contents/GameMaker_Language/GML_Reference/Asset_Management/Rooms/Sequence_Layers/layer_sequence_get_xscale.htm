@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_get_xscale</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_get_xscale</span></h1>
   <p> 이 함수를 사용하여 시퀀스 요소 ID를 제공합니다.<a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> 또는 <a href="../General_Layer_Functions/General_Layer_Functions.htm">레이어 요소 기능</a> 중 하나에 의해 - 게임 룸에서 시퀀스 요소의 X 축을 따라 현재 스케일을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">layer_sequence_get_xscale(sequence_element_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td><span data-keyref="Type_ID_Element_Sequence"></span></td><td> <span class="notranslate">The unique ID value of the sequence element to target</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var _xs = layer_sequence_get_xscale(title_sequence)<br />
     if _xs &lt; 1<br />
     {<br />

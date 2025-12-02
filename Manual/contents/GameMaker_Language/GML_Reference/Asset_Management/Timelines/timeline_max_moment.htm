@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>timeline_max_moment</h1>
+  <h1><span data-field="title" data-format="default">timeline_max_moment</span></h1>
   <p> 이 함수는 타임라인이 최종 작업을 수행하는 순간의 값을 반환합니다. 따라서 20분 간격으로 배치된 8개의 다른 작업이 있는 타임라인이 있는 경우 이 함수는 해당 타임라인의 마지막 작업의 순간 값(160)을 반환합니다. 이 함수는 타임라인이 통과했는지 여부를 테스트하는 좋은 방법입니다. 실행 중 마지막 활성 순간, 타임라인 위치는 추가 작업이 있든 없든 게임의 모든 단계에서 계속 증가하기 때문입니다.</p><p></p><h4> 통사론:</h4><p class="code">timeline_max_moment(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td><td> <span class="notranslate">The index of the timeline to get the last moment of.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if timeline_position &gt; timeline_max_moment(timeline_index)<br />
     {<br />
         timeline_running = false;<br />

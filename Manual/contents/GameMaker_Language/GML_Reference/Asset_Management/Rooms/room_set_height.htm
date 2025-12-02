@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_height</h1>
+  <h1><span data-field="title" data-format="default">room_set_height</span></h1>
   <p> 이 기능을 사용하면 <i>현재 방을 제외한</i> 게임의 모든 방의 높이를 변경(또는 설정)할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">room_set_height(index, h);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td> <span data-keyref="Type_Asset_Room">방 자산</span></td><td> <span class="notranslate">The index of the room to set the height of.</span></td></tr><tr><td> <span class="notranslate">h</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The new height of the room in pixels.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">global.myroom = room_add();<br />
     room_set_width(global.myroom, 640);<br />
     room_set_height(global.myroom, 480);<br />

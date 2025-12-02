@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_mip_enable</h1>
+  <h1><span data-field="title" data-format="default">gpu_get_tex_mip_enable</span></h1>
   <p> 이 기능을 사용하면 밉매핑이 꺼져 있는지, 모든 항목에 대해 켜져 있는지 또는 <a href="../../../../Settings/Texture_Groups.htm">텍스처 그룹 관리자</a> 에서 선택한 텍스처 그룹에 대해서만 켜져 있는지 여부를 확인할 수 있습니다. 이 함수는 아래 나열된 상수 중 하나를 반환하며 기본 설정은 <span class="inline">mip_markedonly</span>.</p><p></p><h4> 통사론:</h4><p class="code">gpu_get_tex_mip_enable();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Constant"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Variables/Constants.htm">Constant</a></span></p><table><colgroup><col /><col /></colgroup><tbody><tr><th colspan="2"> <span data-keyref="Type_Constant_Mipmapping"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Mipmapping/gpu_get_tex_mip_enable.htm">밉매핑 상수</a></span></th></tr><tr><th> 일정한</th><th> 설명</th></tr><tr><td><span class="notranslate"><span class="inline">mip_off</span></span></td><td> 밉매핑이 비활성화되었습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">mip_on</span></span></td><td> 모든 텍스처에 대한 밉매핑이 활성화되었습니다.</td></tr><tr><td><span class="notranslate"><span class="inline">mip_markedonly</span></span></td><td> 텍스처 그룹 옵션(기본값)에서 활성화된 텍스처에 대해 밉매핑이 활성화됩니다.</td></tr></tbody></table><p></p><h4> 예시:</h4><p class="code">if gpu_get_tex_mip_enable != mip_on<br />
     {<br />
         gpu_set_tex_mip_enable(mip_on);<br />

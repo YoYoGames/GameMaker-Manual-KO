@@ -14,7 +14,7 @@
 
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_grid_resize</h1>
+  <h1><span data-field="title" data-format="default">ds_grid_resize</span></h1>
   <p> 이 기능을 사용하면 주어진 DS 그리드의 크기를 다른 너비 및/또는 높이로 조정할 수 있습니다. 격자 크기가 현재 격자보다 크면 새 셀의 기본 값은 0이고 크기가 더 작으면 더 이상 새 크기 내에 있지 않은 셀에 있는 값이 손실됩니다. 다른 모든 셀은 그대로 유지됩니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_grid_resize(index, w, h);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_ID_DS_Grid"></span></td><td> <span class="notranslate">This index of the grid to resize.</span></td></tr><tr><td> <span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new width of the grid.</span></td></tr><tr><td> <span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The new height of the grid.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">ds_grid_resize(global.Grid, room_width / 32, room_height / 32);<br/> ds_grid_clear(global.Grid, -1)</p><p> 위의 코드는 전역 변수 &quot;Grid&quot;에 색인된 DS 그리드의 크기를 조정한 다음 각 셀이 값 -1을 보유하도록 지웁니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤: <a href="DS_Grids.htm">DS 그리드</a></div><div style="float:right"> 다음: <a href="ds_grid_clear.htm"><span class="notranslate">ds_grid_clear</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>
   </div>
   <!-- KEYWORDS

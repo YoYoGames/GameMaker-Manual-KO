@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_shuffle</h1>
+  <h1><span data-field="title" data-format="default">ds_list_shuffle</span></h1>
   <p> 이 기능을 사용하면 목록을 섞을 수 있습니다. 그러면 모든 구성 요소 값이 원래 목록에 추가된 값에서 임의의 위치로 재정렬됩니다.</p><p class="note"> <b>참고</b>: 이 기능은 <span data-keyref="GameMaker Name">GameMaker</span> 가 디버깅 코드를 훨씬 더 쉬운 작업으로 만들기 위해 매번 동일한 초기 무작위 시드를 생성하기 때문에 게임을 새로 실행할 때마다 목록 항목을 동일한 위치로 섞습니다. 이 동작을 방지하려면 다음을 사용하십시오. <span style="font-size:1px;"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm"><span class="inline">randomise()</span></a></span> 게임 시작 시. 최종 실행 패키지는 이 동작을 표시하지 않고 플레이할 때마다 무작위로 실행되기 때문에 게임을 테스트하고 디버깅할 때만 해당됩니다.</p><p></p><h4> 통사론:</h4><p class="code">ds_list_shuffle(id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td><td> <span class="notranslate">The id of the list to shuffle.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if restart<br />
     {<br />
         ds_list_shuffle(card_list);<br />

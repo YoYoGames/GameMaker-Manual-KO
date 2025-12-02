@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_get_solid</h1>
+  <h1><span data-field="title" data-format="default">object_get_solid</span></h1>
   <p> 이 기능은 확인 중인 개체가 &quot;단색&quot;으로 플래그 지정되었는지 여부를 알려줍니다. 솔리드 오브젝트는 기존 충돌 시스템을 사용할 때 특수 충돌 이벤트를 생성합니다(예: 물리 세계가 꺼져 있음). 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 따라서 솔리드 개체와 동일한 개체의 일반 인스턴스를 가질 수 있으며 그 반대의 경우도 마찬가지입니다. 다음을 사용하여 개별 인스턴스 솔리드 플래그를 설정할 수 있습니다.<a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> 인스턴스 변수.</p><p></p><h4> 통사론:</h4><p class="code">object_get_solid(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br />
     {<br />
         solid = true;<br />

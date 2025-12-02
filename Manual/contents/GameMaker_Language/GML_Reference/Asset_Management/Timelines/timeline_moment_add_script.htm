@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>timeline_moment_add_script</h1>
+  <h1><span data-field="title" data-format="default">timeline_moment_add_script</span></h1>
   <p> 이 기능을 사용하면 해당 타임라인 내의 주어진 &quot;순간&quot;에 <a href="../../../GML_Overview/Script_Functions.htm">스크립트 기능</a> 을 타임라인에 동적으로 추가할 수 있습니다. 여기서 &quot;순간&quot;은 하나의 게임 틱(또는 단계)에 해당합니다. 이런 식으로 다음을 사용하여 새 타임라인을 만들 수 있습니다.<a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> 기능을 추가하고 언제든지 다른 동작을 추가하거나 단순히 이전에 생성된 타임라인 리소스를 새로운 동작으로 수정합니다. 이 함수를 사용할 때 함수는 추가 인수를 요구할 수 없으며, 이를 사용하여 자산 브라우저에 있는 타임라인 자산을 수정하면 이 타임라인을 사용하는 모든 인스턴스가 영향을 받고 변경 사항은 종료될 때까지 지속됩니다. 게임(전화 <span class="inline">game_restart()</span> 변경 사항도 재설정하지 않습니다).</p><p></p><h4> 통사론:</h4><p class="code">timeline_moment_add_script(ind, step, script);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_Asset_Timeline">타임라인 자산</span></td><td> <span class="notranslate">The index of the timeline to add a moment to.</span></td></tr><tr><td> <span class="notranslate">step</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The moment (step) to add to.</span></td></tr><tr><td> <span class="notranslate">script</span></td><td> <span data-keyref="Type_Function_Script">스크립트 기능</span></td><td> <span class="notranslate">The index of the script function to add into the moment.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">global.tl = timeline_add();<br />
     var i = room_speed * 60;<br />
     repeat(3)<br />

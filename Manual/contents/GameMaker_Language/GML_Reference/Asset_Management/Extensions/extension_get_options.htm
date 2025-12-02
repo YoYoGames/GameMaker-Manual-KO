@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1> extension_get_options</h1>
+  <h1><span data-field="title" data-format="default">extension_get_options</span></h1>
   <p> 이 함수는 지정된 이름의 확장에 대한 모든 <a href="../../../../The_Asset_Editors/Extension_Creation/Creating_An_Extension.htm#h1">옵션</a> 과 해당 값을 포함하는 구조체를 반환합니다.</p><p> 제공된 확장 이름이 유효하지 <span class="inline2">않은</span> 경우 함수는 정의되지 않음을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">extension_get_options(extension_name);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">extension_name</span></td><td> <span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">끈</a></span></td><td> <span class="notranslate">The name of your extension asset as a string</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p><p></p><h4> 예시:</h4><p class="code">var _options = extension_get_options(&quot;MyExtension&quot;);<br />
     var _enabled = _options.enabled;</p><p> 이 코드는 확장에 대한 options 구조체를 가져와서 값을 읽습니다. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a data-xref="{title}" href="Extensions.htm">확장</a></div><div style="float:right"> 다음: <a data-xref="{title}" href="extension_get_option_value.htm">extension_get_option_value</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>

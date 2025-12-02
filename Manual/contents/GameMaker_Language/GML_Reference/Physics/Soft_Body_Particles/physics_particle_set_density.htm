@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_density</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_set_density</span></h1>
   <p> 이 기능을 사용하면 물리 시뮬레이션에서 입자의 밀도를 설정할 수 있습니다. 입자의 밀도를 설정하면 관성이 얼마나 많은지와 충돌에 반응하는 방식에 직접적인 영향을 미치므로 밀도가 높은 작은 입자를 만들면 질량이 매우 커집니다. 밀도가 낮은 큰 입자는 훨씬 더 작은 질량을 갖습니다. 이 기능은 변경 후에 생성된 새 입자뿐만 아니라 시뮬레이션에 이미 있는 입자에 대해서도 밀도를 변경한다는 점에서 범위가 <i>전역적</i> 입니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_particle_set_density(density)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">density</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The density of the particle fixture.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
     <br/> physics_particle_set_damping(1);
     <br/> physics_particle_set_gravity_scale(1);

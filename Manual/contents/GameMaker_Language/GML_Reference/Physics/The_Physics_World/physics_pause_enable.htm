@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_pause_enable</h1>
+  <h1><span data-field="title" data-format="default">physics_pause_enable</span></h1>
   <p> 일반적으로 물리 시뮬레이션이 작동하려면 연속적이어야 하며 중지 및 시작될 수 없거나 인스턴스가 방의 한 장소에서 다른 장소로 갑자기 이동하도록 할 수 없습니다. 그러나 (예를 들어) 장치 OS가 일시 중지되어 시뮬레이션을 일시 중지 <i>해야</i> 하는 순간이 있으므로 이 기능을 사용합니다. 플래그가 다음으로 설정된 경우 시뮬레이션을 일시 중지합니다. <span class="inline">true</span> 플래그가 <span class="inline">false</span> 다시.</p><p class="note"> <b>참고</b>: 이것은 비활성화된 경우에도 물리적 본체가 물리 세계에서 계속 계산 및 시뮬레이션되므로 방의 모든 인스턴스를 비활성화하려는 경우에 특히 유용합니다.</p><p></p><h4> 통사론:</h4><p class="code">physics_pause_enable(flag)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td><td> <span class="notranslate">This can be set to <span class="inline">true</span> to pause the simulation, or <span class="inline">false</span> to start it again.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if os_is_paused()<br />
     {<br />
         physics_pause_enable(true);<br />

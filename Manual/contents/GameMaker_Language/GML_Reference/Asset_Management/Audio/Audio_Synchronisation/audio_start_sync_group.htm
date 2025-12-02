@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_start_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_start_sync_group</span></h1>
   <p> 이 기능을 사용하면 이전에 생성된 동기화 그룹의 재생을 시작할 수 있습니다. 함수를 사용하여 그룹을 생성할 때 반환된 값인 <i>그룹 인덱스</i> 를 제공해야 합니다.<a href="audio_create_sync_group.htm"><span class="inline">audio_create_sync_group()</span></a>.</p><p class="note"> <b>참고</b>: 이 기능은 HTML5 대상 플랫폼에서 사용할 수 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_start_sync_group(group_index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">group_index</span></td><td> <span data-keyref="Type_ID_Audio_Sync_Group">오디오 동기화 그룹 ID</span></td><td> <span class="notranslate">The group index to play.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">sg = audio_create_sync_group(true);<br />
     audio_play_in_sync_group(sg, sound1);<br />
     audio_play_in_sync_group(sg, sound2);<br />
