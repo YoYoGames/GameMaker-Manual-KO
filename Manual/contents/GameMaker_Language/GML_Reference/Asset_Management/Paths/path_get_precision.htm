@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="path_get_precision" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_get_precision</h1><p> 이 함수는 주어진 경로가 &quot;스무딩&quot;된 정밀도로 반환되며 1에서 8 사이의 정수 값이 됩니다. 직선 경로에 대해 이 값을 얻을 수 있지만(설정할 수 있지만) 방법에 영향을 미치지 않습니다. instance는 경로 종류가 &quot;smooth&quot;로 설정된 경우에만 관련이 있는 경로를 사용합니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_precision(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (path_get_kind(pth_Patrol))<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">path_get_precision</span></h1>
+  <p> 이 함수는 주어진 경로가 &quot;스무딩&quot;된 정밀도로 반환되며 1에서 8 사이의 정수 값이 됩니다. 직선 경로에 대해 이 값을 얻을 수 있지만(설정할 수 있지만) 방법에 영향을 미치지 않습니다. instance는 경로 종류가 &quot;smooth&quot;로 설정된 경우에만 관련이 있는 경로를 사용합니다.</p><p></p><h4> 통사론:</h4><p class="code">path_get_precision(index);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td><td> <span class="notranslate">The index of the path to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if (path_get_kind(pth_Patrol))<br />
     {<br />
         if (path_get_precision(pth_Patrol)) != 8<br />
         {<br />

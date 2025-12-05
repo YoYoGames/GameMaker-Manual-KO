@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="audio_channel_num" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_channel_num</h1><p> 이 기능을 사용하면 <span data-keyref="GameMaker Name">GameMaker</span> 에서 오디오를 재생하는 데 사용할 수 있는 오디오 채널 수를 설정할 수 있습니다. 이것이 기본적으로 의미하는 것은 한 번에 재생할 수 있는 동시 사운드 수를 지정하고 숫자가 양을 초과하면 <i>우선 순위</i> 가 낮은 사운드를 중지하여 <i>우선</i> 순위가 높은 사운드에 대한 채널을 확보한다는 것입니다.. 이 기능을 사용하여 장치에 맞게 게임을 최적화할 수 있습니다. 오디오용 채널 수가 적을수록 성능이 향상되지만 동시에 여러 개를 재생할 경우 특정 사운드가 눈에 띄게 끊길 수도 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_channel_num(num);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">num</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Number of available audio channels (default is 128).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_browser)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">audio_channel_num</span></h1>
+  <p> 이 기능을 사용하면 <span data-keyref="GameMaker Name">GameMaker</span> 에서 오디오를 재생하는 데 사용할 수 있는 오디오 채널 수를 설정할 수 있습니다. 이것이 기본적으로 의미하는 것은 한 번에 재생할 수 있는 동시 사운드 수를 지정하고 숫자가 양을 초과하면 <i>우선 순위</i> 가 낮은 사운드를 중지하여 <i>우선</i> 순위가 높은 사운드에 대한 채널을 확보한다는 것입니다.. 이 기능을 사용하여 장치에 맞게 게임을 최적화할 수 있습니다. 오디오용 채널 수가 적을수록 성능이 향상되지만 동시에 여러 개를 재생할 경우 특정 사운드가 눈에 띄게 끊길 수도 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_channel_num(num);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">num</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">Number of available audio channels (default is 128).</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">switch (os_browser)<br />
     {<br />
         case browser_not_a_browser:<br />
             switch (os_type)<br />

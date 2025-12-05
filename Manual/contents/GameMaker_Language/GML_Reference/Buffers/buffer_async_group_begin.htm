@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="buffer_async_group_begin" />
   <meta name="search-keywords" content="buffer_async_group_begin" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_async_group_begin</h1><p> 이 함수는 여러 버퍼에서 여러 파일로 저장을 시작하려는 경우(또는 여러 버퍼를 로드할 때) 호출됩니다. <span class="inline">buffer_load()>groupname</span> 은 문자열이며 파일이 저장되는 디렉토리 이름으로 사용되며 나중에 파일을 IDE로 다시 로드할 때 파일 경로의 일부로 사용해야 합니다(다음 중 하나를 사용하여<a href="buffer_load.htm"><span class="inline">buffer_save_async()</span></a> 기능). 이 기능 <i>은</i><a href="buffer_save_async.htm"> <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span></a> 그리고<span class="inline">buffer_async_group_end()</span> 함수를 호출하여 비동기 그룹도 종료해야 합니다.<a href="buffer_async_group_end.htm"><span class="inline"></span></a> 그렇지 않으면 파일이 저장/로드되지 않습니다.</p><p> 콘솔 플랫폼(예: PS4)의 경우 <span class="inline2">그룹 이름</span> 이 저장 슬롯 설명으로 사용되며 이 기능을 사용하면 저장 중인 모든 파일에 대해 UI가 표시되는 것을 방지할 수 있습니다. 또한 UWP를 사용하는 경우 ERA Xbox 그룹과 동일한 그룹을 만들어 기본 Xbox와 Microsoft 스토어 창 간에 저장 게임을 로밍할 수 있습니다. 예를 들면 다음과 같습니다.</p><p class="code">if os_type == os_uwp<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">buffer_async_group_begin</span></h1>
+  <p> 이 함수는 여러 버퍼에서 여러 파일로 저장을 시작하려는 경우(또는 여러 버퍼를 로드할 때) 호출됩니다. <span class="inline">buffer_load()>groupname</span> 은 문자열이며 파일이 저장되는 디렉토리 이름으로 사용되며 나중에 파일을 IDE로 다시 로드할 때 파일 경로의 일부로 사용해야 합니다(다음 중 하나를 사용하여<a href="buffer_load.htm"><span class="inline">buffer_save_async()</span></a> 기능). 이 기능 <i>은</i><a href="buffer_save_async.htm"> <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span></a> 그리고<span class="inline">buffer_async_group_end()</span> 함수를 호출하여 비동기 그룹도 종료해야 합니다.<a href="buffer_async_group_end.htm"><span class="inline"></span></a> 그렇지 않으면 파일이 저장/로드되지 않습니다.</p><p> 콘솔 플랫폼(예: PS4)의 경우 <span class="inline2">그룹 이름</span> 이 저장 슬롯 설명으로 사용되며 이 기능을 사용하면 저장 중인 모든 파일에 대해 UI가 표시되는 것을 방지할 수 있습니다. 또한 UWP를 사용하는 경우 ERA Xbox 그룹과 동일한 그룹을 만들어 기본 Xbox와 Microsoft 스토어 창 간에 저장 게임을 로밍할 수 있습니다. 예를 들면 다음과 같습니다.</p><p class="code">if os_type == os_uwp<br />
     {<br />
         buffer_async_group_begin(&quot;root/yourgroupname&quot;);<br />
     }<br />

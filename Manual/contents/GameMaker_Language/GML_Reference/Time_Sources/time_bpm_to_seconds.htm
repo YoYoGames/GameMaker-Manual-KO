@@ -14,7 +14,7 @@
   <meta name="rh-index-keywords" content="time_bpm_to_seconds" />
   <meta name="search-keywords" content="time_bpm_to_seconds" />
 </head>
-<body><h1>time_bpm_to_seconds</h1><p> 이 함수는 분당 비트 수 값을 취하고 각 비트의 길이를 초 단위로 반환합니다.</p><p> 이것은 시간 소스에 대한 BPM 값을 사용하기 위해 <span data-keyref="Type_Resource_TimeSource">시간</span> <a href="time_source_create.htm">소스를 생성</a> 할 때 사용할 수 있습니다. 이러한 <span data-keyref="Type_Resource_TimeSource">시간 소스</span> 는 <strong>초</strong> 를 <a href="Time_Source_Units.htm">단위</a> 로 사용하는 것이 중요합니다.</p><p></p><h4> 통사론:</h4><p class="code">time_bpm_to_seconds(bpm);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">bpm</span></td><td> <span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate">The beats-per-minute value to convert into seconds-per-beat</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p><p></p><h4> 예시:</h4><p class="code">var _bpm = 90;<br />
+<h1><span data-field="title" data-format="default">time_bpm_to_seconds</span></h1>
     var _seconds = time_bpm_to_seconds(_bpm);<br />
     <br />
     time_source = time_source_create(time_source_game, _seconds, time_source_units_seconds, function()<br />

@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="shader_is_compiled" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>shader_is_compiled</h1><p> 이 함수는 런타임에 셰이더를 검사하여 성공적으로 컴파일되었는지 확인합니다. 그것이 있으면 함수가 반환합니다. <span class="inline">true</span> 그렇지 않으면 반환 <span class="inline">false</span>. 이 기능은 게임을 실행하는 플랫폼이 사용된 모든 셰이더를 성공적으로 컴파일했는지 확인하기 위해 게임 시작 시 사용해야 합니다(특히 일부 컴퓨터가 셰이더 수준 2.0을 사용하는 DX9를 사용하고 셰이더 수준 3.0을 사용하는 이후 버전이 아닌 Windows에서) ).</p><p> 셰이더가 컴파일 <i>되지</i> 않은 경우<a href="shader_set.htm"><span class="inline">shader_set()</span></a> 게임이 충돌하므로 간단한 GLSL ES 셰이더 이외의 다른 것을 사용할 때마다 일종의 확인을 하는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">shader_is_compiled(shader);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">shader</span></td><td><span data-keyref="Type_Asset_Shader"></span></td><td> <span class="notranslate">The shader to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">global.GFX = false;<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">shader_is_compiled</span></h1>
+  <p> 이 함수는 런타임에 셰이더를 검사하여 성공적으로 컴파일되었는지 확인합니다. 그것이 있으면 함수가 반환합니다. <span class="inline">true</span> 그렇지 않으면 반환 <span class="inline">false</span>. 이 기능은 게임을 실행하는 플랫폼이 사용된 모든 셰이더를 성공적으로 컴파일했는지 확인하기 위해 게임 시작 시 사용해야 합니다(특히 일부 컴퓨터가 셰이더 수준 2.0을 사용하는 DX9를 사용하고 셰이더 수준 3.0을 사용하는 이후 버전이 아닌 Windows에서) ).</p><p> 셰이더가 컴파일 <i>되지</i> 않은 경우<a href="shader_set.htm"><span class="inline">shader_set()</span></a> 게임이 충돌하므로 간단한 GLSL ES 셰이더 이외의 다른 것을 사용할 때마다 일종의 확인을 하는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">shader_is_compiled(shader);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">shader</span></td><td><span data-keyref="Type_Asset_Shader"></span></td><td> <span class="notranslate">The shader to check.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool">Boolean</span></p><p></p><h4> 예시:</h4><p class="code">global.GFX = false;<br />
     if (shader_is_compiled(sh_glass) &amp;&amp; shader_is_compiled(sh_warp))<br />
     {<br />
         global.GFX = true;<br />

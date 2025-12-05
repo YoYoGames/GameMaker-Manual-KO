@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="object_get_sprite" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_sprite</h1><p> 이 함수는 검사하는 객체에 스프라이트가 있는지 여부를 알려주고, 스프라이트가 있으면 해당 스프라이트의 인덱스를 반환하고, 없으면 -1을 반환합니다. 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 스프라이트가 없는 객체를 가질 수 있는 반면 동일한 객체의 인스턴스는 스프라이트를 가질 수 있고 그 반대도 마찬가지입니다. 또는 심지어 다른 스프라이트를 가질 수도 있습니다. 다음을 사용하여 개별 인스턴스 스프라이트를 설정할 수 있습니다.<a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> 인스턴스 변수.</p><p></p><h4> 통사론:</h4><p class="code">object_get_sprite(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p><p></p><h4> 예시:</h4><p class="code">var _spr = object_get_sprite(object_index);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">object_get_sprite</span></h1>
+  <p> 이 함수는 검사하는 객체에 스프라이트가 있는지 여부를 알려주고, 스프라이트가 있으면 해당 스프라이트의 인덱스를 반환하고, 없으면 -1을 반환합니다. 이것은 인스턴스 함수가 아니라는 점에 유의하십시오! 스프라이트가 없는 객체를 가질 수 있는 반면 동일한 객체의 인스턴스는 스프라이트를 가질 수 있고 그 반대도 마찬가지입니다. 또는 심지어 다른 스프라이트를 가질 수도 있습니다. 다음을 사용하여 개별 인스턴스 스프라이트를 설정할 수 있습니다.<a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> 인스턴스 변수.</p><p></p><h4> 통사론:</h4><p class="code">object_get_sprite(obj);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td><td> <span class="notranslate">The index of the object to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p><p></p><h4> 예시:</h4><p class="code">var _spr = object_get_sprite(object_index);<br />
     if (sprite_index != _spr)<br />
     {<br />
         sprite_index = _spr;<br />

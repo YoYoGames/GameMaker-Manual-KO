@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="vertex_begin" />
   <meta name="search-keywords" content="vertex_begin" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_begin</h1><p> 이 함수를 사용하여 사용자 정의 프리미티브의 정의를 시작합니다. 프리미티브를 쓸 버퍼와 사용할 정점 형식(이전에 정점 형식 함수를 사용하여 정의)을 할당합니다. 그런 다음 호출하기 전에 기본 요소의 각 꼭짓점에 필요한 점을 정의합니다.<a href="vertex_end.htm"><span class="inline">vertex_end()</span></a> 원시 생성을 완료합니다.</p><p></p><h4> 통사론:</h4><p class="code">vertex_begin(buffer, format);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> <span data-keyref="Type_ID_Buffer_Vertex">정점 버퍼 ID</span></td><td> <span class="notranslate">The buffer to be written to.</span></td></tr><tr><td> <span class="notranslate">format</span></td><td> <span data-keyref="Type_ID_Vertex_Format">정점 형식 ID</span></td><td> <span class="notranslate">The vertex format to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">vertex_format_begin();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">vertex_begin</span></h1>
+  <p> 이 함수를 사용하여 사용자 정의 프리미티브의 정의를 시작합니다. 프리미티브를 쓸 버퍼와 사용할 정점 형식(이전에 정점 형식 함수를 사용하여 정의)을 할당합니다. 그런 다음 호출하기 전에 기본 요소의 각 꼭짓점에 필요한 점을 정의합니다.<a href="vertex_end.htm"><span class="inline">vertex_end()</span></a> 원시 생성을 완료합니다.</p><p></p><h4> 통사론:</h4><p class="code">vertex_begin(buffer, format);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> <span data-keyref="Type_ID_Buffer_Vertex">정점 버퍼 ID</span></td><td> <span class="notranslate">The buffer to be written to.</span></td></tr><tr><td> <span class="notranslate">format</span></td><td> <span data-keyref="Type_ID_Vertex_Format">정점 형식 ID</span></td><td> <span class="notranslate">The vertex format to use.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">vertex_format_begin();<br />
     vertex_format_add_position();<br />
     vertex_format_add_colour();<br />
     vertex_format_add_textcoord();<br />

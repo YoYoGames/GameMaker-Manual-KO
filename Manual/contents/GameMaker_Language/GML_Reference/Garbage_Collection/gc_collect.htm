@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="gc_collect" />
   <meta name="search-keywords" content="gc_collect" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gc_collect</h1><p> 이 기능을 사용하면 현재 프레임(단계)의 끝에서 강제로 실행하도록 가비지 수집기를 트리거할 수 있습니다. 이것이 작동하기 위해 가비지 수집기가 활성화될 필요가 <em>없다는</em> 점은 주목할 가치가 있습니다. 가비지 수집기를 비활성화한 후 이 함수 호출(함수 사용 <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> ) 가비지 수집기가 다시 비활성화되기 전에 수집 플래그가 지정된 모든 개체가 메모리에서 제거되는 한 프레임에 대해 가비지 수집기를 활성화합니다.</p><p></p><h4> 통사론:</h4><p class="code">gc_collect();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (global.debug == true &amp;&amp; keyboard_check_pressed(vk_f1))<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">gc_collect</span></h1>
+  <p> 이 기능을 사용하면 현재 프레임(단계)의 끝에서 강제로 실행하도록 가비지 수집기를 트리거할 수 있습니다. 이것이 작동하기 위해 가비지 수집기가 활성화될 필요가 <em>없다는</em> 점은 주목할 가치가 있습니다. 가비지 수집기를 비활성화한 후 이 함수 호출(함수 사용 <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> ) 가비지 수집기가 다시 비활성화되기 전에 수집 플래그가 지정된 모든 개체가 메모리에서 제거되는 한 프레임에 대해 가비지 수집기를 활성화합니다.</p><p></p><h4> 통사론:</h4><p class="code">gc_collect();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if (global.debug == true &amp;&amp; keyboard_check_pressed(vk_f1))<br />
     {<br />
         gc_collect();<br />
     }</p><p> 위의 코드는 전역 변수와 누르고 있는 키를 확인합니다. <span class="inline">true</span> 그런 다음 프레임의 끝(단계)에 대해 가비지 수집이 트리거됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Garbage_Collection.htm">쓰레기 수거</a></div><div style="float:right"> 다음: <a href="gc_target_frame_time.htm">gc_target_frame_time</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

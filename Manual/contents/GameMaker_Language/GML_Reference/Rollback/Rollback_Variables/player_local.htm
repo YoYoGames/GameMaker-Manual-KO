@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>플레이어_로컬</title>
+  <title>player_local</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
   <meta name="rh-index-keywords" content="플레이어_로컬" />
   <meta name="search-keywords" content="플레이어_로컬" />
 </head>
-<body><h1>플레이어_로컬</h1><p> 사용할 때<a href="../Rollback_Functions/rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> 플레이어 개체를 정의하기 위해 시스템은 각 플레이어에 대해 해당 개체의 인스턴스를 자동으로 만듭니다. 해당 객체의 각 인스턴스는 <span class="inline">player_local</span> 해당 플레이어 인스턴스가 로컬인지 여부를 알려주는 변수입니다.</p><p> 사용하지 않는 경우 <span class="inline">rollback_define_player()</span>, 이 변수는 개체에 대해 생성되지 않습니다.</p><p> 이 변수를 사용하여 로컬 플레이어를 표시할 수 있습니다. 로컬 및 원격 플레이어에 대해 동일해야 하는 게임 로직에 영향을 주는 방식으로 이 변수를 사용하지 않는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">player_local;</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">// Draw event<br />
+<h1><span data-field="title" data-format="default">player_local</span></h1>
     if (player_local)<br />
     {<br />
         draw_sprite(spr_arrow, 0, x, y - 60);<br />

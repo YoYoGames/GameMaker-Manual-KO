@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="draw_getpixel_ext" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_getpixel_ext</h1><p> 이 기능을 사용하면 현재 렌더 대상에 그려지는 모든 픽셀의 전체 <b>AGBR 32비트</b> 값을 얻을 수 있습니다. 즉, 결과는 함수가 호출된 이벤트와 사용 중인 대상 표면에 따라 달라집니다.</p><p class="note"><b></b> <span class="important">중요</span> 이 기능은 성능에 큰 영향을 미치므로 반드시 필요한 경우에만 사용해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">draw_getpixel_ext(x, y);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the pixel to check</span></td></tr><tr><td> <span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the pixel to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">col = draw_getpixel_ext(mouse_x, mouse_y);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">draw_getpixel_ext</span></h1>
+  <p> 이 기능을 사용하면 현재 렌더 대상에 그려지는 모든 픽셀의 전체 <b>AGBR 32비트</b> 값을 얻을 수 있습니다. 즉, 결과는 함수가 호출된 이벤트와 사용 중인 대상 표면에 따라 달라집니다.</p><p class="note"><b></b> <span class="important">중요</span> 이 기능은 성능에 큰 영향을 미치므로 반드시 필요한 경우에만 사용해야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">draw_getpixel_ext(x, y);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The x coordinate of the pixel to check</span></td></tr><tr><td> <span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The y coordinate of the pixel to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">col = draw_getpixel_ext(mouse_x, mouse_y);<br />
     alpha = (col &gt;&gt; 24) &amp; 255;<br />
     blue = (col &gt;&gt; 16) &amp; 255;<br />
     green = (col &gt;&gt; 8) &amp; 255;<br />

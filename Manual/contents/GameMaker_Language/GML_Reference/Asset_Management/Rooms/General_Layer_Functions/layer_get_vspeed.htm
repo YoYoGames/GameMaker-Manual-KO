@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="layer_get_vspeed" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_vspeed</h1><p> 이 함수를 사용하여 현재 범위가 지정된 방 내 레이어의 수직 속도(게임 프레임당 픽셀 단위)를 검색할 수 있습니다. 레이어 ID를 제공합니다(다음을 사용하여 레이어를 생성할 때 얻는<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 레이어 이름(문자열로 - 이것은 성능에 영향을 미칠 것임)이고 함수는 수직 속도에 대한 실수를 반환합니다. 여기서 양수 값은 감소하고 음수 값은 증가합니다. 기본값은 0입니다(룸 편집기에서 설정하지 않은 경우).</p><p></p><h4> 통사론:</h4><p class="code">layer_get_vspeed(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to get the vertical speed from</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Sprites&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">layer_get_vspeed</span></h1>
+  <p> 이 함수를 사용하여 현재 범위가 지정된 방 내 레이어의 수직 속도(게임 프레임당 픽셀 단위)를 검색할 수 있습니다. 레이어 ID를 제공합니다(다음을 사용하여 레이어를 생성할 때 얻는<a href="layer_create.htm"><span class="inline">layer_create()</span></a> ) 또는 레이어 이름(문자열로 - 이것은 성능에 영향을 미칠 것임)이고 함수는 수직 속도에 대한 실수를 반환합니다. 여기서 양수 값은 감소하고 음수 값은 증가합니다. 기본값은 0입니다(룸 편집기에서 설정하지 않은 경우).</p><p></p><h4> 통사론:</h4><p class="code">layer_get_vspeed(layer_id)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> <span data-keyref="Type_String">문자열</span> 또는 <span data-keyref="Type_ID_Layer">레이어 ID</span></td><td> <span class="notranslate">The unique ID value of the layer to get the vertical speed from</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Sprites&quot;);<br />
     if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0<br />
     {<br />
         layer_hspeed(lay_id, 0);<br />

@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="uwp_was_terminated" />
   <meta name="search-keywords" content="uwp_was_terminated" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_was_terminated</h1><p> 이 기능을 사용하면 게임이 시스템에 의해 이전에 종료되었는지 확인할 수 있습니다(즉, 게임의 첫 번째 실행이 아님). 그렇다면 함수가 반환됩니다. <span class="inline">true</span>, 그렇지 않으면 반환됩니다 <span class="inline">false</span>. 사용 예는 그것을 확인하고 게임이 이전에 시스템에 의해 종료되었는지 확인한 다음 (반환되는 경우 <span class="inline">true</span> ) 플레이어가 게임에서 있었던 이전 단계를 로드합니다. XBox One을 대상으로 하는 경우 이것이 감지될 때 필요한 게임 동작은 인증 문서의 다른 버전 간에 다르므로 최신 버전을 확인하여 게임 <i>이</i> 수행해야 하는 작업을 확인하는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">uwp_was_terminated();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if xboxlivewas_terminated()<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_was_terminated</h1>
+  <p> 이 기능을 사용하면 게임이 시스템에 의해 이전에 종료되었는지 확인할 수 있습니다(즉, 게임의 첫 번째 실행이 아님). 그렇다면 함수가 반환됩니다. <span class="inline">true</span>, 그렇지 않으면 반환됩니다 <span class="inline">false</span>. 사용 예는 그것을 확인하고 게임이 이전에 시스템에 의해 종료되었는지 확인한 다음 (반환되는 경우 <span class="inline">true</span> ) 플레이어가 게임에서 있었던 이전 단계를 로드합니다. XBox One을 대상으로 하는 경우 이것이 감지될 때 필요한 게임 동작은 인증 문서의 다른 버전 간에 다르므로 최신 버전을 확인하여 게임 <i>이</i> 수행해야 하는 작업을 확인하는 것이 좋습니다.</p><p></p><h4> 통사론:</h4><p class="code">uwp_was_terminated();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if xboxlivewas_terminated()<br />
     {<br />
         buffer_load(&quot;Player_Save.sav&quot;);<br />
         global.GameLoaded = true;<br />

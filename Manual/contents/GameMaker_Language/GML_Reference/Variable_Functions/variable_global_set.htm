@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>variable_global_set</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -12,10 +12,53 @@
   <meta name="rh-index-keywords" content="variable_global_set" />
   <meta name="search-keywords" content="variable_global_set" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>variable_global_set</h1><p> 이 함수를 사용하여 주어진 전역 변수의 값을 설정할 수 있습니다. 값을 <i>문자열로</i> 설정할 전역 변수의 이름(아래 예제 코드 참조)을 제공한 다음 설정할 값(유효한 <a href="../../GML_Overview/Data_Types.htm">데이터 유형일</a> 수 있음)을 제공합니다. 전역 변수가 게임에 이미 존재하지 않으면 생성된 다음 값이 할당됩니다.</p><p></p><h4> 통사론:</h4><p class="code">variable_global_set(name, val);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">name</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name of the global variable to set (as a string)</span></td></tr><tr><td> <span class="notranslate">val</span></td><td> <span data-keyref="Type_Any">변하기 쉬운</span></td><td> <span class="notranslate">The value to set the global variable to</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">variable_global_set</span></h1>
+  <p>이 함수를 사용하여 주어진 전역 변수의 값을 설정할 수 있습니다. 값을 <i>문자열로</i> 설정할 전역 변수의 이름(아래 예제 코드 참조)을 제공한 다음 설정할 값(유효한 <a href="../../GML_Overview/Data_Types.htm">데이터 유형일</a> 수 있음)을 제공합니다. 전역 변수가 게임에 이미 존재하지 않으면 생성된 다음 값이 할당됩니다.</p>
+  <p> </p>
+  <h4>통사론:</h4>
+  <p class="code">variable_global_set(name, val);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>논쟁</th>
+        <th>유형</th>
+        <th>설명</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
+        <td><span class="notranslate">The name of the global variable to set (as a string)</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">val</span></td>
+        <td><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
+        <td><span class="notranslate">The value to set the global variable to</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>보고:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>예시:</h4>
+  <p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br />
     {<br />
         variable_global_set(&quot;enemy_num&quot;, 0);<br />
-    }</p><p> 위의 코드는 전역 변수가 존재하는지 확인하고 존재하지 않으면 생성되어 0으로 설정됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="variable_struct_exists.htm"><span class="notranslate">variable_struct_exists</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    }</p>
+  <p>위의 코드는 전역 변수가 존재하는지 확인하고 존재하지 않으면 생성되어 0으로 설정됩니다.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">뒤로: <a href="Variable_Functions.htm">변수 함수</a></div>
+        <div style="float:right">다음: <a data-xref="{title}" href="variable_struct_exists.htm">struct_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_global_set

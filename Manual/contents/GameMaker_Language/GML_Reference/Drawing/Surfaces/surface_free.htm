@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="surface_free" />
   <meta name="search-keywords" content="surface_free" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_free</h1><p> 표면으로 작업할 때 사용을 마칠 때마다 항상 이 기능을 사용해야 합니다. 표면은 메모리 공간을 차지하므로 일반적으로 방 끝에서 제거해야 하지만 사용 용도에 따라 언제든지 제거할 수 있습니다. 그렇게 하지 않으면 메모리 누수가 발생하여 결국 게임 속도가 느려지고 충돌이 발생할 수 있습니다.</p><p class="note"><b></b> <b>참고</b>: 표면으로 작업할 때 표면이 텍스처 메모리에 저장되어 있기 때문에 언제든지 존재하지 않을 가능성이 있습니다. 다음을 사용하여 표면이 존재하는지 <b>항상</b> 확인해야 합니다.<span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> 직접 참조하기 전에.</p><p></p><h4> 통사론:</h4><p class="code">surface_free(surface_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td><td> <span class="notranslate">The ID of the surface to be freed.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(vk_escape)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">surface_free</span></h1>
+  <p> 표면으로 작업할 때 사용을 마칠 때마다 항상 이 기능을 사용해야 합니다. 표면은 메모리 공간을 차지하므로 일반적으로 방 끝에서 제거해야 하지만 사용 용도에 따라 언제든지 제거할 수 있습니다. 그렇게 하지 않으면 메모리 누수가 발생하여 결국 게임 속도가 느려지고 충돌이 발생할 수 있습니다.</p><p class="note"><b></b> <b>참고</b>: 표면으로 작업할 때 표면이 텍스처 메모리에 저장되어 있기 때문에 언제든지 존재하지 않을 가능성이 있습니다. 다음을 사용하여 표면이 존재하는지 <b>항상</b> 확인해야 합니다.<span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> 직접 참조하기 전에.</p><p></p><h4> 통사론:</h4><p class="code">surface_free(surface_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td><td> <span class="notranslate">The ID of the surface to be freed.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if keyboard_check_pressed(vk_escape)<br />
     {<br />
         <span data-field="title" data-format="default">surface_free</span>(surf);<br />
         room_goto(rm_Menu);<br />

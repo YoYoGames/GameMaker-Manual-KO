@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="tile_get_index" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tile_get_index</h1><p> 이 함수는 타일 데이터 세트에서 타일 인덱스(타일 세트 이미지 내 타일의 위치)를 가져오는 데 사용할 수 있습니다. 함수를 사용하여 검색할 수 있는 타일 데이터를 지정합니다.<a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, 함수는 인덱스에 대한 정수 값을 반환합니다.</p><p> 이 기능을 사용할 때 주어진 타일 데이터가 유효한지 확인하십시오. 그렇지 않으면 반환된 인덱스 값이 유효하지 않아 예기치 않은 동작이 발생할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">tile_get_index(tiledata)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tiledata</span></td><td> <span data-keyref="Type_Real_Tile_Data">타일 데이터</span></td><td> <span class="notranslate">the tile-data to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">tile_get_index</span></h1>
+  <p> 이 함수는 타일 데이터 세트에서 타일 인덱스(타일 세트 이미지 내 타일의 위치)를 가져오는 데 사용할 수 있습니다. 함수를 사용하여 검색할 수 있는 타일 데이터를 지정합니다.<a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, 함수는 인덱스에 대한 정수 값을 반환합니다.</p><p> 이 기능을 사용할 때 주어진 타일 데이터가 유효한지 확인하십시오. 그렇지 않으면 반환된 인덱스 값이 유효하지 않아 예기치 않은 동작이 발생할 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">tile_get_index(tiledata)</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tiledata</span></td><td> <span data-keyref="Type_Real_Tile_Data">타일 데이터</span></td><td> <span class="notranslate">the tile-data to check</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real">Real</span></p><p></p><h4> 예시:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
     var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y);<br />

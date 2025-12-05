@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="file_text_read_real" />
   <meta name="search-keywords" content="file_text_read_real" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_read_real</h1><p> 이 함수를 사용하면 텍스트 파일에서 실수 값을 읽을 수 있으며 이 함수는 사용하거나 변수에 저장할 해당 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">file_text_read_real(fileid);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">fileid</span></td><td><span data-keyref="Type_ID_File_Text"></span></td><td> <span class="notranslate">The id of the file to read from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var file = file_text_open_read(working_directory + &quot;hiscore.txt&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">file_text_read_real</span></h1>
+  <p> 이 함수를 사용하면 텍스트 파일에서 실수 값을 읽을 수 있으며 이 함수는 사용하거나 변수에 저장할 해당 값을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">file_text_read_real(fileid);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">fileid</span></td><td><span data-keyref="Type_ID_File_Text"></span></td><td> <span class="notranslate">The id of the file to read from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">var file = file_text_open_read(working_directory + &quot;hiscore.txt&quot;);<br />
     for (var i = 0; i &lt; 10; ++i;)<br />
     {<br />
         scr[i] = file_text_read_real(file);<br />

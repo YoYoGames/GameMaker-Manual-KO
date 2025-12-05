@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="keyboard_string" />
   <meta name="search-keywords" content="keyboard_string" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_string</h1><p> 이 변수는 키보드에 입력된 마지막(최대) 1024개의 문자를 포함하는 문자열을 보유합니다. 이 문자열에는 입력된 인쇄 가능한 문자만 포함되지만 마지막 문자를 지워 백스페이스 키 <i>를</i> 누르면 올바르게 응답합니다. 이 변수는 읽기 전용이 <i>아니므</i> 로 변경할 수 있습니다. 예를 들어 이미 처리한 경우 &quot;&quot;(빈 문자열)로 설정하고 <a href="../../Strings/Strings.htm">문자열 함수</a> 를 사용하여 조작할 수 있습니다. 온스크린 <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">가상 키보드</a> 를 사용할 때 이 변수 <i>만</i> 키보드 입력으로 업데이트됩니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">keyboard_string;</p><p></p><h4> <b>보고:</b></h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> <b>예시:</b></h4><p class="code">if string_length(keyboard_string) &gt; 15<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">keyboard_string</span></h1>
+  <p> 이 변수는 키보드에 입력된 마지막(최대) 1024개의 문자를 포함하는 문자열을 보유합니다. 이 문자열에는 입력된 인쇄 가능한 문자만 포함되지만 마지막 문자를 지워 백스페이스 키 <i>를</i> 누르면 올바르게 응답합니다. 이 변수는 읽기 전용이 <i>아니므</i> 로 변경할 수 있습니다. 예를 들어 이미 처리한 경우 &quot;&quot;(빈 문자열)로 설정하고 <a href="../../Strings/Strings.htm">문자열 함수</a> 를 사용하여 조작할 수 있습니다. 온스크린 <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">가상 키보드</a> 를 사용할 때 이 변수 <i>만</i> 키보드 입력으로 업데이트됩니다.</p><p></p><h4> <b>통사론:</b></h4><p class="code">keyboard_string;</p><p></p><h4> <b>보고:</b></h4><p class="code"><span data-keyref="Type_String"></span></p><p></p><h4> <b>예시:</b></h4><p class="code">if string_length(keyboard_string) &gt; 15<br />
     {<br />
         keyboard_string = string_copy(keyboard_string, 1, 15);<br />
     }</p><p> 위의 코드는 키보드 문자열의 길이를 15자로 제한하고 처음 15자를 변수에 다시 복사하여 해당 제한을 초과하는 문자열을 제거합니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Keyboard_Input.htm">키보드 입력</a></div><div style="float:right"> 다음: <a href="io_clear.htm"><span class="notranslate">io_clear</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 판권 소유</span></h5>

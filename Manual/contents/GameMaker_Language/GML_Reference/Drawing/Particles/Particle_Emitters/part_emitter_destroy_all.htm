@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="part_emitter_destroy_all" />
   <meta name="search-keywords" content="part_emitter_destroy_all" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_emitter_destroy_all</h1><p> 이 함수는 주어진 시스템에서 정의된 모든 이미터를 제거하고 메모리에서 지웁니다(이는 또한 주어진 이미터에서 생성되는 파티클을 중지하지만 공간에서 제거하지는 <i>않습니다</i> ). 이 함수는 시스템에서 메모리 누수 및 오류를 방지하기 위해 이미터가 더 이상 필요하지 않을 때 항상 호출되어야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_emitter_destroy_all( ps );</p><table><tbody><tr class="rh-cursor-column"><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ps</span></td><td><span data-keyref="Type_ID_PartSys"></span></td><td> <span class="notranslate">The particle system to destroy all emitters from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if lives == 0<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">part_emitter_destroy_all</span></h1>
+  <p> 이 함수는 주어진 시스템에서 정의된 모든 이미터를 제거하고 메모리에서 지웁니다(이는 또한 주어진 이미터에서 생성되는 파티클을 중지하지만 공간에서 제거하지는 <i>않습니다</i> ). 이 함수는 시스템에서 메모리 누수 및 오류를 방지하기 위해 이미터가 더 이상 필요하지 않을 때 항상 호출되어야 합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_emitter_destroy_all( ps );</p><table><tbody><tr class="rh-cursor-column"><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ps</span></td><td><span data-keyref="Type_ID_PartSys"></span></td><td> <span class="notranslate">The particle system to destroy all emitters from.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if lives == 0<br />
     {<br />
         part_emitter_destroy_all(global.Sname);<br />
         room_goto(rm_Menu);<br />

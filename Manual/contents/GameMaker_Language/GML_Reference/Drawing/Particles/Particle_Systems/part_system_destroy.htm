@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="part_system_destroy" />
   <meta name="search-keywords" content="part_system_destroy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_destroy</h1><p> 이 기능을 사용하면 주어진 입자 시스템을 파괴하고 메모리에서 제거할 수 있습니다. 이것은 방의 끝이나 인스턴스의 파괴 이벤트와 같이 시스템이 더 이상 필요하지 않을 때 항상 호출되어야 합니다. 그렇지 않으면 나중에 방에 파티클이 나타나고 제거할 방법이 없습니다 결국 게임을 중단시키는 메모리 누수.</p><p class="note"> <b>참고</b>: 이 기능은 또한 생성되고 파괴되는 시스템과 관련되었을 수 있는 모든 이미터를 파괴하고 제거합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_system_destroy(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to destroy.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (global.player_hp &lt;= 0)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">part_system_destroy</span></h1>
+  <p> 이 기능을 사용하면 주어진 입자 시스템을 파괴하고 메모리에서 제거할 수 있습니다. 이것은 방의 끝이나 인스턴스의 파괴 이벤트와 같이 시스템이 더 이상 필요하지 않을 때 항상 호출되어야 합니다. 그렇지 않으면 나중에 방에 파티클이 나타나고 제거할 방법이 없습니다 결국 게임을 중단시키는 메모리 누수.</p><p class="note"> <b>참고</b>: 이 기능은 또한 생성되고 파괴되는 시스템과 관련되었을 수 있는 모든 이미터를 파괴하고 제거합니다.</p><p></p><h4> 통사론:</h4><p class="code">part_system_destroy(ind);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">ind</span></td><td> <span data-keyref="Type_ID_PartSys">입자 시스템 ID</span></td><td> <span class="notranslate">The index of the particle system to destroy.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if (global.player_hp &lt;= 0)<br />
     {<br />
         part_system_destroy(p_sys);<br />
         room_goto_next();<br />

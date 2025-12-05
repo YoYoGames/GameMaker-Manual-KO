@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_struct_remove</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>struct_remove</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -12,10 +12,53 @@
   <meta name="rh-index-keywords" content="variable_struct_remove" />
   <meta name="search-keywords" content="variable_struct_remove" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> variable_struct_remove</h1><p> <span>이 함수를 사용하면 구조체에서 변수를 제거할 수 있습니다. 변수를 제거할 구조체 ID와 제거할 변수의 문자열 이름을 제공합니다.</span></p><p></p><h4> 통사론:</h4><p class="code">variable_struct_remove(struct, name);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">struct</span></td><td> <span data-keyref="Type_Struct"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">구조체</a></span></td><td> <span class="notranslate">The struct reference to remove the variable from</span></td></tr><tr><td> <span class="notranslate">name</span></td><td> <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">끈</a></span></td><td> <span class="notranslate">The name of the variable to remove (as a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">if variable_struct_exists(mystruct, &quot;shields&quot;)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">struct_remove</span></h1>
+  <p><span>이 함수를 사용하면 구조체에서 변수를 제거할 수 있습니다. 변수를 제거할 구조체 ID와 제거할 변수의 문자열 이름을 제공합니다.</span></p>
+  <p> </p>
+  <h4>통사론:</h4>
+  <p class="code"><span data-field="title" data-format="default">struct_remove</span>(struct, name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>논쟁</th>
+        <th>유형</th>
+        <th>설명</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">struct</span></td>
+        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
+        <td><span class="notranslate">The struct reference to remove the variable from</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
+        <td><span class="notranslate">The name of the variable to remove (as a string)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>보고:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>예시:</h4>
+  <p class="code">if struct_exists(mystruct, &quot;shields&quot;)<br />
     {<br />
-        variable_struct_remove(mystruct, &quot;shields&quot;);<br />
-    }</p><p> 위의 코드는 주어진 변수가 주어진 구조체에 존재하는지 확인하고 존재한다면 제거됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 뒤로: <a href="Variable_Functions.htm">변수 함수</a></div><div style="float:right"> 다음: <a href="variable_struct_get_names.htm"><span class="notranslate">variable_struct_get_names</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+        struct_remove(mystruct, &quot;shields&quot;);<br />
+    }</p>
+  <p>위의 코드는 주어진 변수가 주어진 구조체에 존재하는지 확인하고 존재한다면 제거됩니다.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">뒤로: <a data-xref="{title}" href="Variable_Functions.htm">변수 함수</a></div>
+        <div style="float:right">다음: <a data-xref="{title}" href="variable_struct_get_names.htm">struct_get_names</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_struct_remove
