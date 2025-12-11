@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="uwp_is_constrained" />
   <meta name="search-keywords" content="uwp_is_constrained" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_is_constrained</h1><p> 이 함수는 반환됩니다 <span class="inline">true</span> 게임이 리소스 제한 모드에서 실행 중인 경우 또는 <span class="inline">false</span> 정상적으로 실행되는 경우. 리소스 제한 모드는 게임에 포커스가 없을 때 활성화될 수 있으며 이 모드에서 게임은 GPU 리소스를 줄였습니다. 이에 대한 응답은 일반적으로 게임을 일시 중지하는 것이어야 합니다(사용자가 더 이상 제어할 수 없기 때문에). 또한 이 모드에서 속도 저하가 관찰되는 경우 특히 과세 효과를 비활성화하는 것이 좋습니다. 참고로 달리<a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a> 함수, 이 함수는 반환합니다 <span class="inline">true</span> 게임이 제한 모드에 있는 한 계속해서(처음 발생했을 때 한 번이 아님).</p><p></p><h4> 통사론:</h4><p class="code">uwp_is_constrained();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if xboxliveis_constrained()<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_is_constrained</h1>
+  <p> 이 함수는 반환됩니다 <span class="inline">true</span> 게임이 리소스 제한 모드에서 실행 중인 경우 또는 <span class="inline">false</span> 정상적으로 실행되는 경우. 리소스 제한 모드는 게임에 포커스가 없을 때 활성화될 수 있으며 이 모드에서 게임은 GPU 리소스를 줄였습니다. 이에 대한 응답은 일반적으로 게임을 일시 중지하는 것이어야 합니다(사용자가 더 이상 제어할 수 없기 때문에). 또한 이 모드에서 속도 저하가 관찰되는 경우 특히 과세 효과를 비활성화하는 것이 좋습니다. 참고로 달리<a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a> 함수, 이 함수는 반환합니다 <span class="inline">true</span> 게임이 제한 모드에 있는 한 계속해서(처음 발생했을 때 한 번이 아님).</p><p></p><h4> 통사론:</h4><p class="code">uwp_is_constrained();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"></span></p><p></p><h4> 예시:</h4><p class="code">if xboxliveis_constrained()<br />
     {<br />
         if (!instance_exists(obj_PauseMenu)) <br />
         {<br />

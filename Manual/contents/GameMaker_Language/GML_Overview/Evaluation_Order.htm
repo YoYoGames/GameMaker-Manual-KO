@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="평가 순서" />
   <meta name="search-keywords" content="평가 순서" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 평가 순서</h1><p> GameMaker Language를 사용하여 게임을 프로그래밍할 때 함수 호출 인수 <strong>가 평가 순서를 보장하지 않는다는</strong> 점에 유의해야 합니다. 이것이 의미하는 바는 코드에 배치된 함수가 실행되는 순서가 플랫폼마다 변경되므로 명시적인 방식으로 코드를 작성해야 한다는 것입니다. 이는 다른 대상 플랫폼 간의 최적화 차이 때문입니다. 예를 들어 Windows 대상 함수 인수는 오른쪽에서 왼쪽으로 평가될 수 있지만 HTML5 대상에서는 왼쪽에서 오른쪽으로 평가될 수 있습니다. 따라서 문제를 피하려면 평가 순서에 의존하여 구축할 수 있으므로 단일 함수 호출의 인수에서 여러 함수를 호출하지 않는 것이 가장 좋습니다.</p><p> 이것이 의미하는 바의 예를 보려면 <a href="Script_Functions.htm">스크립트 함수</a> &quot;<span class="inline">buffer_get_info</span> &quot; 여러 <a href="Runtime_Functions.htm">런타임 함수</a> 를 호출하고 인수로 사용합니다.</p><p class="code">buffer_seek(buff, buffer_seek_start, 0);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 평가 순서</h1>
+  <p> GameMaker Language를 사용하여 게임을 프로그래밍할 때 함수 호출 인수 <strong>가 평가 순서를 보장하지 않는다는</strong> 점에 유의해야 합니다. 이것이 의미하는 바는 코드에 배치된 함수가 실행되는 순서가 플랫폼마다 변경되므로 명시적인 방식으로 코드를 작성해야 한다는 것입니다. 이는 다른 대상 플랫폼 간의 최적화 차이 때문입니다. 예를 들어 Windows 대상 함수 인수는 오른쪽에서 왼쪽으로 평가될 수 있지만 HTML5 대상에서는 왼쪽에서 오른쪽으로 평가될 수 있습니다. 따라서 문제를 피하려면 평가 순서에 의존하여 구축할 수 있으므로 단일 함수 호출의 인수에서 여러 함수를 호출하지 않는 것이 가장 좋습니다.</p><p> 이것이 의미하는 바의 예를 보려면 <a href="Script_Functions.htm">스크립트 함수</a> &quot;<span class="inline">buffer_get_info</span> &quot; 여러 <a href="Runtime_Functions.htm">런타임 함수</a> 를 호출하고 인수로 사용합니다.</p><p class="code">buffer_seek(buff, buffer_seek_start, 0);<br />
     buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff, buffer_s16),buffer_read(buff, buffer_s16));</p><p> 자, 여기서 문제는 일부 플랫폼에서 <i>마지막</i> <span class="inline">buffer_read()</span> <i>먼저</i> 호출되므로 스크립트의 모든 인수는 버퍼에서 데이터를 &quot;역&quot;순서로 인식하므로 잘못될 것입니다. 이것은 여기에 대한 모든 추가 값에 영향을 미치는 연쇄 효과가 있습니다. <span class="inline">buffer_read()</span> 함수이므로 이 스크립트 함수에 전달되는 모든 인수는 잘못될 것입니다!</p><p> 이 문제를 해결하려면 다음과 같이 필요한 순서로 함수를 <i>명시적으로</i> 호출하고 반환된 값을 변수에 저장해야 합니다.</p><p class="code">var val[0] = buffer_read(buff, buffer_s8);<br />
     var val[1] = buffer_read(buff, buffer_s16);<br />
     var val[2] = buffer_read(buff, buffer_s16);<br />

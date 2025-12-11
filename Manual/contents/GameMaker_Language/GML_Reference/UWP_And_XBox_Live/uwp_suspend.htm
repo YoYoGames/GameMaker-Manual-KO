@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="uwp_suspend" />
   <meta name="search-keywords" content="uwp_suspend" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_suspend</h1><p> 이 기능은 앱이 일시 중단 요청을 감지한 후 데이터 저장을 완료했음을 시스템에 나타냅니다. 이 함수를 호출하는 것은 Xbox One 제출을 위한 요구 사항이며 항상 함수와 함께 사용해야 합니다.<a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>, 아래 예와 같이.</p><p></p><h4> 통사론:</h4><p class="code">uwp_suspend();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if uwp_is_suspending()<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_suspend</h1>
+  <p> 이 기능은 앱이 일시 중단 요청을 감지한 후 데이터 저장을 완료했음을 시스템에 나타냅니다. 이 함수를 호출하는 것은 Xbox One 제출을 위한 요구 사항이며 항상 함수와 함께 사용해야 합니다.<a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>, 아래 예와 같이.</p><p></p><h4> 통사론:</h4><p class="code">uwp_suspend();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if uwp_is_suspending()<br />
     {<br />
         scr_Save_Game_Data();<br />
         uwp_suspend();<br />

@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="스크립트 함수 및 변수" />
   <meta name="search-keywords" content="사용자 정의 함수,스크립트 기능,지엠콜백_,지엠콜백" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 스크립트 함수 및 변수</h1><p> 스크립트 자산은 본질적으로 <a href="../../The_Asset_Editors/Scripts.htm">스크립트 편집기</a> 에서 코드 조각으로 직접 작성하는 하나 이상의 사용자 정의 함수 또는 변수의 모음입니다. 스크립트에서 정의한 함수는 표현식을 해석하거나 값을 반환하거나 내장 <a href="Runtime_Functions.htm">런타임 함수</a> 와 마찬가지로 GameMaker Language에서 허용하는 모든 작업을 수행할 수 있습니다.</p><p> 스크립트 함수는 일반적으로 둘 이상의 장소 또는 개체에서 사용하는 코드 블록이 있거나 모듈 방식으로 여러 개체에 걸쳐 코드 블록을 사용하려는 경우에 사용해야 합니다. 스크립트를 사용하여 함수를 정의한다는 것은 필요할 때 한 번만 함수를 변경할 수 있고 해당 함수를 호출하는 모든 객체가 변경 사항을 &quot;선택&quot;한다는 것을 의미합니다.</p><p> 스크립트는 또한 특정 범주에 속하는 기능 그룹을 생성할 수 있게 해주기 때문에 조직적 관점에서 매우 편리할 수 있습니다. 예를 들어 게임의 인스턴스 간 충돌과 관련된 여러 기능이 있을 수 있으므로 &quot;를 생성<span class="inline">Collision_Functions</span> &quot; 스크립트를 작성하고 이 모든 기능을 함께 저장합니다.</p><p> 참조: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">스크립트 함수와 메서드</a></p><h2> 함수 생성</h2><p> 함수가 포함된 스크립트를 생성할 때 함수는 다음 형식을 사용하여 생성해야 합니다.</p><p class="code"><span>function name( parameter1, parameter2, ... )<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 스크립트 함수 및 변수</h1>
+  <p> 스크립트 자산은 본질적으로 <a href="../../The_Asset_Editors/Scripts.htm">스크립트 편집기</a> 에서 코드 조각으로 직접 작성하는 하나 이상의 사용자 정의 함수 또는 변수의 모음입니다. 스크립트에서 정의한 함수는 표현식을 해석하거나 값을 반환하거나 내장 <a href="Runtime_Functions.htm">런타임 함수</a> 와 마찬가지로 GameMaker Language에서 허용하는 모든 작업을 수행할 수 있습니다.</p><p> 스크립트 함수는 일반적으로 둘 이상의 장소 또는 개체에서 사용하는 코드 블록이 있거나 모듈 방식으로 여러 개체에 걸쳐 코드 블록을 사용하려는 경우에 사용해야 합니다. 스크립트를 사용하여 함수를 정의한다는 것은 필요할 때 한 번만 함수를 변경할 수 있고 해당 함수를 호출하는 모든 객체가 변경 사항을 &quot;선택&quot;한다는 것을 의미합니다.</p><p> 스크립트는 또한 특정 범주에 속하는 기능 그룹을 생성할 수 있게 해주기 때문에 조직적 관점에서 매우 편리할 수 있습니다. 예를 들어 게임의 인스턴스 간 충돌과 관련된 여러 기능이 있을 수 있으므로 &quot;를 생성<span class="inline">Collision_Functions</span> &quot; 스크립트를 작성하고 이 모든 기능을 함께 저장합니다.</p><p> 참조: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">스크립트 함수와 메서드</a></p><h2> 함수 생성</h2><p> 함수가 포함된 스크립트를 생성할 때 함수는 다음 형식을 사용하여 생성해야 합니다.</p><p class="code"><span>function name( parameter1, parameter2, ... )<br />
       {</span><br />
     <span>    statement1;</span><br />
     <span>    statement2;</span><br />

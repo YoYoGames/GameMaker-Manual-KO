@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="keyboard_virtual_hide" />
   <meta name="search-keywords" content="keyboard_virtual_hide" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_virtual_hide</h1><p> 이 기능을 사용하여 게임을 실행하는 장치에서 가상 키보드를 숨길 수 있습니다. 이 함수를 호출하면 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">시스템 비동기 이벤트</a> 가 생성되며, 여기서 <span class="inline">async_load</span> DS 맵은 다음 키/값 쌍으로 채워집니다.</p><ul class="colour"><li> &quot; <b>event_type</b> &quot; - 가상 키보드 기능에 의해 트리거될 때 &quot; <b>가상 키보드 상태</b> &quot;가 됩니다.</li><li> &quot; <b>screen_height</b> &quot; - 가상 키보드의 높이(픽셀 단위). 키보드가 보이지 않으면 0이 됩니다.</li><li> &quot; <b>keyboard_status</b> &quot; - 키보드의 현재 상태로, 다음 문자열 중 하나로 반환됩니다.<ul class="colour"><li> &quot;숨김&quot;</li><li> &quot;숨겨진&quot;</li><li> &quot;전시&quot;</li><li> &quot;보이는&quot;</li></ul></li></ul><p></p><h4> 통사론</h4><p class="code">keyboard_virtual_hide();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if input == true<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">keyboard_virtual_hide</span></h1>
+  <p> 이 기능을 사용하여 게임을 실행하는 장치에서 가상 키보드를 숨길 수 있습니다. 이 함수를 호출하면 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">시스템 비동기 이벤트</a> 가 생성되며, 여기서 <span class="inline">async_load</span> DS 맵은 다음 키/값 쌍으로 채워집니다.</p><ul class="colour"><li> &quot; <b>event_type</b> &quot; - 가상 키보드 기능에 의해 트리거될 때 &quot; <b>가상 키보드 상태</b> &quot;가 됩니다.</li><li> &quot; <b>screen_height</b> &quot; - 가상 키보드의 높이(픽셀 단위). 키보드가 보이지 않으면 0이 됩니다.</li><li> &quot; <b>keyboard_status</b> &quot; - 키보드의 현재 상태로, 다음 문자열 중 하나로 반환됩니다.<ul class="colour"><li> &quot;숨김&quot;</li><li> &quot;숨겨진&quot;</li><li> &quot;전시&quot;</li><li> &quot;보이는&quot;</li></ul></li></ul><p></p><h4> 통사론</h4><p class="code">keyboard_virtual_hide();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void"></span></p><p></p><h4> 예시:</h4><p class="code">if input == true<br />
     {<br />
         input = false;<br />
         keyboard_virtual_hide();<br />

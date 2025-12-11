@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="코드 주석 처리" />
   <meta name="search-keywords" content="코멘트,지역,끝 지역,지역" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 코드 주석 달기</h1><p> 다른 사람들과 공동 작업을 할 때, 대규모 프로젝트를 다룰 때, 또는 자신의 참조 및 디버깅을 위해서라도 이벤트 코드와 스크립트에 주석을 남기는 것은 매우 중요합니다. <span data-keyref="GameMaker Name">GameMaker</span> 에는 현재 편집 중인 개체의 이벤트 목록에서 볼 수 있는 코드 섹션 및 전체 코드 블록에 대한 메모와 설명을 남길 수 있는 다양한 메커니즘이 있습니다. 이런 식으로 자신과 동료에게 메모를 남기거나 특히 까다로운 코드를 설명하거나, 어떤 작업이 수행되는지 또는 앞으로 하고 싶은 작업에 대한 알림을 남길 수 있습니다.</p><p> 간단한 한 줄 댓글을 남기려면 가장 먼저 할 수 있는 일은 다음을 사용하는 것입니다.<span class="inline"><b><span class="inline">//</span> 텍스트 전에. 예를 들어:</p><p class="code">//initialize variables<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 코드 주석 달기</h1>
+  <p> 다른 사람들과 공동 작업을 할 때, 대규모 프로젝트를 다룰 때, 또는 자신의 참조 및 디버깅을 위해서라도 이벤트 코드와 스크립트에 주석을 남기는 것은 매우 중요합니다. <span data-keyref="GameMaker Name">GameMaker</span> 에는 현재 편집 중인 개체의 이벤트 목록에서 볼 수 있는 코드 섹션 및 전체 코드 블록에 대한 메모와 설명을 남길 수 있는 다양한 메커니즘이 있습니다. 이런 식으로 자신과 동료에게 메모를 남기거나 특히 까다로운 코드를 설명하거나, 어떤 작업이 수행되는지 또는 앞으로 하고 싶은 작업에 대한 알림을 남길 수 있습니다.</p><p> 간단한 한 줄 댓글을 남기려면 가장 먼저 할 수 있는 일은 다음을 사용하는 것입니다.<span class="inline"><b><span class="inline">//</span> 텍스트 전에. 예를 들어:</p><p class="code">//initialize variables<br />
     sr = 10;<br />
     hp = 100;</p><p> 여러 줄 주석을 남길 수도 있고, 크레딧을 주기 위해, 디버깅을 위해 코드의 전체 섹션을 생략하거나 미래에 코드를 변경하는 방법에 대한 메모를 남길 수도 있습니다. 그것을 위해 당신은 사용할 수 있습니다<b><span class="inline">/* ... */</span></b> 이와 같이:</p><p class="code">/*<br />
     Setup GIF Variables to initial values (these can be edited so you don&#39;t need to use the setter functions all the time if you are always using the same values)<br />

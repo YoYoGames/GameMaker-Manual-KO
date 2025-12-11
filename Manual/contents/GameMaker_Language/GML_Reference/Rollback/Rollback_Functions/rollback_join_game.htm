@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>롤백_조인_게임</title>
+  <title>rollback_join_game</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
   <meta name="rh-index-keywords" content="롤백_조인_게임" />
   <meta name="search-keywords" content="롤백_조인_게임" />
 </head>
-<body><h1>롤백_조인_게임</h1><p> 이 기능은 게임에 참여를 시도합니다. 참가할 가상 회의실의 ID가 포함된 URL에 있어야 합니다.</p><p> 방에 참가했다면 <span class="inline2">true</span> 를 반환하고, 참가한 게임이 없으면 <span class="inline2">false</span> 를 반환합니다.</p><p> 새로운 플레이어가 이미 참여하고 있는 게임에 참가하면 <strong>롤백 이벤트</strong> 이벤트가 트리거됩니다. 자세한 내용은 <a data-xref="{title}" href="../Rollback_Events.htm">롤백 이벤트</a> 를 참조하십시오.</p><p> <span class="inline2">dry_run</span> 인수는 선택 사항이며 <span class="inline2">true</span> 로 설정하면 실제로 게임에 참여하지 않고도 함수를 실행할 수 있습니다. 게임에 실제로 참여하지 않고도 게임에 참여할 수 있는지 확인하는 데 사용됩니다.</p><p></p><h4> 통사론:</h4><p class="code">rollback_join_game([dry_run]);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">dry_run</span></td><td> <span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">부울</a></span></td><td> <span class="notranslate">Disabled by default ( <span class="inline2">false</span> ). When enabled ( <span class="inline2">true</span> ), the function doesn&#39;t join the game, but simply returns <span class="inline2">true</span> if one can be joined, or <span class="inline2">false</span> otherwise.<br /><br /> This way you can use this function to only check if the player was invited.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p><p></p><h4> 예시:</h4><p class="code">rollback_define_player(obj_player);<br />
+<h1><span data-field="title" data-format="default">rollback_join_game</span></h1>
     var _joined = rollback_join_game();<br />
     <br />
     if (!_joined)<br />

@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="with" />
   <meta name="search-keywords" content="with" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>with</h1><p> 다른 인스턴스의 <a href="../Addressing_Variables_In_Other_Instances.htm">변수 주소 지정</a> 섹션에 표시된 대로 현재 주어진 코드를 실행하고 있는 것과 다른 인스턴스와 <a href="../Structs.htm">구조체</a> 의 변수 값을 읽고 변경할 수 있습니다. 그러나 많은 경우 다른 인스턴스 내에서 단일 변수를 변경하는 것보다 훨씬 더 많은 작업을 수행하고 여러 기능과 코드 줄을 필요로 하는 더 복잡한 코드 작업을 수행하기를 원할 수 있습니다. 예를 들어, 게임에서 공 개체의 모든 인스턴스를 8픽셀 아래로 이동하려고 한다고 상상해 보십시오. 다음 코드로 간단히 달성할 수 있다고 생각할 수 있습니다.</p><p class="code">obj_ball.y = obj_ball.y + 8;</p><p> 그러나 할당의 오른쪽이 첫 번째 공의 y 좌표 값을 얻고 여기에 8을 더하기 때문에 이것은 옳지 않습니다. 다음으로 이 새 값은 <em>모든</em> 공의 y 좌표로 설정되므로 다음을 사용하더라도 모든 공이 동일한 y 좌표를 갖게 됩니다.</p><p class="code">obj_ball.y += 8;</p><p> 그것은 단순히 첫 번째 명령문의 약어이기 때문에 정확히 동일한 효과를 가집니다. 그렇다면 어떻게 <i>해야</i> 이런 결과를 얻을 수 있을까요? 그렇기 때문에 <span class="inline">with</span> 문이 GML에 존재합니다. 그만큼 <span class="inline">with</span> 문에는 다음과 같은 구문이 있습니다.</p><p class="code">with (&lt;expression&gt;)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>with</h1>
+  <p> 다른 인스턴스의 <a href="../Addressing_Variables_In_Other_Instances.htm">변수 주소 지정</a> 섹션에 표시된 대로 현재 주어진 코드를 실행하고 있는 것과 다른 인스턴스와 <a href="../Structs.htm">구조체</a> 의 변수 값을 읽고 변경할 수 있습니다. 그러나 많은 경우 다른 인스턴스 내에서 단일 변수를 변경하는 것보다 훨씬 더 많은 작업을 수행하고 여러 기능과 코드 줄을 필요로 하는 더 복잡한 코드 작업을 수행하기를 원할 수 있습니다. 예를 들어, 게임에서 공 개체의 모든 인스턴스를 8픽셀 아래로 이동하려고 한다고 상상해 보십시오. 다음 코드로 간단히 달성할 수 있다고 생각할 수 있습니다.</p><p class="code">obj_ball.y = obj_ball.y + 8;</p><p> 그러나 할당의 오른쪽이 첫 번째 공의 y 좌표 값을 얻고 여기에 8을 더하기 때문에 이것은 옳지 않습니다. 다음으로 이 새 값은 <em>모든</em> 공의 y 좌표로 설정되므로 다음을 사용하더라도 모든 공이 동일한 y 좌표를 갖게 됩니다.</p><p class="code">obj_ball.y += 8;</p><p> 그것은 단순히 첫 번째 명령문의 약어이기 때문에 정확히 동일한 효과를 가집니다. 그렇다면 어떻게 <i>해야</i> 이런 결과를 얻을 수 있을까요? 그렇기 때문에 <span class="inline">with</span> 문이 GML에 존재합니다. 그만큼 <span class="inline">with</span> 문에는 다음과 같은 구문이 있습니다.</p><p class="code">with (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />

@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="숫자 함수,번호" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> 숫자 함수</h1><p> <span data-keyref="GameMaker Name">GameMaker</span> 의 실수는 <i>배정도 부동 소수점 숫자로</i> <i>간주</i> 됩니다. 즉, 소수점 앞이나 뒤에 고정된 자릿수가 없는 소수점이 있습니다. 소수점 값이 없습니다. 예를 들어 2는 정수이지만 2.01은 부동 소수점 실수입니다.</p><p class="note"> <b>참고</b>: <b>HTML5</b> 대상에서 모든 실수는 두 배입니다.</p><p> 정수와 부동 소수점 사이의 이러한 구별은 크로스 플랫폼 개발을 다룰 때 매우 중요합니다. Windows PC에서 수행되는 계산의 정밀도가 모바일 장치에서 수행되는 동일한 계산의 정밀도와 같지 <i>않기</i> 때문입니다. 즉, 비교할 때 특히 주의해야 합니다. 예를 들면 다음과 같습니다.</p><p class="code">if (image_index == 1)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1> 숫자 함수</h1>
+  <p> <span data-keyref="GameMaker Name">GameMaker</span> 의 실수는 <i>배정도 부동 소수점 숫자로</i> <i>간주</i> 됩니다. 즉, 소수점 앞이나 뒤에 고정된 자릿수가 없는 소수점이 있습니다. 소수점 값이 없습니다. 예를 들어 2는 정수이지만 2.01은 부동 소수점 실수입니다.</p><p class="note"> <b>참고</b>: <b>HTML5</b> 대상에서 모든 실수는 두 배입니다.</p><p> 정수와 부동 소수점 사이의 이러한 구별은 크로스 플랫폼 개발을 다룰 때 매우 중요합니다. Windows PC에서 수행되는 계산의 정밀도가 모바일 장치에서 수행되는 동일한 계산의 정밀도와 같지 <i>않기</i> 때문입니다. 즉, 비교할 때 특히 주의해야 합니다. 예를 들면 다음과 같습니다.</p><p class="code">if (image_index == 1)<br />
     {<br />
         do something...<br />
     }</p><p> 위의 예에서 설정한 경우 <span class="inline">image_speed</span> 0.25까지 - 예를 들어 - 4단계 후에 다음과 같이 가정할 수 있습니다. <span class="inline">image_index</span> 값은 1이지만 부동 소수점 수학이 작동하는 방식으로 인해 1.0000002와 같은 값 <i>이 될 수</i> 있으므로 평가는 <span class="inline">true</span>. 이러한 유형의 오류는 디버그하기가 매우 어려울 수 있으므로 항상 이를 인식하고 미리 계획하고 값을 확인하는 다른 수단을 사용하거나 적절한 바닥 또는 반올림 함수(아래 나열)를 사용하여 숫자를 다음으로 변환하는 것이 좋습니다. 정수로 확인하십시오(부동 소수점 수학에 대한 자세한 내용과 이것이 문제인 이유는 <a href="https://floating-point-gui.de/" target="_blank">여기를 참조하십시오</a> ). 예를 들어 위의 코드는 다음과 같이 작성할 수 있습니다.</p><p class="code">if (floor(image_index) == 1)<br />

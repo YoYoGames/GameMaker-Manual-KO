@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="audio_set_listener_mask" />
   <meta name="search-keywords" content="audio_set_listener_mask" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_set_listener_mask</h1><p> 시스템에서 여러 리스너를 사용할 때 사운드에 대한 비트 마스크를 설정하고 플래그가 지정된 리스너에서만 듣게 할 수 있습니다. 그러나 이 기능을 사용하여 <i>전역</i> 마스크를 설정할 수도 있으며 각 사운드에 대해 개별적으로 마스크를 설정할 필요 없이 정상적으로 재생되는 모든 사운드는 이 마스크로 플래그가 지정된 청취자에게서 들을 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_set_listener_mask(mask);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">mask</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The bit-mask data to set for the listeners</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var num = audio_get_listener_count();<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">audio_set_listener_mask</span></h1>
+  <p> 시스템에서 여러 리스너를 사용할 때 사운드에 대한 비트 마스크를 설정하고 플래그가 지정된 리스너에서만 듣게 할 수 있습니다. 그러나 이 기능을 사용하여 <i>전역</i> 마스크를 설정할 수도 있으며 각 사운드에 대해 개별적으로 마스크를 설정할 필요 없이 정상적으로 재생되는 모든 사운드는 이 마스크로 플래그가 지정된 청취자에게서 들을 수 있습니다.</p><p></p><h4> 통사론:</h4><p class="code">audio_set_listener_mask(mask);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">mask</span></td><td> <span data-keyref="Type_Real">진짜</span></td><td> <span class="notranslate">The bit-mask data to set for the listeners</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Void">N/A</span></p><p></p><h4> 예시:</h4><p class="code">var num = audio_get_listener_count();<br />
     var mask = 0; for(var i = 0; i &lt; num; ++i;)<br />
     {<br />
         var info = audio_get_listener_info(i);<br />

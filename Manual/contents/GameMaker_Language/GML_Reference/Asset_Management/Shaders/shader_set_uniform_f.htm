@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="shader_set_uniform_f" />
   <meta name="search-keywords" content="shader_set_uniform_f" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>shader_set_uniform_f</h1><p> 이 기능을 사용하여 셰이더 상수의 값(또는 값)을 설정할 수 있습니다. 이전에 함수를 사용하여 상수의 &quot;핸들&quot;을 얻었어야 합니다.<a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>, 그리고 정확한 수의 부동 소수점 값을 전달하기 위해 어떤 유형의 상수인지 알아야 합니다. <span class="inline">vec2</span> 함수에 두 개의 값을 전달해야 합니다.</p><p> 위 규칙의 예외는 32비트 색상 값을 처리하는 경우입니다. 최대 8개의 32비트 색상 값을 셰이더에 전달할 수 있으며 자동으로 0 - 1의 vec4 값으로 변환됩니다. 그러나 이를 위해서는 셰이더 상수 이름을 <i>사용해야</i> 합니다. <span class="inline">in_Colour</span>, 단일 색상의 경우 또는 <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, 등... 까지 <span class="inline">in_Colour7</span> 여러 입력 값의 경우. 다음 예제는 이것이 셰이더 자체에서 어떻게 보이는지 보여줍니다.</p><p class="code">    //Single colour<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
+  <p> 이 기능을 사용하여 셰이더 상수의 값(또는 값)을 설정할 수 있습니다. 이전에 함수를 사용하여 상수의 &quot;핸들&quot;을 얻었어야 합니다.<a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>, 그리고 정확한 수의 부동 소수점 값을 전달하기 위해 어떤 유형의 상수인지 알아야 합니다. <span class="inline">vec2</span> 함수에 두 개의 값을 전달해야 합니다.</p><p> 위 규칙의 예외는 32비트 색상 값을 처리하는 경우입니다. 최대 8개의 32비트 색상 값을 셰이더에 전달할 수 있으며 자동으로 0 - 1의 vec4 값으로 변환됩니다. 그러나 이를 위해서는 셰이더 상수 이름을 <i>사용해야</i> 합니다. <span class="inline">in_Colour</span>, 단일 색상의 경우 또는 <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, 등... 까지 <span class="inline">in_Colour7</span> 여러 입력 값의 경우. 다음 예제는 이것이 셰이더 자체에서 어떻게 보이는지 보여줍니다.</p><p class="code">    //Single colour<br />
         attribute vec2 in_Position;<br />
         attribute vec4 in_Colour;<br />
         attribute vec2 in_TextureCoord;<br />

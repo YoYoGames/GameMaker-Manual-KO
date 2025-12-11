@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="texturegroup_get_sprites" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texturegroup_get_sprites</h1><p> 이 함수를 사용하면 주어진 텍스처 그룹 내에서 텍스처 페이지에 할당된 각 스프라이트의 스프라이트 인덱스를 검색할 수 있습니다. 텍스처 그룹 ID 문자열(텍스처 그룹 편집기에 정의된 대로)을 제공하면 이 함수는 각 항목에 스프라이트 리소스에 대한 스프라이트 인덱스가 포함된 1D 배열을 반환합니다. 함수가 실패하면(예: 유효하지 않은 그룹이 지정되거나 그룹에 할당된 텍스처가 없는 경우) 배열은 비어 있습니다(0 길이).</p><p></p><h4> 통사론:</h4><p class="code">texturegroup_get_sprites(tex_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tex</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name of the texture group to check (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span></p><p></p><h4> 예시:</h4><p class="code">var _tex_array = texturegroup_get_sprites( &quot;MainMenu&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">texturegroup_get_sprites</span></h1>
+  <p> 이 함수를 사용하면 주어진 텍스처 그룹 내에서 텍스처 페이지에 할당된 각 스프라이트의 스프라이트 인덱스를 검색할 수 있습니다. 텍스처 그룹 ID 문자열(텍스처 그룹 편집기에 정의된 대로)을 제공하면 이 함수는 각 항목에 스프라이트 리소스에 대한 스프라이트 인덱스가 포함된 1D 배열을 반환합니다. 함수가 실패하면(예: 유효하지 않은 그룹이 지정되거나 그룹에 할당된 텍스처가 없는 경우) 배열은 비어 있습니다(0 길이).</p><p></p><h4> 통사론:</h4><p class="code">texturegroup_get_sprites(tex_id);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">tex</span></td><td> <span data-keyref="Type_String">끈</span></td><td> <span class="notranslate">The name of the texture group to check (a string)</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span></p><p></p><h4> 예시:</h4><p class="code">var _tex_array = texturegroup_get_sprites( &quot;MainMenu&quot;);<br />
     for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br />
     {<br />
         show_debug_message(&quot;Sprite &quot; + string(i) + &quot; Index:&quot; + string(tex_array[i]));<br />

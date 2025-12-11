@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="uwp_license_trial_time_remaining" />
   <meta name="search-keywords" content="uwp_license_trial_time_remaining" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_license_trial_time_remaining</h1><p> 이 함수는 시간 기반 평가판이 만료될 때까지 대략적인 시간(초)을 반환합니다. 평가판이 시간 기반이 아니거나 게임이 평가판 모드에서 실행되고 있지 않으면 이 함수에서 반환된 값은 의미가 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">uwp_license_trial_time_remaining();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if uwp_license_trial_version()<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_license_trial_time_remaining</h1>
+  <p> 이 함수는 시간 기반 평가판이 만료될 때까지 대략적인 시간(초)을 반환합니다. 평가판이 시간 기반이 아니거나 게임이 평가판 모드에서 실행되고 있지 않으면 이 함수에서 반환된 값은 의미가 없습니다.</p><p></p><h4> 통사론:</h4><p class="code">uwp_license_trial_time_remaining();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if uwp_license_trial_version()<br />
     {<br />
         var secs = uwp_license_trial_time_remaining() mod 60;<br />
         var mins = uwp_license_trial_time_remaining() div 60;<br />

@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="skeleton_get_minmax" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_get_minmax</h1><p> 이 함수는 스켈레톤 애니메이션 스프라이트에 할당된 모든 개별 경계 상자에 대한 총 경계 상자 값이 있는 배열을 반환합니다. 반환된 배열에는 4개의 요소가 있습니다.</p><ul class="colour"><li> [0] - 모든 경계 상자의 최소 x 위치</li><li> [1] - 모든 경계 상자의 최소 y 위치</li><li> [2] - 모든 경계 상자의 최대 x 위치</li><li> [3] - 모든 경계 상자의 최대 y 위치</li></ul><div data-conref="../../../../../../assets/snippets/Spine_bounding_box_note.hts"></div><p></p><h4> 통사론:</h4><p class="code">skeleton_get_minmax();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span> (4 elements: xMin, yMin, xMax, yMax)</p><p></p><h4> 예시:</h4><p class="code">var frame = skeleton_animation_get_frame(0);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">skeleton_get_minmax</span></h1>
+  <p> 이 함수는 스켈레톤 애니메이션 스프라이트에 할당된 모든 개별 경계 상자에 대한 총 경계 상자 값이 있는 배열을 반환합니다. 반환된 배열에는 4개의 요소가 있습니다.</p><ul class="colour"><li> [0] - 모든 경계 상자의 최소 x 위치</li><li> [1] - 모든 경계 상자의 최소 y 위치</li><li> [2] - 모든 경계 상자의 최대 x 위치</li><li> [3] - 모든 경계 상자의 최대 y 위치</li></ul><div data-conref="../../../../../../assets/snippets/Spine_bounding_box_note.hts"></div><p></p><h4> 통사론:</h4><p class="code">skeleton_get_minmax();</p><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array">Array</span> (4 elements: xMin, yMin, xMax, yMax)</p><p></p><h4> 예시:</h4><p class="code">var frame = skeleton_animation_get_frame(0);<br />
     if frame &gt; 0 &amp;&amp; frame &lt; 2<br />
     {<br />
         var box = skeleton_get_minmax();<br />

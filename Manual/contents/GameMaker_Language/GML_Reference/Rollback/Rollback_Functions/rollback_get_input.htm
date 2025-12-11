@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>롤백_get_input</title>
+  <title>rollback_get_input</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
   <meta name="rh-index-keywords" content="롤백_get_input" />
   <meta name="search-keywords" content="롤백_get_input" />
 </head>
-<body><h1>롤백_get_input</h1><p> 이 함수는 플레이어의 입력 값을 포함하는 구조체를 반환합니다. 입력이 반환될 플레이어의 ID를 지정하는 선택적 인수가 필요합니다.</p><p> 에 의해 생성된 플레이어 인스턴스에서 사용되는 경우<a href="rollback_define_input.htm"><span class="inline">rollback_define_player()</span></a>, 플레이어 ID를 지정할 필요가 없으므로 인수 없이 이 함수를 호출할 수 있습니다.</p><p> 다른 인스턴스에서 사용하거나 수동으로 생성된 플레이어 인스턴스에서 사용하는 경우 플레이어 ID를 지정해야 합니다.</p><p> 반환되는 입력과 변경 방법에 대한 정보는 입력 <a data-xref="{title}" href="../Defining_Inputs.htm">정의</a> 를 참조하십시오.</p><p></p><h4> 통사론:</h4><p class="code">rollback_get_input(player_id);</p><table><colgroup><col /><col /><col /></colgroup><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">player_id</span></td><td> <span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">진짜</a></span></td><td> <span class="notranslate"><span class="optional">OPTIONAL</span> The ID of the player for which inputs will be returned.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p><p></p><h4> 예시:</h4><p class="code">var _input = rollback_get_input();<br />
+<h1><span data-field="title" data-format="default">rollback_get_input</span></h1>
     <br />
     if (_input.left) x -= 2;<br />
     if (_input.right) x += 2;<br />

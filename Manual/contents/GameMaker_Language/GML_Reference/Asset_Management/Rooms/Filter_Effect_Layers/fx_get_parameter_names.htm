@@ -12,7 +12,10 @@
   <meta name="rh-index-keywords" content="fx_get_parameter_names" />
   <meta name="search-keywords" content="fx_get_parameter_names" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> fx_get_parameter_names</h1><p> 이 기능은 필터/효과에 있는 모든 매개변수의 이름을 검색하는 데 사용됩니다. 읽을 FX 구조체를 지정합니다( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 또는 <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> ) 이 함수는 필터의 매개변수 이름을 문자열로 포함하는 배열을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">fx_get_parameter_names(filter_or_effect);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td><td> <span class="notranslate">The FX struct to get the parameter names of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"></span> (of Strings)</p><p></p><h4> 예시:</h4><p class="code">var _fx_struct = layer_get_fx(&quot;EffectLayer&quot;);<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">fx_get_parameter_names</span></h1>
+  <p> 이 기능은 필터/효과에 있는 모든 매개변수의 이름을 검색하는 데 사용됩니다. 읽을 FX 구조체를 지정합니다( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> 또는 <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> ) 이 함수는 필터의 매개변수 이름을 문자열로 포함하는 배열을 반환합니다.</p><p></p><h4> 통사론:</h4><p class="code">fx_get_parameter_names(filter_or_effect);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td><td> <span class="notranslate">The FX struct to get the parameter names of</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Array"></span> (of Strings)</p><p></p><h4> 예시:</h4><p class="code">var _fx_struct = layer_get_fx(&quot;EffectLayer&quot;);<br />
     var _param_names = fx_get_parameter_names(_fx_struct);<br />
     <br />
     for (var i = 0; i &lt; array_length(_param_names); i ++) {<br />

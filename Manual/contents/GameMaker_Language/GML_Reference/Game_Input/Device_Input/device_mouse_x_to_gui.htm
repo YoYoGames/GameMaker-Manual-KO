@@ -13,7 +13,10 @@
   <meta name="search-keywords" content="device_mouse_x_to_gui" />
   <meta name="is_pure" content="true" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_mouse_x_to_gui</h1><p> 이 함수는 GUI 레이어와 관련하여 장치에서 터치의 x 위치를 반환합니다. GUI 레이어는 화면 해상도 <i>와</i> 방 크기에 관계없이 다른 크기로 설정될 수 있기 때문에 사용자가 화면을 터치한 GUI 레이어의 정확한 지점을 파악하는 것이 때때로 복잡할 수 있습니다. 이 기능을 사용하면 실제 GUI 크기를 기반으로 해당 위치를 얻을 수 있으므로 GUI 버튼과 HUD 요소를 더 쉽게 만들고 상호 작용할 수 있습니다. HTML5 또는 PC 및 Mac 모듈에서 이것을 실행하는 경우 이 값은 장치(일반적으로 마우스)가 연결되어 있는 한 지속적으로 업데이트되지만 모바일 장치의 경우 화면이 켜져 있는 동안에만 업데이트됩니다. 감지할 수 있는 최대 터치 수는 사용 중인 장치와 실행되는 OS에 따라 크게 달라집니다.</p><p></p><h4> 통사론:</h4><p class="code">device_mouse_x_to_gui(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The device (from 0 - <i>n</i> ) that is being checked.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if device_mouse_check_button(0, mb_left)<br />
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">device_mouse_x_to_gui</span></h1>
+  <p> 이 함수는 GUI 레이어와 관련하여 장치에서 터치의 x 위치를 반환합니다. GUI 레이어는 화면 해상도 <i>와</i> 방 크기에 관계없이 다른 크기로 설정될 수 있기 때문에 사용자가 화면을 터치한 GUI 레이어의 정확한 지점을 파악하는 것이 때때로 복잡할 수 있습니다. 이 기능을 사용하면 실제 GUI 크기를 기반으로 해당 위치를 얻을 수 있으므로 GUI 버튼과 HUD 요소를 더 쉽게 만들고 상호 작용할 수 있습니다. HTML5 또는 PC 및 Mac 모듈에서 이것을 실행하는 경우 이 값은 장치(일반적으로 마우스)가 연결되어 있는 한 지속적으로 업데이트되지만 모바일 장치의 경우 화면이 켜져 있는 동안에만 업데이트됩니다. 감지할 수 있는 최대 터치 수는 사용 중인 장치와 실행되는 OS에 따라 크게 달라집니다.</p><p></p><h4> 통사론:</h4><p class="code">device_mouse_x_to_gui(device);</p><table><tbody><tr><th> 논쟁</th><th> 유형</th><th> 설명</th></tr><tr><td> <span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td><td> <span class="notranslate">The device (from 0 - <i>n</i> ) that is being checked.</span></td></tr></tbody></table><p></p><h4> 보고:</h4><p class="code"><span data-keyref="Type_Real"></span></p><p></p><h4> 예시:</h4><p class="code">if device_mouse_check_button(0, mb_left)<br />
     {<br />
         if (device_mouse_x_to_gui(0) &gt; 0 &amp;&amp; device_mouse_x_to_gui(0) &lt; 32) <br />
         {<br />
