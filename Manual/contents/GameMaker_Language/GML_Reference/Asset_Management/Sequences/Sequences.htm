@@ -26,14 +26,16 @@
     graphickeys[0].stretch = true;<br />
     graphickeys[0].disabled = false;<br />
     <br />
-    // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
-    var graphickeydata = array_create(1);<br />
-    graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
-    graphickeydata[0].spriteIndex = spr_Platform;<br />
-    graphickeydata[0].channel = 0;<br />
+    // Set the graphics keyframe top-level data for the keyframe position, length, etc.<br />
+    _graphic_keys.frame = 0;<br />
+    _graphic_keys.length = 1;<br />
+    _graphic_keys.stretch = true;<br />
+    _graphic_keys.disabled = false;<br />
     <br />
-    // Add the keyframe data channels to the graphics track keyframe<br />
-    graphickeys[0].channels = graphickeydata;<br />
+    // Create the channel data that will go into this keyframe (note that <span>each key can have multiple channels of keyframe data)</span><br />
+    _graphic_keys.channels[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
+    _graphic_keys.channels[0].spriteIndex = spr_platform;<br />
+    _graphic_keys.channels[0].channel = 0;<br />
     <br />
     // Add the definied keyframes to the track<br />
     mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
@@ -49,27 +51,21 @@
     paramkeys[1] = sequence_keyframe_new(seqtracktype_real);<br />
     paramkeys[1].frame = 120;<br />
     <br />
-    // Create the keyframe data structs<br />
-    var paramkeydata1 = array_create(2);<br />
-    paramkeydata1[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[0].channel = 0; // Channel 0 for a position track is the X position<br />
-    paramkeydata1[0].value = 0;<br />
+    // Create the keyframe and keyframe data structs to hold the parameter channel data and assign them<br />
+    var _keyframe;<br />
     <br />
-    paramkeydata1[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[1].channel = 1; // Channel 1 for a position track is the Y position<br />
-    paramkeydata1[1].value = 0;<br />
+    // Keyframe 1<br />
+    _keyframe = sequence_keyframe_new(seqtracktype_real);<br />
+    _keyframe.frame = 0;<br />
     <br />
-    var paramkeydata2 = array_create(2);<br />
-    paramkeydata2[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[0].channel = 0;<br />
-    paramkeydata2[0].value = room_width;<br />
-    paramkeydata2[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[1].channel = 1;<br />
-    paramkeydata2[1].value = room_height;<br />
+    _keyframe.channels[0] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[0].channel = 0;  // Channel 0 for a position track is the X position<br />
+    _keyframe.channels[0].value = 0;<br />
+    _keyframe.channels[1] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[1].channel = 1;  // Channel 1 for a position track is the Y position<br />
+    _keyframe.channels[1].value = 0;<br />
     <br />
-    // Assign the keyframe data structs to the channels for each key<br />
-    paramkeys[0].channels = paramkeydata1;<br />
-    paramkeys[1].channels = paramkeydata2;<br />
+    _param_track.keyframes[0] = _keyframe;<br />
     <br />
     // Assign the keys to the parameter track<br />
     paramtracks[0].keyframes = paramkeys;</p><ul class="colour"><li> 완료되면 마지막으로 매개변수 트랙을 처음에 만든 기본 그래픽 자산 트랙에 하위 트랙으로 할당한 다음 이 트랙을 시퀀스에 할당하여 방에서 인스턴스를 만들 수 있습니다.:</li></ul><p class="code">mytracks[0].tracks = paramtracks;<br />
