@@ -23,13 +23,13 @@
     physics_fixture_set_box_shape(fix, 64, 32);<br />
     for (i = 0; i &lt; 5; i++)<br />
     {<br />
-        o_id = instance_create_layer(x + (128 * i), y, &quot;Instances&quot;, obj_BridgePart);<br />
-        physics_fixture_bind(fix, o_id);<br />
-        if (i &gt; 0 &amp;&amp; i &lt; 4)<br />
+        _o_id = instance_create_layer(x + (128 * i), y, &quot;Instances&quot;, obj_bridge_part);<br />
+        _o_id.fix_bound = physics_fixture_bind(_fix, _o_id);<br />
+        if (i &gt; 0)<br />
         {<br />
-            physics_joint_weld_create(p_id, o_id, x + (128 * i) - 64, y, 0, 10, 12, true);<br />
+            physics_joint_weld_create(_p_id, _o_id, x + (128 * i) - 64, y, 0, 10, 12, true);<br />
         }<br />
-        p_id = o_id;<br />
+        _p_id = _o_id;<br />
     }<br />
     physics-fixture_delete(fix);</p><p> 위의 코드는 고정 장치를 만든 다음 루프를 사용하여 여러 인스턴스를 만들고 고정 장치를 각각의 새 인스턴스에 바인딩한 다음 용접 조인트를 사용하여 모두 결합합니다. 마지막으로 조명기는 메모리에서 삭제됩니다. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> 등: <a href="Joints.htm">관절</a></div><div style="float:right"> 다음: <a href="physics_joint_friction_create.htm"><span class="notranslate">physics_joint_friction_create</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
