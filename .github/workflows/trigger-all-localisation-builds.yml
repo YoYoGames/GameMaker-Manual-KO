@@ -17,9 +17,9 @@ on:
 
 jobs:
 
-  Trigger-Localisation-Builds-All_Repo:
-     name: "Trigger-Localisation-Builds-All Repo"
-     runs-on: ubuntu-22.04
+  Trigger-Localisation-Builds-All-Repo:
+     name: "Trigger-Localisation-Builds-All-Repo"
+     runs-on: ubuntu-24.04
      if: ${{ github.event.inputs.Language == 'ALL' }}
      strategy:
       matrix:
@@ -42,5 +42,20 @@ jobs:
           token: ${{ secrets.GH_TOKEN }} 
         continue-on-error: false 
 
+  Slack-Notification:
+     name: "Slack Notification"
+    #  if: ${{ github.event.inputs.Language == 'ALL' }} 
+     needs: [ Trigger-Localisation-Builds-All-Repo ]
+     runs-on: ubuntu-24.04
+     env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        WORKFLOW: ${{ github.event.inputs.BUILD_TYPE }}.yml
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v6
+      - name: Send Slack Notification Triggered while Nightly Build
+        run: |
+          ./collect-artifacts-url.sh 
 
                                                                        
